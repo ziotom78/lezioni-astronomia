@@ -169,7 +169,7 @@ PyPlot.ylabel(raw"Spectral radiance [W/sr/m$^2$/Hz]");
 
 # Calcolo approssimato
 
-<center>![](blackbody.png)</center>
+<center>![](./images/blackbody.png)</center>
 
 
 # Calcolo approssimato
@@ -225,7 +225,7 @@ Il centro galattico appare rosso, e il fatto che sia povero di gas indica un'et√
 
 # Catalogo di spettri stellari
 
-<center>![](1998-pickles-title-page.svg)</center>
+<center>![](./images/1998-pickles-title-page.svg)</center>
 
 
 # Spettro stellare
@@ -280,7 +280,7 @@ PyPlot.ylabel("Flux density [Jy]");
 
 # Spettro stellare
 
-<center>![](stellar-spectrum.png)</center>
+<center>![](./images/stellar-spectrum.png)</center>
 
 
 # Banda di DIRBE
@@ -338,7 +338,7 @@ PyPlot.xlabel("Wavelength [m]");
 
 # Banda di DIRBE
 
-<center>![](dirbe_band_too_wide.png)</center>
+<center>![](./images/dirbe_band_too_wide.png)</center>
 
 
 # Banda di DIRBE
@@ -358,7 +358,7 @@ PyPlot.xlabel(raw"Wavelength [$\mu$m]");
 
 # Banda di DIRBE
 
-<center>![](dirbe_band_ok.png)</center>
+<center>![](./images/dirbe_band_ok.png)</center>
 
 # Centro della banda
 
@@ -400,7 +400,7 @@ PyPlot.legend();
 
 # Confronto tra spettro e banda
 
-<center>![](stellar-spectrum-and-band.png)</center>
+<center>![](./images/stellar-spectrum-and-band.png)</center>
 
 
 # Calcolo di $C$
@@ -441,7 +441,7 @@ PyPlot.legend();
 
 # Campionamento di $B$ e di $P$
 
-<center>![](interpolation-wrong.png)</center>
+<center>![](./images/interpolation-wrong.png)</center>
 
 
 # Campionamento di $B$ e di $P$
@@ -480,7 +480,7 @@ PyPlot.ylabel("Flux density [Jy]");
 
 # Campionamento di $B$ e di $P$
 
-<center>![](interpolation-right.png)</center>
+<center>![](./images/interpolation-right.png)</center>
 
 
 # Calcolo di $C$
@@ -538,7 +538,7 @@ PyPlot.plot(m0_Œª_pts, tophat_band);
 
 # Spettro realistico, banda ideale
 
-<center>![](tophat-band.png)</center>
+<center>![](./images/tophat-band.png)</center>
 
 
 # Spettro realistico, banda ideale

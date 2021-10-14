@@ -8,29 +8,29 @@ date: 14 Ottobre 2021
 
 ---
 
-<center>![](./milky-way-sketch.jpg){width=50%}</center>
+<center>![](./images/./milky-way-sketch.jpg){width=50%}</center>
 
 ---
 
-<center>![](./milky-way-loch-ard-gorge.jpg)</center>
+<center>![](./images/./milky-way-loch-ard-gorge.jpg)</center>
 
 
 # Dwek et al., ApJ (1995)
 
 
-<center>![](./1995Dwek-title.png){width=50%}</center>
+<center>![](./images/./1995Dwek-title.png){width=50%}</center>
 
 
 # Radianza spettrale (IR)
 
-<center>![](./1995Dwek-fig1.png){width=35%}</center>
+<center>![](./images/./1995Dwek-fig1.png){width=35%}</center>
 
 Misurata in MJy/sr (1 Jy = 10$^{-26}$\,W/m$^2$/Hz, misura la densità di flusso).
 
 
 # Emissività del *bulge*
 
-<center>![](oblate-spheroid.png)</center>
+<center>![](./images/oblate-spheroid.png)</center>
 
 Gli autori assumono che l'emissività $\rho$ ($[\rho]
 = \text{W\,m$^{-3}$}$) abbia la forma
@@ -90,7 +90,7 @@ L'articolo di Dwek dà quest'informazione. Noi però la ricaveremo partendo dal 
 
 # Densità di flusso nell'infrarosso
 
-<center>![](1995Dwek-fig1.png){width=30%}</center>
+<center>![](./images/1995Dwek-fig1.png){width=30%}</center>
 
 Per stimare $L_\nu$ ($[L_\nu]=\text{W}$) usiamo $D = 8.5\,\text{kpc}$ e
 
@@ -100,7 +100,7 @@ $$
 
 # Densità di flusso nell'infrarosso
 
-<center>![](1995Dwek-fig1.png){width=30%}</center>
+<center>![](./images/1995Dwek-fig1.png){width=30%}</center>
 
 Ci serve quindi $F_\nu$ (densità di flusso,
       $[F_\nu]=\text{Jy}$), ma il grafico fornisce la radianza
@@ -111,7 +111,7 @@ Ci serve quindi $F_\nu$ (densità di flusso,
 
 Ricordiamo la definizione di radiante:
   
-<center>![](radian.png)</center>
+<center>![](./images/radian.png)</center>
 
 Il *radiante* è l'angolo $\alpha$ per cui $AB = r$,
 così che
@@ -125,7 +125,7 @@ Una circonferenza ha un'ampiezza di $2\pi\,\text{rad}$.
 
 # Angoli solidi
 
-<center>![](steradian.png){width=20%}</center>
+<center>![](./images/steradian.png){width=20%}</center>
 
 Lo steradiante è l'angolo $\Omega$ tale per cui $S = r^2$, così che
 $$
@@ -136,7 +136,7 @@ La sfera ha un'ampiezza di $4\pi\,\text{sterad}$.
 
 # Angoli solidi
 
-<center>![](cap-solid-angle.png){width=20%}</center>
+<center>![](./images/cap-solid-angle.png){width=20%}</center>
 
 $$
 \begin{aligned}
@@ -186,7 +186,7 @@ $$
 
 # Densità di flusso nell'infrarosso
 
-<center>![](1995Dwek-fig1.png){width=25%}</center>
+<center>![](./images/1995Dwek-fig1.png){width=25%}</center>
 
 Per stimare $L_\nu$ ($[L_\nu]=\text{W}$) usiamo $L_\nu = 4\pi D^2 F_\nu\,\Delta\nu$.
 
@@ -194,31 +194,31 @@ Ci serve quindi $F_\nu$ (densità di flusso, $[F_\nu]=\text{Jy}$), ma il grafico
 
 # {data-transition="none"}
 
-<center>![](1995Dwek-fig1-ellipse1.png){width=40%}</center>
+<center>![](./images/1995Dwek-fig1-ellipse1.png){width=40%}</center>
 
 <center>Ellisse di 3°×2°: 100 MJy/sr.</center>
 
 # {data-transition="none"}
 
-<center>![](1995Dwek-fig1-ellipse2.png){width=40%}</center>
+<center>![](./images/1995Dwek-fig1-ellipse2.png){width=40%}</center>
 
 <center>Ellisse di 5°×4°: 50 MJy/sr.</center>
 
 # {data-transition="none"}
 
-<center>![](1995Dwek-fig1-ellipse3.png){width=40%}</center>
+<center>![](./images/1995Dwek-fig1-ellipse3.png){width=40%}</center>
 
 <center>Ellisse di 13°×8°: 10 MJy/sr.</center>
 
 # {data-transition="none"}
 
-<center>![](1995Dwek-fig1-ellipse4.png){width=40%}</center>
+<center>![](./images/1995Dwek-fig1-ellipse4.png){width=40%}</center>
 
 <center>Ellisse di 17°×12°: 5 MJy/sr.</center>
 
 # {data-transition="none"}
 
-<center>![](1995Dwek-fig1-ellipse5.png){width=40%}</center>
+<center>![](./images/1995Dwek-fig1-ellipse5.png){width=40%}</center>
 
 <center>Rettangolo di 20°×20°: 1 MJy/sr.</center>
 
