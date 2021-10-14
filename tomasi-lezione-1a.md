@@ -4,6 +4,25 @@ author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi
 date: 14 Ottobre 2021
 ...
 
+# Introduzione
+
+-   In questo primo modulo farò alcune lezioni di approfondimento degli argomenti spiegati dal prof. Bersanelli.
+
+-   I contenuti specifici di queste lezioni non sono richiesti all'esame, ma i concetti esposti (es., magnitudini, correzioni bolometriche, …) sono previsti nel programma e verranno chiesti all'esame.
+
+# Queste slide
+
+-   Sono disponibili all'indirizzo [ziotom78.github.io/lezioni-astronomia/](https://ziotom78.github.io/lezioni-astronomia/).
+
+-   Si possono stampare aggiungendo `?print-pdf` alla URL, ad esempio:
+
+    [`https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-pdf`](https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-pdf)
+
+---
+
+<center>![](./images/How to print slides.gif)</center>
+
+
 # Il centro galattico
 
 ---
