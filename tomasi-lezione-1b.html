@@ -177,10 +177,10 @@ P_\nu(\nu) = \chi_{[\nu_0 - \Delta\nu/2, \nu_0 + \Delta\nu/2]},
 </span></p>
 <p>e uno spettro di corpo nero con <span class="math inline">T = 3800\,\text{K}</span>:</p>
 <p><span class="math display">
-C \sim \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
+C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
     - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu}.
 </span></p>
-<p>L’integrale al numeratore è <span class="math inline">\propto \sigma T^4</span> (ma non integriamo sull’angolo solido come nella formula di Stefan-Boltzmann), mentre quello al denominatore richiede un calcolo numerico.</p>
+<p>L’integrale al numeratore è <span class="math inline">\propto \sigma T^4</span> (ma non integriamo su <span class="math inline">\Omega</span> come nella formula di Stefan-Boltzmann), mentre il denominatore richiede un calcolo numerico.</p>
 </section>
 <section id="calcolo-analitico-della-correzione-bolometrica" class="slide level1">
 <h1>Calcolo analitico della correzione bolometrica</h1>
@@ -194,62 +194,81 @@ C \sim \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 <h1>Calcolo approssimato</h1>
 <p>Calcoliamo l’espressione di <span class="math inline">C</span> approssimando l’integrale con una somma:</p>
 <p><span class="math display">
-C \sim \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
+C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
     - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu} \approx
 \frac{\sum_{i=0}^\infty B_{bb}(i \times \delta\nu, T)}{\sum_{i=i_1}^{i_2} B_{bb}(i \times \delta\nu, T)},
 </span></p>
 <p>dove <span class="math inline">\delta\nu</span> è il passo con cui campioniamo gli addendi.</p>
 </section>
-<section id="calcolo-approssimato-1" class="slide level1">
-<h1>Calcolo approssimato</h1>
-<p>Oggi useremo <a href="http://julialang.org/">Julia</a> per calcolare <span class="math inline">C</span>.</p>
+<section id="julia" class="slide level1">
+<h1>Julia</h1>
+<p>Oggi useremo <a href="http://julialang.org/">Julia</a> per calcolare la correzione bolometrica <span class="math inline">C</span>.</p>
 <p>Julia è un linguaggio di programmazione pensato per il calcolo scientifico, che permette di implementare i calcoli necessari al nostro scopo in maniera molto comoda e veloce.</p>
-<p>Nelle prossime slide includo tutti i comandi necessari per effettuare i calcoli; è possibile anche guardare una registrazione sul sito <a href="https://asciinema.org/a/0mBzdfUy3HYn9bLkRZxtoytyt">Asciinema</a>, che usa la libreria <a href="https://github.com/JuliaPlots/UnicodePlots.jl"><code>UnicodePlots</code></a> per generare grafici da terminale (molto <em>nerd</em>!).</p>
+<p>Nelle prossime slide includo tutti i comandi necessari per effettuare i calcoli; è possibile anche guardare una vecchia registrazione sul sito <a href="https://asciinema.org/a/0mBzdfUy3HYn9bLkRZxtoytyt">Asciinema</a>, che usa la libreria <a href="https://github.com/JuliaPlots/UnicodePlots.jl"><code>UnicodePlots</code></a> per generare grafici da terminale (molto <em>nerd</em>!).</p>
 </section>
-<section id="calcolo-approssimato-2" class="slide level1">
-<h1>Calcolo approssimato</h1>
-<p>Per usare Julia sul vostro computer, avviatelo col comando <code>julia</code> ed eseguite questi comandi per scaricare da Internet i pacchetti necessari ed installarli:</p>
+<section id="installazione-di-jupyterlab" class="slide level1">
+<h1>Installazione di JupyterLab</h1>
+<p><asciinema-player src="cast/install-ijulia-73x21.cast" cols="73" rows="21" font-size="medium"></asciinema-player></p>
+</section>
+<section id="installazione-di-librerie" class="slide level1">
+<h1>Installazione di librerie</h1>
+<p>Una volta installato Julia e fatto partire IJulia, potrete creare un <em>notebook</em> (vedi video seguente). I comandi nel <em>notebook</em> si scrivono all’interno di <em>celle</em>, che si eseguono premendo <code>Maiusc + Invio</code>.</p>
+<p>Inizieremo scaricando da Internet una serie di librerie molto utili:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> Pkg</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">for</span> name <span class="kw">in</span> [<span class="st">&quot;PyPlot&quot;</span><span class="op">,</span> <span class="st">&quot;Interpolations&quot;</span><span class="op">,</span> <span class="st">&quot;GZip&quot;</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">for</span> name <span class="kw">in</span> [<span class="st">&quot;GZip&quot;</span><span class="op">,</span> <span class="st">&quot;Interpolations&quot;</span><span class="op">,</span> <span class="st">&quot;Plots&quot;</span>]</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    Pkg.add(name)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
 </section>
 <section id="calcolo-approssimato-di-c" class="slide level1">
 <h1>Calcolo approssimato di <span class="math inline">C</span></h1>
-<p>Implementiamo la formula di corpo nero:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> PyPlot</span>
+<p>La prima cosa che facciamo è implementare la formula di corpo nero <span class="math inline">B_{bb}(\nu, T)</span>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> Plots</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> k<span class="op">,</span> h<span class="op">,</span> c <span class="op">=</span> <span class="fl">1.38e-23</span><span class="op">,</span> <span class="fl">6.626e-34</span><span class="op">,</span> <span class="fl">3e8</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Write \lambda and press &lt;TAB&gt; to get λ</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>λ(ν) <span class="op">=</span> c <span class="op">/</span> ν</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>b(ν<span class="op">,</span> T) <span class="op">=</span> (<span class="fl">2</span>h<span class="op">*</span>ν<span class="op">^</span><span class="fl">3</span> <span class="op">/</span> c<span class="op">^</span><span class="fl">2</span>) <span class="op">/</span> (exp(h<span class="op">*</span>ν <span class="op">/</span> (k<span class="op">*</span>T)) <span class="op">-</span> <span class="fl">1</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> ν <span class="op">=</span> <span class="fl">0.5e13</span><span class="op">:</span><span class="fl">1e13</span><span class="op">:</span><span class="fl">1e15</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    PyPlot.plot(ν<span class="op">,</span> b.(ν<span class="op">,</span> <span class="fl">3800</span>))<span class="op">;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>PyPlot.xlabel(<span class="st">&quot;Frequency [Hz]&quot;</span>)<span class="op">;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>PyPlot.ylabel(<span class="st">raw&quot;Spectral radiance [W/sr/m$^2$/Hz]&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    plot(ν<span class="op">,</span> b.(ν<span class="op">,</span> <span class="fl">3800</span>)<span class="op">,</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    label <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">,</span> xlabel <span class="op">=</span> <span class="st">&quot;Frequency [Hz]&quot;</span><span class="op">,</span> ylabel <span class="op">=</span> <span class="st">&quot;Spectral radiance [W/sr/m²/Hz]&quot;</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
 </section>
-<section id="calcolo-approssimato-3" class="slide level1">
-<h1>Calcolo approssimato</h1>
+<section class="slide level1">
+
+<iframe src="https://player.vimeo.com/video/632187442?h=3e91fe6ed4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-01 - Installation and blackbody.mkv">
+</iframe>
+</section>
+<section class="slide level1">
+
 <center>
-<img data-src="./images/blackbody.png" />
+<img data-src="./images/blackbody.svg" style="width:80.0%" />
 </center>
 </section>
-<section id="calcolo-approssimato-4" class="slide level1">
+<section id="calcolo-approssimato-1" class="slide level1">
 <h1>Calcolo approssimato</h1>
-<p>Definiamo una funzione  che faccia il calcolo, ed eseguiamola per diversi valori del passo <span class="math inline">\delta\nu</span>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> Printf</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> C(ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T<span class="op">,</span> δν)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    fullnu <span class="op">=</span> <span class="fl">0.5e13</span><span class="op">:</span>δν<span class="op">:</span><span class="fl">1e15</span>  <span class="co"># [0, ∞)</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    partialnu <span class="op">=</span> (ν<span class="fl">0</span> <span class="op">-</span> bwidth<span class="op">/</span><span class="fl">2</span>)<span class="op">:</span>δν<span class="op">:</span>(ν<span class="fl">0</span> <span class="op">+</span> bwidth<span class="op">/</span><span class="fl">2</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    sum(b.(fullnu<span class="op">,</span> T)) <span class="op">/</span> sum(b.(partialnu<span class="op">,</span> T))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T <span class="op">=</span> c <span class="op">/</span> <span class="fl">2.2e-6</span><span class="op">,</span> <span class="fl">2.28e13</span><span class="op">,</span> <span class="fl">3800</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">for</span> δν <span class="kw">in</span> [<span class="fl">1e13</span><span class="op">,</span> <span class="fl">1e12</span><span class="op">,</span> <span class="fl">1e11</span><span class="op">,</span> <span class="fl">1e10</span><span class="op">,</span> <span class="fl">1e9</span><span class="op">,</span> <span class="fl">1e8</span>]</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@printf</span>(<span class="st">&quot;δν = %.0e Hz, T = %.1f K, C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            δν<span class="op">,</span> T<span class="op">,</span> C(ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T<span class="op">,</span> δν))</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
+<p>Definiamo una funzione  che calcoli la correzione bolometrica <span class="math inline">C</span> con la formula</p>
+<p><span class="math display">
+C \approx \frac{\sum_{i=0}^\infty B_{bb}(i \times \delta\nu, T)}{\sum_{i=i_1}^{i_2} B_{bb}(i \times \delta\nu, T)},
+</span></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> C(ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T<span class="op">,</span> δν)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    fullnu <span class="op">=</span> <span class="fl">0.5e13</span><span class="op">:</span>δν<span class="op">:</span><span class="fl">1e15</span>  <span class="co"># [0, ∞)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    partialnu <span class="op">=</span> (ν<span class="fl">0</span> <span class="op">-</span> bwidth<span class="op">/</span><span class="fl">2</span>)<span class="op">:</span>δν<span class="op">:</span>(ν<span class="fl">0</span> <span class="op">+</span> bwidth<span class="op">/</span><span class="fl">2</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    sum(b.(fullnu<span class="op">,</span> T)) <span class="op">/</span> sum(b.(partialnu<span class="op">,</span> T))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
+</section>
+<section id="calcolo-approssimato-2" class="slide level1">
+<h1>Calcolo approssimato</h1>
+<p>Dobbiamo decidere il valore del passo <span class="math inline">\delta\nu</span>; proviamo con una serie di valori via via più piccoli, e vediamo quando converge:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T <span class="op">=</span> c <span class="op">/</span> <span class="fl">2.2e-6</span><span class="op">,</span> <span class="fl">2.28e13</span><span class="op">,</span> <span class="fl">3800</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">for</span> δν <span class="kw">in</span> [<span class="fl">1e13</span><span class="op">,</span> <span class="fl">1e12</span><span class="op">,</span> <span class="fl">1e11</span><span class="op">,</span> <span class="fl">1e10</span><span class="op">,</span> <span class="fl">1e9</span><span class="op">,</span> <span class="fl">1e8</span>]</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@printf</span>(<span class="st">&quot;δν = %.0e Hz, T = %.1f K, C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            δν<span class="op">,</span> T<span class="op">,</span> C(ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T<span class="op">,</span> δν))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<iframe src="https://player.vimeo.com/video/632189138?h=844ad3079a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-02 - Simple bolometric constant.mkv">
+</iframe>
 </section>
 <section id="risultati-del-calcolo" class="slide level1">
 <h1>Risultati del calcolo</h1>
@@ -259,75 +278,21 @@ C \sim \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 δν = 1e+10 Hz, T = 3800.0 K, C = 20.27
 δν = 1e+09 Hz, T = 3800.0 K, C = 20.28
 δν = 1e+08 Hz, T = 3800.0 K, C = 20.28</code></pre>
-<p>È abbastanza diverso dal valore <span class="math inline">C = 14.5</span> riportato nell’articolo!</p>
+<p>Converge senza dubbio, ma è abbastanza diverso dal valore <span class="math inline">C = 14.5</span> riportato nell’articolo!</p>
 </section>
 <section id="migliorare-la-stima-di-c" class="slide level1">
 <h1>Migliorare la stima di <span class="math inline">C</span></h1>
 <p>Ci sono due spiegazioni possibili per la discrepanza nel valore di <span class="math inline">C</span> che abbiamo osservato:</p>
-<ol type="1">
-<li>L’emissione delle stelle non segue esattamente una legge di corpo nero;</li>
-<li>La banda di DIRBE non è perfettamente rettangolare.</li>
+<ol>
+<li><p>La banda di DIRBE non è perfettamente rettangolare.</p></li>
+<li><p>L’emissione delle stelle non segue esattamente una legge di corpo nero.</p></li>
 </ol>
-</section>
-<section id="spettro-stellare" class="slide level1">
-<h1>Spettro stellare</h1>
-<p>Per capire che correzione applicare, dobbiamo avere un’idea dello spettro di emissione del centro galattico.</p>
-<p>Il centro galattico appare rosso, e il fatto che sia povero di gas indica un’età avanzata. Questi indizi suggeriscono che le stelle siano giganti rosse; una gigante rossa M0 ha <span class="math inline">T \approx 3800\,\text{K}</span> e <span class="math inline">L \approx 400 L_\odot</span>.</p>
-</section>
-<section id="catalogo-di-spettri-stellari" class="slide level1">
-<h1>Catalogo di spettri stellari</h1>
-<center>
-<img data-src="./images/1998-pickles-title-page.svg" />
-</center>
-</section>
-<section id="spettro-stellare-1" class="slide level1">
-<h1>Spettro stellare</h1>
-<p>Gli spettri di Pickles sono disponibili al sito <a href="https://www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html">www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html</a>.</p>
-<p>Noi scegliamo uno spettro «M iii», il file è <code>ukm0iii.dat.gz</code>, che è compresso usando il programma <code>gzip</code>.</p>
-</section>
-<section id="contenuto-del-file" class="slide level1">
-<h1>Contenuto del file</h1>
-<p>Si può ispezionare il contenuto del file decomprimendolo con <code>gunzip</code> e visualizzando le prime righe con <code>head</code>:</p>
-<pre><code>$ cat ukm0iii.dat.gz | gunzip | head
-#iRMS=0.01722689532 0
-#    lk ukf_m0iii uks_m0iii        fh        fk         fm
-#
- 1150.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1155.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1160.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1165.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1170.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1175.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1180.0  0.000000  0.000000  0.000000  0.000000  0.000000</code></pre>
-<p>Lo spettro è espresso in funzione di <span class="math inline">\lambda</span>, non di <span class="math inline">\nu</span>!</p>
-</section>
-<section id="lettura-dello-spettro-stellare" class="slide level1">
-<h1>Lettura dello spettro stellare</h1>
-<p>Le lunghezze d’onda sono espresse in , così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky (<span class="math inline">1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}</span>).</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> DelimitedFiles</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> GZip</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>spectrum <span class="op">=</span> GZip.<span class="cn">open</span>(<span class="st">&quot;ukm0iii.dat.gz&quot;</span>) <span class="kw">do</span> io</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    readdlm(io<span class="op">,</span> skipstart<span class="op">=</span><span class="fl">3</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>m0_λ_pts <span class="op">=</span> spectrum[<span class="op">:,</span> <span class="fl">1</span>] <span class="op">*</span> <span class="fl">1e-10</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>m0_flux_pts <span class="op">=</span> spectrum[<span class="op">:,</span> <span class="fl">2</span>]</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>PyPlot.plot(m0_λ_pts<span class="op">,</span> m0_flux_pts)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Write \Angstrom and press &lt;TAB&gt; to get Å</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>PyPlot.xlabel(<span class="st">&quot;Wavelength [Å]&quot;</span>)<span class="op">;</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>PyPlot.ylabel(<span class="st">&quot;Flux density [Jy]&quot;</span>)<span class="op">;</span></span></code></pre></div>
-</section>
-<section id="spettro-stellare-2" class="slide level1">
-<h1>Spettro stellare</h1>
-<center>
-<img data-src="./images/stellar-spectrum.png" />
-</center>
 </section>
 <section id="banda-di-dirbe" class="slide level1">
 <h1>Banda di DIRBE</h1>
-<p>Occorre ora avere la risposta in banda del canale a 2.2 µm di DIRBE, che si può scaricare qui: <a href="https://lambda.gsfc.nasa.gov/product/cobe/c_spectral_res.cfm">lambda.gsfc.nasa.gov/product/cobe/c_spectral_res.cfm</a>.</p>
+<p>Occorre avere la risposta in banda del canale a 2.2 µm di DIRBE, che si può scaricare qui: <a href="https://lambda.gsfc.nasa.gov/product/cobe/c_spectral_res.cfm">lambda.gsfc.nasa.gov/product/cobe/c_spectral_res.cfm</a>.</p>
 </section>
-<section id="contenuto-del-file-1" class="slide level1">
+<section id="contenuto-del-file" class="slide level1">
 <h1>Contenuto del file</h1>
 <pre><code>$ head -n 20 DIRBE_SYSTEM_SPECTRAL_RESPONSE_TABLE.ASC
 ============================================================================
@@ -355,37 +320,48 @@ Wavelength                          DIRBE Band
 <section id="banda-di-dirbe-1" class="slide level1">
 <h1>Banda di DIRBE</h1>
 <p>Facciamo un grafico della banda (ancora espressa in termini di <span class="math inline">\lambda</span>!), per renderci conto di come è fatto il dato:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dirbe_bands <span class="op">=</span> readdlm(<span class="st">&quot;DIRBE_SYSTEM_SPECTRAL_RESPONSE_TABLE.ASC&quot;</span><span class="op">,</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                      skipstart<span class="op">=</span><span class="fl">15</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert from μm to m</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>dirbe_λ <span class="op">=</span> dirbe_bands[<span class="op">:,</span> <span class="fl">1</span>] <span class="op">*</span> <span class="fl">1e-6</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>dirbe_band <span class="op">=</span> dirbe_bands[<span class="op">:,</span> <span class="fl">3</span>]</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>PyPlot.plot(dirbe_λ<span class="op">,</span> dirbe_band)<span class="op">;</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>PyPlot.xlabel(<span class="st">&quot;Wavelength [m]&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dirbe_bands <span class="op">=</span> readdlm(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DIRBE_SYSTEM_SPECTRAL_RESPONSE_TABLE.ASC&quot;</span><span class="op">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    skipstart<span class="op">=</span><span class="fl">15</span><span class="op">,</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert from μm to m</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>dirbe_λ <span class="op">=</span> dirbe_bands[<span class="op">:,</span> <span class="fl">1</span>] <span class="op">*</span> <span class="fl">1e-6</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>dirbe_band <span class="op">=</span> dirbe_bands[<span class="op">:,</span> <span class="fl">3</span>]</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>plot(dirbe_λ<span class="op">,</span> dirbe_band<span class="op">,</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>     xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [m]&quot;</span>)</span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<iframe src="https://player.vimeo.com/video/632190633?h=4b16990d2c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-03 - DIRBE band.mkv">
+</iframe>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="./images/dirbe_band_too_wide.svg" style="width:80.0%" />
+</center>
 </section>
 <section id="banda-di-dirbe-2" class="slide level1">
 <h1>Banda di DIRBE</h1>
-<center>
-<img data-src="./images/dirbe_band_too_wide.png" />
-</center>
-</section>
-<section id="banda-di-dirbe-3" class="slide level1">
-<h1>Banda di DIRBE</h1>
 <p>Meglio aggiustare la scala; mascheriamo tutti i valori della banda uguali a zero.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Maschera di booleani: vera solo se</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># la banda è maggiore di zero</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> dirbe_band .<span class="op">&gt;</span> <span class="fl">0</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>PyPlot.plot(dirbe_λ[mask] <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band[mask])<span class="op">;</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;raw&quot; impedisce a Julia di interpretare &quot;\mu&quot;</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>PyPlot.xlabel(<span class="st">raw&quot;Wavelength [$\mu$m]&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Maschera di booleani: vera solo se</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># la banda è maggiore di zero</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> dirbe_band .<span class="op">&gt;</span> <span class="fl">0</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plot(dirbe_λ[mask] <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band[mask]<span class="op">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [$\mu$m]&quot;</span>)</span></code></pre></div>
 </section>
-<section id="banda-di-dirbe-4" class="slide level1">
-<h1>Banda di DIRBE</h1>
+<section class="slide level1">
+
+<iframe src="https://player.vimeo.com/video/632213391?h=1dde8edbfe&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-04 - DIRBE band zoomed.mkv">
+</iframe>
+</section>
+<section class="slide level1">
+
 <center>
-<img data-src="./images/dirbe_band_ok.png" />
+<img data-src="./images/dirbe_band_ok.svg" style="width:80.0%" />
 </center>
 </section>
 <section id="centro-della-banda" class="slide level1">
@@ -395,163 +371,236 @@ Wavelength                          DIRBE Band
 \lambda_0 = \frac{\int_0^\infty \lambda\times P_\lambda(\lambda)\,\text{d}\lambda}{\int_0^\infty P_\lambda(\lambda)\,\text{d}\lambda},
 </span></p>
 <p>che corrisponde a una media pesata.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Band center: %.2f μm</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1e6</span> <span class="op">*</span> sum(dirbe_λ <span class="op">.*</span> dirbe_band) <span class="op">/</span> sum(dirbe_band)<span class="op">,</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Band center: %.2f μm</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1e6</span> <span class="op">*</span> sum(dirbe_λ <span class="op">.*</span> dirbe_band) <span class="op">/</span> sum(dirbe_band)<span class="op">,</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>Il risultato è 2.22 µm, che è quanto ci aspettavamo.</p>
+</section>
+<section id="spettro-stellare" class="slide level1">
+<h1>Spettro stellare</h1>
+<p>Dobbiamo anche avere un’idea più precisa dello spettro di emissione del centro galattico.</p>
+<p>Il centro galattico appare rosso, e il fatto che sia povero di gas indica un’età avanzata. Questi indizi suggeriscono che le stelle siano giganti rosse; una gigante rossa M0 ha <span class="math inline">T \approx 3800\,\text{K}</span> e <span class="math inline">L \approx 400 L_\odot</span>.</p>
+</section>
+<section id="catalogo-di-spettri-stellari" class="slide level1">
+<h1>Catalogo di spettri stellari</h1>
+<center>
+<img data-src="./images/1998-pickles-title-page.svg" style="width:75.0%" />
+</center>
+</section>
+<section id="spettro-stellare-1" class="slide level1">
+<h1>Spettro stellare</h1>
+<p>Gli spettri di Pickles sono disponibili al sito <a href="https://www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html">www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html</a>.</p>
+<p>Noi scegliamo uno spettro «M iii», il file è <code>ukm0iii.dat.gz</code>, che è compresso usando il programma <code>gzip</code>.</p>
+</section>
+<section id="contenuto-del-file-1" class="slide level1">
+<h1>Contenuto del file</h1>
+<p>Si può ispezionare il contenuto del file decomprimendolo con <code>gunzip</code> e visualizzando le prime righe con <code>head</code>:</p>
+<pre><code>$ cat ukm0iii.dat.gz | gunzip | head
+#iRMS=0.01722689532 0
+#    lk ukf_m0iii uks_m0iii        fh        fk         fm
+#
+ 1150.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1155.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1160.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1165.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1170.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1175.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1180.0  0.000000  0.000000  0.000000  0.000000  0.000000</code></pre>
+<p>Lo spettro è espresso in funzione di <span class="math inline">\lambda</span>, non di <span class="math inline">\nu</span>!</p>
+</section>
+<section id="lettura-dello-spettro-stellare" class="slide level1">
+<h1>Lettura dello spettro stellare</h1>
+<p>Le lunghezze d’onda sono espresse in , così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky (<span class="math inline">1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}</span>).</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> DelimitedFiles</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> GZip</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>spectrum <span class="op">=</span> GZip.<span class="cn">open</span>(<span class="st">&quot;ukm0iii.dat.gz&quot;</span>) <span class="kw">do</span> io</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    readdlm(io<span class="op">,</span> skipstart<span class="op">=</span><span class="fl">3</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>m0_λ_pts <span class="op">=</span> spectrum[<span class="op">:,</span> <span class="fl">1</span>] <span class="op">*</span> <span class="fl">1e-10</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>m0_flux_pts <span class="op">=</span> spectrum[<span class="op">:,</span> <span class="fl">2</span>]</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>plot(m0_λ_pts<span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [Å]&quot;</span><span class="op">,</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    ylabel <span class="op">=</span> <span class="st">&quot;Flux density [Jy]&quot;</span>)</span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="./images/stellar-spectrum.svg" style="width:80.0%" />
+</center>
 </section>
 <section id="confronto-tra-spettro-e-banda" class="slide level1">
 <h1>Confronto tra spettro e banda</h1>
 <p>Anche se le unità di misure sono diverse, è interessante fare un grafico dello spettro stellare e della banda insieme.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>PyPlot.plot(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>            label<span class="op">=</span><span class="st">&quot;M0 flux&quot;</span>)<span class="op">;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>PyPlot.plot(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>            label<span class="op">=</span><span class="st">&quot;DIRBE band&quot;</span>)<span class="op">;</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>PyPlot.xlim(<span class="fl">0</span><span class="op">,</span> <span class="fl">3</span>)<span class="op">;</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>PyPlot.xlabel(<span class="st">&quot;Wavelength [μm]&quot;</span>)<span class="op">;</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>PyPlot.ylabel(<span class="st">&quot;Flux density [Jy]&quot;</span>)<span class="op">;</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>PyPlot.legend()<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plot(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    label <span class="op">=</span> <span class="st">&quot;M0 flux&quot;</span><span class="op">,</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    xlim <span class="op">=</span> (<span class="fl">0</span><span class="op">,</span> <span class="fl">3</span>)<span class="op">,</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [μm]&quot;</span><span class="op">,</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    ylabel <span class="op">=</span> <span class="st">&quot;Flux density [Jy]&quot;</span><span class="op">,</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>plot<span class="op">!</span>(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    label <span class="op">=</span> <span class="st">&quot;DIRBE band&quot;</span>)</span></code></pre></div>
 </section>
-<section id="confronto-tra-spettro-e-banda-1" class="slide level1">
-<h1>Confronto tra spettro e banda</h1>
+<section class="slide level1">
+
 <center>
-<img data-src="./images/stellar-spectrum-and-band.png" />
+<img data-src="./images/stellar-spectrum-and-band.svg" style="width:80.0%" />
 </center>
 </section>
 <section id="calcolo-di-c" class="slide level1">
 <h1>Calcolo di <span class="math inline">C</span></h1>
-<p>Abbiamo ora i dati per calcolare la correzione bolometrica <span class="math inline">C</span>:</p>
+<p>In teoria saremmo pronti per calcolare la correzione bolometrica <span class="math inline">C</span>:</p>
 <p><span class="math display">
-C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty B(\nu) \times P_\nu(\nu)\,\text{d}\nu}
-= \frac{\int_0^\infty F(\lambda)\,\text{d}\lambda}{\int_0^\infty F(\lambda) \times P_\lambda(\lambda)\,\text{d}\lambda},
+C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty B(\nu)\,\text{d}\nu \times P_\nu(\nu)}
+= \frac{\int_0^\infty F(\lambda)\,\text{d}\lambda}{\int_0^\infty F(\lambda)\,\text{d}\lambda \times P_\lambda(\lambda)},
 </span></p>
-<p>dove siamo passati da <span class="math inline">B</span> a <span class="math inline">F</span>, e da <span class="math inline">\nu</span> a <span class="math inline">\lambda</span>.</p>
-<p>Avendo noi un campionamento discreto per <span class="math inline">F</span> e <span class="math inline">P</span>, convertiremo gli integrali in somme:</p>
+<p>dove siamo passati da <span class="math inline">B</span> a <span class="math inline">F</span>, e da <span class="math inline">\nu</span> a <span class="math inline">\lambda</span>. Ovviamente dobbiamo però convertire gli integrali in somme:</p>
 <p><span class="math display">
-C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i) \times P_\lambda(\lambda)\,\text{d}\lambda}
+C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda)}
 </span></p>
 </section>
 <section id="campionamento-di-b-e-di-p" class="slide level1">
 <h1>Campionamento di <span class="math inline">B</span> e di <span class="math inline">P</span></h1>
-<p>C’è però un problema nel campionamento delle curve, evidente se si fa un ingrandimento del grafico precedente:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>PyPlot.scatter(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>               label<span class="op">=</span><span class="st">&quot;M0 flux&quot;</span><span class="op">,</span> s<span class="op">=</span><span class="fl">0.2</span>)<span class="op">;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>PyPlot.scatter(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>               label<span class="op">=</span><span class="st">&quot;DIRBE band&quot;</span>)<span class="op">;</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>PyPlot.xlim(<span class="fl">2.0</span><span class="op">,</span> <span class="fl">2.2</span>)<span class="op">;</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>PyPlot.xlabel(<span class="st">&quot;Wavelength [μm]&quot;</span>)<span class="op">;</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>PyPlot.ylabel(<span class="st">&quot;Flux density [Jy]&quot;</span>)<span class="op">;</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>PyPlot.legend()<span class="op">;</span></span></code></pre></div>
+<p>Non possiamo però applicare subito la formula per <span class="math inline">C</span>.</p>
+<p>C’è infatti un problema nel campionamento delle curve, evidente se si fa un ingrandimento del grafico precedente:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>scatter(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>        xlim <span class="op">=</span> (<span class="fl">2.0</span><span class="op">,</span> <span class="fl">2.2</span>)<span class="op">,</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">&quot;M0 flux&quot;</span><span class="op">,</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        xlabel<span class="op">=</span><span class="st">&quot;Wavelength [µm]&quot;</span><span class="op">,</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        ylabel <span class="op">=</span> <span class="st">&quot;Flux density [Jy]&quot;</span><span class="op">,</span>ù</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        markersize<span class="op">=</span><span class="fl">1</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>scatter<span class="op">!</span>(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">&quot;DIRBE band&quot;</span>)</span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="./images/interpolation-wrong.svg" style="width:80.0%" />
+</center>
 </section>
 <section id="campionamento-di-b-e-di-p-1" class="slide level1">
 <h1>Campionamento di <span class="math inline">B</span> e di <span class="math inline">P</span></h1>
-<center>
-<img data-src="./images/interpolation-wrong.png" />
-</center>
+<p>Dobbiamo ricampionare la curva meno fitta (<span class="math inline">P</span>) in modo che passi attraverso le stesse ascisse di <span class="math inline">B</span>. Usiamo una libreria di Julia, <a href="https://github.com/JuliaMath/Interpolations.jl"><code>Interpolations</code></a>, per implementare un’interpolazione lineare:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> Interpolations</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># dirbe_band_interp: funzione con argomento λ</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>dirbe_band_interp <span class="op">=</span> LinearInterpolation(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    dirbe_λ<span class="op">,</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    dirbe_band<span class="op">,</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    extrapolation_bc<span class="op">=</span>Flat()<span class="op">,</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 </section>
 <section id="campionamento-di-b-e-di-p-2" class="slide level1">
 <h1>Campionamento di <span class="math inline">B</span> e di <span class="math inline">P</span></h1>
-<p>Dobbiamo ricampionare la curva meno fitta (<span class="math inline">P</span>) in modo che passi attraverso le stesse ascisse di <span class="math inline">B</span>. Usiamo una libreria di Julia, <a href="https://github.com/JuliaMath/Interpolations.jl"><code>Interpolations</code></a>, per implementare un’interpolazione lineare:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> Interpolations</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># dirbe_band_interp: funzione con argomento λ</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>dirbe_band_interp <span class="op">=</span> LinearInterpolation(</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    dirbe_λ<span class="op">,</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    dirbe_band<span class="op">,</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    extrapolation_bc<span class="op">=</span>Flat()<span class="op">,</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-</section>
-<section id="campionamento-di-b-e-di-p-3" class="slide level1">
-<h1>Campionamento di <span class="math inline">B</span> e di <span class="math inline">P</span></h1>
 <p>Verifichiamo ora il funzionamento dell’interpolazione:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>PyPlot.scatter(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>               label<span class="op">=</span><span class="st">&quot;M0 flux&quot;</span><span class="op">,</span> s<span class="op">=</span><span class="fl">2</span>)<span class="op">;</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>PyPlot.scatter(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>               label<span class="op">=</span><span class="st">&quot;DIRBE band&quot;</span>)<span class="op">;</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>PyPlot.scatter(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>               dirbe_band_interp.(m0_λ_pts)<span class="op">,</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>               label<span class="op">=</span><span class="st">&quot;DIRBE band (interpolated)&quot;</span><span class="op">,</span> s<span class="op">=</span><span class="fl">2</span>)<span class="op">;</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>PyPlot.xlim(<span class="fl">2.02</span><span class="op">,</span> <span class="fl">2.07</span>)<span class="op">;</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>PyPlot.xlabel(<span class="st">&quot;Wavelength [μm]&quot;</span>)<span class="op">;</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>PyPlot.ylabel(<span class="st">&quot;Flux density [Jy]&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>scatter(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">&quot;M0 flux&quot;</span><span class="op">,</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>        xlim <span class="op">=</span> (<span class="fl">2.02</span><span class="op">,</span> <span class="fl">2.07</span>)<span class="op">,</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [µm]&quot;</span><span class="op">,</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        ylabel <span class="op">=</span> <span class="st">&quot;Flux density [Jy]&quot;</span><span class="op">,</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        markersize <span class="op">=</span> <span class="fl">2</span><span class="op">,</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>scatter<span class="op">!</span>(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">&quot;DIRBE band&quot;</span><span class="op">,</span> markersize<span class="op">=</span><span class="fl">8</span>)<span class="op">;</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>scatter<span class="op">!</span>(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band_interp.(m0_λ_pts)<span class="op">,</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">&quot;DIRBE band (interpolated)&quot;</span><span class="op">,</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>         markersize<span class="op">=</span><span class="fl">2</span>)</span></code></pre></div>
 </section>
-<section id="campionamento-di-b-e-di-p-4" class="slide level1">
-<h1>Campionamento di <span class="math inline">B</span> e di <span class="math inline">P</span></h1>
+<section class="slide level1">
+
+<iframe src="https://player.vimeo.com/video/632196520?h=dcd2aaa910&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-09 - Interpolation.mkv">
+</iframe>
+</section>
+<section class="slide level1">
+
 <center>
-<img data-src="./images/interpolation-right.png" />
+<img data-src="./images/interpolation-right.svg" style="width:80.0%" />
 </center>
 </section>
 <section id="calcolo-di-c-1" class="slide level1">
 <h1>Calcolo di <span class="math inline">C</span></h1>
 <p>Per calcolare <span class="math inline">C</span>, applichiamo la formula</p>
 <p><span class="math display">
-C \approx = \frac{\sum_i B(\lambda_i)\,\text{d}\lambda}{\sum_i B(\lambda_i) \times P_\lambda(\lambda)\,\text{d}\lambda}.
+C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda)}.
 </span></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>C(flux<span class="op">,</span> band) <span class="op">=</span> sum(flux) <span class="op">/</span> sum(flux <span class="op">.*</span> band)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Bolometric correction: %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    C(m0_flux_pts<span class="op">,</span> dirbe_band_interp.(m0_λ_pts))<span class="op">,</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>C(flux<span class="op">,</span> band) <span class="op">=</span> sum(flux) <span class="op">/</span> sum(flux <span class="op">.*</span> band)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Bolometric correction: %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    C(m0_flux_pts<span class="op">,</span> dirbe_band_interp.(m0_λ_pts))<span class="op">,</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>Il risultato è</p>
 <pre><code>Bolometric correction: 14.55</code></pre>
 </section>
 <section id="dipendenza-del-risultato-dalle-assunzioni" class="slide level1">
 <h1>Dipendenza del risultato dalle assunzioni</h1>
-<p>La prima stima che avevamo fornito per <span class="math inline">C</span> era 20, basata sulla formula</p>
+<p>La prima stima che avevamo fornito per <span class="math inline">C</span> era basata sulla formula</p>
 <p><span class="math display">
-C \sim \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
-    - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu},
+C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
+    - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu} \approx 20.28,
 </span></p>
-<p>che approssimava sia la banda di DIRBE che lo spettro stellare.</p>
+<p>che usava un’approssimazione sia per la banda di DIRBE che per lo spettro stellare.</p>
 <p>Qual è l’importanza relativa delle due assunzioni nel determinare la soluzione finale?</p>
 </section>
 <section id="spettro-realistico-banda-ideale" class="slide level1">
 <h1>Spettro realistico, banda ideale</h1>
 <p>Rifacciamo il calcolo usando la banda ideale ma lo spettro realistico:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>tophat_band <span class="op">=</span> zeros(length(m0_λ_pts))</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> (λ<span class="fl">1</span><span class="op">,</span> λ<span class="fl">2</span>) <span class="op">=</span> (λ(ν<span class="fl">0</span> <span class="op">+</span> Δν<span class="op">/</span><span class="fl">2</span>)<span class="op">,</span> λ(ν<span class="fl">0</span> <span class="op">-</span> Δν<span class="op">/</span><span class="fl">2</span>))</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># In Julia è possibile scrivere &quot;a &lt; x &lt; b&quot;</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># anziché &quot;(a &lt; x) &amp;&amp; (x &lt; b)&quot;</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    tophat_band[λ<span class="fl">1</span> .<span class="op">&lt;</span> m0_λ_pts .<span class="op">&lt;</span> λ<span class="fl">2</span>] .<span class="op">=</span> <span class="fl">1</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>PyPlot.plot(m0_λ_pts<span class="op">,</span> tophat_band)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tophat_band <span class="op">=</span> zeros(length(m0_λ_pts))  <span class="co"># Vector of zeros</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> (λ<span class="fl">1</span><span class="op">,</span> λ<span class="fl">2</span>) <span class="op">=</span> (λ(ν<span class="fl">0</span> <span class="op">+</span> Δν<span class="op">/</span><span class="fl">2</span>)<span class="op">,</span> λ(ν<span class="fl">0</span> <span class="op">-</span> Δν<span class="op">/</span><span class="fl">2</span>))</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># In Julia you can write &quot;a &lt; x &lt; b&quot; instead of &quot;(a &lt; x) &amp;&amp; (x &lt; b)&quot;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    tophat_band[λ<span class="fl">1</span> .<span class="op">&lt;</span> m0_λ_pts .<span class="op">&lt;</span> λ<span class="fl">2</span>] .<span class="op">=</span> <span class="fl">1</span> <span class="co"># Set to 1 the points within the interval</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>plot(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> tophat_band<span class="op">,</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>     label <span class="op">=</span> <span class="st">&quot;Top-hat band&quot;</span><span class="op">,</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>     xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [µm]&quot;</span><span class="op">,</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>     legend <span class="op">=</span> <span class="op">:</span>topleft)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>plot<span class="op">!</span>(dirbe_λ[mask] <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band[mask]<span class="op">,</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>      label <span class="op">=</span> <span class="st">&quot;True DIRBE band&quot;</span>)</span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="./images/tophat-band.svg" style="width:80.0%" />
+</center>
 </section>
 <section id="spettro-realistico-banda-ideale-1" class="slide level1">
 <h1>Spettro realistico, banda ideale</h1>
-<center>
-<img data-src="./images/tophat-band.png" />
-</center>
-</section>
-<section id="spettro-realistico-banda-ideale-2" class="slide level1">
-<h1>Spettro realistico, banda ideale</h1>
 <p>Calcoliamo ora <span class="math inline">C</span> in questo caso:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(<span class="st">&quot;C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> C(m0_flux_pts<span class="op">,</span> tophat_band))</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(<span class="st">&quot;C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> C(m0_flux_pts<span class="op">,</span> tophat_band))</span></code></pre></div>
 <p>Il risultato è:</p>
 <pre><code>C = 13.99</code></pre>
+<p>che mostra che l’approssimazione della banda ideale conta molto poco!</p>
 </section>
 <section id="spettro-ideale-banda-realistica" class="slide level1">
 <h1>Spettro ideale, banda realistica</h1>
-<p>Facciamo ora il calcolo inverso: usiamo uno spettro di corpo nero e la banda effettiva di DIRBE. Ci occorre la formula del corpo nero in funzione di <span class="math inline">\lambda</span>:</p>
+<p>Consideriamo ora la seconda ipotesi: usiamo uno spettro di corpo nero e la banda effettiva di DIRBE.</p>
+<p>Ci occorre la formula del corpo nero in funzione di <span class="math inline">\lambda</span>:</p>
 <p><span class="math display">
 B(\lambda, T) = \frac{2hc^2}{\lambda^5} \frac1{e^{hc / \lambda kT} - 1}.
 </span></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>bλ(λ<span class="op">,</span> T) <span class="op">=</span> (<span class="fl">2</span>h<span class="op">*</span>c<span class="op">^</span><span class="fl">2</span> <span class="op">/</span> λ<span class="op">^</span><span class="fl">5</span>) <span class="op">/</span> (exp(h<span class="op">*</span>c <span class="op">/</span> (λ<span class="op">*</span>k<span class="op">*</span>T)) <span class="op">-</span> <span class="fl">1</span>))</span></code></pre></div>
+<p>che in Julia si implementa così:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>bλ(λ<span class="op">,</span> T) <span class="op">=</span> (<span class="fl">2</span>h <span class="op">*</span> c<span class="op">^</span><span class="fl">2</span> <span class="op">/</span> λ<span class="op">^</span><span class="fl">5</span>) <span class="op">/</span> (exp(h<span class="op">*</span>c <span class="op">/</span> (λ<span class="op">*</span>k<span class="op">*</span>T)) <span class="op">-</span> <span class="fl">1</span>))</span></code></pre></div>
 </section>
 <section id="spettro-ideale-banda-realistica-1" class="slide level1">
 <h1>Spettro ideale, banda realistica</h1>
 <p>Facciamo ora il calcolo:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    C(bλ.(m0_λ_pts<span class="op">,</span> T)<span class="op">,</span> dirbe_band_interp.(m0_λ_pts))<span class="op">,</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    C(bλ.(m0_λ_pts<span class="op">,</span> T)<span class="op">,</span> dirbe_band_interp.(m0_λ_pts))<span class="op">,</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>Il risultato è:</p>
 <pre><code>C = 18.90</code></pre>
+<p>Quindi l’approssimazione dello spettro di corpo nero è decisamente grossolana per una stella di questo tipo!</p>
+</section>
+<section id="avvisi" class="slide level1">
+<h1>Avvisi</h1>
+</section>
+<section id="questionari-per-la-didattica" class="slide level1">
+<h1>Questionari per la didattica</h1>
+<p>Preoccupatevi di compilare con cura i questionari! Sono esaminati una volta all’anno dalla Commissione Paritetica Docenti-Studenti, e i risultati sono presi molto sul serio.</p>
+<p>Dovrete dare una valutazione per il corso e per queste esercitazioni. Se potete, date un vostro giudizio (nei commenti liberi) sull’utilità di queste lezioni di approfondimento rispetto alle lezioni nel loro complesso, e mettetelo nei commenti generali del corso.</p>
 </section>
     </div>
   </div>

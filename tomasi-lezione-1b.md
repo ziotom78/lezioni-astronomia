@@ -5,7 +5,6 @@ date: 15 Ottobre 2021
 ...
 
 
-
 # Calcolo delle correzioni bolometriche
 
 Nella lezione precedente abbiamo calcolato la luminosità totale del centro galattico a partire da misurazioni dello strumento DIRBE.
@@ -97,11 +96,11 @@ $$
 e uno spettro di corpo nero con $T = 3800\,\text{K}$:
 
 $$
-C \sim \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
+C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
     - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu}.
 $$
 
-L'integrale al numeratore è \(\propto \sigma T^4\) (ma non integriamo sull'angolo solido come nella formula di Stefan-Boltzmann), mentre quello al denominatore richiede un calcolo numerico.
+L'integrale al numeratore è \(\propto \sigma T^4\) (ma non integriamo su $\Omega$ come nella formula di Stefan-Boltzmann), mentre il denominatore richiede un calcolo numerico.
 
 
 # Calcolo analitico della correzione bolometrica
@@ -119,7 +118,7 @@ con \([B_{bb}] = \text{W/sr/m$^2$/Hz}\).
 Calcoliamo l'espressione di $C$ approssimando l'integrale con una somma:
 
 $$
-C \sim \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
+C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
     - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu} \approx
 \frac{\sum_{i=0}^\infty B_{bb}(i \times \delta\nu, T)}{\sum_{i=i_1}^{i_2} B_{bb}(i \times \delta\nu, T)},
 $$
@@ -127,63 +126,77 @@ $$
 dove $\delta\nu$ è il passo con cui campioniamo gli addendi.
 
 
-# Calcolo approssimato
+# Julia
 
-Oggi useremo [Julia](http://julialang.org/) per calcolare $C$.
+Oggi useremo [Julia](http://julialang.org/) per calcolare la correzione bolometrica $C$.
 
 Julia è un linguaggio di programmazione pensato per il calcolo scientifico, che permette di implementare i calcoli necessari al nostro scopo in maniera molto comoda e veloce.
 
-Nelle prossime slide includo tutti i comandi necessari per effettuare i calcoli; è possibile anche guardare una registrazione sul sito [Asciinema](https://asciinema.org/a/0mBzdfUy3HYn9bLkRZxtoytyt), che usa la libreria [`UnicodePlots`](https://github.com/JuliaPlots/UnicodePlots.jl) per generare grafici da terminale (molto *nerd*!).
+Nelle prossime slide includo tutti i comandi necessari per effettuare i calcoli; è possibile anche guardare una vecchia registrazione sul sito [Asciinema](https://asciinema.org/a/0mBzdfUy3HYn9bLkRZxtoytyt), che usa la libreria [`UnicodePlots`](https://github.com/JuliaPlots/UnicodePlots.jl) per generare grafici da terminale (molto *nerd*!).
 
 
-# Calcolo approssimato
+# Installazione di JupyterLab
 
-Per usare Julia sul vostro computer, avviatelo col comando `julia` ed eseguite questi comandi per scaricare da Internet i pacchetti necessari ed installarli:
+<asciinema-player src="cast/install-ijulia-73x21.cast" cols="73" rows="21" font-size="medium"></asciinema-player>
+
+# Installazione di librerie
+
+Una volta installato Julia e fatto partire IJulia, potrete creare un *notebook* (vedi video seguente). I comandi nel *notebook* si scrivono all'interno di *celle*, che si eseguono premendo `Maiusc + Invio`.
+
+Inizieremo scaricando da Internet una serie di librerie molto utili:
 
 ```julia
 import Pkg
-for name in ["PyPlot", "Interpolations", "GZip"]
+for name in ["GZip", "Interpolations", "Plots"]
     Pkg.add(name)
 end
 ```
 
-
 # Calcolo approssimato di $C$
 
-Implementiamo la formula di corpo nero:
+La prima cosa che facciamo è implementare la formula di corpo nero $B_{bb}(\nu, T)$:
 
 ```julia
-import PyPlot
+import Plots
 const k, h, c = 1.38e-23, 6.626e-34, 3e8
 # Write \lambda and press <TAB> to get λ
 λ(ν) = c / ν
 b(ν, T) = (2h*ν^3 / c^2) / (exp(h*ν / (k*T)) - 1)
 
 let ν = 0.5e13:1e13:1e15
-    PyPlot.plot(ν, b.(ν, 3800));
+    plot(ν, b.(ν, 3800), 
+    label = "", xlabel = "Frequency [Hz]", ylabel = "Spectral radiance [W/sr/m²/Hz]")
 end
-PyPlot.xlabel("Frequency [Hz]");
-PyPlot.ylabel(raw"Spectral radiance [W/sr/m$^2$/Hz]");
 ```
+---
 
+<iframe src="https://player.vimeo.com/video/632187442?h=3e91fe6ed4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-01 - Installation and blackbody.mkv"></iframe>
+
+---
+
+<center>![](./images/blackbody.svg){width=80%}</center>
 
 # Calcolo approssimato
 
-<center>![](./images/blackbody.png)</center>
+Definiamo una funzione \texttt{C} che calcoli la correzione bolometrica $C$ con la formula
 
-
-# Calcolo approssimato
-
-Definiamo una funzione \texttt{C} che faccia il calcolo, ed eseguiamola per diversi valori del passo $\delta\nu$:
+$$
+C \approx \frac{\sum_{i=0}^\infty B_{bb}(i \times \delta\nu, T)}{\sum_{i=i_1}^{i_2} B_{bb}(i \times \delta\nu, T)},
+$$
 
 ```julia
-using Printf
 function C(ν0, bwidth, T, δν)
     fullnu = 0.5e13:δν:1e15  # [0, ∞)
     partialnu = (ν0 - bwidth/2):δν:(ν0 + bwidth/2)
     sum(b.(fullnu, T)) / sum(b.(partialnu, T))
 end
+```
 
+# Calcolo approssimato
+
+Dobbiamo decidere il valore del passo $\delta\nu$; proviamo con una serie di valori via via più piccoli, e vediamo quando converge:
+
+```julia
 ν0, bwidth, T = c / 2.2e-6, 2.28e13, 3800
 for δν in [1e13, 1e12, 1e11, 1e10, 1e9, 1e8]
     @printf("δν = %.0e Hz, T = %.1f K, C = %.2f\n",
@@ -191,7 +204,9 @@ for δν in [1e13, 1e12, 1e11, 1e10, 1e9, 1e8]
 end
 ```
 
+---
 
+<iframe src="https://player.vimeo.com/video/632189138?h=844ad3079a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-02 - Simple bolometric constant.mkv"></iframe>
 
 # Risultati del calcolo
 
@@ -204,88 +219,21 @@ end
 δν = 1e+08 Hz, T = 3800.0 K, C = 20.28
 ```
 
-È abbastanza diverso dal valore $C = 14.5$ riportato nell'articolo!
+Converge senza dubbio, ma è abbastanza diverso dal valore $C = 14.5$ riportato nell'articolo!
 
 
 # Migliorare la stima di $C$
 
 Ci sono due spiegazioni possibili per la discrepanza nel valore di $C$ che abbiamo osservato:
   
-1. L'emissione delle stelle non segue esattamente una legge di
-    corpo nero;
-2. La banda di DIRBE non è perfettamente rettangolare.
+#. La banda di DIRBE non è perfettamente rettangolare.
 
-
-# Spettro stellare
-
-Per capire che correzione applicare, dobbiamo avere un'idea dello spettro di emissione del centro galattico.
-
-Il centro galattico appare rosso, e il fatto che sia povero di gas indica un'età avanzata. Questi indizi suggeriscono che le stelle siano giganti rosse; una gigante rossa M0 ha $T \approx 3800\,\text{K}$ e $L \approx 400 L_\odot$.
-
-
-# Catalogo di spettri stellari
-
-<center>![](./images/1998-pickles-title-page.svg)</center>
-
-
-# Spettro stellare
-
-Gli spettri di Pickles sono disponibili al sito
-[www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html](https://www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html).
-
-Noi scegliamo uno spettro «M iii», il file è `ukm0iii.dat.gz`, che è compresso usando il programma `gzip`.
-
-
-# Contenuto del file
-
-Si può ispezionare il contenuto del file decomprimendolo con `gunzip` e visualizzando le prime righe con `head`:
-
-```
-$ cat ukm0iii.dat.gz | gunzip | head
-#iRMS=0.01722689532 0
-#    lk ukf_m0iii uks_m0iii        fh        fk         fm
-#
- 1150.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1155.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1160.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1165.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1170.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1175.0  0.000000  0.000000  0.000000  0.000000  0.000000
- 1180.0  0.000000  0.000000  0.000000  0.000000  0.000000
-```
-
-Lo spettro è espresso in funzione di $\lambda$, non di $\nu$!
-
-
-
-# Lettura dello spettro stellare
-
-Le lunghezze d'onda sono espresse in \AA, così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky ($1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}$).
-
-```julia
-using DelimitedFiles
-using GZip
-spectrum = GZip.open("ukm0iii.dat.gz") do io
-    readdlm(io, skipstart=3)
-end
-m0_λ_pts = spectrum[:, 1] * 1e-10
-m0_flux_pts = spectrum[:, 2]
-
-PyPlot.plot(m0_λ_pts, m0_flux_pts)
-# Write \Angstrom and press <TAB> to get Å
-PyPlot.xlabel("Wavelength [Å]");
-PyPlot.ylabel("Flux density [Jy]");
-```
-
-
-# Spettro stellare
-
-<center>![](./images/stellar-spectrum.png)</center>
-
+#. L'emissione delle stelle non segue esattamente una legge di
+    corpo nero.
 
 # Banda di DIRBE
 
-Occorre ora avere la risposta in banda del canale a 2.2 µm di DIRBE, che si può scaricare qui:
+Occorre avere la risposta in banda del canale a 2.2 µm di DIRBE, che si può scaricare qui:
   [lambda.gsfc.nasa.gov/product/cobe/c_spectral_res.cfm](https://lambda.gsfc.nasa.gov/product/cobe/c_spectral_res.cfm).
 
 
@@ -324,21 +272,26 @@ A noi interessa la banda n. 2, ossia la terza colonna.
 Facciamo un grafico della banda (ancora espressa in termini di $\lambda$!), per renderci conto di come è fatto il dato:
 
 ```julia
-dirbe_bands = readdlm("DIRBE_SYSTEM_SPECTRAL_RESPONSE_TABLE.ASC",
-                      skipstart=15)
+dirbe_bands = readdlm(
+    "DIRBE_SYSTEM_SPECTRAL_RESPONSE_TABLE.ASC",
+    skipstart=15,
+)
 
 # Convert from μm to m
 dirbe_λ = dirbe_bands[:, 1] * 1e-6
 dirbe_band = dirbe_bands[:, 3]
 
-PyPlot.plot(dirbe_λ, dirbe_band);
-PyPlot.xlabel("Wavelength [m]");
+plot(dirbe_λ, dirbe_band,
+     xlabel = "Wavelength [m]")
 ```
 
+---
 
-# Banda di DIRBE
+<iframe src="https://player.vimeo.com/video/632190633?h=4b16990d2c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-03 - DIRBE band.mkv"></iframe>
 
-<center>![](./images/dirbe_band_too_wide.png)</center>
+---
+
+<center>![](./images/dirbe_band_too_wide.svg){width=80%}</center>
 
 
 # Banda di DIRBE
@@ -350,15 +303,18 @@ Meglio aggiustare la scala; mascheriamo tutti i valori della banda uguali a zero
 # la banda è maggiore di zero
 mask = dirbe_band .> 0
 
-PyPlot.plot(dirbe_λ[mask] * 1e6, dirbe_band[mask]);
-# "raw" impedisce a Julia di interpretare "\mu"
-PyPlot.xlabel(raw"Wavelength [$\mu$m]");
+plot(dirbe_λ[mask] * 1e6, dirbe_band[mask],
+    xlabel = "Wavelength [$\mu$m]")
 ```
 
+---
 
-# Banda di DIRBE
+<iframe src="https://player.vimeo.com/video/632213391?h=1dde8edbfe&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-04 - DIRBE band zoomed.mkv"></iframe>
 
-<center>![](./images/dirbe_band_ok.png)</center>
+---
+
+<center>![](./images/dirbe_band_ok.svg){width=80%}</center>
+
 
 # Centro della banda
 
@@ -381,67 +337,126 @@ che corrisponde a una media pesata.
 Il risultato è 2.22 µm, che è quanto ci aspettavamo.
 
 
+# Spettro stellare
+
+Dobbiamo anche avere un'idea più precisa dello spettro di emissione del centro galattico.
+
+Il centro galattico appare rosso, e il fatto che sia povero di gas indica un'età avanzata. Questi indizi suggeriscono che le stelle siano giganti rosse; una gigante rossa M0 ha $T \approx 3800\,\text{K}$ e $L \approx 400 L_\odot$.
+
+
+# Catalogo di spettri stellari
+
+<center>![](./images/1998-pickles-title-page.svg){width=75%}</center>
+
+
+# Spettro stellare
+
+Gli spettri di Pickles sono disponibili al sito
+[www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html](https://www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html).
+
+Noi scegliamo uno spettro «M iii», il file è `ukm0iii.dat.gz`, che è compresso usando il programma `gzip`.
+
+
+# Contenuto del file
+
+Si può ispezionare il contenuto del file decomprimendolo con `gunzip` e visualizzando le prime righe con `head`:
+
+```
+$ cat ukm0iii.dat.gz | gunzip | head
+#iRMS=0.01722689532 0
+#    lk ukf_m0iii uks_m0iii        fh        fk         fm
+#
+ 1150.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1155.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1160.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1165.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1170.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1175.0  0.000000  0.000000  0.000000  0.000000  0.000000
+ 1180.0  0.000000  0.000000  0.000000  0.000000  0.000000
+```
+
+Lo spettro è espresso in funzione di $\lambda$, non di $\nu$!
+
+
+# Lettura dello spettro stellare
+
+Le lunghezze d'onda sono espresse in \AA, così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky ($1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}$).
+
+```julia
+using DelimitedFiles
+using GZip
+spectrum = GZip.open("ukm0iii.dat.gz") do io
+    readdlm(io, skipstart=3)
+end
+m0_λ_pts = spectrum[:, 1] * 1e-10
+m0_flux_pts = spectrum[:, 2]
+
+plot(m0_λ_pts, m0_flux_pts,
+    xlabel = "Wavelength [Å]",
+    ylabel = "Flux density [Jy]")
+```
+
+---
+
+<center>![](./images/stellar-spectrum.svg){width=80%}</center>
+
 
 # Confronto tra spettro e banda
 
 Anche se le unità di misure sono diverse, è interessante fare un grafico dello spettro stellare e della banda insieme.
 
 ```julia
-PyPlot.plot(m0_λ_pts * 1e6, m0_flux_pts,
-            label="M0 flux");
-PyPlot.plot(dirbe_λ * 1e6, dirbe_band,
-            label="DIRBE band");
-PyPlot.xlim(0, 3);
-PyPlot.xlabel("Wavelength [μm]");
-PyPlot.ylabel("Flux density [Jy]");
-PyPlot.legend();
+plot(m0_λ_pts * 1e6, m0_flux_pts,
+    label = "M0 flux",
+    xlim = (0, 3),
+    xlabel = "Wavelength [μm]",
+    ylabel = "Flux density [Jy]",
+)
+plot!(dirbe_λ * 1e6, dirbe_band,
+    label = "DIRBE band")
 ```
 
+---
 
-# Confronto tra spettro e banda
-
-<center>![](./images/stellar-spectrum-and-band.png)</center>
+<center>![](./images/stellar-spectrum-and-band.svg){width=80%}</center>
 
 
 # Calcolo di $C$
 
-Abbiamo ora i dati per calcolare la correzione bolometrica $C$:
+In teoria saremmo pronti per calcolare la correzione bolometrica $C$:
 
 $$
-C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty B(\nu) \times P_\nu(\nu)\,\text{d}\nu}
-= \frac{\int_0^\infty F(\lambda)\,\text{d}\lambda}{\int_0^\infty F(\lambda) \times P_\lambda(\lambda)\,\text{d}\lambda},
+C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty B(\nu)\,\text{d}\nu \times P_\nu(\nu)}
+= \frac{\int_0^\infty F(\lambda)\,\text{d}\lambda}{\int_0^\infty F(\lambda)\,\text{d}\lambda \times P_\lambda(\lambda)},
 $$
 
-dove siamo passati da $B$ a $F$, e da $\nu$ a $\lambda$.
-
-Avendo noi un campionamento discreto per $F$ e $P$, convertiremo gli integrali in somme:
+dove siamo passati da $B$ a $F$, e da $\nu$ a $\lambda$. Ovviamente dobbiamo però convertire gli integrali in somme:
 
 $$
-C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i) \times P_\lambda(\lambda)\,\text{d}\lambda}
+C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda)}
 $$
 
 
 # Campionamento di $B$ e di $P$
 
-C'è però un problema nel campionamento delle curve, evidente se si fa un ingrandimento del grafico precedente:
+Non possiamo però applicare subito la formula per $C$.
+
+C'è infatti un problema nel campionamento delle curve, evidente se si fa un ingrandimento del grafico precedente:
 
 ```julia
-PyPlot.scatter(m0_λ_pts * 1e6, m0_flux_pts,
-               label="M0 flux", s=0.2);
-PyPlot.scatter(dirbe_λ * 1e6, dirbe_band,
-               label="DIRBE band");
-
-PyPlot.xlim(2.0, 2.2);
-
-PyPlot.xlabel("Wavelength [μm]");
-PyPlot.ylabel("Flux density [Jy]");
-PyPlot.legend();
+scatter(m0_λ_pts * 1e6, m0_flux_pts,
+        xlim = (2.0, 2.2),
+        label="M0 flux",
+        xlabel="Wavelength [µm]",
+        ylabel = "Flux density [Jy]",ù
+        markersize=1)
+scatter!(dirbe_λ * 1e6, dirbe_band,
+         label="DIRBE band")
 ```
 
+---
 
-# Campionamento di $B$ e di $P$
-
-<center>![](./images/interpolation-wrong.png)</center>
+<center>![](./images/interpolation-wrong.svg){width=80%}</center>
 
 
 # Campionamento di $B$ e di $P$
@@ -450,6 +465,7 @@ Dobbiamo ricampionare la curva meno fitta ($P$) in modo che passi attraverso le 
 
 ```julia
 using Interpolations
+
 # dirbe_band_interp: funzione con argomento λ
 dirbe_band_interp = LinearInterpolation(
     dirbe_λ,
@@ -463,24 +479,27 @@ dirbe_band_interp = LinearInterpolation(
 Verifichiamo ora il funzionamento dell'interpolazione:
 
 ```julia
-PyPlot.scatter(m0_λ_pts * 1e6, m0_flux_pts,
-               label="M0 flux", s=2);
-PyPlot.scatter(dirbe_λ * 1e6, dirbe_band,
-               label="DIRBE band");
-PyPlot.scatter(m0_λ_pts * 1e6,
-               dirbe_band_interp.(m0_λ_pts),
-               label="DIRBE band (interpolated)", s=2);
-
-PyPlot.xlim(2.02, 2.07);
-
-PyPlot.xlabel("Wavelength [μm]");
-PyPlot.ylabel("Flux density [Jy]");
+scatter(m0_λ_pts * 1e6, m0_flux_pts,
+        label="M0 flux",
+        xlim = (2.02, 2.07),
+        xlabel = "Wavelength [µm]",
+        ylabel = "Flux density [Jy]",
+        markersize = 2,
+)
+scatter!(dirbe_λ * 1e6, dirbe_band,
+         label="DIRBE band", markersize=8);
+scatter!(m0_λ_pts * 1e6, dirbe_band_interp.(m0_λ_pts),
+         label="DIRBE band (interpolated)",
+         markersize=2)
 ```
 
+---
 
-# Campionamento di $B$ e di $P$
+<iframe src="https://player.vimeo.com/video/632196520?h=dcd2aaa910&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-09 - Interpolation.mkv"></iframe>
 
-<center>![](./images/interpolation-right.png)</center>
+---
+
+<center>![](./images/interpolation-right.svg){width=80%}</center>
 
 
 # Calcolo di $C$
@@ -488,7 +507,7 @@ PyPlot.ylabel("Flux density [Jy]");
 Per calcolare $C$, applichiamo la formula
 
 $$
-C \approx = \frac{\sum_i B(\lambda_i)\,\text{d}\lambda}{\sum_i B(\lambda_i) \times P_\lambda(\lambda)\,\text{d}\lambda}.
+C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda)}.
 $$
 
 ```julia
@@ -507,14 +526,14 @@ Bolometric correction: 14.55
 
 # Dipendenza del risultato dalle assunzioni
 
-La prima stima che avevamo fornito per $C$ era 20, basata sulla formula
+La prima stima che avevamo fornito per $C$ era basata sulla formula
 
 $$
-C \sim \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
-    - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu},
+C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
+    - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu} \approx 20.28,
 $$
 
-che approssimava sia la banda di DIRBE che lo spettro stellare.
+che usava un'approssimazione sia per la banda di DIRBE che per lo spettro stellare.
 
 Qual è l'importanza relativa delle due assunzioni nel determinare la soluzione finale?
 
@@ -524,21 +543,25 @@ Qual è l'importanza relativa delle due assunzioni nel determinare la soluzione 
 Rifacciamo il calcolo usando la banda ideale ma lo spettro realistico:
 
 ```julia
-tophat_band = zeros(length(m0_λ_pts))
+tophat_band = zeros(length(m0_λ_pts))  # Vector of zeros
 
 let (λ1, λ2) = (λ(ν0 + Δν/2), λ(ν0 - Δν/2))
-    # In Julia è possibile scrivere "a < x < b"
-    # anziché "(a < x) && (x < b)"
-    tophat_band[λ1 .< m0_λ_pts .< λ2] .= 1
+    # In Julia you can write "a < x < b" instead of "(a < x) && (x < b)"
+    tophat_band[λ1 .< m0_λ_pts .< λ2] .= 1 # Set to 1 the points within the interval
 end
 
-PyPlot.plot(m0_λ_pts, tophat_band);
+plot(m0_λ_pts * 1e6, tophat_band,
+     label = "Top-hat band",
+     xlabel = "Wavelength [µm]",
+     legend = :topleft)
+plot!(dirbe_λ[mask] * 1e6, dirbe_band[mask],
+      label = "True DIRBE band")
 ```
 
 
-# Spettro realistico, banda ideale
+---
 
-<center>![](./images/tophat-band.png)</center>
+<center>![](./images/tophat-band.svg){width=80%}</center>
 
 
 # Spettro realistico, banda ideale
@@ -555,19 +578,23 @@ Il risultato è:
 C = 13.99
 ```
 
+che mostra che l'approssimazione della banda ideale conta molto poco!
 
 
 # Spettro ideale, banda realistica
 
-Facciamo ora il calcolo inverso: usiamo uno spettro di corpo nero e la banda effettiva di DIRBE. Ci occorre la formula del corpo nero in funzione di $\lambda$:
+Consideriamo ora la seconda ipotesi: usiamo uno spettro di corpo nero e la banda effettiva di DIRBE.
+
+Ci occorre la formula del corpo nero in funzione di $\lambda$:
 
 $$
 B(\lambda, T) = \frac{2hc^2}{\lambda^5} \frac1{e^{hc / \lambda kT} - 1}.
 $$
 
+che in Julia si implementa così:
 
 ```julia
-bλ(λ, T) = (2h*c^2 / λ^5) / (exp(h*c / (λ*k*T)) - 1))
+bλ(λ, T) = (2h * c^2 / λ^5) / (exp(h*c / (λ*k*T)) - 1))
 ```
 
 
@@ -587,3 +614,14 @@ Il risultato è:
 ```
 C = 18.90
 ```
+
+Quindi l'approssimazione dello spettro di corpo nero è decisamente grossolana per una stella di questo tipo!
+
+
+# Avvisi
+
+# Questionari per la didattica
+
+Preoccupatevi di compilare con cura i questionari! Sono esaminati una volta all'anno dalla Commissione Paritetica Docenti-Studenti, e i risultati sono presi molto sul serio.
+
+Dovrete dare una valutazione per il corso e per queste esercitazioni. Se potete, date un vostro giudizio (nei commenti liberi) sull'utilità di queste lezioni di approfondimento rispetto alle lezioni nel loro complesso, e mettetelo nei commenti generali del corso.
