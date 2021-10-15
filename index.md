@@ -4,6 +4,7 @@
 
 # Astronomia I
 
-- [Lezione 1, prima parte](tomasi-lezione-1a.html)
+- 2021-10-14: [Lezione 1, prima parte](tomasi-astro1-lezione-01a.html) (il Centro Galattico, magnitudini).
+- 2021-10-15: [Lezione 1, seconda parte](tomasi-astro1-lezione-01a.html) (correzioni bolometriche, Julia).
 
 # Astronomia II

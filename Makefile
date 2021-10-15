@@ -13,8 +13,8 @@ PANDOC_IMAGINE := $(HOME)/bin/pandoc_imagine.py
 .phony: all
 
 all: \
-	tomasi-lezione-1b.html \
-	tomasi-lezione-1a.html \
+	tomasi-astro1-lezione-01b.html \
+	tomasi-astro1-lezione-01a.html \
 	index.html
 
 index.html: index.md ${JS_FILES}
