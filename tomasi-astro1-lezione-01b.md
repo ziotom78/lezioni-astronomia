@@ -562,7 +562,7 @@ Bolometric correction: 14.55
 
 in perfetto accordo con quanto usato da Dwek et al. (1995).
 
-# Dipendenza del risultato dalle assunzioni
+# Dipendenza dalle assunzioni
 
 La prima stima che avevamo fornito per $C$ era basata sulla formula
 
