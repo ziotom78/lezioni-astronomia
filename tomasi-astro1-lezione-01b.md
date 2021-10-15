@@ -7,9 +7,9 @@ date: 15 Ottobre 2021
 
 # Calcolo delle correzioni bolometriche
 
-Nella lezione precedente abbiamo calcolato la luminosità totale del centro galattico a partire da misurazioni dello strumento DIRBE.
+Nella [lezione precedente](tomasi-astro1-lezione-01a.html) abbiamo calcolato la luminosità totale del centro galattico a partire da misurazioni dello strumento DIRBE.
 
-Abbiamo però usato una stima della correzione bolometrica $C$ senza capire come fosse ricavata. Ora colmeremo questa lacuna.
+[Abbiamo però usato](tomasi-astro1-lezione-01a.html#/dal-flusso-alla-luminosità) una stima della correzione bolometrica $C$ senza capire come fosse ricavata. Ora colmeremo questa lacuna.
 
 
 # Calcolo delle correzioni bolometriche
@@ -35,6 +35,7 @@ B(\nu)\,\text{d}\nu = B(\lambda)\,\text{d}\lambda \quad\Rightarrow\quad
 B(\nu) = B\bigl(\lambda(\nu)\bigr)\,\frac{\text{d}\lambda}{\text{d}\nu}.
 $$
 
+Le altre quantità che servono per calcolare $C$ cambiano se si passa da $\nu$ a $\lambda$?
 
 
 # Dipendenza da $\nu$ e da $\lambda$
@@ -54,7 +55,7 @@ Nel caso della risposta in banda $P$, la sua espressione analitica cambia, oppur
 
 # Risposta in banda
 
-$P$ quantifica l'energia ricevuta, che resta la stessa se si usa $\nu$ o $\lambda$. Quindi
+L'energia ricevuta da un rivelatore resta la stessa se si usa $\nu$ o $\lambda$, quindi
 
 $$
 \int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu =
@@ -68,7 +69,7 @@ $$
 \int_0^\infty P_\lambda\bigl(\lambda(\nu)\bigr) \times B(\nu)\,\text{d}\nu,
 $$
 
-che è vero se $P_\lambda(\lambda) = P_\lambda(c / \nu) = P_\nu(\nu)$. Quindi la forma analitica della banda non cambia.
+che è vero se $P_\lambda(\lambda) = P_\lambda(c / \nu) = P_\nu(\nu)$. Quindi la forma analitica della banda non cambia, basta sostituire $\lambda \rightarrow c/\nu$.
 
 
 # Correzione bolometrica
@@ -115,7 +116,7 @@ con \([B_{bb}] = \text{W/sr/m$^2$/Hz}\).
 
 # Calcolo approssimato
 
-Calcoliamo l'espressione di $C$ approssimando l'integrale con una somma:
+L'espressione di $C$ non è calcolabile analiticamente a causa dell'integrale al denominatore, ma possiamo valutarla approssimando gli integrali con somme:
 
 $$
 C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
@@ -123,7 +124,7 @@ C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 \frac{\sum_{i=0}^\infty B_{bb}(i \times \delta\nu, T)}{\sum_{i=i_1}^{i_2} B_{bb}(i \times \delta\nu, T)},
 $$
 
-dove $\delta\nu$ è il passo con cui campioniamo gli addendi.
+dove $\delta\nu$ è il passo con cui campioniamo gli addendi (semplificato nell'espressione perché compare sia al numeratore che al denominatore).
 
 
 # Julia
@@ -133,6 +134,8 @@ Oggi useremo [Julia](http://julialang.org/) per calcolare la correzione bolometr
 Julia è un linguaggio di programmazione pensato per il calcolo scientifico, che permette di implementare i calcoli necessari al nostro scopo in maniera molto comoda e veloce.
 
 Nelle prossime slide includo tutti i comandi necessari per effettuare i calcoli; è possibile anche guardare una vecchia registrazione sul sito [Asciinema](https://asciinema.org/a/0mBzdfUy3HYn9bLkRZxtoytyt), che usa la libreria [`UnicodePlots`](https://github.com/JuliaPlots/UnicodePlots.jl) per generare grafici da terminale (molto *nerd*!).
+
+Useremo l'interfaccia [JupyterLab](https://jupyter.org/), che è accessibile da Julia attraverso il pacchetto [IJulia](https://github.com/JuliaLang/IJulia.jl). Vediamo come installarla.
 
 
 # Installazione di JupyterLab
@@ -147,6 +150,10 @@ Inizieremo scaricando da Internet una serie di librerie molto utili:
 
 ```julia
 import Pkg
+# Download and install these libraries:
+# - GZip: work with .gz compressed files
+# - Interpolations: create interpolating functions from discrete data
+# - Plots: guess what?
 for name in ["GZip", "Interpolations", "Plots"]
     Pkg.add(name)
 end
@@ -327,7 +334,8 @@ plot(dirbe_λ[mask] * 1e6, dirbe_band[mask],
 Calcoliamo il centro della banda di DIRBE, tramite la formula
 
 $$
-\lambda_0 = \frac{\int_0^\infty \lambda\times P_\lambda(\lambda)\,\text{d}\lambda}{\int_0^\infty P_\lambda(\lambda)\,\text{d}\lambda},
+\lambda_0 = \frac{\int_0^\infty \lambda\times P_\lambda(\lambda)\,\text{d}\lambda}{\int_0^\infty P_\lambda(\lambda)\,\text{d}\lambda} \approx
+\frac{\sum_{i=1}^N \lambda_i \times P_\lambda(\lambda_i)}{\sum_{i=1}^N P_\lambda(\lambda_i)},
 $$
 
 che corrisponde a una media pesata.
@@ -349,6 +357,7 @@ Dobbiamo anche avere un'idea più precisa dello spettro di emissione del centro 
 
 Il centro galattico appare rosso, e il fatto che sia povero di gas indica un'età avanzata. Questi indizi suggeriscono che le stelle siano giganti rosse; una gigante rossa M0 ha $T \approx 3800\,\text{K}$ e $L \approx 400 L_\odot$.
 
+Per conoscere qual è lo spettro di una gigante rossa M0, dobbiamo fare affidamento a un catalogo di spettri stellari.
 
 # Catalogo di spettri stellari
 
@@ -409,7 +418,7 @@ plot(m0_λ_pts, m0_flux_pts,
 
 # Confronto tra spettro e banda
 
-Anche se le unità di misure sono diverse, è interessante fare un grafico dello spettro stellare e della banda insieme.
+Anche se le unità di misura sono diverse, è interessante fare un grafico dello spettro stellare e della banda insieme.
 
 ```julia
 plot(m0_λ_pts * 1e6, m0_flux_pts,
@@ -421,6 +430,8 @@ plot(m0_λ_pts * 1e6, m0_flux_pts,
 plot!(dirbe_λ * 1e6, dirbe_band,
     label = "DIRBE band")
 ```
+
+La frequenza a 2.2 µm non è centratissima: DIRBE ha la [frequenza a 1.25 µm](tomasi-astro1-lezione-01a.html#/dwek-et-al.-apj-1995) che sarebbe più adatta…
 
 ---
 
@@ -436,14 +447,14 @@ C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty B(\nu)\,\text{d}\nu \
 = \frac{\int_0^\infty F(\lambda)\,\text{d}\lambda}{\int_0^\infty F(\lambda)\,\text{d}\lambda \times P_\lambda(\lambda)},
 $$
 
-dove siamo passati da $B$ a $F$, e da $\nu$ a $\lambda$. Ovviamente dobbiamo però convertire gli integrali in somme:
+dove siamo passati da $B$ (densità spettrale) a $F$ (densità di flusso), e da $\nu$ a $\lambda$. Ovviamente dobbiamo però convertire gli integrali in somme:
 
 $$
-C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda)}
+C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}
 $$
 
 
-# Campionamento di $B$ e di $P$
+# Campionamento (1/4)
 
 Non possiamo però applicare subito la formula per $C$.
 
@@ -465,9 +476,20 @@ scatter!(dirbe_λ * 1e6, dirbe_band,
 <center>![](./images/interpolation-wrong.svg){width=80%}</center>
 
 
-# Campionamento di $B$ e di $P$
+# Campionamento (2/4)
 
-Dobbiamo ricampionare la curva meno fitta ($P$) in modo che passi attraverso le stesse ascisse di $B$. Usiamo una libreria di Julia, [`Interpolations`](https://github.com/JuliaMath/Interpolations.jl), per implementare un'interpolazione lineare:
+Nella formula per $C$, dobbiamo valutare il prodotto $F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)$ per gli stessi valori di $\lambda_i$:
+
+$$
+C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}
+$$
+
+Ma qui ci sono dei valori di $\lambda_i$ per cui $P(\lambda_i)$ è ignoto!
+
+
+# Campionamento (3/4)
+
+Dobbiamo ricampionare la curva meno fitta ($P$) in modo che passi attraverso le stesse ascisse di $F$. Usiamo una libreria di Julia, [`Interpolations`](https://github.com/JuliaMath/Interpolations.jl), per implementare un'interpolazione lineare:
 
 ```julia
 using Interpolations
@@ -480,7 +502,13 @@ dirbe_band_interp = LinearInterpolation(
 )
 ```
 
-# Campionamento di $B$ e di $P$
+(Vedi video).
+
+---
+
+<iframe src="https://player.vimeo.com/video/632196520?h=dcd2aaa910&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-09 - Interpolation.mkv"></iframe>
+
+# Campionamento (4/4)
 
 Verifichiamo ora il funzionamento dell'interpolazione:
 
@@ -515,7 +543,7 @@ scatter!(m0_λ_pts * 1e6, dirbe_band_interp.(m0_λ_pts),
 Per calcolare $C$, applichiamo la formula
 
 $$
-C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda)}.
+C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}.
 $$
 
 ```julia
@@ -531,6 +559,8 @@ Il risultato è
 ```
 Bolometric correction: 14.55
 ```
+
+in perfetto accordo con quanto usato da Dwek et al. (1995).
 
 # Dipendenza del risultato dalle assunzioni
 
