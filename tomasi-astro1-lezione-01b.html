@@ -221,7 +221,7 @@ C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 </section>
 <section id="calcolo-approssimato-di-c" class="slide level1">
 <h1>Calcolo approssimato di <span class="math inline">C</span></h1>
-<p>La prima cosa che facciamo è implementare la formula di corpo nero <span class="math inline">B_{bb}(\nu, T)</span>:</p>
+<p>La prima cosa che facciamo è implementare la formula di corpo nero <span class="math inline">B_{bb}(\nu, T)</span> (v. il video):</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> Plots</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> k<span class="op">,</span> h<span class="op">,</span> c <span class="op">=</span> <span class="fl">1.38e-23</span><span class="op">,</span> <span class="fl">6.626e-34</span><span class="op">,</span> <span class="fl">3e8</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Write \lambda and press &lt;TAB&gt; to get λ</span></span>
@@ -264,6 +264,7 @@ C \approx \frac{\sum_{i=0}^\infty B_{bb}(i \times \delta\nu, T)}{\sum_{i=i_1}^{i
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@printf</span>(<span class="st">&quot;δν = %.0e Hz, T = %.1f K, C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            δν<span class="op">,</span> T<span class="op">,</span> C(ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T<span class="op">,</span> δν))</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
+<p>(Vedi il video).</p>
 </section>
 <section class="slide level1">
 
@@ -331,6 +332,7 @@ Wavelength                          DIRBE Band
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>plot(dirbe_λ<span class="op">,</span> dirbe_band<span class="op">,</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>     xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [m]&quot;</span>)</span></code></pre></div>
+<p>(Vedi il video).</p>
 </section>
 <section class="slide level1">
 
@@ -352,6 +354,7 @@ Wavelength                          DIRBE Band
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plot(dirbe_λ[mask] <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band[mask]<span class="op">,</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [$\mu$m]&quot;</span>)</span></code></pre></div>
+<p>(Vedi il video).</p>
 </section>
 <section class="slide level1">
 
@@ -506,6 +509,7 @@ C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\te
 <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>scatter<span class="op">!</span>(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band_interp.(m0_λ_pts)<span class="op">,</span></span>
 <span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">&quot;DIRBE band (interpolated)&quot;</span><span class="op">,</span></span>
 <span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>         markersize<span class="op">=</span><span class="fl">2</span>)</span></code></pre></div>
+<p>(Vedi il video).</p>
 </section>
 <section class="slide level1">
 

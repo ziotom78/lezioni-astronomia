@@ -154,7 +154,7 @@ end
 
 # Calcolo approssimato di $C$
 
-La prima cosa che facciamo è implementare la formula di corpo nero $B_{bb}(\nu, T)$:
+La prima cosa che facciamo è implementare la formula di corpo nero $B_{bb}(\nu, T)$ (v. il video):
 
 ```julia
 import Plots
@@ -203,6 +203,8 @@ for δν in [1e13, 1e12, 1e11, 1e10, 1e9, 1e8]
             δν, T, C(ν0, bwidth, T, δν))
 end
 ```
+
+(Vedi il video).
 
 ---
 
@@ -285,6 +287,8 @@ plot(dirbe_λ, dirbe_band,
      xlabel = "Wavelength [m]")
 ```
 
+(Vedi il video).
+
 ---
 
 <iframe src="https://player.vimeo.com/video/632190633?h=4b16990d2c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-03 - DIRBE band.mkv"></iframe>
@@ -306,6 +310,8 @@ mask = dirbe_band .> 0
 plot(dirbe_λ[mask] * 1e6, dirbe_band[mask],
     xlabel = "Wavelength [$\mu$m]")
 ```
+
+(Vedi il video).
 
 ---
 
@@ -492,6 +498,8 @@ scatter!(m0_λ_pts * 1e6, dirbe_band_interp.(m0_λ_pts),
          label="DIRBE band (interpolated)",
          markersize=2)
 ```
+
+(Vedi il video).
 
 ---
 
