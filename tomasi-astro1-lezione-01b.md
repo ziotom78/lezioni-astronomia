@@ -395,7 +395,7 @@ Lo spettro è espresso in funzione di $\lambda$, non di $\nu$!
 
 # Lettura dello spettro stellare
 
-Le lunghezze d'onda sono espresse in \AA, così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky ($1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}$).
+Le lunghezze d'onda sono espresse in Å, così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky ($1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}$).
 
 ```julia
 using DelimitedFiles

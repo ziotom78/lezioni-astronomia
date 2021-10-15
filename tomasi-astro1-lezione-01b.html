@@ -422,7 +422,7 @@ Wavelength                          DIRBE Band
 </section>
 <section id="lettura-dello-spettro-stellare" class="slide level1">
 <h1>Lettura dello spettro stellare</h1>
-<p>Le lunghezze d’onda sono espresse in , così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky (<span class="math inline">1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}</span>).</p>
+<p>Le lunghezze d’onda sono espresse in Å, così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky (<span class="math inline">1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}</span>).</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> DelimitedFiles</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> GZip</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>spectrum <span class="op">=</span> GZip.<span class="cn">open</span>(<span class="st">&quot;ukm0iii.dat.gz&quot;</span>) <span class="kw">do</span> io</span>
