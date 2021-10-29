@@ -85,7 +85,7 @@ descrivono la dinamica di un sistema binario con orbite circolari.
 
 # Metodi numerici
 
-Nei casi reali si usano metodi numerici, in modo da tenere conto di altri effetti:
+L'equazione analitica è utile solo per mettere in relazione diverse quantità fisiche. Per ridurre misurazioni da telescopio si usano invece metodi numerici, più robusti e in grado anche di tenere conto di altri effetti:
 
 #.  Ellitticità delle orbite;
 #.  Deformazione della stella causata dalla rotazione (importante nelle eclissi);
@@ -210,9 +210,9 @@ $$
 
 # Velocità radiale
 
--  Il valor medio di $v_r$ è
+-  Il valor medio delle nostre stime di $v_r$ è
    $$
-   \left<v_r\right> = 128\,\text{km\,s$^{-1}$}
+   \left<v_r\right> = 128\,\text{km\,s$^{-1}$}.
    $$
 
 -  Yakut et al.\ citano $v_1 = 126\,\text{km\,s$^{-1}$}$ e $v_2 = 128\,\text{km\,s$^{-1}$}$.
