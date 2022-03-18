@@ -1,7 +1,9 @@
 ---
-title: Lezione di astronomia 1a
-author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: 14 Ottobre 2021
+title: "Lezione di astronomia 1a"
+author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
+date: "14 Ottobre 2021"
+css:
+- ./css/custom.css
 ...
 
 # Introduzione
@@ -14,9 +16,9 @@ date: 14 Ottobre 2021
 
 -   Sono disponibili all'indirizzo [ziotom78.github.io/lezioni-astronomia/](https://ziotom78.github.io/lezioni-astronomia/).
 
--   Si possono stampare aggiungendo `?print-pdf` alla URL, ad esempio:
+-   Si possono stampare aggiungendo `?print-png` alla URL, ad esempio:
 
-    [`https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-pdf`](https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-pdf)
+    [`https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-png`](https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-png)
 
 ---
 

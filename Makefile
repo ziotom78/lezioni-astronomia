@@ -10,9 +10,16 @@ IMAGES = \
 
 PANDOC := /usr/bin/pandoc
 PANDOC_IMAGINE := $(HOME)/bin/pandoc_imagine.py
-.phony: all
+.phony: all http
 
 all: \
+	tomasi-astro2-lezione-07.html \
+	tomasi-astro2-lezione-06.html \
+	tomasi-astro2-lezione-05.html \
+	tomasi-astro2-lezione-04.html \
+	tomasi-astro2-lezione-03.html \
+	tomasi-astro2-lezione-02.html \
+	tomasi-astro2-lezione-01.html \
 	tomasi-astro1-lezione-02.html \
 	tomasi-astro1-lezione-01b.html \
 	tomasi-astro1-lezione-01a.html \
@@ -32,6 +39,7 @@ index.html: index.md ${JS_FILES}
 		-V theme=white \
 		-V progress=true \
 		-V slideNumber=true \
+		-V history=true \
 		-V background-image=./images/background.png \
 		-V width=1440 \
 		-V height=810 \
@@ -41,3 +49,6 @@ index.html: index.md ${JS_FILES}
 
 $(IMAGES): dirbe-analysis.jl
 	julia $<
+
+http:
+	python -m http.server

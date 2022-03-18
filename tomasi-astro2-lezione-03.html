@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Maurizio Tomasi (maurizio.tomasi@unimi.it)">
+  <title>Lezione di Astronomia II – 3</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="./css/custom.css"/>
+  <link rel="stylesheet" href="./css/asciinema-player.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Lezione di Astronomia II – 3</h1>
+  <p class="author">Maurizio Tomasi (<a href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
+  <p class="date">31 Marzo 2022</p>
+</section>
+
+<section id="il-mezzo-interstellare-ism" class="slide level1">
+<h1>Il mezzo interstellare (ISM)</h1>
+</section>
+<section id="il-piano-galattico" class="slide level1">
+<h1>Il piano galattico</h1>
+<p>L’evidenza del mezzo interstellare (<em>interstellar medium</em>, ISM) è data dalla presenza di regioni opache sul piano galattico, con uno spessore di <span class="math inline">\sim 100\div500</span> pc.</p>
+<center>
+<img data-src="images/milky-way-plane.jpg" height="420" />
+</center>
+</section>
+<section id="il-disco-gassoso" class="slide level1">
+<h1>Il disco gassoso</h1>
+<center>
+<img data-src="images/milky-way-and-gaseous-disk.png" height="520" />
+</center>
+<p><small>Adattato da B. Draine, <em>Physics of the interstellar and galactic medium</em>, Princeton University Press (2011).</small></p>
+</section>
+<section id="globuli-e-nubi" class="slide level1">
+<h1>Globuli e nubi</h1>
+<p>Il mezzo interstellare mostra addensamenti di materia la cui scala è circa <span class="math inline">\sim 1</span> pc («globuli» e «nubi»).</p>
+<center>
+<img data-src="images/barnard68.jpg" height="420" />
+</center>
+<p><small>Barnard 68 («Black cloud»)</small></p>
+</section>
+<section id="il-mezzo-interstellare" class="slide level1">
+<h1>Il mezzo interstellare</h1>
+<p>Ci sono due motivi per cui ISM è interessante:</p>
+<ol>
+<li>Contiene una parte importante della massa della Galassia;</li>
+<li>È un luogo di formazione stellare: <span class="math display">
+  \begin{aligned}
+    t_\text{O-star} &amp;&lt; 1\,\text{Gyr},\\
+    t_\text{Via Lattea} \sim \max t_\text{gc} &amp;\gtrsim
+    10\,\text{Gyr}.
+  \end{aligned}
+</span> Quindi il fatto che oggi si osservino stelle O nella Via Lattea implica che la formazione stellare sia ancora in corso.</li>
+</ol>
+</section>
+<section id="barioni-nella-via-lattea" class="slide level1">
+<h1>Barioni nella Via Lattea</h1>
+<center>
+<img data-src="images/ism-and-stars.png" height="520" />
+</center>
+<p><small>Adattato da B. Draine, <em>Physics of the interstellar and galactic medium</em>, Princeton University Press (2011).</small></p>
+</section>
+<section id="componenti-dellism" class="slide level1">
+<h1>Componenti dell’ISM</h1>
+<p>ISM comprende tutto ciò che nella Galassia sta tra le stelle. Esso è composto da:</p>
+<ol>
+<li><strong>Gas</strong>;</li>
+<li><strong>Polveri</strong>;</li>
+<li>Raggi cosmici;</li>
+<li>Radiazione e.m. (luce stellare, CMB, );</li>
+<li>Campo magnetico interstellare;</li>
+<li>Campo gravitazionale;</li>
+<li>Materia oscura.</li>
+</ol>
+<p>Oggi ci occuperemo solo di <strong>gas</strong> e <strong>polveri</strong>.</p>
+</section>
+<section id="il-mezzo-interstellare-1" class="slide level1">
+<h1>Il mezzo interstellare</h1>
+<p>Metodi di osservazione:</p>
+<ul>
+<li>Polvere:
+<ol>
+<li>Oscuramento (in banda V);</li>
+<li>Emissione diretta (UV, IR, mm).</li>
+</ol></li>
+<li>Gas: emissione/assorbimento di righe.</li>
+</ul>
+</section>
+<section id="estinzione-nellism" class="slide level1">
+<h1>Estinzione nell’ISM</h1>
+<center>
+<img data-src="images/dust-and-light.png" height="240" />
+</center>
+<ul>
+<li><p>L’effetto della diffusione e dell’assorbimento è detto <strong>estinzione</strong>, e fa diminuire il flusso <span class="math inline">b</span> (<span class="math inline">[b] = \text{W/m}^2</span>): <span class="math display">
+  b(L) = e^{-\tau(L)} b_0.
+</span></p></li>
+<li><p>Il valore <span class="math inline">\tau(L) = \sigma n L</span> è detto <strong>coefficiente di estinzione</strong>, ed è un numero puro.</p></li>
+</ul>
+</section>
+<section id="estinzione-e-magnitudine" class="slide level1">
+<h1>Estinzione e magnitudine</h1>
+<ul>
+<li><p>Se il flusso misurato è inferiore a causa dell’estinzione, vuol dire che la magnitudine <strong>aumenta</strong>: <span class="math display">
+A \equiv m&#39; - m = 2.5\log_{10} \frac{b_0}{b(L)} = 1.0857\,\tau(L).
+</span></p></li>
+<li><p>Si può quindi usare l’approssimazione <span class="math display">
+A \approx \tau(L).
+</span></p></li>
+</ul>
+</section>
+<section id="ism-e-misura-delle-distanze" class="slide level1">
+<h1>ISM e misura delle distanze</h1>
+<p>In presenza di estinzione <span class="math inline">A</span>, in generale si ha che <span class="math display">
+\begin{aligned}
+  m&#39; &amp;= m + A \\
+  &amp;= M + 5 \log_{10}\frac{d}{10\,\text{pc}} + A
+\end{aligned}
+</span> (la presenza di <span class="math inline">A</span> rende la stella più debole).</p>
+<p>Quindi in presenza di estinzione non è più sufficiente conoscere <span class="math inline">M</span> per ricavare <span class="math inline">d</span>!</p>
+</section>
+<section id="misura-dellestinzione" class="slide level1">
+<h1>Misura dell’estinzione</h1>
+<ul>
+<li><p>Per convertire magnitudini relative in assolute ci occorre una stima indipendente di <span class="math inline">A</span>.</p></li>
+<li><p>Un metodo è quello di contare il numero di stelle in un campo. Supponiamo di avere un esposizione con magnitudine di soglia <span class="math inline">m_0</span>. Se c’è estinzione, allora vedremo solo le stelle con <span class="math inline">m</span> tale che <span class="math display">
+m &lt; m_0 - A.
+</span></p></li>
+</ul>
+</section>
+<section id="misura-dellestinzione-1" class="slide level1">
+<h1>Misura dell’estinzione</h1>
+<center>
+<img data-src="images/barnard68-wavelengths.jpg" height="540" />
+</center>
+</section>
+<section id="misura-dellestinzione-2" class="slide level1">
+<h1>Misura dell’estinzione</h1>
+<p>Definiamo una «funzione di luminosità» delle stelle osservate <span class="math inline">N&#39;(m)</span>, tale che <span class="math display">
+N&#39;(m)\,\text{d}m
+</span> sia il numero di stelle compresa tra <span class="math inline">m</span> e <span class="math inline">m + \text{d}m</span>, e misuriamo tale quantità per tanti intervalli <span class="math inline">[m, m + \text{d}m)</span> in due regioni vicine, una oscurata e l’altra no:</p>
+<center>
+<img data-src="images/extinction-and-star-count.png" height="280" />
+</center>
+</section>
+<section id="misura-dellestinzione-3" class="slide level1">
+<h1>Misura dell’estinzione</h1>
+<p>Il problema è che è difficile ricostruire <span class="math inline">N&#39;(m)</span> nella zona oscurata, se si vedono poche stelle.</p>
+<center>
+<img data-src="images/barnard68-wavelengths.jpg" height="480" />
+</center>
+</section>
+<section id="misura-dellestinzione-4" class="slide level1">
+<h1>Misura dell’estinzione</h1>
+<p>In tal caso si considera il numero di stelle sotto una data magnitudine. Nelle due zone 1 (non oscurata) e 2 (oscurata) si vedrà un numero di stelle pari a <span class="math display">
+\begin{aligned}
+  N_1(m_0) &amp;= \int_{-\infty}^{m_0}
+  N&#39;(m&#39;)\,\text{d}m&#39;, \\
+  N_2(m_0 - A) &amp;= \int_{-\infty}^{m_0 - A} N&#39;(m&#39;)\,\text{d}m&#39;,
+\end{aligned}
+</span> nell’ipotesi che <span class="math inline">N&#39;(m)</span> sia la stessa.</p>
+<p>Se ricostruisco <span class="math inline">N&#39;(m)</span> nella zona <strong>non oscurata</strong>, posso dedurre il valore di <span class="math inline">A</span>.</p>
+</section>
+<section id="valori-tipici-di-a" class="slide level1">
+<h1>Valori tipici di <span class="math inline">A</span></h1>
+<ul>
+<li>Se <span class="math inline">A</span> è elevato, il numero di stelle osservabili dietro la nube è troppo piccolo per permettere di fare la stima.</li>
+<li>Se invece <span class="math inline">A</span> è piccolo, è difficile osservare l’effetto dell’estinzione.</li>
+<li>L’intervallo tipico in cui si può stimare <span class="math inline">A</span> è <span class="math display">
+  1 \lesssim A \lesssim 6.
+</span></li>
+</ul>
+</section>
+<section id="estinzione-in-funzione-di-lambda" class="slide level1">
+<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
+<p>L’estinzione dipende dalla lunghezza d’onda: <span class="math inline">A = A(\lambda)</span>.</p>
+<center>
+<img data-src="images/barnard68-wavelengths.jpg" height="500" />
+</center>
+</section>
+<section id="estinzione-in-funzione-di-lambda-1" class="slide level1">
+<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
+<p>Intorno al visibile, l’estinzione è più intensa se <span class="math inline">\lambda</span> è piccola (luce blu).</p>
+<p>Questo comporta che il numero di stelle osservate aumenta nell’IR. Inoltre, le stelle appaiono più rosse (<em>stellar reddening</em>).</p>
+</section>
+<section id="estinzione-in-funzione-di-lambda-2" class="slide level1">
+<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
+<p>Misuriamo l’indice di colore in due filtri, es. B e V: <span class="math display">
+\begin{aligned}
+  m_V &amp;= M_V + 5\log_{10}\frac{d}{10\,\text{pc}} + A_V, \\
+  m_B &amp;= M_B + 5\log_{10}\frac{d}{10\,\text{pc}} + A_B.
+\end{aligned}
+</span></p>
+<p>Se considero le differenze, ottengo che <span class="math display">
+m_V - m_B = (M_V - M_B) + (A_V - A_B).
+</span></p>
+</section>
+<section class="slide level1">
+
+<p><span class="math display">
+m_V - m_B = (M_V - M_B) + (A_V - A_B).
+</span></p>
+<ul>
+<li>Il valore <span class="math inline">m_V - m_B</span> è misurato direttamente.</li>
+<li>Il valore <span class="math inline">M_V - M_B</span> si stima dal tipo spettrale (le righe non sono influenzate dall’estinzione).</li>
+<li>Il valore <span class="math inline">A_V - A_B</span> si può quindi ricavare facilmente.</li>
+</ul>
+</section>
+<section id="estinzione" class="slide level1">
+<h1>Estinzione</h1>
+<p>Si definisce <strong>eccesso di colore</strong> (o <em>arrossamento</em>) di una sorgente la quantità <span class="math display">
+\begin{aligned}
+  E(B - V) &amp;= (m_B - m_V)_\text{osservato} - (M_B - M_V)_\text{intrinseco} =\\
+  &amp;= A_V - A_B.
+\end{aligned}
+</span></p>
+<p>(Vedi Draine, <em>Physics of the interstellar and galactic medium</em>, pag. 238).</p>
+</section>
+<section id="fisica-dellestinzione" class="slide level1">
+<h1>Fisica dell’estinzione</h1>
+<p>Ricordiamo la definizione di A: <span class="math display">
+A = 2.5\log_{10} e^\tau \approx \tau.
+</span> Il valore <span class="math inline">\tau</span> («coefficiente di estinzione) è uguale a <span class="math display">
+\tau = \sigma n L,
+</span> dove <span class="math inline">L</span> è lo spessore della nube, <span class="math inline">n</span> la densità numerica, e <span class="math inline">\sigma</span> la sezione d’urto totale (assorbimento e diffusione), nell’ipotesi che <span class="math inline">\sigma</span> sia piccola.</p>
+</section>
+<section id="fisica-dellestinzione-1" class="slide level1">
+<h1>Fisica dell’estinzione</h1>
+<ul>
+<li><p>Si ha quindi che <span class="math display">
+A \propto n\, L \equiv N_\text{col},
+</span> dove <span class="math inline">N_\text{col}</span> è detta <strong>densità colonnare</strong>: l’estinzione è il risultato di un integrale lungo la linea di vista.</p></li>
+<li><p>Vale che <span class="math display">
+[N_\text{col}] = \text{cm}^{-2}.
+</span></p></li>
+</ul>
+</section>
+<section id="fisica-dellestinzione-2" class="slide level1">
+<h1>Fisica dell’estinzione</h1>
+<p>Se <span class="math inline">A \propto N_\text{col}</span>, ciò vuol dire che osservare nubi di polvere di diverse dimensioni/densità porta a valori diversi di <span class="math inline">A</span>, anche se <span class="math inline">\sigma</span> è la stessa.</p>
+<p>Se si vuole studiare la dipendenza dell’estinzione da <span class="math inline">\lambda</span>, si usa la quantità (numero puro) <span class="math display">
+f(\lambda) \equiv \frac{A(\lambda)}{A_V},
+</span> perché in questo modo la dipendenza dalla densità colonnare scompare: <span class="math inline">f(\lambda) \approx \sigma(\lambda) / \sigma_V</span>.</p>
+</section>
+<section id="fisica-dellestinzione-3" class="slide level1">
+<h1>Fisica dell’estinzione</h1>
+<p>Dallo studio di <span class="math inline">f(\lambda)</span> si osserva che:</p>
+<ol>
+<li>Nel visibile/IR, <span class="math inline">f(\lambda) \propto 1/\lambda \propto \nu</span> (la luce blu viene assorbita maggiormente);</li>
+<li>C’è un picco nell’UV;</li>
+<li>Si vedono strutture nello spettro dell’IR.</li>
+</ol>
+<p>La forma di <span class="math inline">f(\lambda)</span> dipende comunque anche dalla direzione di osservazione (c’è polvere e polvere!), soprattutto nell’UV.</p>
+</section>
+<section id="estinzione-in-funzione-di-lambda-3" class="slide level1">
+<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
+<p>Si definisce <strong>rapporto di estinzione</strong> la quantità <span class="math display">
+R_V \equiv \frac{A_V}{A_B - A_V} = \frac{A_V}{E(B - V)} \approx 3.1,
+</span> ricavabile stimando <span class="math inline">A_V</span> dai conteggi di stelle per <span class="math inline">A_V</span> e <span class="math inline">E(B - V)</span> dagli indici di colore. Come <span class="math inline">f(\lambda)</span>, anche <span class="math inline">R_V</span> non dipende dalla densità colonnare; è legato soprattutto alla dimensione dei grani di polvere.</p>
+<p>Il valore <span class="math inline">R_V \approx 3.1</span> è tipico, ma come <span class="math inline">f(\lambda)</span> può mostrare variazioni significative a seconda della regione osservata.</p>
+</section>
+<section id="uso-di-r_v-e-flambda" class="slide level1">
+<h1>Uso di <span class="math inline">R_V</span> e <span class="math inline">f(\lambda)</span></h1>
+<center>
+<img data-src="images/1989Cardelli-title.png" height="500" />
+</center>
+</section>
+<section id="estinzione-in-funzione-di-lambda-4" class="slide level1">
+<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
+<center>
+<img data-src="images/cardelli-extinction-curve.png" height="500" />
+</center>
+</section>
+<section id="estinzione-in-funzione-di-lambda-5" class="slide level1">
+<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
+<p>Se si ha una stima ragionevole di <span class="math inline">R</span>, noto <span class="math inline">A_B - A_V</span> (facile) posso stimare <span class="math inline">A_V</span>: <span class="math display">
+A_V \approx 3.1 (A_B - A_V),
+</span> che è comodo in quei casi in cui il metodo dei conteggi per stimare direttamente <span class="math inline">A_V</span> è di difficile applicazione.</p>
+<p>Tutto ciò è fattibile senza conoscere la distanza <span class="math inline">d</span> della stella!</p>
+</section>
+<section id="esercizio-per-casa" class="slide level1">
+<h1>Esercizio per casa</h1>
+<p>Una stella di tipo B viene osservata con <span class="math inline">m_B = 11.0\,\text{mag}</span>, <span class="math inline">m_V = 10.0\,\text{mag}</span>.</p>
+<p>Se per una stella B, <span class="math inline">M_V \approx -0.9</span> e <span class="math inline">M_B - M_V \approx -0.17</span>, qual è il valore di <span class="math inline">A_V</span> e la sua distanza? (Supporre che <span class="math inline">R = 3.1</span>).</p>
+<p>[Soluzione: <span class="math inline">A_V \approx 3.6</span>, <span class="math inline">d \approx 280\,\text{pc}</span>].</p>
+</section>
+<section id="fisica-dellestinzione-4" class="slide level1">
+<h1>Fisica dell’estinzione</h1>
+<center>
+<img data-src="images/gordon-title-page.png" height="560" />
+</center>
+</section>
+<section id="fisica-dellestinzione-5" class="slide level1">
+<h1>Fisica dell’estinzione</h1>
+<center>
+<img data-src="images/2005gordon-introduction.png" height="560" />
+</center>
+</section>
+<section id="fisica-dellestinzione-6" class="slide level1">
+<h1>Fisica dell’estinzione</h1>
+<center>
+<img data-src="images/gordon-plot.png" height="500" />
+</center>
+<p>Notare che sull’asse <span class="math inline">x</span> c’è <span class="math inline">1/\lambda</span> anziché <span class="math inline">\lambda</span>: perché?</p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: true,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+       // Parallax background image
+       parallaxBackgroundImage: './images/background.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1440,
+
+        height: 810,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script src="js/asciinema-player.js"></script>
+    </body>
+</html>

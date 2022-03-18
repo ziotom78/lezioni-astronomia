@@ -216,14 +216,14 @@ C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 <h1>Installazione di librerie</h1>
 <p>Una volta installato Julia e fatto partire IJulia, potrete creare un <em>notebook</em> (vedi video seguente). I comandi nel <em>notebook</em> si scrivono all’interno di <em>celle</em>, che si eseguono premendo <code>Maiusc + Invio</code>.</p>
 <p>Inizieremo scaricando da Internet una serie di librerie molto utili:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> Pkg</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="bu">Pkg</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and install these libraries:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - GZip: work with .gz compressed files</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - Interpolations: create interpolating functions from discrete data</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - Plots: guess what?</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">for</span> name <span class="kw">in</span> [<span class="st">&quot;GZip&quot;</span><span class="op">,</span> <span class="st">&quot;Interpolations&quot;</span><span class="op">,</span> <span class="st">&quot;Plots&quot;</span>]</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    Pkg.add(name)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> [<span class="st">&quot;GZip&quot;</span><span class="op">,</span> <span class="st">&quot;Interpolations&quot;</span><span class="op">,</span> <span class="st">&quot;Plots&quot;</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Pkg</span>.<span class="fu">add</span>(name)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
 </section>
 <section id="calcolo-approssimato-di-c" class="slide level1">
 <h1>Calcolo approssimato di <span class="math inline">C</span></h1>
@@ -231,11 +231,11 @@ C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 <div class="sourceCode" id="cb2"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> Plots</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> k<span class="op">,</span> h<span class="op">,</span> c <span class="op">=</span> <span class="fl">1.38e-23</span><span class="op">,</span> <span class="fl">6.626e-34</span><span class="op">,</span> <span class="fl">3e8</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Write \lambda and press &lt;TAB&gt; to get λ</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>λ(ν) <span class="op">=</span> c <span class="op">/</span> ν</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>b(ν<span class="op">,</span> T) <span class="op">=</span> (<span class="fl">2</span>h<span class="op">*</span>ν<span class="op">^</span><span class="fl">3</span> <span class="op">/</span> c<span class="op">^</span><span class="fl">2</span>) <span class="op">/</span> (exp(h<span class="op">*</span>ν <span class="op">/</span> (k<span class="op">*</span>T)) <span class="op">-</span> <span class="fl">1</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">λ</span>(ν) <span class="op">=</span> c <span class="op">/</span> ν</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">b</span>(ν<span class="op">,</span> T) <span class="op">=</span> (<span class="fl">2</span>h<span class="op">*</span>ν<span class="op">^</span><span class="fl">3</span> <span class="op">/</span> c<span class="op">^</span><span class="fl">2</span>) <span class="op">/</span> (<span class="fu">exp</span>(h<span class="op">*</span>ν <span class="op">/</span> (k<span class="op">*</span>T)) <span class="op">-</span> <span class="fl">1</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> ν <span class="op">=</span> <span class="fl">0.5e13</span><span class="op">:</span><span class="fl">1e13</span><span class="op">:</span><span class="fl">1e15</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    plot(ν<span class="op">,</span> b.(ν<span class="op">,</span> <span class="fl">3800</span>)<span class="op">,</span> </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(ν<span class="op">,</span> <span class="fu">b</span>.(ν<span class="op">,</span> <span class="fl">3800</span>)<span class="op">,</span> </span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    label <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">,</span> xlabel <span class="op">=</span> <span class="st">&quot;Frequency [Hz]&quot;</span><span class="op">,</span> ylabel <span class="op">=</span> <span class="st">&quot;Spectral radiance [W/sr/m²/Hz]&quot;</span>)</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
 </section>
@@ -256,20 +256,20 @@ C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 <p><span class="math display">
 C \approx \frac{\sum_{i=0}^\infty B_{bb}(i \times \delta\nu, T)}{\sum_{i=i_1}^{i_2} B_{bb}(i \times \delta\nu, T)},
 </span></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> C(ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T<span class="op">,</span> δν)</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">C</span>(ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T<span class="op">,</span> δν)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    fullnu <span class="op">=</span> <span class="fl">0.5e13</span><span class="op">:</span>δν<span class="op">:</span><span class="fl">1e15</span>  <span class="co"># [0, ∞)</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    partialnu <span class="op">=</span> (ν<span class="fl">0</span> <span class="op">-</span> bwidth<span class="op">/</span><span class="fl">2</span>)<span class="op">:</span>δν<span class="op">:</span>(ν<span class="fl">0</span> <span class="op">+</span> bwidth<span class="op">/</span><span class="fl">2</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    sum(b.(fullnu<span class="op">,</span> T)) <span class="op">/</span> sum(b.(partialnu<span class="op">,</span> T))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sum</span>(<span class="fu">b</span>.(fullnu<span class="op">,</span> T)) <span class="op">/</span> <span class="fu">sum</span>(<span class="fu">b</span>.(partialnu<span class="op">,</span> T))</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
 </section>
 <section id="calcolo-approssimato-2" class="slide level1">
 <h1>Calcolo approssimato</h1>
 <p>Dobbiamo decidere il valore del passo <span class="math inline">\delta\nu</span>; proviamo con una serie di valori via via più piccoli, e vediamo quando converge:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T <span class="op">=</span> c <span class="op">/</span> <span class="fl">2.2e-6</span><span class="op">,</span> <span class="fl">2.28e13</span><span class="op">,</span> <span class="fl">3800</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">for</span> δν <span class="kw">in</span> [<span class="fl">1e13</span><span class="op">,</span> <span class="fl">1e12</span><span class="op">,</span> <span class="fl">1e11</span><span class="op">,</span> <span class="fl">1e10</span><span class="op">,</span> <span class="fl">1e9</span><span class="op">,</span> <span class="fl">1e8</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> δν <span class="kw">in</span> [<span class="fl">1e13</span><span class="op">,</span> <span class="fl">1e12</span><span class="op">,</span> <span class="fl">1e11</span><span class="op">,</span> <span class="fl">1e10</span><span class="op">,</span> <span class="fl">1e9</span><span class="op">,</span> <span class="fl">1e8</span>]</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@printf</span>(<span class="st">&quot;δν = %.0e Hz, T = %.1f K, C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            δν<span class="op">,</span> T<span class="op">,</span> C(ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T<span class="op">,</span> δν))</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            δν<span class="op">,</span> T<span class="op">,</span> <span class="fu">C</span>(ν<span class="fl">0</span><span class="op">,</span> bwidth<span class="op">,</span> T<span class="op">,</span> δν))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
 <p>(Vedi il video).</p>
 </section>
 <section class="slide level1">
@@ -327,7 +327,7 @@ Wavelength                          DIRBE Band
 <section id="banda-di-dirbe-1" class="slide level1">
 <h1>Banda di DIRBE</h1>
 <p>Facciamo un grafico della banda (ancora espressa in termini di <span class="math inline">\lambda</span>!), per renderci conto di come è fatto il dato:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dirbe_bands <span class="op">=</span> readdlm(</span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dirbe_bands <span class="op">=</span> <span class="fu">readdlm</span>(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DIRBE_SYSTEM_SPECTRAL_RESPONSE_TABLE.ASC&quot;</span><span class="op">,</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    skipstart<span class="op">=</span><span class="fl">15</span><span class="op">,</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -336,7 +336,7 @@ Wavelength                          DIRBE Band
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>dirbe_λ <span class="op">=</span> dirbe_bands[<span class="op">:,</span> <span class="fl">1</span>] <span class="op">*</span> <span class="fl">1e-6</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>dirbe_band <span class="op">=</span> dirbe_bands[<span class="op">:,</span> <span class="fl">3</span>]</span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>plot(dirbe_λ<span class="op">,</span> dirbe_band<span class="op">,</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dirbe_λ<span class="op">,</span> dirbe_band<span class="op">,</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>     xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [m]&quot;</span>)</span></code></pre></div>
 <p>(Vedi il video).</p>
 </section>
@@ -358,7 +358,7 @@ Wavelength                          DIRBE Band
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># la banda è maggiore di zero</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> dirbe_band .<span class="op">&gt;</span> <span class="fl">0</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plot(dirbe_λ[mask] <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band[mask]<span class="op">,</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dirbe_λ[mask] <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band[mask]<span class="op">,</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [$\mu$m]&quot;</span>)</span></code></pre></div>
 <p>(Vedi il video).</p>
 </section>
@@ -383,7 +383,7 @@ Wavelength                          DIRBE Band
 <p>che corrisponde a una media pesata.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;Band center: %.2f μm</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1e6</span> <span class="op">*</span> sum(dirbe_λ <span class="op">.*</span> dirbe_band) <span class="op">/</span> sum(dirbe_band)<span class="op">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1e6</span> <span class="op">*</span> <span class="fu">sum</span>(dirbe_λ <span class="op">.*</span> dirbe_band) <span class="op">/</span> <span class="fu">sum</span>(dirbe_band)<span class="op">,</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>Il risultato è 2.22 µm, che è quanto ci aspettavamo.</p>
 </section>
@@ -423,15 +423,15 @@ Wavelength                          DIRBE Band
 <section id="lettura-dello-spettro-stellare" class="slide level1">
 <h1>Lettura dello spettro stellare</h1>
 <p>Le lunghezze d’onda sono espresse in Å, così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky (<span class="math inline">1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}</span>).</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> DelimitedFiles</span>
+<div class="sourceCode" id="cb11"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="bu">DelimitedFiles</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> GZip</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>spectrum <span class="op">=</span> GZip.<span class="cn">open</span>(<span class="st">&quot;ukm0iii.dat.gz&quot;</span>) <span class="kw">do</span> io</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    readdlm(io<span class="op">,</span> skipstart<span class="op">=</span><span class="fl">3</span>)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>spectrum <span class="op">=</span> GZip.<span class="fu">open</span>(<span class="st">&quot;ukm0iii.dat.gz&quot;</span>) <span class="cf">do</span> io</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">readdlm</span>(io<span class="op">,</span> skipstart<span class="op">=</span><span class="fl">3</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>m0_λ_pts <span class="op">=</span> spectrum[<span class="op">:,</span> <span class="fl">1</span>] <span class="op">*</span> <span class="fl">1e-10</span></span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>m0_flux_pts <span class="op">=</span> spectrum[<span class="op">:,</span> <span class="fl">2</span>]</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>plot(m0_λ_pts<span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(m0_λ_pts<span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [Å]&quot;</span><span class="op">,</span></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    ylabel <span class="op">=</span> <span class="st">&quot;Flux density [Jy]&quot;</span>)</span></code></pre></div>
 </section>
@@ -444,13 +444,13 @@ Wavelength                          DIRBE Band
 <section id="confronto-tra-spettro-e-banda" class="slide level1">
 <h1>Confronto tra spettro e banda</h1>
 <p>Anche se le unità di misura sono diverse, è interessante fare un grafico dello spettro stellare e della banda insieme.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plot(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
+<div class="sourceCode" id="cb12"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    label <span class="op">=</span> <span class="st">&quot;M0 flux&quot;</span><span class="op">,</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    xlim <span class="op">=</span> (<span class="fl">0</span><span class="op">,</span> <span class="fl">3</span>)<span class="op">,</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [μm]&quot;</span><span class="op">,</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    ylabel <span class="op">=</span> <span class="st">&quot;Flux density [Jy]&quot;</span><span class="op">,</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>plot<span class="op">!</span>(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot!</span>(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    label <span class="op">=</span> <span class="st">&quot;DIRBE band&quot;</span>)</span></code></pre></div>
 <p>La frequenza a 2.2 µm non è centratissima: DIRBE ha la <a href="tomasi-astro1-lezione-01a.html#/dwek-et-al.-apj-1995">frequenza a 1.25 µm</a> che sarebbe più adatta…</p>
 </section>
@@ -476,13 +476,13 @@ C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\te
 <h1>Campionamento (1/4)</h1>
 <p>Non possiamo però applicare subito la formula per <span class="math inline">C</span>.</p>
 <p>C’è infatti un problema nel campionamento delle curve, evidente se si fa un ingrandimento del grafico precedente:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>scatter(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
+<div class="sourceCode" id="cb13"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scatter</span>(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>        xlim <span class="op">=</span> (<span class="fl">2.0</span><span class="op">,</span> <span class="fl">2.2</span>)<span class="op">,</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">&quot;M0 flux&quot;</span><span class="op">,</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        xlabel<span class="op">=</span><span class="st">&quot;Wavelength [µm]&quot;</span><span class="op">,</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        ylabel <span class="op">=</span> <span class="st">&quot;Flux density [Jy]&quot;</span><span class="op">,</span>ù</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        markersize<span class="op">=</span><span class="fl">1</span>)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>scatter<span class="op">!</span>(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">scatter!</span>(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">&quot;DIRBE band&quot;</span>)</span></code></pre></div>
 </section>
 <section class="slide level1">
@@ -505,10 +505,10 @@ C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\te
 <div class="sourceCode" id="cb14"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> Interpolations</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># dirbe_band_interp: funzione con argomento λ</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>dirbe_band_interp <span class="op">=</span> LinearInterpolation(</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>dirbe_band_interp <span class="op">=</span> <span class="fu">LinearInterpolation</span>(</span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    dirbe_λ<span class="op">,</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    dirbe_band<span class="op">,</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    extrapolation_bc<span class="op">=</span>Flat()<span class="op">,</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    extrapolation_bc<span class="op">=</span><span class="fu">Flat</span>()<span class="op">,</span></span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>(Vedi video).</p>
 </section>
@@ -520,16 +520,16 @@ C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\te
 <section id="campionamento-44" class="slide level1">
 <h1>Campionamento (4/4)</h1>
 <p>Verifichiamo ora il funzionamento dell’interpolazione:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>scatter(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
+<div class="sourceCode" id="cb15"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scatter</span>(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> m0_flux_pts<span class="op">,</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">&quot;M0 flux&quot;</span><span class="op">,</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>        xlim <span class="op">=</span> (<span class="fl">2.02</span><span class="op">,</span> <span class="fl">2.07</span>)<span class="op">,</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [µm]&quot;</span><span class="op">,</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        ylabel <span class="op">=</span> <span class="st">&quot;Flux density [Jy]&quot;</span><span class="op">,</span></span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        markersize <span class="op">=</span> <span class="fl">2</span><span class="op">,</span></span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>scatter<span class="op">!</span>(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="fu">scatter!</span>(dirbe_λ <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band<span class="op">,</span></span>
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">&quot;DIRBE band&quot;</span><span class="op">,</span> markersize<span class="op">=</span><span class="fl">8</span>)<span class="op">;</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>scatter<span class="op">!</span>(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band_interp.(m0_λ_pts)<span class="op">,</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="fu">scatter!</span>(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> <span class="fu">dirbe_band_interp</span>.(m0_λ_pts)<span class="op">,</span></span>
 <span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">&quot;DIRBE band (interpolated)&quot;</span><span class="op">,</span></span>
 <span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>         markersize<span class="op">=</span><span class="fl">2</span>)</span></code></pre></div>
 <p>(Vedi il video).</p>
@@ -551,10 +551,10 @@ C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\te
 <p><span class="math display">
 C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}.
 </span></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>C(flux<span class="op">,</span> band) <span class="op">=</span> sum(flux) <span class="op">/</span> sum(flux <span class="op">.*</span> band)</span>
+<div class="sourceCode" id="cb16"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">C</span>(flux<span class="op">,</span> band) <span class="op">=</span> <span class="fu">sum</span>(flux) <span class="op">/</span> <span class="fu">sum</span>(flux <span class="op">.*</span> band)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Bolometric correction: %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    C(m0_flux_pts<span class="op">,</span> dirbe_band_interp.(m0_λ_pts))<span class="op">,</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">C</span>(m0_flux_pts<span class="op">,</span> <span class="fu">dirbe_band_interp</span>.(m0_λ_pts))<span class="op">,</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>Il risultato è</p>
 <pre><code>Bolometric correction: 14.55</code></pre>
@@ -573,18 +573,18 @@ C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 <section id="spettro-realistico-banda-ideale" class="slide level1">
 <h1>Spettro realistico, banda ideale</h1>
 <p>Rifacciamo il calcolo usando la banda ideale ma lo spettro realistico:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tophat_band <span class="op">=</span> zeros(length(m0_λ_pts))  <span class="co"># Vector of zeros</span></span>
+<div class="sourceCode" id="cb18"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tophat_band <span class="op">=</span> <span class="fu">zeros</span>(<span class="fu">length</span>(m0_λ_pts))  <span class="co"># Vector of zeros</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> (λ<span class="fl">1</span><span class="op">,</span> λ<span class="fl">2</span>) <span class="op">=</span> (λ(ν<span class="fl">0</span> <span class="op">+</span> Δν<span class="op">/</span><span class="fl">2</span>)<span class="op">,</span> λ(ν<span class="fl">0</span> <span class="op">-</span> Δν<span class="op">/</span><span class="fl">2</span>))</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> (λ<span class="fl">1</span><span class="op">,</span> λ<span class="fl">2</span>) <span class="op">=</span> (<span class="fu">λ</span>(ν<span class="fl">0</span> <span class="op">+</span> Δν<span class="op">/</span><span class="fl">2</span>)<span class="op">,</span> <span class="fu">λ</span>(ν<span class="fl">0</span> <span class="op">-</span> Δν<span class="op">/</span><span class="fl">2</span>))</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># In Julia you can write &quot;a &lt; x &lt; b&quot; instead of &quot;(a &lt; x) &amp;&amp; (x &lt; b)&quot;</span></span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    tophat_band[λ<span class="fl">1</span> .<span class="op">&lt;</span> m0_λ_pts .<span class="op">&lt;</span> λ<span class="fl">2</span>] .<span class="op">=</span> <span class="fl">1</span> <span class="co"># Set to 1 the points within the interval</span></span>
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>plot(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> tophat_band<span class="op">,</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(m0_λ_pts <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> tophat_band<span class="op">,</span></span>
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>     label <span class="op">=</span> <span class="st">&quot;Top-hat band&quot;</span><span class="op">,</span></span>
 <span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>     xlabel <span class="op">=</span> <span class="st">&quot;Wavelength [µm]&quot;</span><span class="op">,</span></span>
 <span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>     legend <span class="op">=</span> <span class="op">:</span>topleft)</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>plot<span class="op">!</span>(dirbe_λ[mask] <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band[mask]<span class="op">,</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="fu">plot!</span>(dirbe_λ[mask] <span class="op">*</span> <span class="fl">1e6</span><span class="op">,</span> dirbe_band[mask]<span class="op">,</span></span>
 <span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>      label <span class="op">=</span> <span class="st">&quot;True DIRBE band&quot;</span>)</span></code></pre></div>
 </section>
 <section class="slide level1">
@@ -596,7 +596,7 @@ C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 <section id="spettro-realistico-banda-ideale-1" class="slide level1">
 <h1>Spettro realistico, banda ideale</h1>
 <p>Calcoliamo ora <span class="math inline">C</span> in questo caso:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(<span class="st">&quot;C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> C(m0_flux_pts<span class="op">,</span> tophat_band))</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(<span class="st">&quot;C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> <span class="fu">C</span>(m0_flux_pts<span class="op">,</span> tophat_band))</span></code></pre></div>
 <p>Il risultato è:</p>
 <pre><code>C = 13.99</code></pre>
 <p>che mostra che l’approssimazione della banda ideale conta molto poco!</p>
@@ -609,14 +609,14 @@ C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
 B(\lambda, T) = \frac{2hc^2}{\lambda^5} \frac1{e^{hc / \lambda kT} - 1}.
 </span></p>
 <p>che in Julia si implementa così:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>bλ(λ<span class="op">,</span> T) <span class="op">=</span> (<span class="fl">2</span>h <span class="op">*</span> c<span class="op">^</span><span class="fl">2</span> <span class="op">/</span> λ<span class="op">^</span><span class="fl">5</span>) <span class="op">/</span> (exp(h<span class="op">*</span>c <span class="op">/</span> (λ<span class="op">*</span>k<span class="op">*</span>T)) <span class="op">-</span> <span class="fl">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bλ</span>(λ<span class="op">,</span> T) <span class="op">=</span> (<span class="fl">2</span>h <span class="op">*</span> c<span class="op">^</span><span class="fl">2</span> <span class="op">/</span> λ<span class="op">^</span><span class="fl">5</span>) <span class="op">/</span> (<span class="fu">exp</span>(h<span class="op">*</span>c <span class="op">/</span> (λ<span class="op">*</span>k<span class="op">*</span>T)) <span class="op">-</span> <span class="fl">1</span>))</span></code></pre></div>
 </section>
 <section id="spettro-ideale-banda-realistica-1" class="slide level1">
 <h1>Spettro ideale, banda realistica</h1>
 <p>Facciamo ora il calcolo:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@printf</span>(</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;C = %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    C(bλ.(m0_λ_pts<span class="op">,</span> T)<span class="op">,</span> dirbe_band_interp.(m0_λ_pts))<span class="op">,</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">C</span>(<span class="fu">bλ</span>.(m0_λ_pts<span class="op">,</span> T)<span class="op">,</span> <span class="fu">dirbe_band_interp</span>.(m0_λ_pts))<span class="op">,</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>Il risultato è:</p>
 <pre><code>C = 18.90</code></pre>
@@ -645,20 +645,154 @@ B(\lambda, T) = \frac{2hc^2}{\lambda^5} \frac1{e^{hc / \lambda kT} - 1}.
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-      
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
         // Display a presentation progress bar
         progress: true,
+
         // Display the page number of the current slide
         slideNumber: true,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: true,
+        hash: false,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
        // Parallax background image
        parallaxBackgroundImage: './images/background.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
         width: 1440,
+
         height: 810,
 
         // reveal.js plugins

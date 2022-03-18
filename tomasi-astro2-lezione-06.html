@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Maurizio Tomasi (maurizio.tomasi@unimi.it)">
+  <title>Lezione di Astronomia II – 6</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="./css/custom.css"/>
+  <link rel="stylesheet" href="./css/asciinema-player.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Lezione di Astronomia II – 6</h1>
+  <p class="author">Maurizio Tomasi (<a href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
+  <p class="date">8 Aprile 2022</p>
+</section>
+
+<section id="collasso-di-jeans" class="slide level1">
+<h1>Collasso di Jeans</h1>
+<p>Queste sono le equazioni usate da Jeans: <span class="math display">
+\begin{aligned}
+  \dot\rho + \vec{\nabla}\bigl(\rho\,\vec{v}\bigr) &amp;=
+  0\quad&amp;\text{(c.\ della massa)} \\
+  \dot{\vec{v}} + (\vec{v}\cdot\nabla)\vec{v} &amp;=
+  -\frac1{\rho} \vec{\nabla}p - \vec{\nabla}\phi
+  &amp;\text{(legge «di Newton»)} \\
+  p &amp;= \rho c_s^2&amp;\text{(v.\ del suono)} \\
+  \nabla^2\phi &amp;= 4\pi G \rho&amp;\text{(gravitazione)}.
+\end{aligned}
+</span></p>
+<p>Le incognite <span class="math inline">\rho</span>, <span class="math inline">\vec{v}</span>, <span class="math inline">p</span> e <span class="math inline">\phi</span> sono funzione del punto <span class="math inline">\vec{r}</span> e del tempo <span class="math inline">t</span>. Per un gas ideale monoatomico vale che <span class="math inline">c_s = \sqrt{\gamma\frac{k_B T}{m}}</span>, con <span class="math inline">\gamma = \frac53</span>.</p>
+</section>
+<section id="derivazione-di-jeans" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Il sistema di equazioni è molto complesso da risolvere se non si adotta qualche semplificazione.</p>
+<p>Linearizziamo il sistema, sostituendo <span class="math display">
+\begin{aligned}
+  \rho(\vec{r}, t) &amp;= \rho_0 + \rho_1(\vec{r}, t), \\
+  p(\vec{r}, t) &amp;= p_0 + p_1(\vec{r}, t), \\
+  \vec{v}(\vec{r}, t) &amp;= \vec{v}_0 + \vec{v}_1(\vec{r}, t) = 0 + \vec{v}_1(\vec{r}, t), \\
+  \phi(\vec{r}, t) &amp;= \phi_0 + \phi_1(\vec{r}, t).
+\end{aligned}
+</span> I termini <span class="math inline">\rho_0</span>, <span class="math inline">p_0</span>, <span class="math inline">\vec{v}_0</span> e <span class="math inline">\phi_0</span> sono costanti, e vale che <span class="math inline">\rho_0 \gg \rho_1</span>, <span class="math inline">p_0 \gg p_1</span>, etc.</p>
+</section>
+<section id="derivazione-di-jeans-1" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Supponendo che una porzione di plasma abbia questa densità:</p>
+<center>
+<img data-src="images/plasma_fractal.jpg" height="280" />
+</center>
+<p>Stiamo imponendo che le variazioni di densità <span class="math inline">\rho_1</span> siano piccole rispetto alla densità media <span class="math inline">\rho_0</span>.</p>
+</section>
+<section id="derivazione-di-jeans-2" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Ignorando i termini di ordine superiore al primo, abbiamo che ad es. il termine <span class="math inline">-\vec{\nabla} p/\rho</span> diventa <span class="math display">
+\begin{aligned}
+  -\frac1\rho\vec{\nabla} p &amp;= -\frac{\vec{\nabla}p_1}{\rho_0 +
+    \rho_1} = -\frac{\vec{\nabla}p_1}{\rho_0} \left(1 -
+    \frac{\rho_1}{\rho_0}\right) = \\
+  &amp;= -\frac{\vec{\nabla}p_1}{\rho_0}
+  + \frac{\rho_1}{\rho_0^2}\vec{\nabla} p_1 = -\frac{\vec{\nabla}p_1}{\rho_0}.
+\end{aligned}
+</span> I restanti termini sono più semplici.</p>
+</section>
+<section id="derivazione-di-jeans-3" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Applicando una divergenza alla c.d. «legge di Newton» e sostituendo, otteniamo che <span class="math display">
+\ddot\rho_1 - c_s^2 \nabla^2\rho_1 - 4\pi G \rho_1 \rho_0 = 0.
+</span></p>
+<p>L’equazione è complessa da risolvere, ma è lineare: se <span class="math inline">\rho_A</span> e <span class="math inline">\rho_B</span> sono due soluzioni, anche <span class="math inline">\alpha \rho_A + \beta \rho_B</span> è soluzione.</p>
+</section>
+<section id="derivazione-di-jeans-4" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Sfruttiamo la linearità dell’equazione per risolverla usando l’analisi di Fourier. Scomponiamo quindi l’incognita in onde piane: <span class="math display">
+\rho_1(\vec{r}, t) = \iiint_{\mathbb{R}^3}\text{d}\vec{k}\int_\mathbb{R}\text{d}\omega\,\tilde\rho_1 (\vec{k}, \omega)\,e^{i(\vec{k}\cdot\vec{r} - \omega t)}.
+</span></p>
+<p>La funzione <span class="math inline">\tilde\rho_1(\vec{k}, \omega)</span> è la trasformata di Fourier di <span class="math inline">\rho_1(\vec{r}, t)</span>; quindi operazioni differenziali su <span class="math inline">\rho_1</span> diventano algebriche su <span class="math inline">\tilde\rho_1</span>: <span class="math display">
+\nabla^2 \rho_1 \rightarrow k^2 \cdot \tilde\rho_1, \qquad
+\partial_t \rho_1 \rightarrow \omega \cdot \tilde\rho_1.
+</span></p>
+</section>
+<section id="derivazione-di-jeans-5" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Ricordando che <span class="math display">
+\left\|\vec{k}\right\| = \frac{2\pi}\lambda, \quad \omega = 2\pi\nu,
+</span> il valore di <span class="math inline">\lambda</span> che compare nell’espressione di <span class="math inline">\rho_1</span> corrisponde di volta in volta a una diversa scala delle perturbazioni nell’immagine:</p>
+<center>
+<img data-src="images/plasma_fractal.jpg" height="240" />
+</center>
+</section>
+<section id="derivazione-di-jeans-6" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Applicando quindi la trasformata di Fourier all’equazione di <span class="math inline">\rho_1</span>, otteniamo che<br />
+<span class="math display">
+\omega^2 \cdot \tilde\rho_1 = \bigl(k^2 c_s^2 - 4\pi G \rho_0\bigr)\cdot \tilde\rho_1,
+</span> ossia <span class="math display">
+\omega^2 = k^2 c_s^2 - 4\pi G \rho_0,
+</span> che è detta <strong>relazione di dispersione</strong> e lega tra loro <span class="math inline">\omega</span> e <span class="math inline">k</span> (ossia, <span class="math inline">\lambda</span> e <span class="math inline">\nu</span>).</p>
+</section>
+<section id="derivazione-di-jeans-7" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Risolvendo, abbiamo che <span class="math display">
+\omega = \pm c_s \sqrt{k^2 - k_J^2},
+</span> con <span class="math display">
+k_J^2 \equiv \frac{4\pi G \rho_0}{c_s^2}.
+</span> (in assenza di gravità, <span class="math inline">k_J = 0</span> e <span class="math inline">\omega = \pm c_S \,k</span>: la velocità del suono è sempre <span class="math inline">c_s</span>).</p>
+<p>Dallo studio di questa equazione si deduce come il sistema si evolve nel tempo.</p>
+</section>
+<section id="derivazione-di-jeans-8" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Se <span class="math inline">k_J^2 &lt; k^2</span> allora l’onda di pressione si propaga nel mezzo (onda acustica) con una velocità di fase data da <span class="math display">
+v_f = \lambda\nu = \frac\omega{k} = c_s \sqrt{1 - \left(\frac{k_J}k\right)^2},
+</span> inferiore alla velocità del suono <span class="math inline">c_s</span> perché <span class="math inline">k_J \not= 0</span> (è il termine dovuto alla gravità). La gravità quindi «rallenta» la propagazione dell’onda nel mezzo.</p>
+</section>
+<section id="derivazione-di-jeans-9" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Se <span class="math inline">k_J^2 &gt; k^2</span> allora <span class="math inline">\omega</span> è immaginario, e <span class="math inline">\rho_1(\vec{r}, t) = A_g e^{i(\vec{k}\cdot\vec{r} - \omega t)}</span> diverge come <span class="math inline">e^{t/\tau_J}</span> (collasso), con <span class="math display">
+\tau_J = \frac1{k_J c_s} = \frac1{\sqrt{4\pi G \rho_0}} =
+  \frac{2.3\times 10^4\,\text{yr}}{\sqrt{n_H/10^6\,\text{cm}^{-3}}},
+</span> se <span class="math inline">k\ll k_J</span>; risultato simile al tempo di <em>free-fall</em>: <span class="math display">
+\tau_\text{ff} = \sqrt{\frac{3\pi}{32 G\rho_0}} = 
+  \frac{4.4\times 10^4\,\text{yr}}{\sqrt{n_H/10^6\,\text{cm}^{-3}}}.
+</span></p>
+</section>
+<section id="derivazione-di-jeans-10" class="slide level1">
+<h1>Derivazione di Jeans</h1>
+<p>Siccome il collasso avviene se <span class="math inline">k_J^2 &gt; k^2</span>, ossia <span class="math display">
+\frac{4\pi G \rho_0}{c_s^2} &gt; \left(\frac{2\pi}{\lambda}\right)^2,
+</span> otteniamo allora l’espressione di <span class="math inline">R_J</span>: <span class="math display">
+\lambda &gt; c_s \sqrt{\frac\pi{G \rho_0}} \equiv R_J.
+</span></p>
+<p>Per un gas monoatomico si ha <span class="math inline">R_J = \sqrt{\frac{5\pi k_B T}{3 G m \rho_0}}</span>.</p>
+</section>
+<section id="massa-di-jeans" class="slide level1">
+<h1>Massa di Jeans</h1>
+<p>Dalla densità <span class="math inline">\rho_0</span> e dal raggio di Jeans <span class="math inline">R_J</span> possiamo stimare la massa minima per provocare un collasso gravitazionale con <span class="math display">
+M_J = \frac43 \pi R_J^3 \rho_0 = \frac{4\pi}{3\sqrt{\rho_0}}
+\left(\frac{5\pi k_B T}{3 G m}\right)^{\frac32} \propto \sqrt{\frac{T^3}{\rho_0}}
+</span> («massa di Jeans»).</p>
+</section>
+<section id="massa-di-jeans-1" class="slide level1">
+<h1>Massa di Jeans</h1>
+<p>Numericamente vale che <span class="math display">
+M_J \approx
+0.32\,M_\odot\left(\frac{T}{10\,\text{K}}\right)^{\frac32}
+\left(\frac{m_H}{\mu}\right)^{\frac32}\left(\frac{n_0}{10^6\,\text{cm}^3}\right)^{-\frac12}
+</span> con <span class="math inline">\mu</span> peso molecolare medio.</p>
+<p>I valori di <span class="math inline">n</span> e di <span class="math inline">T</span> nell’equazione sono abbastanza in linea con quelli delle nubi nel ISM: ciò è rassicurante!</p>
+</section>
+<section id="jeans-swindle" class="slide level1">
+<h1>Jeans’ swindle</h1>
+<p>Abbiamo accennato a un problema fisico nei calcoli di Jeans. Il punto è che l’assunzione <span class="math display">
+\nabla\phi_0 = 0
+</span> è irrealistica, perché ciò implica che <span class="math display">
+\nabla^2\phi_0 = 0 \quad\Rightarrow\quad 4\pi G \rho_0 = 0.
+</span></p>
+<p>Senza l’assunzione <span class="math inline">\nabla\phi = 0</span>, i calcoli si complicano, ma il risultato non cambia qualitativamente. La nuova soluzione dipende però dal dettaglio della geometria della nube.</p>
+</section>
+<section id="meccanismi-di-collasso-delle-nubi" class="slide level1">
+<h1>Meccanismi di collasso delle nubi</h1>
+</section>
+<section id="massa-di-jeans-2" class="slide level1">
+<h1>Massa di Jeans</h1>
+<p>Quando nubi molto massive iniziano a collassare, i parametri fisici cambiano e anche <span class="math inline">M_J</span>. Può essere che alcune regioni della nube perdano stabilità ed inizino a loro volta a collassare. Si ha una <strong>frammentazione</strong> della nube, con formazione di più stelle.</p>
+<p>Questo è il probabile meccanismo di formazione degli ammassi aperti.</p>
+</section>
+<section id="rotazione-della-nube" class="slide level1">
+<h1>Rotazione della nube</h1>
+<p>In generale, la nube in collasso sarà dotata anche di momento angolare, che noi abbiamo trascurato.</p>
+<p>Se il momento angolare si conserva durante la contrazione, allora: <span class="math display">
+\frac25 M R^2 \omega = \frac25 M R_0^2 \omega_0,
+</span> (il momento d’inerzia è <span class="math inline">I=\frac25 M R^2</span> per una sfera piena) da cui <span class="math display">
+\omega = \omega_0 \left(\frac{R_0}R\right)^2.
+</span></p>
+</section>
+<section id="rotazione-della-nube-1" class="slide level1">
+<h1>Rotazione della nube</h1>
+<p>All’equatore l’accelerazione è <span class="math display">
+a(R) = G\frac{M(R)}{R^2} - \omega^2 R = G\frac{M(R)}{R^2} -
+\omega_0^2 \left(\frac{R_0}R\right)^4 R.
+</span> Quando la rotazione è sufficiente per fermare il collasso? Deve valere <span class="math inline">a(R) = 0</span>, ossia <span class="math display">
+G M(R) = (\omega_0 R_0)^2 \frac{R_0^2}R,
+</span> da cui ricaviamo che il collasso si arresta quando <span class="math inline">\frac{R}{R_0} = \frac{(\omega_0 R_0)^2 R_0}{G M(R)}</span>.</p>
+</section>
+<section id="rotazione-della-nube-2" class="slide level1">
+<h1>Rotazione della nube</h1>
+<p>Per valori tipici di <span class="math inline">\omega_0 R_0 = 1\,\text{km/s} = 10^5\,\text{cm/s}</span> e di <span class="math inline">M_J</span> e <span class="math inline">R_J</span> vale che <span class="math display">
+\frac{R}{R_0} \approx 0.6.
+</span> Quindi quando il raggio si è ridotto della metà, la rotazione frena il collasso nella direzione <span class="math inline">\perp</span> all’asse di rotazione.</p>
+<p>Nella direzione parallela all’asse, il collasso può proseguire indisturbato. La nube si appiattisce e forma un disco, dove molta della massa non raggiunge il centro e non forma la stella.</p>
+</section>
+<section id="luoghi-di-formazione-stellare" class="slide level1">
+<h1>Luoghi di formazione stellare</h1>
+<p>Stimiamo il raggio di Jeans (<span class="math inline">R_J \propto \sqrt{T/\rho}</span>) in due casi distinti:</p>
+<ol>
+<li>Nube molecolare H<span class="math inline">_2</span>: <span class="math inline">T \sim 10\,\text{K}</span>, <span class="math inline">n \sim 10^3\,\text{cm}^{-3}</span>.</li>
+<li>Nube di HI: <span class="math inline">T \sim 100\,\text{K}</span>, <span class="math inline">n \sim 1\,\text{cm}^{-3}</span>.</li>
+</ol>
+<p>Si ha che <span class="math display">
+\frac{R_\text{J, HI}}{R_\text{J, H$_2$}} \sim
+2\sqrt{\frac{100\,\text{K}}{10\,\text{K}}\,\frac{10^3\,\text{cm}^{-3}}{1\,\text{cm}^{-3}}}
+= 200.
+</span> È quindi più facile formare stelle in nubi molecolari.</p>
+</section>
+<section id="meccanismi-di-formazione-stellare" class="slide level1">
+<h1>Meccanismi di formazione stellare</h1>
+<p>Il collasso rilascia energia gravitazionale che può:</p>
+<ol>
+<li>aumentare l’energia interna, modificando la pressione;</li>
+<li>essere irradiata all’esterno se il tempo di raffreddamento è minore di <span class="math inline">\tau_\text{ff}</span>.</li>
+</ol>
+<p>Nel secondo caso la contrazione è isotermica. (Questa era l’ipotesi di Jeans, da cui nel caso di piccole oscillazioni deriva la relazione <span class="math inline">p = \rho c_s^2</span> che abbiamo usato la scorsa lezione).</p>
+</section>
+<section id="meccanismi-di-formazione-stellare-1" class="slide level1">
+<h1>Meccanismi di formazione stellare</h1>
+<p>Ma all’aumento di <span class="math inline">\rho</span> corrisponde un aumento dello spessore ottico della nube, e a un certo momento il collasso cessa di essere isotermico, diventando adiabatico: <span class="math display">
+T V^{\gamma - 1} = \text{costante} \quad\Rightarrow\quad T \propto
+\frac1{V^{\gamma - 1}} \propto \rho^{\gamma - 1}.
+</span> Di conseguenza <span class="math display">
+M_J \propto \sqrt{\frac{T^3}\rho} \propto \sqrt{\rho^{3\gamma - 4}}.
+</span></p>
+</section>
+<section id="meccanismi-di-formazione-stellare-2" class="slide level1">
+<h1>Meccanismi di formazione stellare</h1>
+<p><span class="math display">
+M_J \propto \sqrt{\rho^{3\gamma - 4}}.
+</span> Se <span class="math inline">\gamma &gt; 4/3</span> (es. gas ideale), <span class="math inline">M_J</span> aumenta all’aumentare della densità, e quindi il collasso potrebbe interrompersi prima che si siano innescate le reazioni nucleari all’interno della stella.</p>
+<p>Quando ciò avviene, la massa di Jeans per una nube di <span class="math inline">10^2\,\text{K}</span> è circa 0.2,<span class="math inline">M_\odot</span>: quindi il processo permette di formare <strong>una serie di masse dell’ordine di quella solare</strong>, ma non molto inferiori.</p>
+</section>
+<section id="fotoionizzazione" class="slide level1">
+<h1>Fotoionizzazione</h1>
+<ul>
+<li><p>Se nel regime adiabatico l’energia non viene rilasciata all’esterno della nube, dove va a finire?</p></li>
+<li><p>L’energia è in parte usata per aumentare la temperatura <span class="math inline">T</span>, in parte per fotoionizzare le specie neutre (H, He, H₂).</p></li>
+<li><p>Questo determina il percorso della protostella sul diagramma HR.</p></li>
+</ul>
+</section>
+<section id="contrazione-della-nube" class="slide level1">
+<h1>Contrazione della nube</h1>
+<center>
+<img data-src="images/protostellar_nebula_contraction.png" height="500" />
+</center>
+<p>Modello numerico del collasso da una nube a una protostella <span class="math inline">M \sim 1\,M_\odot</span>.</p>
+</section>
+<section id="luoghi-di-formazione-stellare-1" class="slide level1">
+<h1>Luoghi di formazione stellare</h1>
+<p>Come già anticipato in precedenza, per individuare regioni H₂ si può usare CO come tracciante:</p>
+<ol>
+<li>Si stima la densità colonnare di CO dall’emissione delle righe rotazionali;</li>
+<li>Si deriva la densità colonnare di H<span class="math inline">_2</span> tramite un «X-factor»; vedi Bolatto, Wolfire &amp; Leroy, Annu. Rev. Astron. Astrophys. 2013. 51:207–68 per una review.</li>
+</ol>
+</section>
+<section id="mappa-di-co-planck-2013" class="slide level1">
+<h1>Mappa di CO (Planck 2013)</h1>
+<center>
+<img data-src="images/planck2013-CO-title.png" height="620" />
+</center>
+</section>
+<section id="mappa-di-co-planck-2013-1" class="slide level1">
+<h1>Mappa di CO (Planck 2013)</h1>
+<center>
+<img data-src="images/planck2013-CO-spectral-response.png" height="620" />
+</center>
+</section>
+<section id="mappa-di-co-planck-2013-2" class="slide level1">
+<h1>Mappa di CO (Planck 2013)</h1>
+<center>
+<img data-src="images/planck2013-CO-map.png" height="620" />
+</center>
+<aside class="notes">
+<p>L’unità di misura è K,Km/s, che è detta <em>velocity integrated emission</em> (VIE). È il prodotto della temperatura di Rayleigh-Jeans per l’ampiezza spettrale espressa in unità di Km/s (nell’ipotesi che lo spessore della linea spettrale sia dovuto all’effetto Doppler causato dall’agitazione termica).</p>
+</aside>
+</section>
+<section id="mappa-di-co-planck-2013-3" class="slide level1">
+<h1>Mappa di CO (Planck 2013)</h1>
+<center>
+<img data-src="images/planck2013-CO-map-2.png" height="620" />
+</center>
+</section>
+<section id="cold-cores" class="slide level1">
+<h1>Cold cores</h1>
+<p>Abbiamo visto che la temperatura della polvere è dell’ordine di <span class="math inline">100\,\text{K}</span> se abbastanza vicina a una stella giovane.</p>
+<p>Nelle nubi di <strong>gas</strong> la schermatura delle regioni esterne può permettere l’esistenza di regioni interne più fredde. Si raggiungono temperature di <span class="math inline">\sim 10\,\text{K}</span>, con densità <span class="math inline">n \sim 10^{4\div5}\,\text{cm}^{-3}</span>.</p>
+<p>Anche queste regioni sono probabilmente <strong>luoghi di formazione stellare</strong> (ricordare che <span class="math inline">M_J \propto T^{3/2}</span>).</p>
+</section>
+<section id="cold-cores-1" class="slide level1">
+<h1>Cold cores</h1>
+<center>
+<img data-src="images/barnard68.jpg" height="520" />
+</center>
+<p>Al centro di Barnard 68 («Black cloud») c’è un cold core.</p>
+</section>
+<section id="cold-clumps" class="slide level1">
+<h1>Cold clumps</h1>
+<p>Solitamente i «core» tendono ad aggregarsi in strutture dette <em>clump</em>. Il loro picco di emissione è a <span class="math inline">\nu \lesssim 1\,\text{THz}</span>, e sono quindi richieste misure sub-millimetriche:</p>
+<ul>
+<li>Da terra (ottima risoluzione, ma piccole scale angolari a causa dell’atmosfera);</li>
+<li>Da pallone stratosferico (buona risoluzione, limitata copertura);</li>
+<li>Dallo spazio (complicato, costoso).</li>
+</ul>
+<aside class="notes">
+<p>Il problema delle misure da terra è che l’atmosfera introduce disturbi, e ci si deve quindi limitare a misurare piccole regioni di cielo alla volta.</p>
+</aside>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="images/infrared-space-missions.png" height="620" />
+</center>
+<aside class="notes">
+<p>Questo grafico mostra perché Planck sia stato il primo esperimento a mappare su tutto il cielo i <em>cold clumps</em>.</p>
+</aside>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="images/planck2011-cold-clumps-title-page.png" height="620" />
+</center>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="images/planck2011-cold-clumps-map.png" height="680" />
+</center>
+<aside class="notes">
+<ul>
+<li>Mappa superiore: densità dei <em>cold cores</em> misurata su regioni di dimensione <span class="math inline">2^\circ \times 2^\circ</span>;</li>
+<li>Mappa centrale: sovrapposizione della mappa di <em>cold cores</em> alla mappa della densità colonnare del CO: dove il CO non è presente, i <em>cold cores</em> sono stati tagliati. Il 95 % dei <em>cold cores</em> è associato a CO;</li>
+<li>Mappa inferiore: sovrapposizione della mappa di <em>cold cores</em> alla mappa di <span class="math inline">A_V</span> (polvere). Come sopra, sono stati tagliati i <em>cold cores</em> non associati a un valore significativo di <span class="math inline">A_V</span>. Il 75 % dei <em>cold cores</em> è associato a polvere.</li>
+</ul>
+</aside>
+</section>
+<section id="temperature-dei-cold-clumps" class="slide level1">
+<h1>Temperature dei cold clumps</h1>
+<center>
+<img data-src="images/planck_cold_clump_temperatures.png" height="460" />
+</center>
+<p>(Il parametro <span class="math inline">\beta</span> caratterizza l’assorbimento del gas in funzione della frequenza, e dipende dai modelli).</p>
+<aside class="notes">
+<p>Siccome un <em>cold core</em> ha bisogno di un «involucro» caldo che lo protegga dalla radiazione esterna, non è possibile misurare la SED di un <em>cold core</em> separatamente da quella della <em>warm cloud</em> che la ospita. Per questo le temperature riportate nell’articolo sono probabilmente un limite superiore.</p>
+</aside>
+</section>
+<section id="regioni-hii" class="slide level1">
+<h1>Regioni HII</h1>
+</section>
+<section id="regioni-hii-1" class="slide level1">
+<h1>Regioni HII</h1>
+<p>Una stella massiccia emette nel visibile e nel UV.</p>
+<p>Siccome per ionizzare HI occorre <span class="math inline">E = h\nu &gt; 13.6\,\text{eV}</span> (<span class="math inline">\lambda &lt; 91.2\,\text{nm}</span>), le stelle OB hanno la possibilità di ionizzare HI.</p>
+<p>Quando la maggior parte dell’idrogeno è ionizzato, si parla di <strong>regioni HII</strong>.</p>
+</section>
+<section id="raggio-di-strömgren" class="slide level1">
+<h1>Raggio di Strömgren</h1>
+<p>Le stelle OB riescono ad ionizzare HI solo in una regione di volume limitato. Stimiamo le dimensioni di questo volume.</p>
+<p>Il tasso di ionizzazione è <span class="math display">
+R_i = N_\text{UV},
+</span> con <span class="math inline">[R_i] = \text{ionizzazioni/s}</span> e <span class="math display">
+N_\text{UV} = \int_{13.6\,\text{eV}}^\infty N(\nu)\,\text{d}\nu
+</span> (<span class="math inline">N_\text{UV} = \text{fotoni/s}</span>, se efficienza è 100 %).</p>
+</section>
+<section id="raggio-di-strömgren-1" class="slide level1">
+<h1>Raggio di Strömgren</h1>
+<p>L’efficienza è verosimilmente del 100 %, perché per la ionizzazione la sezione d’urto è <span class="math display">
+\sigma \sim 10^{-17}\,\text{cm}^2.
+</span> Per densità <span class="math inline">n_H \sim 10^3\,\text{cm}^{-3}</span> si ha che il cammino libero medio di un fotone è <span class="math display">
+\lambda \sim \frac1{n_H\,\sigma} \sim 10^{14}\,\text{cm} = 6\,\text{AU},
+</span> da confrontarsi con le dimensioni delle regioni HII (da 0.1 a 100,pc).</p>
+</section>
+<section id="raggio-di-strömgren-2" class="slide level1">
+<h1>Raggio di Strömgren</h1>
+<p>Il tasso di ricombinazione è <span class="math display">
+R_\text{rec} = \alpha(T)\,n_e\,n_p\,V = \alpha(T)\,n_p^2\,\frac{4\pi}3 r_S^3,
+</span> con <span class="math inline">r_S</span> detto <strong>raggio di Strömgren</strong> e <span class="math inline">\alpha(T)</span> coefficiente.</p>
+<p>All’equilibrio <span class="math inline">R_i = R_\text{rec}</span>, da cui <span class="math display">
+r_S = \left(\frac3{4\pi\alpha}\right)^{\frac13}
+N_\text{UV}^{\frac13} n_p^{-\frac23}.
+</span> Le regioni HII più dense sono più piccole (tipicamente, <span class="math inline">\sim 20\,\text{pc}</span>).</p>
+</section>
+<section id="raggio-di-strömgren-3" class="slide level1">
+<h1>Raggio di Strömgren</h1>
+<p>Date le dimensioni <span class="math inline">R</span> della nube, possono valere due casi:</p>
+<ol>
+<li>Se <span class="math inline">R &gt; r_S</span>, la nube è <em>density bounded</em>: la nube HII transisce progressivamente nel mezzo HI che la circonda;</li>
+<li>Se <span class="math inline">R &lt; r_S</span>, la nube è <em>ionization bounded</em>: tutta la nube è ionizzata.</li>
+</ol>
+</section>
+<section id="raggio-di-strömgren-4" class="slide level1">
+<h1>Raggio di Strömgren</h1>
+<p>La temperatura tipica delle regioni HII è <span class="math inline">\sim 10^4\,\text{K}</span>, contro i <span class="math inline">\sim 100\,\text{K}</span> dell’ambiente circostante. La densità invece non mostra discontinuità (<span class="math inline">n \sim 10^3\,\text{cm}^{-3}</span>).</p>
+<p>Nelle nubi sono presenti anche altri elementi, ciascuno con la propria energia di ionizzazione. Ad esempio:</p>
+<ol>
+<li>He: <span class="math inline">E_i = 24.6\,\text{eV}</span>, quindi le regioni HeII sono meno estese di HII;</li>
+<li>C: <span class="math inline">E_i = 11.3\,\text{eV}</span>, quindi qui vale il contrario.</li>
+</ol>
+</section>
+<section id="rilevare-le-regioni-hii" class="slide level1">
+<h1>Rilevare le regioni HII</h1>
+<p>L’emissione di regioni HII è dovuta al brehmsstrahlung (diffusione free-free), con uno spettro <span class="math display">
+T_e \propto \nu^{-\alpha},\quad\text{con $\alpha \approx 2.1$.}
+</span></p>
+<p>Si osserva che l’emissione è concentrata sul piano Galattico.</p>
+</section>
+<section id="rilevare-le-regioni-hii-1" class="slide level1">
+<h1>Rilevare le regioni HII</h1>
+<p>Un modo per distinguere lo spettro free-free da altre emissioni (es. spinning dust) è quello di correlarlo con emissione Hα (<span class="math inline">n=3-2</span>, serie di Balmer).</p>
+<p>Hα viene emessa nelle regioni di ionizzazione: quando un HII (protone) cattura un <span class="math inline">e^-</span>, durante la diseccitazione c’è una certa probabilità (<span class="math inline">\sim 50\,\%</span>) che avvenga la transizione <span class="math inline">n=3-2</span> (Hα). Quindi Hα segnala la presenza di ionizzazione.</p>
+<aside class="notes">
+<p>Quando p⁺ cattura e⁻, quest’ultimo è di solito a un livello energetico molto alto. Spesso l’elettrone ha tempo di raggiungere il ground state prima che l’atomo sia re-ionizzato dalla radiazione UV.</p>
+</aside>
+</section>
+<section id="rilevare-le-regioni-hii-2" class="slide level1">
+<h1>Rilevare le regioni HII</h1>
+<center>
+<img data-src="images/dickinson-title.png" height="620" />
+</center>
+</section>
+<section id="rilevare-le-regioni-hii-3" class="slide level1">
+<h1>Rilevare le regioni HII</h1>
+<center>
+<img data-src="images/dickinson-free-free-template.png" height="620" />
+</center>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: true,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+       // Parallax background image
+       parallaxBackgroundImage: './images/background.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1440,
+
+        height: 810,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script src="js/asciinema-player.js"></script>
+    </body>
+</html>

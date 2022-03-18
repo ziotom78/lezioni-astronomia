@@ -1,7 +1,9 @@
 ---
-title: Lezione di astronomia 2
-author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: 29 Ottobre 2021
+title: "Lezione di astronomia 2"
+author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
+date: "29 Ottobre 2021"
+css:
+- ./css/custom.css
 ...
 
 # Teoria dei sistemi binari
@@ -657,3 +659,8 @@ Chi fosse interessato a riprodurre questi calcoli (auguri!) può guardare il [vi
 # Esempio di [review](https://github.com/openjournals/joss-reviews/issues/1809)
 
 <center>![](./images/joss-review-example.png){width=50%}</center>
+
+
+# Andare oltre
+
+[orvara: An Efficient Code to Fit Orbits Using Radial Velocity, Absolute, and/or Relative Astrometry](https://iopscience.iop.org/article/10.3847/1538-3881/ac042e)

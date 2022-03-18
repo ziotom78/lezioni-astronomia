@@ -1,7 +1,9 @@
 ---
-title: Lezione di astronomia 1b
-author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: 15 Ottobre 2021
+title: "Lezione di astronomia 1b"
+author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
+date: "15 Ottobre 2021"
+css:
+- ./css/custom.css
 ...
 
 

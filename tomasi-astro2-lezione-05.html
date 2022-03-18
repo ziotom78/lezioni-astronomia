@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Maurizio Tomasi (maurizio.tomasi@unimi.it)">
+  <title>Lezione di Astronomia II – 5</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="./css/custom.css"/>
+  <link rel="stylesheet" href="./css/asciinema-player.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Lezione di Astronomia II – 5</h1>
+  <p class="author">Maurizio Tomasi (<a href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
+  <p class="date">7 Aprile 2022</p>
+</section>
+
+<section id="il-gas-interstellare-isg" class="slide level1">
+<h1>Il gas interstellare (ISG)</h1>
+</section>
+<section id="gas-interstellare-isg" class="slide level1">
+<h1>Gas interstellare (ISG)</h1>
+<p>Intorno al 1930 si sono notati spettri stellari con righe di assorbimento (nell’ottico) dalle strane proprietà:</p>
+<ol>
+<li>In sistemi binari, non mostrano effetto Doppler;</li>
+<li>Sono più marcate per stelle più lontane;</li>
+<li>Molto più strette di quelle stellari (si deduce che <span class="math inline">T \sim 100\,\text{K}</span>).</li>
+</ol>
+</section>
+<section id="gas-interstellare-isg-1" class="slide level1">
+<h1>Gas interstellare (ISG)</h1>
+<p>Non si osserva H insterstellare nel visibile: se <span class="math inline">T</span> è bassa, non ci sono righe di Balmer!</p>
+<p>Gli elementi osservati sono Ca e Na, ma anche molecole: CH, CN, CH<span class="math inline">^+</span>. Queste ultime implicano una bassa densità del gas (<span class="math inline">n &lt; 10^3\,\text{cm}^{-3}</span>) e una bassa temperatura:</p>
+<ul>
+<li>Molecole cariche come CH<span class="math inline">^+</span> in condizioni di laboratorio si neutralizzano subito;</li>
+<li>CH e CN sono fortemente reattive.</li>
+</ul>
+<div class="note">
+<p>Per eccitare una riga di Balmer occorre $$1,eV, ma le energie in gioco per <span class="math inline">T \sim 100</span>,K sono 100 volte inferiori.</p>
+</div>
+</section>
+<section id="hi-nel-isg" class="slide level1">
+<h1>HI nel ISG</h1>
+<p>È lecito aspettarsi che H, anche se non rilevabile nel visibile, sia la componente predominante del ISG. Si può rivelare mediante la misura della riga a 21 cm.</p>
+<p>Questa riga è generata dalla transizione tra lo stato dell’atomo HI con spin <span class="math inline">e</span>/<span class="math inline">p</span> paralleli allo stato con spin antiparalleli. I due stati hanno una differenza energetica di <span class="math display">
+\Delta E = 5.9\times 10^{-6}\,\text{eV},
+</span> e la probabilità di transizione è <span class="math inline">A = (11\,\text{Myr})^{-1}</span>.</p>
+</section>
+<section id="hi-nel-isg-1" class="slide level1">
+<h1>HI nel ISG</h1>
+<center>
+<img data-src="images/21cm_line.png" height="240" />
+</center>
+<p>La temperatura associata a questa radiazione è <span class="math display">
+T_{21\,\text{cm}} \sim \frac{\Delta E}{k_B} = \frac{5.9\times
+  10^{-6}\,\text{eV}}{8.62\times 10^{-5}\,\text{eV/K}} \approx 0.07\,\text{K}.
+</span> Basta la CMB (2.7 K) a popolare lo stato a spin parallelo!</p>
+<aside class="notes">
+<p>Domanda per gli studenti: se la CMB è <span class="math inline">2.7\,\mathrm{K}\gg0.07\,\mathrm{K}</span>, vuol dire che tutti gli atomi HI sono nello stato di tripletto?</p>
+</aside>
+</section>
+<section id="fatti-sulla-riga-a-21-cm" class="slide level1">
+<h1>Fatti sulla riga a 21 cm</h1>
+<p>Lo stato a spin paralleli (<span class="math inline">s = 1</span>) è caratterizzato da <span class="math display">
+S = \sqrt2 \hbar,\quad S_z =
+\begin{cases}
+  +\hbar/2, \\
+  0, \\
+  -\hbar/2
+\end{cases}
+\qquad \text{(tripletto),}
+</span> quello a spin antiparalleli (<span class="math inline">s = 0</span>) da <span class="math display">
+S = 0,\quad S_z = 0 \qquad\text{(singoletto)}.
+</span></p>
+</section>
+<section class="slide level1">
+
+<p>Viste le molteplicità dei due stati, ne segue che se <span class="math inline">k_B T \gg \Delta E</span>, allora <span class="math display">
+\frac{N_\text{tr}}{N_\text{sing}} = \frac{g_\text{tr}}{g_\text{sing}}
+e^{-\Delta E/k_B T} = 3 e^{-\Delta E/k_B T} \approx 3.
+</span></p>
+<p>Alle temperature presenti nell’Universo (≥ 2.7 K), per ogni atomo nello stato di singoletto ce ne sono tre in quello di tripletto.</p>
+</section>
+<section id="importanza-della-riga-a-21-cm" class="slide level1">
+<h1>Importanza della riga a 21 cm</h1>
+<p>L’esistenza di questa riga era stata prevista negli anni ’40, e fu rivelata il 25 Marzo 1951 dal gruppo di Edwin Purcell (Harvard Univ., Nobel 1953).</p>
+<p>Le caratteristiche della riga sono:</p>
+<ol>
+<li>Visibile sia in assorbimento che in emissione;</li>
+<li>Insensibile alla presenza di polvere.</li>
+</ol>
+</section>
+<section id="importanza-della-riga-a-21-cm-1" class="slide level1">
+<h1>Importanza della riga a 21 cm</h1>
+<p>I campi di utilizzo della riga a 21 cm sono disparati:</p>
+<ul>
+<li>Fondamentale per lo studio del gas nel ISM;</li>
+<li>Essendo insensibile alla polvere, permette di studiare la struttura della Galassia;</li>
+<li>Rotazione della Galassia e moti locali ricostruibili da misure Doppler sulla riga;</li>
+<li>Studio di campi magnetici del ISM dall’effetto Zeeman sulla riga;</li>
+<li>…e molto altro.</li>
+</ul>
+</section>
+<section id="esempio-numerico" class="slide level1">
+<h1>Esempio numerico</h1>
+<p>Supponiamo che una nube di H neutro si trovi a una distanza <span class="math inline">d = 30\,\text{pc}</span>. Il flusso a 21 cm in emissione, integrato sull’angolo solido, è <span class="math display">
+f = 4.5\times 10^{-15}\,\text{erg\,cm$^{-2}$\,s$^{-1}$}.
+</span> Qual è la massa dell’idrogeno nella nube?</p>
+</section>
+<section id="svolgimento-esercizio" class="slide level1">
+<h1>Svolgimento esercizio</h1>
+<p>Dal flusso osservato possiamo ricavare la luminosità totale: <span class="math display">
+L_\text{21\,cm} = 4\pi d^2 f = 4.85\times 10^{26}\,\text{erg\,s$^{-1}$}.
+</span></p>
+</section>
+<section id="svolgimento-esercizio-1" class="slide level1">
+<h1>Svolgimento esercizio</h1>
+<p>Ci aspettiamo che valga la formula <span class="math display">
+L_\text{21\,cm} \approx \frac34 N_H\,A\,h\nu,
+</span> dove <span class="math inline">A = \tau^{-1} = (11\,\text{Myr})^{-1}</span> è la probabilità di transizione e il fattore <span class="math inline">3/4</span> tiene conto della popolazione nei due stati di spin. Quindi <span class="math display">
+N_H \approx 2.4 \times 10^{58}, \qquad M_H = N_H \times m_p \approx 20\,M_\odot.
+</span></p>
+</section>
+<section id="pioneer-10-1972" class="slide level1">
+<h1>Pioneer 10 (1972)</h1>
+<p>Un contesto interessante in cui la riga a 21 cm ha giocato un ruolo importante è la famosa targa installata sulla sonda Pioneer 10, lanciata nel 1972 dalla NASA per studiare Giove.</p>
+<center>
+<img data-src="images/Pioneer_10-11_spacecraft.jpg" height="400" />
+</center>
+<aside class="notes">
+<p>La missione osservò Giove nel 1973, dopodiché si allontanò dal Sole incrociando l’orbita di Saturno nel 1976, quella di Urano nel 1979 e quella di Nettuno nel 1983. La missione venne dichiarata completata nel 1997, ma il satellite continuò a trasmettere fino al 2003 (sebbene il segnale non fosse più decifrabile), quando la distanza dalla Terra era di 80 AU.</p>
+</aside>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="images/Pioneer10-plaque.jpg" />
+</center>
+<aside class="notes">
+<p>In alto a destra c’è la transizione iperfine dell’idrogeno. La piccola lineetta verticale sotto la transizione indica la cifra 1 in binario. A destra della donna, tra le due parentesi che indicano l’altezza, c’è la cifra 8 in binario. L’altezza media della donna è <span class="math inline">8 \times 21\,\mathrm{cm} = 168\,\mathrm{cm}</span>. I 15 raggi che partono dal Sole sono 15 pulsar. I numeri binari indicano il periodo (in unità della frequenza della riga a 21 cm): dato che questi periodi cambiano col tempo, questo permette di dedurre l’epoca del lancio. La lunghezza delle righe indica la distanza relativa. Ne sono state scelte 15 anziché 3 (sufficienti per triangolare) perché dove arriverà la placca potrebbero non essere visibili tutte.}</p>
+</aside>
+</section>
+<section id="caratteristiche-di-hi-nel-ism" class="slide level1">
+<h1>Caratteristiche di HI nel ISM</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Quantità</th>
+<th>Stima</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Temperatura</td>
+<td>100 K</td>
+</tr>
+<tr class="even">
+<td>Dimensione nubi</td>
+<td>10÷60 pc</td>
+</tr>
+<tr class="odd">
+<td>Densità HI (nube)</td>
+<td>1÷10 cm⁻³</td>
+</tr>
+<tr class="even">
+<td>Densità HI (Galassia)</td>
+<td>0.1 cm⁻³</td>
+</tr>
+<tr class="odd">
+<td>Velocità</td>
+<td><span class="math inline">v_\text{rms} \sim \sqrt{k_B T/m_p} \sim 10^5\,\text{cm/s}</span></td>
+</tr>
+</tbody>
+</table>
+<p>Il profilo della riga rivela ali molto allargate e deboli: sono piccole quantità di gas molto caldo (<span class="math inline">10^4</span>,K) e rarefatto che si insinua tra le regioni di HI nel ISM.</p>
+</section>
+<section id="gas-e-polveri" class="slide level1">
+<h1>Gas e polveri</h1>
+<p>Si osserva correlazione tra la densità colonnare di HI (riga 21 cm) e la polvere (misure di estinzione), quindi queste componenti sono mescolate nell’ISM.</p>
+<center>
+<img data-src="images/dust_and_gas.png" height="240" />
+</center>
+<p>La correlazione cessa per alti valori di <span class="math inline">A_V</span>. Perché?</p>
+<ol>
+<li>La polvere attenua a 21 cm? No, <span class="math inline">n</span> insuff.</li>
+<li>Si formano molecole di H₂? Chissà…</li>
+</ol>
+</section>
+<section id="gas-e-polveri-1" class="slide level1">
+<h1>Gas e polveri</h1>
+<p>La molecola H₂ è molto difficile da rivelare, perché non emette l’equivalente della riga a 21 cm. Inoltre, non ha un dipolo permanente.</p>
+<p>Molecole come CO hanno un dipolo permanente, e siccome l’energia rotazionale è quantizzata, <span class="math display">
+E_r = \frac{(I\omega)^2}{2I} = \frac{L^2}{2I} = \frac{\hbar^2 J(J+1)}{2I}.
+</span></p>
+</section>
+<section id="gas-e-polveri-2" class="slide level1">
+<h1>Gas e polveri</h1>
+<p>Se si ha dipolo permanente, vale la regola di selezione <span class="math inline">\Delta J = -1</span>. Una transizione tra livelli energetici rot. del CO quindi genera righe (<span class="math inline">\nu &gt; 115\,</span>GHz).</p>
+<p><strong>Ma ciò non vale per H₂</strong>, che ha solo un debole quadrupolo con regola di selezione <span class="math inline">\Delta J = -2</span>. Questo genera una debole emissione intorno a 10,<span class="math inline">\mu</span>m (coperta però dalle polveri).</p>
+<aside class="notes">
+<p>Si può mostrare brevemente la forma di un quadrupolo, e spiegare perché la distribuzione delle cariche di H₂ ricordi un quadrupolo.</p>
+</aside>
+</section>
+<section id="monossido-di-carbonio" class="slide level1">
+<h1>Monossido di carbonio</h1>
+<ul>
+<li><p>È più facile studiare l’emissione di altre molecole, meno abbondanti ma con righe più forti (CO, CH, OH, CS, C₃H₂…).</p></li>
+<li><p>Vedremo in seguito che un caso molto interessante è la molecola CO, che è uno dei traccianti di H₂ più usati.</p></li>
+</ul>
+</section>
+<section id="gas-e-polveri-3" class="slide level1">
+<h1>Gas e polveri</h1>
+<ul>
+<li><p>La perdita di correlazione tra <span class="math inline">N_H</span> e <span class="math inline">A_V</span> ci dice quindi che parte dell’idrogeno del ISM è in forma molecolare?</p></li>
+<li><p>Le densità in gioco sembrerebbero sconsigliarlo: è difficile produrre H₂ a causa (ancora!) della sua simmetria.</p></li>
+</ul>
+</section>
+<section id="gas-e-polveri-4" class="slide level1">
+<h1>Gas e polveri</h1>
+<p>Per unire tra loro due H occorre legarli in uno stato eccitato, e poi diseccitare il sistema irradiando energia. Ma H₂ <strong>non ha momento di dipolo</strong>, quindi non irradia!</p>
+<p>Per produrre H₂ occorre dapprima che si formi H⁻: <span class="math display">
+\begin{aligned}
+  \text{H} + e^- &amp;\rightarrow \text{H}^- + h\nu, \\
+  \text{H}^- + H &amp;\rightarrow \text{H}_2 + e^- + \text{energia cinetica}
+\end{aligned}
+</span> Ma è difficile avere H⁻ in una nube: è lento da formare e veloce da distruggere (per urti con protoni, fotoni o altri ioni positivi).</p>
+</section>
+<section id="polvere-e-formazione-di-molecole" class="slide level1">
+<h1>Polvere e formazione di molecole</h1>
+<p>La polvere può fungere da catalizzatore. I nuclei vengono catturati da grani e, dopo un random-walk, si collocano in siti da dove non si spostano più.</p>
+<p>Così è più facile far regire tra loro nuclei. Per produrre H₂, l’energia cinetica prodotta è 4.5,eV, sufficiente per espellere la molecola dal grano (e cedergli momento angolare).</p>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="images/molecule_formation_and_dust.png" height="580" />
+</center>
+</section>
+<section id="nubi-molecolari" class="slide level1">
+<h1>Nubi molecolari</h1>
+<p>Nel mezzo ISM si possono osservare nubi composte da molecole. Sono caratterizzate da basse temperature (<span class="math inline">\sim 10\,\text{K}</span>) e alte densità (<span class="math inline">n \sim 10^3\,\text{cm}^{-3}</span>).</p>
+</section>
+<section id="molecole-trovate-nel-ism" class="slide level1">
+<h1>Molecole trovate nel ISM</h1>
+<center>
+<img data-src="images/molecules_in_space_website.png" height="480" />
+</center>
+<p><a href="http://www.astro.uni-koeln.de/cdms/molecules">www.astro.uni-koeln.de/cdms/molecules</a></p>
+</section>
+<section class="slide level1">
+
+<center>
+<img data-src="images/SPIRE_VYCMa.jpg" height="620" />
+</center>
+<p>VY Canis Majoris (stella gigante, <span class="math inline">R \sim 2000\,R_\odot</span>) vista da Herschel</p>
+</section>
+<section id="e-il-caso-di-hii" class="slide level1">
+<h1>E il caso di HII?</h1>
+<ul>
+<li><p>Abbiamo analizzato la presenza nella galassia di idrogeno atomico (HI) e di idrogeno molecolare (H₂).</p></li>
+<li><p>Il caso di HII è altrettanto interessante; lo tratteremo però nel contesto della formazione stellare.</p></li>
+</ul>
+</section>
+<section id="formazione-stellare" class="slide level1">
+<h1>Formazione stellare</h1>
+</section>
+<section id="formazione-stellare-1" class="slide level1">
+<h1>Formazione stellare</h1>
+<p>Determiniamo in quali condizioni una nube di gas possa indurre la formazione di una stella.</p>
+<p>Supponiamo che la nube sia di forma sferica e abbia densità omogenea. In essa sono compresenti gas e polveri. Perché ci sia collasso occorre che il sistema si «de-virializzi»: <span class="math display">
+\begin{aligned}
+  -U &amp;\gtrsim 2 K, \\
+  \frac35 \frac{G M^2}R &amp;\gtrsim 2\frac12\,\frac{M}m k_B T.
+\end{aligned}
+</span></p>
+<aside class="notes">
+<p>Qui si dovrebbe usare il teorema del viriale in una forma più generale, che tenga anche conto della pressione del fluido (v. libro di Draine). Noi usiamo per semplicità l’espressione del viriale ricavata a lezione, dove l’unica forza in gioco è quella di gravità.</p>
+</aside>
+</section>
+<section id="formazione-stellare-2" class="slide level1">
+<h1>Formazione stellare</h1>
+<p>Ma <span class="math inline">M</span> e <span class="math inline">R</span> sono legati alla densità <span class="math inline">\rho</span> della nube (supposta costante): <span class="math display">
+M = \frac43 \pi R^3 \rho,
+</span> quindi <span class="math display">
+R &gt; \sqrt{\frac{15 k_B T}{4\pi G m \rho}} \equiv R_J&#39;.
+</span></p>
+<p>(Usiamo la notazione <span class="math inline">R_J&#39;</span> perché tra poco deriveremo il vero valore di <span class="math inline">R_J</span> ricavato da Jeans).</p>
+</section>
+<section id="formazione-stellare-3" class="slide level1">
+<h1>Formazione stellare</h1>
+<p>Il calcolo precedente è abbastanza diverso da quello affrontato da James Jeans (1877–1946), che non ha usato il teorema del viriale.</p>
+<p>Rifaremo ora i suoi calcoli, ed evidenzieremo anche un problema logico nella sua trattazione. Introdurremo innanzitutto le equazioni dei fluidi.</p>
+</section>
+<section id="fisica-dei-fluidi" class="slide level1">
+<h1>Fisica dei fluidi</h1>
+<center>
+<img data-src="images/fluid_equations_reference_frame.png" height="360" />
+</center>
+<ul>
+<li>Nel punto di vista di <strong>Lagrange</strong> descriviamo la traiettoria della particella (analogamente alle leggi di Newton).</li>
+<li>Nel punto di vista di <strong>Eulero</strong> (il più comodo) ci concentriamo sui punti dello spazio.</li>
+</ul>
+</section>
+<section id="dallequazione-di-newton-alla-conservazione-del-momento" class="slide level1">
+<h1>Dall’equazione di Newton alla conservazione del momento</h1>
+<p>Siccome sappiamo descrivere il moto delle particelle usando la fisica di Newton, partiamo dal punto di vista Lagrangiano: <span class="math display">
+\vec{F}_p = m\,\vec{a}_p = m\,\dot{\vec{v}}_p,
+</span> ed esprimiamo <span class="math inline">\vec{v}_p</span> in termini delle quantità Euleriane: <span class="math display">
+\vec{v}_p(t) = \vec{v}\bigl(\vec{u}_p(t), t\bigr).
+</span></p>
+</section>
+<section class="slide level1">
+
+<p>Calcolando la derivata del prodotto, si ottiene <span class="math display">
+\begin{aligned}
+  \dot{\vec{v}}_p &amp;=
+  \frac{\text{d}}{\text{d}t}\vec{v}\bigl(\vec{u}_p(t), t\bigr) \\
+  &amp;= \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v},
+\end{aligned}
+</span> dove usiamo il fatto che <span class="math inline">\partial_t \vec{u}_p(t) = \vec{v}_p(t) = \vec{v}\bigl(\vec{u}_p(t), t\bigr)</span> e la scrittura <span class="math display">
+(\vec{v} \cdot \vec\nabla) \vec{v} = 
+\begin{pmatrix}
+  v_x \partial_x v_x + v_y \partial_y v_x + v_z \partial_z v_x \\
+  v_x \partial_x v_y + v_y \partial_y v_y + v_z \partial_z v_y \\
+  v_x \partial_x v_z + v_y \partial_y v_z + v_z \partial_z v_z
+\end{pmatrix}.
+</span></p>
+</section>
+<section class="slide level1">
+
+<p>L’equazione <span class="math display">
+\dot{\vec{v}}_p = \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v}
+</span> («derivata materiale») dice che la variazione della velocità di una particella del fluido può essere causata da:</p>
+<ol>
+<li>una variazione temporale del campo <span class="math inline">\vec{v}</span> nel cubetto (termine <span class="math inline">\partial_t\vec{v}</span>);</li>
+<li>una differenza di velocità tra il cubetto in cui si trova la particella al tempo <span class="math inline">t</span> e quello in cui è «saltata» al tempo <span class="math inline">t + \text{d}t</span> (termine <span class="math inline">(\vec{v} \cdot \vec\nabla) \vec{v}</span>).</li>
+</ol>
+</section>
+<section class="slide level1">
+
+<p>Trasformiamo ora l’equazione di Newton in modo che compaiano le quantità Euleriane <span class="math inline">\rho</span> e <span class="math inline">\vec{v}</span>, ma passando dall’equazione che descrive <em>una</em> particella a quella che descrive <span class="math inline">N</span> particelle.</p>
+<p>Sommiamo quindi le equazioni di Newton di ciascuna delle N particelle in un cubetto: <span class="math display">
+    \sum_{i=1}^N \vec{F}_p^{(i)} = \sum_{i=1}^N m^{(i)} \bigl(\partial_t\vec{v} + 
+  (\vec{v} \cdot \vec\nabla) \vec{v}\bigr)
+</span> (il termine tra parentesi non dipende da <span class="math inline">i</span>).</p>
+</section>
+<section class="slide level1">
+
+<p>Se assumiamo che le masse <span class="math inline">m^{(i)}</span> delle particelle siano tutte identiche, allora <span class="math display">
+\begin{aligned}
+  \sum_{i=1}^N \vec{F}_p^{(i)} &amp;= \left(\sum_{i=1}^N m^{(i)}\right) \bigl(\partial_t\vec{v} + 
+  (\vec{v} \cdot \vec\nabla) \vec{v}\bigr), \\
+  \vec{F}_\text{tot} &amp;= \rho\,\text{d} V \bigl(\partial_t\vec{v} + 
+  (\vec{v} \cdot \vec\nabla) \vec{v}\bigr)
+\end{aligned}
+</span> con <span class="math inline">\text{d}V</span> volume del cubetto.</p>
+</section>
+<section class="slide level1">
+
+<p>Dobbiamo ora ricavare un’espressione per il termine <span class="math inline">\vec{F}_p</span>. Nel contesto del collasso di una nube, ci sono due componenti:</p>
+<ol>
+<li>Forze di pressione;</li>
+<li>Forze gravitazionali.</li>
+</ol>
+<p>(Sono le medesime forze che abbiamo considerato nella derivazione dell’equazione del viriale <span class="math inline">U = -2K</span>). Affrontiamole separatamente.</p>
+</section>
+<section id="forze-di-pressione" class="slide level1">
+<h1>Forze di pressione</h1>
+<center>
+<img data-src="images/fluids-momentum-conservation.png" height="240" />
+</center>
+<p>Consideriamo solo la forza <span class="math inline">F_\text{pressione}</span> esercitata sul cubetto lungo la direzione <span class="math inline">x</span>. Se le forze sono normali alle facce (fluido perfetto), allora <span class="math display">
+\begin{aligned}
+  F_\text{pressione} &amp;= \bigl(p(x) - p(x + \text{d}x)\bigr)\,\text{d}A \\
+  &amp;= -\partial_x p(x)\,\text{d}x\,\text{d}A = -\partial_x p(x)\,\text{d}V.
+\end{aligned}
+</span></p>
+<aside class="notes">
+<p>Se il fluido non è perfetto, al posto del gradiente di uno scalare c’è la divergenza di un tensore. Questo viene usato ad esempio per studiare la propagazione di onde sismiche (si considera la crosta terrestre come un fluido ad altissima viscosità), vedi il libro di Sabadini.</p>
+</aside>
+</section>
+<section id="forze-di-pressione-1" class="slide level1">
+<h1>Forze di pressione</h1>
+<p>Se ora consideriamo il moto in tre dimensioni anziché solo lungo l’asse <span class="math inline">x</span>, il risultato si generalizza banalmente: <span class="math display">
+\vec{F}_\text{pressione} = -\vec\nabla p\,\text{d}V.
+</span></p>
+</section>
+<section id="forza-di-gravità" class="slide level1">
+<h1>Forza di gravità</h1>
+<p>Nel caso della gravità, è facile esprimere la forza in termini del potenziale <span class="math inline">\phi</span>: <span class="math display">
+\vec{F}_\text{grav} = -m\,\vec\nabla\phi,
+</span> dove (legge di Poisson) <span class="math display">
+\nabla^2 \phi = 4\pi G \rho
+</span> ed ovviamente <span class="math inline">m = \rho\,\text{d}V</span>.</p>
+</section>
+<section id="conservazione-del-momento" class="slide level1">
+<h1>Conservazione del momento</h1>
+<p>L’equazione di conservazione del momento nel caso di una nube è quindi <span class="math display">
+\begin{aligned}
+  \rho\,\text{d}V\,\bigl(\partial_t\vec{v} + (\vec{v} \cdot
+  \vec\nabla) \vec{v}\bigr) &amp;= \vec{F}_\text{pressione} +
+  \vec{F}_\text{grav} = \\
+  &amp;= -\vec\nabla p\,\text{d}V - \vec\nabla\phi\,\rho\,\text{d}V,
+\end{aligned}
+</span> che si riscrive come il sistema di 3 equazioni <span class="math display">
+\partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v} = 
+-\frac{\vec\nabla p}\rho - \vec\nabla\phi
+</span> (caso particolare delle <em>equazioni di Navier-Stokes</em>).</p>
+</section>
+<section id="altre-equazioni" class="slide level1">
+<h1>Altre equazioni</h1>
+<p>Con l’equazione vettoriale precedente e la legge di Gauss abbiamo 4 equazioni ma 6 incognite (<span class="math inline">v_x</span>, <span class="math inline">v_y</span>, <span class="math inline">v_z</span>, <span class="math inline">p</span>, <span class="math inline">\rho</span>, <span class="math inline">\phi</span>).</p>
+<p>Usiamo anche l’equazione di conservazione della massa: <span class="math display">
+\dot\rho + \vec{\nabla}\bigl(\rho\,\vec{v}\bigr) = 0
+</span> e la relazione tra pressione e densità <span class="math display">
+p = \rho c_S^2,
+</span> dove <span class="math inline">c_S</span> è la velocità del suono (approssimazione di piccole oscillazioni e isotermia).</p>
+</section>
+<section id="esercizi" class="slide level1">
+<h1>Esercizi</h1>
+<p>Ricavate un’espressione per la pressione <span class="math inline">p(h)</span> dell’acqua del mare in funzione della profondità <span class="math inline">h</span>. Supponete che il mare sia in quiete, che <span class="math inline">\rho</span> sia costante, e che la forza di gravità sia <span class="math inline">F = m g</span>.</p>
+<p>Che pressione stimate ci sia sul fondo della fossa delle Marianne (<span class="math inline">h = 11\,\text{km}</span>)? (Il valore misurato è <span class="math inline">\sim 1\,000\,\text{bar}</span>).</p>
+<aside class="notes">
+<p>L’esercizio si risolve imponendo <span class="math inline">\vec v = 0</span> nella prima equazione, imponendo <span class="math inline">\phi = gy</span> e scrivendo i gradienti come derivate monodimensionali in <span class="math inline">y</span>.</p>
+</aside>
+</section>
+<section id="esercizi-1" class="slide level1">
+<h1>Esercizi</h1>
+<p>Fate lo stesso nel caso dell’atmosfera. In questo caso non si può più considerare <span class="math inline">\rho</span> costante: usate la relazione <span class="math inline">p = c_S^2 \rho</span>. Dovreste ottenere il risultato <span class="math display">
+p(h) = p_0 \exp(-h/h_0),
+</span> se <span class="math inline">h</span> cresce con l’altezza.</p>
+<p>Che valore stimate per <span class="math inline">h_0</span> nel caso dell’atmosfera terrestre?</p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: true,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+       // Parallax background image
+       parallaxBackgroundImage: './images/background.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1440,
+
+        height: 810,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script src="js/asciinema-player.js"></script>
+    </body>
+</html>
