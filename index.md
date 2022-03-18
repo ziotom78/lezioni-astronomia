@@ -9,3 +9,6 @@
 - 2021-10-28: [Lezione 2](tomasi-astro1-lezione-02.html) (sistemi binari)
 
 # Astronomia II
+
+- 2022-03-24: [Lezione 1](tomasi-astro2-lezione-01.html) (sistemi stellari 1).
+- 2022-03-25: [Lezione 2](tomasi-astro2-lezione-02.html) (sistemi stellari 2).
