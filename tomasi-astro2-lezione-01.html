@@ -230,7 +230,7 @@
 <section id="definizione-di-viriale" class="slide level1">
 <h1>Definizione di «viriale»</h1>
 <ul>
-<li>Si dice «viriale» la quantità <span class="math display">
+<li>Si dice «viriale» la quantità (dipendente dal sistema di riferimento) <span class="math display">
 G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
 </span></li>
 <li>Nel caso in cui le particelle si trovino in un volume limitato <span class="math inline">V</span>, esso gode di due proprietà:
@@ -260,8 +260,7 @@ G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
     G(t)\,\text{d}t\right| \\
   &amp;= \left|\lim_{\tau\rightarrow\infty} \frac{G(\tau) -
       G(0)}\tau\right| \\
-  &amp;\leq \lim_{\tau\rightarrow\infty} \frac{2 N R P}\tau \\
-  &amp;= 0.
+  &amp;\leq \lim_{\tau\rightarrow\infty} \frac{2 N R P}\tau = 0.
 \end{aligned}
 </span></li>
 <li>Dopo un certo <em>tempo di rilassamento</em>, <span class="math inline">G</span> diventa circa costante.</li>
@@ -289,11 +288,11 @@ G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
 </section>
 <section id="caso-di-forze-centrali" class="slide level1">
 <h1>Caso di forze centrali</h1>
-<p>Dimostriamo ora che per forze con potenziale <span class="math inline">U_i = k r_i^\alpha</span> («forze centrali») il teorema del viriale si riduce a: <span class="math display">
+<p>Dimostriamo ora che per forze con potenziale <span class="math inline">U_i = k r_i^\alpha</span> («forze centrali») in sistemi sferici il teorema del viriale si riduce a: <span class="math display">
 \alpha \left&lt;U\right&gt;_t = 2\left&lt; K \right&gt;_t,
 </span> dove <span class="math inline">U = \sum_{i=1}^N U_i</span> è l’energia potenziale totale.</p>
 <center>
-<img data-src="images/virial-coordinate-system.png" />
+<img data-src="images/virial-coordinate-system.png" height="300" />
 </center>
 </section>
 <section class="slide level1">
@@ -319,22 +318,20 @@ G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
 <p>In un sistema di corpi di massa <span class="math inline">m</span> dove l’unica forza è quella gravitazionale, <span class="math inline">U = k r^{-1}</span> (con <span class="math inline">k = -G m^2</span>), e quindi <span class="math inline">\alpha = -1</span>: <span class="math display">
   \left&lt;U\right&gt;_t = -2\left&lt; K \right&gt;_t.
 </span></p>
-<p>In un sistema virializzato dominato dalla gravità, l’energia potenziale è  (in modulo) rispetto all’energia cinetica.</p>
+<p>In un sistema virializzato dominato dalla gravità, l’energia potenziale è  (in modulo) doppia rispetto all’energia cinetica.</p>
 </section>
 <section id="livello-di-energia-potenziale" class="slide level1">
 <h1>Livello di energia potenziale</h1>
 <ul>
 <li>Ricordate che l’energia potenziale è definita a meno di una costante additiva (deriva da un integrale indefinito).</li>
-<li>Il teorema del viriale assume però una costante ben precisa per <span class="math inline">U_{ij}</span>: siccome abbiamo supposto che <span class="math display">
-U_{ij} = -\frac{G m^2}{\left|\vec r_i - \vec r_j\right|},
-</span> significa che assumiamo che l’energia potenziale di <span class="math inline">i</span> e <span class="math inline">j</span> tenda a zero se le due particelle vengono allontanate indefinitamente.</li>
+<li>Il teorema del viriale assume però una costante ben precisa per <span class="math inline">U</span>: siccome abbiamo supposto che <span class="math inline">U = k r^{-1}</span>, significa che assumiamo che l’energia potenziale di <span class="math inline">i</span> e <span class="math inline">j</span> tenda a zero se le due particelle vengono allontanate indefinitamente.</li>
 </ul>
 </section>
 <section id="applicazioni-del-teorema-12" class="slide level1">
 <h1>Applicazioni del teorema (1/2)</h1>
 <ul>
 <li>Come esempio, stimiamo la temperatura media del Sole usando il teorema del viriale.</li>
-<li>Il Sole è un sistema di volume limitato, sicuramente rilassato, quindi il teorema è applicabile.</li>
+<li>Il Sole è un sistema di volume sferico limitato, sicuramente rilassato, quindi il teorema è applicabile.</li>
 </ul>
 </section>
 <section id="applicazioni-del-teorema-12-1" class="slide level1">
@@ -343,7 +340,7 @@ U_{ij} = -\frac{G m^2}{\left|\vec r_i - \vec r_j\right|},
 U = \frac35 G \frac{M^2}R,
 </span> mentre l’energia cinetica totale è <span class="math display">
 K = \sum_{i=1}^N \frac32 k T
-</span> (assumiamo per semplicità che <strong>tutte</strong> le <span class="math inline">N = 10^{57}</span> particelle siano alla stessa temperatura <span class="math inline">T</span>).</p>
+</span> (assumiamo che la temperatura sia costante nell’interno).</p>
 </section>
 <section id="applicazioni-del-teorema-12-2" class="slide level1">
 <h1>Applicazioni del teorema (1/2)</h1>
@@ -367,7 +364,7 @@ T = \frac15 \frac{G M_\odot^2}{N k R_\odot} \sim 10^6 \div 10^7\,\text{K}.
 <li>L’energia cinetica media classica <span class="math inline">p^2/(2m)</span> è stimabile dal principio di indeterminazione: <span class="math display">
 \Delta p_x \Delta x \sim \frac\hbar2.
 </span></li>
-<li>Siccome <span class="math inline">p^2 = p_x^2 + p_y^2 + p_z^2 \approx 3 p_x^2</span>, allora <span class="math display">
+<li>Siccome <span class="math inline">p^2 = p_x^2 + p_y^2 + p_z^2 \approx 3 p_x^2 \approx 3 \hbar^2/4 R^2</span>, allora <span class="math display">
 K \approx A \frac{p^2}{2 m_p} \approx A \frac{3 \hbar^2}{8 R^2 m_p} \sim A \frac{\hbar^2}{R^2 m_p}.
 </span></li>
 </ul>

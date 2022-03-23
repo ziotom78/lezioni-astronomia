@@ -109,7 +109,7 @@ usare la termodinamica classica per descriverli?
 
 # Definizione di «viriale»
 
--   Si dice «viriale» la quantità
+-   Si dice «viriale» la quantità (dipendente dal sistema di riferimento)
     \[
     G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
     \]
@@ -138,8 +138,7 @@ usare la termodinamica classica per descriverli?
         G(t)\,\text{d}t\right| \\
       &= \left|\lim_{\tau\rightarrow\infty} \frac{G(\tau) -
           G(0)}\tau\right| \\
-      &\leq \lim_{\tau\rightarrow\infty} \frac{2 N R P}\tau \\
-      &= 0.
+      &\leq \lim_{\tau\rightarrow\infty} \frac{2 N R P}\tau = 0.
     \end{aligned}
     \]
 -   Dopo un certo *tempo di rilassamento*, $G$ diventa circa costante.
@@ -174,13 +173,13 @@ la tesi:
 # Caso di forze centrali
 
 Dimostriamo ora che per forze con potenziale $U_i = k r_i^\alpha$
-(«forze centrali») il teorema del viriale si riduce a:
+(«forze centrali») in sistemi sferici il teorema del viriale si riduce a:
 \[
 \alpha \left<U\right>_t = 2\left< K \right>_t,
 \]
 dove $U = \sum_{i=1}^N U_i$ è l'energia potenziale totale.
 
-<center>![](images/virial-coordinate-system.png)</center>
+<center>![](images/virial-coordinate-system.png){height=300px}</center>
 
 ---
 
@@ -205,33 +204,24 @@ implica che
 
 # Il viriale in sistemi gravitazionali
 
-In un sistema di corpi di massa $m$ dove l'unica forza è quella
-gravitazionale, $U = k r^{-1}$ (con $k = -G m^2$), e quindi
-$\alpha = -1$:
+In un sistema di corpi di massa $m$ dove l'unica forza è quella gravitazionale, $U = k r^{-1}$ (con $k = -G m^2$), e quindi $\alpha = -1$:
 \[
   \left<U\right>_t = -2\left< K \right>_t.
 \]
 
-In un sistema virializzato dominato dalla gravità, l'energia
-potenziale è \alert{doppia} (in modulo) rispetto all'energia
-cinetica.
+In un sistema virializzato dominato dalla gravità, l'energia potenziale è \alert{doppia} (in modulo) doppia rispetto all'energia cinetica.
 
 
 # Livello di energia potenziale
 
 -   Ricordate che l'energia potenziale è definita a meno di una costante additiva (deriva da un integrale indefinito).
--   Il teorema del viriale assume però una costante ben precisa per $U_{ij}$: siccome abbiamo supposto che
-    \[
-    U_{ij} = -\frac{G m^2}{\left|\vec r_i - \vec r_j\right|},
-    \]
-    significa che assumiamo che l'energia potenziale di $i$ e $j$ tenda
-    a zero se le due particelle vengono allontanate indefinitamente.
+-   Il teorema del viriale assume però una costante ben precisa per $U$: siccome abbiamo supposto che $U = k r^{-1}$, significa che assumiamo che l'energia potenziale di $i$ e $j$ tenda a zero se le due particelle vengono allontanate indefinitamente.
 
 
 # Applicazioni del teorema (1/2)
 
 -   Come esempio, stimiamo la temperatura media del Sole usando il teorema del viriale.
--   Il Sole è un sistema di volume limitato, sicuramente rilassato, quindi il teorema è applicabile.
+-   Il Sole è un sistema di volume sferico limitato, sicuramente rilassato, quindi il teorema è applicabile.
 
 # Applicazioni del teorema (1/2)
 
@@ -243,8 +233,7 @@ mentre l'energia cinetica totale è
 \[
 K = \sum_{i=1}^N \frac32 k T
 \]
-(assumiamo per semplicità che **tutte** le $N = 10^{57}$
-particelle siano alla stessa temperatura $T$).
+(assumiamo che la temperatura sia costante nell'interno).
 
 
 # Applicazioni del teorema (1/2)
@@ -272,7 +261,7 @@ Essa corrisponde circa alla temperatura del nucleo.
     \[
     \Delta p_x \Delta x \sim \frac\hbar2.
     \]
--   Siccome $p^2 = p_x^2 + p_y^2 + p_z^2 \approx 3 p_x^2$, allora
+-   Siccome $p^2 = p_x^2 + p_y^2 + p_z^2 \approx 3 p_x^2 \approx 3 \hbar^2/4 R^2$, allora
     \[
     K \approx A \frac{p^2}{2 m_p} \approx A \frac{3 \hbar^2}{8 R^2 m_p} \sim A \frac{\hbar^2}{R^2 m_p}.
     \]
