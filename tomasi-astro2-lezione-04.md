@@ -73,7 +73,7 @@ Esistono due tipi di grani di polvere:
 
 -   La polarizzazione della luce stellare sul piano galattico ha il campo $\vec E$ **parallelo** al piano.
 
--   Se supponiamo che le stelle del piano emettano luce non polarizzata, questo vuol dire che i grani di polvere assorbono preferenzialmente la polarizzazione \alert{perpendicolare} al piano galattico.
+-   Se supponiamo che le stelle del piano emettano luce non polarizzata, questo vuol dire che i grani di polvere assorbono preferenzialmente la polarizzazione perpendicolare al piano galattico.
 
 -   La forma più probabile dei grani è un ellissoide. In questo modo gli elettroni sono liberi di rispondere al campo $\vec E$ esterno più in alcune direzioni che in altre.
 

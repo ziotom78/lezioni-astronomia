@@ -9,7 +9,7 @@ css:
 
 # Tempo di rilassamento
 
--   Nel calcolo di ieri (tempo di rilassamento di un ammasso globulare) avevamo considerato solo le interazioni a \alert{corto} raggio, mentre sono rilevanti anche gli scambi energetici a distanza.
+-   Nel calcolo di ieri (tempo di rilassamento di un ammasso globulare) avevamo considerato solo le interazioni a *corto* raggio, mentre sono rilevanti anche gli scambi energetici a distanza.
 
 -   Nello specifico, avevamo supposto che si abbia interazione quando la distanza tra due stelle sia inferiore al raggio collisionale $r_c$ dato da
     \[
@@ -35,10 +35,7 @@ css:
 
 # Tempo di rilassamento
 
-Il problema è che noi abbiamo considerato solo le interazioni a
-\alert{corto} raggio, ma il conto precedente ci dice che sono
-rarissime, perché la distanza media tra le stelle è $10^4$ volte
-maggiore del raggio collisionale.
+Il problema è che noi abbiamo considerato solo le interazioni a corto raggio, ma il conto precedente ci dice che sono rarissime, perché la distanza media tra le stelle è 10⁴ volte maggiore del raggio collisionale.
 
 <center>![](images/cross-section.png)</center>
 
@@ -68,7 +65,7 @@ soprattutto dalle interazioni a lungo raggio:
 
 # Interazioni a lungo raggio
 
--   A noi non interessa però caratterizzare la direzione di $\Delta v_\perp$, solo capire l'ordine di grandezza della velocità $\Delta v_\perp$. La quantità più indicata è il \alert{valore quadratico medio} $\left< \Delta v_\perp^2 \right>$.
+-   A noi non interessa però caratterizzare la direzione di $\Delta v_\perp$, solo capire l'ordine di grandezza della velocità $\Delta v_\perp$. La quantità più indicata è il *valore quadratico medio* $\left< \Delta v_\perp^2 \right>$.
 -   Esso ha le seguenti proprietà:
     #.  È legato alla quantità di energia che acquista la stella a causa delle interazioni a lungo raggio (perché $K \propto v^2$);
     #.  Aumenta col passare del tempo;

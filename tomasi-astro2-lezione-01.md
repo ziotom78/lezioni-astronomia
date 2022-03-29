@@ -209,7 +209,7 @@ In un sistema di corpi di massa $m$ dove l'unica forza è quella gravitazionale,
   \left<U\right>_t = -2\left< K \right>_t.
 \]
 
-In un sistema virializzato dominato dalla gravità, l'energia potenziale è \alert{doppia} (in modulo) doppia rispetto all'energia cinetica.
+In un sistema virializzato dominato dalla gravità, l'energia potenziale è *doppia* (in modulo) rispetto all'energia cinetica.
 
 
 # Livello di energia potenziale
@@ -426,7 +426,7 @@ Questo valore della massa è detto **massa viriale**.
 
 -   Veniamo ora al tempo necessario perché un ammasso diventi dinamicamente rilassato.
 
--   Inizialmente le stelle di un ammasso possono \alert{non} essere rilassate: in tal caso le più veloci ($v > v_f$) escono dall'ammasso, e questa «evaporazione» cambia la distribuzione delle $v$.
+-   Inizialmente le stelle di un ammasso possono *non* essere rilassate: in tal caso le più veloci ($v > v_f$) escono dall'ammasso, e questa «evaporazione» cambia la distribuzione delle $v$.
 
 -   In più, le interazioni gravitazionali provocano una ridistribuzione dell'energia, che porta l'ammasso verso lo stato rilassato.
 
