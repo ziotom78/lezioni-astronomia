@@ -35,7 +35,7 @@ circa $\sim 1$ pc («globuli» e «nubi»).
 
 Ci sono due motivi per cui ISM è interessante:
 
-#.  Contiene una parte importante della massa della Galassia;
+#.  Contiene una parte importante della massa della Galassia ($10^{10}\,M_\odot$);
 #.  È un luogo di formazione stellare:
     \[
       \begin{aligned}
@@ -184,15 +184,14 @@ L'estinzione dipende dalla lunghezza d'onda: $A = A(\lambda)$.
 
 # Estinzione in funzione di $\lambda$
 
-Intorno al visibile, l'estinzione è più intensa se $\lambda$ è
-piccola (luce blu).
+-   Intorno al visibile, l'estinzione è più intensa se $\lambda$ è piccola (luce blu).
+
+-   Questo comporta che il numero di stelle osservate aumenta nell'IR.
+
+-   Inoltre, le stelle appaiono più rosse (*stellar reddening*). Vediamo come si quantifica l'impatto dell'arrossamento sull'osservazione del flusso di una stella.
 
 
-Questo comporta che il numero di stelle osservate aumenta nell'IR.
-Inoltre, le stelle appaiono più rosse (*stellar reddening*).
-
-
-# Estinzione in funzione di $\lambda$
+# Eccesso di colore
 
 Misuriamo l'indice di colore in due filtri, es.\ B e V:
 \[
@@ -209,41 +208,53 @@ m_V - m_B = (M_V - M_B) + (A_V - A_B).
 
 ---
 
+# Eccesso di colore
+
 \[
 m_V - m_B = (M_V - M_B) + (A_V - A_B).
 \]
 
 - Il valore $m_V - m_B$ è misurato direttamente.
 - Il valore $M_V - M_B$ si stima dal tipo spettrale (le righe non sono influenzate dall'estinzione).
-- Il valore $A_V - A_B$ si può quindi ricavare facilmente.
+- Il valore $A_V - A_B$ si può quindi ricavare facilmente, ed è chiamato **eccesso di colore**, o **arrossamento** («reddening», vedi Draine, *Physics of the interstellar and galactic medium*, pag. 238).
 
 
-# Estinzione
+# Assorbimento e diffusione
 
-Si definisce **eccesso di colore** (o *arrossamento*) di una sorgente la quantità
-\[
-\begin{aligned}
-  E(B - V) &= (m_B - m_V)_\text{osservato} - (M_B - M_V)_\text{intrinseco} =\\
-  &= A_V - A_B.
-\end{aligned}
-\]
+-   L'estinzione è l'effetto combinato di assorbimento e diffusione. La loro importanza relativa dipende dalle proprietà fisiche dei grani e da $\lambda$.
 
-(Vedi Draine, *Physics of the interstellar and galactic medium*, pag. 238).
+-   Si definisce *albedo* $a_{\lambda,\text{diff}}$ la frazione dell'estinzione dovuta alla diffusione:
+    \[
+    b(L) = b_0 \exp(-\tau) = b_0 \exp\bigl(-\tau (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
+    \]
+    con
+    \[
+    a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1.
+    \]
+
+# Nebulose a riflessione
+
+Nelle **nebulose a riflessione** («reflection nebulae») si ha $a_{\lambda,\text{diff}} \sim 60\,\%$, e c'è una stella brillante nelle loro vicinanze (con spettro molto simile).
+
+<center>![](images/m78.jpg){height=400px}</center>
+
+<small>M78 (costellazione di Orione)</small>
 
 
 # Fisica dell'estinzione
 
-Ricordiamo la definizione di A:
-\[
-A = 2.5\log_{10} e^\tau \approx \tau.
-\]
-Il valore $\tau$ («coefficiente di estinzione) è uguale a
-\[
-\tau = \sigma n L,
-\]
-dove $L$ è lo spessore della nube, $n$ la densità numerica, e
-$\sigma$ la sezione d'urto totale (assorbimento e diffusione),
-nell'ipotesi che $\sigma$ sia piccola.
+# Fisica dell'estinzione
+
+-   Ricordiamo la definizione di A:
+    \[
+    A = 2.5\log_{10} e^\tau \approx \tau.
+    \]
+
+-   Il valore $\tau$ («coefficiente di estinzione) è uguale a
+    \[
+    \tau = \sigma n L,
+    \]
+    dove $L$ è lo spessore della nube, $n$ la densità numerica, e $\sigma$ la sezione d'urto totale (assorbimento e diffusione), nell'ipotesi che $\sigma$ sia piccola: quest'ultimo è il parametro che rivela la natura dell'estinzione!
 
 
 # Fisica dell'estinzione
@@ -262,17 +273,14 @@ nell'ipotesi che $\sigma$ sia piccola.
 
 # Fisica dell'estinzione
 
-Se $A \propto N_\text{col}$, ciò vuol dire che osservare nubi di
-polvere di diverse dimensioni/densità porta a valori diversi di $A$,
-anche se $\sigma$ è la stessa.
+-   Se $A \propto N_\text{col}$, ciò vuol dire che osservare nubi di polvere di diverse dimensioni/densità porta a valori diversi di $A$, anche se $\sigma$ è la stessa.
 
-Se si vuole studiare la dipendenza dell'estinzione da $\lambda$, si
-usa la quantità (numero puro)
-\[
-f(\lambda) \equiv \frac{A(\lambda)}{A_V},
-\]
-perché in questo modo la dipendenza dalla densità colonnare
-scompare: $f(\lambda) \approx \sigma(\lambda) / \sigma_V$.
+-   Se si vuole studiare la dipendenza dell'estinzione da $\lambda$, si usa la quantità (numero puro)
+    \[
+    f(\lambda) \equiv \frac{A(\lambda)}{A_V},
+    \]
+
+    perché in questo modo la dipendenza dalla densità colonnare scompare: $f(\lambda) \approx \sigma(\lambda) / \sigma_V$.
 
 
 # Fisica dell'estinzione
@@ -299,14 +307,13 @@ ricavabile stimando $A_V$ dai conteggi di stelle per $A_V$ e $E(B - V)$ dagli in
 Il valore $R_V \approx 3.1$ è tipico, ma come $f(\lambda)$ può mostrare variazioni significative a seconda della regione osservata.
 
 
-# Uso di $R_V$ e $f(\lambda)$
+---
 
-<center>![](images/1989Cardelli-title.png){height=500px}</center>
+<center>![](images/1989Cardelli-title.png){height=660px}</center>
 
+---
 
-# Estinzione in funzione di $\lambda$
-
-<center>![](images/cardelli-extinction-curve.png){height=500px}</center>
+<center>![](images/cardelli-extinction-curve.png){height=660px}</center>
 
 
 # Estinzione in funzione di $\lambda$

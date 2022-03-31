@@ -6,28 +6,6 @@ css:
 - ./css/custom.css
 ...
 
-# Assorbimento e diffusione
-
--   L'estinzione è l'effetto combinato di assorbimento e diffusione. La loro importanza relativa dipende dalle proprietà fisiche dei grani e da $\lambda$.
-
--   Si definisce *albedo* $a_{\lambda,\text{diff}}$ la frazione dell'estinzione dovuta alla diffusione:
-    \[
-    b(L) = b_0 \exp(-\tau) = b_0 \exp\bigl(-\tau (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
-    \]
-    con
-    \[
-    a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1.
-    \]
-
-
-# Nebulose a riflessione
-
-Nelle **nebulose a riflessione** («reflection nebulae») si ha $a_{\lambda,\text{diff}} \sim 60\,\%$, e c'è una stella brillante nelle loro vicinanze (con spettro molto simile).
-
-<center>![](images/m78.jpg){height=400px}</center>
-
-<small>M78 (costellazione di Orione)</small>
-
 # La polvere nel mezzo interstellare
 
 # Polvere nel ISM
