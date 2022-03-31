@@ -358,3 +358,43 @@ qual è il valore di $A_V$ e la sua distanza? (Supporre che $R = 3.1$).
 <center>![](images/gordon-plot.png){height=500px}</center>
 
 Notare che sull'asse $x$ c'è $1/\lambda$ anziché $\lambda$: perché?
+
+# La polvere nel mezzo interstellare
+
+# Polvere nel ISM
+
+Ci chiediamo: qual è la dimensione tipica $r_g$ dei grani di polvere?
+
+-   Se $r_g \gg \lambda$, vale l'ottica geometrica, e $A(\lambda)$ è costante;
+-   Se $r_g \ll \lambda$, allora $\sigma \sim 0$ e dunque $A(\lambda)$ è piccolo e costante;
+-   Se $r_g \sim \lambda$, allora la diffrazione è importante, e $A(\lambda)$ dipende fortemente da $\lambda$.
+
+
+# Polvere nel ISM: dimensione dei grani
+
+Esistono due tipi di grani di polvere:
+
+#.  Grani grossi (µm–mm) generano uno spettro IR. Si osservano strutture spettrali a ~1÷10 µm, indicative di silicati (SiO, SiO₂) e ghiaccio (H₂O);
+#.  Grani piccoli (1–10 nm) generano estinzione in UV, e sono aggregati di ~100 atomi (idrocarburi, carbonio, grafite).
+
+
+# Polvere nel ISM: composizione
+
+<center>![](images/draine_fig_21_1.png){height=450px}</center>
+
+<small>B.\ Draine, *Physics of the interstellar and galactic medium*, Princeton University Press (2011).</small>
+
+
+# Forma dei grani di polvere
+
+-   Indicazioni sulla forma dei grani vengono da misure di **polarizzazione**.
+
+-   La luce delle stelle che attraversa lo ISM è polarizzata. Si suppone che questo dipenda dalla forma dei grani nel ISM, perché HI, HII ed He hanno simmetria sferica e non possono indurre polarizzazione.
+
+-   La polarizzazione della luce di stelle sul piano galattico è maggiore se tra noi e la stella sono presenti polveri.
+
+---
+
+<center>![](images/harwit-starlight-polarization.png){height=660px}</center>
+
+<small>Harwit, *Astrophysical concepts* (4th edition), pag.\ 426, Springer (2006)</small>
