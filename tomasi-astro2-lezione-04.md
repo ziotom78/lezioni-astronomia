@@ -17,12 +17,20 @@ css:
 
 # Forma dei grani di polvere
 
--   La polarizzazione della luce stellare sul piano galattico ha il campo $\vec E$ **parallelo** al piano.
+-   La luce delle stelle nel disco galattico è preferenzialmente polarizzata **parallelamente** al piano
 
--   Se supponiamo che le stelle del piano emettano luce non polarizzata, questo vuol dire che i grani di polvere assorbono preferenzialmente la polarizzazione perpendicolare al piano galattico.
+-   Ma le stelle nelle vicinanze del Sole non emettono luce così polarizzata come quella che si osserva → è l'ISM che causa la polarizzazione
 
--   La forma più probabile dei grani è un ellissoide. In questo modo gli elettroni sono liberi di rispondere al campo $\vec E$ esterno più in alcune direzioni che in altre.
+-   Questo implica che i grani di polvere devono assorbire più o meno facilmente i fotoni a seconda del loro angolo di polarizzazione
 
+
+# Forma dei grani di polvere
+
+La forma più probabile dei grani è un ellissoide: in questo modo gli elettroni sono liberi di rispondere al campo $\vec E$ esterno più in alcune direzioni che in altre.
+
+<center>![](images/dust-grain-shape.png){height=320px}</center>
+
+La polarizzazione si osserva soprattutto nel visibile, mentre è assente nell'UV (ottica geometrica!)
 
 # Osservazioni sulla polarizzazione
 
@@ -131,7 +139,7 @@ Se la polvere ha raggiunto la temperatura $T_g$ di equilibrio, la potenza emessa
     \]
     mostra che la temperatura della polvere non dipende dalla dimensione dei grani.
 
--   Questa è la temperatura del **singolo** grano di polvere, ma possiamo assumere che all'equilibrio coincida con la temperatura della nube di grani.
+-   Questa è la temperatura del **singolo** grano di polvere, ma possiamo assumere che all'equilibrio coincida con la temperatura della radiazione emessa dall'intera nube di grani.
 
 
 # Temperatura dei grani
@@ -317,11 +325,8 @@ Eppure questo è ciò che si osserva! Tre possibilità:
 
 # Avvertenze
 
--   L'ipotesi che tutta l'energia dell'urto sia convertita in
-    energia rotazionale è un'approssimazione: in realtà si stima che parte dell'energia
-    (10--20\,\%) venga convertita in modi vibrazionali.
-- L'ipotesi che il momento angolare $L$ sia molto maggiore di $h$ consente di usare la fisica classica, dove il momento angolare non è quantizzato: questo è sempre vero, perché i grani più piccoli hanno $L/h \sim
-  70$.}
+-   L'ipotesi che tutta l'energia dell'urto sia convertita in energia rotazionale è un'approssimazione: in realtà si stima che parte dell'energia (10–20 %) venga convertita in modi vibrazionali.
+-   L'ipotesi che il momento angolare $L$ sia molto maggiore di $h$ consente di usare la fisica classica, dove il momento angolare non è quantizzato: questo è sempre vero, perché i grani più piccoli hanno $L/h \sim 70$.
 
 # Grani in rotazione
 
