@@ -19,32 +19,30 @@ assorbimento (nell'ottico) dalle strane proprietà:
 
 # Gas interstellare (ISG)
 
-Non si osserva H insterstellare nel visibile: se $T$ è bassa, non ci sono righe di Balmer!
+-   Non si osserva H insterstellare nel visibile: se $T$ è bassa, non ci sono righe di Balmer!
 
-Gli elementi osservati sono Ca e Na, ma anche molecole: CH, CN,
-CH$^+$. Queste ultime implicano una bassa densità del gas ($n <
-10^3\,\text{cm}^{-3}$) e una bassa temperatura:
+-   Gli elementi osservati sono Ca e Na, ma anche molecole: CH, CN, CH⁺. Queste ultime implicano una bassa densità del gas ($n < 10^3\,\text{cm}^{-3}$) e una bassa temperatura:
 
--   Molecole cariche come CH$^+$ in condizioni di laboratorio si neutralizzano subito;
--   CH e CN sono fortemente reattive.
+    -   Molecole cariche come CH⁺ in condizioni di laboratorio si neutralizzano subito;
+    
+    -   CH e CN sono fortemente reattive.
 
-::: note
+::: notes
 
-Per eccitare una riga di Balmer occorre $\sim$1\,eV, ma le energie in gioco per $T \sim 100$\,K sono 100 volte inferiori.
+Per eccitare una riga di Balmer occorre ~1 eV, ma le energie in gioco per $T \sim 100$ K sono 100 volte inferiori.
 
 :::
 
 
 # HI nel ISG
 
-È lecito aspettarsi che H, anche se non rilevabile nel visibile, sia la componente predominante del ISG. Si può rivelare mediante la misura della riga a 21 cm.
+-   È lecito aspettarsi che H, anche se non rilevabile nel visibile, sia la componente predominante del ISG. Si può rivelare mediante la misura della riga a 21 cm.
 
-Questa riga è generata dalla transizione tra lo stato dell'atomo HI con spin $e$/$p$ paralleli allo stato con spin antiparalleli. I due
-stati hanno una differenza energetica di
-\[
-\Delta E = 5.9\times 10^{-6}\,\text{eV},
-\]
-e la probabilità di transizione è $A = (11\,\text{Myr})^{-1}$.
+-   Questa riga è generata dalla transizione tra lo stato dell'atomo HI con spin $e$/$p$ paralleli allo stato con spin antiparalleli. I due stati hanno una differenza energetica di
+    \[
+    \Delta E = 5.9\times 10^{-6}\,\text{eV},
+    \]
+    e la probabilità di transizione è $A = (11\,\text{Myr})^{-1}$.
 
 
 # HI nel ISG
@@ -84,22 +82,27 @@ S = 0,\quad S_z = 0 \qquad\text{(singoletto)}.
 
 ---
 
-Viste le molteplicità dei due stati, ne segue che se $k_B T \gg \Delta E$, allora
-\[
-\frac{N_\text{tr}}{N_\text{sing}} = \frac{g_\text{tr}}{g_\text{sing}}
-e^{-\Delta E/k_B T} = 3 e^{-\Delta E/k_B T} \approx 3.
-\]
+-   Se il gas è in equilibrio termico, vale la distribuzione di Maxwell tra i due stati:
+    \[
+    \frac{N_\text{tr}}{N_\text{sing}} = \frac{g_\text{tr}}{g_\text{sing}}
+    e^{-\Delta E/k_B T} = 3 e^{-\Delta E/k_B T}.
+    \]
 
-Alle temperature presenti nell'Universo (≥ 2.7 K), per ogni atomo nello stato di singoletto ce ne sono tre in quello di tripletto.
+-   Ma se $k_B T \gg \Delta E$, allora
+    \[
+    \frac{N_\text{tr}}{N_\text{sing}} = 3 e^{-\Delta E/k_B T} \approx 3.
+    \]
+
+-   Alle temperature presenti nell'Universo (≥ 2.7 K), per ogni atomo nello stato di singoletto ce ne sono tre in quello di tripletto.
 
 # Importanza della riga a 21 cm
 
-L'esistenza di questa riga era stata prevista negli anni '40, e fu rivelata il 25 Marzo 1951 dal gruppo di Edwin Purcell (Harvard Univ., Nobel 1953).
+-   L'esistenza di questa riga era stata prevista negli anni '40, e fu rivelata il 25 Marzo 1951 dal gruppo di Edwin Purcell (Harvard Univ., Nobel 1953).
 
-Le caratteristiche della riga sono:
+-   Le caratteristiche della riga sono:
 
-#.  Visibile sia in assorbimento che in emissione;
-#.  Insensibile alla presenza di polvere.
+    #.  Visibile sia in assorbimento che in emissione;
+    #.  Insensibile alla presenza di polvere.
 
 
 # Importanza della riga a 21 cm
@@ -115,12 +118,11 @@ I campi di utilizzo della riga a 21 cm sono disparati:
 
 # Esempio numerico
 
-Supponiamo che una nube di H neutro si trovi a una distanza
-$d = 30\,\text{pc}$. Il flusso a 21 cm in emissione, integrato
-sull'angolo solido, è
+Supponiamo che una nube di H neutro si trovi a una distanza $d = 30\,\text{pc}$. Il flusso a 21 cm in emissione, integrato sull'angolo solido, è
 \[
 f = 4.5\times 10^{-15}\,\text{erg\,cm$^{-2}$\,s$^{-1}$}.
 \]
+
 Qual è la massa dell'idrogeno nella nube?
 
 # Svolgimento esercizio
@@ -167,7 +169,7 @@ distanza dalla Terra era di 80 AU.
 
 ---
 
-<center>![](images/Pioneer10-plaque.jpg)</center>
+<center>![](images/Pioneer10-plaque.jpg){height=700px}</center>
 
 ::: notes
 
@@ -188,13 +190,13 @@ potrebbero non essere visibili tutte.}
 
 # Caratteristiche di HI nel ISM
 
-| Quantità              | Stima                                                       |
-|-----------------------|-------------------------------------------------------------|
-| Temperatura           | 100 K                                                       |
-| Dimensione nubi       | 10÷60 pc                                                    |
-| Densità HI (nube)     | 1÷10 cm⁻³                                                   |
-| Densità HI (Galassia) | 0.1 cm⁻³                                                    |
-| Velocità              | $v_\text{rms} \sim \sqrt{k_B T/m_p} \sim 10^5\,\text{cm/s}$ |
+| Quantità              | Stima                                                      |
+|-----------------------|------------------------------------------------------------|
+| Temperatura           | 100 K                                                      |
+| Dimensione nubi       | 10÷100 pc                                                  |
+| Densità HI (nube)     | 1÷10 cm⁻³                                                  |
+| Densità HI (Galassia) | 0.1 cm⁻³                                                   |
+| Velocità              | $v_\text{rms} \sim \sqrt{k_B T/m_p} \sim 10^3\,\text{m/s}$ |
 
 Il profilo della riga rivela ali molto allargate e deboli: sono piccole quantità di gas molto caldo ($10^4$\,K) e rarefatto che si insinua tra le regioni di HI nel ISM.
 
@@ -208,39 +210,34 @@ Si osserva correlazione tra la densità colonnare di HI (riga 21 cm) e la polve
 La correlazione cessa per alti valori di $A_V$. Perché?
 
 #.  La polvere attenua a 21 cm? No, $n$ insuff.
-#.  Si formano molecole di H₂? Chissà…
+#.  Si formano molecole di H₂?
 
 
 # Gas e polveri
 
-La molecola H₂ è molto difficile da rivelare, perché non emette
-l'equivalente della riga a 21 cm. Inoltre, non ha un dipolo permanente.
+-   La molecola H₂ è molto difficile da rivelare, perché non emette l'equivalente della riga a 21 cm. Inoltre, non ha un dipolo permanente.
 
-Molecole come CO hanno un dipolo permanente, e siccome l'energia
-rotazionale è quantizzata,
-\[
-E_r = \frac{(I\omega)^2}{2I} = \frac{L^2}{2I} = \frac{\hbar^2 J(J+1)}{2I}.
-\]
+-   Molecole come CO hanno un dipolo permanente, e siccome l'energia rotazionale è quantizzata,
+    \[
+    E_r = \frac{(I\omega)^2}{2I} = \frac{L^2}{2I} = \frac{\hbar^2 J(J+1)}{2I}.
+    \]
 
 
 # Gas e polveri
 
-Se si ha dipolo permanente, vale la regola di selezione $\Delta J = -1$. Una transizione tra livelli energetici rot.\ del CO quindi genera righe ($\nu > 115\,$GHz).
+-   Se si ha dipolo permanente, vale la regola di selezione $\Delta J = -1$. Una transizione tra livelli energetici rotazionali del CO quindi genera righe ($\nu > 115\,$GHz).
 
-**Ma ciò non vale per H₂**, che ha solo un debole quadrupolo con regola di selezione $\Delta J = -2$. Questo genera una debole emissione intorno a 10\,$\mu$m (coperta però dalle polveri).
+-   **Ma ciò non vale per H₂**, che ha solo un debole quadrupolo con regola di selezione $\Delta J = -2$.
+
+-   Questo genera una debole emissione intorno a 10 µm, coperta però dalle polveri.
+
+-   È più facile studiare l'emissione di altre molecole, meno abbondanti ma con righe più forti (CO, CH, OH, CS, C₃H₂…).
 
 ::: notes
 
 Si può mostrare brevemente la forma di un quadrupolo, e spiegare perché la distribuzione delle cariche di H₂ ricordi un quadrupolo.
 
 :::
-
-# Monossido di carbonio
-
--   È più facile studiare l'emissione di altre molecole, meno abbondanti ma con righe più forti (CO, CH, OH, CS, C₃H₂…).
-
--   Vedremo in seguito che un caso molto interessante è la molecola CO, che è uno dei traccianti di H₂ più usati.
-
 
 # Gas e polveri
 
@@ -251,27 +248,24 @@ Si può mostrare brevemente la forma di un quadrupolo, e spiegare perché la dis
 
 # Gas e polveri
 
-Per unire tra loro due H occorre legarli in uno stato eccitato, e poi diseccitare il sistema irradiando energia. Ma H₂ **non ha momento di dipolo**, quindi non irradia!
+-   Per unire tra loro due H occorre legarli in uno stato eccitato, e poi diseccitare il sistema irradiando energia. Ma H₂ **non ha momento di dipolo**, quindi non irradia!
 
-Per produrre H₂ occorre dapprima che si formi H⁻:
-\[
-\begin{aligned}
-  \text{H} + e^- &\rightarrow \text{H}^- + h\nu, \\
-  \text{H}^- + H &\rightarrow \text{H}_2 + e^- + \text{energia cinetica}
-\end{aligned}
-\]
-Ma è difficile avere H⁻ in una nube: è lento da formare e veloce da distruggere (per urti con protoni, fotoni o altri ioni positivi).
+-   Per produrre H₂ occorre dapprima che si formi H⁻:
+    \[
+    \begin{aligned}
+      \text{H} + e^- &\rightarrow \text{H}^- + h\nu, \\
+      \text{H}^- + H &\rightarrow \text{H}_2 + e^- + \text{energia cinetica}
+    \end{aligned}
+    \]
+
+-   Ma è difficile avere H⁻ in una nube: è lento da formare e veloce da distruggere (per urti con protoni, fotoni o altri ioni positivi).
 
 
 # Polvere e formazione di molecole
 
-La polvere può fungere da catalizzatore. I nuclei vengono
-catturati da grani e, dopo un random-walk, si collocano in siti da
-dove non si spostano più.
+-   La polvere può fungere da catalizzatore. I nuclei vengono catturati da grani e, dopo un random-walk, si collocano in siti da dove non si spostano più.
 
-Così è più facile far regire tra loro nuclei. Per produrre H₂,
-l'energia cinetica prodotta è 4.5\,eV, sufficiente per espellere
-la molecola dal grano (e cedergli momento angolare\ldots).
+-   Così è più facile far regire tra loro nuclei ed elettroni. Per produrre H₂, l'energia cinetica prodotta è 4.5 eV, sufficiente per espellere la molecola dal grano (e cedergli momento angolare\ldots).
 
 ---
 
@@ -280,9 +274,9 @@ la molecola dal grano (e cedergli momento angolare\ldots).
 
 # Nubi molecolari
 
-Nel mezzo ISM si possono osservare nubi composte da molecole. Sono
-caratterizzate da basse temperature ($\sim 10\,\text{K}$) e alte
-densità ($n \sim 10^3\,\text{cm}^{-3}$).
+-   Nel mezzo ISM si possono osservare nubi composte da molecole.
+
+-   Sono caratterizzate da basse temperature ($\sim 10\,\text{K}$) e alte densità ($n \sim 10^3\,\text{cm}^{-3}$).
 
 # Molecole trovate nel ISM
 
@@ -296,6 +290,11 @@ densità ($n \sim 10^3\,\text{cm}^{-3}$).
 
 VY Canis Majoris (stella gigante, $R \sim 2000\,R_\odot$) vista da Herschel
 
+::: notes
+
+È una ipergigante rossa, tra le più grandi che si conoscano (1000 volte il raggio solare!), ed è immersa in una nube molecolare. Le righe che osserviamo sono quindi sia dovute alla stella che alla nube che la circonda.
+
+:::
 
 # E il caso di HII?
 
@@ -340,9 +339,11 @@ R > \sqrt{\frac{15 k_B T}{4\pi G m \rho}} \equiv R_J'.
 
 # Formazione stellare
 
-Il calcolo precedente è abbastanza diverso da quello affrontato da James Jeans (1877–1946), che non ha usato il teorema del viriale.
+-   Il calcolo precedente è abbastanza diverso da quello affrontato da James Jeans (1877–1946), che non ha usato il teorema del viriale.
 
-Rifaremo ora i suoi calcoli, ed evidenzieremo anche un problema logico nella sua trattazione. Introdurremo innanzitutto le equazioni dei fluidi.
+-   Rifaremo ora i suoi calcoli, ed evidenzieremo anche un problema logico nella sua trattazione.
+
+-   Iniziamo con l'introdurre le equazioni della fluidodinamica.
 
 
 # Fisica dei fluidi
@@ -372,7 +373,8 @@ Calcolando la derivata del prodotto, si ottiene
 \[
 \begin{aligned}
   \dot{\vec{v}}_p &=
-  \frac{\text{d}}{\text{d}t}\vec{v}\bigl(\vec{u}_p(t), t\bigr) \\
+  \frac{\text{d}}{\text{d}t}\vec{v}\bigl(\vec{u}_p(t), t\bigr) =
+  \frac{\text{d}}{\text{d}t}\vec{v}\bigl(u_{px}(t), u_{py}(t), u_{pz}(t), t\bigr) =\\
   &= \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v},
 \end{aligned}
 \]
@@ -388,31 +390,31 @@ dove usiamo il fatto che $\partial_t \vec{u}_p(t) = \vec{v}_p(t) =
 \]
 
 
+# Derivata materiale
+
+-   Si dice *derivata materiale* l'espressione
+    \[
+    \dot{\vec{v}}_p = \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v}
+    \]
+    
+-   Essa) dice che la variazione della velocità di una particella del fluido può essere causata da:
+
+    #.  una variazione temporale del campo $\vec{v}$ nel cubetto (termine $\partial_t\vec{v}$);
+
+    #.  una differenza di velocità tra il cubetto in cui si trova la particella al tempo $t$ e quello in cui è «saltata» al tempo $t + \text{d}t$ (termine $(\vec{v} \cdot \vec\nabla) \vec{v}$).
+
 ---
 
-L'equazione
-\[
-\dot{\vec{v}}_p = \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v}
-\]
-(«derivata materiale») dice che la variazione della velocità di
-una particella del fluido può essere causata da:
+-   Trasformiamo ora l'equazione di Newton in modo che compaiano le quantità Euleriane $\rho$ e $\vec{v}$, ma passando dall'equazione che descrive *una* particella a quella che descrive $N$ particelle.
 
-#.  una variazione temporale del campo $\vec{v}$ nel cubetto (termine $\partial_t\vec{v}$);
-#.  una differenza di velocità tra il cubetto in cui si trova la particella al tempo $t$ e quello in cui è «saltata» al tempo $t + \text{d}t$ (termine $(\vec{v} \cdot \vec\nabla) \vec{v}$).
-
----
-
-Trasformiamo ora l'equazione di Newton in modo che compaiano le
-quantità Euleriane $\rho$ e $\vec{v}$, ma passando dall'equazione
-che descrive *una* particella a quella che descrive $N$
-particelle.
-
-Sommiamo quindi le equazioni di Newton di ciascuna delle N particelle in un cubetto:
-\[
-    \sum_{i=1}^N \vec{F}_p^{(i)} = \sum_{i=1}^N m^{(i)} \bigl(\partial_t\vec{v} + 
-  (\vec{v} \cdot \vec\nabla) \vec{v}\bigr)
-\]
-(il termine tra parentesi non dipende da $i$).
+-   Sommiamo quindi le equazioni di Newton di ciascuna delle N particelle in un cubetto:
+    \[
+    \begin{aligned}
+        \sum_{i=1}^N \vec{F}_p^{(i)} &= \sum_{i=1}^N m^{(i)} \dot{\vec v}_p(t) = \sum_{i=1}^N m^{(i)} \bigl(\partial_t\vec{v} + 
+      (\vec{v} \cdot \vec\nabla) \vec{v}\bigr) = \\
+      &= \bigl(\partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v}\bigr) \sum_{i=1}^N m^{(i)}.
+    \end{aligned}
+    \]
 
 ---
 
@@ -426,17 +428,18 @@ identiche, allora
   (\vec{v} \cdot \vec\nabla) \vec{v}\bigr)
 \end{aligned}
 \]
-con $\text{d}V$ volume del cubetto.
+con $\text{d}V$ volume del cubetto e $\vec{F}_\text{tot}$ forza totale agente sul cubetto.
 
----
+# Termini della forza
 
-Dobbiamo ora ricavare un'espressione per il termine $\vec{F}_p$. Nel contesto del collasso di una nube, ci sono due componenti:
+-   Dobbiamo ora ricavare un'espressione per il termine $\vec{F}_p$. Nel contesto del collasso di una nube, ci sono due componenti:
 
-#.  Forze di pressione;
-#.  Forze gravitazionali.
+    #.  Forze di pressione;
+    #.  Forze gravitazionali.
 
-(Sono le medesime forze che abbiamo considerato nella derivazione
-dell'equazione del viriale $U = -2K$). Affrontiamole separatamente.
+    Queste sono le medesime forze che abbiamo considerato nella derivazione dell'equazione del viriale $U = -2K$.
+
+-   Affrontiamole separatamente.
 
 
 # Forze di pressione
@@ -503,33 +506,24 @@ che si riscrive come il sistema di 3 equazioni
 
 # Altre equazioni
 
-Con l'equazione vettoriale precedente e la legge di Gauss abbiamo 4
-equazioni ma 6 incognite ($v_x$, $v_y$, $v_z$, $p$, $\rho$, $\phi$).
+-   Con l'equazione vettoriale precedente e la legge di Gauss abbiamo 4 equazioni ma 6 incognite ($v_x$, $v_y$, $v_z$, $p$, $\rho$, $\phi$).
 
-
-Usiamo anche l'equazione di conservazione della massa:
-\[
-\dot\rho + \vec{\nabla}\bigl(\rho\,\vec{v}\bigr) = 0
-\]
-e la relazione tra pressione e densità
-\[
-p = \rho c_S^2,
-\]
-dove $c_S$ è la velocità del suono (approssimazione di piccole
-oscillazioni e isotermia).
+-   Usiamo anche l'equazione di conservazione della massa:
+    \[
+    \dot\rho + \vec{\nabla}\bigl(\rho\,\vec{v}\bigr) = 0
+    \]
+    e la relazione tra pressione e densità
+    \[
+    p = \rho c_S^2,
+    \]
+    dove $c_S$ è la velocità del suono (per piccole oscillazioni e isotermia).
 
 
 # Esercizi
 
-Ricavate un'espressione per la pressione $p(h)$ dell'acqua del mare
-in funzione della profondità $h$. Supponete che il mare sia in
-quiete, che $\rho$ sia costante, e che la forza di gravità sia $F =
-m g$.
+-   Ricavate un'espressione per la pressione $p(h)$ dell'acqua del mare in funzione della profondità $h$. Supponete che il mare sia in quiete, che $\rho$ sia costante, e che la forza di gravità sia $F = m g$.
 
-
-Che pressione stimate ci sia sul fondo della fossa delle Marianne
-($h = 11\,\text{km}$)? (Il valore misurato è $\sim
-1\,000\,\text{bar}$).
+-   Che pressione stimate ci sia sul fondo della fossa delle Marianne ($h = 11\,\text{km}$)? (Il valore misurato è $\sim 1\,000\,\text{bar}$).
 
 ::: notes
 
@@ -540,12 +534,10 @@ L'esercizio si risolve imponendo $\vec v = 0$ nella prima equazione, imponendo $
 
 # Esercizi
 
-Fate lo stesso nel caso dell'atmosfera. In questo caso non si può
-più considerare $\rho$ costante: usate la relazione $p = c_S^2
-\rho$. Dovreste ottenere il risultato
-\[
-p(h) = p_0 \exp(-h/h_0),
-\] se $h$ cresce con l'altezza.
+-   Fate lo stesso nel caso dell'atmosfera. In questo caso non si può più considerare $\rho$ costante: usate la relazione $p = c_S^2 \rho$. Dovreste ottenere il risultato
+    \[
+    p(h) = p_0 \exp(-h/h_0),
+    \] se $h$ cresce con l'altezza.
 
 
-Che valore stimate per $h_0$ nel caso dell'atmosfera terrestre?
+-   Che valore stimate per $h_0$ nel caso dell'atmosfera terrestre?
