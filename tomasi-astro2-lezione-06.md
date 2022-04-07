@@ -447,56 +447,57 @@ Siccome un *cold core* ha bisogno di un «involucro» caldo che lo protegga dall
 
 # Regioni HII
 
-Una stella massiccia emette nel visibile e nel UV.
+-   Una stella massiccia emette nel visibile e nel UV.
 
-Siccome per ionizzare HI occorre $E = h\nu > 13.6\,\text{eV}$ ($\lambda < 91.2\,\text{nm}$), le stelle OB hanno la possibilità di ionizzare HI.
+-   Siccome per ionizzare HI occorre $E = h\nu > 13.6\,\text{eV}$ ($\lambda < 91.2\,\text{nm}$), le stelle OB hanno la possibilità di ionizzare HI.
 
-Quando la maggior parte dell'idrogeno è ionizzato, si parla di **regioni HII**.
-
-
-# Raggio di Strömgren
-
-Le stelle OB riescono ad ionizzare HI solo in una regione di volume limitato. Stimiamo le dimensioni di questo volume.
-
-Il tasso di ionizzazione è
-\[
-R_i = N_\text{UV},
-\]
-con $[R_i] = \text{ionizzazioni/s}$ e 
-\[
-N_\text{UV} = \int_{13.6\,\text{eV}}^\infty N(\nu)\,\text{d}\nu
-\]
-($N_\text{UV} = \text{fotoni/s}$, se efficienza è 100 %).
+-   Quando la maggior parte dell'idrogeno è ionizzato, si parla di **regioni HII**.
 
 
 # Raggio di Strömgren
 
-L'efficienza è verosimilmente del 100 %, perché per la ionizzazione la sezione d'urto è
-\[
-\sigma \sim 10^{-17}\,\text{cm}^2.
-\]
-Per densità $n_H \sim 10^3\,\text{cm}^{-3}$ si ha che il cammino libero medio di un fotone è
-\[
-\lambda \sim \frac1{n_H\,\sigma} \sim 10^{14}\,\text{cm} = 6\,\text{AU},
-\]
-da confrontarsi con le dimensioni delle regioni HII (da 0.1 a 100\,pc).
+-   Le stelle OB riescono ad ionizzare HI solo in una regione di volume limitato. Stimiamo le dimensioni di questo volume.
+
+-   Il tasso di ionizzazione è
+    \[
+    R_i = N_\text{UV},
+    \]
+    con $[R_i] = \text{ionizzazioni/s}$ e 
+    \[
+    N_\text{UV} = \int_{13.6\,\text{eV}}^\infty N(\nu)\,\text{d}\nu
+    \]
+    ($N_\text{UV} = \text{fotoni/s}$, se efficienza è 100 %).
 
 
 # Raggio di Strömgren
 
-Il tasso di ricombinazione è
-\[
-R_\text{rec} = \alpha(T)\,n_e\,n_p\,V = \alpha(T)\,n_p^2\,\frac{4\pi}3 r_S^3,
-\]
-con $r_S$ detto **raggio di Strömgren** e $\alpha(T)$ coefficiente.
+-   L'efficienza è verosimilmente del 100 %, perché per la ionizzazione la sezione d'urto è
+    \[
+    \sigma \sim 10^{-17}\,\text{cm}^2.
+    \]
+    
+-   Per densità $n_H \sim 10^3\,\text{cm}^{-3}$ si ha che il cammino libero medio di un fotone è
+    \[
+    \lambda \sim \frac1{n_H\,\sigma} \sim 10^{14}\,\text{cm} = 6\,\text{AU},
+    \]
+    da confrontarsi con le dimensioni delle regioni HII (da 0.1 a 100\,pc).
 
 
-All'equilibrio $R_i = R_\text{rec}$, da cui
-\[
-r_S = \left(\frac3{4\pi\alpha}\right)^{\frac13}
-N_\text{UV}^{\frac13} n_p^{-\frac23}.
-\]
-Le regioni HII più dense sono più piccole (tipicamente, $\sim 20\,\text{pc}$).
+# Raggio di Strömgren
+
+-   Il tasso di ricombinazione è
+    \[
+    R_\text{rec} = \alpha(T)\,n_e\,n_p\,V = \alpha(T)\,n_p^2\,\frac{4\pi}3 r_S^3,
+    \]
+    con $r_S$ detto **raggio di Strömgren** e $\alpha(T)$ coefficiente.
+
+
+-   All'equilibrio $R_i = R_\text{rec}$, da cui
+    \[
+    r_S = \left(\frac3{4\pi\alpha}\right)^{\frac13}
+    N_\text{UV}^{\frac13} n_p^{-\frac23}.
+    \]
+    Le regioni HII più dense sono più piccole (tipicamente, $\sim 20\,\text{pc}$).
 
 
 # Raggio di Strömgren
@@ -509,29 +510,29 @@ Date le dimensioni $R$ della nube, possono valere due casi:
 
 # Raggio di Strömgren
 
-La temperatura tipica delle regioni HII è $\sim 10^4\,\text{K}$, contro i $\sim 100\,\text{K}$ dell'ambiente circostante. La densità invece non mostra discontinuità ($n \sim 10^3\,\text{cm}^{-3}$).
+-   La temperatura tipica delle regioni HII è $\sim 10^4\,\text{K}$, contro i $\sim 100\,\text{K}$ dell'ambiente circostante. La densità invece non mostra discontinuità ($n \sim 10^3\,\text{cm}^{-3}$).
 
-Nelle nubi sono presenti anche altri elementi, ciascuno con la propria energia di ionizzazione. Ad esempio:
+-   Nelle nubi sono presenti anche altri elementi, ciascuno con la propria energia di ionizzazione. Ad esempio:
 
-#.  He: $E_i = 24.6\,\text{eV}$, quindi le regioni HeII sono meno estese di HII;
-#.  C: $E_i = 11.3\,\text{eV}$, quindi qui vale il contrario.
+    #.  He: $E_i = 24.6\,\text{eV}$, quindi le regioni HeII sono meno estese di HII;
+    #.  C: $E_i = 11.3\,\text{eV}$, quindi qui vale il contrario.
 
-
-# Rilevare le regioni HII
-
-L'emissione di regioni HII è dovuta al brehmsstrahlung (diffusione free-free), con uno spettro
-\[
-T_e \propto \nu^{-\alpha},\quad\text{con $\alpha \approx 2.1$.}
-\]
-
-Si osserva che l'emissione è concentrata sul piano Galattico.
 
 # Rilevare le regioni HII
 
-Un modo per distinguere lo spettro free-free da altre emissioni (es. spinning dust) è quello di correlarlo con emissione Hα
+-   L'emissione di regioni HII è dovuta al brehmsstrahlung (diffusione free-free), con uno spettro
+    \[
+    T_e \propto \nu^{-\alpha},\quad\text{con $\alpha \approx 2.1$.}
+    \]
+
+-   Si osserva che l'emissione è concentrata sul piano Galattico.
+
+# Rilevare le regioni HII
+
+-   Un modo per distinguere lo spettro free-free da altre emissioni (es. spinning dust) è quello di correlarlo con emissione Hα
 ($n=3-2$, serie di Balmer).
 
-Hα viene emessa nelle regioni di ionizzazione: quando un HII (protone) cattura un $e^-$, durante la diseccitazione c'è una certa probabilità ($\sim 50\,\%$) che avvenga la transizione $n=3-2$ (Hα). Quindi Hα segnala la presenza di ionizzazione.
+-   Hα viene emessa nelle regioni di ionizzazione: quando un HII (protone) cattura un $e^-$, durante la diseccitazione c'è una certa probabilità ($\sim 50\,\%$) che avvenga la transizione $n=3-2$ (Hα). Quindi Hα segnala la presenza di ionizzazione.
 
 ::: notes
 
