@@ -80,53 +80,36 @@ E nel caso della Via Lattea?
 
 # Curva di rotazione galattica
 
-In una Galassia la materia non è concentrata in un punto, ma è distribuita in una sfera di densità non uniforme.
+-   In una Galassia la materia non è concentrata in un punto, ma è distribuita in una sfera di densità non uniforme.
 
-
-Siccome lo studio del potenziale di una sfera non uniforme richiede
-di solito metodi numerici, limitiamoci al caso in cui assumiamo
-$\rho$ uniforme: a posteriori si vede che il risultato è
-qualitativamente corretto.
+-   Siccome lo studio del potenziale di una sfera non uniforme richiede di solito metodi numerici, limitiamoci al caso in cui assumiamo $\rho$ uniforme: a posteriori si vede che il risultato è qualitativamente corretto.
   
 
 # Curva di rotazione galattica
 
-Per una particella di massa $m$ in orbita con raggio $R$ vale che
-\[
-G \frac{M(R)\,m}{R^2} = \frac{m v^2(R)}{R} \quad \Rightarrow \quad M(R) = \frac{v^2(R)\,R}G.
-\]
-Se possiamo misurare $v(R)$, deduciamo $M(R)$.
+-   Per una particella di massa $m$ in orbita con raggio $R$ vale che
+    \[
+    G \frac{M(R)\,m}{R^2} = \frac{m v^2(R)}{R} \quad \Rightarrow \quad M(R) = \frac{v^2(R)\,R}G.
+    \]
+    Se possiamo misurare $v(R)$, deduciamo $M(R)$.
 
-Se la massa è tutta al centro, $M(R)$ non dipende da $R$ e si
-ottiene la terza legge di Keplero. (Dimostratelo!)
-
-\note{La dimostrazione è semplice: si impone $M(R) = M$ e $v(R) =
-  2\pi R/T$, poi si risolve per $T$.}
+-   Se la massa è tutta al centro, $M(R)$ non dipende da $R$ e si ottiene la terza legge di Keplero. (Dimostratelo! Basta imporre $M(R) = M$ e $v(R) =
+  2\pi R/T$, poi si risolve per $T$).
 
 
 # Moto proprio del Sole
 
-La velocità del Sole ha due componenti:
+-   La velocità del Sole ha due componenti:
 
-#.  Una parte è dovuta alla rotazione Galattica;
-#.  Una parte è dovuta all'interazione gravitazionale con gli oggetti ad esso vicini.
+    #.  Una parte è dovuta alla rotazione Galattica;
+    #.  Una parte è dovuta all'interazione gravitazionale con gli oggetti ad esso vicini.
 
-Definiamo il *local standard of rest* (LSR) come il sistema di
-riferimento centrato nel Sole che si muove per effetto della sola
-rotazione Galattica.
+-   Definiamo il *local standard of rest* (LSR) come il sistema di riferimento centrato nel Sole che si muove per effetto della sola rotazione Galattica.
 
-
-# Moto proprio del Sole
-
-Ci sono due modi per determinare il LSR:
-
-#.  Si stima $M(R_0)$, e da qui $v_0 = \sqrt{G\,M(R)/R}$ (definizione *dinamica*);
-#.  Si stima la velocità media di tutte le stelle nelle vicinanze del Sole (definizione *cinematica*).
-
-Dalle misure fatte (non perfettamente coincidenti) si ricava che, rispetto al LSR, il Sole si muove con $v = 20\,\text{km/s}$ nella direzione
-\[
-\ell = 56^\circ, \quad b = 23^\circ.
-\]
+-   Rispetto al LSR, il Sole si muove con $v = 20\,\text{km/s}$ nella direzione
+    \[
+    \ell = 56^\circ, \quad b = 23^\circ.
+    \]
   
 
 # Velocità radiale
@@ -228,18 +211,17 @@ M_0 = \frac{v_0^2 R_0}G = 10^{11}\,M_\odot.
 \]
 
 
-# Determinazione della curva di rotazione
+# Curva di rotazione
 
-È necessario studiare l'emissione di righe per misurare $v_r$. Una
-buona riga è l'emissione a 21 cm di H.
+-   È necessario studiare l'emissione di righe per misurare $v_r$. Una buona riga è l'emissione a 21 cm di H.
 
-Sono necessarie due assunzioni:
+-   Sono necessarie due assunzioni:
 
-#.  Supponiamo che le orbite siano circolari;
-#.  Supponiamo che H sia presente in tutta la Galassia (soprattutto in prossimità del *subcentral point*!).
+    #.  Supponiamo che le orbite siano circolari;
+    #.  Supponiamo che H sia presente in tutta la Galassia (soprattutto in prossimità del *subcentral point*!).
 
 
-# Determinazione della curva di rotazione
+# Curva di rotazione
 
 Se le ipotesi sono verificate, si segue questo metodo:
 
@@ -251,18 +233,18 @@ Se le ipotesi sono verificate, si segue questo metodo:
   \]
 
 
-# Determinazione della curva di rotazione
+# Curva di rotazione
 
-Il metodo sfrutta la particolarità del *subcentral point* per stabilire il valore di $R$ associato con $v_r$.
+-   Il metodo sfrutta la particolarità del *subcentral point* per stabilire il valore di $R$ associato con $v_r$.
 
-Il metodo ha alcuni limiti. Alcuni di questi sono superabili
-ripetendo la misura nel I e IV quadrante:
+-   Ci sono alcuni limiti:
 
-#.  Se non c'è idrogeno nel *subcentral point*, $v_{\text{max}}$ stimato sarà minore di quello vero;
-#.  Orbite non circolari rendono le ipotesi non vere.
+    #.  Se non c'è idrogeno nel *subcentral point*, $v_{\text{max}}$ stimato sarà minore di quello vero;
+    #.  Orbite non circolari rendono le ipotesi non vere.
 
+    Alcuni di questi sono superabili ripetendo la misura nel I e IV quadrante.
 
-# Determinazione della curva di rotazione
+# Curva di rotazione
 
 Altri problemi:
 
@@ -291,9 +273,9 @@ Recuperate l'articolo di Chemin, Renaud \& Soubiran (il preprint è disponibile 
 
 # Curva di rotazione
 
-Nei quadranti II e III è possibile osservare l'emissione di CO in nubi molecolari per stimare $v_r$.
+-   Nei quadranti II e III è possibile osservare l'emissione di CO in nubi molecolari per stimare $v_r$.
 
-Se queste nubi molecolari contengono stelle, si può stimare la distanza $d$ delle stelle con la parallasse spettroscopica. Da $d$ si ricava poi $R$.
+-   Se queste nubi molecolari contengono stelle, si può stimare la distanza $d$ delle stelle con la parallasse spettroscopica. Da $d$ si ricava poi $R$.
 
 
 # Distanze e curva di rotazione
@@ -379,13 +361,6 @@ HKG: halo K giants. Possono anch'esse essere usate come candele standard. Il fat
 
 # Il centro galattico
 
-# Natura del Centro Galattico
-
--   Abbiamo finora parlato del Centro Galattico (CG) come di un punto geometrico nello spazio tridimensionale.
-
--   Vediamo ora quali sono le sue particolarità.
-
-
 # Studio del Centro Galattico
 
 -   È impossibile osservare il CG ($R < 500\,\text{pc}$) nel visibile, a causa dell'estinzione della polvere. Le bande più usate sono due:
@@ -420,15 +395,15 @@ Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 
 
 # Il buco nero centrale
 
-L'ipotesi più accreditata che spieghi la dinamica delle stelle in prossimità del centro galattico è che sia presente un buco nero centrale (CBH) supermassivo.
+-   L'ipotesi più accreditata che spieghi la dinamica delle stelle in prossimità del centro galattico è che sia presente un buco nero centrale (CBH) supermassivo.
 
-Le caratteristiche del CBH possono essere dedotte dalla stessa orbita delle stelle in sua prossimità (esse risentono più della presenza di CBH che della rotazione galattica).
+-   Le caratteristiche del CBH possono essere dedotte dalla stessa orbita delle stelle in sua prossimità (esse risentono più della presenza di CBH che della rotazione galattica).
 
 # Studio del buco nero centrale
 
-A quale distanza dal buco nero la dinamica delle stelle inizia ad essere dominata dalla sua presenza, anziché dal moto collettivo Galattico e da altri influssi?
+-   A quale distanza dal buco nero la dinamica delle stelle inizia ad essere dominata dalla sua presenza, anziché dal moto collettivo Galattico e da altri influssi?
 
-Possiamo stabilire un semplice criterio *osservativo* per misurare questa distanza, supponendo che essa sia la distanza $r_\text{GC}$ a cui l'energia potenziale tra una stella e il buco nero sia almeno uguale alla media dell'energia cinetica di tutte le stelle a una distanza $r_\text{GC}$.
+-   Possiamo stabilire un semplice criterio *osservativo* per misurare questa distanza, supponendo che essa sia la distanza $r_\text{GC}$ a cui l'energia potenziale tra una stella e il buco nero sia almeno uguale alla media dell'energia cinetica di tutte le stelle a una distanza $r_\text{GC}$.
 
 
 # Studio del buco nero centrale

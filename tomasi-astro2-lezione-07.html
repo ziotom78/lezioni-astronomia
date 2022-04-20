@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
@@ -21,22 +24,24 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="./css/custom.css"/>
   <link rel="stylesheet" href="./css/asciinema-player.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   var macros = [];
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      macros: macros,
-      fleqn: false
-     });
-  }}});
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -44,7 +49,8 @@
 
 <section id="title-slide">
   <h1 class="title">Lezione di Astronomia II – 7</h1>
-  <p class="author">Maurizio Tomasi (<a href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
+  <p class="author">Maurizio Tomasi (<a
+href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
   <p class="date">21 Aprile 2022</p>
 </section>
 
@@ -60,7 +66,8 @@
 <section id="il-centro-galattico-1" class="slide level1">
 <h1>Il centro galattico</h1>
 <center>
-<img data-src="images/thomas_globular_clusters_milky_way.png" height="560" />
+<img data-src="images/thomas_globular_clusters_milky_way.png"
+height="560" />
 </center>
 </section>
 <section id="coordinate-galattiche-1" class="slide level1">
@@ -69,7 +76,9 @@
 <img data-src="images/galactic_coordinates.png" height="360" />
 </center>
 <ul>
-<li>Latitudine (<span class="math inline">b</span>): Chioma di Berenice verso <span class="math inline">b=+90^\circ</span>; Scultore verso <span class="math inline">b=-90^\circ</span>.</li>
+<li>Latitudine (<span class="math inline">b</span>): Chioma di Berenice
+verso <span class="math inline">b=+90^\circ</span>; Scultore verso <span
+class="math inline">b=-90^\circ</span>.</li>
 <li>Longitudine: come l’ascensione retta.</li>
 </ul>
 </section>
@@ -84,11 +93,13 @@
 <center>
 <img data-src="images/spiral_galaxies.jpg" height="480" />
 </center>
-<p>Abbiamo l’evidenza che esistano galassie con bracci avvolti in spirale. È così anche per la Via Lattea?</p>
+<p>Abbiamo l’evidenza che esistano galassie con bracci avvolti in
+spirale. È così anche per la Via Lattea?</p>
 </section>
 <section id="aspetto-esterno-della-via-lattea-1" class="slide level1">
 <h1>Aspetto esterno della Via Lattea</h1>
-<p>Studiando nubi molecolari giganti si intuisce che anche la Via Lattea possieda strutture simili.</p>
+<p>Studiando nubi molecolari giganti si intuisce che anche la Via Lattea
+possieda strutture simili.</p>
 <center>
 <img data-src="images/spiral_arms_inner.png" height="480" />
 </center>
@@ -111,43 +122,64 @@
 </section>
 <section id="curva-di-rotazione-galattica" class="slide level1">
 <h1>Curva di rotazione galattica</h1>
-<p>In un sistema Kepleriano (es. Sistema Solare) il periodo orbitale <span class="math inline">T</span> è legato al raggio dell’orbita <span class="math inline">R</span> dalla Terza legge: <span class="math display">
+<p>In un sistema Kepleriano (es. Sistema Solare) il periodo orbitale
+<span class="math inline">T</span> è legato al raggio dell’orbita <span
+class="math inline">R</span> dalla Terza legge: <span
+class="math display">
 T \approx \frac{2\pi}{\sqrt{G M_\odot}}\,R^{3/2}
-</span> (in un corpo rigido, <span class="math inline">T</span> non dipende da <span class="math inline">R</span>). Siccome <span class="math inline">v = 2\pi R/T</span>, allora <span class="math display">
+</span> (in un corpo rigido, <span class="math inline">T</span> non
+dipende da <span class="math inline">R</span>). Siccome <span
+class="math inline">v = 2\pi R/T</span>, allora <span
+class="math display">
 v \propto \frac1{\sqrt{R}}.
 </span> E nel caso della Via Lattea?</p>
 </section>
 <section id="curva-di-rotazione-galattica-1" class="slide level1">
 <h1>Curva di rotazione galattica</h1>
-<p>In una Galassia la materia non è concentrata in un punto, ma è distribuita in una sfera di densità non uniforme.</p>
-<p>Siccome lo studio del potenziale di una sfera non uniforme richiede di solito metodi numerici, limitiamoci al caso in cui assumiamo <span class="math inline">\rho</span> uniforme: a posteriori si vede che il risultato è qualitativamente corretto.</p>
+<ul>
+<li><p>In una Galassia la materia non è concentrata in un punto, ma è
+distribuita in una sfera di densità non uniforme.</p></li>
+<li><p>Siccome lo studio del potenziale di una sfera non uniforme
+richiede di solito metodi numerici, limitiamoci al caso in cui assumiamo
+<span class="math inline">\rho</span> uniforme: a posteriori si vede che
+il risultato è qualitativamente corretto.</p></li>
+</ul>
 </section>
 <section id="curva-di-rotazione-galattica-2" class="slide level1">
 <h1>Curva di rotazione galattica</h1>
-<p>Per una particella di massa <span class="math inline">m</span> in orbita con raggio <span class="math inline">R</span> vale che <span class="math display">
-G \frac{M(R)\,m}{R^2} = \frac{m v^2(R)}{R} \quad \Rightarrow \quad M(R) = \frac{v^2(R)\,R}G.
-</span> Se possiamo misurare <span class="math inline">v(R)</span>, deduciamo <span class="math inline">M(R)</span>.</p>
-<p>Se la massa è tutta al centro, <span class="math inline">M(R)</span> non dipende da <span class="math inline">R</span> e si ottiene la terza legge di Keplero. (Dimostratelo!)</p>
+<ul>
+<li><p>Per una particella di massa <span class="math inline">m</span> in
+orbita con raggio <span class="math inline">R</span> vale che <span
+class="math display">
+G \frac{M(R)\,m}{R^2} = \frac{m v^2(R)}{R} \quad \Rightarrow \quad M(R)
+= \frac{v^2(R)\,R}G.
+</span> Se possiamo misurare <span class="math inline">v(R)</span>,
+deduciamo <span class="math inline">M(R)</span>.</p></li>
+<li><p>Se la massa è tutta al centro, <span
+class="math inline">M(R)</span> non dipende da <span
+class="math inline">R</span> e si ottiene la terza legge di Keplero.
+(Dimostratelo! Basta imporre <span class="math inline">M(R) = M</span> e
+<span class="math inline">v(R) =  2\pi R/T</span>, poi si risolve per
+<span class="math inline">T</span>).</p></li>
+</ul>
 </section>
 <section id="moto-proprio-del-sole" class="slide level1">
 <h1>Moto proprio del Sole</h1>
-<p>La velocità del Sole ha due componenti:</p>
+<ul>
+<li><p>La velocità del Sole ha due componenti:</p>
 <ol>
 <li>Una parte è dovuta alla rotazione Galattica;</li>
-<li>Una parte è dovuta all’interazione gravitazionale con gli oggetti ad esso vicini.</li>
-</ol>
-<p>Definiamo il <em>local standard of rest</em> (LSR) come il sistema di riferimento centrato nel Sole che si muove per effetto della sola rotazione Galattica.</p>
-</section>
-<section id="moto-proprio-del-sole-1" class="slide level1">
-<h1>Moto proprio del Sole</h1>
-<p>Ci sono due modi per determinare il LSR:</p>
-<ol>
-<li>Si stima <span class="math inline">M(R_0)</span>, e da qui <span class="math inline">v_0 = \sqrt{G\,M(R)/R}</span> (definizione <em>dinamica</em>);</li>
-<li>Si stima la velocità media di tutte le stelle nelle vicinanze del Sole (definizione <em>cinematica</em>).</li>
-</ol>
-<p>Dalle misure fatte (non perfettamente coincidenti) si ricava che, rispetto al LSR, il Sole si muove con <span class="math inline">v = 20\,\text{km/s}</span> nella direzione <span class="math display">
+<li>Una parte è dovuta all’interazione gravitazionale con gli oggetti ad
+esso vicini.</li>
+</ol></li>
+<li><p>Definiamo il <em>local standard of rest</em> (LSR) come il
+sistema di riferimento centrato nel Sole che si muove per effetto della
+sola rotazione Galattica.</p></li>
+<li><p>Rispetto al LSR, il Sole si muove con <span class="math inline">v
+= 20\,\text{km/s}</span> nella direzione <span class="math display">
 \ell = 56^\circ, \quad b = 23^\circ.
-</span></p>
+</span></p></li>
+</ul>
 </section>
 <section id="velocità-radiale" class="slide level1">
 <h1>Velocità radiale</h1>
@@ -155,19 +187,23 @@ G \frac{M(R)\,m}{R^2} = \frac{m v^2(R)}{R} \quad \Rightarrow \quad M(R) = \frac{
 <img data-src="images/galactic_radial_velocity.png" height="480" />
 </center>
 <aside class="notes">
-<p>Il disegno mostra la misura dello spostamento Doppler per due stelle, indicate con <strong>1</strong> e <strong>2</strong>. Il colore rosso è riferito al Sole, il colore verde a ciascuna delle due stelle.</p>
+<p>Il disegno mostra la misura dello spostamento Doppler per due stelle,
+indicate con <strong>1</strong> e <strong>2</strong>. Il colore rosso è
+riferito al Sole, il colore verde a ciascuna delle due stelle.</p>
 </aside>
 </section>
 <section id="velocità-radiale-1" class="slide level1">
 <h1>Velocità radiale</h1>
 <center>
-<img data-src="images/galactic_differential_rotation.png" height="480" />
+<img data-src="images/galactic_differential_rotation.png"
+height="480" />
 </center>
 </section>
 <section id="velocità-radiale-2" class="slide level1">
 <h1>Velocità radiale</h1>
 <center>
-<img data-src="images/galactic_velocity_determination.png" height="240" />
+<img data-src="images/galactic_velocity_determination.png"
+height="240" />
 </center>
 <p>Vale che <span class="math display">
 \begin{aligned}
@@ -183,7 +219,8 @@ G \frac{M(R)\,m}{R^2} = \frac{m v^2(R)}{R} \quad \Rightarrow \quad M(R) = \frac{
 <section id="velocità-radiale-3" class="slide level1">
 <h1>Velocità radiale</h1>
 <center>
-<img data-src="images/galactic_velocity_determination.png" height="240" />
+<img data-src="images/galactic_velocity_determination.png"
+height="240" />
 </center>
 <p>Dalla legge dei seni: <span class="math display">
 \frac{\sin(180^\circ - {\color{#008000}
@@ -197,14 +234,16 @@ G \frac{M(R)\,m}{R^2} = \frac{m v^2(R)}{R} \quad \Rightarrow \quad M(R) = \frac{
 <section id="velocità-radiale-4" class="slide level1">
 <h1>Velocità radiale</h1>
 <center>
-<img data-src="images/galactic_velocity_determination.png" height="240" />
+<img data-src="images/galactic_velocity_determination.png"
+height="240" />
 </center>
 <p>Il risultato finale è <span class="math display">
 \begin{aligned}
   v_r &amp;= \left( {\color{#008000} v(R)} \frac{\color{#6A5ACD}
     R_0}{\color{#008000} R} - {\color{#6A5ACD} v_0}\right)
   \sin{\color{#6A5ACD}\ell} \\
-  &amp;= \bigl( {\color{#008000} \omega(R)} - {\color{#6A5ACD} \omega_0}\bigr) {\color{#6A5ACD} R_0}
+  &amp;= \bigl( {\color{#008000} \omega(R)} - {\color{#6A5ACD}
+\omega_0}\bigr) {\color{#6A5ACD} R_0}
   \sin{\color{#6A5ACD}\ell}.
 \end{aligned}
 </span></p>
@@ -212,9 +251,12 @@ G \frac{M(R)\,m}{R^2} = \frac{m v^2(R)}{R} \quad \Rightarrow \quad M(R) = \frac{
 <section id="velocità-radiale-5" class="slide level1">
 <h1>Velocità radiale</h1>
 <center>
-<img data-src="images/galactic_velocity_determination.png" height="240" />
+<img data-src="images/galactic_velocity_determination.png"
+height="240" />
 </center>
-<p>La rotazione della Galassia produce anche un moto trasversale che induce un moto proprio delle stelle. Si può vedere come esercizio che <span class="math display">
+<p>La rotazione della Galassia produce anche un moto trasversale che
+induce un moto proprio delle stelle. Si può vedere come esercizio che
+<span class="math display">
 v_T = \bigl({\color{#008000} \omega(R)} - {\color{#6A5ACD}
   \omega_0}\bigr) {\color{#6A5ACD}
   R_0}\cos{\color{#6A5ACD}\ell} - {\color{#008000}
@@ -229,52 +271,79 @@ v_T = \bigl({\color{#008000} \omega(R)} - {\color{#6A5ACD}
 </section>
 <section id="moto-di-rivoluzione-del-sole" class="slide level1">
 <h1>Moto di rivoluzione del Sole</h1>
-<p>La convenzione scelta dall’International Astronomical Union (IAU) per <span class="math inline">R_0</span> e <span class="math inline">v_0</span> è <span class="math display">
+<p>La convenzione scelta dall’International Astronomical Union (IAU) per
+<span class="math inline">R_0</span> e <span
+class="math inline">v_0</span> è <span class="math display">
 R_0 = 8.5\,\text{kpc}, \quad v_0 = 220\,\text{km/s}.
 </span></p>
-<p>Ciò significa che il periodo dell’orbita solare è <span class="math display">
+<p>Ciò significa che il periodo dell’orbita solare è <span
+class="math display">
 T = \frac{2\pi R_0}{v_0} = 2.4 \times 10^8\,\text{yr} \approx
 \frac1{20}\,T_\odot \approx \frac1{40}\,T_{\text{MW}},
-</span> e che la massa entro un raggio <span class="math inline">R_0</span> è <span class="math display">
+</span> e che la massa entro un raggio <span
+class="math inline">R_0</span> è <span class="math display">
 M_0 = \frac{v_0^2 R_0}G = 10^{11}\,M_\odot.
 </span></p>
 </section>
-<section id="determinazione-della-curva-di-rotazione" class="slide level1">
-<h1>Determinazione della curva di rotazione</h1>
-<p>È necessario studiare l’emissione di righe per misurare <span class="math inline">v_r</span>. Una buona riga è l’emissione a 21 cm di H.</p>
-<p>Sono necessarie due assunzioni:</p>
+<section id="curva-di-rotazione" class="slide level1">
+<h1>Curva di rotazione</h1>
+<ul>
+<li><p>È necessario studiare l’emissione di righe per misurare <span
+class="math inline">v_r</span>. Una buona riga è l’emissione a 21 cm di
+H.</p></li>
+<li><p>Sono necessarie due assunzioni:</p>
 <ol>
 <li>Supponiamo che le orbite siano circolari;</li>
-<li>Supponiamo che H sia presente in tutta la Galassia (soprattutto in prossimità del <em>subcentral point</em>!).</li>
-</ol>
+<li>Supponiamo che H sia presente in tutta la Galassia (soprattutto in
+prossimità del <em>subcentral point</em>!).</li>
+</ol></li>
+</ul>
 </section>
-<section id="determinazione-della-curva-di-rotazione-1" class="slide level1">
-<h1>Determinazione della curva di rotazione</h1>
+<section id="curva-di-rotazione-1" class="slide level1">
+<h1>Curva di rotazione</h1>
 <p>Se le ipotesi sono verificate, si segue questo metodo:</p>
 <ol>
-<li>Fissata <span class="math inline">\ell</span>, si stima il massimo spostamento Doppler misurato in quella direzione;</li>
-<li>Si assegna quello spostamento Doppler a materiale nel <em>subcentral point</em>, così che <span class="math inline">R = R_{\text{min}} = R_0\,\cos(90^\circ - \ell) = R_0\,\sin\ell</span>;</li>
-<li>Se <span class="math inline">v_\text{max}</span> è la massima velocità radiale, allora <span class="math display">
+<li>Fissata <span class="math inline">\ell</span>, si stima il massimo
+spostamento Doppler misurato in quella direzione;</li>
+<li>Si assegna quello spostamento Doppler a materiale nel <em>subcentral
+point</em>, così che <span class="math inline">R = R_{\text{min}} =
+R_0\,\cos(90^\circ - \ell) = R_0\,\sin\ell</span>;</li>
+<li>Se <span class="math inline">v_\text{max}</span> è la massima
+velocità radiale, allora <span class="math display">
   \omega(R_0\sin\ell) = \frac{v_\text{max}}{R_0\sin\ell} + \omega_0.
   </span></li>
 </ol>
 </section>
-<section id="determinazione-della-curva-di-rotazione-2" class="slide level1">
-<h1>Determinazione della curva di rotazione</h1>
-<p>Il metodo sfrutta la particolarità del <em>subcentral point</em> per stabilire il valore di <span class="math inline">R</span> associato con <span class="math inline">v_r</span>.</p>
-<p>Il metodo ha alcuni limiti. Alcuni di questi sono superabili ripetendo la misura nel I e IV quadrante:</p>
+<section id="curva-di-rotazione-2" class="slide level1">
+<h1>Curva di rotazione</h1>
+<ul>
+<li><p>Il metodo sfrutta la particolarità del <em>subcentral point</em>
+per stabilire il valore di <span class="math inline">R</span> associato
+con <span class="math inline">v_r</span>.</p></li>
+<li><p>Ci sono alcuni limiti:</p>
 <ol>
-<li>Se non c’è idrogeno nel <em>subcentral point</em>, <span class="math inline">v_{\text{max}}</span> stimato sarà minore di quello vero;</li>
+<li>Se non c’è idrogeno nel <em>subcentral point</em>, <span
+class="math inline">v_{\text{max}}</span> stimato sarà minore di quello
+vero;</li>
 <li>Orbite non circolari rendono le ipotesi non vere.</li>
 </ol>
+<p>Alcuni di questi sono superabili ripetendo la misura nel I e IV
+quadrante.</p></li>
+</ul>
 </section>
-<section id="determinazione-della-curva-di-rotazione-3" class="slide level1">
-<h1>Determinazione della curva di rotazione</h1>
+<section id="curva-di-rotazione-3" class="slide level1">
+<h1>Curva di rotazione</h1>
 <p>Altri problemi:</p>
 <ol>
-<li>Se <span class="math inline">\ell \approx 0</span>, lo spostamento Doppler non è misurabile;</li>
-<li>Se <span class="math inline">\ell \approx 90^\circ</span>, allora <span class="math inline">\omega(R_0) \approx \omega</span></li>
-<li>Il metodo funziona solo quando <span class="math inline">R &lt; R_0</span> (I e IV quadrante), altrimenti non c’è <em>subcentral point</em> e bisogna stimare <span class="math inline">v</span> e <span class="math inline">d</span> separatamente, per poi ricavare <span class="math inline">R</span>.</li>
+<li>Se <span class="math inline">\ell \approx 0</span>, lo spostamento
+Doppler non è misurabile;</li>
+<li>Se <span class="math inline">\ell \approx 90^\circ</span>, allora
+<span class="math inline">\omega(R_0) \approx \omega</span></li>
+<li>Il metodo funziona solo quando <span class="math inline">R &lt;
+R_0</span> (I e IV quadrante), altrimenti non c’è <em>subcentral
+point</em> e bisogna stimare <span class="math inline">v</span> e <span
+class="math inline">d</span> separatamente, per poi ricavare <span
+class="math inline">R</span>.</li>
 </ol>
 </section>
 <section class="slide level1">
@@ -297,39 +366,57 @@ M_0 = \frac{v_0^2 R_0}G = 10^{11}\,M_\odot.
 </section>
 <section id="compito-per-casa" class="slide level1">
 <h1>Compito per casa</h1>
-<p>Recuperate l’articolo di Chemin, Renaud &amp; Soubiran (il preprint è disponibile al sito <a href="http://arxiv.org/abs/1504.01507">http://arxiv.org/abs/1504.01507</a>) e leggetelo.</p>
+<p>Recuperate l’articolo di Chemin, Renaud &amp; Soubiran (il preprint è
+disponibile al sito <a
+href="http://arxiv.org/abs/1504.01507">http://arxiv.org/abs/1504.01507</a>)
+e leggetelo.</p>
 </section>
-<section id="curva-di-rotazione" class="slide level1">
+<section id="curva-di-rotazione-4" class="slide level1">
 <h1>Curva di rotazione</h1>
-<p>Nei quadranti II e III è possibile osservare l’emissione di CO in nubi molecolari per stimare <span class="math inline">v_r</span>.</p>
-<p>Se queste nubi molecolari contengono stelle, si può stimare la distanza <span class="math inline">d</span> delle stelle con la parallasse spettroscopica. Da <span class="math inline">d</span> si ricava poi <span class="math inline">R</span>.</p>
+<ul>
+<li><p>Nei quadranti II e III è possibile osservare l’emissione di CO in
+nubi molecolari per stimare <span
+class="math inline">v_r</span>.</p></li>
+<li><p>Se queste nubi molecolari contengono stelle, si può stimare la
+distanza <span class="math inline">d</span> delle stelle con la
+parallasse spettroscopica. Da <span class="math inline">d</span> si
+ricava poi <span class="math inline">R</span>.</p></li>
+</ul>
 </section>
 <section id="distanze-e-curva-di-rotazione" class="slide level1">
 <h1>Distanze e curva di rotazione</h1>
-<p>Una volta nota la curva di rotazione è possibile stimare le distanze di oggetti ignoti:</p>
+<p>Una volta nota la curva di rotazione è possibile stimare le distanze
+di oggetti ignoti:</p>
 <ol>
-<li><p>Si misura <span class="math inline">\ell</span> e <span class="math inline">v_r</span>;</p></li>
+<li><p>Si misura <span class="math inline">\ell</span> e <span
+class="math inline">v_r</span>;</p></li>
 <li><p>Si usa la formula <span class="math display">
 \omega = \frac{v_r}{R_0\,\sin\ell} + \omega_0;
 </span></p></li>
-<li><p>Dalla conoscenza della curva <span class="math inline">\omega(R)</span> si determina <span class="math inline">R</span>.</p></li>
+<li><p>Dalla conoscenza della curva <span
+class="math inline">\omega(R)</span> si determina <span
+class="math inline">R</span>.</p></li>
 </ol>
 </section>
 <section id="distanze-e-curva-di-rotazione-1" class="slide level1">
 <h1>Distanze e curva di rotazione</h1>
 <p>Il metodo ha due problemi:</p>
 <ul>
-<li>Non funziona se la velocità orbitale è inferiore a quella casuale indotta dagli oggetti vicini;</li>
-<li>Se <span class="math inline">R &lt; R_0</span>, per ogni oggetto ci sono <em>due</em> distanze possibili (tranne per il <em>subcentral point</em>; inoltre questo non è vero se <span class="math inline">R &gt; R_0</span>).</li>
+<li>Non funziona se la velocità orbitale è inferiore a quella casuale
+indotta dagli oggetti vicini;</li>
+<li>Se <span class="math inline">R &lt; R_0</span>, per ogni oggetto ci
+sono <em>due</em> distanze possibili (tranne per il <em>subcentral
+point</em>; inoltre questo non è vero se <span class="math inline">R
+&gt; R_0</span>).</li>
 </ul>
 </section>
-<section id="curva-di-rotazione-1" class="slide level1">
+<section id="curva-di-rotazione-5" class="slide level1">
 <h1>Curva di rotazione</h1>
 <center>
 <img data-src="images/clemens-title-page-01.png" height="560" />
 </center>
 </section>
-<section id="curva-di-rotazione-2" class="slide level1">
+<section id="curva-di-rotazione-6" class="slide level1">
 <h1>Curva di rotazione</h1>
 <center>
 <img data-src="images/clemens-rotation-curve-07.png" height="560" />
@@ -338,17 +425,28 @@ M_0 = \frac{v_0^2 R_0}G = 10^{11}\,M_\odot.
 <section id="curve-di-rotazione-e-materia-oscura" class="slide level1">
 <h1>Curve di rotazione e materia oscura</h1>
 <ul>
-<li><p>La curva dell’immagine precedente resta costante a grandi <span class="math inline">R</span>.</p></li>
-<li><p>Questo è in disaccordo con l’ipotesi Kepleriana che <span class="math inline">v \propto 1/\sqrt{R}</span> (vera se tutta la materia è racchiusa entro un certo raggio <span class="math inline">R</span>).</p></li>
-<li><p>Ciò significa che una parte significativa della massa della Via Lattea si trova a grandi distanze del centro.</p></li>
+<li><p>La curva dell’immagine precedente resta costante a grandi <span
+class="math inline">R</span>.</p></li>
+<li><p>Questo è in disaccordo con l’ipotesi Kepleriana che <span
+class="math inline">v \propto 1/\sqrt{R}</span> (vera se tutta la
+materia è racchiusa entro un certo raggio <span
+class="math inline">R</span>).</p></li>
+<li><p>Ciò significa che una parte significativa della massa della Via
+Lattea si trova a grandi distanze del centro.</p></li>
 </ul>
 </section>
 <section id="caratteristiche-della-materia-oscura" class="slide level1">
 <h1>Caratteristiche della materia oscura</h1>
 <ul>
-<li><p>Da <span class="math inline">v(R)</span> si deduce che una parte significativa della massa della Via Lattea è nelle regioni esterne. Eppure la luminosità della Via Lattea decresce molto rapidamente per <span class="math inline">R &gt; R_0</span>!</p></li>
-<li><p>Ci sono varie evidenze osservative (altre galassie, cluster di galassie, CMB, ) che portano a ipotizzare l’esistenza di <em>materia oscura non barionica</em>.</p></li>
-<li><p>Questa materia oscura è stata probabilmente decisiva per creare la buca di potenziale in cui si è formata la Via Lattea.</p></li>
+<li><p>Da <span class="math inline">v(R)</span> si deduce che una parte
+significativa della massa della Via Lattea è nelle regioni esterne.
+Eppure la luminosità della Via Lattea decresce molto rapidamente per
+<span class="math inline">R &gt; R_0</span>!</p></li>
+<li><p>Ci sono varie evidenze osservative (altre galassie, cluster di
+galassie, CMB, ) che portano a ipotizzare l’esistenza di <em>materia
+oscura non barionica</em>.</p></li>
+<li><p>Questa materia oscura è stata probabilmente decisiva per creare
+la buca di potenziale in cui si è formata la Via Lattea.</p></li>
 </ul>
 </section>
 <section class="slide level1">
@@ -357,7 +455,9 @@ M_0 = \frac{v_0^2 R_0}G = 10^{11}\,M_\odot.
 <img data-src="images/2016Huang-title-page.png" height="620" />
 </center>
 <aside class="notes">
-<p>Non fanno una stima della curva di rotazione per <span class="math inline">R &lt; 4.5\,\text{kpc}</span> proprio a causa dell’articolo di Chemin (che correttamente citano).</p>
+<p>Non fanno una stima della curva di rotazione per <span
+class="math inline">R &lt; 4.5\,\text{kpc}</span> proprio a causa
+dell’articolo di Chemin (che correttamente citano).</p>
 </aside>
 </section>
 <section class="slide level1">
@@ -366,7 +466,13 @@ M_0 = \frac{v_0^2 R_0}G = 10^{11}\,M_\odot.
 <img data-src="images/2016Huang-rc.png" height="620" />
 </center>
 <aside class="notes">
-<p>Le piccole barre di errore per <span class="math inline">r &gt; 8.5\,\text{kpc}</span> sono dovute all’uso di Red Clump Giants (RCG), un tipo di stelle (con helium-core burning), recentemente salito alla ribalta come eccellente candela standard (ma il loro uso era stato proposto da Cannon nel 1970!). Gli autori hanno usato un catalogo di 16 000 RCG (cataloghi LAMOST e SDSS-III/APOGEE). Vedi anche la tabella nella slide successiva.</p>
+<p>Le piccole barre di errore per <span class="math inline">r &gt;
+8.5\,\text{kpc}</span> sono dovute all’uso di Red Clump Giants (RCG), un
+tipo di stelle (con helium-core burning), recentemente salito alla
+ribalta come eccellente candela standard (ma il loro uso era stato
+proposto da Cannon nel 1970!). Gli autori hanno usato un catalogo di
+16 000 RCG (cataloghi LAMOST e SDSS-III/APOGEE). Vedi anche la tabella
+nella slide successiva.</p>
 </aside>
 </section>
 <section class="slide level1">
@@ -374,40 +480,49 @@ M_0 = \frac{v_0^2 R_0}G = 10^{11}\,M_\odot.
 <center>
 <img data-src="images/2016Huang-table.png" height="520" />
 </center>
-<p>L’uso di 16 000 Red Clump Giants per determinare le distanze porta a barre di errore confrontabili tra i casi <span class="math inline">r &lt; 8.5\,\text{kpc}</span> e <span class="math inline">r &gt; 8.5\,\text{kpc}</span>.</p>
+<p>L’uso di 16 000 Red Clump Giants per determinare le distanze porta a
+barre di errore confrontabili tra i casi <span class="math inline">r
+&lt; 8.5\,\text{kpc}</span> e <span class="math inline">r &gt;
+8.5\,\text{kpc}</span>.</p>
 <aside class="notes">
-<p>HKG: halo K giants. Possono anch’esse essere usate come candele standard. Il fatto che le RCG siano state usate solo per <span class="math inline">r &gt; 8.5\,\text{kpc}</span> è dovuto alle caratteristiche delle due survey che sono state usate dagli autori.</p>
+<p>HKG: halo K giants. Possono anch’esse essere usate come candele
+standard. Il fatto che le RCG siano state usate solo per <span
+class="math inline">r &gt; 8.5\,\text{kpc}</span> è dovuto alle
+caratteristiche delle due survey che sono state usate dagli autori.</p>
 </aside>
 </section>
 <section id="il-centro-galattico-2" class="slide level1">
 <h1>Il centro galattico</h1>
 </section>
-<section id="natura-del-centro-galattico" class="slide level1">
-<h1>Natura del Centro Galattico</h1>
-<ul>
-<li><p>Abbiamo finora parlato del Centro Galattico (CG) come di un punto geometrico nello spazio tridimensionale.</p></li>
-<li><p>Vediamo ora quali sono le sue particolarità.</p></li>
-</ul>
-</section>
 <section id="studio-del-centro-galattico" class="slide level1">
 <h1>Studio del Centro Galattico</h1>
 <ul>
-<li><p>È impossibile osservare il CG (<span class="math inline">R &lt; 500\,\text{pc}</span>) nel visibile, a causa dell’estinzione della polvere. Le bande più usate sono due:</p>
+<li><p>È impossibile osservare il CG (<span class="math inline">R &lt;
+500\,\text{pc}</span>) nel visibile, a causa dell’estinzione della
+polvere. Le bande più usate sono due:</p>
 <ol>
-<li>Nel <em>radio</em> è visibile l’emissione continua di gas (HII) e l’emissione di righe da nubi molecolari e molecole interstellari;</li>
-<li>Nell’<em>infrarosso</em> è visibile la polvere (continuo) e gas neutri e ionizzati (righe).</li>
+<li>Nel <em>radio</em> è visibile l’emissione continua di gas (HII) e
+l’emissione di righe da nubi molecolari e molecole interstellari;</li>
+<li>Nell’<em>infrarosso</em> è visibile la polvere (continuo) e gas
+neutri e ionizzati (righe).</li>
 </ol></li>
-<li><p>A causa della distanza (8 kpc), le osservazioni sono generalmente di limitata risoluzione: ad es. Spitzer risolve solo strutture più grandi di 0.1 pc.</p></li>
+<li><p>A causa della distanza (8 kpc), le osservazioni sono generalmente
+di limitata risoluzione: ad es. Spitzer risolve solo strutture più
+grandi di 0.1 pc.</p></li>
 </ul>
 </section>
 <section id="immagine-multibanda-del-cg" class="slide level1">
 <h1>Immagine multibanda del CG</h1>
 <center>
-<img data-src="images/galactic_centre_multiband_explained.jpg" height="460" />
+<img data-src="images/galactic_centre_multiband_explained.jpg"
+height="460" />
 </center>
-<p>Dimensioni: 32’×16’. Giallo: near-IR (Hubble), rosso: IR (Spitzer), blu: X (<a href="http://chandra.harvard.edu/photo/2009/galactic/">Chandra</a>).</p>
+<p>Dimensioni: 32’×16’. Giallo: near-IR (Hubble), rosso: IR (Spitzer),
+blu: X (<a
+href="http://chandra.harvard.edu/photo/2009/galactic/">Chandra</a>).</p>
 <aside class="notes">
-<p>Le dimensioni della regione nell’immagine (fate il conto!) sono circa <span class="math inline">70\times 35\,\text{pc}</span>.</p>
+<p>Le dimensioni della regione nell’immagine (fate il conto!) sono circa
+<span class="math inline">70\times 35\,\text{pc}</span>.</p>
 </aside>
 </section>
 <section id="il-centro-galattico-in-ir" class="slide level1">
@@ -424,23 +539,42 @@ M_0 = \frac{v_0^2 R_0}G = 10^{11}\,M_\odot.
 </section>
 <section id="il-buco-nero-centrale" class="slide level1">
 <h1>Il buco nero centrale</h1>
-<p>L’ipotesi più accreditata che spieghi la dinamica delle stelle in prossimità del centro galattico è che sia presente un buco nero centrale (CBH) supermassivo.</p>
-<p>Le caratteristiche del CBH possono essere dedotte dalla stessa orbita delle stelle in sua prossimità (esse risentono più della presenza di CBH che della rotazione galattica).</p>
+<ul>
+<li><p>L’ipotesi più accreditata che spieghi la dinamica delle stelle in
+prossimità del centro galattico è che sia presente un buco nero centrale
+(CBH) supermassivo.</p></li>
+<li><p>Le caratteristiche del CBH possono essere dedotte dalla stessa
+orbita delle stelle in sua prossimità (esse risentono più della presenza
+di CBH che della rotazione galattica).</p></li>
+</ul>
 </section>
 <section id="studio-del-buco-nero-centrale" class="slide level1">
 <h1>Studio del buco nero centrale</h1>
-<p>A quale distanza dal buco nero la dinamica delle stelle inizia ad essere dominata dalla sua presenza, anziché dal moto collettivo Galattico e da altri influssi?</p>
-<p>Possiamo stabilire un semplice criterio <em>osservativo</em> per misurare questa distanza, supponendo che essa sia la distanza <span class="math inline">r_\text{GC}</span> a cui l’energia potenziale tra una stella e il buco nero sia almeno uguale alla media dell’energia cinetica di tutte le stelle a una distanza <span class="math inline">r_\text{GC}</span>.</p>
+<ul>
+<li><p>A quale distanza dal buco nero la dinamica delle stelle inizia ad
+essere dominata dalla sua presenza, anziché dal moto collettivo
+Galattico e da altri influssi?</p></li>
+<li><p>Possiamo stabilire un semplice criterio <em>osservativo</em> per
+misurare questa distanza, supponendo che essa sia la distanza <span
+class="math inline">r_\text{GC}</span> a cui l’energia potenziale tra
+una stella e il buco nero sia almeno uguale alla media dell’energia
+cinetica di tutte le stelle a una distanza <span
+class="math inline">r_\text{GC}</span>.</p></li>
+</ul>
 </section>
 <section id="studio-del-buco-nero-centrale-1" class="slide level1">
 <h1>Studio del buco nero centrale</h1>
-<p>Eguagliando energia cinetica ed energia potenziale si ha <span class="math display">
+<p>Eguagliando energia cinetica ed energia potenziale si ha <span
+class="math display">
 \frac{G M_* M_{\text{CBH}}}r = \frac12 M_*\,v_{\text{RMS}}^2,
 </span> da cui <span class="math display">
-r_\text{GC} \approx 4 \left(\frac{M_{\text{CBH}}}{10^7\,M_\odot}\right) \left(\frac{v_{\text{RMS}}}{100\,\text{km/s}}\right)^{-2}\,\text{pc}.
-</span> Quindi <span class="math inline">r_\text{GC} \propto v_{\text{RMS}}^{-2}</span>.</p>
+r_\text{GC} \approx 4 \left(\frac{M_{\text{CBH}}}{10^7\,M_\odot}\right)
+\left(\frac{v_{\text{RMS}}}{100\,\text{km/s}}\right)^{-2}\,\text{pc}.
+</span> Quindi <span class="math inline">r_\text{GC} \propto
+v_{\text{RMS}}^{-2}</span>.</p>
 <aside class="notes">
-<p>L’RMS è calcolato su tutte le stelle attorno al CBH che hanno la medesima distanza <span class="math inline">r_\text{GC}</span>.</p>
+<p>L’RMS è calcolato su tutte le stelle attorno al CBH che hanno la
+medesima distanza <span class="math inline">r_\text{GC}</span>.</p>
 </aside>
 </section>
 <section class="slide level1">
@@ -454,7 +588,10 @@ r_\text{GC} \approx 4 \left(\frac{M_{\text{CBH}}}{10^7\,M_\odot}\right) \left(\f
 <center>
 <img data-src="images/eckart-velocity-dispersion.png" height="460" />
 </center>
-<p>Siccome le velocità sono dell’ordine di 100 km/s e le distanze inferiori di 1 pc, l’equazione per <span class="math inline">r_\text{GC}</span> ci dice che la loro dinamica è determinata dal CBH, e non dal campo esterno.</p>
+<p>Siccome le velocità sono dell’ordine di 100 km/s e le distanze
+inferiori di 1 pc, l’equazione per <span
+class="math inline">r_\text{GC}</span> ci dice che la loro dinamica è
+determinata dal CBH, e non dal campo esterno.</p>
 </section>
 <section class="slide level1">
 
@@ -508,7 +645,7 @@ r_\text{GC} \approx 4 \left(\frac{M_{\text{CBH}}}{10^7\,M_\odot}\right) \left(\f
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: false,
+        hash: true,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,
