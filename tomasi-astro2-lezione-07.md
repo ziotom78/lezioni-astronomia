@@ -427,13 +427,13 @@ la medesima distanza $r_\text{GC}$.
 
 ---
 
-<center>![](images/gillessen-first-page.png)</center>
-
----
-
 <center>![](images/eckart-velocity-dispersion.png){height=460px}</center>
 
 Siccome le velocità sono dell'ordine di 100 km/s e le distanze inferiori di 1 pc, l'equazione per $r_\text{GC}$ ci dice che la loro dinamica è determinata dal CBH, e non dal campo esterno.
+
+---
+
+<center>![](images/gillessen-first-page.png)</center>
 
 ---
 
