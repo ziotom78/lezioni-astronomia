@@ -27,10 +27,22 @@ css:
 
 ---
 
+# Quando scrivere un articolo?
+
+-   Vedi l'articolo [What makes a good research proposal?](https://tratt.net/laurie/blog/2022/what_makes_a_good_research_proposal.html), è applicabile anche qui.
+
+---
+
 <p style="text-align:center">![](images/referaggio.svg)</p>
 
 La parola finale è quella dell'editor!
 
+---
+
+<video width="640" height="480" controls>
+  <source src="Peter Ueda - Assistant professor vs Editor.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 # Preprint
 
