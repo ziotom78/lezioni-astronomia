@@ -1,7 +1,7 @@
 ---
 title: "Lezione di astronomia 1b"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "15 Ottobre 2021"
+date: "28 Ottobre 2022"
 css:
 - ./css/custom.css
 ...
@@ -9,101 +9,101 @@ css:
 
 # Calcolo delle correzioni bolometriche
 
-Nella [lezione precedente](tomasi-astro1-lezione-01a.html) abbiamo calcolato la luminosità totale del centro galattico a partire da misurazioni dello strumento DIRBE.
+-   Nella [lezione precedente](tomasi-astro1-lezione-01a.html) abbiamo calcolato la luminosità totale del centro galattico a partire da misurazioni dello strumento DIRBE.
 
-[Abbiamo però usato](tomasi-astro1-lezione-01a.html#/dal-flusso-alla-luminosità) una stima della correzione bolometrica $C$ senza capire come fosse ricavata. Ora colmeremo questa lacuna.
+-   [Abbiamo però usato](tomasi-astro1-lezione-01a.html#/dal-flusso-alla-luminosità) una stima della correzione bolometrica $C$ senza capire come fosse ricavata. Ora colmeremo questa lacuna.
 
 
 # Calcolo delle correzioni bolometriche
 
-La correzione bolometrica è una costante moltiplicativa che converte la luminosità misurata da uno strumento a banda $P$ limitata nella luminosità integrata su tutto lo spettro B:
+-   La correzione bolometrica è una costante moltiplicativa che converte la luminosità misurata da uno strumento a banda $P$ limitata nella luminosità integrata su tutto lo spettro B:
 
-$$
-C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu},
-$$
+    $$
+    C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu}.
+    $$
 
-dove $B$ può essere la densità spettrale o la densità di flusso.
+-   $B$ può essere la densità spettrale o la densità di flusso.
 
-
-
-# Dipendenza da $\nu$ e da $\lambda$
-
-La costante bolometrica $C$ deve essere identica se si esprime $B$ in funzione di $\lambda$ o di $\nu$.
-
-Ma l'espressione analitica di $B$ cambia se si esprime in funzione di $\nu$ o di $\lambda$, perché deve valere che
-
-$$
-B(\nu)\,\text{d}\nu = B(\lambda)\,\text{d}\lambda \quad\Rightarrow\quad
-B(\nu) = B\bigl(\lambda(\nu)\bigr)\,\frac{\text{d}\lambda}{\text{d}\nu}.
-$$
-
-Le altre quantità che servono per calcolare $C$ cambiano se si passa da $\nu$ a $\lambda$?
 
 
 # Dipendenza da $\nu$ e da $\lambda$
 
-Ad esempio, nel caso di un corpo nero la densità spettrale ha due espressioni analitiche diverse:
+-   La costante bolometrica $C$ deve essere identica se si esprime $B$ in funzione di $\lambda$ o di $\nu$.
 
-$$
-  \begin{aligned}
-    B_{bb}(\nu, T) &= \frac{2h\nu^3}{c^2} \frac1{e^{h\nu / kT} - 1}, \\
-    B_{bb}(\lambda, T) &= \frac{2hc^2}{\lambda^5} \frac1{e^{hc / \lambda kT} - 1}.
-  \end{aligned}
-$$
+-   Ma l'espressione analitica di $B$ cambia se si esprime in funzione di $\nu$ o di $\lambda$, perché deve valere che
 
-Nel caso della risposta in banda $P$, la sua espressione analitica cambia, oppure basta sostituire $\nu$ con $c/\lambda$?
+    $$
+    B(\nu)\,\text{d}\nu = B(\lambda)\,\text{d}\lambda \quad\Rightarrow\quad
+    B(\nu) = B\bigl(\lambda(\nu)\bigr)\,\frac{\text{d}\lambda}{\text{d}\nu}.
+    $$
+
+-   Le altre quantità che servono per calcolare $C$ cambiano se si passa da $\nu$ a $\lambda$?
+
+
+# Dipendenza da $\nu$ e da $\lambda$
+
+-   Ad esempio, nel caso di un corpo nero la densità spettrale ha due espressioni analitiche diverse:
+
+    $$
+      \begin{aligned}
+        B_{bb}(\nu, T) &= \frac{2h\nu^3}{c^2} \frac1{e^{h\nu / kT} - 1}, \\
+        B_{bb}(\lambda, T) &= \frac{2hc^2}{\lambda^5} \frac1{e^{hc / \lambda kT} - 1}.
+      \end{aligned}
+    $$
+
+-   Nel caso della risposta in banda $P$, la sua espressione analitica cambia, oppure basta sostituire $\nu$ con $c/\lambda$?
 
 
 
 # Risposta in banda
 
-L'energia ricevuta da un rivelatore resta la stessa se si usa $\nu$ o $\lambda$, quindi
+-   L'energia ricevuta da un rivelatore resta la stessa se si usa $\nu$ o $\lambda$, quindi
 
-$$
-\int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu =
-\int_0^\infty P_\lambda(\lambda) \times B(\lambda)\,\text{d}\lambda.
-$$
+    $$
+    \int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu =
+    \int_0^\infty P_\lambda(\lambda) \times B(\lambda)\,\text{d}\lambda.
+    $$
 
-Se $B(\nu)\,\text{d}\nu = B(\lambda)\,\text{d}\lambda$ allora
+-   Se $B(\nu)\,\text{d}\nu = B(\lambda)\,\text{d}\lambda$ allora
 
-$$
-\int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu =
-\int_0^\infty P_\lambda\bigl(\lambda(\nu)\bigr) \times B(\nu)\,\text{d}\nu,
-$$
+    $$
+    \int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu =
+    \int_0^\infty P_\lambda\bigl(\lambda(\nu)\bigr) \times B(\nu)\,\text{d}\nu.
+    $$
 
-che è vero se $P_\lambda(\lambda) = P_\lambda(c / \nu) = P_\nu(\nu)$. Quindi la forma analitica della banda non cambia, basta sostituire $\lambda \rightarrow c/\nu$.
+-   Ciò è vero se $P_\lambda(\lambda) = P_\lambda(c / \nu) = P_\nu(\nu)$. Quindi la forma analitica della banda non cambia, basta sostituire $\lambda \rightarrow c/\nu$.
 
 
 # Correzione bolometrica
 
-Il risultato precedente indica che $C$ può essere espressa sia in funzione di $\nu$ che di $\lambda$, a patto di cambiare *solo* l'espressione analitica per $B$:
+-   Il risultato precedente indica che $C$ può essere espressa sia in funzione di $\nu$ che di $\lambda$, a patto di cambiare *solo* l'espressione analitica per $B$:
 
-$$
-\begin{aligned}
-  C &= \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu} =\\
-  &= \frac{\int_0^\infty B(\lambda)\,\text{d}\lambda}{\int_0^\infty P_\lambda(\lambda) \times B(\lambda)\,\text{d}\lambda}.
-\end{aligned}
-$$
+    $$
+    \begin{aligned}
+      C &= \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu} =\\
+      &= \frac{\int_0^\infty B(\lambda)\,\text{d}\lambda}{\int_0^\infty P_\lambda(\lambda) \times B(\lambda)\,\text{d}\lambda}.
+    \end{aligned}
+    $$
 
-Ciò sarà utile per i calcoli che faremo tra poco.
+-   Ciò sarà utile per i calcoli che faremo tra poco.
 
 
 # Soluzione approssimata
 
-Stimiamo $C$ per il problema dei dati DIRBE assumendo una banda “top-hat”:
+-   Stimiamo $C$ per il problema dei dati DIRBE assumendo una banda “top-hat”:
 
-$$
-P_\nu(\nu) = \chi_{[\nu_0 - \Delta\nu/2, \nu_0 + \Delta\nu/2]},
-$$
+    $$
+    P_\nu(\nu) = \chi_{[\nu_0 - \Delta\nu/2, \nu_0 + \Delta\nu/2]}(\nu),
+    $$
 
-e uno spettro di corpo nero con $T = 3800\,\text{K}$:
+    e uno spettro di corpo nero con $T = 3800\,\text{K}$:
 
-$$
-C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
-    - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu}.
-$$
+    $$
+    C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
+        - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu}.
+    $$
 
-L'integrale al numeratore è \(\propto \sigma T^4\) (ma non integriamo su $\Omega$ come nella formula di Stefan-Boltzmann), mentre il denominatore richiede un calcolo numerico.
+-   L'integrale al numeratore è \(\propto \sigma T^4\) (ma non integriamo su $\Omega$ come nella formula di Stefan-Boltzmann), mentre il denominatore richiede un calcolo numerico.
 
 
 # Calcolo analitico della correzione bolometrica
@@ -131,13 +131,13 @@ dove $\delta\nu$ è il passo con cui campioniamo gli addendi (semplificato nell'
 
 # Julia
 
-Oggi useremo [Julia](http://julialang.org/) per calcolare la correzione bolometrica $C$.
+-   Oggi useremo [Julia](http://julialang.org/) per calcolare la correzione bolometrica $C$.
 
-Julia è un linguaggio di programmazione pensato per il calcolo scientifico, che permette di implementare i calcoli necessari al nostro scopo in maniera molto comoda e veloce.
+-   Julia è un linguaggio di programmazione pensato per il calcolo scientifico, che permette di implementare i calcoli necessari al nostro scopo in maniera molto comoda e veloce.
 
-Nelle prossime slide includo tutti i comandi necessari per effettuare i calcoli; è possibile anche guardare una vecchia registrazione sul sito [Asciinema](https://asciinema.org/a/0mBzdfUy3HYn9bLkRZxtoytyt), che usa la libreria [`UnicodePlots`](https://github.com/JuliaPlots/UnicodePlots.jl) per generare grafici da terminale (molto *nerd*!).
+-   Nelle prossime slide includo tutti i comandi necessari per effettuare i calcoli; è possibile anche guardare una vecchia registrazione sul sito [Asciinema](https://asciinema.org/a/0mBzdfUy3HYn9bLkRZxtoytyt), che usa la libreria [`UnicodePlots`](https://github.com/JuliaPlots/UnicodePlots.jl) per generare grafici da terminale (molto *nerd*!).
 
-Useremo l'interfaccia [JupyterLab](https://jupyter.org/), che è accessibile da Julia attraverso il pacchetto [IJulia](https://github.com/JuliaLang/IJulia.jl). Vediamo come installarla.
+-   Useremo l'interfaccia [JupyterLab](https://jupyter.org/), che è accessibile da Julia attraverso il pacchetto [IJulia](https://github.com/JuliaLang/IJulia.jl). Vediamo come installarla.
 
 
 # Installazione di JupyterLab
@@ -146,20 +146,20 @@ Useremo l'interfaccia [JupyterLab](https://jupyter.org/), che è accessibile da 
 
 # Installazione di librerie
 
-Una volta installato Julia e fatto partire IJulia, potrete creare un *notebook* (vedi video seguente). I comandi nel *notebook* si scrivono all'interno di *celle*, che si eseguono premendo `Maiusc + Invio`.
+-   Una volta installato Julia e fatto partire IJulia, potrete creare un *notebook* (vedi video seguente). I comandi nel *notebook* si scrivono all'interno di *celle*, che si eseguono premendo `Maiusc + Invio`.
 
-Inizieremo scaricando da Internet una serie di librerie molto utili:
+-   Inizieremo scaricando da Internet una serie di librerie molto utili:
 
-```julia
-import Pkg
-# Download and install these libraries:
-# - GZip: work with .gz compressed files
-# - Interpolations: create interpolating functions from discrete data
-# - Plots: guess what?
-for name in ["GZip", "Interpolations", "Plots"]
-    Pkg.add(name)
-end
-```
+    ```julia
+    import Pkg
+    # Download and install these libraries:
+    # - GZip: work with .gz compressed files
+    # - Interpolations: create interpolating functions from discrete data
+    # - Plots: guess what?
+    for name in ["GZip", "Interpolations", "Plots"]
+        Pkg.add(name)
+    end
+    ```
 
 # Calcolo approssimato di $C$
 
@@ -173,7 +173,7 @@ const k, h, c = 1.38e-23, 6.626e-34, 3e8
 b(ν, T) = (2h*ν^3 / c^2) / (exp(h*ν / (k*T)) - 1)
 
 let ν = 0.5e13:1e13:1e15
-    plot(ν, b.(ν, 3800), 
+    plot(ν, b.(ν, 3800),
     label = "", xlabel = "Frequency [Hz]", ylabel = "Spectral radiance [W/sr/m²/Hz]")
 end
 ```
@@ -236,7 +236,7 @@ Converge senza dubbio, ma è abbastanza diverso dal valore $C = 14.5$ riportato 
 # Migliorare la stima di $C$
 
 Ci sono due spiegazioni possibili per la discrepanza nel valore di $C$ che abbiamo osservato:
-  
+
 #. La banda di DIRBE non è perfettamente rettangolare.
 
 #. L'emissione delle stelle non segue esattamente una legge di
@@ -368,10 +368,10 @@ Per conoscere qual è lo spettro di una gigante rossa M0, dobbiamo fare affidame
 
 # Spettro stellare
 
-Gli spettri di Pickles sono disponibili al sito
+-   Gli spettri di Pickles sono disponibili al sito
 [www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html](https://www.eso.org/sci/facilities/paranal/decommissioned/isaac/tools/lib.html).
 
-Noi scegliamo uno spettro «M iii», il file è `ukm0iii.dat.gz`, che è compresso usando il programma `gzip`.
+-   Noi scegliamo uno spettro «M iii»; il file è `ukm0iii.dat.gz`, che è compresso usando il programma `gzip`.
 
 
 # Contenuto del file
@@ -397,21 +397,23 @@ Lo spettro è espresso in funzione di $\lambda$, non di $\nu$!
 
 # Lettura dello spettro stellare
 
-Le lunghezze d'onda sono espresse in Å, così dobbiamo convertirle in metri. La densità di flusso è nella seconda colonna, ed è espressa in Jansky ($1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}$).
+-   Le lunghezze d'onda sono espresse in Å, così dobbiamo convertirle in metri.
 
-```julia
-using DelimitedFiles
-using GZip
-spectrum = GZip.open("ukm0iii.dat.gz") do io
-    readdlm(io, skipstart=3)
-end
-m0_λ_pts = spectrum[:, 1] * 1e-10
-m0_flux_pts = spectrum[:, 2]
+-   La densità di flusso è nella seconda colonna, ed è espressa in Jansky ($1\,\text{Jy} = 10^{-26}\,\text{W}/\text{m}^2/\text{Hz}$).
 
-plot(m0_λ_pts, m0_flux_pts,
-    xlabel = "Wavelength [Å]",
-    ylabel = "Flux density [Jy]")
-```
+    ```julia
+    using DelimitedFiles
+    using GZip
+    spectrum = GZip.open("ukm0iii.dat.gz") do io
+        readdlm(io, skipstart=3)
+    end
+    m0_λ_pts = spectrum[:, 1] * 1e-10
+    m0_flux_pts = spectrum[:, 2]
+
+    plot(m0_λ_pts, m0_flux_pts,
+        xlabel = "Wavelength [Å]",
+        ylabel = "Flux density [Jy]")
+    ```
 
 ---
 
@@ -420,20 +422,20 @@ plot(m0_λ_pts, m0_flux_pts,
 
 # Confronto tra spettro e banda
 
-Anche se le unità di misura sono diverse, è interessante fare un grafico dello spettro stellare e della banda insieme.
+-   Anche se le unità di misura sono diverse, è interessante fare un grafico dello spettro stellare e della banda insieme.
 
-```julia
-plot(m0_λ_pts * 1e6, m0_flux_pts,
-    label = "M0 flux",
-    xlim = (0, 3),
-    xlabel = "Wavelength [μm]",
-    ylabel = "Flux density [Jy]",
-)
-plot!(dirbe_λ * 1e6, dirbe_band,
-    label = "DIRBE band")
-```
+    ```julia
+    plot(m0_λ_pts * 1e6, m0_flux_pts,
+        label = "M0 flux",
+        xlim = (0, 3),
+        xlabel = "Wavelength [μm]",
+        ylabel = "Flux density [Jy]",
+    )
+    plot!(dirbe_λ * 1e6, dirbe_band,
+        label = "DIRBE band")
+    ```
 
-La frequenza a 2.2 µm non è centratissima: DIRBE ha la [frequenza a 1.25 µm](tomasi-astro1-lezione-01a.html#/dwek-et-al.-apj-1995) che sarebbe più adatta…
+-   La frequenza a 2.2 µm non è centratissima: DIRBE ha la [frequenza a 1.25 µm](tomasi-astro1-lezione-01a.html#/dwek-et-al.-apj-1995) che sarebbe più adatta…
 
 ---
 
@@ -442,36 +444,38 @@ La frequenza a 2.2 µm non è centratissima: DIRBE ha la [frequenza a 1.25 µm
 
 # Calcolo di $C$
 
-In teoria saremmo pronti per calcolare la correzione bolometrica $C$:
+-   In teoria saremmo pronti per calcolare la correzione bolometrica $C$:
 
-$$
-C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty B(\nu)\,\text{d}\nu \times P_\nu(\nu)}
-= \frac{\int_0^\infty F(\lambda)\,\text{d}\lambda}{\int_0^\infty F(\lambda)\,\text{d}\lambda \times P_\lambda(\lambda)},
-$$
+    $$
+    C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty B(\nu)\,\text{d}\nu \times P_\nu(\nu)}
+    = \frac{\int_0^\infty F(\lambda)\,\text{d}\lambda}{\int_0^\infty F(\lambda)\,\text{d}\lambda \times P_\lambda(\lambda)},
+    $$
 
-dove siamo passati da $B$ (densità spettrale) a $F$ (densità di flusso), e da $\nu$ a $\lambda$. Ovviamente dobbiamo però convertire gli integrali in somme:
+    dove siamo passati da $B$ (densità spettrale) a $F$ (densità di flusso), e da $\nu$ a $\lambda$.
 
-$$
-C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}
-$$
+-   Ovviamente dobbiamo però convertire gli integrali in somme:
+
+    $$
+    C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}
+    $$
 
 
 # Campionamento (1/4)
 
-Non possiamo però applicare subito la formula per $C$.
+-   Non possiamo però applicare subito la formula per $C$.
 
-C'è infatti un problema nel campionamento delle curve, evidente se si fa un ingrandimento del grafico precedente:
+-   C'è infatti un problema nel campionamento delle curve, evidente se si fa un ingrandimento del grafico precedente:
 
-```julia
-scatter(m0_λ_pts * 1e6, m0_flux_pts,
-        xlim = (2.0, 2.2),
-        label="M0 flux",
-        xlabel="Wavelength [µm]",
-        ylabel = "Flux density [Jy]",ù
-        markersize=1)
-scatter!(dirbe_λ * 1e6, dirbe_band,
-         label="DIRBE band")
-```
+    ```julia
+    scatter(m0_λ_pts * 1e6, m0_flux_pts,
+            xlim = (2.0, 2.2),
+            label="M0 flux",
+            xlabel="Wavelength [µm]",
+            ylabel = "Flux density [Jy]",ù
+            markersize=1)
+    scatter!(dirbe_λ * 1e6, dirbe_band,
+             label="DIRBE band")
+    ```
 
 ---
 
@@ -480,31 +484,33 @@ scatter!(dirbe_λ * 1e6, dirbe_band,
 
 # Campionamento (2/4)
 
-Nella formula per $C$, dobbiamo valutare il prodotto $F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)$ per gli stessi valori di $\lambda_i$:
+-   Nella formula per $C$, dobbiamo valutare il prodotto $F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)$ per gli stessi valori di $\lambda_i$:
 
-$$
-C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}
-$$
+    $$
+    C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}
+    $$
 
-Ma qui ci sono dei valori di $\lambda_i$ per cui $P(\lambda_i)$ è ignoto!
+-   Ma qui ci sono dei valori di $\lambda_i$ per cui $P(\lambda_i)$ è ignoto!
 
 
 # Campionamento (3/4)
 
-Dobbiamo ricampionare la curva meno fitta ($P$) in modo che passi attraverso le stesse ascisse di $F$. Usiamo una libreria di Julia, [`Interpolations`](https://github.com/JuliaMath/Interpolations.jl), per implementare un'interpolazione lineare:
+-   Dobbiamo ricampionare la curva meno fitta ($P$) in modo che passi attraverso le stesse ascisse di $F$.
 
-```julia
-using Interpolations
+-   Usiamo una libreria di Julia, [`Interpolations`](https://github.com/JuliaMath/Interpolations.jl), per implementare un'interpolazione lineare:
 
-# dirbe_band_interp: funzione con argomento λ
-dirbe_band_interp = LinearInterpolation(
-    dirbe_λ,
-    dirbe_band,
-    extrapolation_bc=Flat(),
-)
-```
+    ```julia
+    using Interpolations
 
-(Vedi video).
+    # dirbe_band_interp: funzione con argomento λ
+    dirbe_band_interp = LinearInterpolation(
+        dirbe_λ,
+        dirbe_band,
+        extrapolation_bc=Flat(),
+    )
+    ```
+
+    (Vedi video).
 
 ---
 
@@ -542,40 +548,40 @@ scatter!(m0_λ_pts * 1e6, dirbe_band_interp.(m0_λ_pts),
 
 # Calcolo di $C$
 
-Per calcolare $C$, applichiamo la formula
+-   Per calcolare $C$, applichiamo la formula
 
-$$
-C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}.
-$$
+    $$
+    C \approx = \frac{\sum_i F(\lambda_i)\,\text{d}\lambda}{\sum_i F(\lambda_i)\,\text{d}\lambda \times P_\lambda(\lambda_i)}.
+    $$
 
-```julia
-C(flux, band) = sum(flux) / sum(flux .* band)
-@printf(
-    "Bolometric correction: %.2f\n",
-    C(m0_flux_pts, dirbe_band_interp.(m0_λ_pts)),
-)
-```
+    ```julia
+    C(flux, band) = sum(flux) / sum(flux .* band)
+    @printf(
+        "Bolometric correction: %.2f\n",
+        C(m0_flux_pts, dirbe_band_interp.(m0_λ_pts)),
+    )
+    ```
 
-Il risultato è
+-   Il risultato è
 
-```
-Bolometric correction: 14.55
-```
+    ```
+    Bolometric correction: 14.55
+    ```
 
-in perfetto accordo con quanto usato da Dwek et al. (1995).
+    in perfetto accordo con quanto usato da Dwek et al. (1995).
 
 # Dipendenza dalle assunzioni
 
-La prima stima che avevamo fornito per $C$ era basata sulla formula
-
-$$
-C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
-    - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu} \approx 20.28,
-$$
-
-che usava un'approssimazione sia per la banda di DIRBE che per lo spettro stellare.
-
-Qual è l'importanza relativa delle due assunzioni nel determinare la soluzione finale?
+-   La prima stima che avevamo fornito per $C$ era basata sulla formula
+    
+    $$
+    C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
+        - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu} \approx 20.28,
+    $$
+    
+    che usava un'approssimazione sia per la banda di DIRBE che per lo spettro stellare.
+    
+-   Qual è l'importanza relativa delle due assunzioni nel determinare la soluzione finale?
 
 
 # Spettro realistico, banda ideale
@@ -606,62 +612,62 @@ plot!(dirbe_λ[mask] * 1e6, dirbe_band[mask],
 
 # Spettro realistico, banda ideale
 
-Calcoliamo ora $C$ in questo caso:
+-   Calcoliamo ora $C$ in questo caso:
 
-```julia
-@printf("C = %.2f\n", C(m0_flux_pts, tophat_band))
-```
+    ```julia
+    @printf("C = %.2f\n", C(m0_flux_pts, tophat_band))
+    ```
 
-Il risultato è:
+-   Il risultato è:
 
-```
-C = 13.99
-```
+    ```
+    C = 13.99
+    ```
 
-che mostra che l'approssimazione della banda ideale conta molto poco!
-
-
-# Spettro ideale, banda realistica
-
-Consideriamo ora la seconda ipotesi: usiamo uno spettro di corpo nero e la banda effettiva di DIRBE.
-
-Ci occorre la formula del corpo nero in funzione di $\lambda$:
-
-$$
-B(\lambda, T) = \frac{2hc^2}{\lambda^5} \frac1{e^{hc / \lambda kT} - 1}.
-$$
-
-che in Julia si implementa così:
-
-```julia
-bλ(λ, T) = (2h * c^2 / λ^5) / (exp(h*c / (λ*k*T)) - 1))
-```
+-   Quinndi l'approssimazione della banda ideale conta molto poco!
 
 
 # Spettro ideale, banda realistica
 
-Facciamo ora il calcolo:
+-   Consideriamo ora la seconda ipotesi: usiamo uno spettro di corpo nero e la banda effettiva di DIRBE.
 
-```julia
-@printf(
-    "C = %.2f\n",
-    C(bλ.(m0_λ_pts, T), dirbe_band_interp.(m0_λ_pts)),
-)
-```
+-   Ci occorre la formula del corpo nero in funzione di $\lambda$:
 
-Il risultato è:
+    $$
+    B(\lambda, T) = \frac{2hc^2}{\lambda^5} \frac1{e^{hc / \lambda kT} - 1}.
+    $$
 
-```
-C = 18.90
-```
+    che in Julia si implementa così:
 
-Quindi l'approssimazione dello spettro di corpo nero è decisamente grossolana per una stella di questo tipo!
+    ```julia
+    bλ(λ, T) = (2h * c^2 / λ^5) / (exp(h*c / (λ*k*T)) - 1))
+    ```
+
+
+# Spettro ideale, banda realistica
+
+-   Facciamo ora il calcolo:
+
+    ```julia
+    @printf(
+        "C = %.2f\n",
+        C(bλ.(m0_λ_pts, T), dirbe_band_interp.(m0_λ_pts)),
+    )
+    ```
+
+-   Il risultato è:
+
+    ```
+    C = 18.90
+    ```
+
+-   Quindi l'approssimazione dello spettro di corpo nero è decisamente grossolana per una stella di questo tipo!
 
 
 # Avvisi
 
 # Questionari per la didattica
 
-Preoccupatevi di compilare con cura i questionari! Sono esaminati una volta all'anno dalla Commissione Paritetica Docenti-Studenti, e i risultati sono presi molto sul serio.
+-   Preoccupatevi di compilare con cura i questionari! Sono esaminati una volta all'anno dalla Commissione Paritetica Docenti-Studenti, e i risultati sono presi molto sul serio.
 
-Dovrete dare una valutazione per il corso e per queste esercitazioni. Se potete, date un vostro giudizio (nei commenti liberi) sull'utilità di queste lezioni di approfondimento rispetto alle lezioni nel loro complesso, e mettetelo nei commenti generali del corso.
+-   Dovrete dare una valutazione per il corso e per queste esercitazioni. Se potete, date un vostro giudizio (nei commenti liberi) sull'utilità di queste lezioni di approfondimento rispetto alle lezioni nel loro complesso, e mettetelo nei commenti generali del corso.

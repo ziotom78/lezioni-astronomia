@@ -11,32 +11,42 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="./css/custom.css"/>
   <link rel="stylesheet" href="./css/asciinema-player.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   var macros = [];
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      macros: macros,
-      fleqn: false
-     });
-  }}});
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -44,23 +54,32 @@
 
 <section id="title-slide">
   <h1 class="title">Lezione di astronomia 1a</h1>
-  <p class="author">Maurizio Tomasi (<a href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
-  <p class="date">14 Ottobre 2021</p>
+  <p class="author">Maurizio Tomasi (<a
+href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
+  <p class="date">27 Ottobre 2022</p>
 </section>
 
 <section id="introduzione" class="slide level1">
 <h1>Introduzione</h1>
 <ul>
-<li><p>In questo primo modulo farò alcune lezioni di approfondimento degli argomenti spiegati dal prof. Bersanelli.</p></li>
-<li><p>I contenuti specifici di queste lezioni non sono richiesti all’esame, ma i concetti esposti (es., magnitudini, correzioni bolometriche, …) sono previsti nel programma e verranno chiesti all’esame.</p></li>
+<li><p>In questo primo modulo farò alcune lezioni di approfondimento
+degli argomenti spiegati dal prof. Bersanelli.</p></li>
+<li><p>I contenuti specifici di queste lezioni non sono richiesti
+all’esame, ma i concetti esposti (es., magnitudini, correzioni
+bolometriche, …) sono previsti nel programma e verranno chiesti
+all’esame.</p></li>
 </ul>
 </section>
 <section id="queste-slide" class="slide level1">
 <h1>Queste slide</h1>
 <ul>
-<li><p>Sono disponibili all’indirizzo <a href="https://ziotom78.github.io/lezioni-astronomia/">ziotom78.github.io/lezioni-astronomia/</a>.</p></li>
-<li><p>Si possono stampare aggiungendo <code>?print-png</code> alla URL, ad esempio:</p>
-<p><a href="https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-png"><code>https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-png</code></a></p></li>
+<li><p>Sono disponibili all’indirizzo <a
+href="https://ziotom78.github.io/lezioni-astronomia/">ziotom78.github.io/lezioni-astronomia/</a>.</p></li>
+<li><p>Si possono stampare aggiungendo <code>?print-pdf</code> alla URL,
+ad esempio:</p>
+<p><a
+href="https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-pdf"
+class="uri">https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-pdf</a></p></li>
 </ul>
 </section>
 <section class="slide level1">
@@ -95,39 +114,55 @@
 <center>
 <img data-src="./images/./1995Dwek-fig1.png" style="width:35.0%" />
 </center>
-<p>Misurata in MJy/sr (1 Jy = 10<span class="math inline">^{-26}</span>,W/m<span class="math inline">^2</span>/Hz, misura la densità di flusso).</p>
+<p>Misurata in MJy/sr (1 Jy = 10<span
+class="math inline">^{-26}</span> W/m<span
+class="math inline">^2</span>/Hz, misura la densità di flusso).</p>
 </section>
 <section id="emissività-del-bulge" class="slide level1">
 <h1>Emissività del <em>bulge</em></h1>
 <center>
 <img data-src="./images/oblate-spheroid.png" />
 </center>
-<p>Gli autori assumono che l’emissività <span class="math inline">\rho</span> (<span class="math inline">[\rho] = \text{W\,m$^{-3}$}</span>) abbia la forma <span class="math display">
+<p>Gli autori assumono che l’emissività <span
+class="math inline">\rho</span> (<span class="math inline">[\rho] =
+\text{W\,m$^{-3}$}</span>) abbia la forma <span class="math display">
 \begin{aligned}
-    \rho(x, y, z) &amp;= \rho_0 \exp\bigl(-0.5 r^2\bigr), \text{ con } \\
+    \rho(x, y, z) &amp;= \rho_0 \exp\bigl(-0.5 r^2\bigr), \text{ con }
+\\
     r^2 &amp;= \frac{x^2 + y^2}{R_0^2} + \frac{z^2}{z_0^2}.
 \end{aligned}
 </span></p>
 </section>
 <section id="intensità" class="slide level1">
 <h1>Intensità</h1>
-<p>L’intensità <span class="math inline">I</span> è l’emissività <span class="math inline">\rho</span> proiettata lungo la linea di vista <span class="math inline">\mathbf{r}</span> (con direzione data dalle coordinate <span class="math inline">l, b</span>):</p>
+<ul>
+<li><p>L’intensità <span class="math inline">I</span> è l’emissività
+<span class="math inline">\rho</span> proiettata lungo la linea di vista
+<span class="math inline">\mathbf{r}</span> (con direzione data dalle
+coordinate <span class="math inline">l, b</span>):</p>
 <p><span class="math display">
-    I(l, b) = \frac1{4\pi} \int_0^\infty \rho\bigl(\mathbf{r}(s)\bigr)\,\text{d}s,\quad
+    I(l, b) = \frac1{4\pi} \int_0^\infty
+\rho\bigl(\mathbf{r}(s)\bigr)\,\text{d}s,\quad
     [I] = \text{W}\,\text{m}^{-2}\,\text{sr}^{-1}.
-</span></p>
-<p>Risolvendo l’integrale e facendo un fit (assumendo <span class="math inline">D = 8.5\,\text{kpc}</span>):</p>
+</span></p></li>
+<li><p>Risolvendo l’integrale e facendo un fit (assumendo <span
+class="math inline">D = 8.5\,\text{kpc}</span>):</p>
 <p><span class="math display">
 \begin{aligned}
-    R_0 &amp;= 0.91 \pm 0.01\,\text{kpc} \approx 1.9\times 10^{8}\,\text{AU}, \\
-    z_0 &amp;= 0.51 \pm 0.01\,\text{kpc} \approx 1.0\times 10^{8}\,\text{AU}, \\
+    R_0 &amp;= 0.91 \pm 0.01\,\text{kpc} \approx 1.9\times
+10^{8}\,\text{AU}, \\
+    z_0 &amp;= 0.51 \pm 0.01\,\text{kpc} \approx 1.0\times
+10^{8}\,\text{AU}, \\
     \rho_0 &amp;= (5.41 \pm 0.05) \times 10^7 L_\odot\,\text{pc$^{-3}$}.
 \end{aligned}
-</span></p>
+</span></p></li>
+</ul>
 </section>
 <section id="profilo-del-modello" class="slide level1">
 <h1>Profilo del modello</h1>
-<p>Gli autori hanno usato svariati modelli per il profilo di emissività:</p>
+<ul>
+<li><p>Gli autori hanno usato svariati modelli per il profilo di
+emissività:</p>
 <p><span class="math display">
 \begin{aligned}
     \rho &amp;= \rho_0 \exp\bigl(-0.5 r^2 \bigr), \\
@@ -136,23 +171,34 @@
     \rho &amp;= \rho_0 r^{-1.8} \exp\bigl(-r^3 \bigr), \\
     &amp;\ldots
 \end{aligned}
-</span></p>
-<p>Due fit sono risultati i migliori: il modello Gaussiano a tre parametri (<span class="math inline">\rho_0</span>, <span class="math inline">R_0</span>, <span class="math inline">z_0</span>) visto prima e il secondo elencato sopra.</p>
+</span></p></li>
+<li><p>Due fit sono risultati i migliori: il modello Gaussiano a tre
+parametri (<span class="math inline">\rho_0</span>, <span
+class="math inline">R_0</span>, <span class="math inline">z_0</span>)
+visto prima e il secondo elencato sopra.</p></li>
+</ul>
 </section>
 <section id="esercizio-sui-dati-di-dwek" class="slide level1">
 <h1>Esercizio sui dati di Dwek</h1>
 </section>
 <section id="scopo-dellesercizio" class="slide level1">
 <h1>Scopo dell’esercizio</h1>
-<p>Vogliamo calcolare approssimativamente quante stelle sono presenti nel bulge galattico.</p>
-<p>L’articolo di Dwek dà quest’informazione. Noi però la ricaveremo partendo dal grafico del flusso IR a 2.2 µm e stimando la luminosità tipica di una stella in questa regione.</p>
+<ul>
+<li><p>Vogliamo calcolare approssimativamente quante stelle sono
+presenti nel bulge galattico.</p></li>
+<li><p>L’articolo di Dwek dà quest’informazione. Noi però la ricaveremo
+partendo dal grafico del flusso IR a 2.2 µm e stimando la luminosità
+tipica di una stella in questa regione.</p></li>
+</ul>
 </section>
 <section id="densità-di-flusso-nellinfrarosso" class="slide level1">
 <h1>Densità di flusso nell’infrarosso</h1>
 <center>
 <img data-src="./images/1995Dwek-fig1.png" style="width:30.0%" />
 </center>
-<p>Per stimare <span class="math inline">L_\nu</span> (<span class="math inline">[L_\nu]=\text{W}</span>) usiamo <span class="math inline">D = 8.5\,\text{kpc}</span> e</p>
+<p>Per stimare <span class="math inline">L_\nu</span> (<span
+class="math inline">[L_\nu]=\text{W}</span>) usiamo <span
+class="math inline">D = 8.5\,\text{kpc}</span> e</p>
 <p><span class="math display">
 L_\nu = 4\pi D^2 F_\nu\,\Delta\nu.
 </span></p>
@@ -162,7 +208,10 @@ L_\nu = 4\pi D^2 F_\nu\,\Delta\nu.
 <center>
 <img data-src="./images/1995Dwek-fig1.png" style="width:30.0%" />
 </center>
-<p>Ci serve quindi <span class="math inline">F_\nu</span> (densità di flusso, <span class="math inline">[F_\nu]=\text{Jy}</span>), ma il grafico fornisce la radianza spettrale (<span class="math inline">\text{MJy}/\text{sr}</span>)!</p>
+<p>Ci serve quindi <span class="math inline">F_\nu</span> (densità di
+flusso, <span class="math inline">[F_\nu]=\text{Jy}</span>), ma il
+grafico fornisce la radianza spettrale (<span
+class="math inline">\text{MJy}/\text{sr}</span>)!</p>
 </section>
 <section id="angoli-solidi" class="slide level1">
 <h1>Angoli solidi</h1>
@@ -170,20 +219,31 @@ L_\nu = 4\pi D^2 F_\nu\,\Delta\nu.
 <center>
 <img data-src="./images/radian.png" />
 </center>
-<p>Il <em>radiante</em> è l’angolo <span class="math inline">\alpha</span> per cui <span class="math inline">AB = r</span>, così che</p>
+<ul>
+<li><p>Il <em>radiante</em> è l’angolo <span
+class="math inline">\alpha</span> per cui <span class="math inline">AB =
+r</span>, così che</p>
 <p><span class="math display">
 AB = \alpha r.
-</span></p>
-<p>Una circonferenza ha un’ampiezza di <span class="math inline">2\pi\,\text{rad}</span>.</p>
+</span></p></li>
+<li><p>Una circonferenza ha un’ampiezza di <span
+class="math inline">2\pi\,\text{rad}</span>.</p></li>
+</ul>
 </section>
 <section id="angoli-solidi-1" class="slide level1">
 <h1>Angoli solidi</h1>
 <center>
 <img data-src="./images/steradian.png" style="width:20.0%" />
 </center>
-<p>Lo steradiante è l’angolo <span class="math inline">\Omega</span> tale per cui <span class="math inline">S = r^2</span>, così che <span class="math display">
+<ul>
+<li><p>Lo steradiante è l’angolo <span class="math inline">\Omega</span>
+tale per cui <span class="math inline">S = r^2</span>, così che <span
+class="math display">
 S = \Omega r^2.
-</span> La sfera ha un’ampiezza di <span class="math inline">4\pi\,\text{sterad}</span>.</p>
+</span></p></li>
+<li><p>La sfera ha un’ampiezza di <span
+class="math inline">4\pi\,\text{sterad}</span>.</p></li>
+</ul>
 </section>
 <section id="angoli-solidi-2" class="slide level1">
 <h1>Angoli solidi</h1>
@@ -200,7 +260,9 @@ S = \Omega r^2.
 </section>
 <section id="piccoli-angoli" class="slide level1">
 <h1>Piccoli angoli</h1>
-<p>Se abbiamo a che fare con valori piccoli di <span class="math inline">\theta</span>, la formula si riduce a</p>
+<ul>
+<li><p>Se abbiamo a che fare con valori piccoli di <span
+class="math inline">\theta</span>, la formula si riduce a</p>
 <p><span class="math display">
 \begin{aligned}
   \Omega(\theta) &amp;\approx 2\pi\left(\frac12 \theta^2 +
@@ -208,33 +270,51 @@ S = \Omega r^2.
   &amp;= \pi \theta^2,
 \end{aligned}
 </span></p>
-<p>molto simile alla formula per l’area del cerchio (<span class="math inline">\pi r^2</span>).</p>
-<p>Possiamo quindi supporre che per una superficie ellittica con angoli <span class="math inline">a</span> e <span class="math inline">b</span> piccoli si abbia <span class="math inline">\Omega(a, b) \approx \pi a b</span>.</p>
+<p>molto simile alla formula per l’area del cerchio (<span
+class="math inline">\pi r^2</span>).</p></li>
+<li><p>Possiamo quindi supporre che per una superficie ellittica con
+angoli <span class="math inline">a</span> e <span
+class="math inline">b</span> piccoli si abbia <span
+class="math inline">\Omega(a, b) \approx \pi a b</span>.</p></li>
+</ul>
 </section>
 <section id="piccoli-angoli-1" class="slide level1">
 <h1>Piccoli angoli</h1>
-<p>In quali unità di misura vanno espressi gli angoli perché valga <span class="math inline">\Omega \approx \pi a b</span>?</p>
-<p>Siccome la formula</p>
+<ul>
+<li><p>In quali unità di misura vanno espressi gli angoli perché valga
+<span class="math inline">\Omega \approx \pi a b</span>?</p></li>
+<li><p>Siccome la formula</p>
 <p><span class="math display">
-\cos\theta \overset{\theta \rightarrow 0}{=} \frac12 \theta^2 + o(\theta^3),
+\cos\theta \overset{\theta \rightarrow 0}{=} \frac12 \theta^2 +
+o(\theta^3),
 </span></p>
-<p>vale se <span class="math inline">\theta</span> è in <em>radianti</em>, se vogliamo usare i gradi occorre usare</p>
+<p>vale se <span class="math inline">\theta</span> è in
+<em>radianti</em>, se vogliamo usare i gradi occorre usare</p>
 <p><span class="math display">
 \Omega \approx \frac{\pi^3}{180^2} a b.
-</span></p>
+</span></p></li>
+</ul>
 </section>
 <section id="densità-di-flusso-nellinfrarosso-2" class="slide level1">
 <h1>Densità di flusso nell’infrarosso</h1>
 <center>
 <img data-src="./images/1995Dwek-fig1.png" style="width:25.0%" />
 </center>
-<p>Per stimare <span class="math inline">L_\nu</span> (<span class="math inline">[L_\nu]=\text{W}</span>) usiamo <span class="math inline">L_\nu = 4\pi D^2 F_\nu\,\Delta\nu</span>.</p>
-<p>Ci serve quindi <span class="math inline">F_\nu</span> (densità di flusso, <span class="math inline">[F_\nu]=\text{Jy}</span>), ma il grafico fornisce la radianza spettrale (<span class="math inline">\text{MJy}/\text{sr}</span>)!</p>
+<ul>
+<li><p>Per stimare <span class="math inline">L_\nu</span> (<span
+class="math inline">[L_\nu]=\text{W}</span>) usiamo <span
+class="math inline">L_\nu = 4\pi D^2 F_\nu\,\Delta\nu</span>.</p></li>
+<li><p>Ci serve quindi <span class="math inline">F_\nu</span> (densità
+di flusso, <span class="math inline">[F_\nu]=\text{Jy}</span>), ma il
+grafico fornisce la radianza spettrale (<span
+class="math inline">\text{MJy}/\text{sr}</span>)!</p></li>
+</ul>
 </section>
 <section id="section" class="slide level1" data-transition="none">
 <h1 data-transition="none"></h1>
 <center>
-<img data-src="./images/1995Dwek-fig1-ellipse1.png" style="width:40.0%" />
+<img data-src="./images/1995Dwek-fig1-ellipse1.png"
+style="width:40.0%" />
 </center>
 <center>
 Ellisse di 3°×2°: 100 MJy/sr.
@@ -243,7 +323,8 @@ Ellisse di 3°×2°: 100 MJy/sr.
 <section id="section-1" class="slide level1" data-transition="none">
 <h1 data-transition="none"></h1>
 <center>
-<img data-src="./images/1995Dwek-fig1-ellipse2.png" style="width:40.0%" />
+<img data-src="./images/1995Dwek-fig1-ellipse2.png"
+style="width:40.0%" />
 </center>
 <center>
 Ellisse di 5°×4°: 50 MJy/sr.
@@ -252,7 +333,8 @@ Ellisse di 5°×4°: 50 MJy/sr.
 <section id="section-2" class="slide level1" data-transition="none">
 <h1 data-transition="none"></h1>
 <center>
-<img data-src="./images/1995Dwek-fig1-ellipse3.png" style="width:40.0%" />
+<img data-src="./images/1995Dwek-fig1-ellipse3.png"
+style="width:40.0%" />
 </center>
 <center>
 Ellisse di 13°×8°: 10 MJy/sr.
@@ -261,7 +343,8 @@ Ellisse di 13°×8°: 10 MJy/sr.
 <section id="section-3" class="slide level1" data-transition="none">
 <h1 data-transition="none"></h1>
 <center>
-<img data-src="./images/1995Dwek-fig1-ellipse4.png" style="width:40.0%" />
+<img data-src="./images/1995Dwek-fig1-ellipse4.png"
+style="width:40.0%" />
 </center>
 <center>
 Ellisse di 17°×12°: 5 MJy/sr.
@@ -270,7 +353,8 @@ Ellisse di 17°×12°: 5 MJy/sr.
 <section id="section-4" class="slide level1" data-transition="none">
 <h1 data-transition="none"></h1>
 <center>
-<img data-src="./images/1995Dwek-fig1-ellipse5.png" style="width:40.0%" />
+<img data-src="./images/1995Dwek-fig1-ellipse5.png"
+style="width:40.0%" />
 </center>
 <center>
 Rettangolo di 20°×20°: 1 MJy/sr.
@@ -330,9 +414,12 @@ Rettangolo di 20°×20°: 1 MJy/sr.
 </section>
 <section id="densità-di-flusso-totale" class="slide level1">
 <h1>Densità di flusso totale</h1>
-<p>Nell’approssimazione che gli angoli siano piccoli (<span class="math inline">20^\circ</span> è piccolo?!?), il flusso totale IR è <span class="math display">
+<p>Nell’approssimazione che gli angoli siano piccoli (<span
+class="math inline">20^\circ</span> è piccolo?!?), il flusso totale IR è
+<span class="math display">
 \begin{aligned}
-  F_\text{IR} \approx \frac{\pi^2}{180^2} \biggl(&amp;\pi a_1 b_1 I_1 + \\
+  F_\text{IR} \approx \frac{\pi^2}{180^2} \biggl(&amp;\pi a_1 b_1 I_1 +
+\\
     &amp;\bigl(\pi a_2 b_2 - \pi a_1 b_1\bigr) I_2 + \\
     &amp;\bigl(\pi a_3 b_3 - \pi a_2 b_2\bigr) I_3 + \\
     &amp;\bigl(\pi a_4 b_4 - \pi a_3 b_3\bigr) I_4 + \\
@@ -342,35 +429,53 @@ Rettangolo di 20°×20°: 1 MJy/sr.
 </section>
 <section id="densità-di-flusso-totale-1" class="slide level1">
 <h1>Densità di flusso totale</h1>
-<p>Sostituendo:</p>
+<ul>
+<li><p>Sostituendo:</p>
 <p><span class="math display">
 F_\nu \approx 0.64\,\text{MJy} = 6.4 \times
-10^{-21}\,\text{W\,m$^{-2}$\,Hz$^{-1}$},
+10^{-21}\,\text{W\,m$^{-2}$\,Hz$^{-1}$}.
 </span></p>
-<p>che è un po’ più basso del valore riportato nell’articolo:</p>
+<p>Ma questo valore è un po’ più basso di quello riportato
+nell’articolo:</p>
 <p><span class="math display">
 F_\nu = 7.3\times 10^{-21}\,\text{W\,m$^{-2}$\,Hz$^{-1}$}.
-</span></p>
-<p>Secondo voi, avremmo potuto aspettarci che il valore esatto fosse <em>maggiore</em> della nostra stima?</p>
+</span></p></li>
+<li><p>Secondo voi, avremmo potuto aspettarci che il valore esatto fosse
+<em>maggiore</em> della nostra stima?</p></li>
+</ul>
 </section>
 <section id="dal-flusso-alla-luminosità" class="slide level1">
 <h1>Dal flusso alla luminosità</h1>
-<p>A 2.2,<span class="math inline">\mu</span>m la banda di DIRBE è</p>
+<ul>
+<li><p>A 2.2,<span class="math inline">\mu</span>m la banda di DIRBE
+è</p>
 <p><span class="math display">
-\Delta\nu = 2.28\times 10^{13}\,\text{Hz},
-</span></p>
-<p>quindi il flusso nella banda è</p>
+\Delta\nu = 2.28\times 10^{13}\,\text{Hz}.
+</span></p></li>
+<li><p>Quindi il flusso nella banda è</p>
 <p><span class="math display">
 F_\text{IR} = F_\nu\,\Delta\nu = 1.5\times 10^{-7}\,\text{W\,m$^{-2}$}.
-</span></p>
-<p>Ma questo è il flusso nella banda di DIRBE, mentre per il nostro scopo serve il flusso su <em>tutto lo spettro</em>. Ci occorre quindi una correzione bolometrica, data dagli autori: <span class="math inline">C = 14.5</span>.</p>
+</span></p></li>
+<li><p>Ma questo è il flusso nella banda di DIRBE, mentre per il nostro
+scopo serve il flusso su <em>tutto lo spettro</em>. Ci occorre quindi
+una correzione bolometrica, data dagli autori: <span
+class="math inline">C = 14.5</span>.</p></li>
+</ul>
 </section>
 <section id="luminosità" class="slide level1">
 <h1>Luminosità</h1>
-<p>Dal flusso totale <span class="math inline">F = F_\nu\,\Delta\nu</span> e dalla correzione bolometrica <span class="math inline">C</span> ricaviamo che <span class="math display">
-L = \bigl(4\pi D^2\bigr)\,\bigl(F_\nu\Delta\nu\bigr)\,C \approx 5.4\times 10^9\,L_\odot.
-</span></p>
-<p>Se una stella tipica del bulge ha una luminosità <span class="math inline">L \sim 400\,L_\odot</span>, allora il numero <span class="math inline">N</span> di stelle nel bulge Galattico è circa <span class="math display"> N \approx 10^7. </span></p>
+<ul>
+<li><p>Dal flusso totale <span class="math inline">F =
+F_\nu\,\Delta\nu</span> e dalla correzione bolometrica <span
+class="math inline">C</span> ricaviamo che <span class="math display">
+L = \bigl(4\pi D^2\bigr)\,\bigl(F_\nu\Delta\nu\bigr)\,C \approx
+5.4\times 10^9\,L_\odot.
+</span></p></li>
+<li><p>Se una stella tipica del bulge ha una luminosità <span
+class="math inline">L \sim 400\,L_\odot</span>, allora il numero <span
+class="math inline">N</span> di stelle nel bulge Galattico è circa <span
+class="math display"> N \approx 10^7. </span></p></li>
+</ul>
 </section>
     </div>
   </div>
@@ -412,7 +517,7 @@ L = \bigl(4\pi D^2\bigr)\,\bigl(F_\nu\Delta\nu\bigr)\,C \approx 5.4\times 10^9\,
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: false,
+        hash: true,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,

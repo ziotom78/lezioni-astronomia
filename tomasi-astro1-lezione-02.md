@@ -1,7 +1,7 @@
 ---
 title: "Lezione di astronomia 2"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "29 Ottobre 2021"
+date: "4 Novembre 2022"
 css:
 - ./css/custom.css
 ...
@@ -10,9 +10,9 @@ css:
 
 # Sistemi binari
 
-I sistemi binari sono fondamentali per permettere la determinazione della *massa delle stelle*.
+-   I sistemi binari sono fondamentali per permettere la determinazione della *massa delle stelle*.
 
-A parte quei pochi sistemi in cui si può usare il lensing gravitazionale, sono gli unici casi in cui sia possibile determinare la massa di una stella.
+-   A parte quei pochi sistemi in cui si può usare il lensing gravitazionale, sono gli unici casi in cui sia possibile determinare la massa di una stella.
 
 # Osservazione di sistemi binari
 
@@ -642,23 +642,6 @@ Con l'opzione `/physics`, `rvfit` ha generato anche due grafici con l'andamento 
 
 Chi fosse interessato a riprodurre questi calcoli (auguri!) può guardare il [video](https://asciinema.org/a/213036), che contiene una registrazione
   dell'analisi fatta con GDL e Julia dei dati mostrati oggi.
-  
-
-# Articoli astronomici
-
--   L'ampia diffusione di software astronomici/astrofisici/cosmologici ha reso necessario un processo di controllo che verifichi non solo la qualità dei risultati scientifici, ma anche la qualità del codice e la sua documentazione.
-
--   Una rivista (non solo astronomica), Journal of Open Source Software, è nata esattamente con questo scopo.
-
-
-# Journal of Open Source Software ([JOSS](https://joss.theoj.org/))
-
-<center>![](./images/joss-homepage.png){width=40%}</center>
-
-
-# Esempio di [review](https://github.com/openjournals/joss-reviews/issues/1809)
-
-<center>![](./images/joss-review-example.png){width=50%}</center>
 
 
 # Andare oltre

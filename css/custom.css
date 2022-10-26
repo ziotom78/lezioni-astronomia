@@ -7,16 +7,6 @@
   text-transform: none;
 }
 
-.reveal p {
-  text-align: left;
+.sourceCode {
+    overflow: scroll;
 }
-
-.reveal ul {
-  display: block;
-}
-
-.reveal ol {
-  display: block;
-}
-
-.reveal .slides > section > section { text-align:left; }
