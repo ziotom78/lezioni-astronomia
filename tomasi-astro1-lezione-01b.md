@@ -7,24 +7,38 @@ css:
 ...
 
 
-# Calcolo delle correzioni bolometriche
+# Correzioni bolometriche
 
 -   Nella [lezione precedente](tomasi-astro1-lezione-01a.html) abbiamo calcolato la luminosità totale del centro galattico a partire da misurazioni dello strumento DIRBE.
 
 -   [Abbiamo però usato](tomasi-astro1-lezione-01a.html#/dal-flusso-alla-luminosità) una stima della correzione bolometrica $C$ senza capire come fosse ricavata. Ora colmeremo questa lacuna.
 
 
-# Calcolo delle correzioni bolometriche
+# Correzioni bolometriche
 
--   La correzione bolometrica è una costante moltiplicativa che converte la luminosità misurata da uno strumento a banda $P$ limitata nella luminosità integrata su tutto lo spettro B:
+-   La correzione bolometrica è una costante moltiplicativa che converte una quantità $B(\nu)$ (densità spettrale, densità di flusso…) misurata da uno strumento con banda $P(\nu)$ nella quantità integrata su tutto lo spettro:
 
     $$
     C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu}.
     $$
 
--   $B$ può essere la densità spettrale o la densità di flusso.
+-   Una volta nota C, si può stimare $B$ integrata:
 
+    $$
+    \int_0^\infty B(\nu)\,\text{d}\nu = C \int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu.
+    $$
 
+# Correzioni bolometriche
+
+-   Ovviamente, per poter usare la formula
+
+    $$
+    \int_0^\infty B(\nu)\,\text{d}\nu = C \int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu
+    $$
+
+    occorre avere una stima ragionevole di $B(\nu)$. Ma **non serve conoscere la normalizzazione**: nel nostro caso sappiamo che $B(\nu) \propto N$, con $N$ numero di stelle nel bulge, ma $N$ è proprio l'incognita!
+
+-   Però abbiamo un'idea dell'andamento di $B(\nu)$ e possiamo misurare l'integrale $\int_0^\infty P_\nu(\nu) \times B(\nu)\,\text{d}\nu$, quindi possiamo stimare $\int_0^\infty B(\nu)\,\text{d}\nu$.
 
 # Dipendenza da $\nu$ e da $\lambda$
 

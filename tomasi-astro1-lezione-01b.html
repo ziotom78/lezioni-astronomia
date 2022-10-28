@@ -122,9 +122,8 @@ href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
   <p class="date">28 Ottobre 2022</p>
 </section>
 
-<section id="calcolo-delle-correzioni-bolometriche"
-class="slide level1">
-<h1>Calcolo delle correzioni bolometriche</h1>
+<section id="correzioni-bolometriche" class="slide level1">
+<h1>Correzioni bolometriche</h1>
 <ul>
 <li><p>Nella <a href="tomasi-astro1-lezione-01a.html">lezione
 precedente</a> abbiamo calcolato la luminosità totale del centro
@@ -136,20 +135,45 @@ class="math inline">C</span> senza capire come fosse ricavata. Ora
 colmeremo questa lacuna.</p></li>
 </ul>
 </section>
-<section id="calcolo-delle-correzioni-bolometriche-1"
-class="slide level1">
-<h1>Calcolo delle correzioni bolometriche</h1>
+<section id="correzioni-bolometriche-1" class="slide level1">
+<h1>Correzioni bolometriche</h1>
 <ul>
 <li><p>La correzione bolometrica è una costante moltiplicativa che
-converte la luminosità misurata da uno strumento a banda <span
-class="math inline">P</span> limitata nella luminosità integrata su
-tutto lo spettro B:</p>
+converte una quantità <span class="math inline">B(\nu)</span> (densità
+spettrale, densità di flusso…) misurata da uno strumento con banda <span
+class="math inline">P(\nu)</span> nella quantità integrata su tutto lo
+spettro:</p>
 <p><span class="math display">
 C = \frac{\int_0^\infty B(\nu)\,\text{d}\nu}{\int_0^\infty P_\nu(\nu)
 \times B(\nu)\,\text{d}\nu}.
 </span></p></li>
-<li><p><span class="math inline">B</span> può essere la densità
-spettrale o la densità di flusso.</p></li>
+<li><p>Una volta nota C, si può stimare <span
+class="math inline">B</span> integrata:</p>
+<p><span class="math display">
+\int_0^\infty B(\nu)\,\text{d}\nu = C \int_0^\infty P_\nu(\nu) \times
+B(\nu)\,\text{d}\nu.
+</span></p></li>
+</ul>
+</section>
+<section id="correzioni-bolometriche-2" class="slide level1">
+<h1>Correzioni bolometriche</h1>
+<ul>
+<li><p>Ovviamente, per poter usare la formula</p>
+<p><span class="math display">
+\int_0^\infty B(\nu)\,\text{d}\nu = C \int_0^\infty P_\nu(\nu) \times
+B(\nu)\,\text{d}\nu
+</span></p>
+<p>occorre avere una stima ragionevole di <span
+class="math inline">B(\nu)</span>. Ma <strong>non serve conoscere la
+normalizzazione</strong>: nel nostro caso sappiamo che <span
+class="math inline">B(\nu) \propto N</span>, con <span
+class="math inline">N</span> numero di stelle nel bulge, ma <span
+class="math inline">N</span> è proprio l’incognita!</p></li>
+<li><p>Però abbiamo un’idea dell’andamento di <span
+class="math inline">B(\nu)</span> e possiamo misurare l’integrale <span
+class="math inline">\int_0^\infty P_\nu(\nu) \times
+B(\nu)\,\text{d}\nu</span>, quindi possiamo stimare <span
+class="math inline">\int_0^\infty B(\nu)\,\text{d}\nu</span>.</p></li>
 </ul>
 </section>
 <section id="dipendenza-da-nu-e-da-lambda" class="slide level1">
