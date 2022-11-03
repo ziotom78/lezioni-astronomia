@@ -6,9 +6,7 @@
 
 - 2022-10-27: [Lezione 1, prima parte](tomasi-astro1-lezione-01a.html) (il Centro Galattico, magnitudini).
 - 2022-10-28: [Lezione 1, seconda parte](tomasi-astro1-lezione-01b.html) (correzioni bolometriche, Julia).
-<!--
 - 2022-11-04: [Lezione 2](tomasi-astro1-lezione-02.html) (sistemi binari)
--->
 
 # Astronomia II
 

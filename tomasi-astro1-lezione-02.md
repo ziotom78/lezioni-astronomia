@@ -101,6 +101,14 @@ L'equazione analitica è utile solo per mettere in relazione diverse quantità f
 
 <center>![](./images/1971Wilson-title.png){width=60%}</center>
 
+---
+
+Il codice di Wilson & Devinney era stato scritto per [IBM System/360 Model 91](https://en.wikipedia.org/wiki/IBM_System/360_Model_91):
+
+<center>![](images/360-91-panel.jpg){width=60%}</center>
+
+<p style="text-align:right">Fonte: [Wikipedia](https://en.wikipedia.org/wiki/IBM_System/360_Model_91#/media/File:360-91-panel.jpg)</p>
+
 
 # Il sistema CV Velorum
 
@@ -613,13 +621,12 @@ Se però leggiamo meglio Williams, notiamo che ha fatto un'assunzione importante
 
 -   Confrontiamo i nuovi risultati con i vecchi:
 
-    |                 | Vecchio                   | Nuovo                     | Williams (2013)  |
-    |-----------------|---------------------------|---------------------------|------------------|
-    |                 |                           |                           |                  |
-    | $P$ [d]         | $6.3383\pm 0.0009$        | $6.3437\pm 0.0008$        | $6.340\pm 0.004$ |
-    | $e$             | $0.09\pm 0.02$            | $0.0\pm 0.0$              | $0.0\pm 0.0$     |
-    | $\gamma$ [km/s] | $8.4\pm 0.3\,\text{km/s}$ | $7.4\pm 0.3\,\text{km/s}$ | $8.5\pm 1.1$     |
-    | $K_1$ [km/s]    | $22.0\pm 0.5$             | $23.1\pm 0.5$             | $22.2\pm 1.5$    |
+    |                 | Vecchio            | Nuovo              | Williams         |
+    |-----------------|--------------------|--------------------|------------------|
+    | $P$ [d]         | $6.3383\pm 0.0009$ | $6.3437\pm 0.0008$ | $6.340\pm 0.004$ |
+    | $e$             | $0.09\pm 0.02$     | $0.0\pm 0.0$       | $0.0\pm 0.0$     |
+    | $\gamma$ [km/s] | $8.4\pm 0.3$       | $7.4\pm 0.3$       | $8.5\pm 1.1$     |
+    | $K_1$ [km/s]    | $22.0\pm 0.5$      | $23.1\pm 0.5$      | $22.2\pm 1.5$    |
 
 
 # Grafici di `rvfit`
