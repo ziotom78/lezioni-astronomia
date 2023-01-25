@@ -77,6 +77,12 @@ Your browser does not support the video tag.
 
     Notate però che in entrambi i casi si precisi di cosa si parla!
 
+# Titolo troppo astratto!
+
+![](images/2022Eker-title.png){width=45%}
+
+Dall'abstract si capisce che si sta proponendo una convenzione più semplice e generale per calcolare le correzioni bolometriche… &#129300;
+
 # Abstract troppo astratto!
 
 > In questo lavoro vengono presentati le interessanti proprietà di una particolare classe di operatori sugli spazi di Hilbert. La loro invarianza rispetto a certe trasformazioni mostra l'esistenza di interessanti proprietà simmetriche. Vengono anche mostrate interessanti applicazioni in alcuni domini della fisica.
@@ -116,7 +122,9 @@ Your browser does not support the video tag.
 
 -   Includete negli *acknowledgements* («ringraziamenti») tutti gli altri: chi vi ha corretto l'inglese, chi vi ha sistemato una figura, l'officina che vi ha costruito un pezzo…
 
--   In questa lista ricadono anche eventuali enti finanziatori (e i referee, se i loro commenti hanno aiutato a migliorare l'articolo!).
+-   In questa lista ricadono anche eventuali enti finanziatori
+
+-   Se i referee hanno dato un aiuto significativo nel migliorare l'articolo, ringraziate anche loro (*We thank the anonymous reviewer for their insightful comments…*)
   
 
 # Bibliografia
@@ -137,8 +145,30 @@ Your browser does not support the video tag.
 
 # Scrittura del testo
 
--    Evitare errori di sintassi («un pò», «invecie», «perchè», «daccordo»…);
--    Se scrivete in inglese, attenzione agli «italicismi» («we propose in this paper a method…»).
+È una buona idea produrre un *vomit draft*:
+
+1. Scrivete di getto tutto il testo che avete in mente, senza curarvi dei dettagli, della forma e neanche dell'accuratezza dei contenuti
+2. Non è consentito tornare indietro a correggere gli errori (neppure di battitura!)
+3. Inventate pure numeri là dove sentite che un numero ci starebbe bene
+4. Una volta buttato giù questo testo, mettetevi a sistemarlo
+
+---
+
+Citazione da [John Swartzwelder](https://www.newyorker.com/culture/the-new-yorker-interview/john-swartzwelder-sage-of-the-simpsons), sceneggiatore dei *Simpsons*:
+
+<blockquote>
+<p style="font-size: 32px">
+Since writing is very hard and rewriting is comparatively easy and rather fun, I always write my scripts all the way through as fast as I can, the first day, if possible, putting in crap jokes and pattern dialogue—“Homer, I don’t want you to do that.” “Then I won’t do it.” Then the next day, when I get up, the script’s been written. It’s lousy, but it’s a script. The hard part is done. It’s like a crappy little elf has snuck into my office and badly done all my work for me, and then left with a tip of his crappy hat. All I have to do from that point on is fix it. So I’ve taken a very hard job, writing, and turned it into an easy one, rewriting, overnight. I advise all writers to do their scripts and other writing this way. And be sure to send me a small royalty every time you do it.
+</p>
+</blockquote>
+
+L'idea è efficace perché consente di superare il «blocco della pagina bianca»: è più facile correggere un testo che scriverne uno da zero!
+
+# Il testo
+
+-   Evitare errori di sintassi («un pò», «invecie», «perchè», «daccordo»…);
+
+-   Se scrivete in inglese, attenzione agli «italicismi» («we propose in this paper a method…»).
 
 <p style="text-align:center">![](images/false-friends-title.jpg){height=280px}</p>
 
