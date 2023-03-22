@@ -94,11 +94,11 @@ usare la termodinamica classica per descriverli?
 
 -   Esiste uno strumento adatto per la descrizione di sistemi gravitazionalmente legati: il *teorema del viriale*.
 -   Consideriamo un sistema fisico di $N$ particelle confinato in un volume $V$ da forze interne.
--   Ogni particella si trova nella posizione $\vec r_i$ (rispetto a un certo sistema di riferimento), la forza risultante su di essa è $\vec F_i$, e $K_i$ è la sua energia cinetica.
+-   Ogni particella si trova nel punto $P_i$, la forza risultante su di essa è $\vec F_i$, e $K_i$ è la sua energia cinetica.
 
 # Medie temporali
 
--   Le quantità $\vec r_i$, $\vec F_i$ e $K_i$ variano nel tempo
+-   Le quantità $P_i$, $\vec F_i$ e $K_i$ variano nel tempo
 -   Siamo però interessati più al loro **valore medio** che alla loro evoluzione istante per istante.
 -   Data una quantità $f = f(t)$ dipendente dal tempo, il valore di
     \[
@@ -109,11 +109,13 @@ usare la termodinamica classica per descriverli?
 
 # Definizione di «viriale»
 
--   Si dice «viriale» la quantità (dipendente dal sistema di riferimento)
+-   Data un'origine del sistema di riferimento O, si dice «viriale» la quantità
     \[
-    G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
+    G \equiv \sum_{i=1}^N (P_i - O) \cdot \vec p_i = \sum_{i=1}^N \vec r_i \cdot \vec p_i,
     \]
--   Nel caso in cui le particelle si trovino in un volume limitato $V$, esso gode di due proprietà:
+    dove $\vec r_i = P_i - O$ è il vettore che punta verso la particella $i$-esima.
+    
+-   Se le particelle si trovano in un volume limitato $V$, allora
     1.  $G$ è una quantità limitata;
     2.  Dopo un certo tempo, $G$ tende a diventare costante.
 
@@ -162,10 +164,10 @@ la tesi:
 \[
 \begin{aligned}
   \left<\frac{\text{d}}{\text{d} t} \sum_{i=1}^N \vec r_i \cdot
-      \vec p_i\right>_t &=& 0 \\
+      \vec p_i\right>_t &= 0, \\
   \left<2 \sum_{i=1}^N K_i + \sum_{i=1}^N \vec r_i \cdot
-      \vec F_i\right>_t &=& 0 \\
-  2\left<\sum_{i=1}^N K_i\right>_t &=& -\left<\sum_{i=1}^N \vec r_i \cdot
+      \vec F_i\right>_t &= 0, \\
+  2\left<\sum_{i=1}^N K_i\right>_t &= -\left<\sum_{i=1}^N \vec r_i \cdot
       \vec F_i\right>_t.
 \end{aligned}
 \]
@@ -204,12 +206,12 @@ implica che
 
 # Il viriale in sistemi gravitazionali
 
-In un sistema di corpi di massa $m$ dove l'unica forza è quella gravitazionale, $U = k r^{-1}$ (con $k = -G m^2$), e quindi $\alpha = -1$:
-\[
-  \left<U\right>_t = -2\left< K \right>_t.
-\]
+-   In un sistema di corpi di massa $m$ dove l'unica forza è quella gravitazionale, $U = k r^{-1}$ (con $k = -G m^2$), e quindi $\alpha = -1$:
+    \[
+      \left<U\right>_t = -2\left< K \right>_t.
+    \]
 
-In un sistema virializzato dominato dalla gravità, l'energia potenziale è *doppia* (in modulo) rispetto all'energia cinetica.
+-   In un sistema virializzato dominato dalla gravità, l'energia potenziale è *doppia* (in modulo) rispetto all'energia cinetica.
 
 
 # Livello di energia potenziale
@@ -259,7 +261,7 @@ Essa corrisponde circa alla temperatura del nucleo.
 -   Un nucleo atomico ha raggio $R \sim 10^{-15}\,\text{m}$.
 -   L'energia cinetica media classica $p^2/(2m)$ è stimabile dal principio di indeterminazione:
     \[
-    \Delta p_x \Delta x \sim \frac\hbar2.
+    \Delta p_x \Delta x \sim \frac\hbar2 \qquad\Rightarrow\qquad p_x \approx \frac{\hbar}{2R}.
     \]
 -   Siccome $p^2 = p_x^2 + p_y^2 + p_z^2 \approx 3 p_x^2 \approx 3 \hbar^2/4 R^2$, allora
     \[
@@ -389,7 +391,7 @@ abbiamo che
 
 Dal momento che
 \[
-\left(v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}}\right) < \left(v_f = \sqrt{\frac{2 G M_\text{GC}}R}\right),
+\left(v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}} \approx 16\,\text{km/s}\right) < \left(v_f = \sqrt{\frac{2 G M_\text{GC}}R} \approx 25\,\text{km/s}\right),
 \]
 ciò conferma l'ipotesi che l'ammasso globulare (e in generale
 qualsiasi sistema gravitazionale virializzato) sia un sistema legato.

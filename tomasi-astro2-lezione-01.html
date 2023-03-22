@@ -252,9 +252,8 @@ gravitazionalmente legati: il <em>teorema del viriale</em>.</li>
 <li>Consideriamo un sistema fisico di <span class="math inline">N</span>
 particelle confinato in un volume <span class="math inline">V</span> da
 forze interne.</li>
-<li>Ogni particella si trova nella posizione <span
-class="math inline">\vec r_i</span> (rispetto a un certo sistema di
-riferimento), la forza risultante su di essa è <span
+<li>Ogni particella si trova nel punto <span
+class="math inline">P_i</span>, la forza risultante su di essa è <span
 class="math inline">\vec F_i</span>, e <span
 class="math inline">K_i</span> è la sua energia cinetica.</li>
 </ul>
@@ -262,7 +261,7 @@ class="math inline">K_i</span> è la sua energia cinetica.</li>
 <section id="medie-temporali" class="slide level1">
 <h1>Medie temporali</h1>
 <ul>
-<li>Le quantità <span class="math inline">\vec r_i</span>, <span
+<li>Le quantità <span class="math inline">P_i</span>, <span
 class="math inline">\vec F_i</span> e <span
 class="math inline">K_i</span> variano nel tempo</li>
 <li>Siamo però interessati più al loro <strong>valore medio</strong> che
@@ -277,12 +276,15 @@ dipendente dal tempo, il valore di <span class="math display">
 <section id="definizione-di-viriale" class="slide level1">
 <h1>Definizione di «viriale»</h1>
 <ul>
-<li>Si dice «viriale» la quantità (dipendente dal sistema di
-riferimento) <span class="math display">
-G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
-</span></li>
-<li>Nel caso in cui le particelle si trovino in un volume limitato <span
-class="math inline">V</span>, esso gode di due proprietà:
+<li><p>Data un’origine del sistema di riferimento O, si dice «viriale»
+la quantità <span class="math display">
+G \equiv \sum_{i=1}^N (P_i - O) \cdot \vec p_i = \sum_{i=1}^N \vec r_i
+\cdot \vec p_i,
+</span> dove <span class="math inline">\vec r_i = P_i - O</span> è il
+vettore che punta verso la particella <span
+class="math inline">i</span>-esima.</p></li>
+<li><p>Se le particelle si trovano in un volume limitato <span
+class="math inline">V</span>, allora</p>
 <ol type="1">
 <li><span class="math inline">G</span> è una quantità limitata;</li>
 <li>Dopo un certo tempo, <span class="math inline">G</span> tende a
@@ -341,11 +343,11 @@ l’energia cinetica totale del sistema.</p>
 class="math display">
 \begin{aligned}
   \left&lt;\frac{\text{d}}{\text{d} t} \sum_{i=1}^N \vec r_i \cdot
-      \vec p_i\right&gt;_t &amp;=&amp; 0 \\
+      \vec p_i\right&gt;_t &amp;= 0, \\
   \left&lt;2 \sum_{i=1}^N K_i + \sum_{i=1}^N \vec r_i \cdot
-      \vec F_i\right&gt;_t &amp;=&amp; 0 \\
-  2\left&lt;\sum_{i=1}^N K_i\right&gt;_t &amp;=&amp;
--\left&lt;\sum_{i=1}^N \vec r_i \cdot
+      \vec F_i\right&gt;_t &amp;= 0, \\
+  2\left&lt;\sum_{i=1}^N K_i\right&gt;_t &amp;= -\left&lt;\sum_{i=1}^N
+\vec r_i \cdot
       \vec F_i\right&gt;_t.
 \end{aligned}
 </span></p>
@@ -384,16 +386,18 @@ l’energia potenziale totale.</p>
 </section>
 <section id="il-viriale-in-sistemi-gravitazionali" class="slide level1">
 <h1>Il viriale in sistemi gravitazionali</h1>
-<p>In un sistema di corpi di massa <span class="math inline">m</span>
-dove l’unica forza è quella gravitazionale, <span class="math inline">U
-= k r^{-1}</span> (con <span class="math inline">k = -G m^2</span>), e
-quindi <span class="math inline">\alpha = -1</span>: <span
-class="math display">
+<ul>
+<li><p>In un sistema di corpi di massa <span
+class="math inline">m</span> dove l’unica forza è quella gravitazionale,
+<span class="math inline">U = k r^{-1}</span> (con <span
+class="math inline">k = -G m^2</span>), e quindi <span
+class="math inline">\alpha = -1</span>: <span class="math display">
   \left&lt;U\right&gt;_t = -2\left&lt; K \right&gt;_t.
-</span></p>
-<p>In un sistema virializzato dominato dalla gravità, l’energia
+</span></p></li>
+<li><p>In un sistema virializzato dominato dalla gravità, l’energia
 potenziale è <em>doppia</em> (in modulo) rispetto all’energia
-cinetica.</p>
+cinetica.</p></li>
+</ul>
 </section>
 <section id="livello-di-energia-potenziale" class="slide level1">
 <h1>Livello di energia potenziale</h1>
@@ -455,7 +459,8 @@ viriale.</li>
 <li>L’energia cinetica media classica <span
 class="math inline">p^2/(2m)</span> è stimabile dal principio di
 indeterminazione: <span class="math display">
-\Delta p_x \Delta x \sim \frac\hbar2.
+\Delta p_x \Delta x \sim \frac\hbar2 \qquad\Rightarrow\qquad p_x \approx
+\frac{\hbar}{2R}.
 </span></li>
 <li>Siccome <span class="math inline">p^2 = p_x^2 + p_y^2 + p_z^2
 \approx 3 p_x^2 \approx 3 \hbar^2/4 R^2</span>, allora <span
@@ -586,8 +591,9 @@ class="math inline">K</span>: <span class="math display">
 class="slide level1">
 <h1>Velocità di fuga e velocità quadratica media</h1>
 <p>Dal momento che <span class="math display">
-\left(v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}}\right) &lt;
-\left(v_f = \sqrt{\frac{2 G M_\text{GC}}R}\right),
+\left(v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}} \approx
+16\,\text{km/s}\right) &lt; \left(v_f = \sqrt{\frac{2 G M_\text{GC}}R}
+\approx 25\,\text{km/s}\right),
 </span> ciò conferma l’ipotesi che l’ammasso globulare (e in generale
 qualsiasi sistema gravitazionale virializzato) sia un sistema
 legato.</p>
