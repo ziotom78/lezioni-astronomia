@@ -11,32 +11,42 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="./css/custom.css"/>
   <link rel="stylesheet" href="./css/asciinema-player.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   var macros = [];
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      macros: macros,
-      fleqn: false
-     });
-  }}});
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -44,8 +54,9 @@
 
 <section id="title-slide">
   <h1 class="title">Lezione di Astronomia II – 4</h1>
-  <p class="author">Maurizio Tomasi (<a href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
-  <p class="date">1 Aprile 2022</p>
+  <p class="author">Maurizio Tomasi (<a
+href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
+  <p class="date">31 Marzo 2023</p>
 </section>
 
 <section id="la-polvere-nel-mezzo-interstellare" class="slide level1">
@@ -56,44 +67,61 @@
 <center>
 <img data-src="images/harwit-starlight-polarization.png" height="660" />
 </center>
-<p><small>Harwit, <em>Astrophysical concepts</em> (4th edition), pag. 426, Springer (2006)</small></p>
+<p><small>Harwit, <em>Astrophysical concepts</em> (4th edition),
+pag. 426, Springer (2006)</small></p>
 </section>
 <section id="forma-dei-grani-di-polvere" class="slide level1">
 <h1>Forma dei grani di polvere</h1>
 <ul>
-<li><p>La luce delle stelle nel disco galattico è preferenzialmente polarizzata <strong>parallelamente</strong> al piano</p></li>
-<li><p>Ma le stelle nelle vicinanze del Sole non emettono luce così polarizzata come quella che si osserva → è l’ISM che causa la polarizzazione</p></li>
-<li><p>Questo implica che i grani di polvere devono assorbire più o meno facilmente i fotoni a seconda del loro angolo di polarizzazione</p></li>
+<li><p>La luce delle stelle nel disco galattico è preferenzialmente
+polarizzata <strong>parallelamente</strong> al piano</p></li>
+<li><p>Ma le stelle nelle vicinanze del Sole non emettono luce così
+polarizzata come quella che si osserva → è l’ISM che causa la
+polarizzazione</p></li>
+<li><p>Questo implica che i grani di polvere devono assorbire più o meno
+facilmente i fotoni a seconda del loro angolo di polarizzazione</p></li>
 </ul>
 </section>
 <section id="forma-dei-grani-di-polvere-1" class="slide level1">
 <h1>Forma dei grani di polvere</h1>
-<p>La forma più probabile dei grani è un ellissoide: in questo modo gli elettroni sono liberi di rispondere al campo <span class="math inline">\vec E</span> esterno più in alcune direzioni che in altre.</p>
+<p>La forma più probabile dei grani è un ellissoide: in questo modo gli
+elettroni sono liberi di rispondere al campo <span
+class="math inline">\vec E</span> esterno più in alcune direzioni che in
+altre.</p>
 <center>
 <img data-src="images/dust-grain-shape.png" height="320" />
 </center>
-<p>La polarizzazione si osserva soprattutto nel visibile, mentre è assente nell’UV (ottica geometrica!)</p>
+<p>La polarizzazione si osserva soprattutto nel visibile, mentre è
+assente nell’UV (ottica geometrica!)</p>
 </section>
 <section id="osservazioni-sulla-polarizzazione" class="slide level1">
 <h1>Osservazioni sulla polarizzazione</h1>
 <ul>
-<li>Livello medio di polarizzazione: <span class="math inline">1\,\%\div2\,\%</span>;</li>
+<li>Livello medio di polarizzazione: <span
+class="math inline">1\,\%\div2\,\%</span>;</li>
 <li>Debole dipendenza da <span class="math inline">\lambda</span>;</li>
 <li>Dipendenza da <span class="math inline">A_V</span>:
 <ul>
-<li>Se <span class="math inline">A_V</span> è piccolo, la polarizzazione è sempre bassa;</li>
-<li>Se <span class="math inline">A_V</span> è grande, la polarizzazione può essere qualunque.</li>
+<li>Se <span class="math inline">A_V</span> è piccolo, la polarizzazione
+è sempre bassa;</li>
+<li>Se <span class="math inline">A_V</span> è grande, la polarizzazione
+può essere qualunque.</li>
 </ul>
-(Di conseguenza, la presenza di polvere è <strong>necessaria ma non sufficiente</strong> per avere polarizzazione).</li>
+(Di conseguenza, la presenza di polvere è <strong>necessaria ma non
+sufficiente</strong> per avere polarizzazione).</li>
 </ul>
 </section>
 <section id="carica-elettrica-dei-grani" class="slide level1">
 <h1>Carica elettrica dei grani</h1>
-<p>L’interazione dei grani con campi elettromagnetici indica che non sono elettricamente neutri (ma globalmente ISM sì!).</p>
-<p>Ci sono due meccanismi che permettono di accumulare carica sui grani:</p>
+<p>L’interazione dei grani con campi elettromagnetici indica che non
+sono elettricamente neutri (ma globalmente ISM sì!).</p>
+<p>Ci sono due meccanismi che permettono di accumulare carica sui
+grani:</p>
 <ol>
 <li>Elettroni liberi «lenti» si fissano sulla superficie del grano;</li>
-<li>Effetto fotoelettrico causato da fotoni UV (poco importante se <span class="math inline">A_V</span> è grande, perché in tal caso la polvere scherma i fotoni).</li>
+<li>Effetto fotoelettrico causato da fotoni UV (poco importante se <span
+class="math inline">A_V</span> è grande, perché in tal caso la polvere
+scherma i fotoni).</li>
 </ol>
 <p>Consideriamo il primo caso.</p>
 </section>
@@ -102,43 +130,66 @@
 <center>
 <img data-src="images/dust_charge.png" height="360" />
 </center>
-<p>Per fissarsi al grano, l’energia cinetica dell’elettrone deve essere maggiore del potenziale Coulombiano del grano (con <span class="math inline">r_g</span> circa 1µm). In questo caso, <span class="math inline">T</span> è la temperatura della nube di grani.</p>
+<p>Per fissarsi al grano, l’energia cinetica dell’elettrone deve essere
+maggiore del potenziale Coulombiano del grano (con <span
+class="math inline">r_g</span> circa 1µm). In questo caso, <span
+class="math inline">T</span> è la temperatura della nube di grani.</p>
 </section>
 <section id="carica-elettrica-dei-grani-2" class="slide level1">
 <h1>Carica elettrica dei grani</h1>
-<p>Il conto non è molto diverso da quello del raggio collisionale per gli ammassi globulari: studiamo quando l’energia potenziale è uguale all’energia cinetica.</p>
+<p>Il conto non è molto diverso da quello del raggio collisionale per
+gli ammassi globulari: studiamo quando l’energia potenziale è uguale
+all’energia cinetica.</p>
 <p><span class="math display">
 \begin{aligned}
-  \frac{N e^2}{4\pi\epsilon_0 r_g} &amp;= \frac32 k_B T,\quad\text{da cui} \\
+  \frac{N e^2}{4\pi\epsilon_0 r_g} &amp;= \frac32 k_B T,\quad\text{da
+cui} \\
   N &amp;= 6\pi\epsilon_0 k_B T \frac{r_g}{e^2} \approx 1.
 \end{aligned}
 </span></p>
-<p>Ma la coda ad alta velocità nella distribuzione di Boltzmann per gli <span class="math inline">e</span> liberi porta a <span class="math inline">N \sim 10</span>.</p>
+<p>Ma la coda ad alta velocità nella distribuzione di Boltzmann per gli
+<span class="math inline">e</span> liberi porta a <span
+class="math inline">N \sim 10</span>.</p>
 </section>
 <section id="temperatura-dei-grani" class="slide level1">
 <h1>Temperatura dei grani</h1>
-<p>Stimiamo ora la temperatura media del <em>singolo</em> grano di polvere. Possiamo supporre che essi siano scaldati da stelle vicine.</p>
-<p>Supponiamo che un grano sia a una distanza <span class="math inline">d</span> da una stella con raggio <span class="math inline">R</span> e temperatura <span class="math inline">T</span>, e che la luminosità della stella sia <span class="math display">
+<p>Stimiamo ora la temperatura media del <em>singolo</em> grano di
+polvere. Possiamo supporre che essi siano scaldati da stelle vicine.</p>
+<p>Supponiamo che un grano sia a una distanza <span
+class="math inline">d</span> da una stella con raggio <span
+class="math inline">R</span> e temperatura <span
+class="math inline">T</span>, e che la luminosità della stella sia <span
+class="math display">
 L = 4\pi R^2 \sigma T^4
 </span> (corpo nero a simmetria sferica).</p>
 </section>
 <section id="temperatura-dei-grani-1" class="slide level1">
 <h1>Temperatura dei grani</h1>
-<p>La frazione di potenza che colpisce il grano è <span class="math display">
+<p>La frazione di potenza che colpisce il grano è <span
+class="math display">
 f = \frac{\pi r^2_g}{4\pi d^2} = \frac14\,\left(\frac{r_g}{d}\right)^2.
-</span> Se il grano ha albedo <span class="math inline">a</span>, assorbe una potenza <span class="math display">
-P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi R^2}{d^2}\right),
-</span> dove <span class="math inline">\pi R^2/d^2 \equiv \Omega_*</span> è l’angolo solido della stella visto dal grano.</p>
+</span> Se il grano ha albedo <span class="math inline">a</span>,
+assorbe una potenza <span class="math display">
+P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi
+R^2}{d^2}\right),
+</span> dove <span class="math inline">\pi R^2/d^2 \equiv
+\Omega_*</span> è l’angolo solido della stella visto dal grano.</p>
 </section>
 <section id="temperatura-dei-grani-2" class="slide level1">
 <h1>Temperatura dei grani</h1>
-<p>Per calcolare la temperatura del grano all’equilibrio termico, dobbiamo considerare anche la potenza rilasciata dal grano: <span class="math display">
+<p>Per calcolare la temperatura del grano all’equilibrio termico,
+dobbiamo considerare anche la potenza rilasciata dal grano: <span
+class="math display">
   P_\text{rad} = 4\pi r_g^2 \sigma T_g^4,
-</span> dove usiamo la cosiddetta <strong>temperatura effettiva</strong> <span class="math inline">T_g</span>, ossia la temperatura di un corpo nero che emetterebbe la stessa quantità di energia del grano.</p>
+</span> dove usiamo la cosiddetta <strong>temperatura effettiva</strong>
+<span class="math inline">T_g</span>, ossia la temperatura di un corpo
+nero che emetterebbe la stessa quantità di energia del grano.</p>
 </section>
 <section id="temperatura-dei-grani-3" class="slide level1">
 <h1>Temperatura dei grani</h1>
-<p>Se la polvere ha raggiunto la temperatura <span class="math inline">T_g</span> di equilibrio, la potenza emessa deve uguagliare quella assorbita: <span class="math display">
+<p>Se la polvere ha raggiunto la temperatura <span
+class="math inline">T_g</span> di equilibrio, la potenza emessa deve
+uguagliare quella assorbita: <span class="math display">
 \begin{aligned}
   P_\text{rad} &amp;= P_\text{abs} \\
   4\pi r_g^2 \sigma T_g^4 &amp;= (1 - a) r_g^2 \sigma T^4
@@ -146,41 +197,55 @@ P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi R^2}{d^2
   T_g &amp;= T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}.
 \end{aligned}
 </span></p>
-<p>(Attenzione: il Kutner dà una spiegazione fisicamente sbagliata di questa relazione).</p>
+<p>(Attenzione: il Kutner dà una spiegazione fisicamente sbagliata di
+questa relazione).</p>
 </section>
 <section id="temperatura-dei-grani-4" class="slide level1">
 <h1>Temperatura dei grani</h1>
 <ul>
 <li><p>La formula <span class="math display">
 T_g = T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}
-</span> mostra che la temperatura della polvere non dipende dalla dimensione dei grani.</p></li>
-<li><p>Questa è la temperatura del <strong>singolo</strong> grano di polvere, ma possiamo assumere che all’equilibrio coincida con la temperatura della radiazione emessa dall’intera nube di grani.</p></li>
+</span> mostra che la temperatura della polvere non dipende dalla
+dimensione dei grani.</p></li>
+<li><p>Questa è la temperatura del <strong>singolo</strong> grano di
+polvere, ma possiamo assumere che all’equilibrio coincida con la
+temperatura della radiazione emessa dall’intera nube di grani.</p></li>
 </ul>
 </section>
 <section id="temperatura-dei-grani-5" class="slide level1">
 <h1>Temperatura dei grani</h1>
 <ul>
-<li><p>Nelle regioni che mostrano formazione stellare, <span class="math inline">d/R \sim 10^3\div 10^4</span>, e quindi <span class="math inline">T_g \sim 10^{-2} T_*</span>.</p></li>
-<li><p>Se <span class="math inline">T_* = 10\,000\,\text{K}</span>, allora <span class="math display">
+<li><p>Nelle regioni che mostrano formazione stellare, <span
+class="math inline">d/R \sim 10^3\div 10^4</span>, e quindi <span
+class="math inline">T_g \sim 10^{-2} T_*</span>.</p></li>
+<li><p>Se <span class="math inline">T_* = 10\,000\,\text{K}</span>,
+allora <span class="math display">
 T_g \sim 100\,\text{K}.
 </span></p></li>
-<li><p>Dalla legge di Wien (<span class="math inline">\lambda_\text{max} T = 0.29\,\text{cm\,K}</span>) si deduce che il picco dell’emissione è:</p>
+<li><p>Dalla legge di Wien (<span class="math inline">\lambda_\text{max}
+T = 0.29\,\text{cm\,K}</span>) si deduce che il picco dell’emissione
+è:</p>
 <ol>
-<li>30 µm (IR) se <span class="math inline">T = 100\,\text{K}</span>;</li>
-<li>0.3 mm (sub-mm) se <span class="math inline">T = 10\,\text{K}</span>.</li>
+<li>30 µm (IR) se <span class="math inline">T =
+100\,\text{K}</span>;</li>
+<li>0.3 mm (sub-mm) se <span class="math inline">T =
+10\,\text{K}</span>.</li>
 </ol></li>
 </ul>
 </section>
 <section id="struttura-dei-grani-di-polvere" class="slide level1">
 <h1>Struttura dei grani di polvere</h1>
-<p>I grani di polvere (a) possono collidere tra loro e aggregarsi in strutture più complesse (b).</p>
+<p>I grani di polvere (a) possono collidere tra loro e aggregarsi in
+strutture più complesse (b).</p>
 <center>
 <img data-src="images/interstellar_dust.png" />
 </center>
 </section>
 <section id="struttura-dei-grani-di-polvere-1" class="slide level1">
 <h1>Struttura dei grani di polvere</h1>
-<p>Particelle di polvere interplanetaria possono essere catturate da <a href="https://en.wikipedia.org/wiki/Lockheed_U-2">aerei che volano nell’alta atmosfera</a>.</p>
+<p>Particelle di polvere interplanetaria possono essere catturate da <a
+href="https://en.wikipedia.org/wiki/Lockheed_U-2">aerei che volano
+nell’alta atmosfera</a>.</p>
 <table>
 <tr>
 <td>
@@ -197,7 +262,8 @@ T_g \sim 100\,\text{K}.
 <center>
 <img data-src="images/li-draine-dust-emission.png" height="560" />
 </center>
-<p><small>Li, A. &amp; Draine, B. T. 2001, Astrophys. J., 554, 778–802</small></p>
+<p><small>Li, A. &amp; Draine, B. T. 2001, Astrophys. J., 554,
+778–802</small></p>
 </section>
 <section id="osservazioni-dallo-spazio" class="slide level1">
 <h1>Osservazioni dallo spazio</h1>
@@ -210,20 +276,26 @@ T_g \sim 100\,\text{K}.
 <center>
 <img data-src="images/IRAS.jpg" height="540" />
 </center>
-<p>IRAS (Infrared Astronomical Satellite), 25/1/1983: Prima survey in IR (12, 25, 60 e 100 µm) dell’intero cielo. Orbita geocentrica (<span class="math inline">h \approx 900\,\text{km}</span>).</p>
+<p>IRAS (Infrared Astronomical Satellite), 25/1/1983: Prima survey in IR
+(12, 25, 60 e 100 µm) dell’intero cielo. Orbita geocentrica (<span
+class="math inline">h \approx 900\,\text{km}</span>).</p>
 </section>
 <section class="slide level1">
 
 <center>
 <img data-src="images/ISO.jpg" height="540" />
 </center>
-<p>ISO (Infrared Space Observatory), 17/11/1995. Orbita molto eccentrica (1000 km <span class="math inline">\div</span> 70 000 km).</p>
+<p>ISO (Infrared Space Observatory), 17/11/1995. Orbita molto eccentrica
+(1000 km <span class="math inline">\div</span> 70 000 km).</p>
 </section>
 <section id="uso-di-orbite-eccentriche" class="slide level1">
 <h1>Uso di orbite eccentriche</h1>
 <ul>
-<li>All’apogeo (massima distanza dalla Terra) il satellite si muove molto lentamente: più facile fare lunghe osservazioni</li>
-<li>Le fasce di radiazione sono importanti vicino al perigeo (minima distanza dalla Terra): ISO spegneva gli strumenti 7 ore ogni giorno.</li>
+<li>All’apogeo (massima distanza dalla Terra) il satellite si muove
+molto lentamente: più facile fare lunghe osservazioni</li>
+<li>Le fasce di radiazione sono importanti vicino al perigeo (minima
+distanza dalla Terra): ISO spegneva gli strumenti 7 ore ogni
+giorno.</li>
 </ul>
 <center>
 <img data-src="images/ISO-orbit.png" height="400" />
@@ -234,21 +306,28 @@ T_g \sim 100\,\text{K}.
 <center>
 <img data-src="images/Spitzer.jpg" height="500" />
 </center>
-<p>Spitzer Space Telescope (USA), 25/8/2003. Orbita eliocentrica (<a href="http://coolcosmos.ipac.caltech.edu/videos/irrelevant/">IRrelevant astronomy</a>)</p>
+<p>Spitzer Space Telescope (USA), 25/8/2003. Orbita eliocentrica (<a
+href="http://coolcosmos.ipac.caltech.edu/videos/irrelevant/">IRrelevant
+astronomy</a>)</p>
 </section>
 <section class="slide level1">
 
 <center>
 <img data-src="images/Herschel.jpg" height="500" />
 </center>
-<p>Herschel (ESA), 14/5/2009. Orbita eliocentrica su <span class="math inline">L_2</span> (<span class="math inline">d = 1.5\times10^9\,\text{m}</span>).</p>
+<p>Herschel (ESA), 14/5/2009. Orbita eliocentrica su <span
+class="math inline">L_2</span> (<span class="math inline">d =
+1.5\times10^9\,\text{m}</span>).</p>
 </section>
 <section class="slide level1">
 
 <center>
 <img data-src="images/Planck.jpg" height="500" />
 </center>
-<p>Planck (ESA), 14/5/2009. Orbita eliocentrica su <span class="math inline">L_2</span> (<span class="math inline">d = 1.5\times10^9\,\text{m}</span>). Principalmente mm, ma canali fino a 350 µm.</p>
+<p>Planck (ESA), 14/5/2009. Orbita eliocentrica su <span
+class="math inline">L_2</span> (<span class="math inline">d =
+1.5\times10^9\,\text{m}</span>). Principalmente mm, ma canali fino a
+350 µm.</p>
 </section>
 <section class="slide level1">
 
@@ -280,7 +359,8 @@ T_g \sim 100\,\text{K}.
 <tr class="even">
 <td>Dimensione</td>
 <td>Format di <span class="math inline">A(\lambda)</span></td>
-<td><span class="math inline">\text{nm} &lt; r_g &lt; \mu\text{m}</span></td>
+<td><span class="math inline">\text{nm} &lt; r_g &lt;
+\mu\text{m}</span></td>
 </tr>
 <tr class="odd">
 <td>Composizione</td>
@@ -290,17 +370,20 @@ T_g \sim 100\,\text{K}.
 <tr class="even">
 <td>Carica elettrica</td>
 <td>Polarizzazione stelle, conservazione energia</td>
-<td><span class="math inline">N = \frac32 k_B T \frac{r_g}{e^2} \sim 10</span></td>
+<td><span class="math inline">N = \frac32 k_B T \frac{r_g}{e^2} \sim
+10</span></td>
 </tr>
 <tr class="odd">
 <td>Temperatura</td>
 <td>Illuminazione da stelle</td>
-<td><span class="math inline">T_g = T_* \sqrt{\frac{R}{2d}} \sim 10\div 100\,\text{K}</span></td>
+<td><span class="math inline">T_g = T_* \sqrt{\frac{R}{2d}} \sim 10\div
+100\,\text{K}</span></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="rotazione-dei-grani-ed-emissione-anomala" class="slide level1">
+<section id="rotazione-dei-grani-ed-emissione-anomala"
+class="slide level1">
 <h1>Rotazione dei grani ed emissione anomala</h1>
 </section>
 <section id="rotazione-dei-grani" class="slide level1">
@@ -309,10 +392,12 @@ T_g \sim 100\,\text{K}.
 <center>
 <img data-src="images/harwit-spinning-dust.png" height="400" />
 </center>
-<p><small>Harwit, <em>Astrophysical concepts</em> (4th edition), Springer (2006)</small></p>
+<p><small>Harwit, <em>Astrophysical concepts</em> (4th edition),
+Springer (2006)</small></p>
 <aside class="notes">
 <ol type="a">
-<li><em>Rilassamento paramagnetico</em>, si spiega nella slide successiva.</li>
+<li><em>Rilassamento paramagnetico</em>, si spiega nella slide
+successiva.</li>
 <li>Urto con particelle.</li>
 <li>Urto con fotoni.</li>
 <li>Trasferimento di momento angolare da fotoni.</li>
@@ -321,17 +406,35 @@ T_g \sim 100\,\text{K}.
 </section>
 <section id="rotazione-dei-grani-1" class="slide level1">
 <h1>Rotazione dei grani</h1>
-<p>Se il grano è paramagnetico, il campo Galattico <span class="math inline">\vec B_\text{Gal}</span> induce un momento magnetico <span class="math inline">\vec \mu_B \propto \vec B_\text{Gal}</span> parallelo a questo, che causa un momento meccanico <span class="math inline">\vec\tau = \vec\mu_B \times \vec B_\mathrm{Gal}</span>. Allora:</p>
+<p>Se il grano è paramagnetico, il campo Galattico <span
+class="math inline">\vec B_\text{Gal}</span> induce un momento magnetico
+<span class="math inline">\vec \mu_B \propto \vec B_\text{Gal}</span>
+parallelo a questo, che causa un momento meccanico <span
+class="math inline">\vec\tau = \vec\mu_B \times \vec
+B_\mathrm{Gal}</span>. Allora:</p>
 <ol>
-<li><p>Se il grano ruota come nel caso <em>a</em> della fig. precedente, la rotazione porta <span class="math inline">\vec B_\text{Gal}</span> e <span class="math inline">\vec \mu_B</span> a disallinearsi. Per riallinearsi, <span class="math inline">\vec \mu_B</span> induce un momento torcente in opposizione.</p></li>
-<li><p>Se l’asse di rotazione è parallelo a <span class="math inline">\vec B_\text{Gal}</span>, non c’è momento torcente.</p></li>
+<li><p>Se il grano ruota come nel caso <em>a</em> della fig. precedente,
+la rotazione porta <span class="math inline">\vec B_\text{Gal}</span> e
+<span class="math inline">\vec \mu_B</span> a disallinearsi. Per
+riallinearsi, <span class="math inline">\vec \mu_B</span> induce un
+momento torcente in opposizione.</p></li>
+<li><p>Se l’asse di rotazione è parallelo a <span
+class="math inline">\vec B_\text{Gal}</span>, non c’è momento
+torcente.</p></li>
 </ol>
-<p>Quindi l’asse di rotazione tende ad allinearsi con <span class="math inline">\vec B_\text{Gal}</span> (<strong>rilassamento paramagnetico</strong>).</p>
+<p>Quindi l’asse di rotazione tende ad allinearsi con <span
+class="math inline">\vec B_\text{Gal}</span> (<strong>rilassamento
+paramagnetico</strong>).</p>
 </section>
 <section id="emissione-anomala" class="slide level1">
 <h1>Emissione anomala</h1>
-<p>Nel 1995, Kogut <em>et al.</em> pubblicarono un articolo in cui si misurava la correlazione tra l’emissione del cielo a 140 µm (misurata da COBE-DIRBE) e a 31.5,GHz (misurata da COBE-DMR).</p>
-<p>Questi studi cercavano di caratterizzare il contributo relativo di diverse emissioni intorno alla regione delle microonde, in modo da isolare meglio il segnale della CMB (che vedremo meglio nell’ultima parte del corso).</p>
+<p>Nel 1995, Kogut <em>et al.</em> pubblicarono un articolo in cui si
+misurava la correlazione tra l’emissione del cielo a 140 µm (misurata da
+COBE-DIRBE) e a 31.5,GHz (misurata da COBE-DMR).</p>
+<p>Questi studi cercavano di caratterizzare il contributo relativo di
+diverse emissioni intorno alla regione delle microonde, in modo da
+isolare meglio il segnale della CMB (che vedremo meglio nell’ultima
+parte del corso).</p>
 </section>
 <section class="slide level1">
 
@@ -347,7 +450,8 @@ T_g \sim 100\,\text{K}.
 </tr>
 </table>
 </center>
-<p>(La correlazione si ha tra la mappa a 31.5 GHz e la mappa a 140 µm).</p>
+<p>(La correlazione si ha tra la mappa a 31.5 GHz e la mappa a
+140 µm).</p>
 </section>
 <section id="tipi-di-emissione" class="slide level1">
 <h1>Tipi di emissione</h1>
@@ -357,60 +461,88 @@ T_g \sim 100\,\text{K}.
 </section>
 <section id="origine-della-correlazione" class="slide level1">
 <h1>Origine della correlazione</h1>
-<p>Il segnale di sincrotrone viene generato dai raggi cosmici, che non dovrebbero essere correlati con la polvere.</p>
+<p>Il segnale di sincrotrone viene generato dai raggi cosmici, che non
+dovrebbero essere correlati con la polvere.</p>
 <p>Eppure questo è ciò che si osserva! Tre possibilità:</p>
 <ol>
 <li>La polvere emette anche alle frequenze del sincrotrone;</li>
 <li>I raggi cosmici emettono anche alle frequenze della polvere;</li>
-<li>Qualcos’altro (cosa?) emette sia alle frequenze del sincrotrone che della polvere.</li>
+<li>Qualcos’altro (cosa?) emette sia alle frequenze del sincrotrone che
+della polvere.</li>
 </ol>
 </section>
 <section id="grani-in-rotazione" class="slide level1">
 <h1>Grani in rotazione</h1>
 <ul>
-<li><p>Una spiegazione proposta nel 1998 da A. Lazarian e B. T. Draine è che siano i grani degli idrocarburi aromatici policiclici (PAH) a emettere nella regione spettrale intorno ai 30,GHz, a causa della loro rotazione.</p></li>
-<li><p>Il modello fisico è semplice, anche se i dettagli sono estremamente complicati!</p></li>
+<li><p>Una spiegazione proposta nel 1998 da A. Lazarian e B. T. Draine è
+che siano i grani degli idrocarburi aromatici policiclici (PAH) a
+emettere nella regione spettrale intorno ai 30,GHz, a causa della loro
+rotazione.</p></li>
+<li><p>Il modello fisico è semplice, anche se i dettagli sono
+estremamente complicati!</p></li>
 </ul>
 </section>
 <section id="grani-in-rotazione-1" class="slide level1">
 <h1>Grani in rotazione</h1>
 <ul>
-<li><p>Supponiamo che i grani abbiano un momento elettrico di dipolo <span class="math inline">\vec \mu = q \vec r</span> e che siano in rotazione con velocità angolare <span class="math inline">\omega</span></p></li>
-<li><p>Ci aspettiamo allora che emettano fotoni con frequenza <span class="math inline">\nu = \omega/2\pi</span>.</p></li>
-<li><p>Se i grani sono in equilibrio termico, abbiano momento angolare <span class="math inline">L \gg h</span> e siano messi in rotazione principalmente da urti, allora <span class="math display">
+<li><p>Supponiamo che i grani abbiano un momento elettrico di dipolo
+<span class="math inline">\vec \mu = q \vec r</span> e che siano in
+rotazione con velocità angolare <span
+class="math inline">\omega</span></p></li>
+<li><p>Ci aspettiamo allora che emettano fotoni con frequenza <span
+class="math inline">\nu = \omega/2\pi</span>.</p></li>
+<li><p>Se i grani sono in equilibrio termico, abbiano momento angolare
+<span class="math inline">L \gg h</span> e siano messi in rotazione
+principalmente da urti, allora <span class="math display">
 \frac12 I \left&lt;\omega^2\right&gt; \approx \frac32 k_B T, \qquad
 \text{con } I =
 \frac25 M a^2 = \frac8{15} \pi \rho a^5.
 </span></p>
-<p>(In realtà il 10–20,% dell’energia viene convertita in modi vibrazionali).</p></li>
+<p>(In realtà il 10–20,% dell’energia viene convertita in modi
+vibrazionali).</p></li>
 </ul>
 </section>
 <section id="avvertenze" class="slide level1">
 <h1>Avvertenze</h1>
 <ul>
-<li>L’ipotesi che tutta l’energia dell’urto sia convertita in energia rotazionale è un’approssimazione: in realtà si stima che parte dell’energia (10–20 %) venga convertita in modi vibrazionali.</li>
-<li>L’ipotesi che il momento angolare <span class="math inline">L</span> sia molto maggiore di <span class="math inline">h</span> consente di usare la fisica classica, dove il momento angolare non è quantizzato: questo è sempre vero, perché i grani più piccoli hanno <span class="math inline">L/h \sim 70</span>.</li>
+<li>L’ipotesi che tutta l’energia dell’urto sia convertita in energia
+rotazionale è un’approssimazione: in realtà si stima che parte
+dell’energia (10–20 %) venga convertita in modi vibrazionali.</li>
+<li>L’ipotesi che il momento angolare <span class="math inline">L</span>
+sia molto maggiore di <span class="math inline">h</span> consente di
+usare la fisica classica, dove il momento angolare non è quantizzato:
+questo è sempre vero, perché i grani più piccoli hanno <span
+class="math inline">L/h \sim 70</span>.</li>
 </ul>
 </section>
 <section id="grani-in-rotazione-2" class="slide level1">
 <h1>Grani in rotazione</h1>
-<p>La soluzione si può scrivere in questa forma: <span class="math display">
+<p>La soluzione si può scrivere in questa forma: <span
+class="math display">
 \begin{aligned}
   \nu = \frac{\sqrt{\left&lt;\omega^2\right&gt;}}{2\pi} =
-  &amp;32\,\text{GHz}\times\left(\frac{T}{100\,\text{K}}\right)^{1/2}\times \\
+  &amp;32\,\text{GHz}\times\left(\frac{T}{100\,\text{K}}\right)^{1/2}\times
+\\
   &amp;\times\left(\frac{2\,\text{g/cm}^2}\rho\right)^{1/2}\times\left(\frac{5\,\text{\AA}}a\right)^{5/2}.
 \end{aligned}
 </span></p>
-<p>(Ci sono evidenze che dicono che solo i grani piccoli, con <span class="math inline">a \lesssim 10\,\text{\AA}</span>, contribuiscono a questa emissione). Il fatto che il picco di emissione previsto sia intorno ai 30,GHz mostra che questa è la strada giusta!</p>
-<p>(Vedi Fig. 7 di Draine &amp; Lazarian (1998) per capire perché solo i grani piccoli contribuiscono alla AME).</p>
+<p>(Ci sono evidenze che dicono che solo i grani piccoli, con <span
+class="math inline">a \lesssim 10\,\text{\AA}</span>, contribuiscono a
+questa emissione). Il fatto che il picco di emissione previsto sia
+intorno ai 30,GHz mostra che questa è la strada giusta!</p>
+<p>(Vedi Fig. 7 di Draine &amp; Lazarian (1998) per capire perché solo i
+grani piccoli contribuiscono alla AME).</p>
 </section>
 <section id="grani-in-rotazione-3" class="slide level1">
 <h1>Grani in rotazione</h1>
-<p>Per avere un modello realistico, bisogna anche tenere conto di altri effetti:</p>
+<p>Per avere un modello realistico, bisogna anche tenere conto di altri
+effetti:</p>
 <ol>
 <li>Collisioni con ioni (forze Coulombiane);</li>
-<li>Accoppiamento tra <span class="math inline">\vec \mu</span> e e il campo elettromagnetico;</li>
-<li>Assorbimento/emissione di fotoni (a causa del loro momento angolare);</li>
+<li>Accoppiamento tra <span class="math inline">\vec \mu</span> e e il
+campo elettromagnetico;</li>
+<li>Assorbimento/emissione di fotoni (a causa del loro momento
+angolare);</li>
 <li>Formazione di H₂;</li>
 <li>Etc.</li>
 </ol>
@@ -419,8 +551,12 @@ T_g \sim 100\,\text{K}.
 <h1>Grani in rotazione</h1>
 <p>Un modello più dettagliato prevede che <span class="math display">
 \left&lt;\omega^2\right&gt; \lesssim 3 k_B \frac{T}I.
-</span> Il risultato è comunque che lo spettro previsto ha un picco di emissione intorno a qualche decina di GHz.</p>
-<p>Ovviamente, i modelli dettagliati stimano anche l’<strong>intensità</strong>, in modo da paragonarla con quella misurata. (Un modello completo deve quindi tenere conto della superficie media dei grani, della loro emissività, della loro forma, etc.)</p>
+</span> Il risultato è comunque che lo spettro previsto ha un picco di
+emissione intorno a qualche decina di GHz.</p>
+<p>Ovviamente, i modelli dettagliati stimano anche
+l’<strong>intensità</strong>, in modo da paragonarla con quella
+misurata. (Un modello completo deve quindi tenere conto della superficie
+media dei grani, della loro emissività, della loro forma, etc.)</p>
 </section>
 <section class="slide level1">
 
@@ -445,21 +581,27 @@ T_g \sim 100\,\text{K}.
 <center>
 <img data-src="images/draine-youtube.jpg" height="540" />
 </center>
-<p><a href="https://www.youtube.com/watch?v=mkpuUoZf2F8"><em>The continuing mistery of the Anomalous Microwave Emission</em></a> è un seminario tenuto da B. Draine nel 2015, molto chiaro ed interessante.</p>
+<p><a href="https://www.youtube.com/watch?v=mkpuUoZf2F8"><em>The
+continuing mistery of the Anomalous Microwave Emission</em></a> è un
+seminario tenuto da B. Draine nel 2015, molto chiaro ed
+interessante.</p>
 </section>
 <section id="la-nube-molecolare-rho-ophiuchi" class="slide level1">
-<h1>La nube molecolare <span class="math inline">\rho</span>-Ophiuchi</h1>
+<h1>La nube molecolare <span
+class="math inline">\rho</span>-Ophiuchi</h1>
 <center>
 <img data-src="images/planck_spinning_dust_ophiuchi.png" height="540" />
 </center>
-<p><small>The Planck collaboration, 2011, Astron. Astrophys., 536, A20</small></p>
+<p><small>The Planck collaboration, 2011, Astron. Astrophys., 536,
+A20</small></p>
 </section>
 <section id="spettro-della-spinning-dust" class="slide level1">
 <h1>Spettro della «spinning dust»</h1>
 <center>
 <img data-src="images/planck_spinning_dust_spectrum.png" height="500" />
 </center>
-<p><small>The Planck collaboration, 2011, Astron. Astrophys., 536, A20. Nota: 1 Jy è 10⁻²⁶ W/m²/Hz.</small></p>
+<p><small>The Planck collaboration, 2011, Astron. Astrophys., 536, A20.
+Nota: 1 Jy è 10⁻²⁶ W/m²/Hz.</small></p>
 </section>
 <section id="emissione-anomala-1" class="slide level1">
 <h1>Emissione anomala</h1>
@@ -472,7 +614,9 @@ T_g \sim 100\,\text{K}.
 <center>
 <img data-src="images/planck_spinning_dust_map.png" height="520" />
 </center>
-<p>Densità colonnare <span class="math inline">N_\text{col}</span> della «componente anomala» della polvere interstellare, misurata da Planck e una survey radio a 408 MHz (Haslam, 1982).</p>
+<p>Densità colonnare <span class="math inline">N_\text{col}</span> della
+«componente anomala» della polvere interstellare, misurata da Planck e
+una survey radio a 408 MHz (Haslam, 1982).</p>
 </section>
     </div>
   </div>
@@ -514,7 +658,7 @@ T_g \sim 100\,\text{K}.
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: false,
+        hash: true,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,

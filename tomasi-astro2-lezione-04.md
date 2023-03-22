@@ -1,7 +1,7 @@
 ---
 title: "Lezione di Astronomia II – 4"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: 1 Aprile 2022
+date: "31 Marzo 2023"
 css:
 - ./css/custom.css
 ...

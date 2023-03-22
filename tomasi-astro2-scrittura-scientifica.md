@@ -1,7 +1,7 @@
 ---
 title: Come preparare un testo scientifico
 author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: 22 Aprile 2022
+date: "21 Aprile 2023"
 css:
 - ./css/custom.css
 ...

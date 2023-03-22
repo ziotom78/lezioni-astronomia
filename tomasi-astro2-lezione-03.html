@@ -11,32 +11,42 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="./css/custom.css"/>
   <link rel="stylesheet" href="./css/asciinema-player.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   var macros = [];
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      macros: macros,
-      fleqn: false
-     });
-  }}});
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -44,8 +54,9 @@
 
 <section id="title-slide">
   <h1 class="title">Lezione di Astronomia II – 3</h1>
-  <p class="author">Maurizio Tomasi (<a href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
-  <p class="date">31 Marzo 2022</p>
+  <p class="author">Maurizio Tomasi (<a
+href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
+  <p class="date">30 Marzo 2023</p>
 </section>
 
 <section id="il-mezzo-interstellare-ism" class="slide level1">
@@ -53,7 +64,9 @@
 </section>
 <section id="il-piano-galattico" class="slide level1">
 <h1>Il piano galattico</h1>
-<p>L’evidenza del mezzo interstellare (<em>interstellar medium</em>, ISM) è data dalla presenza di regioni opache sul piano galattico, con uno spessore di <span class="math inline">\sim 100\div500</span> pc.</p>
+<p>L’evidenza del mezzo interstellare (<em>interstellar medium</em>,
+ISM) è data dalla presenza di regioni opache sul piano galattico, con
+uno spessore di <span class="math inline">\sim 100\div500</span> pc.</p>
 <center>
 <img data-src="images/milky-way-plane.jpg" height="420" />
 </center>
@@ -63,11 +76,14 @@
 <center>
 <img data-src="images/milky-way-and-gaseous-disk.png" height="520" />
 </center>
-<p><small>Adattato da B. Draine, <em>Physics of the interstellar and galactic medium</em>, Princeton University Press (2011).</small></p>
+<p><small>Adattato da B. Draine, <em>Physics of the interstellar and
+galactic medium</em>, Princeton University Press (2011).</small></p>
 </section>
 <section id="globuli-e-nubi" class="slide level1">
 <h1>Globuli e nubi</h1>
-<p>Il mezzo interstellare mostra addensamenti di materia la cui scala è circa <span class="math inline">\sim 1</span> pc («globuli» e «nubi»).</p>
+<p>Il mezzo interstellare mostra addensamenti di materia la cui scala è
+circa <span class="math inline">\sim 1</span> pc («globuli» e
+«nubi»).</p>
 <center>
 <img data-src="images/barnard68.jpg" height="420" />
 </center>
@@ -77,14 +93,16 @@
 <h1>Il mezzo interstellare</h1>
 <p>Ci sono due motivi per cui ISM è interessante:</p>
 <ol>
-<li>Contiene una parte importante della massa della Galassia (<span class="math inline">10^{10}\,M_\odot</span>);</li>
+<li>Contiene una parte importante della massa della Galassia (<span
+class="math inline">10^{10}\,M_\odot</span>);</li>
 <li>È un luogo di formazione stellare: <span class="math display">
   \begin{aligned}
     t_\text{O-star} &amp;&lt; 1\,\text{Gyr},\\
     t_\text{Via Lattea} \sim \max t_\text{gc} &amp;\gtrsim
     10\,\text{Gyr}.
   \end{aligned}
-</span> Quindi il fatto che oggi si osservino stelle O nella Via Lattea implica che la formazione stellare sia ancora in corso.</li>
+</span> Quindi il fatto che oggi si osservino stelle O nella Via Lattea
+implica che la formazione stellare sia ancora in corso.</li>
 </ol>
 </section>
 <section id="barioni-nella-via-lattea" class="slide level1">
@@ -92,11 +110,13 @@
 <center>
 <img data-src="images/ism-and-stars.png" height="520" />
 </center>
-<p><small>Adattato da B. Draine, <em>Physics of the interstellar and galactic medium</em>, Princeton University Press (2011).</small></p>
+<p><small>Adattato da B. Draine, <em>Physics of the interstellar and
+galactic medium</em>, Princeton University Press (2011).</small></p>
 </section>
 <section id="componenti-dellism" class="slide level1">
 <h1>Componenti dell’ISM</h1>
-<p>ISM comprende tutto ciò che nella Galassia sta tra le stelle. Esso è composto da:</p>
+<p>ISM comprende tutto ciò che nella Galassia sta tra le stelle. Esso è
+composto da:</p>
 <ol>
 <li><strong>Gas</strong>;</li>
 <li><strong>Polveri</strong>;</li>
@@ -106,7 +126,8 @@
 <li>Campo gravitazionale;</li>
 <li>Materia oscura.</li>
 </ol>
-<p>Oggi ci occuperemo solo di <strong>gas</strong> e <strong>polveri</strong>.</p>
+<p>Oggi ci occuperemo solo di <strong>gas</strong> e
+<strong>polveri</strong>.</p>
 </section>
 <section id="il-mezzo-interstellare-1" class="slide level1">
 <h1>Il mezzo interstellare</h1>
@@ -126,16 +147,23 @@
 <img data-src="images/dust-and-light.png" height="240" />
 </center>
 <ul>
-<li><p>L’effetto della diffusione e dell’assorbimento è detto <strong>estinzione</strong>, e fa diminuire il flusso <span class="math inline">b</span> (<span class="math inline">[b] = \text{W/m}^2</span>): <span class="math display">
+<li><p>L’effetto della diffusione e dell’assorbimento è detto
+<strong>estinzione</strong>, e fa diminuire il flusso <span
+class="math inline">b</span> (<span class="math inline">[b] =
+\text{W/m}^2</span>): <span class="math display">
   b(L) = e^{-\tau(L)} b_0.
 </span></p></li>
-<li><p>Il valore <span class="math inline">\tau(L) = \sigma n L</span> è detto <strong>coefficiente di estinzione</strong>, ed è un numero puro.</p></li>
+<li><p>Il valore <span class="math inline">\tau(L) = \sigma n L</span> è
+detto <strong>coefficiente di estinzione</strong>, ed è un numero
+puro.</p></li>
 </ul>
 </section>
 <section id="estinzione-e-magnitudine" class="slide level1">
 <h1>Estinzione e magnitudine</h1>
 <ul>
-<li><p>Se il flusso misurato è inferiore a causa dell’estinzione, vuol dire che la magnitudine <strong>aumenta</strong>: <span class="math display">
+<li><p>Se il flusso misurato è inferiore a causa dell’estinzione, vuol
+dire che la magnitudine <strong>aumenta</strong>: <span
+class="math display">
 A \equiv m&#39; - m = 2.5\log_{10} \frac{b_0}{b(L)} = 1.0857\,\tau(L).
 </span></p></li>
 <li><p>Si può quindi usare l’approssimazione <span class="math display">
@@ -145,19 +173,28 @@ A \approx \tau(L).
 </section>
 <section id="ism-e-misura-delle-distanze" class="slide level1">
 <h1>ISM e misura delle distanze</h1>
-<p>In presenza di estinzione <span class="math inline">A</span>, in generale si ha che <span class="math display">
+<p>In presenza di estinzione <span class="math inline">A</span>, in
+generale si ha che <span class="math display">
 \begin{aligned}
   m&#39; &amp;= m + A \\
   &amp;= M + 5 \log_{10}\frac{d}{10\,\text{pc}} + A
 \end{aligned}
-</span> (la presenza di <span class="math inline">A</span> rende la stella più debole).</p>
-<p>Quindi in presenza di estinzione non è più sufficiente conoscere <span class="math inline">M</span> per ricavare <span class="math inline">d</span>!</p>
+</span> (la presenza di <span class="math inline">A</span> rende la
+stella più debole).</p>
+<p>Quindi in presenza di estinzione non è più sufficiente conoscere
+<span class="math inline">M</span> per ricavare <span
+class="math inline">d</span>!</p>
 </section>
 <section id="misura-dellestinzione" class="slide level1">
 <h1>Misura dell’estinzione</h1>
 <ul>
-<li><p>Per convertire magnitudini relative in assolute ci occorre una stima indipendente di <span class="math inline">A</span>.</p></li>
-<li><p>Un metodo è quello di contare il numero di stelle in un campo. Supponiamo di avere un esposizione con magnitudine di soglia <span class="math inline">m_0</span>. Se c’è estinzione, allora vedremo solo le stelle con <span class="math inline">m</span> tale che <span class="math display">
+<li><p>Per convertire magnitudini relative in assolute ci occorre una
+stima indipendente di <span class="math inline">A</span>.</p></li>
+<li><p>Un metodo è quello di contare il numero di stelle in un campo.
+Supponiamo di avere un esposizione con magnitudine di soglia <span
+class="math inline">m_0</span>. Se c’è estinzione, allora vedremo solo
+le stelle con <span class="math inline">m</span> tale che <span
+class="math display">
 m &lt; m_0 - A.
 </span></p></li>
 </ul>
@@ -170,59 +207,85 @@ m &lt; m_0 - A.
 </section>
 <section id="misura-dellestinzione-2" class="slide level1">
 <h1>Misura dell’estinzione</h1>
-<p>Definiamo una «funzione di luminosità» delle stelle osservate <span class="math inline">N&#39;(m)</span>, tale che <span class="math display">
+<p>Definiamo una «funzione di luminosità» delle stelle osservate <span
+class="math inline">N&#39;(m)</span>, tale che <span
+class="math display">
 N&#39;(m)\,\text{d}m
-</span> sia il numero di stelle compresa tra <span class="math inline">m</span> e <span class="math inline">m + \text{d}m</span>, e misuriamo tale quantità per tanti intervalli <span class="math inline">[m, m + \text{d}m)</span> in due regioni vicine, una oscurata e l’altra no:</p>
+</span> sia il numero di stelle compresa tra <span
+class="math inline">m</span> e <span class="math inline">m +
+\text{d}m</span>, e misuriamo tale quantità per tanti intervalli <span
+class="math inline">[m, m + \text{d}m)</span> in due regioni vicine, una
+oscurata e l’altra no:</p>
 <center>
 <img data-src="images/extinction-and-star-count.png" height="280" />
 </center>
 </section>
 <section id="misura-dellestinzione-3" class="slide level1">
 <h1>Misura dell’estinzione</h1>
-<p>Il problema è che è difficile ricostruire <span class="math inline">N&#39;(m)</span> nella zona oscurata, se si vedono poche stelle.</p>
+<p>Il problema è che è difficile ricostruire <span
+class="math inline">N&#39;(m)</span> nella zona oscurata, se si vedono
+poche stelle.</p>
 <center>
 <img data-src="images/barnard68-wavelengths.jpg" height="480" />
 </center>
 </section>
 <section id="misura-dellestinzione-4" class="slide level1">
 <h1>Misura dell’estinzione</h1>
-<p>In tal caso si considera il numero di stelle sotto una data magnitudine. Nelle due zone 1 (non oscurata) e 2 (oscurata) si vedrà un numero di stelle pari a <span class="math display">
+<p>In tal caso si considera il numero di stelle sotto una data
+magnitudine. Nelle due zone 1 (non oscurata) e 2 (oscurata) si vedrà un
+numero di stelle pari a <span class="math display">
 \begin{aligned}
   N_1(m_0) &amp;= \int_{-\infty}^{m_0}
   N&#39;(m&#39;)\,\text{d}m&#39;, \\
-  N_2(m_0 - A) &amp;= \int_{-\infty}^{m_0 - A} N&#39;(m&#39;)\,\text{d}m&#39;,
+  N_2(m_0 - A) &amp;= \int_{-\infty}^{m_0 - A}
+N&#39;(m&#39;)\,\text{d}m&#39;,
 \end{aligned}
-</span> nell’ipotesi che <span class="math inline">N&#39;(m)</span> sia la stessa.</p>
-<p>Se ricostruisco <span class="math inline">N&#39;(m)</span> nella zona <strong>non oscurata</strong>, posso dedurre il valore di <span class="math inline">A</span>.</p>
+</span> nell’ipotesi che <span class="math inline">N&#39;(m)</span> sia
+la stessa.</p>
+<p>Se ricostruisco <span class="math inline">N&#39;(m)</span> nella zona
+<strong>non oscurata</strong>, posso dedurre il valore di <span
+class="math inline">A</span>.</p>
 </section>
 <section id="valori-tipici-di-a" class="slide level1">
 <h1>Valori tipici di <span class="math inline">A</span></h1>
 <ul>
-<li>Se <span class="math inline">A</span> è elevato, il numero di stelle osservabili dietro la nube è troppo piccolo per permettere di fare la stima.</li>
-<li>Se invece <span class="math inline">A</span> è piccolo, è difficile osservare l’effetto dell’estinzione.</li>
-<li>L’intervallo tipico in cui si può stimare <span class="math inline">A</span> è <span class="math display">
+<li>Se <span class="math inline">A</span> è elevato, il numero di stelle
+osservabili dietro la nube è troppo piccolo per permettere di fare la
+stima.</li>
+<li>Se invece <span class="math inline">A</span> è piccolo, è difficile
+osservare l’effetto dell’estinzione.</li>
+<li>L’intervallo tipico in cui si può stimare <span
+class="math inline">A</span> è <span class="math display">
   1 \lesssim A \lesssim 6.
 </span></li>
 </ul>
 </section>
 <section id="estinzione-in-funzione-di-lambda" class="slide level1">
-<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
-<p>L’estinzione dipende dalla lunghezza d’onda: <span class="math inline">A = A(\lambda)</span>.</p>
+<h1>Estinzione in funzione di <span
+class="math inline">\lambda</span></h1>
+<p>L’estinzione dipende dalla lunghezza d’onda: <span
+class="math inline">A = A(\lambda)</span>.</p>
 <center>
 <img data-src="images/barnard68-wavelengths.jpg" height="500" />
 </center>
 </section>
 <section id="estinzione-in-funzione-di-lambda-1" class="slide level1">
-<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
+<h1>Estinzione in funzione di <span
+class="math inline">\lambda</span></h1>
 <ul>
-<li><p>Intorno al visibile, l’estinzione è più intensa se <span class="math inline">\lambda</span> è piccola (luce blu).</p></li>
-<li><p>Questo comporta che il numero di stelle osservate aumenta nell’IR.</p></li>
-<li><p>Inoltre, le stelle appaiono più rosse (<em>stellar reddening</em>). Vediamo come si quantifica l’impatto dell’arrossamento sull’osservazione del flusso di una stella.</p></li>
+<li><p>Intorno al visibile, l’estinzione è più intensa se <span
+class="math inline">\lambda</span> è piccola (luce blu).</p></li>
+<li><p>Questo comporta che il numero di stelle osservate aumenta
+nell’IR.</p></li>
+<li><p>Inoltre, le stelle appaiono più rosse (<em>stellar
+reddening</em>). Vediamo come si quantifica l’impatto dell’arrossamento
+sull’osservazione del flusso di una stella.</p></li>
 </ul>
 </section>
 <section id="eccesso-di-colore" class="slide level1">
 <h1>Eccesso di colore</h1>
-<p>Misuriamo l’indice di colore in due filtri, es. B e V: <span class="math display">
+<p>Misuriamo l’indice di colore in due filtri, es. B e V: <span
+class="math display">
 \begin{aligned}
   m_V &amp;= M_V + 5\log_{10}\frac{d}{10\,\text{pc}} + A_V, \\
   m_B &amp;= M_B + 5\log_{10}\frac{d}{10\,\text{pc}} + A_B.
@@ -238,17 +301,27 @@ m_V - m_B = (M_V - M_B) + (A_V - A_B).
 m_V - m_B = (M_V - M_B) + (A_V - A_B).
 </span></p>
 <ul>
-<li>Il valore <span class="math inline">m_V - m_B</span> è misurato direttamente.</li>
-<li>Il valore <span class="math inline">M_V - M_B</span> si stima dal tipo spettrale (le righe non sono influenzate dall’estinzione).</li>
-<li>Il valore <span class="math inline">A_V - A_B</span> si può quindi ricavare facilmente, ed è chiamato <strong>eccesso di colore</strong>, o <strong>arrossamento</strong> («reddening», vedi Draine, <em>Physics of the interstellar and galactic medium</em>, pag. 238).</li>
+<li>Il valore <span class="math inline">m_V - m_B</span> è misurato
+direttamente.</li>
+<li>Il valore <span class="math inline">M_V - M_B</span> si stima dal
+tipo spettrale (le righe non sono influenzate dall’estinzione).</li>
+<li>Il valore <span class="math inline">A_V - A_B</span> si può quindi
+ricavare facilmente, ed è chiamato <strong>eccesso di colore</strong>, o
+<strong>arrossamento</strong> («reddening», vedi Draine, <em>Physics of
+the interstellar and galactic medium</em>, pag. 238).</li>
 </ul>
 </section>
 <section id="assorbimento-e-diffusione" class="slide level1">
 <h1>Assorbimento e diffusione</h1>
 <ul>
-<li><p>L’estinzione è l’effetto combinato di assorbimento e diffusione. La loro importanza relativa dipende dalle proprietà fisiche dei grani e da <span class="math inline">\lambda</span>.</p></li>
-<li><p>Si definisce <em>albedo</em> <span class="math inline">a_{\lambda,\text{diff}}</span> la frazione dell’estinzione dovuta alla diffusione: <span class="math display">
-b(L) = b_0 \exp(-\tau) = b_0 \exp\bigl(-\tau (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
+<li><p>L’estinzione è l’effetto combinato di assorbimento e diffusione.
+La loro importanza relativa dipende dalle proprietà fisiche dei grani e
+da <span class="math inline">\lambda</span>.</p></li>
+<li><p>Si definisce <em>albedo</em> <span
+class="math inline">a_{\lambda,\text{diff}}</span> la frazione
+dell’estinzione dovuta alla diffusione: <span class="math display">
+b(L) = b_0 \exp(-\tau) = b_0 \exp\bigl(-\tau (a_{\lambda,\text{diff}} +
+a_{\lambda,\text{ass}})\bigr),
 </span> con <span class="math display">
 a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1.
 </span></p></li>
@@ -256,7 +329,10 @@ a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1.
 </section>
 <section id="nebulose-a-riflessione" class="slide level1">
 <h1>Nebulose a riflessione</h1>
-<p>Nelle <strong>nebulose a riflessione</strong> («reflection nebulae») si ha <span class="math inline">a_{\lambda,\text{diff}} \sim 60\,\%</span>, e c’è una stella brillante nelle loro vicinanze (con spettro molto simile).</p>
+<p>Nelle <strong>nebulose a riflessione</strong> («reflection nebulae»)
+si ha <span class="math inline">a_{\lambda,\text{diff}} \sim
+60\,\%</span>, e c’è una stella brillante nelle loro vicinanze (con
+spettro molto simile).</p>
 <center>
 <img data-src="images/m78.jpg" height="400" />
 </center>
@@ -271,9 +347,15 @@ a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1.
 <li><p>Ricordiamo la definizione di A: <span class="math display">
 A = 2.5\log_{10} e^\tau \approx \tau.
 </span></p></li>
-<li><p>Il valore <span class="math inline">\tau</span> («coefficiente di estinzione) è uguale a <span class="math display">
+<li><p>Il valore <span class="math inline">\tau</span> («coefficiente di
+estinzione) è uguale a <span class="math display">
 \tau = \sigma n L,
-</span> dove <span class="math inline">L</span> è lo spessore della nube, <span class="math inline">n</span> la densità numerica, e <span class="math inline">\sigma</span> la sezione d’urto totale (assorbimento e diffusione), nell’ipotesi che <span class="math inline">\sigma</span> sia piccola: quest’ultimo è il parametro che rivela la natura dell’estinzione!</p></li>
+</span> dove <span class="math inline">L</span> è lo spessore della
+nube, <span class="math inline">n</span> la densità numerica, e <span
+class="math inline">\sigma</span> la sezione d’urto totale (assorbimento
+e diffusione), nell’ipotesi che <span class="math inline">\sigma</span>
+sia piccola: quest’ultimo è il parametro che rivela la natura
+dell’estinzione!</p></li>
 </ul>
 </section>
 <section id="fisica-dellestinzione-2" class="slide level1">
@@ -281,7 +363,9 @@ A = 2.5\log_{10} e^\tau \approx \tau.
 <ul>
 <li><p>Si ha quindi che <span class="math display">
 A \propto n\, L \equiv N_\text{col},
-</span> dove <span class="math inline">N_\text{col}</span> è detta <strong>densità colonnare</strong>: l’estinzione è il risultato di un integrale lungo la linea di vista.</p></li>
+</span> dove <span class="math inline">N_\text{col}</span> è detta
+<strong>densità colonnare</strong>: l’estinzione è il risultato di un
+integrale lungo la linea di vista.</p></li>
 <li><p>Vale che <span class="math display">
 [N_\text{col}] = \text{cm}^{-2}.
 </span></p></li>
@@ -290,29 +374,50 @@ A \propto n\, L \equiv N_\text{col},
 <section id="fisica-dellestinzione-3" class="slide level1">
 <h1>Fisica dell’estinzione</h1>
 <ul>
-<li><p>Se <span class="math inline">A \propto N_\text{col}</span>, ciò vuol dire che osservare nubi di polvere di diverse dimensioni/densità porta a valori diversi di <span class="math inline">A</span>, anche se <span class="math inline">\sigma</span> è la stessa.</p></li>
-<li><p>Se si vuole studiare la dipendenza dell’estinzione da <span class="math inline">\lambda</span>, si usa la quantità (numero puro) <span class="math display">
+<li><p>Se <span class="math inline">A \propto N_\text{col}</span>, ciò
+vuol dire che osservare nubi di polvere di diverse dimensioni/densità
+porta a valori diversi di <span class="math inline">A</span>, anche se
+<span class="math inline">\sigma</span> è la stessa.</p></li>
+<li><p>Se si vuole studiare la dipendenza dell’estinzione da <span
+class="math inline">\lambda</span>, si usa la quantità (numero puro)
+<span class="math display">
 f(\lambda) \equiv \frac{A(\lambda)}{A_V},
 </span></p>
-<p>perché in questo modo la dipendenza dalla densità colonnare scompare: <span class="math inline">f(\lambda) \approx \sigma(\lambda) / \sigma_V</span>.</p></li>
+<p>perché in questo modo la dipendenza dalla densità colonnare scompare:
+<span class="math inline">f(\lambda) \approx \sigma(\lambda) /
+\sigma_V</span>.</p></li>
 </ul>
 </section>
 <section id="fisica-dellestinzione-4" class="slide level1">
 <h1>Fisica dell’estinzione</h1>
-<p>Dallo studio di <span class="math inline">f(\lambda)</span> si osserva che:</p>
+<p>Dallo studio di <span class="math inline">f(\lambda)</span> si
+osserva che:</p>
 <ol>
-<li>Nel visibile/IR, <span class="math inline">f(\lambda) \propto 1/\lambda \propto \nu</span> (la luce blu viene assorbita maggiormente);</li>
+<li>Nel visibile/IR, <span class="math inline">f(\lambda) \propto
+1/\lambda \propto \nu</span> (la luce blu viene assorbita
+maggiormente);</li>
 <li>C’è un picco nell’UV;</li>
 <li>Si vedono strutture nello spettro dell’IR.</li>
 </ol>
-<p>La forma di <span class="math inline">f(\lambda)</span> dipende comunque anche dalla direzione di osservazione (c’è polvere e polvere!), soprattutto nell’UV.</p>
+<p>La forma di <span class="math inline">f(\lambda)</span> dipende
+comunque anche dalla direzione di osservazione (c’è polvere e polvere!),
+soprattutto nell’UV.</p>
 </section>
 <section id="estinzione-in-funzione-di-lambda-2" class="slide level1">
-<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
-<p>Si definisce <strong>rapporto di estinzione</strong> la quantità <span class="math display">
+<h1>Estinzione in funzione di <span
+class="math inline">\lambda</span></h1>
+<p>Si definisce <strong>rapporto di estinzione</strong> la quantità
+<span class="math display">
 R_V \equiv \frac{A_V}{A_B - A_V} = \frac{A_V}{E(B - V)} \approx 3.1,
-</span> ricavabile stimando <span class="math inline">A_V</span> dai conteggi di stelle per <span class="math inline">A_V</span> e <span class="math inline">E(B - V)</span> dagli indici di colore. Come <span class="math inline">f(\lambda)</span>, anche <span class="math inline">R_V</span> non dipende dalla densità colonnare; è legato soprattutto alla dimensione dei grani di polvere.</p>
-<p>Il valore <span class="math inline">R_V \approx 3.1</span> è tipico, ma come <span class="math inline">f(\lambda)</span> può mostrare variazioni significative a seconda della regione osservata.</p>
+</span> ricavabile stimando <span class="math inline">A_V</span> dai
+conteggi di stelle per <span class="math inline">A_V</span> e <span
+class="math inline">E(B - V)</span> dagli indici di colore. Come <span
+class="math inline">f(\lambda)</span>, anche <span
+class="math inline">R_V</span> non dipende dalla densità colonnare; è
+legato soprattutto alla dimensione dei grani di polvere.</p>
+<p>Il valore <span class="math inline">R_V \approx 3.1</span> è tipico,
+ma come <span class="math inline">f(\lambda)</span> può mostrare
+variazioni significative a seconda della regione osservata.</p>
 </section>
 <section class="slide level1">
 
@@ -327,17 +432,29 @@ R_V \equiv \frac{A_V}{A_B - A_V} = \frac{A_V}{E(B - V)} \approx 3.1,
 </center>
 </section>
 <section id="estinzione-in-funzione-di-lambda-3" class="slide level1">
-<h1>Estinzione in funzione di <span class="math inline">\lambda</span></h1>
-<p>Se si ha una stima ragionevole di <span class="math inline">R</span>, noto <span class="math inline">A_B - A_V</span> (facile) posso stimare <span class="math inline">A_V</span>: <span class="math display">
+<h1>Estinzione in funzione di <span
+class="math inline">\lambda</span></h1>
+<p>Se si ha una stima ragionevole di <span class="math inline">R</span>,
+noto <span class="math inline">A_B - A_V</span> (facile) posso stimare
+<span class="math inline">A_V</span>: <span class="math display">
 A_V \approx 3.1 (A_B - A_V),
-</span> che è comodo in quei casi in cui il metodo dei conteggi per stimare direttamente <span class="math inline">A_V</span> è di difficile applicazione.</p>
-<p>Tutto ciò è fattibile senza conoscere la distanza <span class="math inline">d</span> della stella!</p>
+</span> che è comodo in quei casi in cui il metodo dei conteggi per
+stimare direttamente <span class="math inline">A_V</span> è di difficile
+applicazione.</p>
+<p>Tutto ciò è fattibile senza conoscere la distanza <span
+class="math inline">d</span> della stella!</p>
 </section>
 <section id="esercizio-per-casa" class="slide level1">
 <h1>Esercizio per casa</h1>
-<p>Una stella di tipo B viene osservata con <span class="math inline">m_B = 11.0\,\text{mag}</span>, <span class="math inline">m_V = 10.0\,\text{mag}</span>.</p>
-<p>Se per una stella B, <span class="math inline">M_V \approx -0.9</span> e <span class="math inline">M_B - M_V \approx -0.17</span>, qual è il valore di <span class="math inline">A_V</span> e la sua distanza? (Supporre che <span class="math inline">R = 3.1</span>).</p>
-<p>[Soluzione: <span class="math inline">A_V \approx 3.6</span>, <span class="math inline">d \approx 280\,\text{pc}</span>].</p>
+<p>Una stella di tipo B viene osservata con <span
+class="math inline">m_B = 11.0\,\text{mag}</span>, <span
+class="math inline">m_V = 10.0\,\text{mag}</span>.</p>
+<p>Se per una stella B, <span class="math inline">M_V \approx
+-0.9</span> e <span class="math inline">M_B - M_V \approx -0.17</span>,
+qual è il valore di <span class="math inline">A_V</span> e la sua
+distanza? (Supporre che <span class="math inline">R = 3.1</span>).</p>
+<p>[Soluzione: <span class="math inline">A_V \approx 3.6</span>, <span
+class="math inline">d \approx 280\,\text{pc}</span>].</p>
 </section>
 <section id="fisica-dellestinzione-5" class="slide level1">
 <h1>Fisica dell’estinzione</h1>
@@ -356,26 +473,38 @@ A_V \approx 3.1 (A_B - A_V),
 <center>
 <img data-src="images/gordon-plot.png" height="500" />
 </center>
-<p>Notare che sull’asse <span class="math inline">x</span> c’è <span class="math inline">1/\lambda</span> anziché <span class="math inline">\lambda</span>: perché?</p>
+<p>Notare che sull’asse <span class="math inline">x</span> c’è <span
+class="math inline">1/\lambda</span> anziché <span
+class="math inline">\lambda</span>: perché?</p>
 </section>
 <section id="la-polvere-nel-mezzo-interstellare" class="slide level1">
 <h1>La polvere nel mezzo interstellare</h1>
 </section>
 <section id="polvere-nel-ism" class="slide level1">
 <h1>Polvere nel ISM</h1>
-<p>Ci chiediamo: qual è la dimensione tipica <span class="math inline">r_g</span> dei grani di polvere?</p>
+<p>Ci chiediamo: qual è la dimensione tipica <span
+class="math inline">r_g</span> dei grani di polvere?</p>
 <ul>
-<li>Se <span class="math inline">r_g \gg \lambda</span>, vale l’ottica geometrica, e <span class="math inline">A(\lambda)</span> è costante;</li>
-<li>Se <span class="math inline">r_g \ll \lambda</span>, allora <span class="math inline">\sigma \sim 0</span> e dunque <span class="math inline">A(\lambda)</span> è piccolo e costante;</li>
-<li>Se <span class="math inline">r_g \sim \lambda</span>, allora la diffrazione è importante, e <span class="math inline">A(\lambda)</span> dipende fortemente da <span class="math inline">\lambda</span>.</li>
+<li>Se <span class="math inline">r_g \gg \lambda</span>, vale l’ottica
+geometrica, e <span class="math inline">A(\lambda)</span> è
+costante;</li>
+<li>Se <span class="math inline">r_g \ll \lambda</span>, allora <span
+class="math inline">\sigma \sim 0</span> e dunque <span
+class="math inline">A(\lambda)</span> è piccolo e costante;</li>
+<li>Se <span class="math inline">r_g \sim \lambda</span>, allora la
+diffrazione è importante, e <span class="math inline">A(\lambda)</span>
+dipende fortemente da <span class="math inline">\lambda</span>.</li>
 </ul>
 </section>
 <section id="polvere-nel-ism-dimensione-dei-grani" class="slide level1">
 <h1>Polvere nel ISM: dimensione dei grani</h1>
 <p>Esistono due tipi di grani di polvere:</p>
 <ol>
-<li>Grani grossi (µm–mm) generano uno spettro IR. Si osservano strutture spettrali a ~1÷10 µm, indicative di silicati (SiO, SiO₂) e ghiaccio (H₂O);</li>
-<li>Grani piccoli (1–10 nm) generano estinzione in UV, e sono aggregati di ~100 atomi (idrocarburi, carbonio, grafite).</li>
+<li>Grani grossi (µm–mm) generano uno spettro IR. Si osservano strutture
+spettrali a ~1÷10 µm, indicative di silicati (SiO, SiO₂) e ghiaccio
+(H₂O);</li>
+<li>Grani piccoli (1–10 nm) generano estinzione in UV, e sono aggregati
+di ~100 atomi (idrocarburi, carbonio, grafite).</li>
 </ol>
 </section>
 <section id="polvere-nel-ism-composizione" class="slide level1">
@@ -383,14 +512,20 @@ A_V \approx 3.1 (A_B - A_V),
 <center>
 <img data-src="images/draine_fig_21_1.png" height="450" />
 </center>
-<p><small>B. Draine, <em>Physics of the interstellar and galactic medium</em>, Princeton University Press (2011).</small></p>
+<p><small>B. Draine, <em>Physics of the interstellar and galactic
+medium</em>, Princeton University Press (2011).</small></p>
 </section>
 <section id="forma-dei-grani-di-polvere" class="slide level1">
 <h1>Forma dei grani di polvere</h1>
 <ul>
-<li><p>Indicazioni sulla forma dei grani vengono da misure di <strong>polarizzazione</strong>.</p></li>
-<li><p>La luce delle stelle che attraversa lo ISM è polarizzata. Si suppone che questo dipenda dalla forma dei grani nel ISM, perché HI, HII ed He hanno simmetria sferica e non possono indurre polarizzazione.</p></li>
-<li><p>La polarizzazione della luce di stelle sul piano galattico è maggiore se tra noi e la stella sono presenti polveri.</p></li>
+<li><p>Indicazioni sulla forma dei grani vengono da misure di
+<strong>polarizzazione</strong>.</p></li>
+<li><p>La luce delle stelle che attraversa lo ISM è polarizzata. Si
+suppone che questo dipenda dalla forma dei grani nel ISM, perché HI, HII
+ed He hanno simmetria sferica e non possono indurre
+polarizzazione.</p></li>
+<li><p>La polarizzazione della luce di stelle sul piano galattico è
+maggiore se tra noi e la stella sono presenti polveri.</p></li>
 </ul>
 </section>
 <section class="slide level1">
@@ -398,7 +533,8 @@ A_V \approx 3.1 (A_B - A_V),
 <center>
 <img data-src="images/harwit-starlight-polarization.png" height="660" />
 </center>
-<p><small>Harwit, <em>Astrophysical concepts</em> (4th edition), pag. 426, Springer (2006)</small></p>
+<p><small>Harwit, <em>Astrophysical concepts</em> (4th edition),
+pag. 426, Springer (2006)</small></p>
 </section>
     </div>
   </div>
@@ -440,7 +576,7 @@ A_V \approx 3.1 (A_B - A_V),
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: false,
+        hash: true,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,

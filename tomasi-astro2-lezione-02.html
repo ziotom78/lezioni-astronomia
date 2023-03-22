@@ -11,32 +11,42 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="./css/custom.css"/>
   <link rel="stylesheet" href="./css/asciinema-player.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   var macros = [];
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      macros: macros,
-      fleqn: false
-     });
-  }}});
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -44,28 +54,43 @@
 
 <section id="title-slide">
   <h1 class="title">Lezione di Astronomia II – 2</h1>
-  <p class="author">Maurizio Tomasi (<a href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
-  <p class="date">25 Marzo 2022</p>
+  <p class="author">Maurizio Tomasi (<a
+href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
+  <p class="date">24 Marzo 2023</p>
 </section>
 
 <section id="tempo-di-rilassamento" class="slide level1">
 <h1>Tempo di rilassamento</h1>
 <ul>
-<li><p>Nel calcolo di ieri (tempo di rilassamento di un ammasso globulare) avevamo considerato solo le interazioni a <em>corto</em> raggio, mentre sono rilevanti anche gli scambi energetici a distanza.</p></li>
-<li><p>Nello specifico, avevamo supposto che si abbia interazione quando la distanza tra due stelle sia inferiore al raggio collisionale <span class="math inline">r_c</span> dato da <span class="math display">
+<li><p>Nel calcolo di ieri (tempo di rilassamento di un ammasso
+globulare) avevamo considerato solo le interazioni a <em>corto</em>
+raggio, mentre sono rilevanti anche gli scambi energetici a
+distanza.</p></li>
+<li><p>Nello specifico, avevamo supposto che si abbia interazione quando
+la distanza tra due stelle sia inferiore al raggio collisionale <span
+class="math inline">r_c</span> dato da <span class="math display">
   \frac12 M_* v^2 \sim G \frac{M_*^2}{r_c}.
 </span></p></li>
-<li><p>Ma anche a distanze maggiori di <span class="math inline">r_c</span> ci sono scambi energetici, e noi li abbiamo trascurati.</p></li>
+<li><p>Ma anche a distanze maggiori di <span
+class="math inline">r_c</span> ci sono scambi energetici, e noi li
+abbiamo trascurati.</p></li>
 </ul>
 </section>
 <section id="distanza-media-tra-le-stelle" class="slide level1">
 <h1>Distanza media tra le stelle</h1>
 <ul>
-<li>Calcoliamo la distanza media <span class="math inline">\lambda</span> tra due stelle dell’ammasso. Essa è data da <span class="math display">
-  \lambda \sim \frac1{n^{1/3}} = {\left(\frac{4\pi}{3 N}\right)}^{\frac13}
+<li>Calcoliamo la distanza media <span
+class="math inline">\lambda</span> tra due stelle dell’ammasso. Essa è
+data da <span class="math display">
+  \lambda \sim \frac1{n^{1/3}} = {\left(\frac{4\pi}{3
+N}\right)}^{\frac13}
   R_\text{core} \approx 2.4\times 10^{15}\,\text{m} = 6700\,\text{AU},
-</span> se <span class="math inline">R_\text{core} = 5\,\text{pc}</span> e <span class="math inline">N = 10^6</span>.</li>
-<li>Il raggio collisionale, nel caso <span class="math inline">v = v_\text{rms} = 16\,\text{km/s}</span>, per una stella <span class="math inline">M_* = M_\odot/2</span>, è invece <span class="math display">
+</span> se <span class="math inline">R_\text{core} = 5\,\text{pc}</span>
+e <span class="math inline">N = 10^6</span>.</li>
+<li>Il raggio collisionale, nel caso <span class="math inline">v =
+v_\text{rms} = 16\,\text{km/s}</span>, per una stella <span
+class="math inline">M_* = M_\odot/2</span>, è invece <span
+class="math display">
   r_c = \frac{2 G M_*}{v^2} \approx 5.2 \times 10^{11}\,\text{m}
   \approx 750\,R_\odot = 0.3\,\text{AU}.
 </span></li>
@@ -73,14 +98,18 @@
 </section>
 <section id="tempo-di-rilassamento-1" class="slide level1">
 <h1>Tempo di rilassamento</h1>
-<p>Il problema è che noi abbiamo considerato solo le interazioni a corto raggio, ma il conto precedente ci dice che sono rarissime, perché la distanza media tra le stelle è 10⁴ volte maggiore del raggio collisionale.</p>
+<p>Il problema è che noi abbiamo considerato solo le interazioni a corto
+raggio, ma il conto precedente ci dice che sono rarissime, perché la
+distanza media tra le stelle è 10⁴ volte maggiore del raggio
+collisionale.</p>
 <center>
 <img data-src="images/cross-section.png" />
 </center>
 </section>
 <section id="interazioni-a-lungo-raggio" class="slide level1">
 <h1>Interazioni a lungo raggio</h1>
-<p>Se un a.g. è virializzato, allora ciò è probabilmente determinato soprattutto dalle interazioni a lungo raggio:</p>
+<p>Se un a.g. è virializzato, allora ciò è probabilmente determinato
+soprattutto dalle interazioni a lungo raggio:</p>
 <center>
 <img data-src="images/long-range-interactions.png" />
 </center>
@@ -97,8 +126,14 @@
 <section id="interazioni-a-lungo-raggio-1" class="slide level1">
 <h1>Interazioni a lungo raggio</h1>
 <ul>
-<li>Vogliamo stimare l’importanza delle interazioni a lungo raggio. Misureremo quindi la deflessione media <span class="math inline">\vec{\Delta v}_\perp</span> causata da queste interazioni.</li>
-<li>Ovviamente interazioni successive avranno valori diversi di <span class="math inline">\Delta v_\perp</span>, sia in modulo che in direzione e verso. Il moto risultante sarà di tipo Browniano, tale che <span class="math display">
+<li>Vogliamo stimare l’importanza delle interazioni a lungo raggio.
+Misureremo quindi la deflessione media <span
+class="math inline">\vec{\Delta v}_\perp</span> causata da queste
+interazioni.</li>
+<li>Ovviamente interazioni successive avranno valori diversi di <span
+class="math inline">\Delta v_\perp</span>, sia in modulo che in
+direzione e verso. Il moto risultante sarà di tipo Browniano, tale che
+<span class="math display">
 \left&lt; \vec{\Delta v}_\perp\right&gt; = 0
 </span> (il moto Browniano non ha una direzione preferenziale).</li>
 </ul>
@@ -106,37 +141,63 @@
 <section id="interazioni-a-lungo-raggio-2" class="slide level1">
 <h1>Interazioni a lungo raggio</h1>
 <ul>
-<li>A noi non interessa però caratterizzare la direzione di <span class="math inline">\Delta v_\perp</span>, solo capire l’ordine di grandezza della velocità <span class="math inline">\Delta v_\perp</span>. La quantità più indicata è il <em>valore quadratico medio</em> <span class="math inline">\left&lt; \Delta v_\perp^2 \right&gt;</span>.</li>
+<li>A noi non interessa però caratterizzare la direzione di <span
+class="math inline">\Delta v_\perp</span>, solo capire l’ordine di
+grandezza della velocità <span class="math inline">\Delta
+v_\perp</span>. La quantità più indicata è il <em>valore quadratico
+medio</em> <span class="math inline">\left&lt; \Delta v_\perp^2
+\right&gt;</span>.</li>
 <li>Esso ha le seguenti proprietà:
 <ol>
-<li>È legato alla quantità di energia che acquista la stella a causa delle interazioni a lungo raggio (perché <span class="math inline">K \propto v^2</span>);</li>
+<li>È legato alla quantità di energia che acquista la stella a causa
+delle interazioni a lungo raggio (perché <span class="math inline">K
+\propto v^2</span>);</li>
 <li>Aumenta col passare del tempo;</li>
-<li>Diventa importante quando <span class="math inline">\left&lt; \Delta v_\perp^2 \right&gt; \approx v^2</span>.</li>
+<li>Diventa importante quando <span class="math inline">\left&lt; \Delta
+v_\perp^2 \right&gt; \approx v^2</span>.</li>
 </ol></li>
 </ul>
 </section>
 <section id="interazioni-a-lungo-raggio-3" class="slide level1">
 <h1>Interazioni a lungo raggio</h1>
-<p>Cosa avviene in una interazione dove <span class="math inline">r &gt; r_c</span>?</p>
+<p>Cosa avviene in una interazione dove <span class="math inline">r &gt;
+r_c</span>?</p>
 <center>
 <img data-src="images/GC-impact-parameter.png" />
 </center>
-<p>Supponiamo che lo scambio energetico avvenga solo lungo la linea rossa, e che esso introduca una componente perpendicolare <span class="math inline">\Delta v_\perp</span> nella velocità <span class="math inline">v</span>.</p>
+<p>Supponiamo che lo scambio energetico avvenga solo lungo la linea
+rossa, e che esso introduca una componente perpendicolare <span
+class="math inline">\Delta v_\perp</span> nella velocità <span
+class="math inline">v</span>.</p>
 </section>
 <section id="interazioni-a-lungo-raggio-4" class="slide level1">
 <h1>Interazioni a lungo raggio</h1>
-<p>Possiamo stimare l’ordine di grandezza di <span class="math inline">\Delta v_\perp</span> usando le leggi di Newton: <span class="math display">
+<p>Possiamo stimare l’ordine di grandezza di <span
+class="math inline">\Delta v_\perp</span> usando le leggi di Newton:
+<span class="math display">
 M_* \frac{\Delta v_\perp}{\Delta t} = G \frac{M_*^2}{r^2},
 </span> da cui <span class="math display">
 \Delta v_\perp = G \frac{M_*}{r^2/\Delta t} = G \frac{M_*}{r\,v}
-</span> (<span class="math inline">\Delta t</span> è il tempo necessario a percorrere il tratto rosso, che è lungo <span class="math inline">\sim r</span>: quindi <span class="math inline">r / \Delta t \approx v</span>).</p>
+</span> (<span class="math inline">\Delta t</span> è il tempo necessario
+a percorrere il tratto rosso, che è lungo <span class="math inline">\sim
+r</span>: quindi <span class="math inline">r / \Delta t \approx
+v</span>).</p>
 </section>
 <section id="interazioni-a-lungo-raggio-5" class="slide level1">
 <h1>Interazioni a lungo raggio</h1>
 <ul>
-<li><p>Quali sono i valori plausibili da usare per <span class="math inline">r</span>? Abbiamo già visto che negli ammassi globulari le interazioni a corto raggio (<span class="math inline">r \leq r_c</span>) contano poco; ma ovviamente <span class="math inline">r &lt; R</span> (con <span class="math inline">R</span> dimensione dell’ammasso).</p></li>
-<li><p>In generale <span class="math inline">r_c &lt; r &lt; R</span>.</p></li>
-<li><p>Siccome <span class="math inline">\Delta v_\perp</span> è funzione di <span class="math inline">r</span>, dobbiamo calcolare un valore «medio» di <span class="math inline">\Delta v_\perp</span>.</p></li>
+<li><p>Quali sono i valori plausibili da usare per <span
+class="math inline">r</span>? Abbiamo già visto che negli ammassi
+globulari le interazioni a corto raggio (<span class="math inline">r
+\leq r_c</span>) contano poco; ma ovviamente <span class="math inline">r
+&lt; R</span> (con <span class="math inline">R</span> dimensione
+dell’ammasso).</p></li>
+<li><p>In generale <span class="math inline">r_c &lt; r &lt;
+R</span>.</p></li>
+<li><p>Siccome <span class="math inline">\Delta v_\perp</span> è
+funzione di <span class="math inline">r</span>, dobbiamo calcolare un
+valore «medio» di <span class="math inline">\Delta
+v_\perp</span>.</p></li>
 </ul>
 </section>
 <section id="interazioni-a-lungo-raggio-6" class="slide level1">
@@ -144,20 +205,29 @@ M_* \frac{\Delta v_\perp}{\Delta t} = G \frac{M_*^2}{r^2},
 <center>
 <img data-src="images/cross-section-divided.png" height="120" />
 </center>
-<p>Calcoliamo il valore quadratico medio di <span class="math inline">\Delta v_\perp</span> (la traiettoria della stella nell’ammasso è assimilabile a un moto Browniano): <span class="math display">
+<p>Calcoliamo il valore quadratico medio di <span
+class="math inline">\Delta v_\perp</span> (la traiettoria della stella
+nell’ammasso è assimilabile a un moto Browniano): <span
+class="math display">
 \begin{aligned}
-  \left&lt;(\Delta v_\perp)^2\right&gt; &amp;= \int_{r_c}^R (2\pi r\,\text{d}
+  \left&lt;(\Delta v_\perp)^2\right&gt; &amp;= \int_{r_c}^R (2\pi
+r\,\text{d}
   r)\,(v \Delta t)\,n\,\left(G\,\frac{M_*}{r\,v}\right)^2 = \\
-  &amp;= \frac{2\pi n G^2 M_*^2}{v}\,\Delta t\,\log\left(\frac{R}{r_c}\right).
+  &amp;= \frac{2\pi n G^2 M_*^2}{v}\,\Delta
+t\,\log\left(\frac{R}{r_c}\right).
 \end{aligned}
 </span></p>
 </section>
 <section id="interazioni-a-lungo-raggio-7" class="slide level1">
 <h1>Interazioni a lungo raggio</h1>
 <ul>
-<li><p>Usiamo il teorema del viriale (assumendo quindi <span class="math inline">R</span> e <span class="math inline">v</span> calcolati sul sistema già rilassato: perché?): <span class="math display">
+<li><p>Usiamo il teorema del viriale (assumendo quindi <span
+class="math inline">R</span> e <span class="math inline">v</span>
+calcolati sul sistema già rilassato: perché?): <span
+class="math display">
 \log\frac{R}{r_c} = \log\frac{R v^2}{G M_*} \approx \log N,
-</span> con <span class="math inline">N</span> numero di stelle dell’ammasso.</p></li>
+</span> con <span class="math inline">N</span> numero di stelle
+dell’ammasso.</p></li>
 <li><p>Quindi <span class="math display">
   \left&lt;(\Delta v_\perp)^2\right&gt; =
   \frac{2\pi n G^2 M_*^2}{v}\,\Delta t\,\log N.
@@ -166,7 +236,10 @@ M_* \frac{\Delta v_\perp}{\Delta t} = G \frac{M_*^2}{r^2},
 </section>
 <section id="interazioni-a-lungo-raggio-8" class="slide level1">
 <h1>Interazioni a lungo raggio</h1>
-<p>Per grandi valori di <span class="math inline">\Delta t</span>, la componente <span class="math inline">\Delta v_\perp</span> diventa importante. Dopo quanto tempo <span class="math inline">\Delta v_\perp \approx v</span>?</p>
+<p>Per grandi valori di <span class="math inline">\Delta t</span>, la
+componente <span class="math inline">\Delta v_\perp</span> diventa
+importante. Dopo quanto tempo <span class="math inline">\Delta v_\perp
+\approx v</span>?</p>
 <p><span class="math display">
 \begin{aligned}
   \left&lt;(\Delta v_\perp)^2\right&gt; &amp;\approx v^2 \\
@@ -179,9 +252,14 @@ M_* \frac{\Delta v_\perp}{\Delta t} = G \frac{M_*^2}{r^2},
 <h1>Interazioni a lungo raggio</h1>
 <p>Usando le solite sostituzioni <span class="math display">
 n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
-</span> l’espressione di <span class="math inline">\Delta t</span> diventa <span class="math display">
+</span> l’espressione di <span class="math inline">\Delta t</span>
+diventa <span class="math display">
 \Delta t \approx \frac{N}{\log N}\,\frac{R}{v}.
-</span> Rispetto alla nostra stima iniziale <span class="math inline">\Delta t_r \sim N R / v</span>, qui compare <span class="math inline">\log N</span> al denominatore. Per un ammasso tipico, <span class="math inline">\log N \approx \log 10^6 \approx 14</span>.</p>
+</span> Rispetto alla nostra stima iniziale <span
+class="math inline">\Delta t_r \sim N R / v</span>, qui compare <span
+class="math inline">\log N</span> al denominatore. Per un ammasso
+tipico, <span class="math inline">\log N \approx \log 10^6 \approx
+14</span>.</p>
 </section>
 <section id="tempo-di-rilassamento-2" class="slide level1">
 <h1>Tempo di rilassamento</h1>
@@ -195,8 +273,14 @@ n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
 <section id="tempo-di-rilassamento-3" class="slide level1">
 <h1>Tempo di rilassamento</h1>
 <ul>
-<li><p>Il calcolo svolto in questa lezione è spiegato nell’esercizio 1.14 di <em>Cosmology and Astrophysics through problems</em> (T.~Padmanabhan, Cambridge University Press, 1996).</p></li>
-<li><p>Nel capitolo 10.7 del volume I di <em>Theoretical Astrophysics</em> (T.~Padmanabhan, Cambridge U. P., 2000) c’è la derivazione esatta della formula nel caso di un plasma (il potenziale Coulombiano dipende da <span class="math inline">r</span> come quello Newtoniano).</p></li>
+<li><p>Il calcolo svolto in questa lezione è spiegato nell’esercizio
+1.14 di <em>Cosmology and Astrophysics through problems</em>
+(T.~Padmanabhan, Cambridge University Press, 1996).</p></li>
+<li><p>Nel capitolo 10.7 del volume I di <em>Theoretical
+Astrophysics</em> (T.~Padmanabhan, Cambridge U. P., 2000) c’è la
+derivazione esatta della formula nel caso di un plasma (il potenziale
+Coulombiano dipende da <span class="math inline">r</span> come quello
+Newtoniano).</p></li>
 </ul>
 </section>
 <section id="età-degli-ammassi-globulari" class="slide level1">
@@ -208,7 +292,11 @@ n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
 <section id="età-degli-ammassi-globulari-1" class="slide level1">
 <h1>Età degli ammassi globulari</h1>
 <blockquote>
-<p>The LF is a natural clock because the number of stars in a given luminosity bin decreases with time, since more massive stars evolve more rapidly than less massive ones. The fact that small differences in stellar masses correspond to large differences in evolutionary time explains the power of the LF clock…</p>
+<p>The LF is a natural clock because the number of stars in a given
+luminosity bin decreases with time, since more massive stars evolve more
+rapidly than less massive ones. The fact that small differences in
+stellar masses correspond to large differences in evolutionary time
+explains the power of the LF clock…</p>
 </blockquote>
 </section>
 <section id="età-degli-ammassi-globulari-2" class="slide level1">
@@ -220,8 +308,14 @@ n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
 <section id="tempo-di-vita-degli-a.g." class="slide level1">
 <h1>Tempo di vita degli a.g.</h1>
 <ul>
-<li><p>Il testo di riferimento del corso (Kutner) sostiene che il tempo di vita degli ammassi globulari sia molto superiore a quello dell’Universo (<span class="math inline">\sim 200\,\mathrm{Gyr}</span>).</p></li>
-<li><p>In realtà recenti simulazioni al computer (Zonoozi et al., 2011, Zonoozi et al., 2014) mostrano che i processi di evaporazione sono un ordine di grandezza più rapidi: il tempo di vita medio diventa quindi confrontabile con quello dell’Universo.</p></li>
+<li><p>Il testo di riferimento del corso (Kutner) sostiene che il tempo
+di vita degli ammassi globulari sia molto superiore a quello
+dell’Universo (<span class="math inline">\sim
+200\,\mathrm{Gyr}</span>).</p></li>
+<li><p>In realtà recenti simulazioni al computer (Zonoozi et al., 2011,
+Zonoozi et al., 2014) mostrano che i processi di evaporazione sono un
+ordine di grandezza più rapidi: il tempo di vita medio diventa quindi
+confrontabile con quello dell’Universo.</p></li>
 </ul>
 </section>
 <section id="ammassi-aperti" class="slide level1">
@@ -230,6 +324,11 @@ n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
 <section class="slide level1">
 
 <table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 37%" />
+<col style="width: 41%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -281,28 +380,39 @@ n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
 <center>
 <img data-src="images/m45.jpg" height="500" />
 </center>
-<p>Nel Toro. <span class="math inline">N \sim 500</span>, età <span class="math inline">10^8</span> yr, <span class="math inline">R \sim 8</span> ly, <span class="math inline">D \sim 440</span> ly.</p>
+<p>Nel Toro. <span class="math inline">N \sim 500</span>, età <span
+class="math inline">10^8</span> yr, <span class="math inline">R \sim
+8</span> ly, <span class="math inline">D \sim 440</span> ly.</p>
 </section>
 <section id="m6" class="slide level1">
 <h1>M6</h1>
 <center>
 <img data-src="images/m6.jpg" height="500" />
 </center>
-<p><span class="math inline">N \sim 100</span>, età <span class="math inline">10^8</span> yr, <span class="math inline">R \sim 12\div 25</span> ly, <span class="math inline">D \sim 1 600</span> ly.</p>
+<p><span class="math inline">N \sim 100</span>, età <span
+class="math inline">10^8</span> yr, <span class="math inline">R \sim
+12\div 25</span> ly, <span class="math inline">D \sim
+1 600</span> ly.</p>
 </section>
 <section id="m7" class="slide level1">
 <h1>M7</h1>
 <center>
 <img data-src="images/m7.jpg" height="500" />
 </center>
-<p>Nello Scorpione. <span class="math inline">N \sim 80</span>, età <span class="math inline">2,2\times 10^8</span> yr, <span class="math inline">R \sim 18\div 20</span> ly, <span class="math inline">D \sim 800</span> ly.</p>
+<p>Nello Scorpione. <span class="math inline">N \sim 80</span>, età
+<span class="math inline">2,2\times 10^8</span> yr, <span
+class="math inline">R \sim 18\div 20</span> ly, <span
+class="math inline">D \sim 800</span> ly.</p>
 </section>
 <section id="popolazione-di-ammassi-aperti" class="slide level1">
 <h1>Popolazione di ammassi aperti</h1>
 <ul>
 <li>A tutt’oggi sono stati censiti circa 1 100 ammassi aperti</li>
-<li>Nel disco galattico ne sono presenti probabilmente di più: a distanze maggiori è difficile fare un censimento a causa della polvere del disco galattico.</li>
-<li>Gli ammassi aperti formano quindi una popolazione molto più numerosa di quella degli ammassi globulari.</li>
+<li>Nel disco galattico ne sono presenti probabilmente di più: a
+distanze maggiori è difficile fare un censimento a causa della polvere
+del disco galattico.</li>
+<li>Gli ammassi aperti formano quindi una popolazione molto più numerosa
+di quella degli ammassi globulari.</li>
 </ul>
 </section>
 <section id="diagramma-hr-di-ammassi-aperti" class="slide level1">
@@ -316,27 +426,41 @@ n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
 <center>
 <img data-src="images/hr-isochrones.png" />
 </center>
-<p>{, Meynet, Mermilliod, Maeder. In: , Vangioni-Flam  (ed.), Editions Frontières (1989).}</p>
+<p>{, Meynet, Mermilliod, Maeder. In: , Vangioni-Flam  (ed.), Editions
+Frontières (1989).}</p>
 </section>
 <section id="tempo-di-rilassamento-per-a.-aperti" class="slide level1">
 <h1>Tempo di rilassamento per a. aperti</h1>
 <ul>
-<li><p>Gli ammassi aperti M 67 e NGC 188 sono tra i più antichi che si conoscano: gran parte degli ammassi hanno un’età inferiore a <span class="math inline">10^9\,\text{yr}</span>.</p></li>
+<li><p>Gli ammassi aperti M 67 e NGC 188 sono tra i più antichi che si
+conoscano: gran parte degli ammassi hanno un’età inferiore a <span
+class="math inline">10^9\,\text{yr}</span>.</p></li>
 <li><p>Dalla formula <span class="math display">
-\Delta t_r \approx \frac1{12\log\frac{N}2} \frac{N R^{3/2}}{\sqrt{G M_*}}
-</span> si ottiene per gli ammassi aperti che <span class="math inline">\Delta t_r \approx 10^8\div 10^9\,\text{Gyr}</span>: quindi buona parte degli a.a. <strong>non sono rilassati</strong>.</p></li>
+\Delta t_r \approx \frac1{12\log\frac{N}2} \frac{N R^{3/2}}{\sqrt{G
+M_*}}
+</span> si ottiene per gli ammassi aperti che <span
+class="math inline">\Delta t_r \approx 10^8\div 10^9\,\text{Gyr}</span>:
+quindi buona parte degli a.a. <strong>non sono
+rilassati</strong>.</p></li>
 </ul>
 </section>
-<section id="tempo-di-rilassamento-per-a.-aperti-1" class="slide level1">
+<section id="tempo-di-rilassamento-per-a.-aperti-1"
+class="slide level1">
 <h1>Tempo di rilassamento per a. aperti</h1>
 <center>
 <img data-src="images/converse-stahler-first-page.png" height="500" />
 </center>
 </section>
-<section id="tempo-di-rilassamento-per-a.-aperti-2" class="slide level1">
+<section id="tempo-di-rilassamento-per-a.-aperti-2"
+class="slide level1">
 <h1>Tempo di rilassamento per a. aperti</h1>
 <blockquote>
-<p>…[the] evolutionary status [of open clusters] is much less clear. Half of open clusters disintegrate within <span class="math inline">2\times10^8\,\text{yr}</span> after birth [], a span corresponding to at most a few initial relaxation times. Not surprisingly, there is little observational signature that relaxation has occurred.</p>
+<p>…[the] evolutionary status [of open clusters] is much less clear.
+Half of open clusters disintegrate within <span
+class="math inline">2\times10^8\,\text{yr}</span> after birth [], a span
+corresponding to at most a few initial relaxation times. Not
+surprisingly, there is little observational signature that relaxation
+has occurred.</p>
 </blockquote>
 <p>(Converse and Stahler, MNRAS 410, 2011)</p>
 </section>
@@ -344,9 +468,13 @@ n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
 <h1>Età degli ammassi aperti</h1>
 <p>Perché gli ammassi aperti hanno vita così breve? Alcune ragioni:</p>
 <ol>
-<li>Nel disco galattico sono presenti molti oggetti massivi (nubi molecolari giganti) la cui forza gravitazionale può distruggere gli ammassi;</li>
-<li>La loro massa non è sufficientemente grande da impedire la «evaporazione»;</li>
-<li>A causa della rotazione differenziale del piano galattico (che vedremo in seguito), gli ammassi sono soggetti a forze di marea.</li>
+<li>Nel disco galattico sono presenti molti oggetti massivi (nubi
+molecolari giganti) la cui forza gravitazionale può distruggere gli
+ammassi;</li>
+<li>La loro massa non è sufficientemente grande da impedire la
+«evaporazione»;</li>
+<li>A causa della rotazione differenziale del piano galattico (che
+vedremo in seguito), gli ammassi sono soggetti a forze di marea.</li>
 </ol>
 </section>
 <section id="popolazioni-stellari" class="slide level1">
@@ -418,7 +546,7 @@ n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: false,
+        hash: true,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,

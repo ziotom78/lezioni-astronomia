@@ -11,32 +11,42 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
   <link rel="stylesheet" href="./css/custom.css"/>
   <link rel="stylesheet" href="./css/asciinema-player.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   var macros = [];
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      macros: macros,
-      fleqn: false
-     });
-  }}});
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -44,13 +54,15 @@
 
 <section id="title-slide">
   <h1 class="title">Lezione di Astronomia II – 1</h1>
-  <p class="author">Maurizio Tomasi (<a href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
-  <p class="date">24 Marzo 2022</p>
+  <p class="author">Maurizio Tomasi (<a
+href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
+  <p class="date">23 Marzo 2023</p>
 </section>
 
 <section id="come-si-usa-ariel" class="slide level1">
 <h1>Come si usa Ariel</h1>
-<p>Per ricevere le notifiche via email, occorre abilitarle <em>in tutte le sezioni del sito</em>.</p>
+<p>Per ricevere le notifiche via email, occorre abilitarle <em>in tutte
+le sezioni del sito</em>.</p>
 <center>
 <img data-src="images/ariel-notifica.png" />
 </center>
@@ -85,17 +97,20 @@
 <tr class="even">
 <td>Disco (gas)</td>
 <td><span class="math inline">10^{10}\,M_\odot</span></td>
-<td>Disco (<span class="math inline">r = 25\,\text{kpc}</span>, <span class="math inline">h=0.15\,\text{kpc}</span>)</td>
+<td>Disco (<span class="math inline">r = 25\,\text{kpc}</span>, <span
+class="math inline">h=0.15\,\text{kpc}</span>)</td>
 </tr>
 <tr class="odd">
 <td>Rigonfiamento centrale</td>
 <td><span class="math inline">10^{10}\,M_\odot</span></td>
-<td>Ellissoide (<span class="math inline">6\times 2 \times 2 \,\text{kpc})</span></td>
+<td>Ellissoide (<span class="math inline">6\times 2 \times 2
+\,\text{kpc})</span></td>
 </tr>
 <tr class="even">
 <td>Disco (stelle)</td>
 <td><span class="math inline">10^{11}\,M_\odot</span></td>
-<td>Disco (<span class="math inline">r = 15\,\text{kpc}</span>, <span class="math inline">h = 1\,\text{kpc}</span>)</td>
+<td>Disco (<span class="math inline">r = 15\,\text{kpc}</span>, <span
+class="math inline">h = 1\,\text{kpc}</span>)</td>
 </tr>
 <tr class="odd">
 <td>Alone materia oscura</td>
@@ -123,6 +138,11 @@
 <section class="slide level1">
 
 <table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 37%" />
+<col style="width: 41%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -174,78 +194,114 @@
 <center>
 <img data-src="images/ngc104.jpg" height="500" />
 </center>
-<p><span class="math inline">N \sim 3\times 10^5</span>, <span class="math inline">2r \sim 100\,\text{ly}</span>, <span class="math inline">D \sim  20\,\text{kly}</span>, <span class="math inline">m_V = 4.9\,\text{mag}</span>.</p>
+<p><span class="math inline">N \sim 3\times 10^5</span>, <span
+class="math inline">2r \sim 100\,\text{ly}</span>, <span
+class="math inline">D \sim  20\,\text{kly}</span>, <span
+class="math inline">m_V = 4.9\,\text{mag}</span>.</p>
 </section>
 <section id="m3-ammasso-g." class="slide level1">
 <h1>M3 (ammasso g.)</h1>
 <center>
 <img data-src="images/m3.jpg" height="500" />
 </center>
-<p><span class="math inline">N \sim 5\times 10^5</span>, <span class="math inline">2r \sim 150\,\text{ly}</span>, <span class="math inline">D \sim  35\,\text{kly}</span>, <span class="math inline">m_V = 6.2\,\text{mag}</span>.</p>
+<p><span class="math inline">N \sim 5\times 10^5</span>, <span
+class="math inline">2r \sim 150\,\text{ly}</span>, <span
+class="math inline">D \sim  35\,\text{kly}</span>, <span
+class="math inline">m_V = 6.2\,\text{mag}</span>.</p>
 </section>
 <section id="m13-ammasso-g." class="slide level1">
 <h1>M13 (ammasso g.)</h1>
 <center>
 <img data-src="images/m13.jpg" height="500" />
 </center>
-<p><span class="math inline">N \sim 6\times 10^5</span>, <span class="math inline">2r \sim 145\,\text{ly}</span>, <span class="math inline">D \sim  22\,\text{kly}</span>, <span class="math inline">m_V = 5.8\,\text{mag}</span>.</p>
+<p><span class="math inline">N \sim 6\times 10^5</span>, <span
+class="math inline">2r \sim 145\,\text{ly}</span>, <span
+class="math inline">D \sim  22\,\text{kly}</span>, <span
+class="math inline">m_V = 5.8\,\text{mag}</span>.</p>
 </section>
 <section id="termodinamica-e-astrofisica" class="slide level1">
 <h1>Termodinamica e astrofisica</h1>
 <center>
 <img data-src="images/ideal-gas.png" height="460" />
 </center>
-<p>Essendo sistemi composti da molte particelle, possiamo pensare di usare la termodinamica classica per descriverli?</p>
+<p>Essendo sistemi composti da molte particelle, possiamo pensare di
+usare la termodinamica classica per descriverli?</p>
 </section>
 <section id="termodinamica-e-astrofisica-1" class="slide level1">
 <h1>Termodinamica e astrofisica</h1>
 <ul>
 <li><p><strong>NO!</strong></p></li>
-<li><p>La teoria del gas ideale funziona solo in sistemi privi di forze a lungo raggio.</p></li>
+<li><p>La teoria del gas ideale funziona solo in sistemi privi di forze
+a lungo raggio.</p></li>
 <li><p>Da questo punto di vista la gravità è un problema!</p>
 <blockquote>
-<p>Properties of systems with long range interactions are still poorly understood despite being of importance in most areas of physics.</p>
+<p>Properties of systems with long range interactions are still poorly
+understood despite being of importance in most areas of physics.</p>
 </blockquote>
-<p>(<a href="https://link.springer.com/book/10.1007/3-540-45835-2"><em>Dynamics and Thermodynamics of Systems with Long Range Interactions</em></a>, Springer)</p></li>
+<p>(<a
+href="https://link.springer.com/book/10.1007/3-540-45835-2"><em>Dynamics
+and Thermodynamics of Systems with Long Range Interactions</em></a>,
+Springer)</p></li>
 </ul>
 </section>
 <section id="teorema-del-viriale" class="slide level1">
 <h1>Teorema del viriale</h1>
 <ul>
-<li>Esiste uno strumento adatto per la descrizione di sistemi gravitazionalmente legati: il <em>teorema del viriale</em>.</li>
-<li>Consideriamo un sistema fisico di <span class="math inline">N</span> particelle confinato in un volume <span class="math inline">V</span> da forze interne.</li>
-<li>Ogni particella si trova nella posizione <span class="math inline">\vec r_i</span> (rispetto a un certo sistema di riferimento), la forza risultante su di essa è <span class="math inline">\vec F_i</span>, e <span class="math inline">K_i</span> è la sua energia cinetica.</li>
+<li>Esiste uno strumento adatto per la descrizione di sistemi
+gravitazionalmente legati: il <em>teorema del viriale</em>.</li>
+<li>Consideriamo un sistema fisico di <span class="math inline">N</span>
+particelle confinato in un volume <span class="math inline">V</span> da
+forze interne.</li>
+<li>Ogni particella si trova nella posizione <span
+class="math inline">\vec r_i</span> (rispetto a un certo sistema di
+riferimento), la forza risultante su di essa è <span
+class="math inline">\vec F_i</span>, e <span
+class="math inline">K_i</span> è la sua energia cinetica.</li>
 </ul>
 </section>
 <section id="medie-temporali" class="slide level1">
 <h1>Medie temporali</h1>
 <ul>
-<li>Le quantità <span class="math inline">\vec r_i</span>, <span class="math inline">\vec F_i</span> e <span class="math inline">K_i</span> variano nel tempo</li>
-<li>Siamo però interessati più al loro <strong>valore medio</strong> che alla loro evoluzione istante per istante.</li>
-<li>Data una quantità <span class="math inline">f = f(t)</span> dipendente dal tempo, il valore di <span class="math display">
-\left&lt; f \right&gt;_t = \lim_{\tau \rightarrow \infty} \frac1\tau \int_0^\tau f(t)\,\text{d}t
+<li>Le quantità <span class="math inline">\vec r_i</span>, <span
+class="math inline">\vec F_i</span> e <span
+class="math inline">K_i</span> variano nel tempo</li>
+<li>Siamo però interessati più al loro <strong>valore medio</strong> che
+alla loro evoluzione istante per istante.</li>
+<li>Data una quantità <span class="math inline">f = f(t)</span>
+dipendente dal tempo, il valore di <span class="math display">
+\left&lt; f \right&gt;_t = \lim_{\tau \rightarrow \infty} \frac1\tau
+\int_0^\tau f(t)\,\text{d}t
 </span> è la media temporale di <span class="math inline">f</span>.</li>
 </ul>
 </section>
 <section id="definizione-di-viriale" class="slide level1">
 <h1>Definizione di «viriale»</h1>
 <ul>
-<li>Si dice «viriale» la quantità (dipendente dal sistema di riferimento) <span class="math display">
+<li>Si dice «viriale» la quantità (dipendente dal sistema di
+riferimento) <span class="math display">
 G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
 </span></li>
-<li>Nel caso in cui le particelle si trovino in un volume limitato <span class="math inline">V</span>, esso gode di due proprietà:
+<li>Nel caso in cui le particelle si trovino in un volume limitato <span
+class="math inline">V</span>, esso gode di due proprietà:
 <ol type="1">
 <li><span class="math inline">G</span> è una quantità limitata;</li>
-<li>Dopo un certo tempo, <span class="math inline">G</span> tende a diventare costante.</li>
+<li>Dopo un certo tempo, <span class="math inline">G</span> tende a
+diventare costante.</li>
 </ol></li>
 </ul>
 </section>
 <section id="limitatezza-del-viriale" class="slide level1">
 <h1>Limitatezza del viriale</h1>
 <ul>
-<li>Se il sistema è limitato in un volume <span class="math inline">V</span> e la sua energia è finita, allora esistono degli estremi superiori <span class="math inline">P</span> e <span class="math inline">R</span> per la quantità di moto <span class="math inline">p_i</span> e <span class="math inline">r_i</span>.</li>
+<li>Se il sistema è limitato in un volume <span
+class="math inline">V</span> e la sua energia è finita, allora esistono
+degli estremi superiori <span class="math inline">P</span> e <span
+class="math inline">R</span> per la quantità di moto <span
+class="math inline">p_i</span> e <span
+class="math inline">r_i</span>.</li>
 <li>Di conseguenza, <span class="math display">
-\left| G \right| = \left|\sum_{i=1}^N \vec r_i \cdot \vec p_i\right| \leq \sum_{i=1}^N
+\left| G \right| = \left|\sum_{i=1}^N \vec r_i \cdot \vec p_i\right|
+\leq \sum_{i=1}^N
 \left|\vec r_i\right| \cdot \left|\vec p_i\right| \leq N R P,
 </span> e l’ipotesi è dimostrata.</li>
 </ul>
@@ -253,7 +309,8 @@ G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
 <section id="variazione-nel-tempo-del-viriale" class="slide level1">
 <h1>Variazione nel tempo del viriale</h1>
 <ul>
-<li>La variazione nel tempo del viriale ha media nulla: <span class="math display">
+<li>La variazione nel tempo del viriale ha media nulla: <span
+class="math display">
 \begin{aligned}
   \left|\left&lt; \dot G \right&gt;_t\right| &amp;=
   \left|\lim_{t\rightarrow\infty} \frac1\tau \int_0^\tau \dot
@@ -263,34 +320,45 @@ G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
   &amp;\leq \lim_{\tau\rightarrow\infty} \frac{2 N R P}\tau = 0.
 \end{aligned}
 </span></li>
-<li>Dopo un certo <em>tempo di rilassamento</em>, <span class="math inline">G</span> diventa circa costante.</li>
+<li>Dopo un certo <em>tempo di rilassamento</em>, <span
+class="math inline">G</span> diventa circa costante.</li>
 </ul>
 </section>
 <section id="teorema-del-viriale-1" class="slide level1">
 <h1>Teorema del viriale</h1>
-<p>Il teorema del viriale dice che in un sistema limitato in un volume <span class="math inline">V</span>, passato il tempo di rilassamento, vale l’uguaglianza <span class="math display">
+<p>Il teorema del viriale dice che in un sistema limitato in un volume
+<span class="math inline">V</span>, passato il tempo di rilassamento,
+vale l’uguaglianza <span class="math display">
 2\left&lt;K\right&gt;_t = - \left&lt;\sum_{i=1}^N \vec r_i \cdot \vec
   F_i \right&gt;_t,
-</span> dove <span class="math inline">K = \sum_{i=1}^N K_i</span> è l’energia cinetica totale del sistema.</p>
+</span> dove <span class="math inline">K = \sum_{i=1}^N K_i</span> è
+l’energia cinetica totale del sistema.</p>
 </section>
 <section id="dimostrazione-del-teorema" class="slide level1">
 <h1>Dimostrazione del teorema</h1>
-<p>Usando la proprietà <span class="math inline">\left&lt; \dot G \right&gt;_t = 0</span> si ottiene subito la tesi: <span class="math display">
+<p>Usando la proprietà <span class="math inline">\left&lt; \dot G
+\right&gt;_t = 0</span> si ottiene subito la tesi: <span
+class="math display">
 \begin{aligned}
   \left&lt;\frac{\text{d}}{\text{d} t} \sum_{i=1}^N \vec r_i \cdot
       \vec p_i\right&gt;_t &amp;=&amp; 0 \\
   \left&lt;2 \sum_{i=1}^N K_i + \sum_{i=1}^N \vec r_i \cdot
       \vec F_i\right&gt;_t &amp;=&amp; 0 \\
-  2\left&lt;\sum_{i=1}^N K_i\right&gt;_t &amp;=&amp; -\left&lt;\sum_{i=1}^N \vec r_i \cdot
+  2\left&lt;\sum_{i=1}^N K_i\right&gt;_t &amp;=&amp;
+-\left&lt;\sum_{i=1}^N \vec r_i \cdot
       \vec F_i\right&gt;_t.
 \end{aligned}
 </span></p>
 </section>
 <section id="caso-di-forze-centrali" class="slide level1">
 <h1>Caso di forze centrali</h1>
-<p>Dimostriamo ora che per forze con potenziale <span class="math inline">U_i = k r_i^\alpha</span> («forze centrali») in sistemi sferici il teorema del viriale si riduce a: <span class="math display">
+<p>Dimostriamo ora che per forze con potenziale <span
+class="math inline">U_i = k r_i^\alpha</span> («forze centrali») in
+sistemi sferici il teorema del viriale si riduce a: <span
+class="math display">
 \alpha \left&lt;U\right&gt;_t = 2\left&lt; K \right&gt;_t,
-</span> dove <span class="math inline">U = \sum_{i=1}^N U_i</span> è l’energia potenziale totale.</p>
+</span> dove <span class="math inline">U = \sum_{i=1}^N U_i</span> è
+l’energia potenziale totale.</p>
 <center>
 <img data-src="images/virial-coordinate-system.png" height="300" />
 </center>
@@ -304,7 +372,8 @@ G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
   = -\alpha\,k\,r_i^{\alpha - 1} \hat e_r,
 </span> implica che <span class="math display">
   \begin{aligned}
-    2\left&lt; K \right&gt;_t &amp;= -\left&lt;\sum_{i=1}^N \vec r_i \cdot \vec
+    2\left&lt; K \right&gt;_t &amp;= -\left&lt;\sum_{i=1}^N \vec r_i
+\cdot \vec
       F_i \right&gt;_t =\\
     &amp;= \left&lt;\sum_{i=1}^N \vec r_i \cdot \vec
       \nabla U_i(r_i) \right&gt;_t =\\
@@ -315,28 +384,43 @@ G \equiv \sum_{i=1}^N \vec r_i \cdot \vec p_i.
 </section>
 <section id="il-viriale-in-sistemi-gravitazionali" class="slide level1">
 <h1>Il viriale in sistemi gravitazionali</h1>
-<p>In un sistema di corpi di massa <span class="math inline">m</span> dove l’unica forza è quella gravitazionale, <span class="math inline">U = k r^{-1}</span> (con <span class="math inline">k = -G m^2</span>), e quindi <span class="math inline">\alpha = -1</span>: <span class="math display">
+<p>In un sistema di corpi di massa <span class="math inline">m</span>
+dove l’unica forza è quella gravitazionale, <span class="math inline">U
+= k r^{-1}</span> (con <span class="math inline">k = -G m^2</span>), e
+quindi <span class="math inline">\alpha = -1</span>: <span
+class="math display">
   \left&lt;U\right&gt;_t = -2\left&lt; K \right&gt;_t.
 </span></p>
-<p>In un sistema virializzato dominato dalla gravità, l’energia potenziale è <em>doppia</em> (in modulo) rispetto all’energia cinetica.</p>
+<p>In un sistema virializzato dominato dalla gravità, l’energia
+potenziale è <em>doppia</em> (in modulo) rispetto all’energia
+cinetica.</p>
 </section>
 <section id="livello-di-energia-potenziale" class="slide level1">
 <h1>Livello di energia potenziale</h1>
 <ul>
-<li>Ricordate che l’energia potenziale è definita a meno di una costante additiva (deriva da un integrale indefinito).</li>
-<li>Il teorema del viriale assume però una costante ben precisa per <span class="math inline">U</span>: siccome abbiamo supposto che <span class="math inline">U = k r^{-1}</span>, significa che assumiamo che l’energia potenziale di <span class="math inline">i</span> e <span class="math inline">j</span> tenda a zero se le due particelle vengono allontanate indefinitamente.</li>
+<li>Ricordate che l’energia potenziale è definita a meno di una costante
+additiva (deriva da un integrale indefinito).</li>
+<li>Il teorema del viriale assume però una costante ben precisa per
+<span class="math inline">U</span>: siccome abbiamo supposto che <span
+class="math inline">U = k r^{-1}</span>, significa che assumiamo che
+l’energia potenziale di <span class="math inline">i</span> e <span
+class="math inline">j</span> tenda a zero se le due particelle vengono
+allontanate indefinitamente.</li>
 </ul>
 </section>
 <section id="applicazioni-del-teorema-12" class="slide level1">
 <h1>Applicazioni del teorema (1/2)</h1>
 <ul>
-<li>Come esempio, stimiamo la temperatura media del Sole usando il teorema del viriale.</li>
-<li>Il Sole è un sistema di volume sferico limitato, sicuramente rilassato, quindi il teorema è applicabile.</li>
+<li>Come esempio, stimiamo la temperatura media del Sole usando il
+teorema del viriale.</li>
+<li>Il Sole è un sistema di volume sferico limitato, sicuramente
+rilassato, quindi il teorema è applicabile.</li>
 </ul>
 </section>
 <section id="applicazioni-del-teorema-12-1" class="slide level1">
 <h1>Applicazioni del teorema (1/2)</h1>
-<p>L’energia potenziale gravitazionale del Sole (sfera di raggio <span class="math inline">R</span>) è <span class="math display">
+<p>L’energia potenziale gravitazionale del Sole (sfera di raggio <span
+class="math inline">R</span>) è <span class="math display">
 U = \frac35 G \frac{M^2}R,
 </span> mentre l’energia cinetica totale è <span class="math display">
 K = \sum_{i=1}^N \frac32 k T
@@ -346,35 +430,53 @@ K = \sum_{i=1}^N \frac32 k T
 <h1>Applicazioni del teorema (1/2)</h1>
 <p>Usando il teorema del viriale <span class="math display">
 2 \left&lt; K \right&gt;_t = -\left&lt; U \right&gt;_t
-</span> otteniamo che la <strong>temperatura viriale</strong> è <span class="math display">
-T = \frac15 \frac{G M_\odot^2}{N k R_\odot} \sim 10^6 \div 10^7\,\text{K}.
+</span> otteniamo che la <strong>temperatura viriale</strong> è <span
+class="math display">
+T = \frac15 \frac{G M_\odot^2}{N k R_\odot} \sim 10^6 \div
+10^7\,\text{K}.
 </span> Essa corrisponde circa alla temperatura del nucleo.</p>
 </section>
 <section id="applicazioni-del-teorema-22" class="slide level1">
 <h1>Applicazioni del teorema (2/2)</h1>
 <ul>
-<li>Calcoliamo ora l’energia media di legame per nucleone in un nucleo atomico.</li>
-<li>Anche in questo caso abbiamo un sistema di particelle ovviamente rilassato e confinato in un volume limitato, ma <strong>non è classico</strong>: proviamo comunque ad applicare il teorema del viriale.</li>
+<li>Calcoliamo ora l’energia media di legame per nucleone in un nucleo
+atomico.</li>
+<li>Anche in questo caso abbiamo un sistema di particelle ovviamente
+rilassato e confinato in un volume limitato, ma <strong>non è
+classico</strong>: proviamo comunque ad applicare il teorema del
+viriale.</li>
 </ul>
 </section>
 <section id="applicazioni-del-teorema-22-1" class="slide level1">
 <h1>Applicazioni del teorema (2/2)</h1>
 <ul>
-<li>Un nucleo atomico ha raggio <span class="math inline">R \sim 10^{-15}\,\text{m}</span>.</li>
-<li>L’energia cinetica media classica <span class="math inline">p^2/(2m)</span> è stimabile dal principio di indeterminazione: <span class="math display">
+<li>Un nucleo atomico ha raggio <span class="math inline">R \sim
+10^{-15}\,\text{m}</span>.</li>
+<li>L’energia cinetica media classica <span
+class="math inline">p^2/(2m)</span> è stimabile dal principio di
+indeterminazione: <span class="math display">
 \Delta p_x \Delta x \sim \frac\hbar2.
 </span></li>
-<li>Siccome <span class="math inline">p^2 = p_x^2 + p_y^2 + p_z^2 \approx 3 p_x^2 \approx 3 \hbar^2/4 R^2</span>, allora <span class="math display">
-K \approx A \frac{p^2}{2 m_p} \approx A \frac{3 \hbar^2}{8 R^2 m_p} \sim A \frac{\hbar^2}{R^2 m_p}.
+<li>Siccome <span class="math inline">p^2 = p_x^2 + p_y^2 + p_z^2
+\approx 3 p_x^2 \approx 3 \hbar^2/4 R^2</span>, allora <span
+class="math display">
+K \approx A \frac{p^2}{2 m_p} \approx A \frac{3 \hbar^2}{8 R^2 m_p} \sim
+A \frac{\hbar^2}{R^2 m_p}.
 </span></li>
 </ul>
 </section>
 <section id="applicazioni-del-teorema-22-2" class="slide level1">
 <h1>Applicazioni del teorema (2/2)</h1>
-<p>Nell’ipotesi che <span class="math inline">U \propto r^\alpha</span>, e che <span class="math inline">\left|\alpha\right|</span> non sia troppo distante dall’unità, dal teorema del viriale vale che <span class="math inline">K \sim U</span> (stesso ordine di grandezza), ossia <span class="math display">
+<p>Nell’ipotesi che <span class="math inline">U \propto r^\alpha</span>,
+e che <span class="math inline">\left|\alpha\right|</span> non sia
+troppo distante dall’unità, dal teorema del viriale vale che <span
+class="math inline">K \sim U</span> (stesso ordine di grandezza), ossia
+<span class="math display">
 A \frac{\hbar^2}{R^2 m_p} \sim U
 </span></p>
-<p>Noi siamo interessati all’energia di legame <strong>per nucleone</strong>, ossia <span class="math inline">U/A</span>: <span class="math display">
+<p>Noi siamo interessati all’energia di legame <strong>per
+nucleone</strong>, ossia <span class="math inline">U/A</span>: <span
+class="math display">
 U/A \sim \frac{\hbar^2}{R^2 m_p} \sim 10\,\text{MeV/nucleone}.
 </span></p>
 </section>
@@ -382,7 +484,9 @@ U/A \sim \frac{\hbar^2}{R^2 m_p} \sim 10\,\text{MeV/nucleone}.
 <h1>Dinamica degli a.g.</h1>
 <ul>
 <li>Consideriamo ora un ammasso globulare.</li>
-<li>Usando il teorema del viriale, calcoliamo le seguenti quantità per un ammasso tipico (<span class="math inline">R = 5\,\text{pc}</span>, <span class="math inline">N = 10^6</span>):
+<li>Usando il teorema del viriale, calcoliamo le seguenti quantità per
+un ammasso tipico (<span class="math inline">R = 5\,\text{pc}</span>,
+<span class="math inline">N = 10^6</span>):
 <ol>
 <li>Velocità di fuga;</li>
 <li>Energia potenziale;</li>
@@ -395,8 +499,11 @@ U/A \sim \frac{\hbar^2}{R^2 m_p} \sim 10\,\text{MeV/nucleone}.
 <section id="velocità-di-fuga" class="slide level1">
 <h1>Velocità di fuga</h1>
 <ul>
-<li>È sensato supporre che un ammasso globulare sia legato? Per rispondere a questo, dobbiamo stimare la velocità di fuga.</li>
-<li>Se la velocità media delle stelle fosse maggiore della velocità di fuga, allora l’ammasso non potrebbe essere legato: «evaporerebbe» lasciando sfuggire le sue stelle nello spazio.</li>
+<li>È sensato supporre che un ammasso globulare sia legato? Per
+rispondere a questo, dobbiamo stimare la velocità di fuga.</li>
+<li>Se la velocità media delle stelle fosse maggiore della velocità di
+fuga, allora l’ammasso non potrebbe essere legato: «evaporerebbe»
+lasciando sfuggire le sue stelle nello spazio.</li>
 </ul>
 </section>
 <section id="velocità-di-fuga-1" class="slide level1">
@@ -404,43 +511,59 @@ U/A \sim \frac{\hbar^2}{R^2 m_p} \sim 10\,\text{MeV/nucleone}.
 <center>
 <img data-src="images/escape_speed.png" height="460" />
 </center>
-<p>Per stimare la velocità di fuga <span class="math inline">v_f</span> si impone la conservazione dell’energia tra i due istanti mostrati in figura.</p>
+<p>Per stimare la velocità di fuga <span class="math inline">v_f</span>
+si impone la conservazione dell’energia tra i due istanti mostrati in
+figura.</p>
 </section>
 <section id="velocità-di-fuga-2" class="slide level1">
 <h1>Velocità di fuga</h1>
-<p>Nel caso di una stella posta inizialmente a una distanza <span class="math inline">R</span> dal centro di massa dell’ammasso, l’equazione di conservazione dell’energia diventa: <span class="math display">
+<p>Nel caso di una stella posta inizialmente a una distanza <span
+class="math inline">R</span> dal centro di massa dell’ammasso,
+l’equazione di conservazione dell’energia diventa: <span
+class="math display">
 \frac12 M_* v_f^2 - G \frac{M_*\, M_\text{GC}}R = 0,
 </span> da cui <span class="math display">
   v_f = \sqrt{\frac{2 G M_\text{GC}}R} \approx 29\,\text{km/s}.
 </span></p>
-<p>Notate che per una particella che sfugge l’energia totale è <strong>nulla</strong>.</p>
+<p>Notate che per una particella che sfugge l’energia totale è
+<strong>nulla</strong>.</p>
 </section>
 <section id="energia-potenziale-di-un-a.g." class="slide level1">
 <h1>Energia potenziale di un a.g.</h1>
-<p>Sappiamo che per una distribuzione di massa con simmetria sferica vale che <span class="math display">
+<p>Sappiamo che per una distribuzione di massa con simmetria sferica
+vale che <span class="math display">
 U = -\frac35 \frac{G M^2}R,
-</span> anche nel caso in cui <span class="math inline">\rho</span> dipenda dal raggio <span class="math inline">r</span>.</p>
+</span> anche nel caso in cui <span class="math inline">\rho</span>
+dipenda dal raggio <span class="math inline">r</span>.</p>
 </section>
 <section id="energia-potenziale-di-un-a.g.-1" class="slide level1">
 <h1>Energia potenziale di un a.g.</h1>
-<p>Per un ammasso globulare si ha tipicamente che <span class="math display">
-N \sim 10^6, \quad M_* \sim 0.5 M_\odot, \quad R_\text{core} \sim 5\,\text{pc}.
+<p>Per un ammasso globulare si ha tipicamente che <span
+class="math display">
+N \sim 10^6, \quad M_* \sim 0.5 M_\odot, \quad R_\text{core} \sim
+5\,\text{pc}.
 </span> La sua energia potenziale è quindi <span class="math display">
-U = -\frac35 \frac{G (N M_*)^2}{R_\text{core}} = -2.5\times 10^{51}\,\text{erg}.
-</span> (Per confronto, il Sole ha un’energia potenziale gravitazionale di <span class="math inline">\sim 10^{48}\,\text{erg}</span>).</p>
+U = -\frac35 \frac{G (N M_*)^2}{R_\text{core}} = -2.5\times
+10^{51}\,\text{erg}.
+</span> (Per confronto, il Sole ha un’energia potenziale gravitazionale
+di <span class="math inline">\sim 10^{48}\,\text{erg}</span>).</p>
 </section>
 <section id="energia-cinetica-di-un-a.g." class="slide level1">
 <h1>Energia cinetica di un a.g.</h1>
-<p>Se l’ammasso è dinamicamente rilassato, allora <span class="math display">
+<p>Se l’ammasso è dinamicamente rilassato, allora <span
+class="math display">
 K = -\frac{U}2 \sim 1.2\times 10^{51}\,\text{erg},
 </span> e quindi l’energia totale è <span class="math display">
   E = K + U = -1.2 \times 10^{51}\,\text{erg}.
 </span></p>
-<p>L’energia totale di un sistema virializzato è <strong>negativa</strong>.</p>
+<p>L’energia totale di un sistema virializzato è
+<strong>negativa</strong>.</p>
 </section>
 <section id="velocità-quadratica-media" class="slide level1">
 <h1>Velocità quadratica media</h1>
-<p>Vogliamo calcolare la velocità (quadratica) media delle stelle in un ammasso globulare. Questa quantità è legata all’energia cinetica <span class="math inline">K</span>: <span class="math display">
+<p>Vogliamo calcolare la velocità (quadratica) media delle stelle in un
+ammasso globulare. Questa quantità è legata all’energia cinetica <span
+class="math inline">K</span>: <span class="math display">
 \begin{aligned}
   K &amp;= \sum_{i=1}^N \frac12 M_* v_i^2 = \frac12 M_* N \frac1N
   \sum_{i=1}^N v_i^2 \\
@@ -451,34 +574,45 @@ K = -\frac{U}2 \sim 1.2\times 10^{51}\,\text{erg},
 <section id="velocità-quadratica-media-1" class="slide level1">
 <h1>Velocità quadratica media</h1>
 <p>Di conseguenza, dal teorema del viriale <span class="math display">
-2 \left&lt; K \right&gt;_t = -\left&lt; U \right&gt;_t = -\left&lt; \frac35 \frac{G
+2 \left&lt; K \right&gt;_t = -\left&lt; U \right&gt;_t = -\left&lt;
+\frac35 \frac{G
     M_\text{GC}^2}R \right&gt;_t
 </span> abbiamo che <span class="math display">
-  v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}} \approx 16\,\text{km/s}.
+  v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}} \approx
+16\,\text{km/s}.
 </span></p>
 </section>
-<section id="velocità-di-fuga-e-velocità-quadratica-media" class="slide level1">
+<section id="velocità-di-fuga-e-velocità-quadratica-media"
+class="slide level1">
 <h1>Velocità di fuga e velocità quadratica media</h1>
 <p>Dal momento che <span class="math display">
-\left(v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}}\right) &lt; \left(v_f = \sqrt{\frac{2 G M_\text{GC}}R}\right),
-</span> ciò conferma l’ipotesi che l’ammasso globulare (e in generale qualsiasi sistema gravitazionale virializzato) sia un sistema legato.</p>
+\left(v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}}\right) &lt;
+\left(v_f = \sqrt{\frac{2 G M_\text{GC}}R}\right),
+</span> ciò conferma l’ipotesi che l’ammasso globulare (e in generale
+qualsiasi sistema gravitazionale virializzato) sia un sistema
+legato.</p>
 </section>
 <section id="massa-viriale-degli-a.g." class="slide level1">
 <h1>Massa viriale degli a.g.</h1>
 <ul>
-<li>Calcoliamo ora la massa totale di un ammasso globulare da parametri osservativi.</li>
-<li>L’energia potenziale e cinetica dell’ammasso è <span class="math display">
+<li>Calcoliamo ora la massa totale di un ammasso globulare da parametri
+osservativi.</li>
+<li>L’energia potenziale e cinetica dell’ammasso è <span
+class="math display">
 K = \frac12 M_\text{GC} \left&lt;v^2\right&gt;_t, \quad U = -\frac35
 \frac{G M_\text{GC}^2}R.
 </span></li>
-<li>Dal fatto che <span class="math inline">2 \left&lt;K\right&gt;_t + \left&lt;U\right&gt;_t = 0</span> si ha che <span class="math display">
+<li>Dal fatto che <span class="math inline">2 \left&lt;K\right&gt;_t +
+\left&lt;U\right&gt;_t = 0</span> si ha che <span class="math display">
 M = \frac5{3 G}\left&lt;v^2\right&gt;_t R.
 </span></li>
 </ul>
 </section>
 <section id="massa-viriale-degli-a.g.-1" class="slide level1">
 <h1>Massa viriale degli a.g.</h1>
-<p>Per il nostro ammasso tipico con <span class="math inline">R = 5\,\text{pc}</span> e <span class="math inline">v = 16\,\text{km/s}</span> abbiamo che <span class="math display">
+<p>Per il nostro ammasso tipico con <span class="math inline">R =
+5\,\text{pc}</span> e <span class="math inline">v =
+16\,\text{km/s}</span> abbiamo che <span class="math display">
 M \sim 10^{39}\,\text{g} \approx 5\times 10^5\,M_\odot.
 </span></p>
 <p>Questo valore della massa è detto <strong>massa viriale</strong>.</p>
@@ -489,34 +623,53 @@ M \sim 10^{39}\,\text{g} \approx 5\times 10^5\,M_\odot.
 <section id="tempo-di-rilassamento-1" class="slide level1">
 <h1>Tempo di rilassamento</h1>
 <ul>
-<li><p>Veniamo ora al tempo necessario perché un ammasso diventi dinamicamente rilassato.</p></li>
-<li><p>Inizialmente le stelle di un ammasso possono <em>non</em> essere rilassate: in tal caso le più veloci (<span class="math inline">v &gt; v_f</span>) escono dall’ammasso, e questa «evaporazione» cambia la distribuzione delle <span class="math inline">v</span>.</p></li>
-<li><p>In più, le interazioni gravitazionali provocano una ridistribuzione dell’energia, che porta l’ammasso verso lo stato rilassato.</p></li>
+<li><p>Veniamo ora al tempo necessario perché un ammasso diventi
+dinamicamente rilassato.</p></li>
+<li><p>Inizialmente le stelle di un ammasso possono <em>non</em> essere
+rilassate: in tal caso le più veloci (<span class="math inline">v &gt;
+v_f</span>) escono dall’ammasso, e questa «evaporazione» cambia la
+distribuzione delle <span class="math inline">v</span>.</p></li>
+<li><p>In più, le interazioni gravitazionali provocano una
+ridistribuzione dell’energia, che porta l’ammasso verso lo stato
+rilassato.</p></li>
 </ul>
 </section>
 <section id="tempo-di-rilassamento-2" class="slide level1">
 <h1>Tempo di rilassamento</h1>
 <ul>
-<li>Per quantificare il tempo di rilassamento, possiamo supporre che esso sia il tempo necessario affinché ciascuna delle stelle dell’ammasso interagiscano un certo numero <span class="math inline">N</span> di volte con le sue compagne.</li>
-<li>(Questo è analogo al modo in cui si studia un gas ideale che sta raggiungendo l’equilibrio termodinamico).</li>
+<li>Per quantificare il tempo di rilassamento, possiamo supporre che
+esso sia il tempo necessario affinché ciascuna delle stelle dell’ammasso
+interagiscano un certo numero <span class="math inline">N</span> di
+volte con le sue compagne.</li>
+<li>(Questo è analogo al modo in cui si studia un gas ideale che sta
+raggiungendo l’equilibrio termodinamico).</li>
 </ul>
 </section>
 <section id="tempo-di-rilassamento-3" class="slide level1">
 <h1>Tempo di rilassamento</h1>
-<p>Possiamo definire un’interazione tra due stelle come la condizione in cui l’energia cinetica diventa uguale all’energia potenziale tra le due (perché?): <span class="math display">
+<p>Possiamo definire un’interazione tra due stelle come la condizione in
+cui l’energia cinetica diventa uguale all’energia potenziale tra le due
+(perché?): <span class="math display">
 \frac12 M_* v^2 \sim G \frac{M_*^2}r.
-</span> Ciò avviene quando la distanza tra le due stelle è <span class="math display">
+</span> Ciò avviene quando la distanza tra le due stelle è <span
+class="math display">
 r_c \sim 2 G \frac{M_*}{v^2}.
-</span> Definiamo questo come il <strong>raggio collisionale</strong>.</p>
+</span> Definiamo questo come il <strong>raggio
+collisionale</strong>.</p>
 </section>
 <section id="tempo-di-rilassamento-4" class="slide level1">
 <h1>Tempo di rilassamento</h1>
 <ul>
-<li><p>Quanto è probabile che una stella interagisca con altre? Dipende da quanto velocemente la stella si muove e dalla densità delle sue compagne:</p>
+<li><p>Quanto è probabile che una stella interagisca con altre? Dipende
+da quanto velocemente la stella si muove e dalla densità delle sue
+compagne:</p>
 <center>
 <p><img data-src="images/cross-section.png" height="300" /></p>
 </center></li>
-<li><p>Nel volume <span class="math inline">V = \pi r^2\,\Delta x</span> ci sono <span class="math inline">V n = (\pi r^2\,\Delta x)\,n</span> stelle (con <span class="math inline">n</span> densità numerica).</p></li>
+<li><p>Nel volume <span class="math inline">V = \pi r^2\,\Delta x</span>
+ci sono <span class="math inline">V n = (\pi r^2\,\Delta x)\,n</span>
+stelle (con <span class="math inline">n</span> densità
+numerica).</p></li>
 </ul>
 </section>
 <section id="tempo-di-rilassamento-5" class="slide level1">
@@ -524,13 +677,21 @@ r_c \sim 2 G \frac{M_*}{v^2}.
 <center>
 <img data-src="images/cross-section.png" height="180" />
 </center>
-<p>Se la distanza percorsa dalla stella è <span class="math inline">\Delta x = v \Delta t</span>, allora durante il tempo di rilassamento <span class="math inline">\Delta t_r</span> la stella interagisce collisionalmente con le <span class="math inline">N_\text{int}</span> stelle nel cilindro che ha base <span class="math inline">r = r_c</span>: <span class="math display">
-(\pi r_c^2\,v\,\Delta t_r)\,n = N_\text{int} \quad \Rightarrow \quad \Delta t_r = \frac{N_\text{int}}{\pi r_c^2\,v\,n}.
+<p>Se la distanza percorsa dalla stella è <span
+class="math inline">\Delta x = v \Delta t</span>, allora durante il
+tempo di rilassamento <span class="math inline">\Delta t_r</span> la
+stella interagisce collisionalmente con le <span
+class="math inline">N_\text{int}</span> stelle nel cilindro che ha base
+<span class="math inline">r = r_c</span>: <span class="math display">
+(\pi r_c^2\,v\,\Delta t_r)\,n = N_\text{int} \quad \Rightarrow \quad
+\Delta t_r = \frac{N_\text{int}}{\pi r_c^2\,v\,n}.
 </span></p>
 </section>
 <section id="tempo-di-rilassamento-6" class="slide level1">
 <h1>Tempo di rilassamento</h1>
-<p>Se ora poniamo <span class="math inline">N_\text{int} \approx 1</span> e sostituiamo l’espressione <span class="math inline">r_c \sim 2 G \frac{M_*}{v^2}</span> in <span class="math display">
+<p>Se ora poniamo <span class="math inline">N_\text{int} \approx
+1</span> e sostituiamo l’espressione <span class="math inline">r_c \sim
+2 G \frac{M_*}{v^2}</span> in <span class="math display">
 \Delta t_r = \frac{N_\text{int}}{\pi r_c^2\,v\,n}
 </span> otteniamo: <span class="math display">
 \Delta t_r = \frac{v^3}{4 \pi G^2 M_*^2\,n}.
@@ -538,7 +699,10 @@ r_c \sim 2 G \frac{M_*}{v^2}.
 </section>
 <section id="tempo-di-rilassamento-7" class="slide level1">
 <h1>Tempo di rilassamento</h1>
-<p>L’espressione di <span class="math inline">\Delta t_r</span> può essere molto semplificata. Innanzitutto, <span class="math inline">n = N/\bigl(\frac43 \pi R^3\bigr)</span>; inoltre possiamo usare il teorema del viriale: <span class="math display">
+<p>L’espressione di <span class="math inline">\Delta t_r</span> può
+essere molto semplificata. Innanzitutto, <span class="math inline">n =
+N/\bigl(\frac43 \pi R^3\bigr)</span>; inoltre possiamo usare il teorema
+del viriale: <span class="math display">
 \begin{aligned}
 K &amp;= -\frac12 U, \\
 \frac12 N M_* v^2 &amp;= \frac35 G \frac{(N M_*)^2}R, \\
@@ -549,17 +713,28 @@ G M_* N &amp;\approx R v^2\quad\text{(supponendo $\frac35
 </section>
 <section id="tempo-di-rilassamento-8" class="slide level1">
 <h1>Tempo di rilassamento</h1>
-<p>Sostituendo le espressioni di <span class="math inline">n</span> e <span class="math inline">G M_* N</span>, otteniamo <span class="math display">
+<p>Sostituendo le espressioni di <span class="math inline">n</span> e
+<span class="math inline">G M_* N</span>, otteniamo <span
+class="math display">
 \Delta t_r \approx \frac{N R}{3 v},
-</span> quindi il tempo di rilassamento è dello stesso ordine di grandezza del tempo richiesto a compiere <span class="math inline">N</span> attraversamenti dell’ammasso (<span class="math inline">R/v</span> è il tempo per <em>un</em> attraversamento), con <span class="math inline">N</span> numero di stelle.</p>
+</span> quindi il tempo di rilassamento è dello stesso ordine di
+grandezza del tempo richiesto a compiere <span
+class="math inline">N</span> attraversamenti dell’ammasso (<span
+class="math inline">R/v</span> è il tempo per <em>un</em>
+attraversamento), con <span class="math inline">N</span> numero di
+stelle.</p>
 </section>
 <section id="tempo-di-rilassamento-9" class="slide level1">
 <h1>Tempo di rilassamento</h1>
-<p>La nostra stima porta a un valore di <span class="math inline">\Delta t_r</span> pari a <span class="math display">
+<p>La nostra stima porta a un valore di <span class="math inline">\Delta
+t_r</span> pari a <span class="math display">
 \Delta t_r \approx \frac13 \times
-\frac{10^6 \times 5\,\text{pc}}{16\,\text{km/s}} \approx 100\,\text{Gyr},
-</span> che è implausibile! (L’universo ha meno di 14 miliardi di anni).</p>
-<p>Questo contrasta col fatto che la maggior parte degli ammassi globulari sembri essere già rilassata.</p>
+\frac{10^6 \times 5\,\text{pc}}{16\,\text{km/s}} \approx
+100\,\text{Gyr},
+</span> che è implausibile! (L’universo ha meno di 14 miliardi di
+anni).</p>
+<p>Questo contrasta col fatto che la maggior parte degli ammassi
+globulari sembri essere già rilassata.</p>
 </section>
     </div>
   </div>
@@ -601,7 +776,7 @@ G M_* N &amp;\approx R v^2\quad\text{(supponendo $\frac35
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: false,
+        hash: true,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,

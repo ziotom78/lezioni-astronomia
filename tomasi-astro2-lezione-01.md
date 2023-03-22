@@ -1,7 +1,7 @@
 ---
 title: "Lezione di Astronomia II – 1"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "24 Marzo 2022"
+date: "23 Marzo 2023"
 css:
 - ./css/custom.css
 ...
