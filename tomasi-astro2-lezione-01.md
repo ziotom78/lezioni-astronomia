@@ -13,6 +13,29 @@ Per ricevere le notifiche via email, occorre abilitarle *in tutte
 
 <center>![](images/ariel-notifica.png)</center>
 
+# Valutazioni sulla didattica
+
+-   Le valutazioni di queste lezioni negli anni passati non hanno mostrato criticità
+
+-   I commenti liberi però sono stati molto pochi: due anni fa ce ne sono stati appena tre, l'anno scorso addirittura nessuno!
+
+  -   Se non c'è nulla da commentare, vi chiederei di scriverlo esplicitamente nei commenti liberi!
+
+# Valutazioni A.A. 2020/2021
+
+<center>
+![](images/valutazioni-studenti-anno-2021.png)
+</center>
+
+# Valutazioni A.A. 2021/2022
+
+<center>
+![](images/valutazioni-studenti-anno-2022.png)
+</center>
+
+
+# La Via Lattea
+
 # Struttura della Via Lattea
 
 <center>![](images/milky-way.jpg){width=640px}</center>
