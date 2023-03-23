@@ -442,3 +442,13 @@ Siccome le velocità sono dell'ordine di 100 km/s e le distanze inferiori di 1�
 ---
 
 <center>![](images/gillessen-plot.png)</center>
+
+# Conclusione
+
+# Conclusione
+
+-   Vi raccomando di pensare **subito** a dei commenti liberi relativi a queste lezioni da inserire nei questionari della didattica!
+
+-   Domani ci sarà la lezione *jolly* su come si scrive un testo scientifico.
+
+-   A partire da settimana prossima, la dott.ssa Mariachiara Rossetti (INAF di Milano) terrà una serie di lezioni sull'astrofisica galattica.
