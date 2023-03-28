@@ -76,147 +76,59 @@ Metodi di osservazione:
     #.  Emissione diretta (UV, IR, mm\ldots).
 -   Gas: emissione/assorbimento di righe.
 
-# Estinzione nell'ISM
+# Riduzione del flusso
 
-<center>![](images/dust-and-light.png){height=240px}</center>
+-   Il flusso può essere ridotto dalla **diffusione** o dall'**assorbimento**:
 
--   L'effetto della diffusione e dell'assorbimento è detto **estinzione**, e fa diminuire il flusso $b$ ($[b] = \text{W/m}^2$):
-    \[
-      b(L) = e^{-\tau(L)} b_0.
-    \]
+    #.  La diffusione cambia la direzione di propagazione
 
--   Il valore $\tau(L) = \sigma n L$ è detto **coefficiente di estinzione**, ed è un numero puro.
-
-# Estinzione e magnitudine
-
--   Se il flusso misurato è inferiore a causa dell'estinzione, vuol dire che la magnitudine **aumenta**:
-    \[
-    A \equiv m' - m = 2.5\log_{10} \frac{b_0}{b(L)} = 1.0857\,\tau(L).
-    \]
-
--   Si può quindi usare l'approssimazione
-    \[
-    A \approx \tau(L).
-    \]
-
-# ISM e misura delle distanze
-
-In presenza di estinzione $A$, in generale si ha che
-\[
-\begin{aligned}
-  m' &= m + A \\
-  &= M + 5 \log_{10}\frac{d}{10\,\text{pc}} + A
-\end{aligned}
-\]
-(la presenza di $A$ rende la stella più debole).
-
-
-Quindi in presenza di estinzione non è più sufficiente conoscere $M$
-per ricavare $d$!
-
-
-# Misura dell'estinzione
-
--   Per convertire magnitudini relative in assolute ci occorre una stima indipendente di $A$.
-
--   Un metodo è quello di contare il numero di stelle in un campo. Supponiamo di avere un esposizione con magnitudine di soglia $m_0$. Se c'è estinzione, allora vedremo solo le stelle con $m$ tale che
-    \[
-    m < m_0 - A.
-    \]
-
-# Misura dell'estinzione
-
-<center>![](images/barnard68-wavelengths.jpg){height=540px}</center>
-
-
-# Misura dell'estinzione
-
-Definiamo una «funzione di luminosità» delle stelle osservate
-$N'(m)$, tale che
-\[
-N'(m)\,\text{d}m
-\]
-sia il numero di stelle compresa tra $m$ e $m + \text{d}m$, e misuriamo tale quantità per tanti intervalli $[m, m + \text{d}m)$ in due regioni vicine, una oscurata e l'altra no:
-
-<center>![](images/extinction-and-star-count.png){height=280px}</center>
-
-# Misura dell'estinzione
-
-Il problema è che è difficile ricostruire $N'(m)$ nella zona
-oscurata, se si vedono poche stelle.
-
-<center>![](images/barnard68-wavelengths.jpg){height=480px}</center>
-
-
-# Misura dell'estinzione
-
-In tal caso si considera il numero di stelle sotto una data
-magnitudine. Nelle due zone 1 (non oscurata) e 2 (oscurata) si
-vedrà un numero di stelle pari a
-\[
-\begin{aligned}
-  N_1(m_0) &= \int_{-\infty}^{m_0}
-  N'(m')\,\text{d}m', \\
-  N_2(m_0 - A) &= \int_{-\infty}^{m_0 - A} N'(m')\,\text{d}m',
-\end{aligned}
-\]
-nell'ipotesi che $N'(m)$ sia la stessa.
-
-Se ricostruisco $N'(m)$ nella zona **non oscurata**, posso dedurre il valore di $A$.
-
-
-# Valori tipici di $A$
-
--   Se $A$ è elevato, il numero di stelle osservabili dietro la nube è troppo piccolo per permettere di fare la stima.
--   Se invece $A$ è piccolo, è difficile osservare l'effetto dell'estinzione.
--   L'intervallo tipico in cui si può stimare $A$ è
-    \[
-      1 \lesssim A \lesssim 6.
-    \]
-
-
-# Estinzione in funzione di $\lambda$
-
-L'estinzione dipende dalla lunghezza d'onda: $A = A(\lambda)$.
-
-<center>![](images/barnard68-wavelengths.jpg){height=500px}</center>
-
-
-# Estinzione in funzione di $\lambda$
-
--   Intorno al visibile, l'estinzione è più intensa se $\lambda$ è piccola (luce blu).
-
--   Questo comporta che il numero di stelle osservate aumenta nell'IR.
-
--   Inoltre, le stelle appaiono più rosse (*stellar reddening*). Vediamo come si quantifica l'impatto dell'arrossamento sull'osservazione del flusso di una stella.
-
-
-# Eccesso di colore
-
-Misuriamo l'indice di colore in due filtri, es.\ B e V:
-\[
-\begin{aligned}
-  m_V &= M_V + 5\log_{10}\frac{d}{10\,\text{pc}} + A_V, \\
-  m_B &= M_B + 5\log_{10}\frac{d}{10\,\text{pc}} + A_B.
-\end{aligned}
-\]
-
-Se considero le differenze, ottengo che
-\[
-m_V - m_B = (M_V - M_B) + (A_V - A_B).
-\]
+    #.  L'assorbimento aumenta la temperatura del mezzo
+    
+    I due fenomeni si indicano collettivamente col termine **estinzione**.
+    
+-   Il mezzo interstellare ha densità molto variabili: da 10⁻⁴ a 10⁺⁶ cm⁻³, ma si tratta comunque di valori bassissimi! (L'aria ha densità 10¹⁹ cm⁻³)
 
 ---
 
-# Eccesso di colore
+<center>
+![](./images/scattering-equation.svg)
+</center>
 
-\[
-m_V - m_B = (M_V - M_B) + (A_V - A_B).
-\]
+-   Un fotone che attraversa uno spessore $\mathrm{d}l$ di ISM ha una certa probabilità $p$ di interagire con le sue particelle, venendo estinto.
 
-- Il valore $m_V - m_B$ è misurato direttamente.
-- Il valore $M_V - M_B$ si stima dal tipo spettrale (le righe non sono influenzate dall'estinzione).
-- Il valore $A_V - A_B$ si può quindi ricavare facilmente, ed è chiamato **eccesso di colore**, o **arrossamento** («reddening», vedi Draine, *Physics of the interstellar and galactic medium*, pag. 238).
+-   Se nello spessore ci sono $N = n(l) \times A \times \mathrm{d}l$ particelle, allora
+
+    \[
+    p = \frac{N\sigma_\lambda}A = \frac{n(l)\,A\,\mathrm{d}l\,\sigma_\lambda}A = n(l)\,\sigma_\lambda\,\mathrm{d}l.
+    \]
+    
+    (supponendo che $\mathrm{d}l$ sia così piccolo che le particelle non si eclissino).
+    
+# Equazione dell'estinzione
+
+-   Data la probabilità $p$ di estinzione, il flusso $b_\lambda$ ($[b_\lambda] = \text{W/m}^2$) in una banda $\lambda$ verrà ridotto a causa dell'estinzione secondo la formula
+
+    \[
+    \mathrm{d}b_\lambda = - p \times b_\lambda = -n(l)\,\sigma_\lambda\,b\,\mathrm{d}l.
+    \]
+    
+-   Risolvendo l'equazione differenziale, si ottiene
+    
+    \[
+      b_\lambda(l) = b_0\,\exp\left(-\int_0^l n(l')\,\mathrm{d}l'\,\sigma_\lambda\right) = b_0\,e^{-\tau_\lambda(l)}.
+    \]
+
+# Coefficiente di estinzione
+
+-   La quantità
+
+    \[
+    N_\text{col} = \int_0^l n(l')\,\mathrm{d}l'
+    \]
+    
+    è detta **densità colonnare**, e vale che $[N_\text{col}] = \text{cm}^{-2}$. Se $n(l)$ è costante, $N_\text{col} = n \times l$.
+
+-   Il valore $\tau_\lambda(L) = N_\text{col}\,\sigma_\lambda$ è detto **coefficiente di estinzione**, ed è un numero puro.
 
 
 # Assorbimento e diffusione
@@ -225,7 +137,7 @@ m_V - m_B = (M_V - M_B) + (A_V - A_B).
 
 -   Si definisce *albedo* $a_{\lambda,\text{diff}}$ la frazione dell'estinzione dovuta alla diffusione:
     \[
-    b(L) = b_0 \exp(-\tau) = b_0 \exp\bigl(-\tau (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
+    b_\lambda(l) = b_0 \exp(-\tau_\lambda) = b_0 \exp\bigl(-\tau_\lambda (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
     \]
     con
     \[
@@ -241,34 +153,120 @@ Nelle **nebulose a riflessione** («reflection nebulae») si ha $a_{\lambda,\tex
 <small>M78 (costellazione di Orione)</small>
 
 
+# Estinzione e magnitudine
+
+-   Se il flusso misurato è inferiore a causa dell'estinzione, vuol dire che la magnitudine **aumenta**:
+    \[
+    A_\lambda \equiv m'_\lambda - m_\lambda = 2.5\log_{10} \frac{b_0}{b_\lambda(l)} = 1.0857\,\tau_\lambda(l)
+    \]
+    
+    ($A$ viene talvolta detto *assorbimento totale*).
+
+-   Si può quindi usare l'approssimazione
+    \[
+    A_\lambda \approx \tau_\lambda(l).
+    \]
+
+# ISM e misura delle distanze
+
+-   In presenza di estinzione $A$, in generale si ha che
+    \[
+    \begin{aligned}
+      m'_\lambda &= m_\lambda + A_\lambda \\
+      &= M_\lambda + 5 \log_{10}\frac{d}{10\,\text{pc}} + A_\lambda
+    \end{aligned}
+    \]
+    (la presenza di $A_\lambda$ rende la stella più debole).
+
+
+-   Quindi in presenza di estinzione non è più sufficiente conoscere $M_\lambda$ per ricavare $d$!
+
+
+# Estinzione in funzione di $\lambda$
+
+La nostra scrittura $A_\lambda$ indica che l'estinzione dipende dalla lunghezza d'onda!
+
+<center>![](images/barnard68-wavelengths.jpg){height=500px}</center>
+
+
+# Estinzione in funzione di $\lambda$
+
+-   Intorno al visibile, l'estinzione è più intensa se $\lambda$ è piccola (luce blu).
+
+-   Questo comporta che il numero di stelle osservate aumenta nell'IR.
+
+-   Inoltre, le stelle appaiono più rosse (*stellar reddening*). Vediamo come si quantifica l'impatto dell'arrossamento sull'osservazione del flusso di una stella.
+
+
+# Eccesso di colore
+
+-   Misuriamo l'indice di colore di una stella in due filtri, es.\ B e V:
+    \[
+    \begin{aligned}
+      m_V &= M_V + 5\log_{10}\frac{d}{10\,\text{pc}} + A_V, \\
+      m_B &= M_B + 5\log_{10}\frac{d}{10\,\text{pc}} + A_B.
+    \end{aligned}
+    \]
+
+-   Dalla differenza tra le due equazioni ottengo che
+    \[
+    m_B - m_V = (M_B - M_V) + (A_B - A_V).
+    \]
+
+
+# Eccesso di colore
+
+\[
+m_B - m_V = (M_B - M_V) + (A_B - A_V).
+\]
+
+-   Il valore $m_B - m_V$ è misurato direttamente.
+
+-   Il valore $M_B - M_V$ si stima dal tipo spettrale.
+
+-   Il valore $A_B - A_V$ si può quindi ricavare facilmente, ed è chiamato **eccesso di colore**, o **arrossamento** («reddening», vedi Draine, *Physics of the interstellar and galactic medium*, pag. 238).
+
+-   Di solito si scrive $E(B - V)$ anziché $A_B - A_V$.
+
+# Eccesso di colore e $A_\lambda$
+
+-   È ragionevole aspettarsi che in presenza di molto ISM aumenti sia $A_V$ che $E(B - V)$…
+
+-   …e infatti si è osservato che il loro rapporto è circa costante:
+
+    \[
+    R \equiv \frac{A_V}{E(B - V)} \approx 3.1
+    \]
+    
+    ($R$ è definito proprio con $B$ e $V$, mentre prima li usavamo solo come esempio).
+
+# Valori di $R$
+
+-   Dal fatto che $R$ è più o meno noto, si può usare la conoscenza dell'arrossamento per stimare $A_V$ (e quindi anche la distanza $d$!)
+    
+-   Il valore esatto è sempre dell'ordine di qualche unità, però dipende dall'ambiente (es., le due Nubi di Magellano hanno $R$ diverso dalla Via Lattea)
+
+-   Anche nella Via Lattea il valore di $R$ varia a seconda della direzione.
+
+-   Tipicamente, $2.7 < R < 4.5$.
+
+
 # Fisica dell'estinzione
 
 # Fisica dell'estinzione
 
--   Ricordiamo la definizione di A:
+-   Ricordiamo la definizione di $A_\lambda$:
     \[
-    A = 2.5\log_{10} e^\tau \approx \tau.
+    A_\lambda = 2.5\log_{10} e^{\tau_\lambda} \approx \tau_\lambda.
     \]
 
--   Il valore $\tau$ («coefficiente di estinzione) è uguale a
+-   Il valore $\tau_\lambda$ («coefficiente di estinzione) è uguale a
     \[
-    \tau = \sigma n L,
+    \tau = \sigma N_\text{col},
     \]
-    dove $L$ è lo spessore della nube, $n$ la densità numerica, e $\sigma$ la sezione d'urto totale (assorbimento e diffusione), nell'ipotesi che $\sigma$ sia piccola: quest'ultimo è il parametro che rivela la natura dell'estinzione!
+    dove $N_\text{col} = n\,l$ con $n$ densità numerica “media” dell'ISM, $l$ lo spessore, e $\sigma$ la sezione d'urto totale (assorbimento e diffusione).
 
-
-# Fisica dell'estinzione
-
--   Si ha quindi che
-    \[
-    A \propto n\, L \equiv N_\text{col},
-    \]
-    dove $N_\text{col}$ è detta **densità colonnare**: l'estinzione è il risultato di un integrale lungo la linea di vista.
-
--   Vale che
-    \[
-    [N_\text{col}] = \text{cm}^{-2}.
-    \]
+-   Il valore di $\sigma$ è legato alla fisica microscopica dell'ISM.
 
 
 # Fisica dell'estinzione
@@ -277,57 +275,27 @@ Nelle **nebulose a riflessione** («reflection nebulae») si ha $a_{\lambda,\tex
 
 -   Se si vuole studiare la dipendenza dell'estinzione da $\lambda$, si usa la quantità (numero puro)
     \[
-    f(\lambda) \equiv \frac{A(\lambda)}{A_V},
+    f(\lambda) \equiv \frac{A_\lambda}{A_V},
     \]
 
-    perché in questo modo la dipendenza dalla densità colonnare scompare: $f(\lambda) \approx \sigma(\lambda) / \sigma_V$.
+    perché in questo modo la dipendenza dalla densità colonnare scompare: $f(\lambda) \approx \sigma_\lambda / \sigma_V$. ([Valeva lo stesso per $R$](tomasi-astro2-lezione-03.html#/eccesso-di-colore-e-a_lambda)).
 
 
 # Fisica dell'estinzione
 
-Dallo studio di $f(\lambda)$ si osserva che:
+-   Dallo studio di $f(\lambda)$ si osserva che:
 
-#.  Nel visibile/IR, $f(\lambda) \propto 1/\lambda \propto \nu$ (la luce blu viene assorbita maggiormente);
-#.  C'è un picco nell'UV;
-#.  Si vedono strutture nello spettro dell'IR.
+    #.  Nel visibile/IR, $f(\lambda) \propto 1/\lambda \propto \nu$ (la luce blu viene assorbita maggiormente);
 
+    #.  C'è un picco nell'UV;
 
-La forma di $f(\lambda)$ dipende comunque anche dalla direzione di
-osservazione (c'è polvere e polvere!), soprattutto nell'UV.
+    #.  Si vedono strutture nello spettro dell'IR.
 
-
-# Estinzione in funzione di $\lambda$
-
-Si definisce **rapporto di estinzione** la quantità
-\[
-R_V \equiv \frac{A_V}{A_B - A_V} = \frac{A_V}{E(B - V)} \approx 3.1,
-\]
-ricavabile stimando $A_V$ dai conteggi di stelle per $A_V$ e $E(B - V)$ dagli indici di colore. Come $f(\lambda)$, anche $R_V$ non dipende dalla densità colonnare; è legato soprattutto alla dimensione dei grani di polvere.
-
-Il valore $R_V \approx 3.1$ è tipico, ma come $f(\lambda)$ può mostrare variazioni significative a seconda della regione osservata.
-
-
----
-
-<center>![](images/1989Cardelli-title.png){height=660px}</center>
+-   La forma di $f(\lambda)$ dipende comunque anche dalla direzione di osservazione (c'è polvere e polvere!), soprattutto nell'UV.
 
 ---
 
 <center>![](images/cardelli-extinction-curve.png){height=660px}</center>
-
-
-# Estinzione in funzione di $\lambda$
-
-Se si ha una stima ragionevole di $R$, noto $A_B - A_V$ (facile)
-posso stimare $A_V$:
-\[
-A_V \approx 3.1 (A_B - A_V),
-\]
-che è comodo in quei casi in cui il metodo dei conteggi per stimare
-direttamente $A_V$ è di difficile applicazione.
-
-
-Tutto ciò è fattibile senza conoscere la distanza $d$ della stella!
 
 
 # Esercizio per casa
@@ -350,14 +318,10 @@ qual è il valore di $A_V$ e la sua distanza? (Supporre che $R = 3.1$).
 
 # Fisica dell'estinzione
 
-<center>![](images/2005gordon-introduction.png){height=560px}</center>
-
-
-# Fisica dell'estinzione
-
 <center>![](images/gordon-plot.png){height=500px}</center>
 
 Notare che sull'asse $x$ c'è $1/\lambda$ anziché $\lambda$: perché?
+
 
 # La polvere nel mezzo interstellare
 
