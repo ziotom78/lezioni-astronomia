@@ -44,14 +44,14 @@ La polarizzazione si osserva soprattutto nel visibile, mentre è assente nell'UV
 
 # Carica elettrica dei grani
 
-L'interazione dei grani con campi elettromagnetici indica che non sono elettricamente neutri (ma globalmente ISM sì!).
+-   L'interazione dei grani con campi elettromagnetici indica che non sono elettricamente neutri (ma globalmente ISM sì!).
 
-Ci sono due meccanismi che permettono di accumulare carica sui grani:
+-   Ci sono due meccanismi che permettono di accumulare carica sui grani:
 
-#.  Elettroni liberi «lenti» si fissano sulla superficie del grano;
-#.  Effetto fotoelettrico causato da fotoni UV (poco importante se $A_V$ è grande, perché in tal caso la polvere scherma i fotoni).
+    #.  Elettroni liberi «lenti» si fissano sulla superficie del grano;
+    #.  Effetto fotoelettrico causato da fotoni UV (poco importante se $A_V$ è grande, perché in tal caso la polvere scherma i fotoni).
 
-Consideriamo il primo caso.
+-   Consideriamo ora il primo caso.
 
 
 # Carica elettrica dei grani
@@ -83,37 +83,37 @@ $e$ liberi porta a $N \sim 10$.
 
 # Temperatura dei grani
 
-Stimiamo ora la temperatura media del *singolo* grano di
-polvere. Possiamo supporre che essi siano scaldati da stelle vicine.
+-   Stimiamo ora la temperatura media del *singolo* grano di polvere. Possiamo supporre che essi siano scaldati da stelle vicine.
 
-Supponiamo che un grano sia a una distanza $d$ da una stella con
-raggio $R$ e temperatura $T$, e che la luminosità della stella sia
-\[
-L = 4\pi R^2 \sigma T^4
-\]
-(corpo nero a simmetria sferica).
+-   Supponiamo che un grano sia a una distanza $d$ da una stella con raggio $R$ e temperatura $T$, e che la luminosità della stella sia
+    \[
+    L = 4\pi R^2 \sigma T^4
+    \]
+    (corpo nero a simmetria sferica).
 
 # Temperatura dei grani
 
-La frazione di potenza che colpisce il grano è
-\[
-f = \frac{\pi r^2_g}{4\pi d^2} = \frac14\,\left(\frac{r_g}{d}\right)^2.
-\]
-Se il grano ha albedo $a$, assorbe una potenza
-\[
-P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi R^2}{d^2}\right),
-\]
-dove $\pi R^2/d^2 \equiv \Omega_*$ è l'angolo solido della stella
-visto dal grano.
+-   La frazione di potenza che colpisce il grano è
+    \[
+    f = \frac{\pi r^2_g}{4\pi d^2} = \frac14\,\left(\frac{r_g}{d}\right)^2.
+    \]
+
+-   Se il grano ha albedo $a$, assorbe una potenza
+    \[
+    P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi R^2}{d^2}\right),
+    \]
+    dove $\pi R^2/d^2 \equiv \Omega_*$ è l'angolo solido della stella visto dal grano.
 
 
 # Temperatura dei grani
 
-Per calcolare la temperatura del grano all'equilibrio termico, dobbiamo considerare anche la potenza rilasciata dal grano:
-\[
-  P_\text{rad} = 4\pi r_g^2 \sigma T_g^4,
-\]
-dove usiamo la cosiddetta **temperatura effettiva** $T_g$, ossia la temperatura di un corpo nero che emetterebbe la stessa quantità di energia del grano.
+-   Per calcolare la temperatura del grano all'equilibrio termico, dobbiamo considerare anche la potenza rilasciata dal grano
+
+-   Assumiamo che sia sferico (orrore!), così che
+    \[
+      P_\text{rad} = 4\pi r_g^2 \sigma T_g^4,
+    \]
+    dove usiamo la cosiddetta **temperatura effettiva** $T_g$, ossia la temperatura di un corpo nero che emetterebbe la stessa quantità di energia del grano.
 
 
 # Temperatura dei grani
@@ -127,8 +127,6 @@ Se la polvere ha raggiunto la temperatura $T_g$ di equilibrio, la potenza emessa
   T_g &= T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}.
 \end{aligned}
 \]
-
-(Attenzione: il Kutner dà una spiegazione fisicamente sbagliata di questa relazione).
 
 
 # Temperatura dei grani
@@ -232,7 +230,7 @@ Planck (ESA), 14/5/2009. Orbita eliocentrica su $L_2$ ($d = 1.5\times10^9\,\text
 | Caratteristica   | Fonte                                          | Risultato                                                 |
 |------------------|------------------------------------------------|-----------------------------------------------------------|
 | Forma            | Polarizzazione stelle, polvere interplanetaria | Asimmetrica                                               |
-| Dimensione       | Format di $A(\lambda)$                         | $\text{nm} < r_g < \mu\text{m}$                           |
+| Dimensione       | Andamento di $A(\lambda)$                      | $\text{nm} < r_g < \mu\text{m}$                           |
 | Composizione     | Spettro, forma di $A(\lambda)$                 | Silicati, carbonati, ghiaccio, ferrite, idrocarburi       |
 | Carica elettrica | Polarizzazione stelle, conservazione energia   | $N = \frac32 k_B T \frac{r_g}{e^2} \sim 10$               |
 | Temperatura      | Illuminazione da stelle                        | $T_g = T_* \sqrt{\frac{R}{2d}} \sim 10\div 100\,\text{K}$ |
@@ -257,25 +255,20 @@ d.  Trasferimento di momento angolare da fotoni.
 
 # Rotazione dei grani
 
-Se il grano è paramagnetico, il campo Galattico $\vec B_\text{Gal}$ induce un momento magnetico $\vec \mu_B \propto \vec B_\text{Gal}$ parallelo a questo, che causa un momento meccanico $\vec\tau = \vec\mu_B \times \vec B_\mathrm{Gal}$. Allora:
+-   Se il grano è paramagnetico, il campo Galattico $\vec B_\text{Gal}$ induce un momento magnetico $\vec \mu_B \propto \vec B_\text{Gal}$ parallelo a questo, che causa un momento meccanico $\vec\tau = \vec\mu_B \times \vec B_\mathrm{Gal}$. Allora:
 
-#.  Se il grano ruota come nel caso *a* della fig. precedente, la rotazione porta $\vec B_\text{Gal}$ e $\vec \mu_B$ a disallinearsi. Per riallinearsi, $\vec \mu_B$ induce un momento torcente in opposizione.
+    #.  Se il grano ruota come nel caso *a* della fig. precedente, la rotazione porta $\vec B_\text{Gal}$ e $\vec \mu_B$ a disallinearsi. Per riallinearsi, $\vec \mu_B$ induce un momento torcente in opposizione.
 
-#.  Se l'asse di rotazione è parallelo a $\vec B_\text{Gal}$, non c'è momento torcente.
+    #.  Se l'asse di rotazione è parallelo a $\vec B_\text{Gal}$, non c'è momento torcente.
 
-Quindi l'asse di rotazione tende ad allinearsi con $\vec B_\text{Gal}$ (**rilassamento paramagnetico**).
+-   Quindi l'asse di rotazione tende ad allinearsi con $\vec B_\text{Gal}$ (**rilassamento paramagnetico**).
 
 
 # Emissione anomala
 
-Nel 1995, Kogut *et al.* pubblicarono un articolo in cui si
-misurava la correlazione tra l'emissione del cielo a 140 µm
-(misurata da COBE-DIRBE) e a 31.5\,GHz (misurata da COBE-DMR).
+-   Nel 1995, Kogut *et al.* pubblicarono un articolo in cui si misurava la correlazione tra l'emissione del cielo a 140 µm (misurata da COBE-DIRBE) e a 31.5 GHz (misurata da COBE-DMR).
 
-Questi studi cercavano di caratterizzare il contributo relativo di
-diverse emissioni intorno alla regione delle microonde, in modo da
-isolare meglio il segnale della CMB (che vedremo meglio nell'ultima
-parte del corso).
+-   Questi studi cercavano di caratterizzare il contributo relativo di diverse emissioni intorno alla regione delle microonde, in modo da isolare meglio il segnale della CMB (che vedremo meglio nell'ultima parte del corso).
 
 ---
 
@@ -296,17 +289,17 @@ parte del corso).
 
 # Origine della correlazione
 
-Il segnale di sincrotrone viene generato dai raggi cosmici, che non dovrebbero essere correlati con la polvere.
+-   Il segnale di sincrotrone viene generato dai raggi cosmici, che non dovrebbero essere correlati con la polvere.
 
-Eppure questo è ciò che si osserva! Tre possibilità:
+-   Eppure questo è ciò che si osserva! Tre possibilità:
 
-#. La polvere emette anche alle frequenze del sincrotrone;
-#. I raggi cosmici emettono anche alle frequenze della polvere;
-#. Qualcos'altro (cosa?) emette sia alle frequenze del sincrotrone che della polvere.
+    #. La polvere emette anche alle frequenze del sincrotrone;
+    #. I raggi cosmici emettono anche alle frequenze della polvere;
+    #. Qualcos'altro (cosa?) emette sia alle frequenze del sincrotrone che della polvere.
 
 # Grani in rotazione
 
--   Una spiegazione proposta nel 1998 da A. Lazarian e B. T. Draine è che siano i grani degli idrocarburi aromatici policiclici (PAH) a emettere nella regione spettrale intorno ai 30\,GHz, a causa della loro rotazione.
+-   Una spiegazione proposta nel 1998 da A. Lazarian e B. T. Draine è che siano i grani degli idrocarburi aromatici policiclici (PAH) a emettere nella regione spettrale intorno ai 30 GHz, a causa della loro rotazione.
 
 -   Il modello fisico è semplice, anche se i dettagli sono estremamente complicati!
 
@@ -320,8 +313,6 @@ Eppure questo è ciò che si osserva! Tre possibilità:
     \text{con } I =
     \frac25 M a^2 = \frac8{15} \pi \rho a^5.
     \]
-
-    (In realtà il 10--20\,\% dell'energia viene convertita in modi vibrazionali).
 
 # Avvertenze
 
@@ -340,7 +331,7 @@ La soluzione si può scrivere in questa forma:
 \]
 
 (Ci sono evidenze che dicono che solo i grani piccoli, con $a \lesssim 10\,\text{\AA}$, contribuiscono a questa emissione).
-Il fatto che il picco di emissione previsto sia intorno ai 30\,GHz mostra che
+Il fatto che il picco di emissione previsto sia intorno ai 30 GHz mostra che
 questa è la strada giusta!
 
 (Vedi Fig. 7 di Draine \& Lazarian (1998) per capire perché solo i grani piccoli contribuiscono alla AME).
@@ -358,16 +349,13 @@ Per avere un modello realistico, bisogna anche tenere conto di altri effetti:
 
 # Grani in rotazione
 
-Un modello più dettagliato prevede che
-\[
-\left<\omega^2\right> \lesssim 3 k_B \frac{T}I.
-\]
-Il risultato è comunque che lo spettro previsto ha un picco di
-emissione intorno a qualche decina di GHz.
+-   Un modello più dettagliato prevede che
+    \[
+    \left<\omega^2\right> \lesssim 3 k_B \frac{T}I.
+    \]
+    Il risultato è comunque che lo spettro previsto ha un picco di emissione intorno a qualche decina di GHz.
 
-Ovviamente, i modelli dettagliati stimano anche l'**intensità**,
-in modo da paragonarla con quella misurata. (Un modello completo deve quindi tenere conto della superficie
-  media dei grani, della loro emissività, della loro forma, etc.)
+-   Ovviamente, i modelli dettagliati stimano anche l'**intensità**, in modo da paragonarla con quella misurata. (Un modello completo deve quindi tenere conto della superficie media dei grani, della loro emissività, della loro forma, etc.)
 
 ---
 

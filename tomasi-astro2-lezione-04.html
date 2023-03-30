@@ -113,17 +113,19 @@ sufficiente</strong> per avere polarizzazione).</li>
 </section>
 <section id="carica-elettrica-dei-grani" class="slide level1">
 <h1>Carica elettrica dei grani</h1>
-<p>L’interazione dei grani con campi elettromagnetici indica che non
-sono elettricamente neutri (ma globalmente ISM sì!).</p>
-<p>Ci sono due meccanismi che permettono di accumulare carica sui
+<ul>
+<li><p>L’interazione dei grani con campi elettromagnetici indica che non
+sono elettricamente neutri (ma globalmente ISM sì!).</p></li>
+<li><p>Ci sono due meccanismi che permettono di accumulare carica sui
 grani:</p>
 <ol>
 <li>Elettroni liberi «lenti» si fissano sulla superficie del grano;</li>
 <li>Effetto fotoelettrico causato da fotoni UV (poco importante se <span
 class="math inline">A_V</span> è grande, perché in tal caso la polvere
 scherma i fotoni).</li>
-</ol>
-<p>Consideriamo il primo caso.</p>
+</ol></li>
+<li><p>Consideriamo ora il primo caso.</p></li>
+</ul>
 </section>
 <section id="carica-elettrica-dei-grani-1" class="slide level1">
 <h1>Carica elettrica dei grani</h1>
@@ -153,37 +155,46 @@ class="math inline">N \sim 10</span>.</p>
 </section>
 <section id="temperatura-dei-grani" class="slide level1">
 <h1>Temperatura dei grani</h1>
-<p>Stimiamo ora la temperatura media del <em>singolo</em> grano di
-polvere. Possiamo supporre che essi siano scaldati da stelle vicine.</p>
-<p>Supponiamo che un grano sia a una distanza <span
+<ul>
+<li><p>Stimiamo ora la temperatura media del <em>singolo</em> grano di
+polvere. Possiamo supporre che essi siano scaldati da stelle
+vicine.</p></li>
+<li><p>Supponiamo che un grano sia a una distanza <span
 class="math inline">d</span> da una stella con raggio <span
 class="math inline">R</span> e temperatura <span
 class="math inline">T</span>, e che la luminosità della stella sia <span
 class="math display">
 L = 4\pi R^2 \sigma T^4
-</span> (corpo nero a simmetria sferica).</p>
+</span> (corpo nero a simmetria sferica).</p></li>
+</ul>
 </section>
 <section id="temperatura-dei-grani-1" class="slide level1">
 <h1>Temperatura dei grani</h1>
-<p>La frazione di potenza che colpisce il grano è <span
+<ul>
+<li><p>La frazione di potenza che colpisce il grano è <span
 class="math display">
 f = \frac{\pi r^2_g}{4\pi d^2} = \frac14\,\left(\frac{r_g}{d}\right)^2.
-</span> Se il grano ha albedo <span class="math inline">a</span>,
-assorbe una potenza <span class="math display">
+</span></p></li>
+<li><p>Se il grano ha albedo <span class="math inline">a</span>, assorbe
+una potenza <span class="math display">
 P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi
 R^2}{d^2}\right),
 </span> dove <span class="math inline">\pi R^2/d^2 \equiv
-\Omega_*</span> è l’angolo solido della stella visto dal grano.</p>
+\Omega_*</span> è l’angolo solido della stella visto dal grano.</p></li>
+</ul>
 </section>
 <section id="temperatura-dei-grani-2" class="slide level1">
 <h1>Temperatura dei grani</h1>
-<p>Per calcolare la temperatura del grano all’equilibrio termico,
-dobbiamo considerare anche la potenza rilasciata dal grano: <span
+<ul>
+<li><p>Per calcolare la temperatura del grano all’equilibrio termico,
+dobbiamo considerare anche la potenza rilasciata dal grano</p></li>
+<li><p>Assumiamo che sia sferico (orrore!), così che <span
 class="math display">
   P_\text{rad} = 4\pi r_g^2 \sigma T_g^4,
 </span> dove usiamo la cosiddetta <strong>temperatura effettiva</strong>
 <span class="math inline">T_g</span>, ossia la temperatura di un corpo
-nero che emetterebbe la stessa quantità di energia del grano.</p>
+nero che emetterebbe la stessa quantità di energia del grano.</p></li>
+</ul>
 </section>
 <section id="temperatura-dei-grani-3" class="slide level1">
 <h1>Temperatura dei grani</h1>
@@ -197,8 +208,6 @@ uguagliare quella assorbita: <span class="math display">
   T_g &amp;= T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}.
 \end{aligned}
 </span></p>
-<p>(Attenzione: il Kutner dà una spiegazione fisicamente sbagliata di
-questa relazione).</p>
 </section>
 <section id="temperatura-dei-grani-4" class="slide level1">
 <h1>Temperatura dei grani</h1>
@@ -358,7 +367,7 @@ class="math inline">L_2</span> (<span class="math inline">d =
 </tr>
 <tr class="even">
 <td>Dimensione</td>
-<td>Format di <span class="math inline">A(\lambda)</span></td>
+<td>Andamento di <span class="math inline">A(\lambda)</span></td>
 <td><span class="math inline">\text{nm} &lt; r_g &lt;
 \mu\text{m}</span></td>
 </tr>
@@ -406,7 +415,8 @@ successiva.</li>
 </section>
 <section id="rotazione-dei-grani-1" class="slide level1">
 <h1>Rotazione dei grani</h1>
-<p>Se il grano è paramagnetico, il campo Galattico <span
+<ul>
+<li><p>Se il grano è paramagnetico, il campo Galattico <span
 class="math inline">\vec B_\text{Gal}</span> induce un momento magnetico
 <span class="math inline">\vec \mu_B \propto \vec B_\text{Gal}</span>
 parallelo a questo, che causa un momento meccanico <span
@@ -421,20 +431,23 @@ momento torcente in opposizione.</p></li>
 <li><p>Se l’asse di rotazione è parallelo a <span
 class="math inline">\vec B_\text{Gal}</span>, non c’è momento
 torcente.</p></li>
-</ol>
-<p>Quindi l’asse di rotazione tende ad allinearsi con <span
+</ol></li>
+<li><p>Quindi l’asse di rotazione tende ad allinearsi con <span
 class="math inline">\vec B_\text{Gal}</span> (<strong>rilassamento
-paramagnetico</strong>).</p>
+paramagnetico</strong>).</p></li>
+</ul>
 </section>
 <section id="emissione-anomala" class="slide level1">
 <h1>Emissione anomala</h1>
-<p>Nel 1995, Kogut <em>et al.</em> pubblicarono un articolo in cui si
-misurava la correlazione tra l’emissione del cielo a 140 µm (misurata da
-COBE-DIRBE) e a 31.5,GHz (misurata da COBE-DMR).</p>
-<p>Questi studi cercavano di caratterizzare il contributo relativo di
-diverse emissioni intorno alla regione delle microonde, in modo da
+<ul>
+<li><p>Nel 1995, Kogut <em>et al.</em> pubblicarono un articolo in cui
+si misurava la correlazione tra l’emissione del cielo a 140 µm (misurata
+da COBE-DIRBE) e a 31.5 GHz (misurata da COBE-DMR).</p></li>
+<li><p>Questi studi cercavano di caratterizzare il contributo relativo
+di diverse emissioni intorno alla regione delle microonde, in modo da
 isolare meglio il segnale della CMB (che vedremo meglio nell’ultima
-parte del corso).</p>
+parte del corso).</p></li>
+</ul>
 </section>
 <section class="slide level1">
 
@@ -461,22 +474,24 @@ parte del corso).</p>
 </section>
 <section id="origine-della-correlazione" class="slide level1">
 <h1>Origine della correlazione</h1>
-<p>Il segnale di sincrotrone viene generato dai raggi cosmici, che non
-dovrebbero essere correlati con la polvere.</p>
-<p>Eppure questo è ciò che si osserva! Tre possibilità:</p>
+<ul>
+<li><p>Il segnale di sincrotrone viene generato dai raggi cosmici, che
+non dovrebbero essere correlati con la polvere.</p></li>
+<li><p>Eppure questo è ciò che si osserva! Tre possibilità:</p>
 <ol>
 <li>La polvere emette anche alle frequenze del sincrotrone;</li>
 <li>I raggi cosmici emettono anche alle frequenze della polvere;</li>
 <li>Qualcos’altro (cosa?) emette sia alle frequenze del sincrotrone che
 della polvere.</li>
-</ol>
+</ol></li>
+</ul>
 </section>
 <section id="grani-in-rotazione" class="slide level1">
 <h1>Grani in rotazione</h1>
 <ul>
 <li><p>Una spiegazione proposta nel 1998 da A. Lazarian e B. T. Draine è
 che siano i grani degli idrocarburi aromatici policiclici (PAH) a
-emettere nella regione spettrale intorno ai 30,GHz, a causa della loro
+emettere nella regione spettrale intorno ai 30 GHz, a causa della loro
 rotazione.</p></li>
 <li><p>Il modello fisico è semplice, anche se i dettagli sono
 estremamente complicati!</p></li>
@@ -485,21 +500,18 @@ estremamente complicati!</p></li>
 <section id="grani-in-rotazione-1" class="slide level1">
 <h1>Grani in rotazione</h1>
 <ul>
-<li><p>Supponiamo che i grani abbiano un momento elettrico di dipolo
-<span class="math inline">\vec \mu = q \vec r</span> e che siano in
-rotazione con velocità angolare <span
-class="math inline">\omega</span></p></li>
-<li><p>Ci aspettiamo allora che emettano fotoni con frequenza <span
-class="math inline">\nu = \omega/2\pi</span>.</p></li>
-<li><p>Se i grani sono in equilibrio termico, abbiano momento angolare
+<li>Supponiamo che i grani abbiano un momento elettrico di dipolo <span
+class="math inline">\vec \mu = q \vec r</span> e che siano in rotazione
+con velocità angolare <span class="math inline">\omega</span></li>
+<li>Ci aspettiamo allora che emettano fotoni con frequenza <span
+class="math inline">\nu = \omega/2\pi</span>.</li>
+<li>Se i grani sono in equilibrio termico, abbiano momento angolare
 <span class="math inline">L \gg h</span> e siano messi in rotazione
 principalmente da urti, allora <span class="math display">
 \frac12 I \left&lt;\omega^2\right&gt; \approx \frac32 k_B T, \qquad
 \text{con } I =
 \frac25 M a^2 = \frac8{15} \pi \rho a^5.
-</span></p>
-<p>(In realtà il 10–20,% dell’energia viene convertita in modi
-vibrazionali).</p></li>
+</span></li>
 </ul>
 </section>
 <section id="avvertenze" class="slide level1">
@@ -529,7 +541,7 @@ class="math display">
 <p>(Ci sono evidenze che dicono che solo i grani piccoli, con <span
 class="math inline">a \lesssim 10\,\text{\AA}</span>, contribuiscono a
 questa emissione). Il fatto che il picco di emissione previsto sia
-intorno ai 30,GHz mostra che questa è la strada giusta!</p>
+intorno ai 30 GHz mostra che questa è la strada giusta!</p>
 <p>(Vedi Fig. 7 di Draine &amp; Lazarian (1998) per capire perché solo i
 grani piccoli contribuiscono alla AME).</p>
 </section>
@@ -549,14 +561,17 @@ angolare);</li>
 </section>
 <section id="grani-in-rotazione-4" class="slide level1">
 <h1>Grani in rotazione</h1>
-<p>Un modello più dettagliato prevede che <span class="math display">
+<ul>
+<li><p>Un modello più dettagliato prevede che <span
+class="math display">
 \left&lt;\omega^2\right&gt; \lesssim 3 k_B \frac{T}I.
 </span> Il risultato è comunque che lo spettro previsto ha un picco di
-emissione intorno a qualche decina di GHz.</p>
-<p>Ovviamente, i modelli dettagliati stimano anche
+emissione intorno a qualche decina di GHz.</p></li>
+<li><p>Ovviamente, i modelli dettagliati stimano anche
 l’<strong>intensità</strong>, in modo da paragonarla con quella
 misurata. (Un modello completo deve quindi tenere conto della superficie
-media dei grani, della loro emissività, della loro forma, etc.)</p>
+media dei grani, della loro emissività, della loro forma, etc.)</p></li>
+</ul>
 </section>
 <section class="slide level1">
 
