@@ -304,6 +304,7 @@ m_B - m_V = (M_B - M_V) + (A_B - A_V).
 
 <center>![](images/cardelli-extinction-curve.png){height=660px}</center>
 
+Notare che sull'asse $x$ c'è $1/\lambda$ anziché $\lambda$.
 
 # Esercizio per casa
 
@@ -326,8 +327,6 @@ qual è il valore di $A_V$ e la sua distanza? (Supporre che $R = 3.1$).
 # Fisica dell'estinzione
 
 <center>![](images/gordon-plot.png){height=500px}</center>
-
-Notare che sull'asse $x$ c'è $1/\lambda$ anziché $\lambda$: perché?
 
 
 # La polvere nel mezzo interstellare
