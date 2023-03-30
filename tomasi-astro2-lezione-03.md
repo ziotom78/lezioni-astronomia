@@ -255,7 +255,7 @@ m_B - m_V = (M_B - M_V) + (A_B - A_V).
 
 -   Anche nella Via Lattea il valore di $R$ varia a seconda della direzione.
 
--   Tipicamente, $2.7 < R < 4.5$.
+-   Tipicamente, $2.5 \lesssim R \lesssim 5$.
 
 
 # Fisica dell'estinzione
