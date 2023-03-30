@@ -144,11 +144,13 @@ composto da:</p>
 <section id="riduzione-del-flusso" class="slide level1">
 <h1>Riduzione del flusso</h1>
 <ul>
-<li><p>Il flusso può essere ridotto dalla <strong>diffusione</strong> o
-dall’<strong>assorbimento</strong>:</p>
+<li><p>Il flusso di oggetti brillanti viene essere ridotto dall’ISM per
+<strong>diffusione</strong> e <strong>assorbimento</strong>:</p>
 <ol>
-<li><p>La diffusione cambia la direzione di propagazione</p></li>
-<li><p>L’assorbimento aumenta la temperatura del mezzo</p></li>
+<li><p>La diffusione cambia la direzione di propagazione della
+radiazione</p></li>
+<li><p>L’assorbimento aumenta la temperatura del mezzo
+interstellare</p></li>
 </ol>
 <p>I due fenomeni si indicano collettivamente col termine
 <strong>estinzione</strong>.</p></li>
@@ -166,7 +168,7 @@ densità 10¹⁹ cm⁻³)</p></li>
 <li><p>Un fotone che attraversa uno spessore <span
 class="math inline">\mathrm{d}l</span> di ISM ha una certa probabilità
 <span class="math inline">p</span> di interagire con le sue particelle,
-venendo estinto.</p></li>
+venendo estinto (diffuso/assorbito).</p></li>
 <li><p>Se nello spessore ci sono <span class="math inline">N = n(l)
 \times A \times \mathrm{d}l</span> particelle, allora</p>
 <p><span class="math display">
@@ -182,48 +184,52 @@ piccolo che le particelle non si eclissino).</p></li>
 <h1>Equazione dell’estinzione</h1>
 <ul>
 <li><p>Data la probabilità <span class="math inline">p</span> di
-estinzione, il flusso <span class="math inline">b_\lambda</span> (<span
-class="math inline">[b_\lambda] = \text{W/m}^2</span>) in una banda
-<span class="math inline">\lambda</span> verrà ridotto a causa
-dell’estinzione secondo la formula</p>
+estinzione, la radianza spettrale <span
+class="math inline">I_\lambda</span> (<span
+class="math inline">[I_\lambda] = \text{W/m$^2$/Hz/sr}</span>) in una
+banda <span class="math inline">\lambda</span> verrà ridotta a causa
+dell’estinzione:</p>
 <p><span class="math display">
-\mathrm{d}b_\lambda = - p \times b_\lambda =
--n(l)\,\sigma_\lambda\,b\,\mathrm{d}l.
+\mathrm{d}I_\lambda = - p \times I_\lambda =
+-n(l)\,\sigma_\lambda\,I_\lambda\,\mathrm{d}l.
 </span></p></li>
 <li><p>Risolvendo l’equazione differenziale, si ottiene</p>
 <p><span class="math display">
-  b_\lambda(l) = b_0\,\exp\left(-\int_0^l
+  I_\lambda(l) = I_0\,\exp\left(-\int_0^l
 n(l&#39;)\,\mathrm{d}l&#39;\,\sigma_\lambda\right) =
-b_0\,e^{-\tau_\lambda(l)}.
-</span></p></li>
+I_0\,e^{-\tau_\lambda(l)},
+</span></p>
+<p>e quindi la radianza spettrale dipende dalla distanza se c’è
+estinzione!</p></li>
 </ul>
 </section>
-<section id="coefficiente-di-estinzione" class="slide level1">
-<h1>Coefficiente di estinzione</h1>
-<ul>
-<li><p>La quantità</p>
+<section id="densità-colonnare" class="slide level1">
+<h1>Densità colonnare</h1>
+<center>
+<img data-src="images/darts.svg" />
+</center>
+<p>Si definisce <strong>densità colonnare</strong> la quantità</p>
 <p><span class="math display">
-N_\text{col} = \int_0^l n(l&#39;)\,\mathrm{d}l&#39;
+N_\text{col} = \int_0^l n(l&#39;)\,\mathrm{d}l&#39;,
 </span></p>
-<p>è detta <strong>densità colonnare</strong>, e vale che <span
-class="math inline">[N_\text{col}] = \text{cm}^{-2}</span>. Se <span
-class="math inline">n(l)</span> è costante, <span
-class="math inline">N_\text{col} = n \times l</span>.</p></li>
+<p>e vale che <span class="math inline">[N_\text{col}] =
+\text{cm}^{-2}</span>. Se <span class="math inline">n(l)</span> è
+costante, <span class="math inline">N_\text{col} = n \times
+l</span>.</p>
+</section>
+<section id="coefficiente-di-estinione" class="slide level1">
+<h1>Coefficiente di estinione</h1>
+<ul>
 <li><p>Il valore <span class="math inline">\tau_\lambda(L) =
 N_\text{col}\,\sigma_\lambda</span> è detto <strong>coefficiente di
 estinzione</strong>, ed è un numero puro.</p></li>
-</ul>
-</section>
-<section id="assorbimento-e-diffusione" class="slide level1">
-<h1>Assorbimento e diffusione</h1>
-<ul>
 <li><p>L’estinzione è l’effetto combinato di assorbimento e diffusione.
 La loro importanza relativa dipende dalle proprietà fisiche dei grani e
 da <span class="math inline">\lambda</span>.</p></li>
 <li><p>Si definisce <em>albedo</em> <span
 class="math inline">a_{\lambda,\text{diff}}</span> la frazione
 dell’estinzione dovuta alla diffusione: <span class="math display">
-b_\lambda(l) = b_0 \exp(-\tau_\lambda) = b_0 \exp\bigl(-\tau_\lambda
+I_\lambda(l) = I_0 \exp(-\tau_\lambda) = I_0 \exp\bigl(-\tau_\lambda
 (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
 </span> con <span class="math display">
 a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1.
@@ -244,9 +250,11 @@ spettro molto simile).</p>
 <section id="estinzione-e-magnitudine" class="slide level1">
 <h1>Estinzione e magnitudine</h1>
 <ul>
-<li><p>Se il flusso misurato è inferiore a causa dell’estinzione, vuol
-dire che la magnitudine <strong>aumenta</strong>: <span
-class="math display">
+<li><p>Passando da <span class="math inline">I</span> al flusso <span
+class="math inline">b</span> (<span class="math inline">[b] =
+\text{W/m$^2$}</span>), se quello misurato è inferiore a causa
+dell’estinzione, vuol dire che la magnitudine <strong>aumenta</strong>:
+<span class="math display">
 A_\lambda \equiv m&#39;_\lambda - m_\lambda = 2.5\log_{10}
 \frac{b_0}{b_\lambda(l)} = 1.0857\,\tau_\lambda(l)
 </span></p>
@@ -276,8 +284,8 @@ class="math inline">d</span>!</p></li>
 <section id="estinzione-in-funzione-di-lambda" class="slide level1">
 <h1>Estinzione in funzione di <span
 class="math inline">\lambda</span></h1>
-<p>La nostra scrittura <span class="math inline">A_\lambda</span> indica
-che l’estinzione dipende dalla lunghezza d’onda!</p>
+<p>La scrittura <span class="math inline">A_\lambda</span> suggerisce
+che l’estinzione dipenda dalla lunghezza d’onda!</p>
 <center>
 <img data-src="images/barnard68-wavelengths.jpg" height="500" />
 </center>
@@ -327,7 +335,8 @@ colore</strong>, o <strong>arrossamento</strong> («reddening», vedi
 Draine, <em>Physics of the interstellar and galactic medium</em>, pag.
 238).</p></li>
 <li><p>Di solito si scrive <span class="math inline">E(B - V)</span>
-anziché <span class="math inline">A_B - A_V</span>.</p></li>
+anziché <span class="math inline">A_B - A_V</span> (<span
+class="math inline">E</span> sta per <em>Excess</em>).</p></li>
 </ul>
 </section>
 <section id="eccesso-di-colore-e-a_lambda" class="slide level1">
@@ -341,21 +350,24 @@ costante:</p>
 <p><span class="math display">
 R \equiv \frac{A_V}{E(B - V)} \approx 3.1
 </span></p>
-<p>(<span class="math inline">R</span> è definito proprio con <span
-class="math inline">B</span> e <span class="math inline">V</span>,
-mentre prima li usavamo solo come esempio).</p></li>
+<p>(<span class="math inline">R</span> è solitamente definito in termini
+di <span class="math inline">B</span> e <span
+class="math inline">V</span>, quindi il nostro esempio
+calzava!).</p></li>
 </ul>
 </section>
 <section id="valori-di-r" class="slide level1">
 <h1>Valori di <span class="math inline">R</span></h1>
 <ul>
-<li><p>Dal fatto che <span class="math inline">R</span> è più o meno
-noto, si può usare la conoscenza dell’arrossamento per stimare <span
+<li><p>Dal fatto che il valore di <span class="math inline">R</span> è
+abbastanza noto, si può usare la conoscenza dell’arrossamento <span
+class="math inline">E(B - V)</span> per stimare <span
 class="math inline">A_V</span> (e quindi anche la distanza <span
 class="math inline">d</span>!)</p></li>
-<li><p>Il valore esatto è sempre dell’ordine di qualche unità, però
-dipende dall’ambiente (es., le due Nubi di Magellano hanno <span
-class="math inline">R</span> diverso dalla Via Lattea)</p></li>
+<li><p>Il valore di <span class="math inline">R</span> è sempre
+dell’ordine di qualche unità, ma dipende dall’ambiente (es., le due Nubi
+di Magellano hanno <span class="math inline">R</span> diverso dalla Via
+Lattea)</p></li>
 <li><p>Anche nella Via Lattea il valore di <span
 class="math inline">R</span> varia a seconda della direzione.</p></li>
 <li><p>Tipicamente, <span class="math inline">2.7 &lt; R &lt;
@@ -374,14 +386,15 @@ A_\lambda = 2.5\log_{10} e^{\tau_\lambda} \approx \tau_\lambda.
 </span></p></li>
 <li><p>Il valore <span class="math inline">\tau_\lambda</span>
 («coefficiente di estinzione) è uguale a <span class="math display">
-\tau = \sigma N_\text{col},
-</span> dove <span class="math inline">N_\text{col} = n\,l</span> con
-<span class="math inline">n</span> densità numerica “media” dell’ISM,
-<span class="math inline">l</span> lo spessore, e <span
-class="math inline">\sigma</span> la sezione d’urto totale (assorbimento
-e diffusione).</p></li>
-<li><p>Il valore di <span class="math inline">\sigma</span> è legato
-alla fisica microscopica dell’ISM.</p></li>
+\tau_\lambda = \sigma_\lambda N_\text{col},
+</span> dove <span class="math inline">N_\text{col}</span> è la densità
+colonnare dell’ISM tra noi e l’oggetto osservato, <span
+class="math inline">l</span> lo spessore, e <span
+class="math inline">\sigma_\lambda</span> la sezione d’urto totale
+(assorbimento e diffusione) alla lunghezza d’onda <span
+class="math inline">\lambda</span>.</p></li>
+<li><p>Il valore di <span class="math inline">\sigma_\lambda</span> è
+legato alla fisica microscopica dell’ISM.</p></li>
 </ul>
 </section>
 <section id="fisica-dellestinzione-2" class="slide level1">

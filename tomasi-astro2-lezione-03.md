@@ -78,11 +78,11 @@ Metodi di osservazione:
 
 # Riduzione del flusso
 
--   Il flusso può essere ridotto dalla **diffusione** o dall'**assorbimento**:
+-   Il flusso di oggetti brillanti viene essere ridotto dall'ISM per **diffusione** e **assorbimento**:
 
-    #.  La diffusione cambia la direzione di propagazione
+    #.  La diffusione cambia la direzione di propagazione della radiazione
 
-    #.  L'assorbimento aumenta la temperatura del mezzo
+    #.  L'assorbimento aumenta la temperatura del mezzo interstellare
     
     I due fenomeni si indicano collettivamente col termine **estinzione**.
     
@@ -94,7 +94,7 @@ Metodi di osservazione:
 ![](./images/scattering-equation.svg)
 </center>
 
--   Un fotone che attraversa uno spessore $\mathrm{d}l$ di ISM ha una certa probabilità $p$ di interagire con le sue particelle, venendo estinto.
+-   Un fotone che attraversa uno spessore $\mathrm{d}l$ di ISM ha una certa probabilità $p$ di interagire con le sue particelle, venendo estinto (diffuso/assorbito).
 
 -   Se nello spessore ci sono $N = n(l) \times A \times \mathrm{d}l$ particelle, allora
 
@@ -106,38 +106,45 @@ Metodi di osservazione:
     
 # Equazione dell'estinzione
 
--   Data la probabilità $p$ di estinzione, il flusso $b_\lambda$ ($[b_\lambda] = \text{W/m}^2$) in una banda $\lambda$ verrà ridotto a causa dell'estinzione secondo la formula
+-   Data la probabilità $p$ di estinzione, la radianza spettrale $I_\lambda$ ($[I_\lambda] = \text{W/m$^2$/Hz/sr}$) in una banda $\lambda$ verrà ridotta a causa dell'estinzione:
 
     \[
-    \mathrm{d}b_\lambda = - p \times b_\lambda = -n(l)\,\sigma_\lambda\,b\,\mathrm{d}l.
+    \mathrm{d}I_\lambda = - p \times I_\lambda = -n(l)\,\sigma_\lambda\,I_\lambda\,\mathrm{d}l.
     \]
-    
+
 -   Risolvendo l'equazione differenziale, si ottiene
     
     \[
-      b_\lambda(l) = b_0\,\exp\left(-\int_0^l n(l')\,\mathrm{d}l'\,\sigma_\lambda\right) = b_0\,e^{-\tau_\lambda(l)}.
-    \]
-
-# Coefficiente di estinzione
-
--   La quantità
-
-    \[
-    N_\text{col} = \int_0^l n(l')\,\mathrm{d}l'
+      I_\lambda(l) = I_0\,\exp\left(-\int_0^l n(l')\,\mathrm{d}l'\,\sigma_\lambda\right) = I_0\,e^{-\tau_\lambda(l)},
     \]
     
-    è detta **densità colonnare**, e vale che $[N_\text{col}] = \text{cm}^{-2}$. Se $n(l)$ è costante, $N_\text{col} = n \times l$.
+    e quindi la radianza spettrale dipende dalla distanza se c'è estinzione!
+    
+
+# Densità colonnare
+
+<center>
+![](images/darts.svg)
+</center>
+
+Si definisce **densità colonnare** la quantità
+
+\[
+N_\text{col} = \int_0^l n(l')\,\mathrm{d}l',
+\]
+
+e vale che $[N_\text{col}] = \text{cm}^{-2}$. Se $n(l)$ è costante, $N_\text{col} = n \times l$.
+
+
+# Coefficiente di estinione
 
 -   Il valore $\tau_\lambda(L) = N_\text{col}\,\sigma_\lambda$ è detto **coefficiente di estinzione**, ed è un numero puro.
-
-
-# Assorbimento e diffusione
 
 -   L'estinzione è l'effetto combinato di assorbimento e diffusione. La loro importanza relativa dipende dalle proprietà fisiche dei grani e da $\lambda$.
 
 -   Si definisce *albedo* $a_{\lambda,\text{diff}}$ la frazione dell'estinzione dovuta alla diffusione:
     \[
-    b_\lambda(l) = b_0 \exp(-\tau_\lambda) = b_0 \exp\bigl(-\tau_\lambda (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
+    I_\lambda(l) = I_0 \exp(-\tau_\lambda) = I_0 \exp\bigl(-\tau_\lambda (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
     \]
     con
     \[
@@ -155,7 +162,7 @@ Nelle **nebulose a riflessione** («reflection nebulae») si ha $a_{\lambda,\tex
 
 # Estinzione e magnitudine
 
--   Se il flusso misurato è inferiore a causa dell'estinzione, vuol dire che la magnitudine **aumenta**:
+-   Passando da $I$ al flusso $b$ ($[b] = \text{W/m$^2$}$), se quello misurato è inferiore a causa dell'estinzione, vuol dire che la magnitudine **aumenta**:
     \[
     A_\lambda \equiv m'_\lambda - m_\lambda = 2.5\log_{10} \frac{b_0}{b_\lambda(l)} = 1.0857\,\tau_\lambda(l)
     \]
@@ -184,7 +191,7 @@ Nelle **nebulose a riflessione** («reflection nebulae») si ha $a_{\lambda,\tex
 
 # Estinzione in funzione di $\lambda$
 
-La nostra scrittura $A_\lambda$ indica che l'estinzione dipende dalla lunghezza d'onda!
+La scrittura $A_\lambda$ suggerisce che l'estinzione dipenda dalla lunghezza d'onda!
 
 <center>![](images/barnard68-wavelengths.jpg){height=500px}</center>
 
@@ -226,7 +233,7 @@ m_B - m_V = (M_B - M_V) + (A_B - A_V).
 
 -   Il valore $A_B - A_V$ si può quindi ricavare facilmente, ed è chiamato **eccesso di colore**, o **arrossamento** («reddening», vedi Draine, *Physics of the interstellar and galactic medium*, pag. 238).
 
--   Di solito si scrive $E(B - V)$ anziché $A_B - A_V$.
+-   Di solito si scrive $E(B - V)$ anziché $A_B - A_V$ ($E$ sta per *Excess*).
 
 # Eccesso di colore e $A_\lambda$
 
@@ -238,13 +245,13 @@ m_B - m_V = (M_B - M_V) + (A_B - A_V).
     R \equiv \frac{A_V}{E(B - V)} \approx 3.1
     \]
     
-    ($R$ è definito proprio con $B$ e $V$, mentre prima li usavamo solo come esempio).
+    ($R$ è solitamente definito in termini di $B$ e $V$, quindi il nostro esempio calzava!).
 
 # Valori di $R$
 
--   Dal fatto che $R$ è più o meno noto, si può usare la conoscenza dell'arrossamento per stimare $A_V$ (e quindi anche la distanza $d$!)
+-   Dal fatto che il valore di $R$ è abbastanza noto, si può usare la conoscenza dell'arrossamento $E(B - V)$ per stimare $A_V$ (e quindi anche la distanza $d$!)
     
--   Il valore esatto è sempre dell'ordine di qualche unità, però dipende dall'ambiente (es., le due Nubi di Magellano hanno $R$ diverso dalla Via Lattea)
+-   Il valore di $R$ è sempre dell'ordine di qualche unità, ma dipende dall'ambiente (es., le due Nubi di Magellano hanno $R$ diverso dalla Via Lattea)
 
 -   Anche nella Via Lattea il valore di $R$ varia a seconda della direzione.
 
@@ -262,11 +269,11 @@ m_B - m_V = (M_B - M_V) + (A_B - A_V).
 
 -   Il valore $\tau_\lambda$ («coefficiente di estinzione) è uguale a
     \[
-    \tau = \sigma N_\text{col},
+    \tau_\lambda = \sigma_\lambda N_\text{col},
     \]
-    dove $N_\text{col} = n\,l$ con $n$ densità numerica “media” dell'ISM, $l$ lo spessore, e $\sigma$ la sezione d'urto totale (assorbimento e diffusione).
+    dove $N_\text{col}$ è la densità colonnare dell'ISM tra noi e l'oggetto osservato, $l$ lo spessore, e $\sigma_\lambda$ la sezione d'urto totale (assorbimento e diffusione) alla lunghezza d'onda $\lambda$.
 
--   Il valore di $\sigma$ è legato alla fisica microscopica dell'ISM.
+-   Il valore di $\sigma_\lambda$ è legato alla fisica microscopica dell'ISM.
 
 
 # Fisica dell'estinzione
