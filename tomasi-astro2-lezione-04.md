@@ -32,6 +32,27 @@ La forma più probabile dei grani è un ellissoide: in questo modo gli elettroni
 
 La polarizzazione si osserva soprattutto nel visibile, mentre è assente nell'UV (ottica geometrica!)
 
+
+# Forma dei grani di polvere
+
+I grani di polvere (a) possono collidere tra loro e aggregarsi in strutture più complesse (b).
+
+<center>![](images/interstellar_dust.png)</center>
+
+
+# Forma dei grani di polvere
+
+Particelle di polvere interplanetaria possono essere catturate da
+[aerei che volano nell'alta atmosfera](https://en.wikipedia.org/wiki/Lockheed_U-2).
+
+<table>
+  <tr>
+    <td>![](images/idp.jpg){height=400px}</td>
+    <td>![](images/u2_aircraft.jpg){height=400px}</td>
+  </tr>
+</table>
+
+
 # Osservazioni sulla polarizzazione
 
 -   Livello medio di polarizzazione: $1\,\%\div2\,\%$;
@@ -154,23 +175,6 @@ Se la polvere ha raggiunto la temperatura $T_g$ di equilibrio, la potenza emessa
     #.  30 µm (IR) se $T = 100\,\text{K}$;
     #.  0.3 mm (sub-mm) se $T = 10\,\text{K}$.
 
-# Struttura dei grani di polvere
-
-I grani di polvere (a) possono collidere tra loro e aggregarsi in strutture più complesse (b).
-
-<center>![](images/interstellar_dust.png)</center>
-
-# Struttura dei grani di polvere
-
-Particelle di polvere interplanetaria possono essere catturate da
-[aerei che volano nell'alta atmosfera](https://en.wikipedia.org/wiki/Lockheed_U-2).
-
-<table>
-  <tr>
-    <td>![](images/idp.jpg){height=400px}</td>
-    <td>![](images/u2_aircraft.jpg){height=400px}</td>
-  </tr>
-</table>
 
 # Polvere interstellare
 
