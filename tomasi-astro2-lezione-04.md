@@ -142,7 +142,7 @@ Se la polvere ha raggiunto la temperatura $T_g$ di equilibrio, la potenza emessa
 
 # Temperatura dei grani
 
--   Nelle regioni che mostrano formazione stellare, $d/R \sim 10^3\div 10^4$, e quindi $T_g \sim 10^{-2} T_*$.
+-   Nelle regioni di formazione stellare, le distanze tra nube e stella sono dell'ordine di qualche AU ($\sim 10^{11}\,\text{m}$), così $d/R \sim 10^3\div 10^4$ e quindi $T_g \sim 10^{-2} T_*$.
 
 -   Se $T_* = 10\,000\,\text{K}$, allora
     \[
