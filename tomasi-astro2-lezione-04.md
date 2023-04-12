@@ -330,7 +330,7 @@ La soluzione si può scrivere in questa forma:
 \begin{aligned}
   \nu = \frac{\sqrt{\left<\omega^2\right>}}{2\pi} =
   &32\,\text{GHz}\times\left(\frac{T}{100\,\text{K}}\right)^{1/2}\times \\
-  &\times\left(\frac{2\,\text{g/cm}^2}\rho\right)^{1/2}\times\left(\frac{5\,\text{\AA}}a\right)^{5/2}.
+  &\times\left(\frac{2\,\text{g/cm}^3}\rho\right)^{1/2}\times\left(\frac{5\,\text{\AA}}a\right)^{5/2}.
 \end{aligned}
 \]
 
