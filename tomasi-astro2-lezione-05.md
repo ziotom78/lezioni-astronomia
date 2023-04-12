@@ -19,7 +19,7 @@ assorbimento (nell'ottico) dalle strane proprietà:
 
 # Gas interstellare (ISG)
 
--   Non si osserva H insterstellare nel visibile: se $T$ è bassa, non ci sono righe di Balmer!
+-   Non si osserva H insterstellare nel visibile: se $T$ è bassa, le righe di Balmer sono troppo deboli!
 
 -   Gli elementi osservati sono Ca e Na, ma anche molecole: CH, CN, CH⁺. Queste ultime implicano una bassa densità del gas ($n < 10^3\,\text{cm}^{-3}$) e una bassa temperatura:
 
@@ -82,7 +82,7 @@ S = 0,\quad S_z = 0 \qquad\text{(singoletto)}.
 
 ---
 
--   Se il gas è in equilibrio termico, vale la distribuzione di Maxwell tra i due stati:
+-   Assumiamo che il gas sia in equilibrio termico e che valga la teoria cinetica dei gas (ignoriamo quindi la CMB e il fatto che HI non sia puntiforme!). Si ha allora la distribuzione di Maxwell:
     \[
     \frac{N_\text{tr}}{N_\text{sing}} = \frac{g_\text{tr}}{g_\text{sing}}
     e^{-\Delta E/k_B T} = 3 e^{-\Delta E/k_B T}.
@@ -173,22 +173,22 @@ distanza dalla Terra era di 80 AU.
 
 ::: notes
 
-In alto a destra c'è la transizione iperfine dell'idrogeno. La
-piccola lineetta verticale sotto la transizione indica la cifra 1
-in binario. A destra della donna, tra le due parentesi che
-indicano l'altezza, c'è la cifra 8 in binario. L'altezza media
-della donna è $8 \times 21\,\mathrm{cm} = 168\,\mathrm{cm}$. I 15
-raggi che partono dal Sole sono 15 pulsar. I numeri binari
-indicano il periodo (in unità della frequenza della riga a
-21 cm): dato che questi periodi cambiano col tempo, questo
-permette di dedurre l'epoca del lancio. La lunghezza delle righe
-indica la distanza relativa. Ne sono state scelte 15 anziché 3
-(sufficienti per triangolare) perché dove arriverà la placca
-potrebbero non essere visibili tutte.}
+In alto a sinistra c'è la transizione iperfine dell'idrogeno. La
+piccola lineetta verticale sotto la transizione indica la cifra 1 in
+binario. A destra della donna, tra le due parentesi che indicano
+l'altezza, c'è la cifra 8 in binario. L'altezza media della donna è
+8×21 cm = 168 cm.. I 15 raggi che partono dal Sole sono 15 pulsar. I
+numeri binari indicano il periodo (in unità della frequenza della riga
+a 21 cm): dato che questi periodi cambiano col tempo, questo permette
+di dedurre l'epoca del lancio. La lunghezza delle righe indica la
+distanza relativa. Ne sono state scelte 15 anziché 3 (sufficienti per
+triangolare) perché dove arriverà la placca potrebbero non essere
+visibili tutte. Le tacche sotto i pianeti indicano la loro distanza
+relativa dal Sole, in unità di 1/10 della distanza Mercurio–Sole.
 
 :::
 
-# Caratteristiche di HI nel ISM
+# HI nell'ISM
 
 | Quantità              | Stima                                                      |
 |-----------------------|------------------------------------------------------------|
@@ -198,7 +198,7 @@ potrebbero non essere visibili tutte.}
 | Densità HI (Galassia) | 0.1 cm⁻³                                                   |
 | Velocità              | $v_\text{rms} \sim \sqrt{k_B T/m_p} \sim 10^3\,\text{m/s}$ |
 
-Il profilo della riga rivela ali molto allargate e deboli: sono piccole quantità di gas molto caldo ($10^4$\,K) e rarefatto che si insinua tra le regioni di HI nel ISM.
+Il profilo della riga rivela ali molto allargate e deboli: sono piccole quantità di gas molto caldo (10⁴ K) e rarefatto che si insinua tra le regioni di HI nel ISM.
 
 
 # Gas e polveri
@@ -225,9 +225,9 @@ La correlazione cessa per alti valori di $A_V$. Perché?
 
 # Gas e polveri
 
--   Se si ha dipolo permanente, vale la regola di selezione $\Delta J = -1$. Una transizione tra livelli energetici rotazionali del CO quindi genera righe ($\nu > 115\,$GHz).
+-   Se si ha dipolo permanente, vale la regola di selezione ΔJ = −1. Una transizione tra livelli energetici rotazionali del CO quindi genera righe (ν > 115 GHz).
 
--   **Ma ciò non vale per H₂**, che ha solo un debole quadrupolo con regola di selezione $\Delta J = -2$.
+-   **Ma ciò non vale per H₂**, che ha solo un debole quadrupolo con regola di selezione ΔJ = −2.
 
 -   Questo genera una debole emissione intorno a 10 µm, coperta però dalle polveri.
 
@@ -254,14 +254,14 @@ Si può mostrare brevemente la forma di un quadrupolo, e spiegare perché la dis
     \[
     \begin{aligned}
       \text{H} + e^- &\rightarrow \text{H}^- + h\nu, \\
-      \text{H}^- + H &\rightarrow \text{H}_2 + e^- + \text{energia cinetica}
+      \text{H}^- + \text{H} &\rightarrow \text{H}_2 + e^- + \text{energia cinetica}
     \end{aligned}
     \]
 
 -   Ma è difficile avere H⁻ in una nube: è lento da formare e veloce da distruggere (per urti con protoni, fotoni o altri ioni positivi).
 
 
-# Polvere e formazione di molecole
+# Polvere e molecole H₂
 
 -   La polvere può fungere da catalizzatore. I nuclei vengono catturati da grani e, dopo un random-walk, si collocano in siti da dove non si spostano più.
 
@@ -307,7 +307,7 @@ VY Canis Majoris (stella gigante, $R \sim 2000\,R_\odot$) vista da Herschel
 
 # Formazione stellare
 
-Determiniamo in quali condizioni una nube di gas possa indurre la formazione di una stella.
+In quali condizioni una nube di gas induce la formazione di una stella?
 
 Supponiamo che la nube sia di forma sferica e abbia densità omogenea. In essa sono compresenti gas e polveri. Perché ci sia collasso occorre che il sistema si «de-virializzi»:
 \[
@@ -354,7 +354,7 @@ R > \sqrt{\frac{15 k_B T}{4\pi G m \rho}} \equiv R_J'.
 -   Nel punto di vista di **Eulero** (il più comodo) ci concentriamo sui punti dello spazio.
 
 
-# Dall'equazione di Newton alla conservazione del momento
+# L'equazione di Newton
 
 Siccome sappiamo descrivere il moto delle particelle usando la
 fisica di Newton, partiamo dal punto di vista Lagrangiano:
@@ -397,7 +397,7 @@ dove usiamo il fatto che $\partial_t \vec{u}_p(t) = \vec{v}_p(t) =
     \dot{\vec{v}}_p = \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v}
     \]
     
--   Essa) dice che la variazione della velocità di una particella del fluido può essere causata da:
+-   Essa dice che la variazione della velocità di una particella del fluido può essere causata da:
 
     #.  una variazione temporale del campo $\vec{v}$ nel cubetto (termine $\partial_t\vec{v}$);
 
@@ -425,10 +425,10 @@ identiche, allora
   \sum_{i=1}^N \vec{F}_p^{(i)} &= \left(\sum_{i=1}^N m^{(i)}\right) \bigl(\partial_t\vec{v} + 
   (\vec{v} \cdot \vec\nabla) \vec{v}\bigr), \\
   \vec{F}_\text{tot} &= \rho\,\text{d} V \bigl(\partial_t\vec{v} + 
-  (\vec{v} \cdot \vec\nabla) \vec{v}\bigr)
+  (\vec{v} \cdot \vec\nabla) \vec{v}\bigr),
 \end{aligned}
 \]
-con $\text{d}V$ volume del cubetto e $\vec{F}_\text{tot}$ forza totale agente sul cubetto.
+con $\text{d}V$ volume del cubetto e $\vec{F}_\text{tot}$ forza totale agente sul cubetto; notate che tutte le forze interne di azione/reazione si cancellano.
 
 # Termini della forza
 

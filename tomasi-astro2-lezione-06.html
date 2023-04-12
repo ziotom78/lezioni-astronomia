@@ -82,9 +82,10 @@ class="math inline">t</span>. Per un gas ideale monoatomico vale che
 </section>
 <section id="derivazione-di-jeans" class="slide level1">
 <h1>Derivazione di Jeans</h1>
-<p>Il sistema di equazioni è molto complesso da risolvere se non si
-adotta qualche semplificazione.</p>
-<p>Linearizziamo il sistema, sostituendo <span class="math display">
+<ul>
+<li><p>Il sistema di equazioni è molto complesso da risolvere se non si
+adotta qualche semplificazione.</p></li>
+<li><p>Linearizziamo il sistema, sostituendo <span class="math display">
 \begin{aligned}
   \rho(\vec{r}, t) &amp;= \rho_0 + \rho_1(\vec{r}, t), \\
   p(\vec{r}, t) &amp;= p_0 + p_1(\vec{r}, t), \\
@@ -97,17 +98,19 @@ class="math inline">p_0</span>, <span
 class="math inline">\vec{v}_0</span> e <span
 class="math inline">\phi_0</span> sono costanti, e vale che <span
 class="math inline">\rho_0 \gg \rho_1</span>, <span
-class="math inline">p_0 \gg p_1</span>, etc.</p>
+class="math inline">p_0 \gg p_1</span>, etc.</p></li>
+</ul>
 </section>
 <section id="derivazione-di-jeans-1" class="slide level1">
 <h1>Derivazione di Jeans</h1>
-<p>Supponendo che una porzione di plasma abbia questa densità:</p>
+<ul>
+<li><p>Supponiamo che una porzione di plasma abbia questa densità:</p>
 <center>
-<img data-src="images/plasma_fractal.jpg" height="280" />
-</center>
-<p>Stiamo imponendo che le variazioni di densità <span
-class="math inline">\rho_1</span> siano piccole rispetto alla densità
-media <span class="math inline">\rho_0</span>.</p>
+<p><img data-src="images/plasma_fractal.jpg" height="280" /></p>
+</center></li>
+<li><p>Stiamo imponendo che le variazioni di densità ρ₁ siano piccole
+rispetto alla densità media ρ₀.</p></li>
+</ul>
 </section>
 <section id="derivazione-di-jeans-2" class="slide level1">
 <h1>Derivazione di Jeans</h1>
@@ -116,10 +119,10 @@ es. il termine <span class="math inline">-\vec{\nabla} p/\rho</span>
 diventa <span class="math display">
 \begin{aligned}
   -\frac1\rho\vec{\nabla} p &amp;= -\frac{\vec{\nabla}p_1}{\rho_0 +
-    \rho_1} = -\frac{\vec{\nabla}p_1}{\rho_0} \left(1 -
+    \rho_1} \approx -\frac{\vec{\nabla}p_1}{\rho_0} \left(1 -
     \frac{\rho_1}{\rho_0}\right) = \\
   &amp;= -\frac{\vec{\nabla}p_1}{\rho_0}
-  + \frac{\rho_1}{\rho_0^2}\vec{\nabla} p_1 =
+  + \frac{\rho_1}{\rho_0^2}\vec{\nabla} p_1 \approx
 -\frac{\vec{\nabla}p_1}{\rho_0}.
 \end{aligned}
 </span> I restanti termini sono più semplici.</p>
@@ -275,115 +278,135 @@ nube.</p>
 </section>
 <section id="massa-di-jeans-2" class="slide level1">
 <h1>Massa di Jeans</h1>
-<p>Quando nubi molto massive iniziano a collassare, i parametri fisici
-cambiano e anche <span class="math inline">M_J</span>. Può essere che
-alcune regioni della nube perdano stabilità ed inizino a loro volta a
-collassare. Si ha una <strong>frammentazione</strong> della nube, con
-formazione di più stelle.</p>
-<p>Questo è il probabile meccanismo di formazione degli ammassi
-aperti.</p>
+<ul>
+<li><p>Quando nubi molto massive iniziano a collassare, i parametri
+fisici cambiano e anche <span class="math inline">M_J</span>.</p></li>
+<li><p>In certi casi può avvenire che alcune regioni della nube perdano
+stabilità ed inizino a loro volta a collassare. Si ha una
+<strong>frammentazione</strong> della nube, con formazione di più
+stelle.</p></li>
+<li><p>Questo è il probabile meccanismo di formazione degli ammassi
+aperti.</p></li>
+</ul>
 </section>
 <section id="rotazione-della-nube" class="slide level1">
 <h1>Rotazione della nube</h1>
-<p>In generale, la nube in collasso sarà dotata anche di momento
-angolare, che noi abbiamo trascurato.</p>
-<p>Se il momento angolare si conserva durante la contrazione, allora:
-<span class="math display">
+<ul>
+<li><p>In generale, la nube in collasso sarà dotata anche di momento
+angolare, che noi abbiamo trascurato.</p></li>
+<li><p>Se il momento angolare si conserva durante la contrazione,
+allora: <span class="math display">
 \frac25 M R^2 \omega = \frac25 M R_0^2 \omega_0,
 </span> (il momento d’inerzia è <span class="math inline">I=\frac25 M
 R^2</span> per una sfera piena) da cui <span class="math display">
 \omega = \omega_0 \left(\frac{R_0}R\right)^2.
-</span></p>
+</span></p></li>
+</ul>
 </section>
 <section id="rotazione-della-nube-1" class="slide level1">
 <h1>Rotazione della nube</h1>
-<p>All’equatore l’accelerazione è <span class="math display">
+<ul>
+<li><p>All’equatore l’accelerazione è <span class="math display">
 a(R) = G\frac{M(R)}{R^2} - \omega^2 R = G\frac{M(R)}{R^2} -
 \omega_0^2 \left(\frac{R_0}R\right)^4 R.
-</span> Quando la rotazione è sufficiente per fermare il collasso? Deve
-valere <span class="math inline">a(R) = 0</span>, ossia <span
-class="math display">
+</span></p></li>
+<li><p>La rotazione fermerà il collasso quando <span
+class="math inline">a(R) = 0</span>, ossia <span class="math display">
 G M(R) = (\omega_0 R_0)^2 \frac{R_0^2}R,
-</span> da cui ricaviamo che il collasso si arresta quando <span
-class="math inline">\frac{R}{R_0} = \frac{(\omega_0 R_0)^2 R_0}{G
-M(R)}</span>.</p>
+</span> il che avviene quando <span class="math inline">\frac{R}{R_0} =
+\frac{(\omega_0 R_0)^2 R_0}{G M(R)}</span>.</p></li>
+</ul>
 </section>
 <section id="rotazione-della-nube-2" class="slide level1">
 <h1>Rotazione della nube</h1>
-<p>Per valori tipici di <span class="math inline">\omega_0 R_0 =
+<ul>
+<li><p>Per valori tipici di <span class="math inline">\omega_0 R_0 =
 1\,\text{km/s} = 10^5\,\text{cm/s}</span> e di <span
 class="math inline">M_J</span> e <span class="math inline">R_J</span>
 vale che <span class="math display">
 \frac{R}{R_0} \approx 0.6.
-</span> Quindi quando il raggio si è ridotto della metà, la rotazione
+</span></p></li>
+<li><p>Quindi quando il raggio si è ridotto della metà, la rotazione
 frena il collasso nella direzione <span class="math inline">\perp</span>
-all’asse di rotazione.</p>
-<p>Nella direzione parallela all’asse, il collasso può proseguire
+all’asse di rotazione.</p></li>
+<li><p>Nella direzione parallela all’asse, il collasso può proseguire
 indisturbato. La nube si appiattisce e forma un disco, dove molta della
-massa non raggiunge il centro e non forma la stella.</p>
+massa non raggiunge il centro e non forma la stella.</p></li>
+</ul>
 </section>
-<section id="luoghi-di-formazione-stellare" class="slide level1">
-<h1>Luoghi di formazione stellare</h1>
-<p>Stimiamo il raggio di Jeans (<span class="math inline">R_J \propto
-\sqrt{T/\rho}</span>) in due casi distinti:</p>
+<section id="dove-nascono-le-stelle" class="slide level1">
+<h1>Dove nascono le stelle?</h1>
+<ul>
+<li><p>Stimiamo il raggio di Jeans (<span class="math inline">R_J
+\propto \sqrt{T/\rho}</span>) in due casi distinti:</p>
 <ol>
 <li>Nube molecolare H<span class="math inline">_2</span>: <span
 class="math inline">T \sim 10\,\text{K}</span>, <span
 class="math inline">n \sim 10^3\,\text{cm}^{-3}</span>.</li>
 <li>Nube di HI: <span class="math inline">T \sim 100\,\text{K}</span>,
 <span class="math inline">n \sim 1\,\text{cm}^{-3}</span>.</li>
-</ol>
-<p>Si ha che <span class="math display">
+</ol></li>
+<li><p>Si ha che <span class="math display">
 \frac{R_\text{J, HI}}{R_\text{J, H$_2$}} \sim
 2\sqrt{\frac{100\,\text{K}}{10\,\text{K}}\,\frac{10^3\,\text{cm}^{-3}}{1\,\text{cm}^{-3}}}
 = 200.
-</span> È quindi più facile formare stelle in nubi molecolari.</p>
+</span></p></li>
+<li><p>È quindi più facile formare stelle in <strong>nubi
+molecolari</strong>.</p></li>
+</ul>
 </section>
-<section id="meccanismi-di-formazione-stellare" class="slide level1">
-<h1>Meccanismi di formazione stellare</h1>
-<p>Il collasso rilascia energia gravitazionale che può:</p>
+<section id="formazione-stellare" class="slide level1">
+<h1>Formazione stellare</h1>
+<ul>
+<li><p>Il collasso rilascia energia gravitazionale che può:</p>
 <ol>
 <li>aumentare l’energia interna, modificando la pressione;</li>
 <li>essere irradiata all’esterno se il tempo di raffreddamento è minore
 di <span class="math inline">\tau_\text{ff}</span>.</li>
-</ol>
-<p>Nel secondo caso la contrazione è isotermica. (Questa era l’ipotesi
-di Jeans, da cui nel caso di piccole oscillazioni deriva la relazione
-<span class="math inline">p = \rho c_s^2</span> che abbiamo usato la
-scorsa lezione).</p>
+</ol></li>
+<li><p>Nel secondo caso la contrazione è isotermica. (Questa era
+l’ipotesi di Jeans, da cui nel caso di piccole oscillazioni deriva la
+relazione <span class="math inline">p = \rho c_s^2</span> che abbiamo
+usato la scorsa lezione).</p></li>
+</ul>
 </section>
-<section id="meccanismi-di-formazione-stellare-1" class="slide level1">
-<h1>Meccanismi di formazione stellare</h1>
-<p>Ma all’aumento di <span class="math inline">\rho</span> corrisponde
-un aumento dello spessore ottico della nube, e a un certo momento il
-collasso cessa di essere isotermico, diventando adiabatico: <span
-class="math display">
+<section id="formazione-stellare-1" class="slide level1">
+<h1>Formazione stellare</h1>
+<ul>
+<li><p>Ma all’aumento di <span class="math inline">\rho</span>
+corrisponde un aumento dello spessore ottico della nube, e a un certo
+momento il collasso cessa di essere isotermico, diventando adiabatico:
+<span class="math display">
 T V^{\gamma - 1} = \text{costante} \quad\Rightarrow\quad T \propto
 \frac1{V^{\gamma - 1}} \propto \rho^{\gamma - 1}.
-</span> Di conseguenza <span class="math display">
+</span></p></li>
+<li><p>Di conseguenza, <span class="math display">
 M_J \propto \sqrt{\frac{T^3}\rho} \propto \sqrt{\rho^{3\gamma - 4}}.
-</span></p>
+</span></p></li>
+</ul>
 </section>
-<section id="meccanismi-di-formazione-stellare-2" class="slide level1">
-<h1>Meccanismi di formazione stellare</h1>
+<section id="formazione-stellare-2" class="slide level1">
+<h1>Formazione stellare</h1>
 <p><span class="math display">
 M_J \propto \sqrt{\rho^{3\gamma - 4}}.
-</span> Se <span class="math inline">\gamma &gt; 4/3</span> (es. gas
-ideale), <span class="math inline">M_J</span> aumenta all’aumentare
-della densità, e quindi il collasso potrebbe interrompersi prima che si
-siano innescate le reazioni nucleari all’interno della stella.</p>
-<p>Quando ciò avviene, la massa di Jeans per una nube di <span
-class="math inline">10^2\,\text{K}</span> è circa 0.2,<span
-class="math inline">M_\odot</span>: quindi il processo permette di
-formare <strong>una serie di masse dell’ordine di quella
-solare</strong>, ma non molto inferiori.</p>
+</span></p>
+<ul>
+<li><p>Se γ &gt; 4/3 (es. gas ideale), <span
+class="math inline">M_J</span> aumenta all’aumentare della densità, e
+quindi il collasso potrebbe interrompersi prima che si siano innescate
+le reazioni nucleari all’interno della stella.</p></li>
+<li><p>Quando ciò avviene, la massa di Jeans per una nube di 10² K è
+circa 0.2 <span class="math inline">M_\odot</span>: quindi il processo
+permette di formare <strong>una serie di masse dell’ordine di quella
+solare</strong>, ma non molto inferiori.</p></li>
+</ul>
 </section>
 <section id="fotoionizzazione" class="slide level1">
 <h1>Fotoionizzazione</h1>
 <ul>
 <li><p>Se nel regime adiabatico l’energia non viene rilasciata
 all’esterno della nube, dove va a finire?</p></li>
-<li><p>L’energia è in parte usata per aumentare la temperatura <span
+<li><p>In parte è usata per aumentare la temperatura <span
 class="math inline">T</span>, in parte per fotoionizzare le specie
 neutre (H, He, H₂).</p></li>
 <li><p>Questo determina il percorso della protostella sul diagramma
@@ -399,7 +422,7 @@ height="500" />
 <p>Modello numerico del collasso da una nube a una protostella <span
 class="math inline">M \sim 1\,M_\odot</span>.</p>
 </section>
-<section id="luoghi-di-formazione-stellare-1" class="slide level1">
+<section id="luoghi-di-formazione-stellare" class="slide level1">
 <h1>Luoghi di formazione stellare</h1>
 <p>Come già anticipato in precedenza, per individuare regioni H₂ si può
 usare CO come tracciante:</p>
@@ -446,17 +469,17 @@ dall’agitazione termica).</p>
 </section>
 <section id="cold-cores" class="slide level1">
 <h1>Cold cores</h1>
-<p>Abbiamo visto che la temperatura della polvere è dell’ordine di <span
-class="math inline">100\,\text{K}</span> se abbastanza vicina a una
-stella giovane.</p>
-<p>Nelle nubi di <strong>gas</strong> la schermatura delle regioni
+<ul>
+<li><p>Abbiamo visto che la temperatura della polvere è dell’ordine di
+100 K se abbastanza vicina a una stella giovane.</p></li>
+<li><p>Nelle nubi di <strong>gas</strong> la schermatura delle regioni
 esterne può permettere l’esistenza di regioni interne più fredde. Si
-raggiungono temperature di <span class="math inline">\sim
-10\,\text{K}</span>, con densità <span class="math inline">n \sim
-10^{4\div5}\,\text{cm}^{-3}</span>.</p>
-<p>Anche queste regioni sono probabilmente <strong>luoghi di formazione
-stellare</strong> (ricordare che <span class="math inline">M_J \propto
-T^{3/2}</span>).</p>
+raggiungono temperature di ~10 K, con densità <span
+class="math inline">n \sim 10^{4\div5}\,\text{cm}^{-3}</span>.</p></li>
+<li><p>Anche queste regioni sono probabilmente <strong>luoghi di
+formazione stellare</strong> (ricordare che <span
+class="math inline">M_J \propto T^{3/2}</span>).</p></li>
+</ul>
 </section>
 <section id="cold-cores-1" class="slide level1">
 <h1>Cold cores</h1>
@@ -581,7 +604,7 @@ ionizzazione la sezione d’urto è <span class="math display">
 fotone è <span class="math display">
 \lambda \sim \frac1{n_H\,\sigma} \sim 10^{14}\,\text{cm} = 6\,\text{AU},
 </span> da confrontarsi con le dimensioni delle regioni HII (da 0.1 a
-100,pc).</p></li>
+100 pc).</p></li>
 </ul>
 </section>
 <section id="raggio-di-strömgren-2" class="slide level1">
