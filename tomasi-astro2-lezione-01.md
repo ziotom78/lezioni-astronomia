@@ -236,6 +236,7 @@ implica che
 
 -   In un sistema virializzato dominato dalla gravità, l'energia potenziale è *doppia* (in modulo) rispetto all'energia cinetica.
 
+-   (In realtà la relazione $U \propto r^{-1}$ vale solo lontano dal centro, dove invece $U \propto M(r) / r \propto r^2$ e il moto è come quello di una molla).
 
 # Livello di energia potenziale
 
