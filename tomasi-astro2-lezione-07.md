@@ -6,6 +6,7 @@ css:
 - ./css/custom.css
 ...
 
+
 # Coordinate Galattiche
 
 # Il centro galattico
@@ -57,307 +58,6 @@ Lattea possieda strutture simili.
 (Spitzer, 2008)
   
 
-# Rotazione della Via Lattea
-
-
-# Curva di rotazione galattica
-
-In un sistema Kepleriano (es.\ Sistema Solare) il periodo orbitale
-$T$ è legato al raggio dell'orbita $R$ dalla Terza legge:
-\[
-T \approx \frac{2\pi}{\sqrt{G M_\odot}}\,R^{3/2}
-\]
-(in un corpo rigido, $T$ non dipende da $R$). Siccome $v = 2\pi
-R/T$, allora
-\[
-v \propto \frac1{\sqrt{R}}.
-\]
-E nel caso della Via Lattea?
-
-\note{Nella prima equazione usiamo la massa del Sole perché stiamo
-  studiando proprio il caso del Sistema Solare.}
-  
-
-# Curva di rotazione galattica
-
--   In una Galassia la materia non è concentrata in un punto, ma è distribuita in una sfera di densità non uniforme.
-
--   Siccome lo studio del potenziale di una sfera non uniforme richiede di solito metodi numerici, limitiamoci al caso in cui assumiamo $\rho$ uniforme: a posteriori si vede che il risultato è qualitativamente corretto.
-  
-
-# Curva di rotazione galattica
-
--   Per una particella di massa $m$ in orbita con raggio $R$ vale che
-    \[
-    G \frac{M(R)\,m}{R^2} = \frac{m v^2(R)}{R} \quad \Rightarrow \quad M(R) = \frac{v^2(R)\,R}G.
-    \]
-    Se possiamo misurare $v(R)$, deduciamo $M(R)$.
-
--   Se la massa è tutta al centro, $M(R)$ non dipende da $R$ e si ottiene la terza legge di Keplero. (Dimostratelo! Basta imporre $M(R) = M$ e $v(R) =
-  2\pi R/T$, poi si risolve per $T$).
-
-
-# Moto proprio del Sole
-
--   La velocità del Sole ha due componenti:
-
-    #.  Una parte è dovuta alla rotazione Galattica;
-    #.  Una parte è dovuta all'interazione gravitazionale con gli oggetti ad esso vicini.
-
--   Definiamo il *local standard of rest* (LSR) come il sistema di riferimento centrato nel Sole che si muove per effetto della sola rotazione Galattica.
-
--   Rispetto al LSR, il Sole si muove con $v = 20\,\text{km/s}$ nella direzione
-    \[
-    \ell = 56^\circ, \quad b = 23^\circ.
-    \]
-  
-
-# Velocità radiale
-
-<center>![](images/galactic_radial_velocity.png){height=480px}</center>
-
-::: notes
-
-Il disegno mostra la misura dello spostamento Doppler per due stelle, indicate con **1** e **2**. Il colore rosso è riferito al Sole, il colore verde a ciascuna delle due stelle.
-
-:::
-
-# Velocità radiale
-
-<center>![](images/galactic_differential_rotation.png){height=480px}</center>
-
-
-# Velocità radiale
-
-<center>![](images/galactic_velocity_determination.png){height=240px}</center>
-
-Vale che
-\[
-\begin{aligned}
-  v_r &= {\color{#008000} v(R)} \cos(90^\circ -
-  {\color{#008000} \theta}) - {\color{#6A5ACD} v_0}
-  \cos(90^\circ -
-  {\color{#6A5ACD} \ell}) \\
-  &= {\color{#008000} v(R)} \sin{\color{#008000} \theta} -
-  {\color{#6A5ACD} v_0} \sin{\color{#6A5ACD} \ell}.
-\end{aligned}
-\]
-
-# Velocità radiale
-
-<center>![](images/galactic_velocity_determination.png){height=240px}</center>
-
-Dalla legge dei seni:
-\[
-\frac{\sin(180^\circ - {\color{#008000}
-    \theta})}{\color{#6A5ACD} R_0} =
-\frac{\sin{\color{#6A5ACD} \ell}}{\color{#008000} R}
-\quad\Rightarrow\quad \frac{\sin{\color{#008000}
-    \theta}}{\color{#6A5ACD} R_0} =
-\frac{\sin{\color{#6A5ACD} \ell}}{\color{#008000} R}.
-\]
-
-# Velocità radiale
-
-<center>![](images/galactic_velocity_determination.png){height=240px}</center>
-
-Il risultato finale è
-\[
-\begin{aligned}
-  v_r &= \left( {\color{#008000} v(R)} \frac{\color{#6A5ACD}
-    R_0}{\color{#008000} R} - {\color{#6A5ACD} v_0}\right)
-  \sin{\color{#6A5ACD}\ell} \\
-  &= \bigl( {\color{#008000} \omega(R)} - {\color{#6A5ACD} \omega_0}\bigr) {\color{#6A5ACD} R_0}
-  \sin{\color{#6A5ACD}\ell}.
-\end{aligned}
-\]
-
-# Velocità radiale
-
-<center>![](images/galactic_velocity_determination.png){height=240px}</center>
-
-La rotazione della Galassia produce anche un moto trasversale
-che induce un moto proprio delle stelle. Si può vedere come
-esercizio che
-\[
-v_T = \bigl({\color{#008000} \omega(R)} - {\color{#6A5ACD}
-  \omega_0}\bigr) {\color{#6A5ACD}
-  R_0}\cos{\color{#6A5ACD}\ell} - {\color{#008000}
-  \omega(R)}\,{\color{#1E90FF} d}.
-\]
-
-
-# Quadranti galattici
-
-<center>![](images/galactic_quadrants.png)</center>
-  
-
-# Moto di rivoluzione del Sole
-
-La convenzione scelta dall'International Astronomical Union
-(IAU) per $R_0$ e $v_0$ è
-\[
-R_0 = 8.5\,\text{kpc}, \quad v_0 = 220\,\text{km/s}.
-\]
-
-Ciò significa che il periodo dell'orbita solare è
-\[
-T = \frac{2\pi R_0}{v_0} = 2.4 \times 10^8\,\text{yr} \approx
-\frac1{20}\,T_\odot \approx \frac1{40}\,T_{\text{MW}},
-\]
-e che la massa entro un raggio $R_0$ è
-\[
-M_0 = \frac{v_0^2 R_0}G = 10^{11}\,M_\odot.
-\]
-
-
-# Curva di rotazione
-
--   È necessario studiare l'emissione di righe per misurare $v_r$. Una buona riga è l'emissione a 21 cm di H.
-
--   Sono necessarie due assunzioni:
-
-    #.  Supponiamo che le orbite siano circolari;
-    #.  Supponiamo che H sia presente in tutta la Galassia (soprattutto in prossimità del *subcentral point*!).
-
-
-# Curva di rotazione
-
-Se le ipotesi sono verificate, si segue questo metodo:
-
-#.  Fissata $\ell$, si stima il massimo spostamento Doppler misurato in quella direzione;
-#.  Si assegna quello spostamento Doppler a materiale nel *subcentral point*, così che $R = R_{\text{min}} = R_0\,\cos(90^\circ - \ell) = R_0\,\sin\ell$;
-#.  Se $v_\text{max}$ è la massima velocità radiale, allora
-  \[
-  \omega(R_0\sin\ell) = \frac{v_\text{max}}{R_0\sin\ell} + \omega_0.
-  \]
-
-
-# Curva di rotazione
-
--   Il metodo sfrutta la particolarità del *subcentral point* per stabilire il valore di $R$ associato con $v_r$.
-
--   Ci sono alcuni limiti:
-
-    #.  Se non c'è idrogeno nel *subcentral point*, $v_{\text{max}}$ stimato sarà minore di quello vero;
-    #.  Orbite non circolari rendono le ipotesi non vere.
-
-    Alcuni di questi sono superabili ripetendo la misura nel I e IV quadrante.
-
-# Curva di rotazione
-
-Altri problemi:
-
-#.  Se $\ell \approx 0$, lo spostamento Doppler non è misurabile;
-#.  Se $\ell \approx 90^\circ$, allora $\omega(R_0) \approx \omega$
-#.  Il metodo funziona solo quando $R < R_0$ (I e IV quadrante), altrimenti non c'è *subcentral point* e bisogna stimare $v$ e $d$ separatamente, per poi ricavare $R$.
-
----
-
-<center>![](images/chemin-title.png){height=660px}</center>
-
----
-
-<center>![](images/chemin-plots.png){height=660px}</center>
-
----
-
-<center>![](images/chemin-rc.png){height=660px}</center>
-
-
-# Compito per casa
-
-Recuperate l'articolo di Chemin, Renaud \& Soubiran (il preprint è disponibile al sito
-[http://arxiv.org/abs/1504.01507](http://arxiv.org/abs/1504.01507)) e leggetelo.
-
-
-# Curva di rotazione
-
--   Nei quadranti II e III è possibile osservare l'emissione di CO in nubi molecolari per stimare $v_r$.
-
--   Se queste nubi molecolari contengono stelle, si può stimare la distanza $d$ delle stelle con la parallasse spettroscopica. Da $d$ si ricava poi $R$.
-
-
-# Distanze e curva di rotazione
-
-Una volta nota la curva di rotazione è possibile stimare le distanze di oggetti ignoti:
-
-#.  Si misura $\ell$ e $v_r$;
-
-#.  Si usa la formula
-    \[
-    \omega = \frac{v_r}{R_0\,\sin\ell} + \omega_0;
-    \]
-
-#.  Dalla conoscenza della curva $\omega(R)$ si determina $R$.
-
-
-# Distanze e curva di rotazione
-
-Il metodo ha due problemi:
-
--   Non funziona se la velocità orbitale è inferiore a quella casuale indotta dagli oggetti vicini;
--   Se $R < R_0$, per ogni oggetto ci sono *due* distanze possibili (tranne per il *subcentral point*; inoltre questo non è vero se $R > R_0$).
-
-# Curva di rotazione
-
-<center>![](images/clemens-title-page-01.png){height=560px}</center>
-
-# Curva di rotazione
-
-<center>![](images/clemens-rotation-curve-07.png){height=560px}</center>
-
-
-# Curve di rotazione e materia oscura
-
--   La curva dell'immagine precedente resta costante a grandi $R$.
-
--   Questo è in disaccordo con l'ipotesi Kepleriana che $v \propto 1/\sqrt{R}$ (vera se tutta la materia è racchiusa entro un certo raggio $R$).
-
--   Ciò significa che una parte significativa della massa della Via Lattea si trova a grandi distanze del centro.
-
-
-# Caratteristiche della materia oscura
-
--   Da $v(R)$ si deduce che una parte significativa della massa della Via Lattea è nelle regioni esterne. Eppure la luminosità della Via Lattea decresce molto rapidamente per $R > R_0$!
-
--   Ci sono varie evidenze osservative (altre galassie, cluster di galassie, CMB, \ldots) che portano a ipotizzare l'esistenza di *materia oscura non barionica*.
-
--   Questa materia oscura è stata probabilmente decisiva per creare la buca di potenziale in cui si è formata la Via Lattea.
-
-
----
-
-<center>![](images/2016Huang-title-page.png){height=620px}</center>
-
-::: notes
-
-Non fanno una stima della curva di rotazione per $R < 4.5\,\text{kpc}$ proprio a causa dell'articolo di Chemin (che correttamente citano).
-  
-:::
-
----
-
-<center>![](images/2016Huang-rc.png){height=620px}</center>
-
-
-::: notes
-
-Le piccole barre di errore per $r > 8.5\,\text{kpc}$ sono dovute all'uso di Red Clump Giants (RCG), un tipo di stelle (con helium-core burning), recentemente salito alla ribalta come eccellente candela standard (ma il loro uso era stato proposto da Cannon nel 1970!). Gli autori hanno usato un catalogo di 16 000 RCG (cataloghi LAMOST e SDSS-III/APOGEE). Vedi anche la tabella nella slide successiva.
-  
-:::
-
----
-
-<center>![](images/2016Huang-table.png){height=520px}</center>
-
-L'uso di 16 000 Red Clump Giants per determinare le distanze porta a barre di errore confrontabili tra i casi $r < 8.5\,\text{kpc}$ e $r > 8.5\,\text{kpc}$.
-
-::: notes
-
-HKG: halo K giants. Possono anch'esse essere usate come candele standard. Il fatto che le RCG siano state usate solo per $r > 8.5\,\text{kpc}$ è dovuto alle caratteristiche delle due survey che sono state usate dagli autori.
-  
-:::
 
 # Il centro galattico
 
@@ -395,53 +95,286 @@ Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 
 
 # Il buco nero centrale
 
--   L'ipotesi più accreditata che spieghi la dinamica delle stelle in prossimità del centro galattico è che sia presente un buco nero centrale (CBH) supermassivo.
+-   Nel 2022 le osservazioni dell'*Event Horizon Telescope* (EHT) hanno dimostrato che al centro della nostra Galassia si trova un buco nero di $\sim10^6 M_\odot$, Sgr A* (a volte denominato CBH, *Central Black Hole*).
 
--   Le caratteristiche del CBH possono essere dedotte dalla stessa orbita delle stelle in sua prossimità (esse risentono più della presenza di CBH che della rotazione galattica).
+-   L'esistenza dei buchi neri supermassivi è stata osservata prima di essere predetta, contrariamente ai buchi neri stellari. (Ma la prima immagine di un CBH è stata ottenuta solo nel 2019, quando EHT ha pubblicato le osservazioni del CBH della galassia M87, di $\sim10^9 M_\odot$).
+
+-   Le caratteristiche del CBH della nostra Galassia erano però già state dedotte dall'orbita delle stelle vicine a Sgr A*.
+
+# Misurare la massa del CBH
+
+-   Per la terza legge di Keplero, più una stella è vicina a Sgr A*, minore è il suo periodo orbitale $P$:
+
+    \[
+    \frac{P^2}{a^3} = \frac{4\pi}{M G},
+    \]
+    
+    con $a$ semiasse maggiore dell'orbita e $M$ massa di Sgr A*.
+
+-   Basta quindi osservare una stella vicina finché non completa un'orbita attorno a Sgr A*: dalla misura di $P$ e di $a$ si ottiene $M$.
+
+# Misurare la massa del CBH
+
+-   Risolvendo l'equazione della slide precedente per $a$, si ottiene
+
+    \[
+    a = \sqrt[3]{\frac{G M P^2}{4\pi}}.
+    \]
+    
+-   Ipotizzando di poter osservare per ~20 anni i dintorni di Sgr A*, e che $M \approx 10^6 M_\odot$, allora compiranno almeno un periodo completo le stelle tali per cui
+
+    \[
+    a < \sqrt[3]{\frac{6.67\times 10^{-11}\,\frac{\text{m}^3}{\text{kg}\cdot\text{s}^2} \cdot 4\times 10^{36}\,\text{kg} \cdot \bigl(6.3\times 10^8\,\text{s}\bigr)^2}{4\pi}} \approx 2 \times 10^{14}\,\text{m}.
+    \]
+
+# Misurare la massa del CBH
+
+-   Il limite diffrattivo di un telescopio è θ ~ λ/D, dove $\lambda$ è la lunghezza d'onda e $D$ è la dimensione dello specchio.
+
+-   Per risolvere un moto $a = 10^{14}\,\text{m}$ a una distanza $R_0 = 8\,\text{kpc}$ e assumendo λ ~ 2 µm (filtro K), occorre quindi che
+
+    \[
+    \frac{\lambda}D = \frac{a}{R_0} \quad \Rightarrow \quad D = \frac{R_0\,\lambda}{a} \approx \frac{8\,\text{kpc}\cdot 2\,\text{µm}}{10^{14}\,\text{m}} \approx 500\,\text{cm},
+    \]
+    
+    (Lo specchio più grande di Merate è il Ruths, da 134 cm!)
+
 
 # Studio del buco nero centrale
 
--   A quale distanza dal buco nero la dinamica delle stelle inizia ad essere dominata dalla sua presenza, anziché dal moto collettivo Galattico e da altri influssi?
+-   Avere a disposizione uno specchio da 5 m non è sufficiente, perché c'è l'atmosfera che introduce molto disturbo e va corretto.
 
--   Possiamo stabilire un semplice criterio *osservativo* per misurare questa distanza, supponendo che essa sia la distanza $r_\text{GC}$ a cui l'energia potenziale tra una stella e il buco nero sia almeno uguale alla media dell'energia cinetica di tutte le stelle a una distanza $r_\text{GC}$.
+-   Le prime misure delle orbite del centro galattico non erano quindi **astrometriche** ma **spettroscopiche**: misuravano le velocità radiali.
+
+-   Dalla distribuzione di velocità si possono comunque ottenere indicazioni importanti, confrontandole con simulazioni di orbite intorno a un corpo massivo.
+
+-   Potete vederne un esempio in [Eckart, Genzel (1996): *Observations of stellar proper motions near the Galactic Centre*](https://www.nature.com/articles/383415a0) (purtroppo è dietro un *paywall*).
 
 
-# Studio del buco nero centrale
+# Prime misure
 
-Eguagliando energia cinetica ed energia potenziale si ha
-\[
-\frac{G M_* M_{\text{CBH}}}r = \frac12 M_*\,v_{\text{RMS}}^2,
-\]
-da cui
-\[
-r_\text{GC} \approx 4 \left(\frac{M_{\text{CBH}}}{10^7\,M_\odot}\right) \left(\frac{v_{\text{RMS}}}{100\,\text{km/s}}\right)^{-2}\,\text{pc}.
-\]
-Quindi $r_\text{GC} \propto v_{\text{RMS}}^{-2}$.
+-   Grazie all'impiego di ottiche adattive e all'uso di grandi telescopi, come il KEK alle Hawaii (10 m!), negli anni 2008–2009 è stato possibile misurare le prime orbite.
 
-::: notes
+-   Queste misurazioni vennero fatte dai gruppi di Reinhard Genzel (Max Planck Institut, Germania) e di Andrea Ghez (Università di Los Angeles, USA).
 
-L'RMS è calcolato su tutte le stelle attorno al CBH che hanno
-la medesima distanza $r_\text{GC}$.
-:::
+-   Genzel e Ghez hanno vinto il premio Nobel nel 2020 (25% ciascuno del premio), insieme a Roger Penrose (Università di Oxford, 50% del premio), che ha sviluppato i modelli matematici che descrivono i buchi neri
+
+---
+
+<center>
+![](images/2008ghez-title-page.png){width=960px}
+</center>
+
+---
+
+<center>
+![](images/2008ghez-orbits.png){width=840px}
+</center>
+
+---
+
+<center>
+![](images/2008ghez-table.png){width=960px}
+</center>
+
+---
+
+# Osservazione del CBH
+
+-   Le osservazioni di Genzel e di Ghez hanno portato a stimare una massa $M_\text{CBH} \approx 4\times 10^6\,M_\odot$.
+
+-   Questa corrisponde a un raggio di Schwartzschild pari a
+
+    \[
+    \begin{align*}
+    r_s &= \frac{2 G M_\text{CBH}}{c^2} \approx \frac{2 \cdot 6.67\times 10^{-11}\,\frac{\text{m}^3}{\text{kg}\cdot\text{s}^2} \cdot 1.6\times 10^{37}\,\text{kg}}{9.0\times 10^{16}\,\text{m/s}} =\\
+    &\approx 2.4\times 10^{10}\,\text{m} = 0.16\,\text{AU}.
+    \end{align*}
+    \]
+    
+-   Il CBH ovviamente non è visibile, ma ci si aspetta che sia visibile l'inviluppo di gas caldo per $r \gtrsim 3 r_s$
+
+# Event Horizon Telescope
+
+-   Per vedere dettagli grandi $3r_s$ è necessario un telescopio con dimensione
+
+    \[
+    D = \frac{R_0\,\lambda}{3 r_s} \approx \frac{8\,\text{kpc}\cdot 2\,\text{µm}}{5\,\text{AU}} \approx 660\,\text{m}.
+    \]
+    
+    Questo è assolutamente impossibile!
+    
+-   L'Event Horizon Telescope è una collaborazione che ha sfruttato l'interferometria per ottenere un'immagine del CBH. Come hanno fatto?
+
+
+# Interferometria
+
+-   L'interferometria è una tecnica che consiste nel raccogliere il segnale di diversi telescopi e combinarlo in fase.
+
+-   La risoluzione ottenibile è sempre θ ~ λ/D, ma in questo caso *D* è la distanza tra telescopi!
+
+-   Purtroppo la coerenza di fase richiede che eventuali difetti delle guide ottiche siano molto inferiori alla lunghezza d'onda, il che lo rende indicato solo per osservazioni nelle microonde e nel radio.
+
+-   Questo è però un problema!
+
+
+# Interferometria per il CBH
+
+-   Se aumentiamo λ, aumentano anche le dimensioni *D* necessarie a ottenere la risoluzione desiderata! EHT ha fatto le misure con λ = 1.3 mm, quindi
+
+    \[
+    D = \frac{R_0\,\lambda}{3 r_s} \approx \frac{8\,\text{kpc}\cdot 1\,\text{m}}{5\,\text{AU}} \approx 4\times 10^5\,\text{m} = 430\,\text{km}.
+    \]
+
+-   Per EHT è stato quindi necessario operare telescopi che coprissero una buona parte delle terre emerse!
+
+---
+
+# CBH di M87 (10 aprile 2019)
+
+<center>
+![](images/m87_eht.jpg){width="440px"}
+</center>
+
+Perché il buco nero di M87 è stato misurato prima?
+
+# CBH a confronto
+
+-   Il CBH di M87 è 1000 volte più lontano di Sagittarius A* (16 Mpc contro 8 kpc).
+
+-   Però non si trova sul piano galattico, quindi l'oscuramento delle polveri è inferiore (anche perché è una galassia ellittica).
+
+-   Inoltre il buco nero è 1000 più massivo, il che vuol dire che $r_s$ è 1000 volte maggiore:
+
+    #.   Il diametro apparente è lo stesso;
+    #.   Il periodo orbitale del gas è $P \propto r_s^{3/2} / M^{1/2}$, quindi $P' = 10^3 P$: il gas impiega diversi giorni anziché pochi minuti a orbitare, e l'immagine risulta meno sfuocata.
+
+
+# Sagittarius A* (12 maggio 2022)
+
+<center>![](images/sgr_a_eht.jpg)</center>
+
+
+# Storia delle osservazioni della Via Lattea
+
+# Thomas Wright (1711–1786)
+
+<table>
+<tbody>
+<tr>
+<td>
+-   Nel libro *An original theory or new hypothesis of the Universe* (1750) espone un'originale teoria cosmo-teologica:
+
+    -   Molti sistemi solari;
+    -   Stelle invisibili;
+    -   Distribuzione a simm.\ sferica.
+</td>
+<td>
+![](images/thomas_wright.jpg)
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<center>
+![](images/thomas_wright_plate_XXV.jpg){ height=660px }
+</center>
+
+---
+
+<center>
+![](images/thomas_wright_milky_way_model.svg)
+</center>
+
+Il modello spiega la forma apparente della Via Lattea. Inoltre ipotizza che
+tutte le stelle abbiano la medesima luminosità: quelle più distanti
+sono dunque invisibili.
+
+---
+
+-   Nel lavoro *Allgemeine Naturgeschichte und Theorie des Himmels* (1755), Immanuel Kant cita esplicitamente Wright.
+
+-   Si basa però su una recensione del lavoro di Wright che fraintende il senso dell'immagine seguente:
+
+<center>
+![](images/thomas_wright_plate_XXI.jpg){width=440px}
+</center>
+
+# William Herschel (1738–1822)
+
+<table>
+<tbody>
+<tr>
+<td>
+-   Musicista convertito all'astronomia.
+   
+-   A differenza di Wright, non prescinde mai dalle osservazioni quando formula ipotesi. (Insieme ai fratelli Alexander e Caroline è stato un formidabile costruttore di telescopi).
+</td>
+<td>
+![](images/william_herschel.jpg){width=880px}
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<center>
+![](images/herschel_milky_way.jpg)
+</center>
+
+-   Propone una struttura piatta per la Via Lattea (*On the construction of the Heavens*, 1802)
+   
+-   Assume che $M$ sia uguale per ogni stella, e da $M$ e $m$ deriva
+    $d$ tramite la densità colonnare! Però il suo modello è quantitativo.
+
+-   La forma è basata su conteggi di stelle in 675 regioni di cielo (alcuni punti sono media di più osservazioni). Il Sole si trova approssimativamente al centro.
+
+# Jacobus Kapteyn (1851–1922)
+
+<table>
+<tbody>
+<tr>
+<td>
+-   In *First attempt at a theory of the arrangement and motion of the sidereal system* (1922) usa le parallassi e criteri statistici per stimare la forma della Via Lattea.
+
+-   Sottostima molto l'arrossamento, e il suo modello è accurato solo ad alte latitudini Galattiche.
+</td>
+<td>
+![](images/jacobus_kapteyn.jpg){width=880px}
+</td>
+</tr>
+</tbody>
+</table>
 
 
 ---
 
-<center>![](images/eckart-velocity-dispersion.png){height=460px}</center>
+<center>
+![](images/jacobus_kapteyn_milky_way.svg)
+</center>
 
-Siccome le velocità sono dell'ordine di 100 km/s e le distanze inferiori di 1 pc, l'equazione per $r_\text{GC}$ ci dice che la loro dinamica è determinata dal CBH, e non dal campo esterno.
+# Harlow Shapley (1885–1972)
 
----
+<table>
+<tbody>
+<tr>
+<td>
+-   Stima la distanza degli ammassi globulari usando le RR Lyrae.
 
-<center>![](images/gillessen-first-page.png)</center>
+-   Non corregge per l'assorbimento interstellare
 
----
+-   Intuisce la struttura della Via Lattea e la posizione del Sole.
+</td>
+<td>
+![](images/harlow_shapley.jpg){width=880px}
+</td>
+</tr>
+</tbody>
+</table>
 
-<center>![](images/gillessen-orbit.png){height=660px}</center>
-
----
-
-<center>![](images/gillessen-plot.png)</center>
 
 # Conclusione
 
