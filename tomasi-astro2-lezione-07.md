@@ -153,11 +153,17 @@ Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 
 
 # Prime misure
 
--   Grazie all'impiego di ottiche adattive e all'uso di grandi telescopi, come il KEK alle Hawaii (10 m!), negli anni 2008–2009 è stato possibile misurare le prime orbite.
+-   Grazie all'impiego di ottiche adattive e all'uso di grandi telescopi, come il Keck alle Hawaii (10 m!), negli anni 2008–2009 è stato possibile misurare le prime orbite.
 
 -   Queste misurazioni vennero fatte dai gruppi di Reinhard Genzel (Max Planck Institut, Germania) e di Andrea Ghez (Università di Los Angeles, USA).
 
 -   Genzel e Ghez hanno vinto il premio Nobel nel 2020 (25% ciascuno del premio), insieme a Roger Penrose (Università di Oxford, 50% del premio), che ha sviluppato i modelli matematici che descrivono i buchi neri
+
+---
+
+<center>
+![](images/penrose-genzel-ghez.jpg){width=960px}
+</center>
 
 ---
 
@@ -176,6 +182,22 @@ Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 
 <center>
 ![](images/2008ghez-table.png){width=960px}
 </center>
+
+---
+
+<!-- https://www.youtube.com/watch?v=rxJgebvqzXA -->
+
+<video width="1280" height="720" controls>
+  <source src="Animation of stellar orbits around the Galactic Center (2019).mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+::: notes
+
+Le righe continue indicano che sono presenti anche dati spettroscopici
+(dal 2001), e quindi velocità lungo la linea di vista.
+
+:::
 
 ---
 
