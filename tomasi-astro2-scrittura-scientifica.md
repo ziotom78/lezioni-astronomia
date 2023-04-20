@@ -136,10 +136,6 @@ Dall'abstract si capisce che si sta proponendo una nuova convenzione per calcola
   
 <p style="text-align:center">![](images/2019-Bhattacharyya-title.svg){height=580px}</p>
 
-# Evitare la forma impersonale/passiva
-  
-<p style="text-align:center">![](images/1989-Danese-title.png){height=520px}</p>
-
 # Testo dell'articolo
 
 # Esempio di introduzione
@@ -331,7 +327,7 @@ Slides: [https://peterkovesi.com/papers/ColourMapsForColourBlindIAMG2017.pdf](ht
 Si simula ora il rumore bianco generando un vettore di 100000 elementi casuali distribuiti normalmente aventi media nulla e deviazione standard che descresce all’aumentare del conteggio. La deviazione risulta essere 100 000 nel primo elemento del vettore e 1 nell'ultimo elemento. Si applica il procedimento adottato nel paragrafo X.Y sottraendo un elemento del vettore con il successivo.
 
 <p class="fragment">
-Ho creato un vettore ${x_i}_{i=1}^N$, con $N=10^5$, in cui ciascun elemento $x_i$ è un numero pseudo-casuale distribuito normalmente. La media è sempre nulla ($\left<x_i\right> = 0\ \forall i$), mentre la deviazione standard risulta essere \[\sigma^2(x_i) = 10^5/i.\]
+Ho creato un vettore $\{x_i\}_{i=1}^N$, con $N=10^5$, in cui ciascun elemento $x_i$ è un numero pseudo-casuale distribuito normalmente. La media è sempre nulla ($\left<x_i\right> = 0\ \forall i$), mentre la deviazione standard risulta essere \[\sigma^2(x_i) = 10^5/i.\]
 </p>
 
 ---
@@ -364,15 +360,13 @@ Ho creato un vettore ${x_i}_{i=1}^N$, con $N=10^5$, in cui ciascun elemento $x_i
 
 -    Capire il tipo di uditorio;
 -    Stabilire il messaggio;
--    Decidere gli argomenti;
--    Abozzare su carta l'aspetto e l'ordine delle slide;
--    Creare le slide al computer;
+-    Creare le slide;
 -    Provare a voce alta fino all'esaurimento.
 
 
 # Alcuni consigli
 
--    Evitare di mettere troppi elementi in una sola slide
+-    Evitare di mettere troppi elementi in una sola slide;
 -    Testo sintetico!
 -    Usare i grafici…;
 -    … ma solo se significativi;
@@ -381,13 +375,12 @@ Ho creato un vettore ${x_i}_{i=1}^N$, con $N=10^5$, in cui ciascun elemento $x_i
 
 # Alcuni consigli
 
--    Provare molte volte ad alta voce;
--    Provare con un uditorio di fronte;
--    Non parlare troppo in fretta;
--    Parlare a voce alta;
+-    Provare molte volte ad alta voce (non ripetendo a mente!);
+-    Provare con un uditorio di fronte, anche non specialistico (fidanzati/e, nonni, zie, animali da compagnia…);
+-    Parlare con voce abbastanza forte, non bisbigliando né andando troppo in fretta (facile quando si è agitati!);
 -    Guardare negli occhi l'uditorio;
 -    Fare pause di respiro;
--    Non leggere il testo delle slide.
+-    Non leggere il testo delle slide (mettere testo sintetico aiuta molto!).
 
 
 # Slide del titolo
@@ -401,11 +394,21 @@ Ho creato un vettore ${x_i}_{i=1}^N$, con $N=10^5$, in cui ciascun elemento $x_i
 <center>
 ![](images/titolo-slide-no.jpg){width=880px}
 </center>
+
 ---
 
 <center>
 ![](images/titolo-slide-ok.jpg){width=880px}
 </center>
+---
+
+<center>
+![](images/title-cella.jpg){width=880px}
+</center>
+
+---
+
+# Una pessima presentazione: il disastro del Columbia
 
 ---
 
