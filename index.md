@@ -17,6 +17,6 @@
 - 2023-04-13: [Lezione 5](tomasi-astro2-lezione-05.html) (mezzo interstellare 3), [versione stampabile](tomasi-astro2-lezione-05.html?print-pdf)
 - 2023-04-14: [Lezione 6](tomasi-astro2-lezione-06.html) (mezzo interstellare 4), [versione stampabile](tomasi-astro2-lezione-06.html?print-pdf)
 - 2023-04-20: [Lezione 7](tomasi-astro2-lezione-07.html) (mezzo interstellare 4), [versione stampabile](tomasi-astro2-lezione-07.html?print-pdf)
-<!--
 - 2023-04-21: [Come preparare un testo scientifico](tomasi-astro2-scrittura-scientifica.html)
+<!--
 -->
