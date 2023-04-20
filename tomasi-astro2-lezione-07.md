@@ -148,7 +148,7 @@ Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 
 
 -   Dalla distribuzione di velocità si possono comunque ottenere indicazioni importanti, confrontandole con simulazioni di orbite intorno a un corpo massivo.
 
--   Potete vederne un esempio in [Eckart, Genzel (1996): *Observations of stellar proper motions near the Galactic Centre*](https://www.nature.com/articles/383415a0) (purtroppo è dietro un *paywall*).
+-   Potete vederne un esempio in [Eckart, Genzel (1996): *Observations of stellar proper motions near the Galactic Centre*](https://www.nature.com/articles/383415a0) (purtroppo è dietro un *paywall*)
 
 
 # Prime misure
@@ -275,6 +275,14 @@ Perché il buco nero di M87 è stato misurato prima?
 # Sagittarius A* (12 maggio 2022)
 
 <center>![](images/sgr_a_eht.jpg)</center>
+
+
+# *Easter lecture* di Genzel
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xPOjQyGoREE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+[Testing the Massive Black Hole Paradigm in the Galactic Centre](https://www.youtube.com/watch?v=xPOjQyGoREE)  (Bologna, 2022)
+
 
 
 # Storia delle osservazioni della Via Lattea
