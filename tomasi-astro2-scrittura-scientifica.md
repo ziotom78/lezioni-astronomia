@@ -10,10 +10,9 @@ css:
 
 # Cos'è un articolo?
 
-#.   Descrizione di un risultato scientifico, solido ed innovativo.
-#.   Solitamente pubblicato su riviste *peer reviewed*, *proceedings* o monografie.
+#.   Descrizione di un risultato scientifico, innovativo e solido.
+#.   Solitamente pubblicato su riviste *peer reviewed*, su *proceedings* (accompagnando una presentazione) o in monografie.
 #.   Da due pagine fino a qualche decina (rari sopra le 100 pagine).
-#.   A volte accompagnano una presentazione (proceedings).
 
 ---
 
@@ -23,7 +22,9 @@ css:
 
 # Esempi di riviste astronomiche
 
-| <p style="text-align:center">![](images/aa.png)</p> | <p style="text-align:center">![](images/mnras.png)</p> | <p style="text-align:center">![](images/apj.png)</p> |
+-   [Astronomy & Astrophysics](https://www.aanda.org/) (“AA”, europea)
+-   [Monthly Notices of the Royal Astronomical Society](https://academic.oup.com/mnras) (“MNRAS”, inglese)
+-   [The Astrophysical Journal](https://iopscience.iop.org/journal/0004-637X) (“ApJ”, statunitense)
 
 ---
 
@@ -35,7 +36,7 @@ css:
 
 <p style="text-align:center">![](images/referaggio.svg)</p>
 
-La parola finale è quella dell'editor!
+La parola finale è quella dell'editor! Il processo può prendere anche più di un anno, a meno che non sia una rivista di *Letters* (esempio: [The Astrophysical Journal Letters](https://iopscience.iop.org/journal/2041-8205)).
 
 ---
 
@@ -65,6 +66,14 @@ Your browser does not support the video tag.
 
 -   Sono quindi le parti da curare maggiormente! (Alcuni consigliano anzi di iniziare a preparare queste)
 
+# Titolo, autori e abstract
+
+---
+
+<center>
+![](images/2008ghez-title-page.png){width=960px}
+</center>
+
 # Scelta del titolo
 
 -   Il titolo deve chiarire nel migliore modo possibile l'argomento del lavoro
@@ -81,7 +90,37 @@ Your browser does not support the video tag.
 
 ![](images/2022Eker-title.png){width=45%}
 
-Dall'abstract si capisce che si sta proponendo una convenzione più semplice e generale per calcolare le correzioni bolometriche… &#129300;
+Dall'abstract si capisce che si sta proponendo una nuova convenzione per calcolare le correzioni bolometriche… &#129300;
+
+# Lista degli autori
+
+-   È sempre più vero che in astronomia si lavora in grandi collaborazioni.
+  
+-   Quando pubblicate, includete nella lista degli autori tutte quelle persone che:
+
+    #.   Hanno fornito un contributo, ma solo se questo consiste in qualcosa di **originale**, **creativo**, e scientificamente valido;
+    #.   Vi hanno dato il loro consenso esplicito.
+
+# Lista degli autori
+
+-   Includete negli *acknowledgements* («ringraziamenti») tutti gli altri: chi vi ha corretto l'inglese, chi vi ha sistemato una figura, l'officina che vi ha costruito un pezzo…
+
+-   In questa lista ricadono anche eventuali enti finanziatori (importante citarli, se vi dimenticate di farlo potrebbero togliervi il finanziamento o non rinnovarvelo!)
+
+-   Se i referee hanno dato un aiuto significativo nel migliorare l'articolo, ringraziate anche loro (*We thank the anonymous reviewer for their insightful comments…*)
+
+# Abstract
+
+-   L'*abstract* deve essere un riassunto dell'articolo
+
+-   Mettetevi il cuore in pace: una buona fetta dei vostri lettori si limiterà a leggere **solo** l'abstract del vostro lavoro…
+
+-   È importante inserire queste informazioni:
+
+    #.   Cosa avete fatto;
+    #.   Se non è ovvio, spiegate perché è importante;
+    #.   Come l'avete fatto;
+    #.   Quali sono i vostri risultati.
 
 # Abstract troppo astratto!
 
@@ -101,6 +140,8 @@ Dall'abstract si capisce che si sta proponendo una convenzione più semplice e g
   
 <p style="text-align:center">![](images/1989-Danese-title.png){height=520px}</p>
 
+# Testo dell'articolo
+
 # Esempio di introduzione
 
 <p style="text-align:center">![](images/maund-title.svg){height=580px}</p>
@@ -108,24 +149,6 @@ Dall'abstract si capisce che si sta proponendo una convenzione più semplice e g
 # Esempio da seguire
 
 <p style="text-align:center">![](images/short-paper.png)</p>
-
-# Lista degli autori
-
--   È sempre più vero che in astronomia si lavora in grandi collaborazioni.
-  
--   Quando pubblicate, includete nella lista degli autori tutte quelle persone che:
-
-    #.   Hanno fornito un contributo, ma solo se questo consiste in qualcosa di **originale**, **creativo**, e scientificamente valido;
-    #.   Vi hanno dato il loro consenso esplicito.
-
-# Lista degli autori
-
--   Includete negli *acknowledgements* («ringraziamenti») tutti gli altri: chi vi ha corretto l'inglese, chi vi ha sistemato una figura, l'officina che vi ha costruito un pezzo…
-
--   In questa lista ricadono anche eventuali enti finanziatori
-
--   Se i referee hanno dato un aiuto significativo nel migliorare l'articolo, ringraziate anche loro (*We thank the anonymous reviewer for their insightful comments…*)
-  
 
 # Bibliografia
 
@@ -145,12 +168,24 @@ Dall'abstract si capisce che si sta proponendo una convenzione più semplice e g
 
 # Scrittura del testo
 
+-   È la parte che (quasi) tutti temono di più!
+
+-   Assicuratevi di avere un piano chiaro del testo, prima di mettervi a scrivere una frase dopo l'altra. Alcune opzioni per iniziare:
+
+    -   Scrivete la lista delle sezioni;
+    -   Decidete innanzitutto quali grafici e tabelle includere
+    
+-   Se avete una VPN, potete usare ChatGPT per suggerirvi la struttura; vedete ad esempio [https://twitter.com/MushtaqBilalPhD/status/1621379333943083009](https://twitter.com/MushtaqBilalPhD/status/1621379333943083009). Attenzione: ChatGPT produce contenuti spesso sbagliati, è solo la **struttura** del testo che lui crea ad interessarvi!
+
+
+# Scrittura del testo
+
 È una buona idea produrre un *vomit draft*:
 
-1. Scrivete di getto tutto il testo che avete in mente, senza curarvi dei dettagli, della forma e neanche dell'accuratezza dei contenuti
-2. Non è consentito tornare indietro a correggere gli errori (neppure di battitura!)
-3. Inventate pure numeri là dove sentite che un numero ci starebbe bene
-4. Una volta buttato giù questo testo, mettetevi a sistemarlo
+1. Scrivete di getto tutto il testo che avete in mente, senza curarvi dei dettagli, della forma e neanche dell'accuratezza dei contenuti;
+2. Non è consentito tornare indietro a correggere gli errori (neppure di battitura!);
+3. Inventate pure numeri là dove sentite che un numero ci starebbe bene;
+4. Una volta buttato giù questo testo, mettetevi a sistemarlo.
 
 ---
 
@@ -253,14 +288,6 @@ Slides: [https://peterkovesi.com/papers/ColourMapsForColourBlindIAMG2017.pdf](ht
 
 # Tesi di laurea e dottorato
 
-# Passi per scrivere una tesi
-
-#.   Decidere la lista dei capitoli.
-#.   Per ogni capitolo, decidere la lista delle sezioni (argomenti).
-#.   Scegliere quali grafici e tabelle includere.
-#.   Scrivere il testo.
-
-
 # Cose da **non** fare
 
 -    Iniziare subito a scrivere il testo suddiviso in capitoli;
@@ -280,7 +307,7 @@ Slides: [https://peterkovesi.com/papers/ColourMapsForColourBlindIAMG2017.pdf](ht
 
 -   «In questa tesi ho svolto un'analisi di tipo statistico…»
 
--   «Perché dici `di tipo'?»
+-   «Perché dici “di tipo”?»
 
 -   «In questa tesi ho svolto un'analisi statistica…»
 
@@ -330,7 +357,7 @@ Ho creato un vettore ${x_i}_{i=1}^N$, con $N=10^5$, in cui ciascun elemento $x_i
 
 -  Quanto si dirà ora **non vale** per le slide usate in un corso (come quelle che state guardando in questo momento).
 
--  Le slide dei corsi sono fatte per essere lette e rilette più volte dagli studenti. Qui si parla invece di slide a supporto di un talk, che di solito non vengono distribuite.
+-  Le slide dei corsi sono fatte per essere lette e rilette più volte dagli studenti, e magari anche stampate. Qui si parla invece di slide a supporto di un talk, che di solito non vengono distribuite.
 
 
 # Come preparare una presentazione
@@ -345,7 +372,7 @@ Ho creato un vettore ${x_i}_{i=1}^N$, con $N=10^5$, in cui ciascun elemento $x_i
 
 # Alcuni consigli
 
--    Evitare di mettere troppi elementi
+-    Evitare di mettere troppi elementi in una sola slide
 -    Testo sintetico!
 -    Usare i grafici…;
 -    … ma solo se significativi;
@@ -361,6 +388,24 @@ Ho creato un vettore ${x_i}_{i=1}^N$, con $N=10^5$, in cui ciascun elemento $x_i
 -    Guardare negli occhi l'uditorio;
 -    Fare pause di respiro;
 -    Non leggere il testo delle slide.
+
+
+# Slide del titolo
+
+-   Molti studenti la “usano” per leggere asetticamente il titolo e poi passare subito alla slide successiva
+-   Può però essere un ottimo strumento per introdurre già l'argomento
+-   Attenzione alla differenza tra “professore” e “dottore” nei titoli dei vostri relatori! Nel dubbio, chiedete loro qual è la forma corretta.
+
+---
+
+<center>
+![](images/titolo-slide-no.jpg){width=880px}
+</center>
+---
+
+<center>
+![](images/titolo-slide-ok.jpg){width=880px}
+</center>
 
 ---
 
