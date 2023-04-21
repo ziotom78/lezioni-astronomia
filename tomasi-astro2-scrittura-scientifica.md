@@ -92,6 +92,12 @@ Your browser does not support the video tag.
 
 Dall'abstract si capisce che si sta proponendo una nuova convenzione per calcolare le correzioni bolometriche… &#129300;
 
+# Ottimo titolo
+
+![](images/2023-rogers-title.png){width=820px}
+
+Il titolo contiene già le conclusioni del lavoro: non si può ancora essere confidenti che alcuni tipi di stelle di sequenza principale (con $M \approx 0.6\,M_\odot$) ospitino pianeti dove il rapporto tra silicati e acqua sia 1:1.
+
 # Lista degli autori
 
 -   È sempre più vero che in astronomia si lavora in grandi collaborazioni.
