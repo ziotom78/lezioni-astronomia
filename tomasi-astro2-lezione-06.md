@@ -70,7 +70,7 @@ I restanti termini sono più semplici.
 
 Applicando una divergenza alla c.d.\ «legge di Newton» e sostituendo, otteniamo che
 \[
-\ddot\rho_1 - c_s^2 \nabla^2\rho_1 - 4\pi G \rho_1 \rho_0 = 0.
+\ddot\rho_1 - c_s^2 \nabla^2\rho_1 + 4\pi G \rho_1 \rho_0 = 0.
 \]
 
 
