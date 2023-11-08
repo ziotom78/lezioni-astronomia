@@ -1,14 +1,14 @@
 ---
 title: "Lezione di astronomia 1a"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "27 Ottobre 2022"
+date: "9 Novembre 2023"
 css:
 - ./css/custom.css
 ...
 
 # Introduzione
 
--   In questo primo modulo farò alcune lezioni di approfondimento degli argomenti spiegati dal prof. Bersanelli.
+-   In questo primo modulo farò tre lezioni di approfondimento degli argomenti spiegati dal prof. Bersanelli.
 
 -   I contenuti specifici di queste lezioni non sono richiesti all'esame, ma i concetti esposti (es., magnitudini, correzioni bolometriche, …) sono previsti nel programma e verranno chiesti all'esame.
 
@@ -56,12 +56,9 @@ Misurata in MJy/sr (1 Jy = 10$^{-26}$ W/m$^2$/Hz, misura la densità di flusso
 Gli autori assumono che l'emissività $\rho$ ($[\rho]
 = \text{W\,m$^{-3}$}$) abbia la forma
 $$
-\begin{aligned}
-    \rho(x, y, z) &= \rho_0 \exp\bigl(-0.5 r^2\bigr), \text{ con } \\
-    r^2 &= \frac{x^2 + y^2}{R_0^2} + \frac{z^2}{z_0^2}.
-\end{aligned}
+\rho(x, y, z) = \rho_0 \exp\bigl(r^2/2\bigr), \text{ con } r^2 = \frac{x^2 + y^2}{R_0^2} + \frac{z^2}{z_0^2},
 $$
-
+con gli assi $x, y, z$ liberi di ruotare nello spazio 3D.
 
 # Intensità
 

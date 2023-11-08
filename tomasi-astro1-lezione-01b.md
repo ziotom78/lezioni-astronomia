@@ -1,7 +1,7 @@
 ---
 title: "Lezione di astronomia 1b"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "28 Ottobre 2022"
+date: "10 Novembre 2023"
 css:
 - ./css/custom.css
 ...
@@ -244,7 +244,9 @@ end
 δν = 1e+08 Hz, T = 3800.0 K, C = 20.28
 ```
 
-Converge senza dubbio, ma è abbastanza diverso dal valore $C = 14.5$ riportato nell'articolo!
+Converge, ma è abbastanza diverso dal valore $C = 14.5$ riportato nell'articolo!
+
+Secondo voi dove sta il problema?
 
 
 # Migliorare la stima di $C$
@@ -342,20 +344,20 @@ plot(dirbe_λ[mask] * 1e6, dirbe_band[mask],
 
 ---
 
-<center>![](./images/dirbe_band_ok.svg){width=80%}</center>
+<center>![](./images/dirbe_band_ok.svg){width=60%}</center>
 
+Sembra ok. Proviamo a calcolare il centro della banda!
 
 # Centro della banda
 
-Calcoliamo il centro della banda di DIRBE, tramite la formula
+La formula più intuitiva per il centro della banda è una media pesata:
 
 $$
 \lambda_0 = \frac{\int_0^\infty \lambda\times P_\lambda(\lambda)\,\text{d}\lambda}{\int_0^\infty P_\lambda(\lambda)\,\text{d}\lambda} \approx
 \frac{\sum_{i=1}^N \lambda_i \times P_\lambda(\lambda_i)}{\sum_{i=1}^N P_\lambda(\lambda_i)},
 $$
 
-che corrisponde a una media pesata.
-
+Questa è l'implementazione in Julia: molto semplice!
 
 ```julia
 @printf(
@@ -369,11 +371,11 @@ Il risultato è 2.22 µm, che è quanto ci aspettavamo.
 
 # Spettro stellare
 
-Dobbiamo anche avere un'idea più precisa dello spettro di emissione del centro galattico.
+-   Dobbiamo anche avere un'idea più precisa dello spettro di emissione del centro galattico.
 
-Il centro galattico appare rosso, e il fatto che sia povero di gas indica un'età avanzata. Questi indizi suggeriscono che le stelle siano giganti rosse; una gigante rossa M0 ha $T \approx 3800\,\text{K}$ e $L \approx 400 L_\odot$.
+-   Il centro galattico appare rosso, e il fatto che sia povero di gas indica un'età avanzata. Questi indizi suggeriscono che le stelle siano giganti rosse; una gigante rossa M0 ha $T \approx 3800\,\text{K}$ e $L \approx 400 L_\odot$.
 
-Per conoscere qual è lo spettro di una gigante rossa M0, dobbiamo fare affidamento a un catalogo di spettri stellari.
+-   Per conoscere qual è lo spettro di una gigante rossa M0, dobbiamo fare affidamento a un catalogo di spettri stellari.
 
 # Catalogo di spettri stellari
 
@@ -518,17 +520,11 @@ Lo spettro è espresso in funzione di $\lambda$, non di $\nu$!
 
     # dirbe_band_interp: funzione con argomento λ
     dirbe_band_interp = LinearInterpolation(
-        dirbe_λ,
-        dirbe_band,
+        dirbe_λ,       # Sparsely-populated array for x
+        dirbe_band,    # Sparsely-populated array for y
         extrapolation_bc=Flat(),
     )
     ```
-
-    (Vedi video).
-
----
-
-<iframe src="https://player.vimeo.com/video/632196520?h=dcd2aaa910&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="julia-recording-09 - Interpolation.mkv"></iframe>
 
 # Campionamento (4/4)
 
@@ -576,13 +572,13 @@ scatter!(m0_λ_pts * 1e6, dirbe_band_interp.(m0_λ_pts),
     )
     ```
 
--   Il risultato è
+-   Il risultato è in perfetto accordo con Dwek:
 
     ```
     Bolometric correction: 14.55
     ```
 
-    in perfetto accordo con quanto usato da Dwek et al. (1995).
+    
 
 # Dipendenza dalle assunzioni
 
