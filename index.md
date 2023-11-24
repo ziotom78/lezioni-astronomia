@@ -6,9 +6,9 @@
 
 - 2023-11-09: [Lezione 1, prima parte](tomasi-astro1-lezione-01a.html) (il Centro Galattico, magnitudini).
 - 2023-11-10: [Lezione 1, seconda parte](tomasi-astro1-lezione-01b.html) (correzioni bolometriche, Julia).
-<!--
-- 2023-11-17: [Lezione 2](tomasi-astro1-lezione-02.html) (sistemi binari)
+- 2023-11-24: [Lezione 2](tomasi-astro1-lezione-02.html) (sistemi binari)
 
+<!--
 # Astronomia II
 
 - 2024-03-23: [Lezione 1](tomasi-astro2-lezione-01.html) (sistemi stellari 1), [versione stampabile](tomasi-astro2-lezione-01.html?print-pdf)
