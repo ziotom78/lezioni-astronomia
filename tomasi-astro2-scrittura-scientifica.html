@@ -19,8 +19,11 @@
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
@@ -105,10 +108,17 @@ makes a good research proposal?</a>, è applicabile anche qui.</li>
 <p style="text-align:center">
 <img data-src="images/referaggio.svg" />
 </p>
-<p>La parola finale è quella dell’editor! Il processo può prendere anche
-più di un anno, a meno che non sia una rivista di <em>Letters</em>
-(esempio: <a href="https://iopscience.iop.org/journal/2041-8205">The
-Astrophysical Journal Letters</a>).</p>
+<ul>
+<li>La parola finale è <strong>quella dell’editor</strong>, che può
+decidere di ignorare alcune review.</li>
+<li>Il processo può prendere anche più di un anno, a meno che non sia
+una rivista di <em>Letters</em> (esempio: <a
+href="https://iopscience.iop.org/journal/2041-8205">The Astrophysical
+Journal Letters</a>).</li>
+<li>Interessante discussione: <a
+href="https://news.ycombinator.com/item?id=38462269"
+class="uri">https://news.ycombinator.com/item?id=38462269</a></li>
+</ul>
 </section>
 <section class="slide level1">
 

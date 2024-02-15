@@ -36,7 +36,9 @@ css:
 
 <p style="text-align:center">![](images/referaggio.svg)</p>
 
-La parola finale è quella dell'editor! Il processo può prendere anche più di un anno, a meno che non sia una rivista di *Letters* (esempio: [The Astrophysical Journal Letters](https://iopscience.iop.org/journal/2041-8205)).
+-   La parola finale è **quella dell'editor**, che può decidere di ignorare alcune review.
+-   Il processo può prendere anche più di un anno, a meno che non sia una rivista di *Letters* (esempio: [The Astrophysical Journal Letters](https://iopscience.iop.org/journal/2041-8205)).
+-   Interessante discussione: <https://news.ycombinator.com/item?id=38462269>
 
 ---
 

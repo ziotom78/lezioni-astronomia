@@ -24,7 +24,7 @@ assorbimento (nell'ottico) dalle strane proprietà:
 -   Gli elementi osservati sono Ca e Na, ma anche molecole: CH, CN, CH⁺. Queste ultime implicano una bassa densità del gas ($n < 10^3\,\text{cm}^{-3}$) e una bassa temperatura:
 
     -   Molecole cariche come CH⁺ in condizioni di laboratorio si neutralizzano subito;
-    
+
     -   CH e CN sono fortemente reattive.
 
 ::: notes
@@ -381,7 +381,7 @@ Calcolando la derivata del prodotto, si ottiene
 dove usiamo il fatto che $\partial_t \vec{u}_p(t) = \vec{v}_p(t) =
 \vec{v}\bigl(\vec{u}_p(t), t\bigr)$ e la scrittura
 \[
-(\vec{v} \cdot \vec\nabla) \vec{v} = 
+(\vec{v} \cdot \vec\nabla) \vec{v} =
 \begin{pmatrix}
   v_x \partial_x v_x + v_y \partial_y v_x + v_z \partial_z v_x \\
   v_x \partial_x v_y + v_y \partial_y v_y + v_z \partial_z v_y \\
@@ -396,7 +396,7 @@ dove usiamo il fatto che $\partial_t \vec{u}_p(t) = \vec{v}_p(t) =
     \[
     \dot{\vec{v}}_p = \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v}
     \]
-    
+
 -   Essa dice che la variazione della velocità di una particella del fluido può essere causata da:
 
     #.  una variazione temporale del campo $\vec{v}$ nel cubetto (termine $\partial_t\vec{v}$);
@@ -410,7 +410,7 @@ dove usiamo il fatto che $\partial_t \vec{u}_p(t) = \vec{v}_p(t) =
 -   Sommiamo quindi le equazioni di Newton di ciascuna delle N particelle in un cubetto:
     \[
     \begin{aligned}
-        \sum_{i=1}^N \vec{F}_p^{(i)} &= \sum_{i=1}^N m^{(i)} \dot{\vec v}_p(t) = \sum_{i=1}^N m^{(i)} \bigl(\partial_t\vec{v} + 
+        \sum_{i=1}^N \vec{F}_p^{(i)} &= \sum_{i=1}^N m^{(i)} \dot{\vec v}_p(t) = \sum_{i=1}^N m^{(i)} \bigl(\partial_t\vec{v} +
       (\vec{v} \cdot \vec\nabla) \vec{v}\bigr) = \\
       &= \bigl(\partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v}\bigr) \sum_{i=1}^N m^{(i)}.
     \end{aligned}
@@ -422,9 +422,9 @@ Se assumiamo che le masse $m^{(i)}$ delle particelle siano tutte
 identiche, allora
 \[
 \begin{aligned}
-  \sum_{i=1}^N \vec{F}_p^{(i)} &= \left(\sum_{i=1}^N m^{(i)}\right) \bigl(\partial_t\vec{v} + 
+  \sum_{i=1}^N \vec{F}_p^{(i)} &= \left(\sum_{i=1}^N m^{(i)}\right) \bigl(\partial_t\vec{v} +
   (\vec{v} \cdot \vec\nabla) \vec{v}\bigr), \\
-  \vec{F}_\text{tot} &= \rho\,\text{d} V \bigl(\partial_t\vec{v} + 
+  \vec{F}_\text{tot} &= \rho\,\text{d} V \bigl(\partial_t\vec{v} +
   (\vec{v} \cdot \vec\nabla) \vec{v}\bigr),
 \end{aligned}
 \]
@@ -498,7 +498,7 @@ quindi
 \]
 che si riscrive come il sistema di 3 equazioni
 \[
-\partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v} = 
+\partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v} =
 -\frac{\vec\nabla p}\rho - \vec\nabla\phi
 \]
 (caso particolare delle *equazioni di Navier-Stokes*).
@@ -528,7 +528,7 @@ che si riscrive come il sistema di 3 equazioni
 ::: notes
 
 L'esercizio si risolve imponendo $\vec v = 0$ nella prima equazione, imponendo $\phi = gy$ e scrivendo i gradienti come derivate monodimensionali in $y$.
-  
+
 :::
 
 

@@ -33,14 +33,14 @@ che $c_s = \sqrt{\gamma\frac{k_B T}{m}}$, con $\gamma = \frac53$.
 -   Linearizziamo il sistema, sostituendo
     \[
     \begin{aligned}
-      \rho(\vec{r}, t) &= \rho_0 + \rho_1(\vec{r}, t), \\
-      p(\vec{r}, t) &= p_0 + p_1(\vec{r}, t), \\
-      \vec{v}(\vec{r}, t) &= \vec{v}_0 + \vec{v}_1(\vec{r}, t) = 0 + \vec{v}_1(\vec{r}, t), \\
-      \phi(\vec{r}, t) &= \phi_0 + \phi_1(\vec{r}, t).
+      \rho(\vec{r}, t) &= \textcolor{#682673}{\rho_0} + \textcolor{#267342}{\rho_1}(\vec{r}, t), \\
+      p(\vec{r}, t) &= \textcolor{#682673}{p_0} + \textcolor{#267342}{p_1}(\vec{r}, t), \\
+      \vec{v}(\vec{r}, t) &= \textcolor{#682673}{\vec{v}_0} + \textcolor{#267342}{\vec{v}_1}(\vec{r}, t) = 0 + \vec{v}_1(\vec{r}, t), \\
+      \phi(\vec{r}, t) &= \textcolor{#682673}{\phi_0} + \textcolor{#267342}{\phi_1}(\vec{r}, t).
     \end{aligned}
     \]
-    I termini $\rho_0$, $p_0$, $\vec{v}_0$ e $\phi_0$ sono costanti, e
-    vale che $\rho_0 \gg \rho_1$, $p_0 \gg p_1$, etc.
+    I termini $\textcolor{#682673}{\rho_0}$, $\textcolor{#682673}{p_0}$, $\textcolor{#682673}{\vec{v}_0}$ e $\textcolor{#682673}{\phi_0}$ sono costanti, e
+    vale che $\textcolor{#682673}{\rho_0} \gg \textcolor{#267342}{\rho_1}$, $\textcolor{#682673}{p_0} \gg \textcolor{#267342}{p_1}$, etc.
 
 
 # Derivazione di Jeans
@@ -49,18 +49,18 @@ che $c_s = \sqrt{\gamma\frac{k_B T}{m}}$, con $\gamma = \frac53$.
 
     <center>![](images/plasma_fractal.jpg){height=280px}</center>
 
--   Stiamo imponendo che le variazioni di densità ρ₁ siano piccole rispetto alla densità media ρ₀.
+-   Stiamo imponendo che le variazioni di densità $\textcolor{#267342}{\rho_1}$ siano piccole rispetto alla densità media $\textcolor{#682673}{\rho_0}$.
 
 # Derivazione di Jeans
 
 Ignorando i termini di ordine superiore al primo, abbiamo che ad es.\ il termine $-\vec{\nabla} p/\rho$ diventa
 \[
 \begin{aligned}
-  -\frac1\rho\vec{\nabla} p &= -\frac{\vec{\nabla}p_1}{\rho_0 +
-    \rho_1} \approx -\frac{\vec{\nabla}p_1}{\rho_0} \left(1 -
-    \frac{\rho_1}{\rho_0}\right) = \\
-  &= -\frac{\vec{\nabla}p_1}{\rho_0}
-  + \frac{\rho_1}{\rho_0^2}\vec{\nabla} p_1 \approx -\frac{\vec{\nabla}p_1}{\rho_0}.
+  -\frac1\rho\vec{\nabla} p &= -\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0} +
+    \textcolor{#267342}{\rho_1}} \approx -\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0}} \left(1 -
+    \frac{\textcolor{#267342}{\rho_1}}{\textcolor{#682673}{\rho_0}}\right) = \\
+  &= -\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0}}
+  + \frac{\textcolor{#267342}{\rho_1}}{\textcolor{#682673}{\rho_0}^2}\vec{\nabla} \textcolor{#267342}{p_1} \approx -\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0}}.
 \end{aligned}
 \]
 I restanti termini sono più semplici.
@@ -68,15 +68,13 @@ I restanti termini sono più semplici.
 
 # Derivazione di Jeans
 
-Applicando una divergenza alla c.d.\ «legge di Newton» e sostituendo, otteniamo che
-\[
-\ddot\rho_1 - c_s^2 \nabla^2\rho_1 + 4\pi G \rho_1 \rho_0 = 0.
-\]
+-   Applicando una divergenza alla c.d.\ «legge di Newton» e sostituendo, otteniamo
+    \[
+    \ddot{\textcolor{#267342}{\rho_1}} - c_s^2 \nabla^2\textcolor{#267342}{\rho_1} + 4\pi G \textcolor{#267342}{\rho_1} \textcolor{#682673}{\rho_0} = 0.
+    \]
 
 
-L'equazione è complessa da risolvere, ma è lineare: se
-$\rho_A$ e $\rho_B$ sono due soluzioni, anche
-$\alpha \rho_A + \beta \rho_B$ è soluzione.
+-   L'equazione è complessa da risolvere, ma è lineare: se $\rho_A$ e $\rho_B$ sono due soluzioni, anche $\alpha \rho_A + \beta \rho_B$ è soluzione.
 
 
 # Derivazione di Jeans
@@ -84,15 +82,15 @@ $\alpha \rho_A + \beta \rho_B$ è soluzione.
 Sfruttiamo la linearità dell'equazione per risolverla usando
 l'analisi di Fourier. Scomponiamo quindi l'incognita in onde piane:
 \[
-\rho_1(\vec{r}, t) = \iiint_{\mathbb{R}^3}\text{d}\vec{k}\int_\mathbb{R}\text{d}\omega\,\tilde\rho_1 (\vec{k}, \omega)\,e^{i(\vec{k}\cdot\vec{r} - \omega t)}.
+\textcolor{#267342}{\rho_1}(\vec{r}, t) = \iiint_{\mathbb{R}^3}\text{d}\vec{k}\int_\mathbb{R}\text{d}\omega\,\tilde{\textcolor{#267342}{\rho_1}} (\vec{k}, \omega)\,e^{i(\vec{k}\cdot\vec{r} - \omega t)}.
 \]
 
-La funzione $\tilde\rho_1(\vec{k}, \omega)$ è la trasformata di
-Fourier di $\rho_1(\vec{r}, t)$; quindi operazioni
-differenziali su $\rho_1$ diventano algebriche su $\tilde\rho_1$:
+La funzione $\tilde{\textcolor{#267342}{\rho_1}}(\vec{k}, \omega)$ è la trasformata di
+Fourier di $\textcolor{#267342}{\rho_1}(\vec{r}, t)$; quindi operazioni
+differenziali su $\textcolor{#267342}{\rho_1}$ diventano algebriche su $\tilde{\textcolor{#267342}{\rho_1}}$:
 \[
-\nabla^2 \rho_1 \rightarrow k^2 \cdot \tilde\rho_1, \qquad
-\partial_t \rho_1 \rightarrow \omega \cdot \tilde\rho_1.
+\nabla^2 \textcolor{#267342}{\rho_1} \rightarrow k^2 \cdot \tilde{\textcolor{#267342}{\rho_1}}, \qquad
+\partial_t \textcolor{#267342}{\rho_1} \rightarrow \omega \cdot \tilde{\textcolor{#267342}{\rho_1}}.
 \]
 
 
@@ -103,7 +101,7 @@ Ricordando che
 \left\|\vec{k}\right\| = \frac{2\pi}\lambda, \quad \omega = 2\pi\nu,
 \]
 il valore di $\lambda$ che compare nell'espressione di
-$\rho_1$ corrisponde di volta in volta a una diversa
+$\textcolor{#267342}{\rho_1}$ corrisponde di volta in volta a una diversa
 scala delle perturbazioni nell'immagine:
 
 <center>![](images/plasma_fractal.jpg){height=240px}</center>
@@ -111,13 +109,13 @@ scala delle perturbazioni nell'immagine:
 
 # Derivazione di Jeans
 
-Applicando quindi la trasformata di Fourier all'equazione di $\rho_1$, otteniamo che  
+Applicando quindi la trasformata di Fourier all'equazione di $\textcolor{#267342}{\rho_1}$, otteniamo che
 \[
-\omega^2 \cdot \tilde\rho_1 = \bigl(k^2 c_s^2 - 4\pi G \rho_0\bigr)\cdot \tilde\rho_1,
+\omega^2 \cdot \tilde{\textcolor{#267342}{\rho_1}} = \bigl(k^2 c_s^2 - 4\pi G \textcolor{#682673}{\rho_0}\bigr)\cdot \tilde{\textcolor{#267342}{\rho_1}},
 \]
 ossia
   \[
-\omega^2 = k^2 c_s^2 - 4\pi G \rho_0,
+\omega^2 = k^2 c_s^2 - 4\pi G \textcolor{#682673}{\rho_0},
 \]
 che è detta **relazione di dispersione** e lega tra loro $\omega$ e $k$ (ossia, $\lambda$ e $\nu$).
 
@@ -130,7 +128,7 @@ Risolvendo, abbiamo che
 \]
 con
 \[
-k_J^2 \equiv \frac{4\pi G \rho_0}{c_s^2}.
+k_J^2 \equiv \frac{4\pi G \textcolor{#682673}{\rho_0}}{c_s^2}.
 \]
 (in assenza di gravità, $k_J = 0$ e $\omega = \pm c_S \,k$: la
 velocità del suono è sempre $c_s$).
@@ -154,14 +152,14 @@ propagazione dell'onda nel mezzo.
 
 # Derivazione di Jeans
 
-Se $k_J^2 > k^2$ allora $\omega$ è immaginario, e $\rho_1(\vec{r}, t) = A_g e^{i(\vec{k}\cdot\vec{r} - \omega t)}$ diverge come $e^{t/\tau_J}$ (collasso), con
+Se $k_J^2 > k^2$ allora $\omega$ è immaginario, e $\textcolor{#267342}{\rho_1}(\vec{r}, t) = A_g e^{i(\vec{k}\cdot\vec{r} - \omega t)}$ diverge come $e^{t/\tau_J}$ (collasso), con
 \[
-\tau_J = \frac1{k_J c_s} = \frac1{\sqrt{4\pi G \rho_0}} =
+\tau_J = \frac1{k_J c_s} = \frac1{\sqrt{4\pi G \textcolor{#682673}{\rho_0}}} =
   \frac{2.3\times 10^4\,\text{yr}}{\sqrt{n_H/10^6\,\text{cm}^{-3}}},
 \]
 se $k\ll k_J$; risultato simile al tempo di *free-fall*:
 \[
-\tau_\text{ff} = \sqrt{\frac{3\pi}{32 G\rho_0}} = 
+\tau_\text{ff} = \sqrt{\frac{3\pi}{32 G\textcolor{#682673}{\rho_0}}} =
   \frac{4.4\times 10^4\,\text{yr}}{\sqrt{n_H/10^6\,\text{cm}^{-3}}}.
 \]
 
@@ -170,25 +168,25 @@ se $k\ll k_J$; risultato simile al tempo di *free-fall*:
 
 Siccome il collasso avviene se $k_J^2 > k^2$, ossia
 \[
-\frac{4\pi G \rho_0}{c_s^2} > \left(\frac{2\pi}{\lambda}\right)^2,
+\frac{4\pi G \textcolor{#682673}{\rho_0}}{c_s^2} > \left(\frac{2\pi}{\lambda}\right)^2,
 \]
 otteniamo allora l'espressione di $R_J$:
 \[
-\lambda > c_s \sqrt{\frac\pi{G \rho_0}} \equiv R_J.
+\lambda > c_s \sqrt{\frac\pi{G \textcolor{#682673}{\rho_0}}} \equiv R_J.
 \]
 
-Per un gas monoatomico si ha $R_J = \sqrt{\frac{5\pi k_B T}{3 G m \rho_0}}$.
+Per un gas monoatomico si ha $R_J = \sqrt{\frac{5\pi k_B T}{3 G m \textcolor{#682673}{\rho_0}}}$.
 
 
 # Massa di Jeans
 
-Dalla densità $\rho_0$ e dal raggio di Jeans $R_J$ possiamo stimare
+Dalla densità $\textcolor{#682673}{\rho_0}$ e dal raggio di Jeans $R_J$ possiamo stimare
 la massa minima per provocare un collasso gravitazionale con
 \[
-M_J = \frac43 \pi R_J^3 \rho_0 = \frac{4\pi}{3\sqrt{\rho_0}}
-\left(\frac{5\pi k_B T}{3 G m}\right)^{\frac32} \propto \sqrt{\frac{T^3}{\rho_0}}
+M_J = \frac43 \pi R_J^3 \textcolor{#682673}{\rho_0} = \frac{4\pi}{3\sqrt{\textcolor{#682673}{\rho_0}}}
+\left(\frac{5\pi k_B T}{3 G m}\right)^{\frac32} \propto \sqrt{\frac{T^3}{\textcolor{#682673}{\rho_0}}}
 \]
-(«massa di Jeans»). 
+(«massa di Jeans»).
 
 
 # Massa di Jeans
@@ -203,23 +201,22 @@ con $\mu$ peso molecolare medio.
 
 
 I valori di $n$ e di $T$ nell'equazione sono abbastanza in linea con
-quelli delle nubi nel ISM: ciò è rassicurante!  
+quelli delle nubi nel ISM: ciò è rassicurante!
 
 # Jeans' swindle
 
-Abbiamo accennato a un problema fisico nei calcoli di Jeans. Il
-punto è che l'assunzione
-\[
-\nabla\phi_0 = 0
-\]
-è irrealistica, perché ciò implica che
-\[
-\nabla^2\phi_0 = 0 \quad\Rightarrow\quad 4\pi G \rho_0 = 0.
-\]
+-   Abbiamo accennato a un problema fisico nei calcoli di Jeans. Il punto è che è irrealistico supporre che
+    \[
+    \nabla\textcolor{#682673}{\phi_0} = 0
+    \]
+    perché allora
+    \[
+    \nabla^2\textcolor{#682673}{\phi_0} = 0 \quad\Rightarrow\quad 4\pi G \textcolor{#682673}{\rho_0} = 0.
+    \]
 
-Senza l'assunzione $\nabla\phi = 0$, i calcoli si complicano, ma il
-risultato non cambia qualitativamente. La nuova soluzione dipende
-però dal dettaglio della geometria della nube.
+-   Senza l'assunzione $\nabla\phi = 0$, i calcoli si complicano, ma il risultato non cambia qualitativamente.
+
+-   La soluzione corretta dipende però dal dettaglio della geometria della nube.
 
 
 # Meccanismi di collasso delle nubi
@@ -288,7 +285,7 @@ però dal dettaglio della geometria della nube.
     2\sqrt{\frac{100\,\text{K}}{10\,\text{K}}\,\frac{10^3\,\text{cm}^{-3}}{1\,\text{cm}^{-3}}}
     = 200.
     \]
-    
+
 -   È quindi più facile formare stelle in **nubi molecolari**.
 
 # Formazione stellare
@@ -408,7 +405,7 @@ Solitamente i «core» tendono ad aggregarsi in strutture dette *clump*. Il loro
 ::: notes
 
 Il problema delle misure da terra è che l'atmosfera introduce disturbi, e ci si deve quindi limitare a misurare piccole regioni di cielo alla volta.
-  
+
 :::
 
 ---
@@ -467,7 +464,7 @@ Siccome un *cold core* ha bisogno di un «involucro» caldo che lo protegga dall
     \[
     R_i = N_\text{UV},
     \]
-    con $[R_i] = \text{ionizzazioni/s}$ e 
+    con $[R_i] = \text{ionizzazioni/s}$ e
     \[
     N_\text{UV} = \int_{13.6\,\text{eV}}^\infty N(\nu)\,\text{d}\nu
     \]
@@ -480,7 +477,7 @@ Siccome un *cold core* ha bisogno di un «involucro» caldo che lo protegga dall
     \[
     \sigma \sim 10^{-17}\,\text{cm}^2.
     \]
-    
+
 -   Per densità $n_H \sim 10^3\,\text{cm}^{-3}$ si ha che il cammino libero medio di un fotone è
     \[
     \lambda \sim \frac1{n_H\,\sigma} \sim 10^{14}\,\text{cm} = 6\,\text{AU},

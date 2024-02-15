@@ -19,8 +19,11 @@
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
@@ -87,18 +90,25 @@ class="math inline">t</span>. Per un gas ideale monoatomico vale che
 adotta qualche semplificazione.</p></li>
 <li><p>Linearizziamo il sistema, sostituendo <span class="math display">
 \begin{aligned}
-  \rho(\vec{r}, t) &amp;= \rho_0 + \rho_1(\vec{r}, t), \\
-  p(\vec{r}, t) &amp;= p_0 + p_1(\vec{r}, t), \\
-  \vec{v}(\vec{r}, t) &amp;= \vec{v}_0 + \vec{v}_1(\vec{r}, t) = 0 +
-\vec{v}_1(\vec{r}, t), \\
-  \phi(\vec{r}, t) &amp;= \phi_0 + \phi_1(\vec{r}, t).
+  \rho(\vec{r}, t) &amp;= \textcolor{#682673}{\rho_0} +
+\textcolor{#267342}{\rho_1}(\vec{r}, t), \\
+  p(\vec{r}, t) &amp;= \textcolor{#682673}{p_0} +
+\textcolor{#267342}{p_1}(\vec{r}, t), \\
+  \vec{v}(\vec{r}, t) &amp;= \textcolor{#682673}{\vec{v}_0} +
+\textcolor{#267342}{\vec{v}_1}(\vec{r}, t) = 0 + \vec{v}_1(\vec{r}, t),
+\\
+  \phi(\vec{r}, t) &amp;= \textcolor{#682673}{\phi_0} +
+\textcolor{#267342}{\phi_1}(\vec{r}, t).
 \end{aligned}
-</span> I termini <span class="math inline">\rho_0</span>, <span
-class="math inline">p_0</span>, <span
-class="math inline">\vec{v}_0</span> e <span
-class="math inline">\phi_0</span> sono costanti, e vale che <span
-class="math inline">\rho_0 \gg \rho_1</span>, <span
-class="math inline">p_0 \gg p_1</span>, etc.</p></li>
+</span> I termini <span
+class="math inline">\textcolor{#682673}{\rho_0}</span>, <span
+class="math inline">\textcolor{#682673}{p_0}</span>, <span
+class="math inline">\textcolor{#682673}{\vec{v}_0}</span> e <span
+class="math inline">\textcolor{#682673}{\phi_0}</span> sono costanti, e
+vale che <span class="math inline">\textcolor{#682673}{\rho_0} \gg
+\textcolor{#267342}{\rho_1}</span>, <span
+class="math inline">\textcolor{#682673}{p_0} \gg
+\textcolor{#267342}{p_1}</span>, etc.</p></li>
 </ul>
 </section>
 <section id="derivazione-di-jeans-1" class="slide level1">
@@ -108,8 +118,10 @@ class="math inline">p_0 \gg p_1</span>, etc.</p></li>
 <center>
 <p><img data-src="images/plasma_fractal.jpg" height="280" /></p>
 </center></li>
-<li><p>Stiamo imponendo che le variazioni di densità ρ₁ siano piccole
-rispetto alla densità media ρ₀.</p></li>
+<li><p>Stiamo imponendo che le variazioni di densità <span
+class="math inline">\textcolor{#267342}{\rho_1}</span> siano piccole
+rispetto alla densità media <span
+class="math inline">\textcolor{#682673}{\rho_0}</span>.</p></li>
 </ul>
 </section>
 <section id="derivazione-di-jeans-2" class="slide level1">
@@ -118,43 +130,61 @@ rispetto alla densità media ρ₀.</p></li>
 es. il termine <span class="math inline">-\vec{\nabla} p/\rho</span>
 diventa <span class="math display">
 \begin{aligned}
-  -\frac1\rho\vec{\nabla} p &amp;= -\frac{\vec{\nabla}p_1}{\rho_0 +
-    \rho_1} \approx -\frac{\vec{\nabla}p_1}{\rho_0} \left(1 -
-    \frac{\rho_1}{\rho_0}\right) = \\
-  &amp;= -\frac{\vec{\nabla}p_1}{\rho_0}
-  + \frac{\rho_1}{\rho_0^2}\vec{\nabla} p_1 \approx
--\frac{\vec{\nabla}p_1}{\rho_0}.
+  -\frac1\rho\vec{\nabla} p &amp;=
+-\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0}
++
+    \textcolor{#267342}{\rho_1}} \approx
+-\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0}}
+\left(1 -
+    \frac{\textcolor{#267342}{\rho_1}}{\textcolor{#682673}{\rho_0}}\right)
+= \\
+  &amp;=
+-\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0}}
+  +
+\frac{\textcolor{#267342}{\rho_1}}{\textcolor{#682673}{\rho_0}^2}\vec{\nabla}
+\textcolor{#267342}{p_1} \approx
+-\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0}}.
 \end{aligned}
 </span> I restanti termini sono più semplici.</p>
 </section>
 <section id="derivazione-di-jeans-3" class="slide level1">
 <h1>Derivazione di Jeans</h1>
-<p>Applicando una divergenza alla c.d. «legge di Newton» e sostituendo,
-otteniamo che <span class="math display">
-\ddot\rho_1 - c_s^2 \nabla^2\rho_1 + 4\pi G \rho_1 \rho_0 = 0.
-</span></p>
-<p>L’equazione è complessa da risolvere, ma è lineare: se <span
+<ul>
+<li><p>Applicando una divergenza alla c.d. «legge di Newton» e
+sostituendo, otteniamo <span class="math display">
+\ddot{\textcolor{#267342}{\rho_1}} - c_s^2
+\nabla^2\textcolor{#267342}{\rho_1} + 4\pi G \textcolor{#267342}{\rho_1}
+\textcolor{#682673}{\rho_0} = 0.
+</span></p></li>
+<li><p>L’equazione è complessa da risolvere, ma è lineare: se <span
 class="math inline">\rho_A</span> e <span
 class="math inline">\rho_B</span> sono due soluzioni, anche <span
-class="math inline">\alpha \rho_A + \beta \rho_B</span> è soluzione.</p>
+class="math inline">\alpha \rho_A + \beta \rho_B</span> è
+soluzione.</p></li>
+</ul>
 </section>
 <section id="derivazione-di-jeans-4" class="slide level1">
 <h1>Derivazione di Jeans</h1>
 <p>Sfruttiamo la linearità dell’equazione per risolverla usando
 l’analisi di Fourier. Scomponiamo quindi l’incognita in onde piane:
 <span class="math display">
-\rho_1(\vec{r}, t) =
-\iiint_{\mathbb{R}^3}\text{d}\vec{k}\int_\mathbb{R}\text{d}\omega\,\tilde\rho_1
+\textcolor{#267342}{\rho_1}(\vec{r}, t) =
+\iiint_{\mathbb{R}^3}\text{d}\vec{k}\int_\mathbb{R}\text{d}\omega\,\tilde{\textcolor{#267342}{\rho_1}}
 (\vec{k}, \omega)\,e^{i(\vec{k}\cdot\vec{r} - \omega t)}.
 </span></p>
-<p>La funzione <span class="math inline">\tilde\rho_1(\vec{k},
+<p>La funzione <span
+class="math inline">\tilde{\textcolor{#267342}{\rho_1}}(\vec{k},
 \omega)</span> è la trasformata di Fourier di <span
-class="math inline">\rho_1(\vec{r}, t)</span>; quindi operazioni
-differenziali su <span class="math inline">\rho_1</span> diventano
-algebriche su <span class="math inline">\tilde\rho_1</span>: <span
+class="math inline">\textcolor{#267342}{\rho_1}(\vec{r}, t)</span>;
+quindi operazioni differenziali su <span
+class="math inline">\textcolor{#267342}{\rho_1}</span> diventano
+algebriche su <span
+class="math inline">\tilde{\textcolor{#267342}{\rho_1}}</span>: <span
 class="math display">
-\nabla^2 \rho_1 \rightarrow k^2 \cdot \tilde\rho_1, \qquad
-\partial_t \rho_1 \rightarrow \omega \cdot \tilde\rho_1.
+\nabla^2 \textcolor{#267342}{\rho_1} \rightarrow k^2 \cdot
+\tilde{\textcolor{#267342}{\rho_1}}, \qquad
+\partial_t \textcolor{#267342}{\rho_1} \rightarrow \omega \cdot
+\tilde{\textcolor{#267342}{\rho_1}}.
 </span></p>
 </section>
 <section id="derivazione-di-jeans-5" class="slide level1">
@@ -162,8 +192,9 @@ class="math display">
 <p>Ricordando che <span class="math display">
 \left\|\vec{k}\right\| = \frac{2\pi}\lambda, \quad \omega = 2\pi\nu,
 </span> il valore di <span class="math inline">\lambda</span> che
-compare nell’espressione di <span class="math inline">\rho_1</span>
-corrisponde di volta in volta a una diversa scala delle perturbazioni
+compare nell’espressione di <span
+class="math inline">\textcolor{#267342}{\rho_1}</span> corrisponde di
+volta in volta a una diversa scala delle perturbazioni
 nell’immagine:</p>
 <center>
 <img data-src="images/plasma_fractal.jpg" height="240" />
@@ -172,12 +203,13 @@ nell’immagine:</p>
 <section id="derivazione-di-jeans-6" class="slide level1">
 <h1>Derivazione di Jeans</h1>
 <p>Applicando quindi la trasformata di Fourier all’equazione di <span
-class="math inline">\rho_1</span>, otteniamo che<br />
+class="math inline">\textcolor{#267342}{\rho_1}</span>, otteniamo che
 <span class="math display">
-\omega^2 \cdot \tilde\rho_1 = \bigl(k^2 c_s^2 - 4\pi G \rho_0\bigr)\cdot
-\tilde\rho_1,
+\omega^2 \cdot \tilde{\textcolor{#267342}{\rho_1}} = \bigl(k^2 c_s^2 -
+4\pi G \textcolor{#682673}{\rho_0}\bigr)\cdot
+\tilde{\textcolor{#267342}{\rho_1}},
 </span> ossia <span class="math display">
-\omega^2 = k^2 c_s^2 - 4\pi G \rho_0,
+\omega^2 = k^2 c_s^2 - 4\pi G \textcolor{#682673}{\rho_0},
 </span> che è detta <strong>relazione di dispersione</strong> e lega tra
 loro <span class="math inline">\omega</span> e <span
 class="math inline">k</span> (ossia, <span
@@ -189,7 +221,7 @@ class="math inline">\nu</span>).</p>
 <p>Risolvendo, abbiamo che <span class="math display">
 \omega = \pm c_s \sqrt{k^2 - k_J^2},
 </span> con <span class="math display">
-k_J^2 \equiv \frac{4\pi G \rho_0}{c_s^2}.
+k_J^2 \equiv \frac{4\pi G \textcolor{#682673}{\rho_0}}{c_s^2}.
 </span> (in assenza di gravità, <span class="math inline">k_J = 0</span>
 e <span class="math inline">\omega = \pm c_S \,k</span>: la velocità del
 suono è sempre <span class="math inline">c_s</span>).</p>
@@ -212,15 +244,16 @@ class="math inline">c_s</span> perché <span class="math inline">k_J
 <h1>Derivazione di Jeans</h1>
 <p>Se <span class="math inline">k_J^2 &gt; k^2</span> allora <span
 class="math inline">\omega</span> è immaginario, e <span
-class="math inline">\rho_1(\vec{r}, t) = A_g e^{i(\vec{k}\cdot\vec{r} -
-\omega t)}</span> diverge come <span
+class="math inline">\textcolor{#267342}{\rho_1}(\vec{r}, t) = A_g
+e^{i(\vec{k}\cdot\vec{r} - \omega t)}</span> diverge come <span
 class="math inline">e^{t/\tau_J}</span> (collasso), con <span
 class="math display">
-\tau_J = \frac1{k_J c_s} = \frac1{\sqrt{4\pi G \rho_0}} =
+\tau_J = \frac1{k_J c_s} = \frac1{\sqrt{4\pi G
+\textcolor{#682673}{\rho_0}}} =
   \frac{2.3\times 10^4\,\text{yr}}{\sqrt{n_H/10^6\,\text{cm}^{-3}}},
 </span> se <span class="math inline">k\ll k_J</span>; risultato simile
 al tempo di <em>free-fall</em>: <span class="math display">
-\tau_\text{ff} = \sqrt{\frac{3\pi}{32 G\rho_0}} =
+\tau_\text{ff} = \sqrt{\frac{3\pi}{32 G\textcolor{#682673}{\rho_0}}} =
   \frac{4.4\times 10^4\,\text{yr}}{\sqrt{n_H/10^6\,\text{cm}^{-3}}}.
 </span></p>
 </section>
@@ -228,23 +261,27 @@ al tempo di <em>free-fall</em>: <span class="math display">
 <h1>Derivazione di Jeans</h1>
 <p>Siccome il collasso avviene se <span class="math inline">k_J^2 &gt;
 k^2</span>, ossia <span class="math display">
-\frac{4\pi G \rho_0}{c_s^2} &gt; \left(\frac{2\pi}{\lambda}\right)^2,
+\frac{4\pi G \textcolor{#682673}{\rho_0}}{c_s^2} &gt;
+\left(\frac{2\pi}{\lambda}\right)^2,
 </span> otteniamo allora l’espressione di <span
 class="math inline">R_J</span>: <span class="math display">
-\lambda &gt; c_s \sqrt{\frac\pi{G \rho_0}} \equiv R_J.
+\lambda &gt; c_s \sqrt{\frac\pi{G \textcolor{#682673}{\rho_0}}} \equiv
+R_J.
 </span></p>
 <p>Per un gas monoatomico si ha <span class="math inline">R_J =
-\sqrt{\frac{5\pi k_B T}{3 G m \rho_0}}</span>.</p>
+\sqrt{\frac{5\pi k_B T}{3 G m \textcolor{#682673}{\rho_0}}}</span>.</p>
 </section>
 <section id="massa-di-jeans" class="slide level1">
 <h1>Massa di Jeans</h1>
-<p>Dalla densità <span class="math inline">\rho_0</span> e dal raggio di
+<p>Dalla densità <span
+class="math inline">\textcolor{#682673}{\rho_0}</span> e dal raggio di
 Jeans <span class="math inline">R_J</span> possiamo stimare la massa
 minima per provocare un collasso gravitazionale con <span
 class="math display">
-M_J = \frac43 \pi R_J^3 \rho_0 = \frac{4\pi}{3\sqrt{\rho_0}}
+M_J = \frac43 \pi R_J^3 \textcolor{#682673}{\rho_0} =
+\frac{4\pi}{3\sqrt{\textcolor{#682673}{\rho_0}}}
 \left(\frac{5\pi k_B T}{3 G m}\right)^{\frac32} \propto
-\sqrt{\frac{T^3}{\rho_0}}
+\sqrt{\frac{T^3}{\textcolor{#682673}{\rho_0}}}
 </span> («massa di Jeans»).</p>
 </section>
 <section id="massa-di-jeans-1" class="slide level1">
@@ -261,17 +298,20 @@ quelli delle nubi nel ISM: ciò è rassicurante!</p>
 </section>
 <section id="jeans-swindle" class="slide level1">
 <h1>Jeans’ swindle</h1>
-<p>Abbiamo accennato a un problema fisico nei calcoli di Jeans. Il punto
-è che l’assunzione <span class="math display">
-\nabla\phi_0 = 0
-</span> è irrealistica, perché ciò implica che <span
-class="math display">
-\nabla^2\phi_0 = 0 \quad\Rightarrow\quad 4\pi G \rho_0 = 0.
-</span></p>
-<p>Senza l’assunzione <span class="math inline">\nabla\phi = 0</span>, i
-calcoli si complicano, ma il risultato non cambia qualitativamente. La
-nuova soluzione dipende però dal dettaglio della geometria della
-nube.</p>
+<ul>
+<li><p>Abbiamo accennato a un problema fisico nei calcoli di Jeans. Il
+punto è che è irrealistico supporre che <span class="math display">
+\nabla\textcolor{#682673}{\phi_0} = 0
+</span> perché allora <span class="math display">
+\nabla^2\textcolor{#682673}{\phi_0} = 0 \quad\Rightarrow\quad 4\pi G
+\textcolor{#682673}{\rho_0} = 0.
+</span></p></li>
+<li><p>Senza l’assunzione <span class="math inline">\nabla\phi =
+0</span>, i calcoli si complicano, ma il risultato non cambia
+qualitativamente.</p></li>
+<li><p>La soluzione corretta dipende però dal dettaglio della geometria
+della nube.</p></li>
+</ul>
 </section>
 <section id="meccanismi-di-collasso-delle-nubi" class="slide level1">
 <h1>Meccanismi di collasso delle nubi</h1>
