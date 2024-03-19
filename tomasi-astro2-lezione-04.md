@@ -1,11 +1,3 @@
----
-title: "Lezione di Astronomia II – 4"
-author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "31 Marzo 2023"
-css:
-- ./css/custom.css
-...
-
 # La polvere nel mezzo interstellare
 
 ---
@@ -401,3 +393,12 @@ Per avere un modello realistico, bisogna anche tenere conto di altri effetti:
 <center>![](images/planck_spinning_dust_map.png){height=520px}</center>
 
 Densità colonnare $N_\text{col}$ della «componente anomala» della polvere interstellare, misurata da Planck e una survey radio a 408 MHz (Haslam, 1982).
+
+
+---
+title: "Lezione di Astronomia II – 4"
+author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
+date: "5 aprile 2024"
+css:
+- ./css/custom.css
+...

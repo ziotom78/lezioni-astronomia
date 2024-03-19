@@ -19,8 +19,11 @@
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
@@ -56,7 +59,7 @@
   <h1 class="title">Lezione di Astronomia II – 1</h1>
   <p class="author">Maurizio Tomasi (<a
 href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
-  <p class="date">23 Marzo 2023</p>
+  <p class="date">21 marzo 2024</p>
 </section>
 
 <section id="come-si-usa-ariel" class="slide level1">
@@ -70,25 +73,15 @@ le sezioni del sito</em>.</p>
 <section id="valutazioni-sulla-didattica" class="slide level1">
 <h1>Valutazioni sulla didattica</h1>
 <ul>
-<li><p>Le valutazioni di queste lezioni negli anni passati non hanno
-mostrato criticità</p></li>
-<li><p>I commenti liberi però sono stati molto pochi: due anni fa ce ne
-sono stati appena tre, l’anno scorso addirittura nessuno!</p></li>
-<li><p>Se non c’è nulla da commentare, vi chiederei di scriverlo
-esplicitamente nei commenti liberi!</p></li>
+<li><p>Tre criticità evidenziate dagli studenti:</p>
+<ol>
+<li>Parlo troppo in fretta!</li>
+<li>Faccio intervenire poco.</li>
+<li>Le slide sono a volte impaginate in modo strano.</li>
+</ol></li>
+<li><p>Quest’anno ho cercato di implementare una soluzione per ciascun
+problema.</p></li>
 </ul>
-</section>
-<section id="valutazioni-a.a.-20202021" class="slide level1">
-<h1>Valutazioni A.A. 2020/2021</h1>
-<center>
-<img data-src="images/valutazioni-studenti-anno-2021.png" />
-</center>
-</section>
-<section id="valutazioni-a.a.-20212022" class="slide level1">
-<h1>Valutazioni A.A. 2021/2022</h1>
-<center>
-<img data-src="images/valutazioni-studenti-anno-2022.png" />
-</center>
 </section>
 <section id="la-via-lattea" class="slide level1">
 <h1>La Via Lattea</h1>
@@ -515,10 +508,33 @@ class="math display">
 U/A \sim \frac{\hbar^2}{R^2 m_p} \sim 10\,\text{MeV/nucleone}.
 </span></p>
 </section>
+<section id="sistemi-virializzati" class="slide level1">
+<h1>Sistemi “virializzati”</h1>
+<ul>
+<li><p>Un sistema per cui vale il teorema del viriale si dice
+“virializzato”</p></li>
+<li><p>I sistemi virializzati dimostrano notevole simmetria, perché
+l’energia cinetica dei loro componenti si è distribuita
+statisticamente</p></li>
+<li><p>È una condizione simile a quella dell’equilibrio
+termodinamico</p></li>
+<li><p>La prossima animazione mostra un esempio 2D molto simpatico ed
+efficace</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/C6eY6HMBa2Q?si=iDW_tZ2ul2aXUByf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
+<p><a
+href="https://www.youtube.com/watch&amp;v=C6eY6HMBa2Q">Gravitational
+collapse of Spongebob</a></p>
+</section>
 <section id="dinamica-degli-a.g." class="slide level1">
 <h1>Dinamica degli a.g.</h1>
 <ul>
-<li>Consideriamo ora un ammasso globulare.</li>
+<li>Gli ammassi globulari sono a simmetria sferica, quindi
+virializzati.</li>
 <li>Usando il teorema del viriale, calcoliamo le seguenti quantità per
 un ammasso tipico (<span class="math inline">R = 5\,\text{pc}</span>,
 <span class="math inline">N = 10^6</span>):

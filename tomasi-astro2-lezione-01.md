@@ -1,11 +1,3 @@
----
-title: "Lezione di Astronomia II – 1"
-author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "23 Marzo 2023"
-css:
-- ./css/custom.css
-...
-
 # Come si usa Ariel
 
 Per ricevere le notifiche via email, occorre abilitarle *in tutte
@@ -15,23 +7,13 @@ Per ricevere le notifiche via email, occorre abilitarle *in tutte
 
 # Valutazioni sulla didattica
 
--   Le valutazioni di queste lezioni negli anni passati non hanno mostrato criticità
+-   Tre criticità evidenziate dagli studenti:
 
--   I commenti liberi però sono stati molto pochi: due anni fa ce ne sono stati appena tre, l'anno scorso addirittura nessuno!
+    #.   Parlo troppo in fretta!
+    #.   Faccio intervenire poco.
+    #.   Le slide sono a volte impaginate in modo strano.
 
-  -   Se non c'è nulla da commentare, vi chiederei di scriverlo esplicitamente nei commenti liberi!
-
-# Valutazioni A.A. 2020/2021
-
-<center>
-![](images/valutazioni-studenti-anno-2021.png)
-</center>
-
-# Valutazioni A.A. 2021/2022
-
-<center>
-![](images/valutazioni-studenti-anno-2022.png)
-</center>
+-   Quest'anno ho cercato di implementare una soluzione per ciascun problema.
 
 
 # La Via Lattea
@@ -110,7 +92,7 @@ usare la termodinamica classica per descriverli?
 -   Da questo punto di vista la gravità è un problema!
 
     > Properties of systems with long range interactions are still poorly understood despite being of importance in most areas of physics.
-    
+
     ([*Dynamics and Thermodynamics of Systems with Long Range Interactions*](https://link.springer.com/book/10.1007/3-540-45835-2), Springer)
 
 # Teorema del viriale
@@ -137,7 +119,7 @@ usare la termodinamica classica per descriverli?
     G \equiv \sum_{i=1}^N (P_i - O) \cdot \vec p_i = \sum_{i=1}^N \vec r_i \cdot \vec p_i,
     \]
     dove $\vec r_i = P_i - O$ è il vettore che punta verso la particella $i$-esima.
-    
+
 -   Se le particelle si trovano in un volume limitato $V$, allora
     1.  $G$ è una quantità limitata;
     2.  Dopo un certo tempo, $G$ tende a diventare costante.
@@ -308,9 +290,25 @@ ossia $U/A$:
 U/A \sim \frac{\hbar^2}{R^2 m_p} \sim 10\,\text{MeV/nucleone}.
 \]
 
+# Sistemi “virializzati”
+
+-   Un sistema per cui vale il teorema del viriale si dice “virializzato”
+
+-   I sistemi virializzati dimostrano notevole simmetria, perché l'energia cinetica dei loro componenti si è distribuita statisticamente
+
+-   È una condizione simile a quella dell'equilibrio termodinamico
+
+-   La prossima animazione mostra un esempio 2D molto simpatico ed efficace
+
+---
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/C6eY6HMBa2Q?si=iDW_tZ2ul2aXUByf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+[Gravitational collapse of Spongebob](https://www.youtube.com/watch&v=C6eY6HMBa2Q)
+
 # Dinamica degli a.g.
 
--   Consideriamo ora un ammasso globulare.
+-   Gli ammassi globulari sono a simmetria sferica, quindi virializzati.
 -   Usando il teorema del viriale, calcoliamo le seguenti quantità per un ammasso tipico ($R = 5\,\text{pc}$, $N = 10^6$):
     #.   Velocità di fuga;
     #.   Energia potenziale;
@@ -546,3 +544,12 @@ che è implausibile! (L'universo ha meno di 14 miliardi di anni).
 
 Questo contrasta col fatto che la maggior parte degli ammassi
 globulari sembri essere già rilassata.
+
+
+---
+title: "Lezione di Astronomia II – 1"
+author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
+date: "21 marzo 2024"
+css:
+- ./css/custom.css
+...

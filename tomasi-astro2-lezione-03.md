@@ -1,11 +1,3 @@
----
-title: "Lezione di Astronomia II – 3"
-author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "30 Marzo 2023"
-css:
-- ./css/custom.css
-...
-
 # Il mezzo interstellare (ISM)
 
 # Il piano galattico
@@ -368,3 +360,12 @@ Esistono due tipi di grani di polvere:
 <center>![](images/harwit-starlight-polarization.png){height=660px}</center>
 
 <small>Harwit, *Astrophysical concepts* (4th edition), pag.\ 426, Springer (2006)</small>
+
+
+---
+title: "Lezione di Astronomia II – 3"
+author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
+date: "4 aprile 2024"
+css:
+- ./css/custom.css
+...

@@ -1,12 +1,3 @@
----
-title: Lezione di Astronomia II – 2
-author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: 24 Marzo 2023
-css:
-- ./css/custom.css
-...
-
-
 # Tempo di rilassamento
 
 -   Nel calcolo di ieri (tempo di rilassamento di un ammasso globulare) avevamo considerato solo le interazioni a *corto* raggio, mentre sono rilevanti anche gli scambi energetici a distanza.
@@ -290,3 +281,12 @@ Perché gli ammassi aperti hanno vita così breve? Alcune ragioni:
 | Piano galattico           | Alone sferico                           |
 | Gas e polvere             | Niente gas né polvere (ma nebulose pl.) |
 | Alta metallicità          | Bassa metallicità                       |
+
+
+---
+title: Lezione di Astronomia II – 2
+author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
+date: 22 marzo 2024
+css:
+- ./css/custom.css
+...
