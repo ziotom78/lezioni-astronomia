@@ -55,26 +55,6 @@ Per ricevere le notifiche via email, occorre abilitarle *in tutte
 | # di ammassi noti    | 10³                                 | ~160                                    |
 | Dove?                | Disco                               | Alone stellare (~1% della massa totale) |
 
-# NGC104 (47 Tuc, ammasso g.)
-
-<center>![](images/ngc104.jpg){height=500px}</center>
-
-  $N \sim 3\times 10^5$, $2r \sim 100\,\text{ly}$, $D \sim
-  20\,\text{kly}$, $m_V = 4.9\,\text{mag}$.
-
-# M3 (ammasso g.)
-
-<center>![](images/m3.jpg){height=500px}</center>
-
-  $N \sim 5\times 10^5$, $2r \sim 150\,\text{ly}$, $D \sim
-  35\,\text{kly}$, $m_V = 6.2\,\text{mag}$.
-
-# M13 (ammasso g.)
-
-<center>![](images/m13.jpg){height=500px}</center>
-
-  $N \sim 6\times 10^5$, $2r \sim 145\,\text{ly}$, $D \sim
-  22\,\text{kly}$, $m_V = 5.8\,\text{mag}$.
 
 # Termodinamica e astrofisica
 
@@ -220,6 +200,24 @@ implica che
 
 -   (In realtà la relazione $U \propto r^{-1}$ vale solo lontano dal centro, dove invece $U \propto M(r) / r \propto r^2$ e il moto è come quello di una molla).
 
+
+# Sistemi “virializzati”
+
+-   Un sistema per cui vale il teorema del viriale si dice “virializzato”
+
+-   I sistemi virializzati dimostrano notevole simmetria, perché l'energia cinetica dei loro componenti si è distribuita statisticamente
+
+-   È una condizione simile a quella dell'equilibrio termodinamico
+
+-   La prossima animazione mostra un esempio 2D molto simpatico ed efficace
+
+---
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/C6eY6HMBa2Q?si=iDW_tZ2ul2aXUByf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+[Gravitational collapse of Spongebob](https://www.youtube.com/watch&v=C6eY6HMBa2Q)
+
+
 # Livello di energia potenziale
 
 -   Ricordate che l'energia potenziale è definita a meno di una costante additiva (deriva da un integrale indefinito).
@@ -290,29 +288,11 @@ ossia $U/A$:
 U/A \sim \frac{\hbar^2}{R^2 m_p} \sim 10\,\text{MeV/nucleone}.
 \]
 
-# Sistemi “virializzati”
-
--   Un sistema per cui vale il teorema del viriale si dice “virializzato”
-
--   I sistemi virializzati dimostrano notevole simmetria, perché l'energia cinetica dei loro componenti si è distribuita statisticamente
-
--   È una condizione simile a quella dell'equilibrio termodinamico
-
--   La prossima animazione mostra un esempio 2D molto simpatico ed efficace
-
----
-
-<iframe width="960" height="540" src="https://www.youtube.com/embed/C6eY6HMBa2Q?si=iDW_tZ2ul2aXUByf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-[Gravitational collapse of Spongebob](https://www.youtube.com/watch&v=C6eY6HMBa2Q)
-
 # Dinamica degli a.g.
 
 -   Gli ammassi globulari sono a simmetria sferica, quindi virializzati.
--   Usando il teorema del viriale, calcoliamo le seguenti quantità per un ammasso tipico ($R = 5\,\text{pc}$, $N = 10^6$):
+-   Usando il teorema del viriale, calcoliamo le seguenti quantità per un ammasso tipico:
     #.   Velocità di fuga;
-    #.   Energia potenziale;
-    #.   Energia cinetica;
     #.   Velocità quadratica media;
     #.   Massa.
 
@@ -332,57 +312,20 @@ dell'energia tra i due istanti mostrati in figura.
 
 # Velocità di fuga
 
-Nel caso di una stella posta inizialmente a una distanza $R$ dal
-centro di massa dell'ammasso, l'equazione di conservazione
-dell'energia diventa:
-\[
-\frac12 M_* v_f^2 - G \frac{M_*\, M_\text{GC}}R = 0,
-\]
-da cui
-\[
-  v_f = \sqrt{\frac{2 G M_\text{GC}}R} \approx 29\,\text{km/s}.
-\]
+-   Nel caso di una stella posta inizialmente a una distanza $R$ dal
+    centro di massa dell'ammasso, l'equazione di conservazione
+    dell'energia diventa:
+    \[
+    \frac12 M_* v_f^2 - G \frac{M_*\, M_\text{GC}}R = 0,
+    \]
 
+-   Se $M_\text{GC} \sim 10^6\,M_\odot$ e $R \sim 10\,\text{pc}$, si ha che
+    \[
+      v_f = \sqrt{\frac{2 G M_\text{GC}}R} \sim 30\,\text{km/s}.
+    \]
 
-Notate che per una particella che sfugge l'energia totale è
-**nulla**.
+-   Notate che per una particella che sfugge l'energia totale è **nulla**.
 
-# Energia potenziale di un a.g.
-
-Sappiamo che per una distribuzione di massa con simmetria sferica
-vale che
-\[
-U = -\frac35 \frac{G M^2}R,
-\]
-anche nel caso in cui $\rho$ dipenda dal raggio $r$.
-
-
-# Energia potenziale di un a.g.
-
-Per un ammasso globulare si ha tipicamente che
-\[
-N \sim 10^6, \quad M_* \sim 0.5 M_\odot, \quad R_\text{core} \sim 5\,\text{pc}.
-\]
-La sua energia potenziale è quindi
-\[
-U = -\frac35 \frac{G (N M_*)^2}{R_\text{core}} = -2.5\times 10^{51}\,\text{erg}.
-\]
-(Per confronto, il Sole ha un'energia potenziale gravitazionale di
-$\sim 10^{48}\,\text{erg}$).
-
-
-# Energia cinetica di un a.g.
-
-Se l'ammasso è dinamicamente rilassato, allora
-\[
-K = -\frac{U}2 \sim 1.2\times 10^{51}\,\text{erg},
-\]
-e quindi l'energia totale è
-\[
-  E = K + U = -1.2 \times 10^{51}\,\text{erg}.
-\]
-
-L'energia totale di un sistema virializzato è **negativa**.
 
 # Velocità quadratica media
 
@@ -405,7 +348,7 @@ Di conseguenza, dal teorema del viriale
 \]
 abbiamo che
 \[
-  v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}} \approx 16\,\text{km/s}.
+  v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}} \sim 15\,\text{km/s}.
 \]
 
 
@@ -413,7 +356,7 @@ abbiamo che
 
 Dal momento che
 \[
-\left(v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}} \approx 16\,\text{km/s}\right) < \left(v_f = \sqrt{\frac{2 G M_\text{GC}}R} \approx 25\,\text{km/s}\right),
+\left(v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}}\right) < \left(v_f = \sqrt{\frac{2 G M_\text{GC}}R}\right),
 \]
 ciò conferma l'ipotesi che l'ammasso globulare (e in generale
 qualsiasi sistema gravitazionale virializzato) sia un sistema legato.
@@ -437,7 +380,7 @@ qualsiasi sistema gravitazionale virializzato) sia un sistema legato.
 # Massa viriale degli a.g.
 
 Per il nostro ammasso tipico con $R = 5\,\text{pc}$ e $v =
-16\,\text{km/s}$ abbiamo che
+15\,\text{km/s}$ abbiamo che
 \[
 M \sim 10^{39}\,\text{g} \approx 5\times 10^5\,M_\odot.
 \]
@@ -463,17 +406,17 @@ Questo valore della massa è detto **massa viriale**.
 
 # Tempo di rilassamento
 
-Possiamo definire un'interazione tra due stelle come la condizione
-in cui l'energia cinetica diventa uguale all'energia potenziale tra
-le due (perché?):
-\[
-\frac12 M_* v^2 \sim G \frac{M_*^2}r.
-\]
-Ciò avviene quando la distanza tra le due stelle è
-\[
-r_c \sim 2 G \frac{M_*}{v^2}.
-\]
-Definiamo questo come il **raggio collisionale**.
+-   Possiamo definire un'interazione tra due stelle come la condizione
+    in cui l'energia cinetica diventa uguale all'energia potenziale tra
+    le due (perché?):
+    \[
+    \frac12 M_* v^2 \sim G \frac{M_*^2}r.
+    \]
+-   Ciò avviene quando la distanza tra le due stelle è
+    \[
+    r_c \sim 2 G \frac{M_*}{v^2}.
+    \]
+-   Il valore $r_c$ è detto **raggio collisionale**.
 
 
 # Tempo di rilassamento
