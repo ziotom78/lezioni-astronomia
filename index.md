@@ -10,8 +10,8 @@
 
 # Astronomia II
 
-- 2024-03-23: [Lezione 1](tomasi-astro2-lezione-01.html) (sistemi stellari 1), [versione stampabile](tomasi-astro2-lezione-01.html?print-pdf)
-- 2024-03-24: [Lezione 2](tomasi-astro2-lezione-02.html) (sistemi stellari 2), [versione stampabile](tomasi-astro2-lezione-02.html?print-pdf)
+- 2024-03-23: [Lezione 1](tomasi-astro2-lezione-01.html) (sistemi stellari 1), [PDF](pdf/tomasi-astro2-lezione-01.pdf)
+- 2024-03-24: [Lezione 2](tomasi-astro2-lezione-02.html) (sistemi stellari 2), [PDF](pdf/tomasi-astro2-lezione-02.pdf)
 <!--
 - 2024-03-30: [Lezione 3](tomasi-astro2-lezione-03.html) (mezzo interstellare 1), [versione stampabile](tomasi-astro2-lezione-03.html?print-pdf)
 - 2024-03-31: [Lezione 4](tomasi-astro2-lezione-04.html) (mezzo interstellare 2), [versione stampabile](tomasi-astro2-lezione-04.html?print-pdf)
