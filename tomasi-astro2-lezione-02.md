@@ -1,8 +1,108 @@
+
 # Tempo di rilassamento
 
--   Nel calcolo di ieri (tempo di rilassamento di un ammasso globulare) avevamo considerato solo le interazioni a *corto* raggio, mentre sono rilevanti anche gli scambi energetici a distanza.
+# Tempo di rilassamento
 
--   Nello specifico, avevamo supposto che si abbia interazione quando la distanza tra due stelle sia inferiore al raggio collisionale $r_c$ dato da
+-   Veniamo ora al tempo necessario perché un ammasso diventi dinamicamente rilassato.
+
+-   Inizialmente le stelle di un ammasso possono *non* essere rilassate: in tal caso le più veloci ($v > v_f$) escono dall'ammasso, e questa «evaporazione» cambia la distribuzione delle $v$.
+
+-   In più, le interazioni gravitazionali provocano una ridistribuzione dell'energia, che porta l'ammasso verso lo stato rilassato.
+
+
+# Tempo di rilassamento
+
+-   Per quantificare il tempo di rilassamento, possiamo supporre che esso sia il tempo necessario affinché ciascuna delle stelle dell'ammasso interagiscano un certo numero $N$ di volte con le sue compagne.
+-   (Questo è analogo al modo in cui si studia un gas ideale che sta raggiungendo l'equilibrio termodinamico).
+
+
+# Tempo di rilassamento
+
+-   Possiamo definire un'interazione tra due stelle come la condizione
+    in cui l'energia cinetica diventa uguale all'energia potenziale tra
+    le due (perché?):
+    \[
+    \frac12 M_* v^2 \sim G \frac{M_*^2}r.
+    \]
+-   Ciò avviene quando la distanza tra le due stelle è
+    \[
+    r_c \sim 2 G \frac{M_*}{v^2}.
+    \]
+-   Il valore $r_c$ è detto **raggio collisionale**.
+
+
+# Tempo di rilassamento
+
+-   Quanto è probabile che una stella interagisca con altre? Dipende da quanto velocemente la stella si muove e dalla densità delle sue compagne:
+
+    <center>![](images/cross-section.png){height=300px}</center>
+
+-   Nel volume $V = \pi r^2\,\Delta x$ ci sono $V n = (\pi r^2\,\Delta x)\,n$ stelle (con $n$ densità numerica).
+
+
+# Tempo di rilassamento
+
+<center>![](images/cross-section.png){height=180px}</center>
+
+Se la distanza percorsa dalla stella è $\Delta x = v \Delta t$, allora durante il tempo di rilassamento $\Delta t_r$ la stella interagisce collisionalmente con le $N_\text{int}$ stelle nel cilindro che ha base $r = r_c$:
+\[
+(\pi r_c^2\,v\,\Delta t_r)\,n = N_\text{int} \quad \Rightarrow \quad \Delta t_r = \frac{N_\text{int}}{\pi r_c^2\,v\,n}.
+\]
+
+
+# Tempo di rilassamento
+
+Se ora poniamo $N_\text{int} \approx 1$ e sostituiamo l'espressione $r_c \sim 2 G \frac{M_*}{v^2}$ in
+\[
+\Delta t_r = \frac{N_\text{int}}{\pi r_c^2\,v\,n}
+\]
+otteniamo:
+\[
+\Delta t_r = \frac{v^3}{4 \pi G^2 M_*^2\,n}.
+\]
+
+
+# Tempo di rilassamento
+
+L'espressione di $\Delta t_r$ può essere molto semplificata.
+Innanzitutto, $n = N/\bigl(\frac43 \pi R^3\bigr)$; inoltre possiamo
+usare il teorema del viriale:
+\[
+\begin{aligned}
+K &= -\frac12 U, \\
+\frac12 N M_* v^2 &= \frac35 G \frac{(N M_*)^2}R, \\
+G M_* N &\approx R v^2\quad\text{(supponendo $\frac35
+  \approx \frac12$)}.
+\end{aligned}
+\]
+
+# Tempo di rilassamento
+
+Sostituendo le espressioni di $n$ e $G M_* N$, otteniamo
+\[
+\Delta t_r \approx \frac{N R}{3 v},
+\]
+quindi il tempo di rilassamento è dello stesso ordine di grandezza
+del tempo richiesto a compiere $N$ attraversamenti dell'ammasso
+($R/v$ è il tempo per *un* attraversamento), con $N$ numero di stelle.
+
+
+# Tempo di rilassamento
+
+-   La nostra stima porta a un valore di $\Delta t_r$ pari a
+    \[
+    \Delta t_r \approx \frac13 \times
+    \frac{10^6 \times 5\,\text{pc}}{16\,\text{km/s}} \approx 100\,\text{Gyr},
+    \]
+
+-   Ma questo numero è implausibile! L'universo ha meno di 14 miliardi di anni, eppure la maggior parte degli ammassi globulari sembra essere già rilassata.
+
+
+# Tempo di rilassamento
+
+-   Il problema è che nel calcolo solo le interazioni a *corto* raggio, mentre sono rilevanti anche gli scambi energetici a distanza.
+
+-   Noi abbiamo supposto che si abbia interazione quando la distanza tra due stelle sia inferiore al raggio collisionale $r_c$ dato da
     \[
       \frac12 M_* v^2 \sim G \frac{M_*^2}{r_c}.
     \]
@@ -109,12 +209,10 @@ Browniano):
 
 # Interazioni a lungo raggio
 
--   Usiamo il teorema del viriale (assumendo quindi $R$ e $v$ calcolati
-    sul sistema già rilassato: perché?):
+-   Usiamo il teorema del viriale con $N$ numero di stelle dell'ammasso (assumendo quindi $R$ e $v$ calcolati sul sistema già rilassato):
     \[
-    \log\frac{R}{r_c} = \log\frac{R v^2}{G M_*} \approx \log N,
+    \log\frac{R}{r_c} = \log\frac{R v^2}{G M_*} \approx \log N.
     \]
-    con $N$ numero di stelle dell'ammasso.
 
 -   Quindi
     \[
@@ -165,9 +263,9 @@ stavolta fisicamente plausibile.
 
 # Tempo di rilassamento
 
--   Il calcolo svolto in questa lezione è spiegato nell'esercizio 1.14 di *Cosmology and Astrophysics through problems* (T.~Padmanabhan, Cambridge University Press, 1996).
+-   Il calcolo svolto in questa lezione è spiegato nell'esercizio 1.14 di *Cosmology and Astrophysics through problems* (T. Padmanabhan, Cambridge University Press, 1996).
 
--   Nel capitolo 10.7 del volume I di *Theoretical Astrophysics* (T.~Padmanabhan, Cambridge U. P., 2000) c'è la derivazione esatta della formula nel caso di un plasma (il potenziale Coulombiano dipende da $r$ come quello Newtoniano).
+-   Nel capitolo 10.7 del volume I di *Theoretical Astrophysics* (T. Padmanabhan, Cambridge U. P., 2000) c'è la derivazione esatta della formula nel caso di un plasma (il potenziale Coulombiano dipende da $r$ come quello Newtoniano).
 
 
 # Età degli ammassi globulari
@@ -188,7 +286,10 @@ stavolta fisicamente plausibile.
 
 -   Il testo di riferimento del corso (Kutner) sostiene che il tempo di vita degli ammassi globulari sia molto superiore a quello dell'Universo ($\sim 200\,\mathrm{Gyr}$).
 
--   In realtà recenti simulazioni al computer (Zonoozi et al., 2011, Zonoozi et al., 2014) mostrano che i processi di evaporazione sono un ordine di grandezza più rapidi: il tempo di vita medio diventa quindi confrontabile con quello dell'Universo.
+-   Però questo esclude le perturbazioni che avvengono quando gli ammassi globulari attraversano il disco Galattico, e che possono portare alla loro progressiva distruzione.
+
+-   Inoltre simulazioni al computer (Zonoozi et al., 2011, Zonoozi et al., 2014) mostrano che i processi di evaporazione sono fino a un ordine di grandezza più rapidi di quanto stimato dal nostro calcolo.
+
 
 # Ammassi aperti
 
@@ -209,18 +310,6 @@ stavolta fisicamente plausibile.
 <center>![](images/m45.jpg){height=500px}</center>
 
 Nel Toro. $N \sim 500$, età $10^8$ yr, $R \sim 8$ ly, $D \sim 440$ ly.
-
-# M6
-
-<center>![](images/m6.jpg){height=500px}</center>
-
-$N \sim 100$, età $10^8$ yr, $R \sim 12\div 25$ ly, $D \sim 1 600$ ly.
-
-# M7
-
-<center>![](images/m7.jpg){height=500px}</center>
-
-Nello Scorpione. $N \sim 80$, età $2,2\times 10^8$ yr, $R \sim 18\div 20$ ly, $D \sim 800$ ly.
 
 # Popolazione di ammassi aperti
 
