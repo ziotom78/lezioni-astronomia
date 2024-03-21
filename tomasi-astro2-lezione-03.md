@@ -75,9 +75,9 @@ Metodi di osservazione:
     #.  La diffusione cambia la direzione di propagazione della radiazione
 
     #.  L'assorbimento aumenta la temperatura del mezzo interstellare
-    
+
     I due fenomeni si indicano collettivamente col termine **estinzione**.
-    
+
 -   Il mezzo interstellare ha densità molto variabili: da 10⁻⁴ a 10⁺⁶ cm⁻³, ma si tratta comunque di valori bassissimi! (L'aria ha densità 10¹⁹ cm⁻³)
 
 ---
@@ -93,9 +93,9 @@ Metodi di osservazione:
     \[
     p = \frac{N\sigma_\lambda}A = \frac{n(l)\,A\,\mathrm{d}l\,\sigma_\lambda}A = n(l)\,\sigma_\lambda\,\mathrm{d}l.
     \]
-    
-    (supponendo che $\mathrm{d}l$ sia così piccolo che le particelle non si eclissino).
-    
+
+    (supponendo che $\mathrm{d}l$ sia così piccolo che le particelle non si eclissino a vicenda).
+
 # Equazione dell'estinzione
 
 -   Data la probabilità $p$ di estinzione, la radianza spettrale $I_\lambda$ ($[I_\lambda] = \text{W/m$^2$/Hz/sr}$) in una banda $\lambda$ verrà ridotta a causa dell'estinzione:
@@ -105,13 +105,13 @@ Metodi di osservazione:
     \]
 
 -   Risolvendo l'equazione differenziale, si ottiene
-    
+
     \[
       I_\lambda(l) = I_0\,\exp\left(-\int_0^l n(l')\,\mathrm{d}l'\,\sigma_\lambda\right) = I_0\,e^{-\tau_\lambda(l)},
     \]
-    
+
     e quindi la radianza spettrale dipende dalla distanza se c'è estinzione!
-    
+
 
 # Densità colonnare
 
@@ -158,7 +158,7 @@ Nelle **nebulose a riflessione** («reflection nebulae») si ha $a_{\lambda,\tex
     \[
     A_\lambda \equiv m'_\lambda - m_\lambda = 2.5\log_{10} \frac{b_0}{b_\lambda(l)} = 1.0857\,\tau_\lambda(l)
     \]
-    
+
     ($A$ viene talvolta detto *assorbimento totale*).
 
 -   Si può quindi usare l'approssimazione
@@ -183,7 +183,7 @@ Nelle **nebulose a riflessione** («reflection nebulae») si ha $a_{\lambda,\tex
 
 # Estinzione in funzione di $\lambda$
 
-La scrittura $A_\lambda$ suggerisce che l'estinzione dipenda dalla lunghezza d'onda!
+La scrittura $A_\lambda$ suggerisce che l'estinzione dipenda dalla lunghezza d'onda.
 
 <center>![](images/barnard68-wavelengths.jpg){height=500px}</center>
 
@@ -236,13 +236,13 @@ m_B - m_V = (M_B - M_V) + (A_B - A_V).
     \[
     R \equiv \frac{A_V}{E(B - V)} \approx 3.1
     \]
-    
+
     ($R$ è solitamente definito in termini di $B$ e $V$, quindi il nostro esempio calzava!).
 
 # Valori di $R$
 
 -   Dal fatto che il valore di $R$ è abbastanza noto, si può usare la conoscenza dell'arrossamento $E(B - V)$ per stimare $A_V$ (e quindi anche la distanza $d$!)
-    
+
 -   Il valore di $R$ è sempre dell'ordine di qualche unità, ma dipende dall'ambiente (es., le due Nubi di Magellano hanno $R$ diverso dalla Via Lattea)
 
 -   Anche nella Via Lattea il valore di $R$ varia a seconda della direzione.

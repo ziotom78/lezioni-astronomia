@@ -371,29 +371,10 @@ Per avere un modello realistico, bisogna anche tenere conto di altri effetti:
 
 [*The continuing mistery of the Anomalous Microwave Emission*](https://www.youtube.com/watch?v=mkpuUoZf2F8) è un seminario tenuto da B. Draine nel 2015, molto chiaro ed interessante.
 
-# La nube molecolare $\rho$-Ophiuchi
-
-<center>![](images/planck_spinning_dust_ophiuchi.png){height=540px}</center>
-
-<small>The Planck collaboration, 2011, Astron. Astrophys., 536, A20</small>
-
-
-# Spettro della «spinning dust»
-
-<center>![](images/planck_spinning_dust_spectrum.png){height=500px}</center>
-
-<small>The Planck collaboration, 2011, Astron. Astrophys., 536, A20. Nota: 1 Jy è 10⁻²⁶ W/m²/Hz.</small>
 
 # Emissione anomala
 
 <center>![](images/WMAP_foregrounds_new.png){height=520px}</center>
-
----
-
-<center>![](images/planck_spinning_dust_map.png){height=520px}</center>
-
-Densità colonnare $N_\text{col}$ della «componente anomala» della polvere interstellare, misurata da Planck e una survey radio a 408 MHz (Haslam, 1982).
-
 
 ---
 title: "Lezione di Astronomia II – 4"
