@@ -187,20 +187,20 @@ piccolo che le particelle non si eclissino a vicenda).</p></li>
 <h1>Equazione dell’estinzione</h1>
 <ul>
 <li><p>Data la probabilità <span class="math inline">p</span> di
-estinzione, la radianza spettrale <span
-class="math inline">I_\lambda</span> (<span
-class="math inline">[I_\lambda] = \text{W/m$^2$/Hz/sr}</span>) in una
-banda <span class="math inline">\lambda</span> verrà ridotta a causa
-dell’estinzione:</p>
+estinzione, ad una certa <span class="math inline">\lambda</span> la
+radianza spettrale <span class="math inline">I_\lambda</span> (<span
+class="math inline">[I_\lambda] = \text{W/m$^2$/Hz/sr}</span>) verrà
+ridotta a causa dell’estinzione:</p>
 <p><span class="math display">
 \mathrm{d}I_\lambda = - p \times I_\lambda =
 -n(l)\,\sigma_\lambda\,I_\lambda\,\mathrm{d}l.
 </span></p></li>
 <li><p>Risolvendo l’equazione differenziale, si ottiene</p>
 <p><span class="math display">
-  I_\lambda(l) = I_0\,\exp\left(-\int_0^l
-n(l&#39;)\,\mathrm{d}l&#39;\,\sigma_\lambda\right) =
-I_0\,e^{-\tau_\lambda(l)},
+  I_\lambda(l) = I_0\,e^{-\int_0^l
+n(l&#39;)\,\mathrm{d}l&#39;\,\sigma_\lambda} =
+I_0\,e^{-\sigma_\lambda\,\int_0^l n(l&#39;)\,\mathrm{d}l&#39;} = I_0
+e^{-\tau_\lambda(l)},
 </span></p>
 <p>e quindi la radianza spettrale dipende dalla distanza se c’è
 estinzione!</p></li>
@@ -232,23 +232,11 @@ da <span class="math inline">\lambda</span>.</p></li>
 <li><p>Si definisce <em>albedo</em> <span
 class="math inline">a_{\lambda,\text{diff}}</span> la frazione
 dell’estinzione dovuta alla diffusione: <span class="math display">
-I_\lambda(l) = I_0 \exp(-\tau_\lambda) = I_0 \exp\bigl(-\tau_\lambda
-(a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
-</span> con <span class="math display">
-a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1.
-</span></p></li>
+I_\lambda(l) = I_0 e^{-\tau_\lambda} = I_0 e^{-\tau_\lambda
+(a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})},
+</span> con <span class="math inline">a_{\lambda,\text{diff}} +
+a_{\lambda,\text{ass}} = 1</span>.</p></li>
 </ul>
-</section>
-<section id="nebulose-a-riflessione" class="slide level1">
-<h1>Nebulose a riflessione</h1>
-<p>Nelle <strong>nebulose a riflessione</strong> («reflection nebulae»)
-si ha <span class="math inline">a_{\lambda,\text{diff}} \sim
-60\,\%</span>, e c’è una stella brillante nelle loro vicinanze (con
-spettro molto simile).</p>
-<center>
-<img data-src="images/m78.jpg" height="400" />
-</center>
-<p><small>M78 (costellazione di Orione)</small></p>
 </section>
 <section id="estinzione-e-magnitudine" class="slide level1">
 <h1>Estinzione e magnitudine</h1>
@@ -259,7 +247,8 @@ class="math inline">b</span> (<span class="math inline">[b] =
 dell’estinzione, vuol dire che la magnitudine <strong>aumenta</strong>:
 <span class="math display">
 A_\lambda \equiv m&#39;_\lambda - m_\lambda = 2.5\log_{10}
-\frac{b_0}{b_\lambda(l)} = 1.0857\,\tau_\lambda(l)
+\frac{b_0}{b_\lambda(l)} = 2.5\log_{10}e^{\tau_\lambda(l)} =
+1.0857\,\tau_\lambda(l)
 </span></p>
 <p>(<span class="math inline">A</span> viene talvolta detto
 <em>assorbimento totale</em>).</p></li>
@@ -409,11 +398,11 @@ porta a valori diversi di <span class="math inline">A</span>, anche se
 <li><p>Se si vuole studiare la dipendenza dell’estinzione da <span
 class="math inline">\lambda</span>, si usa la quantità (numero puro)
 <span class="math display">
-f(\lambda) \equiv \frac{A_\lambda}{A_V},
+f(\lambda) \equiv \frac{A_\lambda}{A_V} = \frac{\tau_\lambda}{\tau_V} =
+\frac{N_{\text{col}}\,\sigma_\lambda}{N_{\text{col}}\,\sigma_V} =
+\frac{\sigma_\lambda}{\sigma_V},
 </span></p>
-<p>perché in questo modo la dipendenza dalla densità colonnare scompare:
-<span class="math inline">f(\lambda) \approx \sigma_\lambda /
-\sigma_V</span>. (<a
+<p>e in questo modo la dipendenza dalla densità colonnare scompare! (<a
 href="tomasi-astro2-lezione-03.html#/eccesso-di-colore-e-a_lambda">Valeva
 lo stesso per <span class="math inline">R</span></a>).</p></li>
 </ul>
@@ -475,15 +464,16 @@ diffrazione è importante, e <span class="math inline">A(\lambda)</span>
 dipende fortemente da <span class="math inline">\lambda</span>.</li>
 </ul>
 </section>
-<section id="polvere-nel-ism-dimensione-dei-grani" class="slide level1">
-<h1>Polvere nel ISM: dimensione dei grani</h1>
-<p>Esistono due tipi di grani di polvere:</p>
+<section id="dimensione-dei-grani" class="slide level1">
+<h1>Dimensione dei grani</h1>
+<p>Le evidenze sperimentali indicano che esistono due tipi di grani di
+polvere:</p>
 <ol>
-<li>Grani grossi (µm–mm) generano uno spettro IR. Si osservano strutture
-spettrali a ~1÷10 µm, indicative di silicati (SiO, SiO₂) e ghiaccio
-(H₂O);</li>
-<li>Grani piccoli (1–10 nm) generano estinzione in UV, e sono aggregati
-di ~100 atomi (idrocarburi, carbonio, grafite).</li>
+<li><strong>Grani grossi</strong> (µm–mm) generano uno spettro IR. Si
+osservano strutture spettrali a ~1÷10 µm, indicative di silicati (SiO,
+SiO₂) e ghiaccio (H₂O);</li>
+<li><strong>Grani piccoli</strong> (1–10 nm) generano estinzione in UV,
+e sono aggregati di ~100 atomi (idrocarburi, carbonio, grafite).</li>
 </ol>
 </section>
 <section id="polvere-nel-ism-composizione" class="slide level1">
@@ -514,6 +504,47 @@ maggiore se tra noi e la stella sono presenti polveri.</p></li>
 </center>
 <p><small>Harwit, <em>Astrophysical concepts</em> (4th edition),
 pag. 426, Springer (2006)</small></p>
+</section>
+<section id="forma-dei-grani-di-polvere-1" class="slide level1">
+<h1>Forma dei grani di polvere</h1>
+<ul>
+<li><p>La luce delle stelle nel disco galattico è preferenzialmente
+polarizzata <strong>parallelamente</strong> al piano</p></li>
+<li><p>Ma le stelle nelle vicinanze del Sole non emettono luce così
+polarizzata come quella che si osserva → è l’ISM che causa la
+polarizzazione</p></li>
+<li><p>Questo implica che i grani di polvere devono assorbire più o meno
+facilmente i fotoni a seconda del loro angolo di polarizzazione</p></li>
+</ul>
+</section>
+<section id="forma-dei-grani-di-polvere-2" class="slide level1">
+<h1>Forma dei grani di polvere</h1>
+<p>La forma più probabile dei grani è un ellissoide: in questo modo gli
+elettroni sono liberi di rispondere al campo <span
+class="math inline">\vec E</span> esterno più in alcune direzioni che in
+altre.</p>
+<center>
+<img data-src="images/dust-grain-shape.png" height="320" />
+</center>
+<p>La polarizzazione si osserva soprattutto nel visibile, mentre è
+assente nell’UV (ottica geometrica!)</p>
+</section>
+<section id="osservazioni-sulla-polarizzazione" class="slide level1">
+<h1>Osservazioni sulla polarizzazione</h1>
+<ul>
+<li>Livello medio di polarizzazione: <span
+class="math inline">1\,\%\div2\,\%</span>;</li>
+<li>Debole dipendenza da <span class="math inline">\lambda</span>;</li>
+<li>Dipendenza da <span class="math inline">A_V</span>:
+<ul>
+<li>Se <span class="math inline">A_V</span> è piccolo, la polarizzazione
+è sempre bassa;</li>
+<li>Se <span class="math inline">A_V</span> è grande, la polarizzazione
+può essere qualunque.</li>
+</ul>
+(Di conseguenza, la presenza di polvere è <strong>necessaria ma non
+sufficiente</strong> per avere polarizzazione).</li>
+</ul>
 </section>
     </div>
   </div>

@@ -1,35 +1,10 @@
-# La polvere nel mezzo interstellare
-
----
-
-<center>![](images/harwit-starlight-polarization.png){height=660px}</center>
-
-<small>Harwit, *Astrophysical concepts* (4th edition), pag.\ 426, Springer (2006)</small>
-
+# Caratteristiche della polvere nell'ISM
 
 # Forma dei grani di polvere
 
--   La luce delle stelle nel disco galattico è preferenzialmente polarizzata **parallelamente** al piano
+-   Ieri abbiamo visto che la polarizzazione suggerisce che i grani non abbiano simmetria sferica
 
--   Ma le stelle nelle vicinanze del Sole non emettono luce così polarizzata come quella che si osserva → è l'ISM che causa la polarizzazione
-
--   Questo implica che i grani di polvere devono assorbire più o meno facilmente i fotoni a seconda del loro angolo di polarizzazione
-
-
-# Forma dei grani di polvere
-
-La forma più probabile dei grani è un ellissoide: in questo modo gli elettroni sono liberi di rispondere al campo $\vec E$ esterno più in alcune direzioni che in altre.
-
-<center>![](images/dust-grain-shape.png){height=320px}</center>
-
-La polarizzazione si osserva soprattutto nel visibile, mentre è assente nell'UV (ottica geometrica!)
-
-
-# Forma dei grani di polvere
-
-I grani di polvere (a) possono collidere tra loro e aggregarsi in strutture più complesse (b).
-
-<center>![](images/interstellar_dust.png)</center>
+-   Possiamo avere un'idea più precisa della loro forma?
 
 
 # Forma dei grani di polvere
@@ -45,15 +20,12 @@ Particelle di polvere interplanetaria possono essere catturate da
 </table>
 
 
-# Osservazioni sulla polarizzazione
+# Forma dei grani di polvere
 
--   Livello medio di polarizzazione: $1\,\%\div2\,\%$;
--   Debole dipendenza da $\lambda$;
--   Dipendenza da $A_V$:
-    -   Se $A_V$ è piccolo, la polarizzazione è sempre bassa;
-    -   Se $A_V$ è grande, la polarizzazione può essere qualunque.
+I grani di polvere (a) possono collidere tra loro e aggregarsi in strutture più complesse (b).
 
-    (Di conseguenza, la presenza di polvere è **necessaria ma non sufficiente** per avere polarizzazione).
+<center>![](images/interstellar_dust.png)</center>
+
 
 # Carica elettrica dei grani
 
@@ -79,19 +51,16 @@ di grani.
 
 # Carica elettrica dei grani
 
-Il conto non è molto diverso da quello del raggio collisionale per
-gli ammassi globulari: studiamo quando l'energia potenziale è uguale
-all'energia cinetica.
+-   Il conto non è molto diverso da quello del [raggio collisionale per gli ammassi globulari](tomasi-astro2-lezione-02.html#/tempo-di-rilassamento-3): studiamo quando l'energia potenziale è uguale all'energia cinetica:
 
-\[
-\begin{aligned}
-  \frac{N e^2}{4\pi\epsilon_0 r_g} &= \frac32 k_B T,\quad\text{da cui} \\
-  N &= 6\pi\epsilon_0 k_B T \frac{r_g}{e^2} \approx 1.
-\end{aligned}
-\]
+    \[
+    \begin{aligned}
+      \frac{N e^2}{4\pi\epsilon_0 r_g} &= \frac32 k_B T,\quad\text{da cui} \\
+      N &= 6\pi\epsilon_0 k_B T \frac{r_g}{e^2} \approx 1.
+    \end{aligned}
+    \]
 
-Ma la coda ad alta velocità nella distribuzione di Boltzmann per gli
-$e$ liberi porta a $N \sim 10$.
+-   La coda ad alta velocità nella distribuzione di Boltzmann per gli $e$ liberi porta a $N \sim 10$.
 
 
 # Temperatura dei grani
@@ -202,7 +171,7 @@ ISO (Infrared Space Observatory), 17/11/1995. Orbita molto eccentrica (1000 km 
 
 <center>![](images/Spitzer.jpg){height=500px}</center>
 
-Spitzer Space Telescope (USA), 25/8/2003. Orbita eliocentrica ([IRrelevant astronomy](http://coolcosmos.ipac.caltech.edu/videos/irrelevant/))
+Spitzer Space Telescope (USA), 25/8/2003. Orbita eliocentrica ([IRrelevant astronomy](https://www.youtube.com/playlist?list=PL9C8F3F2E3FE9F137))
 
 ---
 

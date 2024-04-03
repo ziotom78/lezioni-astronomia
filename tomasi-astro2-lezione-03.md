@@ -98,7 +98,7 @@ Metodi di osservazione:
 
 # Equazione dell'estinzione
 
--   Data la probabilità $p$ di estinzione, la radianza spettrale $I_\lambda$ ($[I_\lambda] = \text{W/m$^2$/Hz/sr}$) in una banda $\lambda$ verrà ridotta a causa dell'estinzione:
+-   Data la probabilità $p$ di estinzione, ad una certa $\lambda$ la radianza spettrale $I_\lambda$ ($[I_\lambda] = \text{W/m$^2$/Hz/sr}$) verrà ridotta a causa dell'estinzione:
 
     \[
     \mathrm{d}I_\lambda = - p \times I_\lambda = -n(l)\,\sigma_\lambda\,I_\lambda\,\mathrm{d}l.
@@ -107,7 +107,7 @@ Metodi di osservazione:
 -   Risolvendo l'equazione differenziale, si ottiene
 
     \[
-      I_\lambda(l) = I_0\,\exp\left(-\int_0^l n(l')\,\mathrm{d}l'\,\sigma_\lambda\right) = I_0\,e^{-\tau_\lambda(l)},
+      I_\lambda(l) = I_0\,e^{-\int_0^l n(l')\,\mathrm{d}l'\,\sigma_\lambda} = I_0\,e^{-\sigma_\lambda\,\int_0^l n(l')\,\mathrm{d}l'} = I_0 e^{-\tau_\lambda(l)},
     \]
 
     e quindi la radianza spettrale dipende dalla distanza se c'è estinzione!
@@ -136,27 +136,16 @@ e vale che $[N_\text{col}] = \text{cm}^{-2}$. Se $n(l)$ è costante, $N_\text{co
 
 -   Si definisce *albedo* $a_{\lambda,\text{diff}}$ la frazione dell'estinzione dovuta alla diffusione:
     \[
-    I_\lambda(l) = I_0 \exp(-\tau_\lambda) = I_0 \exp\bigl(-\tau_\lambda (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})\bigr),
+    I_\lambda(l) = I_0 e^{-\tau_\lambda} = I_0 e^{-\tau_\lambda (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})},
     \]
-    con
-    \[
-    a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1.
-    \]
-
-# Nebulose a riflessione
-
-Nelle **nebulose a riflessione** («reflection nebulae») si ha $a_{\lambda,\text{diff}} \sim 60\,\%$, e c'è una stella brillante nelle loro vicinanze (con spettro molto simile).
-
-<center>![](images/m78.jpg){height=400px}</center>
-
-<small>M78 (costellazione di Orione)</small>
+    con $a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1$.
 
 
 # Estinzione e magnitudine
 
 -   Passando da $I$ al flusso $b$ ($[b] = \text{W/m$^2$}$), se quello misurato è inferiore a causa dell'estinzione, vuol dire che la magnitudine **aumenta**:
     \[
-    A_\lambda \equiv m'_\lambda - m_\lambda = 2.5\log_{10} \frac{b_0}{b_\lambda(l)} = 1.0857\,\tau_\lambda(l)
+    A_\lambda \equiv m'_\lambda - m_\lambda = 2.5\log_{10} \frac{b_0}{b_\lambda(l)} = 2.5\log_{10}e^{\tau_\lambda(l)} = 1.0857\,\tau_\lambda(l)
     \]
 
     ($A$ viene talvolta detto *assorbimento totale*).
@@ -272,10 +261,10 @@ m_B - m_V = (M_B - M_V) + (A_B - A_V).
 
 -   Se si vuole studiare la dipendenza dell'estinzione da $\lambda$, si usa la quantità (numero puro)
     \[
-    f(\lambda) \equiv \frac{A_\lambda}{A_V},
+    f(\lambda) \equiv \frac{A_\lambda}{A_V} = \frac{\tau_\lambda}{\tau_V} = \frac{N_{\text{col}}\,\sigma_\lambda}{N_{\text{col}}\,\sigma_V} = \frac{\sigma_\lambda}{\sigma_V},
     \]
 
-    perché in questo modo la dipendenza dalla densità colonnare scompare: $f(\lambda) \approx \sigma_\lambda / \sigma_V$. ([Valeva lo stesso per $R$](tomasi-astro2-lezione-03.html#/eccesso-di-colore-e-a_lambda)).
+    e in questo modo la dipendenza dalla densità colonnare scompare! ([Valeva lo stesso per $R$](tomasi-astro2-lezione-03.html#/eccesso-di-colore-e-a_lambda)).
 
 
 # Fisica dell'estinzione
@@ -320,12 +309,12 @@ Ci chiediamo: qual è la dimensione tipica $r_g$ dei grani di polvere?
 -   Se $r_g \sim \lambda$, allora la diffrazione è importante, e $A(\lambda)$ dipende fortemente da $\lambda$.
 
 
-# Polvere nel ISM: dimensione dei grani
+# Dimensione dei grani
 
-Esistono due tipi di grani di polvere:
+Le evidenze sperimentali indicano che esistono due tipi di grani di polvere:
 
-#.  Grani grossi (µm–mm) generano uno spettro IR. Si osservano strutture spettrali a ~1÷10 µm, indicative di silicati (SiO, SiO₂) e ghiaccio (H₂O);
-#.  Grani piccoli (1–10 nm) generano estinzione in UV, e sono aggregati di ~100 atomi (idrocarburi, carbonio, grafite).
+#.  **Grani grossi** (µm–mm) generano uno spettro IR. Si osservano strutture spettrali a ~1÷10 µm, indicative di silicati (SiO, SiO₂) e ghiaccio (H₂O);
+#.  **Grani piccoli** (1–10 nm) generano estinzione in UV, e sono aggregati di ~100 atomi (idrocarburi, carbonio, grafite).
 
 
 # Polvere nel ISM: composizione
@@ -349,6 +338,34 @@ Esistono due tipi di grani di polvere:
 
 <small>Harwit, *Astrophysical concepts* (4th edition), pag.\ 426, Springer (2006)</small>
 
+
+# Forma dei grani di polvere
+
+-   La luce delle stelle nel disco galattico è preferenzialmente polarizzata **parallelamente** al piano
+
+-   Ma le stelle nelle vicinanze del Sole non emettono luce così polarizzata come quella che si osserva → è l'ISM che causa la polarizzazione
+
+-   Questo implica che i grani di polvere devono assorbire più o meno facilmente i fotoni a seconda del loro angolo di polarizzazione
+
+
+# Forma dei grani di polvere
+
+La forma più probabile dei grani è un ellissoide: in questo modo gli elettroni sono liberi di rispondere al campo $\vec E$ esterno più in alcune direzioni che in altre.
+
+<center>![](images/dust-grain-shape.png){height=320px}</center>
+
+La polarizzazione si osserva soprattutto nel visibile, mentre è assente nell'UV (ottica geometrica!)
+
+
+# Osservazioni sulla polarizzazione
+
+-   Livello medio di polarizzazione: $1\,\%\div2\,\%$;
+-   Debole dipendenza da $\lambda$;
+-   Dipendenza da $A_V$:
+    -   Se $A_V$ è piccolo, la polarizzazione è sempre bassa;
+    -   Se $A_V$ è grande, la polarizzazione può essere qualunque.
+
+    (Di conseguenza, la presenza di polvere è **necessaria ma non sufficiente** per avere polarizzazione).
 
 ---
 title: "Lezione di Astronomia II – 3"
