@@ -190,13 +190,13 @@ relativa dal Sole, in unità di 1/10 della distanza Mercurio–Sole.
 
 # HI nell'ISM
 
-| Quantità              | Stima                                                      |
-|-----------------------|------------------------------------------------------------|
-| Temperatura           | 100 K                                                      |
-| Dimensione nubi       | 10÷100 pc                                                  |
-| Densità HI (nube)     | 1÷10 cm⁻³                                                  |
-| Densità HI (Galassia) | 0.1 cm⁻³                                                   |
-| Velocità              | $v_\text{rms} \sim \sqrt{k_B T/m_p} \sim 10^3\,\text{m/s}$ |
+| Quantità                         | Stima                                                      |
+|----------------------------------|------------------------------------------------------------|
+| Temperatura                      | 100 K                                                      |
+| Dimensione nubi                  | 10÷100 pc                                                  |
+| Densità HI (nube)                | 1÷10 cm⁻³                                                  |
+| Densità HI (Galassia)            | 0.1 cm⁻³                                                   |
+| Velocità                         | $v_\text{rms} \sim \sqrt{k_B T/m_p} \sim 10^3\,\text{m/s}$ |
 
 Il profilo della riga rivela ali molto allargate e deboli: sono piccole quantità di gas molto caldo (10⁴ K) e rarefatto che si insinua tra le regioni di HI nel ISM.
 
