@@ -51,7 +51,7 @@ ISM comprende tutto ciò che nella Galassia sta tra le stelle. Esso è composto 
 #.   **Gas**;
 #.   **Polveri**;
 #.   Raggi cosmici;
-#.   Radiazione e.m.\ (luce stellare, CMB, \ldots);
+#.   Radiazione e.m.\ (luce stellare, CMB, …);
 #.   Campo magnetico interstellare;
 #.   Campo gravitazionale;
 #.   Materia oscura.
@@ -259,13 +259,11 @@ m_B - m_V = (M_B - M_V) + (A_B - A_V).
     A_\lambda = 2.5\log_{10} e^{\tau_\lambda} \approx \tau_\lambda.
     \]
 
--   Il valore $\tau_\lambda$ («coefficiente di estinzione) è uguale a
+-   Il *coefficiente di estinzione* $\tau_\lambda$ è legato alla fisica microscopica dell'ISM:
     \[
     \tau_\lambda = \sigma_\lambda N_\text{col},
     \]
     dove $N_\text{col}$ è la densità colonnare dell'ISM tra noi e l'oggetto osservato, $l$ lo spessore, e $\sigma_\lambda$ la sezione d'urto totale (assorbimento e diffusione) alla lunghezza d'onda $\lambda$.
-
--   Il valore di $\sigma_\lambda$ è legato alla fisica microscopica dell'ISM.
 
 
 # Fisica dell'estinzione
@@ -309,16 +307,6 @@ qual è il valore di $A_V$ e la sua distanza? (Supporre che $R = 3.1$).
 
 
 [Soluzione: $A_V \approx 3.6$, $d \approx 280\,\text{pc}$].
-
-
-# Fisica dell'estinzione
-
-<center>![](images/gordon-title-page.png){height=560px}</center>
-
-
-# Fisica dell'estinzione
-
-<center>![](images/gordon-plot.png){height=500px}</center>
 
 
 # La polvere nel mezzo interstellare
