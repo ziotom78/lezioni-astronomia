@@ -295,11 +295,8 @@ La soluzione si può scrivere in questa forma:
 \end{aligned}
 \]
 
-(Ci sono evidenze che dicono che solo i grani piccoli, con $a \lesssim 10\,\text{\AA}$, contribuiscono a questa emissione).
-Il fatto che il picco di emissione previsto sia intorno ai 30 GHz mostra che
-questa è la strada giusta!
-
-(Vedi Fig. 7 di Draine \& Lazarian (1998) per capire perché solo i grani piccoli contribuiscono alla AME).
+(Solo i grani con $a \lesssim 10\,\text{\AA}$, contribuiscono a questa emissione, vedi Fig. 7 di Draine & Lazarian, 1998).
+Il picco di emissione previsto è intorno ai 30 GHz: incoraggiante!
 
 # Grani in rotazione
 
