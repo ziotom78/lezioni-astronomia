@@ -1,11 +1,3 @@
----
-title: Lezione di Astronomia II – 5
-author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: "13 Aprile 2023"
-css:
-- ./css/custom.css
-...
-
 # Il gas interstellare (ISG)
 
 # Gas interstellare (ISG)
@@ -34,7 +26,7 @@ Per eccitare una riga di Balmer occorre ~1 eV, ma le energie in gioco per $T \s
 :::
 
 
-# HI nel ISG
+# HI nell'ISG
 
 -   È lecito aspettarsi che H, anche se non rilevabile nel visibile, sia la componente predominante del ISG. Si può rivelare mediante la misura della riga a 21 cm.
 
@@ -42,10 +34,10 @@ Per eccitare una riga di Balmer occorre ~1 eV, ma le energie in gioco per $T \s
     \[
     \Delta E = 5.9\times 10^{-6}\,\text{eV},
     \]
-    e la probabilità di transizione è $A = (11\,\text{Myr})^{-1}$.
+    e la probabilità di transizione è $A = (11\,\text{Myr})^{-1}$ così che $N = N_0 e^{A t}$.
 
 
-# HI nel ISG
+# HI nell'ISG
 
 <center>![](images/21cm_line.png){height=240px}</center>
 
@@ -197,8 +189,6 @@ relativa dal Sole, in unità di 1/10 della distanza Mercurio–Sole.
 | Densità HI (nube)                | 1÷10 cm⁻³                                                  |
 | Densità HI (Galassia)            | 0.1 cm⁻³                                                   |
 | Velocità                         | $v_\text{rms} \sim \sqrt{k_B T/m_p} \sim 10^3\,\text{m/s}$ |
-
-Il profilo della riga rivela ali molto allargate e deboli: sono piccole quantità di gas molto caldo (10⁴ K) e rarefatto che si insinua tra le regioni di HI nel ISM.
 
 
 # Gas e polveri
@@ -541,3 +531,12 @@ L'esercizio si risolve imponendo $\vec v = 0$ nella prima equazione, imponendo $
 
 
 -   Che valore stimate per $h_0$ nel caso dell'atmosfera terrestre?
+
+
+---
+title: Lezione di Astronomia II – 5
+author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
+date: "11 Aprile 2024"
+css:
+- ./css/custom.css
+...

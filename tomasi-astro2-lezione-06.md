@@ -1,11 +1,3 @@
----
-title: Lezione di Astronomia II – 6
-author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: "14 Aprile 2023"
-css:
-- ./css/custom.css
-...
-
 # Collasso di Jeans
 
 Queste sono le equazioni usate da Jeans:
@@ -394,57 +386,6 @@ all'effetto Doppler causato dall'agitazione termica).
 Al centro di Barnard 68 («Black cloud») c'è un cold core.
 
 
-# Cold clumps
-
-Solitamente i «core» tendono ad aggregarsi in strutture dette *clump*. Il loro picco di emissione è a $\nu \lesssim 1\,\text{THz}$, e sono quindi richieste misure sub-millimetriche:
-
--   Da terra (ottima risoluzione, ma piccole scale angolari a causa dell'atmosfera);
--   Da pallone stratosferico (buona risoluzione, limitata copertura);
--   Dallo spazio (complicato, costoso).
-
-::: notes
-
-Il problema delle misure da terra è che l'atmosfera introduce disturbi, e ci si deve quindi limitare a misurare piccole regioni di cielo alla volta.
-
-:::
-
----
-
-<center>![](images/infrared-space-missions.png){height=620px}</center>
-
-::: notes
-
-Questo grafico mostra perché Planck sia stato il primo esperimento a mappare su tutto il cielo i *cold clumps*.
-
-:::
-
----
-
-<center>![](images/planck2011-cold-clumps-title-page.png){height=620px}</center>
-
----
-
-<center>![](images/planck2011-cold-clumps-map.png){height=680px}</center>
-
-::: notes
-
--   Mappa superiore: densità dei *cold cores* misurata su regioni di dimensione $2^\circ \times 2^\circ$;
--   Mappa centrale: sovrapposizione della mappa di *cold cores* alla mappa della densità colonnare del CO: dove il CO non è presente, i *cold cores* sono stati tagliati. Il 95 % dei *cold cores* è associato a CO;
--   Mappa inferiore: sovrapposizione della mappa di *cold cores* alla mappa di $A_V$ (polvere). Come sopra, sono stati tagliati i *cold cores* non associati a un valore significativo di $A_V$. Il 75 % dei *cold cores* è associato a polvere.
-
-:::
-
-# Temperature dei cold clumps
-
-<center>![](images/planck_cold_clump_temperatures.png){height=460px}</center>
-
-(Il parametro $\beta$ caratterizza l'assorbimento del gas in funzione della frequenza, e dipende dai modelli).
-
-::: notes
-
-Siccome un *cold core* ha bisogno di un «involucro» caldo che lo protegga dalla radiazione esterna, non è possibile misurare la SED di un *cold core* separatamente da quella della *warm cloud* che la ospita. Per questo le temperature riportate nell'articolo sono probabilmente un limite superiore.
-
-:::
 # Regioni HII
 
 # Regioni HII
@@ -550,3 +491,11 @@ Quando p⁺ cattura e⁻, quest'ultimo è di solito a un livello energetico molt
 # Rilevare le regioni HII
 
 <center>![](images/dickinson-free-free-template.png){height=620px}</center>
+
+---
+title: Lezione di Astronomia II – 6
+author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
+date: "12 Aprile 2024"
+css:
+- ./css/custom.css
+...
