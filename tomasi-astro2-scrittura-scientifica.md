@@ -1,11 +1,3 @@
----
-title: Come preparare un testo scientifico
-author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: "21 Aprile 2023"
-css:
-- ./css/custom.css
-...
-
 # Articoli scientifici
 
 # Cos'è un articolo?
@@ -34,7 +26,7 @@ css:
 
 ---
 
-<p style="text-align:center">![](images/referaggio.svg)</p>
+<p style="text-align:center">![](images/referaggio.svg){width=30%}</p>
 
 -   La parola finale è **quella dell'editor**, che può decidere di ignorare alcune review.
 -   Il processo può prendere anche più di un anno, a meno che non sia una rivista di *Letters* (esempio: [The Astrophysical Journal Letters](https://iopscience.iop.org/journal/2041-8205)).
@@ -103,13 +95,13 @@ Il titolo contiene già le conclusioni del lavoro: non si può ancora essere con
 # Lista degli autori
 
 -   È sempre più vero che in astronomia si lavora in grandi collaborazioni.
-  
+
 -   Quando pubblicate, includete nella lista degli autori tutte quelle persone che:
 
     #.   Hanno fornito un contributo, ma solo se questo consiste in qualcosa di **originale**, **creativo**, e scientificamente valido;
     #.   Vi hanno dato il loro consenso esplicito.
 
-# Lista degli autori
+# Persone oltre agli autori
 
 -   Includete negli *acknowledgements* («ringraziamenti») tutti gli altri: chi vi ha corretto l'inglese, chi vi ha sistemato una figura, l'officina che vi ha costruito un pezzo…
 
@@ -138,10 +130,12 @@ Il titolo contiene già le conclusioni del lavoro: non si può ancora essere con
 
 # Esempio da seguire
 
-<p style="text-align:center">![](images/readhead.png){height=580px}</p>
+<center>
+![](images/2008ghez-title-page.png){width=960px}
+</center>
 
 # Andare diretti al punto!
-  
+
 <p style="text-align:center">![](images/2019-Bhattacharyya-title.svg){height=580px}</p>
 
 # Testo dell'articolo
@@ -178,13 +172,13 @@ Il titolo contiene già le conclusioni del lavoro: non si può ancora essere con
 
     -   Scrivete la lista delle sezioni;
     -   Decidete innanzitutto quali grafici e tabelle includere
-    
--   Se avete una VPN, potete usare ChatGPT per suggerirvi la struttura; vedete ad esempio [https://twitter.com/MushtaqBilalPhD/status/1621379333943083009](https://twitter.com/MushtaqBilalPhD/status/1621379333943083009). Attenzione: ChatGPT produce contenuti spesso sbagliati, è solo la **struttura** del testo che lui crea ad interessarvi!
+
+-   Potete usare LLMs come ChatGPT o Microsoft Bing per suggerirvi la struttura; vedete ad esempio [https://twitter.com/MushtaqBilalPhD/status/1621379333943083009](https://twitter.com/MushtaqBilalPhD/status/1621379333943083009). Attenzione: le LLMs producono contenuti spesso sbagliati, è solo la **struttura** del testo che è utile!
 
 
 # Scrittura del testo
 
-È una buona idea produrre un *vomit draft*:
+Se temete il blocco dello scrittore, potete provare a produrre un *vomit draft*:
 
 1. Scrivete di getto tutto il testo che avete in mente, senza curarvi dei dettagli, della forma e neanche dell'accuratezza dei contenuti;
 2. Non è consentito tornare indietro a correggere gli errori (neppure di battitura!);
@@ -238,10 +232,6 @@ Il grafico precedente ha almeno tre problemi:
 # Grafici da non imitare!
 
 <p style="text-align:center">![](images/gross_national_product.svg){height=620px}</p>
-
-# Grafici
-
-<p style="text-align:center">![](images/xkcd_comic.png)</p>
 
 # Grafici
 
@@ -472,3 +462,11 @@ Lancio dello Shuttle Columbia, 12 Aprile 1981
 ---
 
 <p style="text-align:center">![](images/worst_slide_ever.svg){height=680px}</p>
+
+---
+title: Come preparare un testo scientifico
+author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
+date: "19 Aprile 2024"
+css:
+- ./css/custom.css
+...

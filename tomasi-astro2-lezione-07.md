@@ -1,64 +1,3 @@
----
-title: Lezione di Astronomia II – 7
-author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: "20 Aprile 2023"
-css:
-- ./css/custom.css
-...
-
-
-# Coordinate Galattiche
-
-# Il centro galattico
-
-<center>![](images/thomas_first_page.png){height=560px}</center>
-
-# Il centro galattico
-
-<center>![](images/thomas_globular_clusters_milky_way.png){height=560px}</center>
-
-# Coordinate Galattiche
-
-<center>![](images/galactic_coordinates.png){height=360px}</center>
-
--   Latitudine ($b$): Chioma di Berenice verso $b=+90^\circ$; Scultore verso $b=-90^\circ$.
--   Longitudine: come l'ascensione retta.
-
----
-
-<center>![](images/mwmw_8x10.jpg){height=660px}</center>
-
-
-# Aspetto esterno della Via Lattea
-
-<center>![](images/spiral_galaxies.jpg){height=480px}</center>
-
-Abbiamo l'evidenza che esistano galassie con bracci avvolti in
-spirale. È così anche per la Via Lattea?
-  
-
-# Aspetto esterno della Via Lattea
-
-Studiando nubi molecolari giganti si intuisce che anche la Via
-Lattea possieda strutture simili.
-
-<center>![](images/spiral_arms_inner.png){height=480px}</center>
-  
-
-# Aspetto esterno della Via Lattea
-
-<center>![](images/spitzer_milky_way_2003.png){height=500px}</center>
-
-  
-
-# Aspetto esterno della Via Lattea
-
-<center>![](images/spitzer_milky_way_2008.png){height=500px}</center>
-
-(Spitzer, 2008)
-  
-
-
 # Il centro galattico
 
 # Studio del Centro Galattico
@@ -83,10 +22,6 @@ Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 
 
 :::
 
-# Il Centro Galattico in IR
-
-<center>![](images/galactic_centre_spitzer.jpg){height=560px}</center>
-
 
 # Il Centro Galattico nel Radio
 
@@ -108,7 +43,7 @@ Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 
     \[
     \frac{P^2}{a^3} = \frac{4\pi}{M G},
     \]
-    
+
     con $a$ semiasse maggiore dell'orbita e $M$ massa di Sgr A*.
 
 -   Basta quindi osservare una stella vicina finché non completa un'orbita attorno a Sgr A*: dalla misura di $P$ e di $a$ si ottiene $M$.
@@ -120,7 +55,7 @@ Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 
     \[
     a = \sqrt[3]{\frac{G M P^2}{4\pi}}.
     \]
-    
+
 -   Ipotizzando di poter osservare per ~20 anni i dintorni di Sgr A*, e che $M \approx 10^6 M_\odot$, allora compiranno almeno un periodo completo le stelle tali per cui
 
     \[
@@ -136,7 +71,7 @@ Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 
     \[
     \frac{\lambda}D = \frac{a}{R_0} \quad \Rightarrow \quad D = \frac{R_0\,\lambda}{a} \approx \frac{8\,\text{kpc}\cdot 2\,\text{µm}}{10^{14}\,\text{m}} \approx 500\,\text{cm},
     \]
-    
+
     (Lo specchio più grande di Merate è il Ruths, da 134 cm!)
 
 
@@ -213,19 +148,19 @@ Le righe continue indicano che sono presenti anche dati spettroscopici
     &\approx 2.4\times 10^{10}\,\text{m} = 0.16\,\text{AU}.
     \end{align*}
     \]
-    
+
 -   Il CBH ovviamente non è visibile, ma ci si aspetta che sia visibile l'inviluppo di gas caldo per $r \gtrsim 3 r_s$
 
 # Event Horizon Telescope
 
--   Per vedere dettagli grandi $3r_s$ è necessario un telescopio con dimensione
+-   Usiamo di nuovo la relazione $\lambda / D \sim 3r_s / R_0$ per stimare le dimensioni del telescopio necessarie a vedere il disco di gas caldo:
 
     \[
     D = \frac{R_0\,\lambda}{3 r_s} \approx \frac{8\,\text{kpc}\cdot 2\,\text{µm}}{5\,\text{AU}} \approx 660\,\text{m}.
     \]
-    
+
     Questo è assolutamente impossibile!
-    
+
 -   L'Event Horizon Telescope è una collaborazione che ha sfruttato l'interferometria per ottenere un'immagine del CBH. Come hanno fatto?
 
 
@@ -269,7 +204,7 @@ Perché il buco nero di M87 è stato misurato prima?
 -   Inoltre il buco nero è 1000 più massivo, il che vuol dire che $r_s$ è 1000 volte maggiore:
 
     #.   Il diametro apparente è lo stesso;
-    #.   Il periodo orbitale del gas è $P \propto r_s^{3/2} / M^{1/2}$, quindi $P' = 10^3 P$: il gas impiega diversi giorni anziché pochi minuti a orbitare, e l'immagine risulta meno sfuocata.
+    #.   Il periodo orbitale del gas è $P \propto r_s^{3/2} / M^{1/2}$, quindi $P' = 10^3 P$: il gas impiega diversi giorni anziché decine di minuti a orbitare, e l'immagine risulta meno sfuocata.
 
 
 # Sagittarius A* (12 maggio 2022)
@@ -285,14 +220,44 @@ Perché il buco nero di M87 è stato misurato prima?
 
 
 
-# Storia delle osservazioni della Via Lattea
+# Osservare la Via Lattea
 
-# Thomas Wright (1711–1786)
+
+# Aspetto esterno della Via Lattea
+
+<center>![](images/spiral_galaxies.jpg){height=480px}</center>
+
+Abbiamo l'evidenza che esistano galassie con bracci avvolti in
+spirale. È così anche per la Via Lattea?
+
+
+# Aspetto esterno della Via Lattea
+
+Studiando nubi molecolari giganti si intuisce che anche la Via
+Lattea possieda strutture simili.
+
+<center>![](images/spiral_arms_inner.png){height=480px}</center>
+
+
+# Aspetto esterno della Via Lattea
+
+<center>![](images/spitzer_milky_way_2003.png){height=500px}</center>
+
+
+# Spitzer 2008
+
+<center>![](images/spitzer_milky_way_2008.png){height=500px}</center>
+
+Come siamo arrivati a scoprire che la via Lattea apparirebbe davvero così ad un osservatore esterno?
+
+# [Thomas Wright](https://en.wikipedia.org/wiki/Thomas_Wright_(astronomer)) (1711–1786)
 
 <table>
 <tbody>
 <tr>
 <td>
+-   Matematico, astronomo, architetto e progettista di giardini
+
 -   Nel libro *An original theory or new hypothesis of the Universe* (1750) espone un'originale teoria cosmo-teologica:
 
     -   Molti sistemi solari;
@@ -332,15 +297,17 @@ sono dunque invisibili.
 ![](images/thomas_wright_plate_XXI.jpg){width=440px}
 </center>
 
-# William Herschel (1738–1822)
+# [William Herschel](https://en.wikipedia.org/wiki/William_Herschel) (1738–1822)
 
 <table>
 <tbody>
 <tr>
 <td>
 -   Musicista convertito all'astronomia.
-   
--   A differenza di Wright, non prescinde mai dalle osservazioni quando formula ipotesi. (Insieme ai fratelli Alexander e Caroline è stato un formidabile costruttore di telescopi).
+
+-   Lui e i fratelli Alexander e Caroline sono stati formidabili costruttore di telescopi, che costruivano per sé stessi e per la nobiltà.
+
+-   A differenza di Wright, il suo modello è strettamente connesso alle osservazioni (che faceva lui stesso).
 </td>
 <td>
 ![](images/william_herschel.jpg){width=880px}
@@ -356,13 +323,12 @@ sono dunque invisibili.
 </center>
 
 -   Propone una struttura piatta per la Via Lattea (*On the construction of the Heavens*, 1802)
-   
--   Assume che $M$ sia uguale per ogni stella, e da $M$ e $m$ deriva
-    $d$ tramite la densità colonnare! Però il suo modello è quantitativo.
+
+-   Assume che le stelle siano distribuite con densità numerica $n$ costante, e dalla misura della densità colonnare $n_\text{col}$ calcola la profondità $l = n_\text{col}/ n$.
 
 -   La forma è basata su conteggi di stelle in 675 regioni di cielo (alcuni punti sono media di più osservazioni). Il Sole si trova approssimativamente al centro.
 
-# Jacobus Kapteyn (1851–1922)
+# [Jacobus Kapteyn](https://en.wikipedia.org/wiki/Jacobus_Kapteyn) (1851–1922)
 
 <table>
 <tbody>
@@ -386,7 +352,7 @@ sono dunque invisibili.
 ![](images/jacobus_kapteyn_milky_way.svg)
 </center>
 
-# Harlow Shapley (1885–1972)
+# [Harlow Shapley](https://en.wikipedia.org/wiki/Harlow_Shapley) (1885–1972)
 
 <table>
 <tbody>
@@ -412,6 +378,15 @@ sono dunque invisibili.
 
 -   Vi raccomando di pensare **subito** a dei commenti liberi relativi a queste lezioni da inserire nei questionari della didattica!
 
--   Domani ci sarà la lezione *jolly* su come si scrive un testo scientifico.
+-   Domani ci sarà la lezione *jolly* su come si scrive un testo scientifico. Vi chiederei di iniziare un quarto d'ora prima, alle 8,45, in modo da essere sicuri di finire alle 10,30.
 
 -   A partire da settimana prossima, la dott.ssa Mariachiara Rossetti (INAF di Milano) terrà una serie di lezioni sull'astrofisica galattica.
+
+
+---
+title: Lezione di Astronomia II – 7
+author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
+date: "18 Aprile 2024"
+css:
+- ./css/custom.css
+...

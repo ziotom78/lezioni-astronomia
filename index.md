@@ -16,7 +16,5 @@
 - 2024-04-05: [Lezione 4](tomasi-astro2-lezione-04.html) (mezzo interstellare 2), [PDF](pdf/tomasi-astro2-lezione-04.pdf)
 - 2024-04-13: [Lezione 5](tomasi-astro2-lezione-05.html) (mezzo interstellare 3), [PDF](pdf/tomasi-astro2-lezione-05.pdf)
 - 2024-04-14: [Lezione 6](tomasi-astro2-lezione-06.html) (mezzo interstellare 4), [PDF](pdf/tomasi-astro2-lezione-06.pdf)
-<!--
-- 2024-04-20: [Lezione 7](tomasi-astro2-lezione-07.html) (mezzo interstellare 4), [PDF](pdf/tomasi-astro2-lezione-07.pdf)
-- 2024-04-21: [Come preparare un testo scientifico](tomasi-astro2-scrittura-scientifica.html)
--->
+- 2024-04-18: [Lezione 7](tomasi-astro2-lezione-07.html) (mezzo interstellare 4), [PDF](pdf/tomasi-astro2-lezione-07.pdf)
+- 2024-04-19: [Come preparare un testo scientifico](tomasi-astro2-scrittura-scientifica.html), [PDF](pdf/tomasi-astro2-scrittura-scientifica.pdf)
