@@ -134,10 +134,6 @@ Il titolo contiene già le conclusioni del lavoro: non si può ancora essere con
 ![](images/2008ghez-title-page.png){width=960px}
 </center>
 
-# Andare diretti al punto!
-
-<p style="text-align:center">![](images/2019-Bhattacharyya-title.svg){height=580px}</p>
-
 # Testo dell'articolo
 
 # Esempio di introduzione
@@ -173,7 +169,7 @@ Il titolo contiene già le conclusioni del lavoro: non si può ancora essere con
     -   Scrivete la lista delle sezioni;
     -   Decidete innanzitutto quali grafici e tabelle includere
 
--   Potete usare LLMs come ChatGPT o Microsoft Bing per suggerirvi la struttura; vedete ad esempio [https://twitter.com/MushtaqBilalPhD/status/1621379333943083009](https://twitter.com/MushtaqBilalPhD/status/1621379333943083009). Attenzione: le LLMs producono contenuti spesso sbagliati, è solo la **struttura** del testo che è utile!
+-   Potete usare LLMs come ChatGPT o Microsoft Bing per suggerirvi la struttura; vedete ad esempio [https://twitter.com/MushtaqBilalPhD/status/1621379333943083009](https://twitter.com/MushtaqBilalPhD/status/1621379333943083009). Attenzione: i LLMs producono contenuti spesso sbagliati, è solo la **struttura** del testo che è utile!
 
 
 # Scrittura del testo
@@ -239,7 +235,7 @@ Il grafico precedente ha almeno tre problemi:
 
 # Strumenti per creare grafici
 
-#.   [GNUplot](http://www.gnuplot.info/) (programma per creare grafici);
+#.   [GNUplot](http://www.gnuplot.info/) (programma per creare grafici; fate riferimento al libro di Janert, [GNUplot in action](https://www.manning.com/books/gnuplot-in-action-second-edition));
 #.   [GNU R](http://www.r-project.org/) (linguaggio di programmazione con ottime capacità di creare grafici: vedi [The R Graph Gallery](https://r-graph-gallery.com/));
 #.   [Python+Matplotlib](http://matplotlib.org/) (meglio però usare librerie più sofisticate di Matplotlib, come [Seaborn](https://seaborn.pydata.org/));
 #.   [Mathematica](http://www.wolfram.com/mathematica/) (linguaggio di programmazione, a pagamento);
