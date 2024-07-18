@@ -341,7 +341,7 @@ Nel Toro. $N \sim 500$, età $10^8$ yr, $R \sim 8$ ly, $D \sim 440$ ly.
     \[
     \Delta t_r \approx \frac1{12\log\frac{N}2} \frac{N R^{3/2}}{\sqrt{G M_*}}
     \]
-    si ottiene per gli ammassi aperti che $\Delta t_r \approx 10^8\div 10^9\,\text{Gyr}$: quindi buona parte degli a.a. **non sono rilassati**.
+    si ottiene per gli ammassi aperti che $\Delta t_r \approx 10^8\div 10^9\,\text{yr}$: quindi buona parte degli a.a. **non sono rilassati**.
 
 
 # Tempo di rilassamento per a. aperti
