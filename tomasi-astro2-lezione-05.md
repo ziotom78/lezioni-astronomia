@@ -534,9 +534,9 @@ L'esercizio si risolve imponendo $\vec v = 0$ nella prima equazione, imponendo $
 
 
 ---
-title: Lezione di Astronomia II – 5
+title: "Astrofisica Generale II — 5"
 author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: "11 Aprile 2024"
+date: "11 Aprile 2025"
 css:
 - ./css/custom.css
 ...

@@ -1,11 +1,3 @@
----
-title: "Lezione di astronomia 2"
-author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "24 Novembre 2023"
-css:
-- ./css/custom.css
-...
-
 # Teoria dei sistemi binari
 
 # Sistemi binari
@@ -321,3 +313,12 @@ $$
 # HDE 308813
 
 <center>![](./images/2013-williams-plot-HDE308813.png){width=85%}</center>
+
+
+---
+title: "Astrofisica Generale I — 2"
+author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
+date: "24 Novembre 2024"
+css:
+- ./css/custom.css
+...

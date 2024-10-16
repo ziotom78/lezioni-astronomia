@@ -343,9 +343,9 @@ Per avere un modello realistico, bisogna anche tenere conto di altri effetti:
 <center>![](images/WMAP_foregrounds_new.png){height=520px}</center>
 
 ---
-title: "Lezione di Astronomia II – 4"
+title: "Astrofisica Generale II — 4"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "5 aprile 2024"
+date: "5 aprile 2025"
 css:
 - ./css/custom.css
 ...

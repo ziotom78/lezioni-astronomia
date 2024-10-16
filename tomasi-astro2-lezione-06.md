@@ -493,9 +493,9 @@ Quando p⁺ cattura e⁻, quest'ultimo è di solito a un livello energetico molt
 <center>![](images/dickinson-free-free-template.png){height=620px}</center>
 
 ---
-title: Lezione di Astronomia II – 6
+title: "Astrofisica Generale II — 6"
 author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: "12 Aprile 2024"
+date: "12 Aprile 2025"
 css:
 - ./css/custom.css
 ...

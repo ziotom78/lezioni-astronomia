@@ -389,9 +389,9 @@ Questo valore della massa è detto **massa viriale**.
 
 
 ---
-title: "Lezione di Astronomia II – 1"
+title: "Astrofisica Generale II — 1"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "21 marzo 2024"
+date: "21 marzo 2025"
 css:
 - ./css/custom.css
 ...

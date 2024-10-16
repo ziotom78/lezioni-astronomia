@@ -373,9 +373,9 @@ Perché gli ammassi aperti hanno vita così breve? Alcune ragioni:
 
 
 ---
-title: Lezione di Astronomia II – 2
+title: "Astrofisica Generale II — 2"
 author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: 22 marzo 2024
+date: 22 marzo 2025
 css:
 - ./css/custom.css
 ...

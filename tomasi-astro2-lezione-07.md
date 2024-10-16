@@ -384,9 +384,9 @@ sono dunque invisibili.
 
 
 ---
-title: Lezione di Astronomia II – 7
+title: "Astrofisica Generale II — 7"
 author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: "18 Aprile 2024"
+date: "18 Aprile 2025"
 css:
 - ./css/custom.css
 ...

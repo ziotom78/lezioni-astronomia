@@ -368,9 +368,9 @@ La polarizzazione si osserva soprattutto nel visibile, mentre è assente nell'UV
     (Di conseguenza, la presenza di polvere è **necessaria ma non sufficiente** per avere polarizzazione).
 
 ---
-title: "Lezione di Astronomia II – 3"
+title: "Astrofisica Generale II — 3"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "4 aprile 2024"
+date: "4 aprile 2025"
 css:
 - ./css/custom.css
 ...
