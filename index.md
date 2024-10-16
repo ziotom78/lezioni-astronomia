@@ -4,8 +4,8 @@
 
 # Astronomia I
 
-- 2024-10-17: [Lezione 1, prima parte](tomasi-astro1-lezione-01a.html) (il Centro Galattico, magnitudini).
-- 2024-10-18: [Lezione 1, seconda parte](tomasi-astro1-lezione-01b.html) (correzioni bolometriche, Julia).
+- 2024-10-17: [Lezione 1, prima parte](tomasi-astro1-lezione-01a.html) (il Centro Galattico, magnitudini), [PDF](pdf/tomasi-astro1-lezione-01a.pdf)
+- 2024-10-18: [Lezione 1, seconda parte](tomasi-astro1-lezione-01b.html) (correzioni bolometriche, Julia), [PDF](pdf/tomasi-astro1-lezione-01b.pdf)
 <!--
 - 2024-11-24: [Lezione 2](tomasi-astro1-lezione-02.html) (sistemi binari)
 
