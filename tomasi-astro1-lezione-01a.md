@@ -1,11 +1,3 @@
----
-title: "Lezione di astronomia 1a"
-author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "9 Novembre 2023"
-css:
-- ./css/custom.css
-...
-
 # Introduzione
 
 -   In questo primo modulo farò tre lezioni di approfondimento degli argomenti spiegati dal prof. Bersanelli.
@@ -16,13 +8,11 @@ css:
 
 -   Sono disponibili all'indirizzo [ziotom78.github.io/lezioni-astronomia/](https://ziotom78.github.io/lezioni-astronomia/).
 
--   Si possono stampare aggiungendo `?print-pdf` alla URL, ad esempio:
+    <center>
+    ![](images/site-url-qr-code.svg){height=400}
+    </center>
 
-    <https://ziotom78.github.io/lezioni-astronomia/tomasi-lezione-1a.html?print-pdf>
-
----
-
-<center>![](./images/How to print slides.gif)</center>
+-   Ogni volta metterò a disposizione una copia PDF delle slide nel sito.
 
 
 # Il centro galattico
@@ -56,7 +46,7 @@ Misurata in MJy/sr (1 Jy = 10$^{-26}$ W/m$^2$/Hz, misura la densità di flusso
 Gli autori assumono che l'emissività $\rho$ ($[\rho]
 = \text{W\,m$^{-3}$}$) abbia la forma
 $$
-\rho(x, y, z) = \rho_0 \exp\bigl(r^2/2\bigr), \text{ con } r^2 = \frac{x^2 + y^2}{R_0^2} + \frac{z^2}{z_0^2},
+\rho(x, y, z) = \rho_0 \exp\bigl(-r^2/2\bigr), \text{ con } r^2 = \frac{x^2 + y^2}{R_0^2} + \frac{z^2}{z_0^2},
 $$
 con gli assi $x, y, z$ liberi di ruotare nello spazio 3D.
 
@@ -128,16 +118,16 @@ Ci serve quindi $F_\nu$ (densità di flusso,
 # Angoli solidi
 
 Ricordiamo la definizione di radiante:
-  
+
 <center>![](./images/radian.png)</center>
 
 -   Il *radiante* è l'angolo $\alpha$ per cui $AB = r$,
     così che
-    
+
     $$
     AB = \alpha r.
     $$
-      
+
 -   Una circonferenza ha un'ampiezza di $2\pi\,\text{rad}$.
 
 
@@ -186,7 +176,7 @@ $$
 
 # Piccoli angoli
 
--   In quali unità di misura vanno espressi gli angoli perché valga 
+-   In quali unità di misura vanno espressi gli angoli perché valga
     $\Omega \approx \pi a b$?
 
 -   Siccome la formula
@@ -273,18 +263,18 @@ $$
 # Densità di flusso totale
 
 -   Sostituendo:
-    
+
     $$
     F_\nu \approx 0.64\,\text{MJy} = 6.4 \times
     10^{-21}\,\text{W\,m$^{-2}$\,Hz$^{-1}$}.
     $$
-    
+
     Ma questo valore è un po' più basso di quello riportato nell'articolo:
-    
+
     $$
     F_\nu = 7.3\times 10^{-21}\,\text{W\,m$^{-2}$\,Hz$^{-1}$}.
     $$
-    
+
 -   Secondo voi, avremmo potuto aspettarci che il valore esatto fosse *maggiore* della nostra stima?
 
 # Dal flusso alla luminosità
@@ -311,3 +301,11 @@ $$
     $$
 
 -   Se una stella tipica del bulge ha una luminosità $L \sim 400\,L_\odot$, allora il numero $N$ di stelle nel bulge Galattico è circa $$ N \approx 10^7. $$
+
+---
+title: "Astrofisica Generale I — 1a"
+author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
+date: "17 ottobre 2024"
+css:
+- ./css/custom.css
+...

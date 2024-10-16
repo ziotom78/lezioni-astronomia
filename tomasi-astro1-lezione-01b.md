@@ -1,12 +1,3 @@
----
-title: "Lezione di astronomia 1b"
-author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "10 Novembre 2023"
-css:
-- ./css/custom.css
-...
-
-
 # Correzioni bolometriche
 
 -   Nella [lezione precedente](tomasi-astro1-lezione-01a.html) abbiamo calcolato la luminosità totale del centro galattico a partire da misurazioni dello strumento DIRBE.
@@ -373,7 +364,7 @@ Il risultato è 2.22 µm, che è quanto ci aspettavamo.
 
 -   Dobbiamo anche avere un'idea più precisa dello spettro di emissione del centro galattico.
 
--   Il centro galattico appare rosso, e il fatto che sia povero di gas indica un'età avanzata. Questi indizi suggeriscono che le stelle siano giganti rosse; una gigante rossa M0 ha $T \approx 3800\,\text{K}$ e $L \approx 400 L_\odot$.
+-   Il centro galattico appare rosso, e il fatto che sia povero di gas indica un'età avanzata. Questi indizi suggeriscono che le stelle siano giganti rosse; una gigante rossa M0 ha $T \approx 3800\,\text{K}$, $R \approx 100 R_\odot$ e $L \approx 400 L_\odot$.
 
 -   Per conoscere qual è lo spettro di una gigante rossa M0, dobbiamo fare affidamento a un catalogo di spettri stellari.
 
@@ -578,19 +569,19 @@ scatter!(m0_λ_pts * 1e6, dirbe_band_interp.(m0_λ_pts),
     Bolometric correction: 14.55
     ```
 
-    
+
 
 # Dipendenza dalle assunzioni
 
 -   La prima stima che avevamo fornito per $C$ era basata sulla formula
-    
+
     $$
     C \approx \frac{\int_0^\infty B_{bb}(\nu, T)\,\text{d}\nu}{\int_{\nu_0
         - \Delta\nu/2}^{\nu_0 + \Delta\nu/2} B_{bb}(\nu, T)\,\text{d}\nu} \approx 20.28,
     $$
-    
+
     che usava un'approssimazione sia per la banda di DIRBE che per lo spettro stellare.
-    
+
 -   Qual è l'importanza relativa delle due assunzioni nel determinare la soluzione finale?
 
 
@@ -681,3 +672,11 @@ plot!(dirbe_λ[mask] * 1e6, dirbe_band[mask],
 -   Preoccupatevi di compilare con cura i questionari! Sono esaminati una volta all'anno dalla Commissione Paritetica Docenti-Studenti, e i risultati sono presi molto sul serio.
 
 -   Dovrete dare una valutazione per il corso e per queste esercitazioni. Se potete, date un vostro giudizio (nei commenti liberi) sull'utilità di queste lezioni di approfondimento rispetto alle lezioni nel loro complesso, e mettetelo nei commenti generali del corso.
+
+---
+title: "Astrofisica Generale I — 1b"
+author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
+date: "18 ottobre 2024"
+css:
+- ./css/custom.css
+...
