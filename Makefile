@@ -9,7 +9,7 @@ IMAGES = \
 	tophat-band.png
 
 PANDOC := /usr/bin/pandoc
-PANDOC_IMAGINE := $(HOME)/bin/pandoc_imagine.py
+PANDOC_IMAGINE := $(HOME)/bin/pandoc-imagine
 .phony: all http
 
 all: \
