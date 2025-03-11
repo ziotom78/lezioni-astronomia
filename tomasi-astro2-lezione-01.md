@@ -1,67 +1,66 @@
-# Come si usa Ariel
+# How to use Ariel
 
-Per ricevere le notifiche via email, occorre abilitarle *in tutte
-  le sezioni del sito*.
+To receive email notifications, you must enable them *in all
+  sections of the site*.
 
 <center>![](images/ariel-notifica.png)</center>
 
-# Valutazioni sulla didattica
+# Course Evaluation
 
--   Tre criticità evidenziate dagli studenti:
+-   Three critical points highlighted by the students:
 
-    #.   Parlo troppo in fretta!
-    #.   Faccio intervenire poco.
-    #.   Le slide sono a volte impaginate in modo strano.
+    #.   I speak too fast!
+    #.   I don't encourage enough student participation.
+    #.   The slides are sometimes strangely formatted.
 
--   Quest'anno ho cercato di implementare una soluzione per ciascun problema.
+-   This year I have tried to implement a solution for each problem.
 
 
-# La Via Lattea
+# The Milky Way
 
-# Struttura della Via Lattea
+# Structure of the Milky Way
 
 <center>![](images/milky-way.jpg){width=640px}</center>
 
-# Masse e dimensioni
+# Masses and sizes
 
-| Componente             | Massa              | Forma e dimensioni                                 |
-|------------------------|--------------------|----------------------------------------------------|
-| Alone stellare         | $10^9\,M_\odot$    | Sfera ($r > 20\,\text{kpc}$)                       |
-| Disco (gas)            | $10^{10}\,M_\odot$ | Disco ($r = 25\,\text{kpc}$, $h=0.15\,\text{kpc}$) |
-| Rigonfiamento centrale | $10^{10}\,M_\odot$ | Ellissoide ($6\times 2 \times 2 \,\text{kpc})$     |
-| Disco (stelle)         | $10^{11}\,M_\odot$ | Disco ($r = 15\,\text{kpc}$, $h = 1\,\text{kpc}$)  |
-| Alone materia oscura   | $10^{12}\,M_\odot$ | Sfera ($r >  60\,\text{kpc}$?)                     |
+| Component          | Mass               | Shape and size                                     |
+|--------------------|--------------------|----------------------------------------------------|
+| Stellar halo       | $10^9\,M_\odot$    | Sphere ($r > 20\,\text{kpc}$)                      |
+| Disk (gas)         | $10^{10}\,M_\odot$ | Disk ($r = 25\,\text{kpc}$, $h=0.15\,\text{kpc}$)  |
+| Central bulge      | $10^{10}\,M_\odot$ | Ellipsoid ($6\times 2 \times 2 \,\text{kpc})$      |
+| Disk (stars)       | $10^{11}\,M_\odot$ | Disk ($r = 15\,\text{kpc}$, $h = 1\,\text{kpc}$)   |
+| Dark matter halo   | $10^{12}\,M_\odot$ | Sphere ($r >  60\,\text{kpc}$?)                    |
 
 
-# Introduzione agli ammassi stellari
+# Stellar clusters
 
-# NGC 290 (ammasso aperto)
+# NGC 290 (open cluster)
 
 <center>![](images/ngc290.jpg){height=600px}</center>
 
-# M22 (ammasso globulare)
+# M22 (globular cluster)
 
 <center>![](images/m22.jpg){height=600px}</center>
 
 ---
 
-|                      | Ammassi aperti                      | Ammassi globulari                       |
-|----------------------|-------------------------------------|-----------------------------------------|
-|                      | ![](images/ngc290.jpg){height=60px} | ![](images/m22.jpg){height=60px}        |
-| # di stelle          | 10³–10⁴                             | 10⁴–10⁶                                 |
-| Dimensioni           | 10 pc                               | 20–100 pc (core: 5 pc)                  |
-| Gas e polvere?       | Sì                                  | No                                      |
-| Nebulose planetarie? | No                                  | Sì                                      |
-| # di ammassi noti    | 10³                                 | ~160                                    |
-| Dove?                | Disco                               | Alone stellare (~1% della massa totale) |
+|                     | Open clusters                       | Globular clusters                |
+|---------------------|-------------------------------------|----------------------------------|
+|                     | ![](images/ngc290.jpg){height=60px} | ![](images/m22.jpg){height=60px} |
+| # of stars          | 10³–10⁴                             | 10⁴–10⁶                          |
+| Size                | 10 pc                               | 20–100 pc (core: 5 pc)           |
+| Gas and dust?       | Yes                                 | No                               |
+| Planetary nebulae?  | No                                  | Yes                              |
+| # of known clusters | 10³                                 | ~160                             |
+| Where?              | Disk                                | Stellar halo (~1% of total mass) |
 
 
-# Termodinamica e astrofisica
+# Thermodynamics and astrophysics
 
 <center>![](images/ideal-gas.png){height=460px}</center>
 
-Essendo sistemi composti da molte particelle, possiamo pensare di
-usare la termodinamica classica per descriverli?
+Essendo sistemi composti da molte particelle, possiamo pensare di usare la termodinamica classica per descriverli?
 
 # Termodinamica e astrofisica
 
@@ -75,49 +74,49 @@ usare la termodinamica classica per descriverli?
 
     ([*Dynamics and Thermodynamics of Systems with Long Range Interactions*](https://link.springer.com/book/10.1007/3-540-45835-2), Springer)
 
-# Teorema del viriale
+# Virial Theorem
 
--   Esiste uno strumento adatto per la descrizione di sistemi gravitazionalmente legati: il *teorema del viriale*.
--   Consideriamo un sistema fisico di $N$ particelle confinato in un volume $V$ da forze interne.
--   Ogni particella si trova nel punto $P_i$, la forza risultante su di essa è $\vec F_i$, e $K_i$ è la sua energia cinetica.
+-   There is a suitable tool for the description of gravitationally bound systems: the *virial theorem*.
+-   Let's consider a physical system of $N$ particles confined in a volume $V$ by internal forces.
+-   Each particle is located at point $P_i$, the resulting force on it is $\vec F_i$, and $K_i$ is its kinetic energy.
 
-# Medie temporali
+# Time Averages
 
--   Le quantità $P_i$, $\vec F_i$ e $K_i$ variano nel tempo
--   Siamo però interessati più al loro **valore medio** che alla loro evoluzione istante per istante.
--   Data una quantità $f = f(t)$ dipendente dal tempo, il valore di
+-   The quantities $P_i$, $\vec F_i$ and $K_i$ vary over time.
+-   However, we are more interested in their **average value** than in their instantaneous evolution.
+-   Given a time-dependent quantity $f = f(t)$, the value of
     \[
     \left< f \right>_t = \lim_{\tau \rightarrow \infty} \frac1\tau \int_0^\tau f(t)\,\text{d}t
     \]
-    è la media temporale di $f$.
+    is the time average of $f$.
 
 
-# Definizione di «viriale»
+# Definition of «Virial»
 
--   Data un'origine del sistema di riferimento O, si dice «viriale» la quantità
+-   Given an origin O of the reference frame, the quantity
     \[
     G \equiv \sum_{i=1}^N (P_i - O) \cdot \vec p_i = \sum_{i=1}^N \vec r_i \cdot \vec p_i,
     \]
-    dove $\vec r_i = P_i - O$ è il vettore che punta verso la particella $i$-esima.
+    where $\vec r_i = P_i - O$ is the vector pointing towards the $i$-th particle, is called «virial».
 
--   Se le particelle si trovano in un volume limitato $V$, allora
-    1.  $G$ è una quantità limitata;
-    2.  Dopo un certo tempo, $G$ tende a diventare costante.
+-   If the particles are located in a limited volume $V$, then
+    1.  $G$ is a limited quantity;
+    2.  After a certain time, $G$ tends to become constant.
 
 
-# Limitatezza del viriale
+# Upper bounds for the virial
 
--   Se il sistema è limitato in un volume $V$ e la sua energia è finita, allora esistono degli estremi superiori $P$ e $R$ per la quantità di moto $p_i$ e $r_i$.
--   Di conseguenza,
+-   If the system is confined in a volume $V$ and its energy is finite, then there exist upper bounds $P$ and $R$ for the momentum $p_i$ and $r_i$.
+-   Consequently,
     \[
     \left| G \right| = \left|\sum_{i=1}^N \vec r_i \cdot \vec p_i\right| \leq \sum_{i=1}^N
     \left|\vec r_i\right| \cdot \left|\vec p_i\right| \leq N R P,
     \]
-    e l'ipotesi è dimostrata.
+    and the hypothesis is proven.
 
-# Variazione nel tempo del viriale
+# Time Variation of the Virial
 
--   La variazione nel tempo del viriale ha media nulla:
+-   The time variation of the virial has zero average:
     \[
     \begin{aligned}
       \left|\left< \dot G \right>_t\right| &=
@@ -128,24 +127,23 @@ usare la termodinamica classica per descriverli?
       &\leq \lim_{\tau\rightarrow\infty} \frac{2 N R P}\tau = 0.
     \end{aligned}
     \]
--   Dopo un certo *tempo di rilassamento*, $G$ diventa circa costante.
+-   After a certain *relaxation time*, $G$ becomes approximately constant.
 
 
-# Teorema del viriale
+# Virial Theorem
 
-Il teorema del viriale dice che in un sistema limitato in un volume
-$V$, passato il tempo di rilassamento, vale l'uguaglianza
+The virial theorem states that in a system confined in a volume $V$, after the relaxation time, the following equality holds:
 \[
 2\left<K\right>_t = - \left<\sum_{i=1}^N \vec r_i \cdot \vec
   F_i \right>_t,
 \]
-dove $K = \sum_{i=1}^N K_i$ è l'energia cinetica totale del sistema.
+where $K = \sum_{i=1}^N K_i$ is the total kinetic energy of the system.
 
 
-# Dimostrazione del teorema
+# Proof of the theorem
 
-Usando la proprietà $\left< \dot G \right>_t = 0$ si ottiene subito
-la tesi:
+Using the property $\left< \dot G \right>_t = 0$ we immediately obtain
+the thesis:
 \[
 \begin{aligned}
   \left<\frac{\text{d}}{\text{d} t} \sum_{i=1}^N \vec r_i \cdot
@@ -157,14 +155,14 @@ la tesi:
 \end{aligned}
 \]
 
-# Caso di forze centrali
+# Case of central forces
 
-Dimostriamo ora che per forze con potenziale $U_i = k r_i^\alpha$
-(«forze centrali») in sistemi sferici il teorema del viriale si riduce a:
+We now show that for forces with potential $U_i = k r_i^\alpha$
+(«central forces») in spherical systems the virial theorem reduces to:
 \[
 \alpha \left<U\right>_t = 2\left< K \right>_t,
 \]
-dove $U = \sum_{i=1}^N U_i$ è l'energia potenziale totale.
+where $U = \sum_{i=1}^N U_i$ is the total potential energy.
 
 <center>![](images/virial-coordinate-system.png){height=300px}</center>
 
@@ -176,7 +174,7 @@ dove $U = \sum_{i=1}^N U_i$ è l'energia potenziale totale.
   = - \partial_r U_i(r_i)\,\hat e_r
   = -\alpha\,k\,r_i^{\alpha - 1} \hat e_r,
 \]
-implica che
+implies that
 \[
   \begin{aligned}
     2\left< K \right>_t &= -\left<\sum_{i=1}^N \vec r_i \cdot \vec
@@ -189,27 +187,27 @@ implica che
 \]
 
 
-# Il viriale in sistemi gravitazionali
+# The Virial Theorem in Gravitational Systems
 
--   In un sistema di corpi di massa $m$ dove l'unica forza è quella gravitazionale, $U = k r^{-1}$ (con $k = -G m^2$), e quindi $\alpha = -1$:
+-   In a system of bodies of mass $m$ where the only force is gravitational, $U = k r^{-1}$ (with $k = -G m^2$), and therefore $\alpha = -1$:
     \[
       \left<U\right>_t = -2\left< K \right>_t.
     \]
 
--   In un sistema virializzato dominato dalla gravità, l'energia potenziale è *doppia* (in modulo) rispetto all'energia cinetica.
+-   In a virialized system dominated by gravity, the potential energy is *twice* (in absolute value) the kinetic energy.
 
--   (In realtà la relazione $U \propto r^{-1}$ vale solo lontano dal centro, dove invece $U \propto M(r) / r \propto r^2$ e il moto è come quello di una molla).
+-   (Actually, the relationship $U \propto r^{-1}$ is valid only far from the center, where instead $U \propto M(r) / r \propto r^2$ and the motion is like that of a spring).
 
 
-# Sistemi “virializzati”
+# “Virialized” Systems
 
--   Un sistema per cui vale il teorema del viriale si dice “virializzato”
+-   A system for which the virial theorem holds is called “virialized”
 
--   I sistemi virializzati dimostrano notevole simmetria, perché l'energia cinetica dei loro componenti si è distribuita statisticamente
+-   Virialized systems exhibit considerable symmetry, because the kinetic energy of their components is statistically distributed
 
--   È una condizione simile a quella dell'equilibrio termodinamico
+-   It is a condition similar to that of thermodynamic equilibrium
 
--   La prossima animazione mostra un esempio 2D molto simpatico ed efficace
+-   The next animation shows a very nice and effective 2D example
 
 ---
 
@@ -218,119 +216,114 @@ implica che
 [Gravitational collapse of Spongebob](https://www.youtube.com/watch&v=C6eY6HMBa2Q)
 
 
-# Livello di energia potenziale
+# Potential Energy Level
 
--   Ricordate che l'energia potenziale è definita a meno di una costante additiva (deriva da un integrale indefinito).
--   Il teorema del viriale assume però una costante ben precisa per $U$: siccome abbiamo supposto che $U = k r^{-1}$, significa che assumiamo che l'energia potenziale di $i$ e $j$ tenda a zero se le due particelle vengono allontanate indefinitamente.
+-   Remember that potential energy is defined up to an additive constant (it derives from an indefinite integral).
+-   The virial theorem, however, assumes a very specific constant for $U$: since we assumed that $U = k r^{-1}$, it means that we assume that the potential energy of $i$ and $j$ tends to zero if the two particles are moved infinitely far apart.
 
 
-# Applicazioni del teorema (1/2)
+# Applications of the theorem (1/2)
 
--   Come esempio, stimiamo la temperatura media del Sole usando il teorema del viriale.
--   Il Sole è un sistema di volume sferico limitato, sicuramente rilassato, quindi il teorema è applicabile.
+-   As an example, let's estimate the average temperature of the Sun using the virial theorem.
+-   The Sun is a bounded spherical volume system, certainly relaxed, so the theorem is applicable.
 
-# Applicazioni del teorema (1/2)
+# Applications of the theorem (1/2)
 
-L'energia potenziale gravitazionale del Sole (sfera di raggio $R$) è
+The gravitational potential energy of the Sun (sphere of radius $R$) is
 \[
 U = \frac35 G \frac{M^2}R,
 \]
-mentre l'energia cinetica totale è
+while the total kinetic energy is
 \[
 K = \sum_{i=1}^N \frac32 k T
 \]
-(assumiamo che la temperatura sia costante nell'interno).
+(we assume that the temperature is constant inside).
 
 
-# Applicazioni del teorema (1/2)
+# Applications of the theorem (1/2)
 
-Usando il teorema del viriale
+Using the virial theorem
 \[
 2 \left< K \right>_t = -\left< U \right>_t
 \]
-otteniamo che la **temperatura viriale** è
+we obtain that the **virial temperature** is
 \[
 T = \frac15 \frac{G M_\odot^2}{N k R_\odot} \sim 10^6 \div 10^7\,\text{K}.
 \]
-Essa corrisponde circa alla temperatura del nucleo.
+It roughly corresponds to the core temperature.
 
 
-# Applicazioni del teorema (2/2)
+# Applications of the theorem (2/2)
 
--   Calcoliamo ora l'energia media di legame per nucleone in un nucleo atomico.
--   Anche in questo caso abbiamo un sistema di particelle ovviamente rilassato e confinato in un volume limitato, ma **non è classico**: proviamo comunque ad applicare il teorema del viriale.
+-   Let's now calculate the average binding energy per nucleon in an atomic nucleus.
+-   Also in this case we have a system of particles obviously relaxed and confined in a limited volume, but it is **not classical**: let's try to apply the virial theorem anyway.
 
-# Applicazioni del teorema (2/2)
+# Applications of the theorem (2/2)
 
--   Un nucleo atomico ha raggio $R \sim 10^{-15}\,\text{m}$.
--   L'energia cinetica media classica $p^2/(2m)$ è stimabile dal principio di indeterminazione:
+-   An atomic nucleus has a radius $R \sim 10^{-15}\,\text{m}$.
+-   The average classical kinetic energy $p^2/(2m)$ can be estimated from the uncertainty principle:
     \[
     \Delta p_x \Delta x \sim \frac\hbar2 \qquad\Rightarrow\qquad p_x \approx \frac{\hbar}{2R}.
     \]
--   Siccome $p^2 = p_x^2 + p_y^2 + p_z^2 \approx 3 p_x^2 \approx 3 \hbar^2/4 R^2$, allora
+-   Since $p^2 = p_x^2 + p_y^2 + p_z^2 \approx 3 p_x^2 \approx 3 \hbar^2/4 R^2$, then
     \[
     K \approx A \frac{p^2}{2 m_p} \approx A \frac{3 \hbar^2}{8 R^2 m_p} \sim A \frac{\hbar^2}{R^2 m_p}.
     \]
 
 
-# Applicazioni del teorema (2/2)
+# Applications of the theorem (2/2)
 
-Nell'ipotesi che $U \propto r^\alpha$, e che $\left|\alpha\right|$
-non sia troppo distante dall'unità, dal teorema del viriale vale che
-$K \sim U$ (stesso ordine di grandezza), ossia
+Under the hypothesis that $U \propto r^\alpha$, and that $\left|\alpha\right|$
+is not too far from unity, from the virial theorem it holds that
+$K \sim U$ (same order of magnitude), i.e.
 \[
 A \frac{\hbar^2}{R^2 m_p} \sim U
 \]
 
-Noi siamo interessati all'energia di legame **per nucleone**,
-ossia $U/A$:
+We are interested in the binding energy **per nucleon**,
+i.e., $U/A$:
 \[
-U/A \sim \frac{\hbar^2}{R^2 m_p} \sim 10\,\text{MeV/nucleone}.
+U/A \sim \frac{\hbar^2}{R^2 m_p} \sim 10\,\text{MeV/nucleon}.
 \]
 
-# Dinamica degli a.g.
+# Globular cluster dynamics
+-   Globular clusters are spherically symmetric, therefore virialized.
+-   Using the virial theorem, we calculate the following quantities for a typical cluster:
+    #.   Escape velocity;
+    #.   Root mean square velocity;
+    #.   Mass.
 
--   Gli ammassi globulari sono a simmetria sferica, quindi virializzati.
--   Usando il teorema del viriale, calcoliamo le seguenti quantità per un ammasso tipico:
-    #.   Velocità di fuga;
-    #.   Velocità quadratica media;
-    #.   Massa.
 
+# Escape Velocity
 
-# Velocità di fuga
+-   Is it reasonable to assume that a globular cluster is bound? To answer this, we need to estimate the escape velocity.
+-   If the average velocity of the stars were greater than the escape velocity, then the cluster could not be bound: it would «evaporate» letting its stars escape into space.
 
--   È sensato supporre che un ammasso globulare sia legato? Per rispondere a questo, dobbiamo stimare la velocità di fuga.
--   Se la velocità media delle stelle fosse maggiore della velocità di fuga, allora l'ammasso non potrebbe essere legato: «evaporerebbe» lasciando sfuggire le sue stelle nello spazio.
-
-# Velocità di fuga
+# Escape Velocity
 
 <center>![](images/escape_speed.png){height=460px}</center>
 
-Per stimare la velocità di fuga $v_f$ si impone la conservazione
-dell'energia tra i due istanti mostrati in figura.
+To estimate the escape velocity $v_f$ we impose the conservation of energy between the two instants shown in the figure.
 
 
-# Velocità di fuga
+# Escape Velocity
 
--   Nel caso di una stella posta inizialmente a una distanza $R$ dal
-    centro di massa dell'ammasso, l'equazione di conservazione
-    dell'energia diventa:
+-   In the case of a star initially located at a distance $R$ from the center of mass of the cluster, the energy conservation equation becomes:
     \[
     \frac12 M_* v_f^2 - G \frac{M_*\, M_\text{GC}}R = 0,
     \]
 
--   Se $M_\text{GC} \sim 10^6\,M_\odot$ e $R \sim 10\,\text{pc}$, si ha che
+-   If $M_\text{GC} \sim 10^6\,M_\odot$ and $R \sim 10\,\text{pc}$, we have that
     \[
       v_f = \sqrt{\frac{2 G M_\text{GC}}R} \sim 30\,\text{km/s}.
     \]
 
--   Notate che per una particella che sfugge l'energia totale è **nulla**.
+-   Note that for an escaping particle the total energy is **zero**.
 
 
-# Velocità quadratica media
+# Root Mean Square Velocity
 
-Vogliamo calcolare la velocità (quadratica) media delle stelle in un
-ammasso globulare. Questa quantità è legata all'energia cinetica $K$:
+We want to calculate the root mean square velocity of the stars in a globular cluster. This quantity is related to the kinetic energy $K$:
 \[
 \begin{aligned}
   K &= \sum_{i=1}^N \frac12 M_* v_i^2 = \frac12 M_* N \frac1N
@@ -340,58 +333,57 @@ ammasso globulare. Questa quantità è legata all'energia cinetica $K$:
 \]
 
 
-# Velocità quadratica media
-Di conseguenza, dal teorema del viriale
+# Root Mean Square Velocity
+
+Consequently, from the virial theorem
 \[
 2 \left< K \right>_t = -\left< U \right>_t = -\left< \frac35 \frac{G
     M_\text{GC}^2}R \right>_t
 \]
-abbiamo che
+we have that
 \[
   v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}} \sim 15\,\text{km/s}.
 \]
 
 
-# Velocità di fuga e velocità quadratica media
+# Escape Velocity and Root Mean Square Velocity
 
-Dal momento che
+Since
 \[
 \left(v_\text{rms} = \sqrt{\frac{3 G M_\text{GC}}{5 R}}\right) < \left(v_f = \sqrt{\frac{2 G M_\text{GC}}R}\right),
 \]
-ciò conferma l'ipotesi che l'ammasso globulare (e in generale
-qualsiasi sistema gravitazionale virializzato) sia un sistema legato.
+this confirms the hypothesis that the globular cluster (and in general
+any virialized gravitational system) is a bound system.
 
-# Massa viriale degli a.g.
+# Virial mass of a GC
 
--   Calcoliamo ora la massa totale di un ammasso globulare da parametri
-    osservativi.
--   L'energia potenziale e cinetica dell'ammasso è
+-   Let's now calculate the total mass of a globular cluster from observational parameters.
+
+-   The potential and kinetic energy of the cluster is
     \[
     K = \frac12 M_\text{GC} \left<v^2\right>_t, \quad U = -\frac35
     \frac{G M_\text{GC}^2}R.
     \]
--   Dal fatto che $2 \left<K\right>_t + \left<U\right>_t = 0$ si ha
-    che
+-   From the fact that $2 \left<K\right>_t + \left<U\right>_t = 0$ we have that
     \[
     M = \frac5{3 G}\left<v^2\right>_t R.
     \]
 
 
-# Massa viriale degli a.g.
+# Virial Mass of g.c.
 
-Per il nostro ammasso tipico con $R = 5\,\text{pc}$ e $v =
-15\,\text{km/s}$ abbiamo che
+For our typical cluster with $R = 5\,\text{pc}$ and $v = 15\,\text{km/s}$ we have that
 \[
 M \sim 10^{39}\,\text{g} \approx 5\times 10^5\,M_\odot.
 \]
 
-Questo valore della massa è detto **massa viriale**.
+This value of the mass is called **virial mass**.
 
 
 ---
 title: "Astrofisica Generale II — 1"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "21 marzo 2025"
+date: "13 marzo 2025"
 css:
 - ./css/custom.css
 ...

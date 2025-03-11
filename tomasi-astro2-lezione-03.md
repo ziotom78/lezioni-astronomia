@@ -1,84 +1,83 @@
-# Il mezzo interstellare (ISM)
+# The Interstellar Medium (ISM)
 
-# Il piano galattico
+# The Galactic Plane
 
-L'evidenza del mezzo interstellare (*interstellar medium*, ISM) è data dalla presenza di regioni opache sul piano galattico, con uno spessore di $\sim 100\div500$ pc.
+Evidence of the interstellar medium (ISM) is given by the presence of opaque regions on the galactic plane, with a thickness of $\sim 100\div500$ pc.
 
 <center>![](images/milky-way-plane.jpg){height=420px}</center>
 
 
-# Il disco gassoso
+# The Gaseous Disk
 
 <center>![](images/milky-way-and-gaseous-disk.png){height=520px}</center>
 
-<small>Adattato da B.\ Draine, *Physics of the interstellar and galactic medium*, Princeton University Press (2011).</small>
+<small>Adapted from B.\ Draine, *Physics of the interstellar and galactic medium*, Princeton University Press (2011).</small>
 
-# Globuli e nubi
+# Globules and nebulae
 
-Il mezzo interstellare mostra addensamenti di materia la cui scala è
-circa $\sim 1$ pc («globuli» e «nubi»).
+Il mezzo interstellare mostra addensamenti di materia la cui scala è circa $\sim 1$ pc («globuli» e «nubi»).
 
 <center>![](images/barnard68.jpg){height=420px}</center>
 
 <small>Barnard 68 («Black cloud»)</small>
 
 
-# Il mezzo interstellare
+# The Interstellar Medium
 
-Ci sono due motivi per cui ISM è interessante:
+There are two reasons why the ISM is interesting:
 
-#.  Contiene una parte importante della massa della Galassia ($10^{10}\,M_\odot$);
-#.  È un luogo di formazione stellare:
+1. It contains a significant portion of the Galaxy's mass ($10^{10}\,M_\odot$);
+2. It is a site of star formation:
     \[
       \begin{aligned}
         t_\text{O-star} &< 1\,\text{Gyr},\\
-        t_\text{Via Lattea} \sim \max t_\text{gc} &\gtrsim
+        t_\text{Milky Way} \sim \max t_\text{gc} &\gtrsim
         10\,\text{Gyr}.
       \end{aligned}
     \]
-    Quindi il fatto che oggi si osservino stelle O nella Via Lattea implica che la formazione stellare sia ancora in corso.
+    Therefore, the fact that we observe "O" stars in the Milky Way today implies that star formation is still ongoing.
 
-# Barioni nella Via Lattea
+# Baryons in the Mikly Way
 
 <center>![](images/ism-and-stars.png){height=520px}</center>
 
-<small>Adattato da B.\ Draine, *Physics of the interstellar and galactic medium*, Princeton University Press (2011).</small>
+<small>Adapted from B.\ Draine, *Physics of the interstellar and galactic medium*, Princeton University Press (2011).</small>
 
-# Componenti dell'ISM
+# Components of the ISM
 
-ISM comprende tutto ciò che nella Galassia sta tra le stelle. Esso è composto da:
+ISM includes everything in the Galaxy that lies between the stars. It is composed of:
 
-#.   **Gas**;
-#.   **Polveri**;
-#.   Raggi cosmici;
-#.   Radiazione e.m.\ (luce stellare, CMB, …);
-#.   Campo magnetico interstellare;
-#.   Campo gravitazionale;
-#.   Materia oscura.
+1.  **Gas**;
+2.  **Dust**;
+3.  Cosmic rays;
+4.  E.m. radiation (starlight, CMB, …);
+5.  Interstellar magnetic field;
+6.  Gravitational field;
+7.  Dark matter.
 
-Oggi ci occuperemo solo di **gas** e **polveri**.
+Today we will only deal with **gas** and **dust**.
 
 
-# Il mezzo interstellare
+# The interstellar medium
 
-Metodi di osservazione:
+Observation methods:
 
--   Polvere:
-    #.  Oscuramento (in banda V);
-    #.  Emissione diretta (UV, IR, mm\ldots).
--   Gas: emissione/assorbimento di righe.
+-   Dust:
+    1.  Obscuration (in V band);
+    2.  Direct emission (UV, IR, mm\ldots).
+-   Gas: emission/absorption of lines.
 
-# Riduzione del flusso
+# Flux Reduction
 
--   Il flusso di oggetti brillanti viene essere ridotto dall'ISM per **diffusione** e **assorbimento**:
+-   The flux of bright objects is reduced by the ISM through **scattering** and **absorption**:
 
-    #.  La diffusione cambia la direzione di propagazione della radiazione
+    #.  Scattering changes the direction of propagation of the radiation
 
-    #.  L'assorbimento aumenta la temperatura del mezzo interstellare
+    #.  Absorption increases the temperature of the interstellar medium
 
-    I due fenomeni si indicano collettivamente col termine **estinzione**.
+    The two phenomena are collectively referred to as **extinction**.
 
--   Il mezzo interstellare ha densità molto variabili: da 10⁻⁴ a 10⁺⁶ cm⁻³, ma si tratta comunque di valori bassissimi! (L'aria ha densità 10¹⁹ cm⁻³)
+-   The interstellar medium has highly variable densities: from 10⁻⁴ to 10⁺⁶ cm⁻³, but these are still very low values! (Air has a density of 10¹⁹ cm⁻³)
 
 ---
 
@@ -86,109 +85,109 @@ Metodi di osservazione:
 ![](./images/scattering-equation.svg)
 </center>
 
--   Un fotone che attraversa uno spessore $\mathrm{d}l$ di ISM ha una certa probabilità $p$ di interagire con le sue particelle, venendo estinto (diffuso/assorbito).
+-   A photon traversing a thickness $\mathrm{d}l$ of ISM has a certain probability $p$ of interacting with its particles, being extinguished (scattered/absorbed).
 
--   Se nello spessore ci sono $N = n(l) \times A \times \mathrm{d}l$ particelle, allora
+-   If there are $N = n(l) \times A \times \mathrm{d}l$ particles in the thickness, then
 
-    \[
-    p = \frac{N\sigma_\lambda}A = \frac{n(l)\,A\,\mathrm{d}l\,\sigma_\lambda}A = n(l)\,\sigma_\lambda\,\mathrm{d}l.
-    \]
+    ```
+    p = Nσλ / A = (n(l) A dl σλ) / A = n(l) σλ dl.
+    ```
 
-    (supponendo che $\mathrm{d}l$ sia così piccolo che le particelle non si eclissino a vicenda).
+    (assuming that $\mathrm{d}l$ is so small that the particles do not eclipse each other).
 
-# Equazione dell'estinzione
+# Extinction Equation
 
--   Data la probabilità $p$ di estinzione, ad una certa $\lambda$ la radianza spettrale $I_\lambda$ ($[I_\lambda] = \text{W/m$^2$/Hz/sr}$) verrà ridotta a causa dell'estinzione:
+-   Given the probability $p$ of extinction, at a certain $\lambda$ the spectral radiance $I_\lambda$ ($[I_\lambda] = \text{W/m$^2$/Hz/sr}$) will be reduced due to extinction:
 
-    \[
-    \mathrm{d}I_\lambda = - p \times I_\lambda = -n(l)\,\sigma_\lambda\,I_\lambda\,\mathrm{d}l.
-    \]
+    ```
+    dIλ = -p × Iλ = -n(l) σλ Iλ dl.
+    ```
 
--   Risolvendo l'equazione differenziale, si ottiene
+-   Solving the differential equation, we get
 
-    \[
-      I_\lambda(l) = I_0\,e^{-\int_0^l n(l')\,\mathrm{d}l'\,\sigma_\lambda} = I_0\,e^{-\sigma_\lambda\,\int_0^l n(l')\,\mathrm{d}l'} = I_0 e^{-\tau_\lambda(l)},
-    \]
+    ```
+      Iλ(l) = I0 exp(-∫ n(l') dl' σλ) = I0 exp(-σλ ∫ n(l') dl') = I0 exp(-τλ(l)),
+    ```
 
-    e quindi la radianza spettrale dipende dalla distanza se c'è estinzione!
+    and therefore the spectral radiance depends on the distance if there is extinction!
 
 
-# Densità colonnare
+# Column Density
 
 <center>
 ![](images/darts.svg)
 </center>
 
-Si definisce **densità colonnare** la quantità
+We define **column density** the quantity
 
 \[
 N_\text{col} = \int_0^l n(l')\,\mathrm{d}l',
 \]
+from which $[N_\text{col}] = \text{cm}^{-2}$. If $n(l)$ is constant, $N_\text{col} = n \times l$.
 
-e vale che $[N_\text{col}] = \text{cm}^{-2}$. Se $n(l)$ è costante, $N_\text{col} = n \times l$.
 
+# Extinction Coefficient
 
-# Coefficiente di estinione
+-   The value $\tau_\lambda(L) = N_\text{col}\,\sigma_\lambda$ is called the **extinction coefficient**, and it is a dimensionless number.
 
--   Il valore $\tau_\lambda(L) = N_\text{col}\,\sigma_\lambda$ è detto **coefficiente di estinzione**, ed è un numero puro.
+-   Extinction is the combined effect of absorption and scattering. Their relative importance depends on the physical properties of the grains and on $\lambda$.
 
--   L'estinzione è l'effetto combinato di assorbimento e diffusione. La loro importanza relativa dipende dalle proprietà fisiche dei grani e da $\lambda$.
-
--   Si definisce *albedo* $a_{\lambda,\text{diff}}$ la frazione dell'estinzione dovuta alla diffusione:
+-   The *albedo* $a_{\lambda,\text{diff}}$ is defined as the fraction of extinction due to scattering:
     \[
-    I_\lambda(l) = I_0 e^{-\tau_\lambda} = I_0 e^{-\tau_\lambda (a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}})},
+    I_\lambda(l) = I_0 e^{-\tau_\lambda} = I_0 e^{-\tau_\lambda (a_{\lambda,\text{diff}} + a_{\lambda,\text{abs}})},
     \]
-    con $a_{\lambda,\text{diff}} + a_{\lambda,\text{ass}} = 1$.
+    with $a_{\lambda,\text{diff}} + a_{\lambda,\text{abs}} = 1$.
 
 
-# Estinzione e magnitudine
+# Extinction and Magnitude
 
--   Passando da $I$ al flusso $b$ ($[b] = \text{W/m$^2$}$), se quello misurato è inferiore a causa dell'estinzione, vuol dire che la magnitudine **aumenta**:
+-   Switching from $I$ to flux $b$ ($[b] = \text{W/m$^2$}$), if the measured flux is lower due to extinction, it means that the magnitude **increases**:
     \[
     A_\lambda \equiv m'_\lambda - m_\lambda = 2.5\log_{10} \frac{b_0}{b_\lambda(l)} = 2.5\log_{10}e^{\tau_\lambda(l)} = 1.0857\,\tau_\lambda(l)
     \]
 
-    ($A$ viene talvolta detto *assorbimento totale*).
+    ($A$ is sometimes called *total absorption*).
 
--   Si può quindi usare l'approssimazione
+-   Therefore, the approximation
     \[
     A_\lambda \approx \tau_\lambda(l).
     \]
+    can be used.
 
-# ISM e misura delle distanze
+# ISM and Distance Measurement
 
--   In presenza di estinzione $A$, in generale si ha che
+-   In the presence of extinction $A$, in general we have
     \[
     \begin{aligned}
       m'_\lambda &= m_\lambda + A_\lambda \\
       &= M_\lambda + 5 \log_{10}\frac{d}{10\,\text{pc}} + A_\lambda
     \end{aligned}
     \]
-    (la presenza di $A_\lambda$ rende la stella più debole).
+    (the presence of $A_\lambda$ makes the star appear fainter).
 
 
--   Quindi in presenza di estinzione non è più sufficiente conoscere $M_\lambda$ per ricavare $d$!
+-   Therefore, in the presence of extinction, knowing $M_\lambda$ is no longer sufficient to derive $d$!
 
 
-# Estinzione in funzione di $\lambda$
+# Extinction as a function of $\lambda$
 
-La scrittura $A_\lambda$ suggerisce che l'estinzione dipenda dalla lunghezza d'onda.
+The notation $A_\lambda$ suggests that extinction depends on wavelength.
 
 <center>![](images/barnard68-wavelengths.jpg){height=500px}</center>
 
 
-# Estinzione in funzione di $\lambda$
+# Extinction as a function of $\lambda$
 
--   Intorno al visibile, l'estinzione è più intensa se $\lambda$ è piccola (luce blu).
+-   Around the visible spectrum, extinction is more intense if $\lambda$ is small (blue light).
 
--   Questo comporta che il numero di stelle osservate aumenta nell'IR.
+-   This implies that the number of observed stars increases in the IR.
 
--   Inoltre, le stelle appaiono più rosse (*stellar reddening*). Vediamo come si quantifica l'impatto dell'arrossamento sull'osservazione del flusso di una stella.
+-   Furthermore, stars appear redder (*stellar reddening*). Let's see how the impact of reddening on the observation of a star's flux is quantified.
 
 
-# Eccesso di colore
+# Color Excess
 
--   Misuriamo l'indice di colore di una stella in due filtri, es.\ B e V:
+-   We measure the color index of a star in two filters, e.g., B and V:
     \[
     \begin{aligned}
       m_V &= M_V + 5\log_{10}\frac{d}{10\,\text{pc}} + A_V, \\
@@ -196,141 +195,117 @@ La scrittura $A_\lambda$ suggerisce che l'estinzione dipenda dalla lunghezza d'o
     \end{aligned}
     \]
 
--   Dalla differenza tra le due equazioni ottengo che
+-   From the difference between the two equations, we get
     \[
     m_B - m_V = (M_B - M_V) + (A_B - A_V).
     \]
 
 
-# Eccesso di colore
+# Color Excess
 
 \[
 m_B - m_V = (M_B - M_V) + (A_B - A_V).
 \]
 
--   Il valore $m_B - m_V$ è misurato direttamente.
+-   The value $m_B - m_V$ is measured directly.
 
--   Il valore $M_B - M_V$ si stima dal tipo spettrale.
+-   The value $M_B - M_V$ is estimated from the spectral type.
 
--   Il valore $A_B - A_V$ si può quindi ricavare facilmente, ed è chiamato **eccesso di colore**, o **arrossamento** («reddening», vedi Draine, *Physics of the interstellar and galactic medium*, pag. 238).
+-   The value $A_B - A_V$ can then be easily derived and is called **color excess**, or **reddening** (see Draine, *Physics of the interstellar and galactic medium*, p. 238).
 
--   Di solito si scrive $E(B - V)$ anziché $A_B - A_V$ ($E$ sta per *Excess*).
-
-# Eccesso di colore e $A_\lambda$
-
--   È ragionevole aspettarsi che in presenza di molto ISM aumenti sia $A_V$ che $E(B - V)$…
-
--   …e infatti si è osservato che il loro rapporto è circa costante:
-
-    \[
-    R \equiv \frac{A_V}{E(B - V)} \approx 3.1
-    \]
-
-    ($R$ è solitamente definito in termini di $B$ e $V$, quindi il nostro esempio calzava!).
-
-# Valori di $R$
-
--   Dal fatto che il valore di $R$ è abbastanza noto, si può usare la conoscenza dell'arrossamento $E(B - V)$ per stimare $A_V$ (e quindi anche la distanza $d$!)
-
--   Il valore di $R$ è sempre dell'ordine di qualche unità, ma dipende dall'ambiente (es., le due Nubi di Magellano hanno $R$ diverso dalla Via Lattea)
-
--   Anche nella Via Lattea il valore di $R$ varia a seconda della direzione.
-
--   Tipicamente, $2.5 \lesssim R \lesssim 5$.
+-   Usually, $E(B - V)$ is written instead of $A_B - A_V$ ($E$ stands for *Excess*).
 
 
-# Fisica dell'estinzione
+# Physics of Extinction
 
-# Fisica dell'estinzione
-
--   Ricordiamo la definizione di $A_\lambda$:
+# Physics of Extinction
+-   Recall the definition of $A_\lambda$:
     \[
     A_\lambda = 2.5\log_{10} e^{\tau_\lambda} \approx \tau_\lambda.
     \]
 
--   Il *coefficiente di estinzione* $\tau_\lambda$ è legato alla fisica microscopica dell'ISM:
+-   The *extinction coefficient* $\tau_\lambda$ is linked to the microscopic physics of the ISM:
     \[
     \tau_\lambda = \sigma_\lambda N_\text{col},
     \]
-    dove $N_\text{col}$ è la densità colonnare dell'ISM tra noi e l'oggetto osservato, $l$ lo spessore, e $\sigma_\lambda$ la sezione d'urto totale (assorbimento e diffusione) alla lunghezza d'onda $\lambda$.
+    where $N_\text{col}$ is the column density of the ISM between us and the observed object, $l$ is the thickness, and $\sigma_\lambda$ is the total cross section (absorption and scattering) at wavelength $\lambda$.
 
 
-# Fisica dell'estinzione
+# Physics of Extinction
 
--   Se $A \propto N_\text{col}$, ciò vuol dire che osservare nubi di polvere di diverse dimensioni/densità porta a valori diversi di $A$, anche se $\sigma$ è la stessa.
+-   If $A \propto N_\text{col}$, this means that observing dust clouds of different sizes/densities leads to different values of $A$, even if $\sigma$ is the same.
 
--   Se si vuole studiare la dipendenza dell'estinzione da $\lambda$, si usa la quantità (numero puro)
+-   If we want to study the dependence of extinction on $\lambda$, we use the (dimensionless) quantity
     \[
     f(\lambda) \equiv \frac{A_\lambda}{A_V} = \frac{\tau_\lambda}{\tau_V} = \frac{N_{\text{col}}\,\sigma_\lambda}{N_{\text{col}}\,\sigma_V} = \frac{\sigma_\lambda}{\sigma_V},
     \]
 
-    e in questo modo la dipendenza dalla densità colonnare scompare! ([Valeva lo stesso per $R$](tomasi-astro2-lezione-03.html#/eccesso-di-colore-e-a_lambda)).
+    and in this way the dependence on the column density disappears! ([The same was true for $R$](tomasi-astro2-lezione-03.html#/eccesso-di-colore-e-a_lambda)).
 
 
-# Fisica dell'estinzione
+# Physics of Extinction
 
--   Dallo studio di $f(\lambda)$ si osserva che:
+-   From the study of $f(\lambda)$ it is observed that:
 
-    #.  Nel visibile/IR, $f(\lambda) \propto 1/\lambda \propto \nu$ (la luce blu viene assorbita maggiormente);
+    1.  In the visible/IR, $f(\lambda) \propto 1/\lambda \propto \nu$ (blue light is absorbed more);
 
-    #.  C'è un picco nell'UV;
+    2.  There is a peak in the UV;
 
-    #.  Si vedono strutture nello spettro dell'IR.
+    3.  Structures are seen in the IR spectrum.
 
--   La forma di $f(\lambda)$ dipende comunque anche dalla direzione di osservazione (c'è polvere e polvere!), soprattutto nell'UV.
+-   The shape of $f(\lambda)$ however also depends on the direction of observation (there's dust and dust!), especially in the UV.
 
 ---
 
 <center>![](images/cardelli-extinction-curve.png){height=660px}</center>
+Note that the $x$ axis shows $1/\lambda$ instead of $\lambda$.
 
-Notare che sull'asse $x$ c'è $1/\lambda$ anziché $\lambda$.
+# Homework Exercise
 
-# Esercizio per casa
-
-Una stella di tipo B viene osservata con $m_B = 11.0\,\text{mag}$,
+A B-type star is observed with $m_B = 11.0\,\text{mag}$,
 $m_V = 10.0\,\text{mag}$.
 
 
-Se per una stella B, $M_V \approx -0.9$ e $M_B - M_V \approx -0.17$,
-qual è il valore di $A_V$ e la sua distanza? (Supporre che $R = 3.1$).
+If for a B star, $M_V \approx -0.9$ and $M_B - M_V \approx -0.17$,
+what is the value of $A_V$ and its distance? (Assume that $R = 3.1$).
 
 
-[Soluzione: $A_V \approx 3.6$, $d \approx 280\,\text{pc}$].
+[Solution: $A_V \approx 3.6$, $d \approx 280\,\text{pc}$].
 
 
-# La polvere nel mezzo interstellare
+# Dust in the Interstellar Medium
 
-# Polvere nel ISM
+# Dust in the ISM
 
-Ci chiediamo: qual è la dimensione tipica $r_g$ dei grani di polvere?
+What is the typical size $r_g$ of dust grains?
 
--   Se $r_g \gg \lambda$, vale l'ottica geometrica, e $A(\lambda)$ è costante;
--   Se $r_g \ll \lambda$, allora $\sigma \sim 0$ e dunque $A(\lambda)$ è piccolo e costante;
--   Se $r_g \sim \lambda$, allora la diffrazione è importante, e $A(\lambda)$ dipende fortemente da $\lambda$.
-
-
-# Dimensione dei grani
-
-Le evidenze sperimentali indicano che esistono due tipi di grani di polvere:
-
-#.  **Grani grossi** (µm–mm) generano uno spettro IR. Si osservano strutture spettrali a ~1÷10 µm, indicative di silicati (SiO, SiO₂) e ghiaccio (H₂O);
-#.  **Grani piccoli** (1–10 nm) generano estinzione in UV, e sono aggregati di ~100 atomi (idrocarburi, carbonio, grafite).
+-   If $r_g \gg \lambda$, geometric optics applies, and $A(\lambda)$ is constant;
+-   If $r_g \ll \lambda$, then $\sigma \sim 0$ and therefore $A(\lambda)$ is small and constant;
+-   If $r_g \sim \lambda$, then diffraction is important, and $A(\lambda)$ depends strongly on $\lambda$.
 
 
-# Polvere nel ISM: composizione
+# Grain Size
+
+Experimental evidence indicates that there are two types of dust grains:
+
+1.  **Large grains** (µm–mm) generate an IR spectrum. Spectral structures are observed at ~1÷10 µm, indicative of silicates (SiO, SiO₂) and ice (H₂O);
+2.  **Small grains** (1–10 nm) generate extinction in the UV, and are aggregates of ~100 atoms (hydrocarbons, carbon, graphite).
+
+
+# Dust in the ISM: Composition
 
 <center>![](images/draine_fig_21_1.png){height=450px}</center>
 
 <small>B.\ Draine, *Physics of the interstellar and galactic medium*, Princeton University Press (2011).</small>
 
 
-# Forma dei grani di polvere
+# Shape of Dust Grains
 
--   Indicazioni sulla forma dei grani vengono da misure di **polarizzazione**.
+-   Hints on the shape of the grains come from **polarization** measurements.
 
--   La luce delle stelle che attraversa lo ISM è polarizzata. Si suppone che questo dipenda dalla forma dei grani nel ISM, perché HI, HII ed He hanno simmetria sferica e non possono indurre polarizzazione.
+-   The light from stars passing through the ISM is polarized. This is assumed to depend on the shape of the grains in the ISM, because HI, HII and He have spherical symmetry and cannot induce polarization.
 
--   La polarizzazione della luce di stelle sul piano galattico è maggiore se tra noi e la stella sono presenti polveri.
+-   The polarization of starlight on the galactic plane is greater if dust is present between us and the star.
 
 ---
 
@@ -339,38 +314,38 @@ Le evidenze sperimentali indicano che esistono due tipi di grani di polvere:
 <small>Harwit, *Astrophysical concepts* (4th edition), pag.\ 426, Springer (2006)</small>
 
 
-# Forma dei grani di polvere
+# Dust Grain Shape
 
--   La luce delle stelle nel disco galattico è preferenzialmente polarizzata **parallelamente** al piano
+-   Starlight in the galactic disk is preferentially polarized **parallel** to the plane
 
--   Ma le stelle nelle vicinanze del Sole non emettono luce così polarizzata come quella che si osserva → è l'ISM che causa la polarizzazione
+-   But stars in the vicinity of the Sun do not emit light as polarized as that observed → it is the ISM that causes the polarization
 
--   Questo implica che i grani di polvere devono assorbire più o meno facilmente i fotoni a seconda del loro angolo di polarizzazione
+-   Thus, dust grains must absorb photons more or less easily depending on their polarization angle
 
 
-# Forma dei grani di polvere
+# Dust Grain Shape
 
-La forma più probabile dei grani è un ellissoide: in questo modo gli elettroni sono liberi di rispondere al campo $\vec E$ esterno più in alcune direzioni che in altre.
+The most likely shape of the grains is an ellipsoid: in this way the electrons are free to respond to the external field $\vec E$ more in some directions than in others.
 
 <center>![](images/dust-grain-shape.png){height=320px}</center>
 
-La polarizzazione si osserva soprattutto nel visibile, mentre è assente nell'UV (ottica geometrica!)
+Polarization is observed mainly in the visible, while it is absent in the UV (geometric optics!)
 
 
-# Osservazioni sulla polarizzazione
+# Observations on Polarization
 
--   Livello medio di polarizzazione: $1\,\%\div2\,\%$;
--   Debole dipendenza da $\lambda$;
--   Dipendenza da $A_V$:
-    -   Se $A_V$ è piccolo, la polarizzazione è sempre bassa;
-    -   Se $A_V$ è grande, la polarizzazione può essere qualunque.
+-   Average polarization level: $1\,\%\div2\,\%$;
+-   Weak dependence on $\lambda$;
+-   Dependence on $A_V$:
+    -   If $A_V$ is small, the polarization is always low;
+    -   If $A_V$ is large, the polarization can be anything.
 
-    (Di conseguenza, la presenza di polvere è **necessaria ma non sufficiente** per avere polarizzazione).
+    (Therefore, the presence of dust is **necessary but not sufficient** for polarization).
 
 ---
 title: "Astrofisica Generale II — 3"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "4 aprile 2025"
+date: "20 marzo 2025"
 css:
 - ./css/custom.css
 ...

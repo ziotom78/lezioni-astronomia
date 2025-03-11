@@ -1,16 +1,16 @@
-# Caratteristiche della polvere nell'ISM
+# Characteristics of Dust in the ISM
 
-# Forma dei grani di polvere
+# Shape of Dust Grains
 
--   Ieri abbiamo visto che la polarizzazione suggerisce che i grani non abbiano simmetria sferica
+-   Yesterday we saw that polarization suggests that the grains do not have spherical symmetry
 
--   Possiamo avere un'idea più precisa della loro forma?
+-   Can we get a more precise idea of their shape?
 
 
-# Forma dei grani di polvere
+# Shape of Dust Grains
 
-Particelle di polvere interplanetaria possono essere catturate da
-[aerei che volano nell'alta atmosfera](https://en.wikipedia.org/wiki/Lockheed_U-2).
+Interplanetary dust particles can be captured by
+[aircraft flying in the upper atmosphere](https://en.wikipedia.org/wiki/Lockheed_U-2).
 
 <table>
   <tr>
@@ -20,131 +20,128 @@ Particelle di polvere interplanetaria possono essere catturate da
 </table>
 
 
-# Forma dei grani di polvere
+# Shape of Dust Grains
 
-I grani di polvere (a) possono collidere tra loro e aggregarsi in strutture più complesse (b).
+Dust grains (a) can collide with each other and aggregate into more complex structures (b).
 
 <center>![](images/interstellar_dust.png)</center>
 
 
-# Carica elettrica dei grani
+# Electric Charge of Grains
 
--   L'interazione dei grani con campi elettromagnetici indica che non sono elettricamente neutri (ma globalmente ISM sì!).
+-   The interaction of grains with electromagnetic fields indicates that they are not electrically neutral (but the ISM is globally!).
 
--   Ci sono due meccanismi che permettono di accumulare carica sui grani:
+-   There are two mechanisms that allow charge to accumulate on the grains:
 
-    #.  Elettroni liberi «lenti» si fissano sulla superficie del grano;
-    #.  Effetto fotoelettrico causato da fotoni UV (poco importante se $A_V$ è grande, perché in tal caso la polvere scherma i fotoni).
+    #.  "Slow" free electrons attach to the grain surface;
+    #.  Photoelectric effect caused by UV photons (not very important if $A_V$ is large, because in that case the dust shields the photons).
 
--   Consideriamo ora il primo caso.
+-   Let's now consider the first case.
 
 
-# Carica elettrica dei grani
+# Electric Charge of Grains
 
 <center>![](images/dust_charge.png){height=360px}</center>
 
-Per fissarsi al grano, l'energia cinetica dell'elettrone deve essere
-maggiore del potenziale Coulombiano del grano (con
-$r_g$ circa 1µm). In questo caso, $T$ è la temperatura della nube
-di grani.
+To attach to the grain, the kinetic energy of the electron must be greater than the Coulomb potential of the grain (with $r_g$ about 1µm). In this case, $T$ is the temperature of the grain cloud.
 
 
-# Carica elettrica dei grani
+# Electric Charge of Grains
 
--   Il conto non è molto diverso da quello del [raggio collisionale per gli ammassi globulari](tomasi-astro2-lezione-02.html#/tempo-di-rilassamento-3): studiamo quando l'energia potenziale è uguale all'energia cinetica:
+-   The calculation is not very different from the one for the [collision radius for globular clusters](tomasi-astro2-lezione-02.html#/tempo-di-rilassamento-3): we study when the potential energy is equal to the kinetic energy:
 
-    \[
+    ```
     \begin{aligned}
-      \frac{N e^2}{4\pi\epsilon_0 r_g} &= \frac32 k_B T,\quad\text{da cui} \\
+      \frac{N e^2}{4\pi\epsilon_0 r_g} &= \frac32 k_B T,\quad\text{from which} \\
       N &= 6\pi\epsilon_0 k_B T \frac{r_g}{e^2} \approx 1.
     \end{aligned}
-    \]
+    ```
 
--   La coda ad alta velocità nella distribuzione di Boltzmann per gli $e$ liberi porta a $N \sim 10$.
+-   The high-velocity tail in the Boltzmann distribution for free electrons leads to $N \sim 10$.
 
 
-# Temperatura dei grani
+# Grain Temperature
 
--   Stimiamo ora la temperatura media del *singolo* grano di polvere. Possiamo supporre che essi siano scaldati da stelle vicine.
+-   Let's now estimate the average temperature of a *single* dust grain. We can assume that they are heated by nearby stars.
 
--   Supponiamo che un grano sia a una distanza $d$ da una stella con raggio $R$ e temperatura $T$, e che la luminosità della stella sia
-    \[
+-   Suppose a grain is at a distance $d$ from a star with radius $R$ and temperature $T$, and that the star's luminosity is
+    ```
     L = 4\pi R^2 \sigma T^4
-    \]
-    (corpo nero a simmetria sferica).
+    ```
+    (spherically symmetric black body).
 
-# Temperatura dei grani
+# Grain Temperature
 
--   La frazione di potenza che colpisce il grano è
-    \[
+-   The fraction of power hitting the grain is
+    ```
     f = \frac{\pi r^2_g}{4\pi d^2} = \frac14\,\left(\frac{r_g}{d}\right)^2.
-    \]
+    ```
 
--   Se il grano ha albedo $a$, assorbe una potenza
-    \[
+-   If the grain has albedo $a$, it absorbs a power
+    ```
     P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi R^2}{d^2}\right),
-    \]
-    dove $\pi R^2/d^2 \equiv \Omega_*$ è l'angolo solido della stella visto dal grano.
+    ```
+    where $\pi R^2/d^2 \equiv \Omega_*$ is the solid angle of the star as seen from the grain.
 
 
-# Temperatura dei grani
+# Grain Temperature
 
--   Per calcolare la temperatura del grano all'equilibrio termico, dobbiamo considerare anche la potenza rilasciata dal grano
+-   To calculate the grain's temperature at thermal equilibrium, we must also consider the power released by the grain.
 
--   Assumiamo che sia sferico (orrore!), così che
-    \[
+-   Let's assume it is spherical (horrible!), so that
+    ```
       P_\text{rad} = 4\pi r_g^2 \sigma T_g^4,
-    \]
-    dove usiamo la cosiddetta **temperatura effettiva** $T_g$, ossia la temperatura di un corpo nero che emetterebbe la stessa quantità di energia del grano.
+    ```
+    where we use the so-called **effective temperature** $T_g$, i.e., the temperature of a black body that would emit the same amount of energy as the grain.
 
 
-# Temperatura dei grani
+# Grain Temperature
 
-Se la polvere ha raggiunto la temperatura $T_g$ di equilibrio, la potenza emessa deve uguagliare quella assorbita:
-\[
+If the dust has reached the equilibrium temperature $T_g$, the emitted power must equal the absorbed power:
+```
 \begin{aligned}
   P_\text{rad} &= P_\text{abs} \\
   4\pi r_g^2 \sigma T_g^4 &= (1 - a) r_g^2 \sigma T^4
   \left(\frac{\pi R^2}{d^2}\right) \\
   T_g &= T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}.
 \end{aligned}
-\]
+```
 
 
-# Temperatura dei grani
+# Grain Temperature
 
--   La formula
-    \[
+-   The formula
+    ```
     T_g = T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}
-    \]
-    mostra che la temperatura della polvere non dipende dalla dimensione dei grani.
+    ```
+    shows that the dust temperature does not depend on the size of the grains.
 
--   Questa è la temperatura del **singolo** grano di polvere, ma possiamo assumere che all'equilibrio coincida con la temperatura della radiazione emessa dall'intera nube di grani.
+-   This is the temperature of a *single* dust grain, but we can assume that at equilibrium it coincides with the temperature of the radiation emitted by the entire cloud of grains.
 
 
-# Temperatura dei grani
+# Grain Temperature
 
--   Nelle regioni di formazione stellare, le distanze tra nube e stella sono dell'ordine di qualche AU ($\sim 10^{11}\,\text{m}$), così $d/R \sim 10^3\div 10^4$ e quindi $T_g \sim 10^{-2} T_*$.
+-   In star-forming regions, the distances between cloud and star are on the order of a few AU ($\sim 10^{11}\,\text{m}$), so $d/R \sim 10^3\div 10^4$ and therefore $T_g \sim 10^{-2} T_*$.
 
--   Se $T_* = 10\,000\,\text{K}$, allora
-    \[
+-   If $T_* = 10\,000\,\text{K}$, then
+    ```
     T_g \sim 100\,\text{K}.
-    \]
+    ```
 
--   Dalla legge di Wien ($\lambda_\text{max} T = 0.29\,\text{cm\,K}$) si deduce che il picco dell'emissione è:
+-   From Wien's law ($\lambda_\text{max} T = 0.29\,\text{cm\,K}$) we deduce that the peak of the emission is:
 
-    #.  30 µm (IR) se $T = 100\,\text{K}$;
-    #.  0.3 mm (sub-mm) se $T = 10\,\text{K}$.
+    1.  30 µm (IR) if $T = 100\,\text{K}$;
+    2.  0.3 mm (sub-mm) if $T = 10\,\text{K}$.
 
 
-# Polvere interstellare
+# Interstellar Dust
 
 <center>![](images/li-draine-dust-emission.png){height=560px}</center>
 
 <small>Li, A. \& Draine, B. T. 2001, Astrophys. J., 554, 778–802</small>
 
 
-# Osservazioni dallo spazio
+# Observations from Space
 
 <center>![](images/atmo-abs.jpg){height=540px}</center>
 
@@ -152,18 +149,18 @@ Se la polvere ha raggiunto la temperatura $T_g$ di equilibrio, la potenza emessa
 
 <center>![](images/IRAS.jpg){height=540px}</center>
 
-IRAS (Infrared Astronomical Satellite), 25/1/1983: Prima survey in IR (12, 25, 60 e 100 µm) dell'intero cielo. Orbita geocentrica ($h \approx 900\,\text{km}$).
+IRAS (Infrared Astronomical Satellite), 25/1/1983: First IR survey (12, 25, 60, 100 µm) of the whole sky. Geocentric orbit ($h \approx 900\,\text{km}$).
 
 ---
 
 <center>![](images/ISO.jpg){height=540px}</center>
-ISO (Infrared Space Observatory), 17/11/1995. Orbita molto eccentrica (1000 km $\div$ 70 000 km).
+ISO (Infrared Space Observatory), 17/11/1995. Highly eccentric orbit (1000 km $\div$ 70 000 km).
 
 
-# Uso di orbite eccentriche
+# Eccentric orbits
 
-- All'apogeo (massima distanza dalla Terra) il satellite si muove molto lentamente: più facile fare lunghe osservazioni
-- Le fasce di radiazione sono importanti vicino al perigeo (minima distanza dalla Terra): ISO spegneva gli strumenti 7 ore ogni giorno.
+- At apogee (maximum distance from Earth) the satellite moves very slowly: it is easier to make long observations
+- The radiation belts are significant near perigee (minimum distance from Earth): ISO used to switch off its instruments for 7 hours each day.
 
 <center>![](images/ISO-orbit.png){height=400px}</center>
 
@@ -171,69 +168,68 @@ ISO (Infrared Space Observatory), 17/11/1995. Orbita molto eccentrica (1000 km 
 
 <center>![](images/Spitzer.jpg){height=500px}</center>
 
-Spitzer Space Telescope (USA), 25/8/2003. Orbita eliocentrica ([IRrelevant astronomy](https://www.youtube.com/playlist?list=PL9C8F3F2E3FE9F137))
+Spitzer Space Telescope (USA), 25/8/2003. Heliocentric orbit ([IRrelevant astronomy](https://www.youtube.com/playlist?list=PL9C8F3F2E3FE9F137))
 
 ---
 
 <center>![](images/Herschel.jpg){height=500px}</center>
 
-Herschel (ESA), 14/5/2009. Orbita eliocentrica su $L_2$ ($d = 1.5\times10^9\,\text{m}$).
+Herschel (ESA), 14/5/2009. Heliocentric orbit around $L_2$ ($d = 1.5\times10^9\,\text{m}$).
 
 ---
 
 <center>![](images/Planck.jpg){height=500px}</center>
 
-Planck (ESA), 14/5/2009. Orbita eliocentrica su $L_2$ ($d = 1.5\times10^9\,\text{m}$). Principalmente mm, ma canali fino a 350 µm.
+Planck (ESA), 14/5/2009. Heliocentric orbit around $L_2$ ($d = 1.5\times10^9\,\text{m}$). Mostly mm, but up to 350 µm.
 
 ---
 
 <center>![](images/infrared-space-missions.png){height=660px}</center>
 
 
-# Proprietà dei grani: riassunto
+# Grain Properties: Summary
 
-| Caratteristica   | Fonte                                          | Risultato                                                 |
-|------------------|------------------------------------------------|-----------------------------------------------------------|
-| Forma            | Polarizzazione stelle, polvere interplanetaria | Asimmetrica                                               |
-| Dimensione       | Andamento di $A(\lambda)$                      | $\text{nm} < r_g < \mu\text{m}$                           |
-| Composizione     | Spettro, forma di $A(\lambda)$                 | Silicati, carbonati, ghiaccio, ferrite, idrocarburi       |
-| Carica elettrica | Polarizzazione stelle, conservazione energia   | $N = \frac32 k_B T \frac{r_g}{e^2} \sim 10$               |
-| Temperatura      | Illuminazione da stelle                        | $T_g = T_* \sqrt{\frac{R}{2d}} \sim 10\div 100\,\text{K}$ |
+| Characteristic | Source                               | Result                                                    |
+|-----------------|---------------------------------------|------------------------------------------------------------|
+| Shape           | Star polarization, interplanetary dust | Asymmetric                                                |
+| Size            | Trend of $A(\lambda)$                 | $\text{nm} < r_g < \mu\text{m}$                            |
+| Composition    | Spectrum, shape of $A(\lambda)$      | Silicates, carbonates, ice, ferrite, hydrocarbons        |
+| Electric charge | Star polarization, energy conservation | $N = \frac32 k_B T \frac{r_g}{e^2} \sim 10$                |
+| Temperature     | Illumination from stars               | $T_g = T_* \sqrt{\frac{R}{2d}} \sim 10\div 100\,\text{K}$ |
 
 
-# Rotazione dei grani ed emissione anomala
+# Grain Rotation and Anomalous Emission
 
-# Rotazione dei grani
+# Grain Rotation
 
-Perché i grani tendono ad allineare il loro asse di rotazione?
+Why do grains tend to align their rotation axis?
 
 <center>![](images/harwit-spinning-dust.png){height=400px}</center>
 
 <small>Harwit, *Astrophysical concepts* (4th edition), Springer (2006)</small>
 
 ::: notes
-a.  *Rilassamento paramagnetico*, si spiega nella slide successiva.
-b.  Urto con particelle.
-c.  Urto con fotoni.
-d.  Trasferimento di momento angolare da fotoni.
+a. *Paramagnetic relaxation*, explained in the next slide.
+b. Collision with particles.
+c. Collision with photons.
+d. Angular momentum transfer from photons.
 :::
+# Grain Rotation
 
-# Rotazione dei grani
+-   If the grain is paramagnetic, the Galactic field $\vec B_\text{Gal}$ induces a magnetic moment $\vec \mu_B \propto \vec B_\text{Gal}$ parallel to it, which causes a mechanical torque $\vec\tau = \vec\mu_B \times \vec B_\mathrm{Gal}$. Then:
 
--   Se il grano è paramagnetico, il campo Galattico $\vec B_\text{Gal}$ induce un momento magnetico $\vec \mu_B \propto \vec B_\text{Gal}$ parallelo a questo, che causa un momento meccanico $\vec\tau = \vec\mu_B \times \vec B_\mathrm{Gal}$. Allora:
+    #.  If the grain rotates as in case *a* of the previous figure, the rotation leads $\vec B_\text{Gal}$ and $\vec \mu_B$ to misalign. To realign, $\vec \mu_B$ induces an opposing torque.
 
-    #.  Se il grano ruota come nel caso *a* della fig. precedente, la rotazione porta $\vec B_\text{Gal}$ e $\vec \mu_B$ a disallinearsi. Per riallinearsi, $\vec \mu_B$ induce un momento torcente in opposizione.
+    #.  If the rotation axis is parallel to $\vec B_\text{Gal}$, there is no torque.
 
-    #.  Se l'asse di rotazione è parallelo a $\vec B_\text{Gal}$, non c'è momento torcente.
-
--   Quindi l'asse di rotazione tende ad allinearsi con $\vec B_\text{Gal}$ (**rilassamento paramagnetico**).
+-   Therefore, the rotation axis tends to align with $\vec B_\text{Gal}$ (**paramagnetic relaxation**).
 
 
-# Emissione anomala
+# Anomalous Emission
 
--   Nel 1995, Kogut *et al.* pubblicarono un articolo in cui si misurava la correlazione tra l'emissione del cielo a 140 µm (misurata da COBE-DIRBE) e a 31.5 GHz (misurata da COBE-DMR).
+-   In 1995, Kogut *et al.* published a paper measuring the correlation between the sky emission at 140 µm (measured by COBE-DIRBE) and at 31.5 GHz (measured by COBE-DMR).
 
--   Questi studi cercavano di caratterizzare il contributo relativo di diverse emissioni intorno alla regione delle microonde, in modo da isolare meglio il segnale della CMB (che vedremo meglio nell'ultima parte del corso).
+-   These studies sought to characterize the relative contribution of different emissions around the microwave region, in order to better isolate the CMB signal (which we will see in more detail in the last part of the course).
 
 ---
 
@@ -246,47 +242,47 @@ d.  Trasferimento di momento angolare da fotoni.
   </table>
 </center>
 
-(La correlazione si ha tra la mappa a 31.5 GHz e la mappa a 140 µm).
+(The correlation is between the 31.5 GHz map and the 140 µm map).
 
-# Tipi di emissione
+# Emission types
 
 <center>![](images/WMAP_foregrounds_old.png){height=540px}</center>
 
-# Origine della correlazione
+# Origin of the Correlation
 
--   Il segnale di sincrotrone viene generato dai raggi cosmici, che non dovrebbero essere correlati con la polvere.
+-   The synchrotron signal is generated by cosmic rays, which should not be correlated with dust.
 
--   Eppure questo è ciò che si osserva! Tre possibilità:
+-   Yet this is what is observed! Three possibilities:
 
-    #. La polvere emette anche alle frequenze del sincrotrone;
-    #. I raggi cosmici emettono anche alle frequenze della polvere;
-    #. Qualcos'altro (cosa?) emette sia alle frequenze del sincrotrone che della polvere.
+    #. Dust also emits at synchrotron frequencies;
+    #. Cosmic rays also emit at dust frequencies;
+    #. Something else (what?) emits at both synchrotron and dust frequencies.
 
-# Grani in rotazione
+# Rotating Grains
 
--   Una spiegazione proposta nel 1998 da A. Lazarian e B. T. Draine è che siano i grani degli idrocarburi aromatici policiclici (PAH) a emettere nella regione spettrale intorno ai 30 GHz, a causa della loro rotazione.
+-   In 1998, A. Lazarian and B. T. Draine proposed that the grains of polycyclic aromatic hydrocarbons (PAHs) emit in the spectral region around 30 GHz, due to their rotation.
 
--   Il modello fisico è semplice, anche se i dettagli sono estremamente complicati!
+-   The physical model is simple, even if the details are extremely complicated!
 
-# Grani in rotazione
+# Rotating Grains
 
--   Supponiamo che i grani abbiano un momento elettrico di dipolo $\vec \mu = q \vec r$ e che siano in rotazione con velocità angolare $\omega$
--   Ci aspettiamo allora che emettano fotoni con frequenza $\nu = \omega/2\pi$.
--   Se i grani sono in equilibrio termico, abbiano momento angolare $L \gg h$ e siano messi in rotazione principalmente da urti, allora
+-   Suppose that the grains have an electric dipole moment $\vec \mu = q \vec r$ and that they are rotating with angular velocity $\omega$
+-   We then expect them to emit photons with frequency $\nu = \omega/2\pi$.
+-   If the grains are in thermal equilibrium, have angular momentum $L \gg h$ and are set in rotation mainly by collisions, then
     \[
     \frac12 I \left<\omega^2\right> \approx \frac32 k_B T, \qquad
-    \text{con } I =
+    \text{with } I =
     \frac25 M a^2 = \frac8{15} \pi \rho a^5.
     \]
 
-# Avvertenze
+# Caveats
 
--   L'ipotesi che tutta l'energia dell'urto sia convertita in energia rotazionale è un'approssimazione: in realtà si stima che parte dell'energia (10–20 %) venga convertita in modi vibrazionali.
--   L'ipotesi che il momento angolare $L$ sia molto maggiore di $h$ consente di usare la fisica classica, dove il momento angolare non è quantizzato: questo è sempre vero, perché i grani più piccoli hanno $L/h \sim 70$.
+-   The assumption that all the collision energy is converted into rotational energy is an approximation: in reality it is estimated that part of the energy (10–20 %) is converted into vibrational modes.
+-   The assumption that the angular momentum $L$ is much greater than $h$ allows the use of classical physics, where the angular momentum is not quantized: this is always true, because the smallest grains have $L/h \sim 70$.
 
-# Grani in rotazione
+# Rotating Grains
 
-La soluzione si può scrivere in questa forma:
+The solution can be written in this form:
 \[
 \begin{aligned}
   \nu = \frac{\sqrt{\left<\omega^2\right>}}{2\pi} =
@@ -295,29 +291,29 @@ La soluzione si può scrivere in questa forma:
 \end{aligned}
 \]
 
-(Solo i grani con $a \lesssim 10\,\text{\AA}$, contribuiscono a questa emissione, vedi Fig. 7 di Draine & Lazarian, 1998).
-Il picco di emissione previsto è intorno ai 30 GHz: incoraggiante!
+(Only grains with $a \lesssim 10\,\text{\AA}$ contribute to this emission, see Fig. 7 of Draine & Lazarian, 1998).
+The predicted emission peak is around 30 GHz: encouraging!
 
-# Grani in rotazione
+# Rotating Grains
 
-Per avere un modello realistico, bisogna anche tenere conto di altri effetti:
+For a realistic model, other effects must also be taken into account:
 
-#.  Collisioni con ioni (forze Coulombiane);
-#.  Accoppiamento tra $\vec \mu$ e e il campo elettromagnetico;
-#.  Assorbimento/emissione di fotoni (a causa del loro momento angolare);
-#.  Formazione di H₂;
-#.  Etc.
+#. Ion collisions (Coulomb forces);
+#. Coupling between $\vec \mu$ and the electromagnetic field;
+#. Absorption/emission of photons (due to their angular momentum);
+#. H₂ formation;
+#. Etc.
 
 
-# Grani in rotazione
+# Rotating Grains
 
--   Un modello più dettagliato prevede che
+-   A more detailed model predicts that
     \[
     \left<\omega^2\right> \lesssim 3 k_B \frac{T}I.
     \]
-    Il risultato è comunque che lo spettro previsto ha un picco di emissione intorno a qualche decina di GHz.
+    The result is still that the predicted spectrum has an emission peak around a few tens of GHz.
 
--   Ovviamente, i modelli dettagliati stimano anche l'**intensità**, in modo da paragonarla con quella misurata. (Un modello completo deve quindi tenere conto della superficie media dei grani, della loro emissività, della loro forma, etc.)
+-   Obviously, detailed models also estimate the **intensity**, in order to compare it with the measured one. (A complete model must therefore take into account the average surface of the grains, their emissivity, their shape, etc.)
 
 ---
 
@@ -335,17 +331,17 @@ Per avere un modello realistico, bisogna anche tenere conto di altri effetti:
 
 <center>![](images/draine-youtube.jpg){height=540px}</center>
 
-[*The continuing mistery of the Anomalous Microwave Emission*](https://www.youtube.com/watch?v=mkpuUoZf2F8) è un seminario tenuto da B. Draine nel 2015, molto chiaro ed interessante.
+See [*The continuing mistery of the Anomalous Microwave Emission*](https://www.youtube.com/watch?v=mkpuUoZf2F8), a 2015 talk by B. Draine.
 
 
-# Emissione anomala
+# Anomalous Emission
 
 <center>![](images/WMAP_foregrounds_new.png){height=520px}</center>
 
 ---
 title: "Astrofisica Generale II — 4"
 author: "Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))"
-date: "5 aprile 2025"
+date: "21 marzo 2025"
 css:
 - ./css/custom.css
 ...

@@ -1,140 +1,134 @@
+# Relaxation Time
 
-# Tempo di rilassamento
+# Relaxation Time
 
-# Tempo di rilassamento
+-   Let's now consider the time required for a cluster to become dynamically relaxed.
 
--   Veniamo ora al tempo necessario perché un ammasso diventi dinamicamente rilassato.
+-   Initially, the stars in a cluster may *not* be relaxed: in this case, the fastest ones ($v > v_f$) escape from the cluster, and this "evaporation" changes the distribution of $v$.
 
--   Inizialmente le stelle di un ammasso possono *non* essere rilassate: in tal caso le più veloci ($v > v_f$) escono dall'ammasso, e questa «evaporazione» cambia la distribuzione delle $v$.
-
--   In più, le interazioni gravitazionali provocano una ridistribuzione dell'energia, che porta l'ammasso verso lo stato rilassato.
-
-
-# Tempo di rilassamento
-
--   Per quantificare il tempo di rilassamento, possiamo supporre che esso sia il tempo necessario affinché ciascuna delle stelle dell'ammasso interagiscano un certo numero $N$ di volte con le sue compagne.
--   (Questo è analogo al modo in cui si studia un gas ideale che sta raggiungendo l'equilibrio termodinamico).
+-   Moreover, gravitational interactions cause a redistribution of energy, which leads the cluster towards a relaxed state.
 
 
-# Tempo di rilassamento
+# Relaxation Time
 
--   Possiamo definire un'interazione tra due stelle come la condizione
-    in cui l'energia cinetica diventa uguale all'energia potenziale tra
-    le due (perché?):
+-   To quantify the relaxation time, we can assume that it is the time required for each star in the cluster to interact a certain number $N$ of times with its companions.
+-   (This is analogous to how one studies an ideal gas reaching thermodynamic equilibrium).
+
+
+# Relaxation Time
+
+-   We can define an interaction between two stars as the condition
+    in which the kinetic energy becomes equal to the potential energy between
+    the two (why?):
     \[
     \frac12 M_* v^2 \sim G \frac{M_*^2}r.
     \]
--   Ciò avviene quando la distanza tra le due stelle è
+-   This occurs when the distance between the two stars is
     \[
     r_c \sim 2 G \frac{M_*}{v^2}.
     \]
--   Il valore $r_c$ è detto **raggio collisionale**.
+-   The value $r_c$ is called the **collisional radius**.
 
 
-# Tempo di rilassamento
+# Relaxation Time
 
--   Quanto è probabile che una stella interagisca con altre? Dipende da quanto velocemente la stella si muove e dalla densità delle sue compagne:
+-   How likely is a star to interact with others? It depends on how fast the star is moving and the density of its companions:
 
     <center>![](images/cross-section.png){height=300px}</center>
 
--   Nel volume $V = \pi r^2\,\Delta x$ ci sono $V n = (\pi r^2\,\Delta x)\,n$ stelle (con $n$ densità numerica).
+-   In the volume $V = \pi r^2\,\Delta x$ there are $V n = (\pi r^2\,\Delta x)\,n$ stars (with $n$ being the number density).
 
-
-# Tempo di rilassamento
+# Relaxation Time
 
 <center>![](images/cross-section.png){height=180px}</center>
 
-Se la distanza percorsa dalla stella è $\Delta x = v \Delta t$, allora durante il tempo di rilassamento $\Delta t_r$ la stella interagisce collisionalmente con le $N_\text{int}$ stelle nel cilindro che ha base $r = r_c$:
+If the distance traveled by the star is $\Delta x = v \Delta t$, then during the relaxation time $\Delta t_r$ the star interacts collisionally with the $N_\text{int}$ stars in the cylinder with base $r = r_c$:
 \[
 (\pi r_c^2\,v\,\Delta t_r)\,n = N_\text{int} \quad \Rightarrow \quad \Delta t_r = \frac{N_\text{int}}{\pi r_c^2\,v\,n}.
 \]
 
 
-# Tempo di rilassamento
+# Relaxation Time
 
-Se ora poniamo $N_\text{int} \approx 1$ e sostituiamo l'espressione $r_c \sim 2 G \frac{M_*}{v^2}$ in
+If we now set $N_\text{int} \approx 1$ and substitute the expression $r_c \sim 2 G \frac{M_*}{v^2}$ into
 \[
 \Delta t_r = \frac{N_\text{int}}{\pi r_c^2\,v\,n}
 \]
-otteniamo:
+we obtain:
 \[
 \Delta t_r = \frac{v^3}{4 \pi G^2 M_*^2\,n}.
 \]
 
 
-# Tempo di rilassamento
+# Relaxation Time
 
-L'espressione di $\Delta t_r$ può essere molto semplificata.
-Innanzitutto, $n = N/\bigl(\frac43 \pi R^3\bigr)$; inoltre possiamo
-usare il teorema del viriale:
+The expression for $\Delta t_r$ can be greatly simplified. First, $n = N/\bigl(\frac43 \pi R^3\bigr)$; furthermore, we can use the virial theorem:
 \[
 \begin{aligned}
 K &= -\frac12 U, \\
 \frac12 N M_* v^2 &= \frac35 G \frac{(N M_*)^2}R, \\
-G M_* N &\approx R v^2\quad\text{(supponendo $\frac35
+G M_* N &\approx R v^2\quad\text{(assuming $\frac35
   \approx \frac12$)}.
 \end{aligned}
 \]
 
-# Tempo di rilassamento
+# Relaxation Time
 
-Sostituendo le espressioni di $n$ e $G M_* N$, otteniamo
+Substituting the expressions for $n$ and $G M_* N$, we obtain
 \[
-\Delta t_r \approx \frac{N R}{3 v},
+\Delta t_r \approx \frac{N R}{3 v}.
 \]
-quindi il tempo di rilassamento è dello stesso ordine di grandezza
-del tempo richiesto a compiere $N$ attraversamenti dell'ammasso
-($R/v$ è il tempo per *un* attraversamento), con $N$ numero di stelle.
+Therefore, the relaxation time is of the same order of magnitude as the time required to complete $N$ crossings of the cluster ($R/v$ is the time for *one* crossing), with $N$ being the number of stars.
 
 
-# Tempo di rilassamento
+# Relaxation Time
 
--   La nostra stima porta a un valore di $\Delta t_r$ pari a
+-   Our estimate leads to a value of $\Delta t_r$ equal to
     \[
     \Delta t_r \approx \frac13 \times
     \frac{10^6 \times 5\,\text{pc}}{16\,\text{km/s}} \approx 100\,\text{Gyr},
     \]
 
--   Ma questo numero è implausibile! L'universo ha meno di 14 miliardi di anni, eppure la maggior parte degli ammassi globulari sembra essere già rilassata.
+-   But this number is implausible! The universe is less than 14 billion years old, yet most globular clusters appear to be already relaxed.
 
 
-# Tempo di rilassamento
+# Relaxation Time
 
--   Il problema è che nel calcolo solo le interazioni a *corto* raggio, mentre sono rilevanti anche gli scambi energetici a distanza.
+-   The problem is that the calculation only considers *short*-range interactions, while long-distance energy exchanges are also relevant.
 
--   Noi abbiamo supposto che si abbia interazione quando la distanza tra due stelle sia inferiore al raggio collisionale $r_c$ dato da
+-   We assumed that interaction occurs when the distance between two stars is less than the collision radius $r_c$ given by
     \[
       \frac12 M_* v^2 \sim G \frac{M_*^2}{r_c}.
     \]
 
--   Ma anche a distanze maggiori di $r_c$ ci sono scambi energetici, e noi li abbiamo trascurati.
+-   But even at distances greater than $r_c$ there are energy exchanges, and we have neglected them.
 
 
-# Distanza media tra le stelle
+# Average Distance Between Stars
 
--   Calcoliamo la distanza media $\lambda$ tra due stelle dell'ammasso. Essa è data da
+-   Let's calculate the average distance $\lambda$ between two stars in the cluster. It is given by
     \[
       \lambda \sim \frac1{n^{1/3}} = {\left(\frac{4\pi}{3 N}\right)}^{\frac13}
       R_\text{core} \approx 2.4\times 10^{15}\,\text{m} = 6700\,\text{AU},
     \]
-    se $R_\text{core} = 5\,\text{pc}$ e $N = 10^6$.
--   Il raggio collisionale, nel caso $v = v_\text{rms} = 16\,\text{km/s}$, per una stella $M_* = M_\odot/2$, è invece
+    if $R_\text{core} = 5\,\text{pc}$ and $N = 10^6$.
+-   The collision radius, in the case $v = v_\text{rms} = 16\,\text{km/s}$, for a star $M_* = M_\odot/2$, is instead
     \[
       r_c = \frac{2 G M_*}{v^2} \approx 5.2 \times 10^{11}\,\text{m}
       \approx 750\,R_\odot = 0.3\,\text{AU}.
     \]
 
-# Tempo di rilassamento
 
-Il problema è che noi abbiamo considerato solo le interazioni a corto raggio, ma il conto precedente ci dice che sono rarissime, perché la distanza media tra le stelle è 10⁴ volte maggiore del raggio collisionale.
+# Relaxation Time
+
+The problem is that we have only considered short-range interactions, but the previous calculation tells us that they are very rare because the average distance between stars is 10⁴ times greater than the collisional radius.
 
 <center>![](images/cross-section.png)</center>
 
 
-# Interazioni a lungo raggio
+# Long-Range Interactions
 
-Se un a.g.\ è virializzato, allora ciò è probabilmente determinato
-soprattutto dalle interazioni a lungo raggio:
+If a star cluster is virialized, then this is probably mainly determined by long-range interactions:
 
 <center>![](images/long-range-interactions.png)</center>
 
@@ -145,60 +139,57 @@ soprattutto dalle interazioni a lungo raggio:
 <center>![](images/cross-section-divided.png)</center>
 
 
-# Interazioni a lungo raggio
+# Long-Range Interactions
 
--   Vogliamo stimare l'importanza delle interazioni a lungo raggio. Misureremo quindi la deflessione media $\vec{\Delta v}_\perp$ causata da queste interazioni.
--   Ovviamente interazioni successive avranno valori diversi di $\Delta v_\perp$, sia in modulo che in direzione e verso. Il moto risultante sarà di tipo Browniano, tale che
+-   We want to estimate the importance of long-range interactions. We will therefore measure the average deflection $\vec{\Delta v}_\perp$ caused by these interactions.
+-   Obviously, successive interactions will have different values of $\Delta v_\perp$, both in magnitude and in direction. The resulting motion will be Brownian, such that
     \[
     \left< \vec{\Delta v}_\perp\right> = 0
     \]
-    (il moto Browniano non ha una direzione preferenziale).
+    (Brownian motion has no preferential direction).
 
-# Interazioni a lungo raggio
+# Long-Range Interactions
 
--   A noi non interessa però caratterizzare la direzione di $\Delta v_\perp$, solo capire l'ordine di grandezza della velocità $\Delta v_\perp$. La quantità più indicata è il *valore quadratico medio* $\left< \Delta v_\perp^2 \right>$.
--   Esso ha le seguenti proprietà:
-    #.  È legato alla quantità di energia che acquista la stella a causa delle interazioni a lungo raggio (perché $K \propto v^2$);
-    #.  Aumenta col passare del tempo;
-    #.  Diventa importante quando $\left< \Delta v_\perp^2 \right> \approx v^2$.
+-   However, we are not interested in characterizing the direction of $\Delta v_\perp$, only in understanding the order of magnitude of the velocity $\Delta v_\perp$. The most appropriate quantity is the *root mean square* $\left< \Delta v_\perp^2 \right>$.
+-   It has the following properties:
+    #.  It is related to the amount of energy the star acquires due to long-range interactions (because $K \propto v^2$);
+    #.  It increases with time;
+    #.  It becomes important when $\left< \Delta v_\perp^2 \right> \approx v^2$.
 
-# Interazioni a lungo raggio
+# Long-Range Interactions
 
-Cosa avviene in una interazione dove $r > r_c$?
+What happens in an interaction where $r > r_c$?
 
 <center>![](images/GC-impact-parameter.png)</center>
 
-Supponiamo che lo scambio energetico avvenga solo lungo la linea rossa, e che esso introduca una componente perpendicolare $\Delta v_\perp$ nella velocità $v$.
+Let's assume that the energy exchange occurs only along the red line, and that it introduces a perpendicular component $\Delta v_\perp$ to the velocity $v$.
 
-# Interazioni a lungo raggio
+# Long-Range Interactions
 
-Possiamo stimare l'ordine di grandezza di $\Delta v_\perp$ usando le leggi
-di Newton:
+We can estimate the order of magnitude of $\Delta v_\perp$ using Newton's laws:
 \[
 M_* \frac{\Delta v_\perp}{\Delta t} = G \frac{M_*^2}{r^2},
 \]
-da cui
+from which
 \[
 \Delta v_\perp = G \frac{M_*}{r^2/\Delta t} = G \frac{M_*}{r\,v}
 \]
-($\Delta t$ è il tempo necessario a percorrere il tratto rosso, che
-è lungo $\sim r$: quindi $r / \Delta t \approx v$).
+($\Delta t$ is the time taken to travel the red segment, which has length $\sim r$: therefore $r / \Delta t \approx v$).
 
-# Interazioni a lungo raggio
+# Long-Range Interactions
 
--   Quali sono i valori plausibili da usare per $r$? Abbiamo già visto che negli ammassi globulari le interazioni a corto raggio ($r \leq r_c$) contano poco; ma ovviamente $r < R$ (con $R$ dimensione dell'ammasso).
+-   What are plausible values to use for $r$? We have already seen that in globular clusters short-range interactions ($r \leq r_c$) matter little; but obviously $r < R$ (with $R$ being the size of the cluster).
 
--   In generale $r_c < r < R$.
+-   In general $r_c < r < R$.
 
--   Siccome $\Delta v_\perp$ è funzione di $r$, dobbiamo calcolare un valore «medio» di $\Delta v_\perp$.
+-   Since $\Delta v_\perp$ is a function of $r$, we must calculate an «average» value of $\Delta v_\perp$.
 
-# Interazioni a lungo raggio
+# Long-Range Interactions
 
 <center>![](images/cross-section-divided.png){height=120px}</center>
 
-Calcoliamo il valore quadratico medio di $\Delta v_\perp$ (la
-traiettoria della stella nell'ammasso è assimilabile a un moto
-Browniano):
+We calculate the mean square value of $\Delta v_\perp$ (the star's
+trajectory in the cluster can be approximated as Brownian motion):
 \[
 \begin{aligned}
   \left<(\Delta v_\perp)^2\right> &= \int_{r_c}^R (2\pi r\,\text{d}
@@ -206,24 +197,23 @@ Browniano):
   &= \frac{2\pi n G^2 M_*^2}{v}\,\Delta t\,\log\left(\frac{R}{r_c}\right).
 \end{aligned}
 \]
+# Long-Range Interactions
 
-# Interazioni a lungo raggio
-
--   Usiamo il teorema del viriale con $N$ numero di stelle dell'ammasso (assumendo quindi $R$ e $v$ calcolati sul sistema già rilassato):
+-   We use the virial theorem with $N$ as the number of stars in the cluster (thus assuming $R$ and $v$ calculated on the already relaxed system):
     \[
     \log\frac{R}{r_c} = \log\frac{R v^2}{G M_*} \approx \log N.
     \]
 
--   Quindi
+-   Therefore
     \[
       \left<(\Delta v_\perp)^2\right> =
       \frac{2\pi n G^2 M_*^2}{v}\,\Delta t\,\log N.
     \]
 
-# Interazioni a lungo raggio
+# Long-Range Interactions
 
-Per grandi valori di $\Delta t$, la componente $\Delta v_\perp$
-diventa importante. Dopo quanto tempo $\Delta v_\perp \approx v$?
+For large values of $\Delta t$, the component $\Delta v_\perp$
+becomes important. After how long does $\Delta v_\perp \approx v$?
 
 \[
 \begin{aligned}
@@ -233,65 +223,65 @@ diventa importante. Dopo quanto tempo $\Delta v_\perp \approx v$?
 \end{aligned}
 \]
 
-# Interazioni a lungo raggio
+# Long-Range Interactions
 
-Usando le solite sostituzioni
+Using the usual substitutions
 \[
 n = \frac{N}{\frac43 \pi R^3}, \quad N M_* G \approx R v^2,
 \]
-l'espressione di $\Delta t$ diventa
+the expression for $\Delta t$ becomes
 \[
 \Delta t \approx \frac{N}{\log N}\,\frac{R}{v}.
 \]
-Rispetto alla nostra stima iniziale $\Delta t_r \sim N R / v$, qui
-compare $\log N$ al denominatore. Per un ammasso tipico, $\log N
+Compared to our initial estimate $\Delta t_r \sim N R / v$, here
+$\log N$ appears in the denominator. For a typical cluster, $\log N
 \approx \log 10^6 \approx 14$.
 
-# Tempo di rilassamento
+# Relaxation Time
 
-Il calcolo esatto porta alla formula
+The exact calculation leads to the formula
 \[
 \Delta t_r \approx \frac1{12 \ln (N/2)}\,\frac{N R}v,
 \]
-da cui si ottiene che
+from which we obtain
 \[
 \Delta t_r \approx \frac1{12 \ln (10^6/2)}\,\frac{10^6 \times
   5\,\text{pc}}{16\,\text{km/s}} \approx 2\,\text{Gyr},
 \]
-stavolta fisicamente plausibile.
+this time physically plausible.
 
 
-# Tempo di rilassamento
+# Relaxation Time
 
--   Il calcolo svolto in questa lezione è spiegato nell'esercizio 1.14 di *Cosmology and Astrophysics through problems* (T. Padmanabhan, Cambridge University Press, 1996).
+-   The calculation carried out in this lecture is explained in exercise 1.14 of *Cosmology and Astrophysics through problems* (T. Padmanabhan, Cambridge University Press, 1996).
 
--   Nel capitolo 10.7 del volume I di *Theoretical Astrophysics* (T. Padmanabhan, Cambridge U. P., 2000) c'è la derivazione esatta della formula nel caso di un plasma (il potenziale Coulombiano dipende da $r$ come quello Newtoniano).
+-   Chapter 10.7 of volume I of *Theoretical Astrophysics* (T. Padmanabhan, Cambridge U. P., 2000) contains the full derivation of the formula in the case of a plasma (the Coulomb potential depends on $r$ as the Newtonian one does).
 
 
-# Età degli ammassi globulari
+# Age of globular clusters
 
 <center>![](images/jimenez-padoan-title.png){height=600px}</center>
 
 
-# Età degli ammassi globulari
+# Age of globular clusters
 
 > The LF is a natural clock because the number of stars in a given luminosity bin decreases with time, since more massive stars evolve more rapidly than less massive ones. The fact that small differences in stellar masses correspond to large differences in evolutionary time explains the power of the LF clock…
 
-# Età degli ammassi globulari
+# Age of globular clusters
 
 <center>![](images/jimenez-padoan-plot.png){height=600px}</center>
 
 
-# Tempo di vita degli a.g.
+# Lifetime of GCs
 
--   Il testo di riferimento del corso (Kutner) sostiene che il tempo di vita degli ammassi globulari sia molto superiore a quello dell'Universo ($\sim 200\,\mathrm{Gyr}$).
+-   The course's reference text (Kutner) claims that the lifetime of globular clusters is much longer than the age of the Universe ($\sim 200\,\mathrm{Gyr}$).
 
--   Però questo esclude le perturbazioni che avvengono quando gli ammassi globulari attraversano il disco Galattico, e che possono portare alla loro progressiva distruzione.
+-   However, this excludes the perturbations that occur when globular clusters cross the Galactic disk, which can lead to their progressive destruction.
 
--   Inoltre simulazioni al computer (Zonoozi et al., 2011, Zonoozi et al., 2014) mostrano che i processi di evaporazione sono fino a un ordine di grandezza più rapidi di quanto stimato dal nostro calcolo.
+-   Furthermore, computer simulations (Zonoozi et al., 2011, Zonoozi et al., 2014) show that evaporation processes are up to an order of magnitude faster than estimated by our calculation.
 
 
-# Ammassi aperti
+# Open clusters
 
 ---
 
@@ -309,21 +299,21 @@ stavolta fisicamente plausibile.
 
 <center>![](images/m45.jpg){height=500px}</center>
 
-Nel Toro. $N \sim 500$, età $10^8$ yr, $R \sim 8$ ly, $D \sim 440$ ly.
+In Taurus. $N \sim 500$, age $10^8$ yr, $R \sim 8$ ly, $D \sim 440$ ly.
 
-# Popolazione di ammassi aperti
+# Open cluster population
 
--   A tutt'oggi sono stati censiti circa 1 100 ammassi aperti
--   Nel disco galattico ne sono presenti probabilmente di più: a distanze maggiori è difficile fare un censimento a causa della polvere del disco galattico.
--   Gli ammassi aperti formano quindi una popolazione molto più numerosa di quella degli ammassi globulari.
+-   To date, approximately 1,100 open clusters have been cataloged.
+-   More are likely present in the galactic disk: at greater distances, it is difficult to conduct a census due to dust in the galactic disk.
+-   Open clusters, therefore, form a much larger population than globular clusters.
 
 
-# Diagramma HR di ammassi aperti
+# HR diagram for OCs
 
 <center>![](images/m67_and_ngc188_diagrams.png)</center>
 
 
-# Isocrone
+# Isochrones
 
 <center>![](images/hr-isochrones.png)</center>
 
@@ -333,49 +323,49 @@ Nel Toro. $N \sim 500$, età $10^8$ yr, $R \sim 8$ ly, $D \sim 440$ ly.
     Frontières (1989).}
 
 
-# Tempo di rilassamento per a. aperti
+# Relaxation time for OCs
 
--   Gli ammassi aperti M 67 e NGC 188 sono tra i più antichi che si conoscano: gran parte degli ammassi hanno un'età inferiore a $10^9\,\text{yr}$.
+-   Open clusters M 67 and NGC 188 are among the oldest known: most clusters have ages less than $10^9\,\text{yr}$.
 
--   Dalla formula
+-   From the formula
     \[
     \Delta t_r \approx \frac1{12\log\frac{N}2} \frac{N R^{3/2}}{\sqrt{G M_*}}
     \]
-    si ottiene per gli ammassi aperti che $\Delta t_r \approx 10^8\div 10^9\,\text{yr}$: quindi buona parte degli a.a. **non sono rilassati**.
+    we obtain for open clusters that $\Delta t_r \approx 10^8\div 10^9\,\text{yr}$: therefore a good portion of open clusters **are not relaxed**.
 
 
-# Tempo di rilassamento per a. aperti
+# Relaxation time for OCs
 
 <center>![](images/converse-stahler-first-page.png){height=500px}</center>
 
-# Tempo di rilassamento per a. aperti
+# Relaxation time for OCs
 
 > …[the] evolutionary status [of open clusters] is much less clear. Half of open clusters disintegrate within $2\times10^8\,\text{yr}$ after birth [\ldots], a span corresponding to at most a few initial relaxation times. Not surprisingly, there is little observational signature that relaxation has occurred.
 
 (Converse and Stahler, MNRAS 410, 2011)
 
-# Età degli ammassi aperti
+# Age of OCs
 
-Perché gli ammassi aperti hanno vita così breve? Alcune ragioni:
+Why do open clusters have such short lifespans? Some reasons:
 
-#.  Nel disco galattico sono presenti molti oggetti massivi (nubi molecolari giganti) la cui forza gravitazionale può distruggere gli ammassi;
-#.  La loro massa non è sufficientemente grande da impedire la «evaporazione»;
-#.  A causa della rotazione differenziale del piano galattico (che vedremo in seguito), gli ammassi sono soggetti a forze di marea.
+1.  In the galactic disk, there are many massive objects (giant molecular clouds) whose gravitational force can disrupt clusters;
+2.  Their mass is not large enough to prevent "evaporation";
+3.  Due to the differential rotation of the galactic plane (which we will see later), clusters are subject to tidal forces.
 
-# Popolazioni stellari
+# Stellar populations
 
-| Popolazione I             | Popolazione II                          |
-|---------------------------|-----------------------------------------|
-| Ammassi aperti (non solo) | Ammassi globulari (non solo)            |
-| Piano galattico           | Alone sferico                           |
-| Gas e polvere             | Niente gas né polvere (ma nebulose pl.) |
-| Alta metallicità          | Bassa metallicità                       |
+| Population I             | Population II                           |
+|--------------------------|-----------------------------------------|
+| Open clusters (and more) | Globular clusters (and more)            |
+| Galactic plane           | Spherical halo                          |
+| Gas and dust             | Neither gas nor dust (but planetary n.) |
+| High metallicity         | Low metallicity                         |
 
 
 ---
 title: "Astrofisica Generale II — 2"
 author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: 22 marzo 2025
+date: 14 marzo 2025
 css:
 - ./css/custom.css
 ...
