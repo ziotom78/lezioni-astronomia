@@ -1,21 +1,3 @@
-# How to use Ariel
-
-To receive email notifications, you must enable them *in all
-  sections of the site*.
-
-<center>![](images/ariel-notifica.png)</center>
-
-# Course Evaluation
-
--   Three critical points highlighted by the students:
-
-    #.   I speak too fast!
-    #.   I don't encourage enough student participation.
-    #.   The slides are sometimes strangely formatted.
-
--   This year I have tried to implement a solution for each problem.
-
-
 # The Milky Way
 
 # Structure of the Milky Way
@@ -58,17 +40,15 @@ To receive email notifications, you must enable them *in all
 
 # Thermodynamics and astrophysics
 
-<center>![](images/ideal-gas.png){height=460px}</center>
+<center>![](images/ideal-gas.png){height=360px}</center>
 
-Essendo sistemi composti da molte particelle, possiamo pensare di usare la termodinamica classica per descriverli?
+Being systems composed of many particles, can we think of using classical thermodynamics to describe them?
 
-# Termodinamica e astrofisica
+# Thermodynamics and Astrophysics
 
--   **NO!**
+-   **NO!** Ideal gas theory only works in systems without long-range forces!
 
--   La teoria del gas ideale funziona solo in sistemi privi di forze a lungo raggio.
-
--   Da questo punto di vista la gravità è un problema!
+-   From this point of view, gravity is a problem!
 
     > Properties of systems with long range interactions are still poorly understood despite being of importance in most areas of physics.
 
@@ -97,7 +77,7 @@ Essendo sistemi composti da molte particelle, possiamo pensare di usare la termo
     \[
     G \equiv \sum_{i=1}^N (P_i - O) \cdot \vec p_i = \sum_{i=1}^N \vec r_i \cdot \vec p_i,
     \]
-    where $\vec r_i = P_i - O$ is the vector pointing towards the $i$-th particle, is called «virial».
+    where $\vec r_i = P_i - O$ is the vector pointing towards the $i$-th particle and $\vec p_i$ the momentum, is called **virial**.
 
 -   If the particles are located in a limited volume $V$, then
     1.  $G$ is a limited quantity;
@@ -199,6 +179,13 @@ implies that
 -   (Actually, the relationship $U \propto r^{-1}$ is valid only far from the center, where instead $U \propto M(r) / r \propto r^2$ and the motion is like that of a spring).
 
 
+---
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/0EfKTg2_QXI?si=9GFEYvpflxoYmVg6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[Gravitational collapse of Spongebob](https://www.youtube.com/watch?v=0EfKTg2_QXI)
+
+
 # “Virialized” Systems
 
 -   A system for which the virial theorem holds is called “virialized”
@@ -207,27 +194,18 @@ implies that
 
 -   It is a condition similar to that of thermodynamic equilibrium
 
--   The next animation shows a very nice and effective 2D example
-
----
-
-<iframe width="960" height="540" src="https://www.youtube.com/embed/C6eY6HMBa2Q?si=iDW_tZ2ul2aXUByf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-[Gravitational collapse of Spongebob](https://www.youtube.com/watch&v=C6eY6HMBa2Q)
-
-
 # Potential Energy Level
 
 -   Remember that potential energy is defined up to an additive constant (it derives from an indefinite integral).
 -   The virial theorem, however, assumes a very specific constant for $U$: since we assumed that $U = k r^{-1}$, it means that we assume that the potential energy of $i$ and $j$ tends to zero if the two particles are moved infinitely far apart.
 
 
-# Applications of the theorem (1/2)
+# Applications (1/2)
 
 -   As an example, let's estimate the average temperature of the Sun using the virial theorem.
 -   The Sun is a bounded spherical volume system, certainly relaxed, so the theorem is applicable.
 
-# Applications of the theorem (1/2)
+# Applications (1/2)
 
 The gravitational potential energy of the Sun (sphere of radius $R$) is
 \[
@@ -240,7 +218,7 @@ K = \sum_{i=1}^N \frac32 k T
 (we assume that the temperature is constant inside).
 
 
-# Applications of the theorem (1/2)
+# Applications (1/2)
 
 Using the virial theorem
 \[
@@ -253,12 +231,12 @@ T = \frac15 \frac{G M_\odot^2}{N k R_\odot} \sim 10^6 \div 10^7\,\text{K}.
 It roughly corresponds to the core temperature.
 
 
-# Applications of the theorem (2/2)
+# Applications (2/2)
 
 -   Let's now calculate the average binding energy per nucleon in an atomic nucleus.
 -   Also in this case we have a system of particles obviously relaxed and confined in a limited volume, but it is **not classical**: let's try to apply the virial theorem anyway.
 
-# Applications of the theorem (2/2)
+# Applications (2/2)
 
 -   An atomic nucleus has a radius $R \sim 10^{-15}\,\text{m}$.
 -   The average classical kinetic energy $p^2/(2m)$ can be estimated from the uncertainty principle:
@@ -271,7 +249,7 @@ It roughly corresponds to the core temperature.
     \]
 
 
-# Applications of the theorem (2/2)
+# Applications (2/2)
 
 Under the hypothesis that $U \propto r^\alpha$, and that $\left|\alpha\right|$
 is not too far from unity, from the virial theorem it holds that
@@ -366,11 +344,11 @@ any virialized gravitational system) is a bound system.
     \]
 -   From the fact that $2 \left<K\right>_t + \left<U\right>_t = 0$ we have that
     \[
-    M = \frac5{3 G}\left<v^2\right>_t R.
+    M_\text{GC} = \frac5{3 G}\left<v^2\right>_t R.
     \]
 
 
-# Virial Mass of g.c.
+# Virial Mass of a GC
 
 For our typical cluster with $R = 5\,\text{pc}$ and $v = 15\,\text{km/s}$ we have that
 \[

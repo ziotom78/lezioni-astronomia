@@ -1,3 +1,13 @@
+# These slides
+
+-   They are available at [ziotom78.github.io/lezioni-astronomia/](https://ziotom78.github.io/lezioni-astronomia/).
+
+    <center>
+    ![](images/site-url-qr-code.svg){height=400}
+    </center>
+
+-   Each time I will make a PDF copy of the slides available on the website.
+
 # Relaxation Time
 
 # Relaxation Time
@@ -8,10 +18,16 @@
 
 -   Moreover, gravitational interactions cause a redistribution of energy, which leads the cluster towards a relaxed state.
 
+---
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/0EfKTg2_QXI?si=9GFEYvpflxoYmVg6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[Gravitational collapse of Spongebob](https://www.youtube.com/watch?v=0EfKTg2_QXI)
+
 
 # Relaxation Time
 
--   To quantify the relaxation time, we can assume that it is the time required for each star in the cluster to interact a certain number $N$ of times with its companions.
+-   To quantify the relaxation time, we can assume that it is the time required for each star in the cluster to interact a certain number $N_\text{int}$ of times with its companions.
 -   (This is analogous to how one studies an ideal gas reaching thermodynamic equilibrium).
 
 
@@ -106,7 +122,7 @@ Therefore, the relaxation time is of the same order of magnitude as the time req
 
 # Average Distance Between Stars
 
--   Let's calculate the average distance $\lambda$ between two stars in the cluster. It is given by
+-   Let's calculate the average distance $\lambda$ between two stars in the cluster:
     \[
       \lambda \sim \frac1{n^{1/3}} = {\left(\frac{4\pi}{3 N}\right)}^{\frac13}
       R_\text{core} \approx 2.4\times 10^{15}\,\text{m} = 6700\,\text{AU},
@@ -248,7 +264,7 @@ from which we obtain
 \Delta t_r \approx \frac1{12 \ln (10^6/2)}\,\frac{10^6 \times
   5\,\text{pc}}{16\,\text{km/s}} \approx 2\,\text{Gyr},
 \]
-this time physically plausible.
+which is physically plausible, at last!
 
 
 # Relaxation Time
@@ -285,15 +301,15 @@ this time physically plausible.
 
 ---
 
-|                      | Ammassi aperti                      | Ammassi globulari                       |
-|----------------------|-------------------------------------|-----------------------------------------|
-|                      | ![](images/ngc290.jpg){height=60px} | ![](images/m22.jpg){height=60px}        |
-| # di stelle          | 10³–10⁴                             | 10⁴–10⁶                                 |
-| Dimensioni           | 10 pc                               | 20–100 pc (core: 5 pc)                  |
-| Gas e polvere?       | Sì                                  | No                                      |
-| Nebulose planetarie? | No                                  | Sì                                      |
-| # di ammassi noti    | 10³                                 | ~160                                    |
-| Dove?                | Disco                               | Alone stellare (~1% della massa totale) |
+|                     | Open clusters                       | Globular clusters                |
+|---------------------|-------------------------------------|----------------------------------|
+|                     | ![](images/ngc290.jpg){height=60px} | ![](images/m22.jpg){height=60px} |
+| # of stars          | 10³–10⁴                             | 10⁴–10⁶                          |
+| Size                | 10 pc                               | 20–100 pc (core: 5 pc)           |
+| Gas and dust?       | Yes                                 | No                               |
+| Planetary nebulae?  | No                                  | Yes                              |
+| # of known clusters | 10³                                 | ~160                             |
+| Dove?               | Disco                               | Stellar halo (~1% of total mass) |
 
 # M45
 
@@ -304,28 +320,14 @@ In Taurus. $N \sim 500$, age $10^8$ yr, $R \sim 8$ ly, $D \sim 440$ ly.
 # Open cluster population
 
 -   To date, approximately 1,100 open clusters have been cataloged.
--   More are likely present in the galactic disk: at greater distances, it is difficult to conduct a census due to dust in the galactic disk.
+-   Most of them are in the galactic disk
+-   At great distances, it is difficult to conduct a census due to dust in the galactic disk.
 -   Open clusters, therefore, form a much larger population than globular clusters.
-
-
-# HR diagram for OCs
-
-<center>![](images/m67_and_ngc188_diagrams.png)</center>
-
-
-# Isochrones
-
-<center>![](images/hr-isochrones.png)</center>
-
-  \footnotesize{\textit{New isochrones and age calibration}, Meynet,
-    Mermilliod, Maeder. In: \textit{Astrophysical Ages and Dating
-      Methods}, Vangioni-Flam \textit{et al.}\ (ed.), Editions
-    Frontières (1989).}
 
 
 # Relaxation time for OCs
 
--   Open clusters M 67 and NGC 188 are among the oldest known: most clusters have ages less than $10^9\,\text{yr}$.
+-   Most clusters have ages less than $10^9\,\text{yr}$.
 
 -   From the formula
     \[
