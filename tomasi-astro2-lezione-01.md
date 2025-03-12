@@ -1,3 +1,13 @@
+# These slides
+
+-   They are available at [ziotom78.github.io/lezioni-astronomia/](https://ziotom78.github.io/lezioni-astronomia/).
+
+    <center>
+    ![](images/site-url-qr-code.svg){height=400}
+    </center>
+
+-   Each time I will make a PDF copy of the slides available on the website.
+
 # The Milky Way
 
 # Structure of the Milky Way
