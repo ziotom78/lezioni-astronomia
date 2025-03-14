@@ -203,6 +203,7 @@ trajectory in the cluster can be approximated as Brownian motion):
   &= \frac{2\pi n G^2 M_*^2}{v}\,\Delta t\,\log\left(\frac{R}{r_c}\right).
 \end{aligned}
 \]
+
 # Long-Range Interactions
 
 -   We use the virial theorem with $N$ as the number of stars in the cluster (thus assuming $R$ and $v$ calculated on the already relaxed system):
