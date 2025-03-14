@@ -1,98 +1,96 @@
-# Il centro galattico
+# The Galactic Center
 
-# Studio del Centro Galattico
+# Study of the Galactic Center
 
--   È impossibile osservare il CG ($R < 500\,\text{pc}$) nel visibile, a causa dell'estinzione della polvere. Le bande più usate sono due:
+-   It is impossible to observe the GC ($R < 500\,\text{pc}$) in the visible, due to dust extinction. The most used bands are two:
 
-    #.  Nel *radio* è visibile l'emissione continua di gas (HII) e l'emissione di righe da nubi molecolari e molecole interstellari;
-    #.  Nell'*infrarosso* è visibile la polvere (continuo) e gas neutri e ionizzati (righe).
+    1.  In the *radio* band, the continuous emission of gas (HII) and the line emission from molecular clouds and interstellar molecules are visible;
+    2.  In the *infrared*, dust (continuum) and neutral and ionized gas (lines) are visible.
 
--   A causa della distanza (8 kpc), le osservazioni sono generalmente di limitata risoluzione: ad es. Spitzer risolve solo strutture più grandi di 0.1 pc.
+-   Due to the distance (8 kpc), observations are generally of limited resolution: e.g., Spitzer only resolves structures larger than 0.1 pc.
 
-# Immagine multibanda del CG
+# Multiband Image of the GC
 
 <center>![](images/galactic_centre_multiband_explained.jpg){height=460px}</center>
 
-Dimensioni: 32'×16'. Giallo: near-IR (Hubble), rosso: IR
-(Spitzer), blu: X ([Chandra](http://chandra.harvard.edu/photo/2009/galactic/)).
+Size: 32'×16'. Yellow: near-IR (Hubble), red: IR
+(Spitzer), blue: X ([Chandra](http://chandra.harvard.edu/photo/2009/galactic/)).
 
 ::: notes
 
-Le dimensioni della regione nell'immagine (fate il conto!) sono circa $70\times 35\,\text{pc}$.
+The size of the region in the image (do the math!) is about $70\times 35\,\text{pc}$.
 
 :::
 
 
-# Il Centro Galattico nel Radio
+# The Galactic Center in Radio
 
 <center>![](images/galactic_centre_radio.jpg){height=560px}</center>
 
 
-# Il buco nero centrale
+# The Central Black Hole
 
--   Nel 2022 le osservazioni dell'*Event Horizon Telescope* (EHT) hanno dimostrato che al centro della nostra Galassia si trova un buco nero di $\sim10^6 M_\odot$, Sgr A* (a volte denominato CBH, *Central Black Hole*).
+-   In 2022, observations by the *Event Horizon Telescope* (EHT) demonstrated that at the center of our Galaxy lies a black hole of $\sim10^6 M_\odot$, Sgr A* (sometimes called CBH, *Central Black Hole*).
 
--   L'esistenza dei buchi neri supermassivi è stata osservata prima di essere predetta, contrariamente ai buchi neri stellari. (Ma la prima immagine di un CBH è stata ottenuta solo nel 2019, quando EHT ha pubblicato le osservazioni del CBH della galassia M87, di $\sim10^9 M_\odot$).
+-   The existence of supermassive black holes was observed before being predicted, unlike stellar black holes. (But the first image of a CBH was only obtained in 2019, when EHT published the observations of the CBH of the galaxy M87, of $\sim10^9 M_\odot$).
 
--   Le caratteristiche del CBH della nostra Galassia erano però già state dedotte dall'orbita delle stelle vicine a Sgr A*.
+-   The characteristics of the CBH of our Galaxy had, however, already been deduced from the orbit of stars near Sgr A*.
 
-# Misurare la massa del CBH
+# Measuring the Mass of the CBH
 
--   Per la terza legge di Keplero, più una stella è vicina a Sgr A*, minore è il suo periodo orbitale $P$:
+-   According to Kepler's third law, the closer a star is to Sgr A*, the shorter its orbital period $P$:
 
     \[
     \frac{P^2}{a^3} = \frac{4\pi}{M G},
     \]
 
-    con $a$ semiasse maggiore dell'orbita e $M$ massa di Sgr A*.
+    with $a$ being the semi-major axis of the orbit and $M$ the mass of Sgr A*.
 
--   Basta quindi osservare una stella vicina finché non completa un'orbita attorno a Sgr A*: dalla misura di $P$ e di $a$ si ottiene $M$.
+-   It is therefore sufficient to observe a nearby star until it completes an orbit around Sgr A*: from the measurement of $P$ and $a$, $M$ is obtained.
+# Measuring the mass of the CBH
 
-# Misurare la massa del CBH
-
--   Risolvendo l'equazione della slide precedente per $a$, si ottiene
+-   Solving the equation from the previous slide for $a$, we obtain
 
     \[
     a = \sqrt[3]{\frac{G M P^2}{4\pi}}.
     \]
 
--   Ipotizzando di poter osservare per ~20 anni i dintorni di Sgr A*, e che $M \approx 10^6 M_\odot$, allora compiranno almeno un periodo completo le stelle tali per cui
+-   Assuming we can observe the surroundings of Sgr A* for ~20 years, and that $M \approx 10^6 M_\odot$, then stars for which
 
     \[
     a < \sqrt[3]{\frac{6.67\times 10^{-11}\,\frac{\text{m}^3}{\text{kg}\cdot\text{s}^2} \cdot 4\times 10^{36}\,\text{kg} \cdot \bigl(6.3\times 10^8\,\text{s}\bigr)^2}{4\pi}} \approx 2 \times 10^{14}\,\text{m}.
     \]
+    will complete at least one full period.
 
-# Misurare la massa del CBH
+# Measuring the mass of the CBH
 
--   Il limite diffrattivo di un telescopio è θ ~ λ/D, dove $\lambda$ è la lunghezza d'onda e $D$ è la dimensione dello specchio.
+-   The diffraction limit of a telescope is θ ~ λ/D, where $\lambda$ is the wavelength and $D$ is the size of the mirror.
 
--   Per risolvere un moto $a = 10^{14}\,\text{m}$ a una distanza $R_0 = 8\,\text{kpc}$ e assumendo λ ~ 2 µm (filtro K), occorre quindi che
+-   To resolve a motion $a = 10^{14}\,\text{m}$ at a distance $R_0 = 8\,\text{kpc}$ and assuming λ ~ 2 µm (K filter), we therefore need
 
     \[
     \frac{\lambda}D = \frac{a}{R_0} \quad \Rightarrow \quad D = \frac{R_0\,\lambda}{a} \approx \frac{8\,\text{kpc}\cdot 2\,\text{µm}}{10^{14}\,\text{m}} \approx 500\,\text{cm},
     \]
 
-    (Lo specchio più grande di Merate è il Ruths, da 134 cm!)
+    (The largest mirror in Merate is the Ruths, at 134 cm!)
 
 
-# Studio del buco nero centrale
+# Studying the central black hole
 
--   Avere a disposizione uno specchio da 5 m non è sufficiente, perché c'è l'atmosfera che introduce molto disturbo e va corretto.
+-   Having a 5 m mirror is not enough, because the atmosphere introduces a lot of disturbance and needs to be corrected.
 
--   Le prime misure delle orbite del centro galattico non erano quindi **astrometriche** ma **spettroscopiche**: misuravano le velocità radiali.
+-   The first measurements of the orbits of the galactic center were therefore not **astrometric** but **spectroscopic**: they measured radial velocities.
 
--   Dalla distribuzione di velocità si possono comunque ottenere indicazioni importanti, confrontandole con simulazioni di orbite intorno a un corpo massivo.
+-   Important information can still be obtained from the velocity distribution by comparing it with simulations of orbits around a massive body.
 
--   Potete vederne un esempio in [Eckart, Genzel (1996): *Observations of stellar proper motions near the Galactic Centre*](https://www.nature.com/articles/383415a0) (purtroppo è dietro un *paywall*)
+-   You can see an example in [Eckart, Genzel (1996): *Observations of stellar proper motions near the Galactic Centre*](https://www.nature.com/articles/383415a0) (unfortunately it is behind a *paywall*)
+# First measurements
 
+-   Thanks to the use of adaptive optics and large telescopes, such as the Keck in Hawaii (10 m!), in the years 2008–2009 it was possible to measure the first orbits.
 
-# Prime misure
+-   These measurements were made by the groups of Reinhard Genzel (Max Planck Institut, Germany) and Andrea Ghez (University of Los Angeles, USA).
 
--   Grazie all'impiego di ottiche adattive e all'uso di grandi telescopi, come il Keck alle Hawaii (10 m!), negli anni 2008–2009 è stato possibile misurare le prime orbite.
-
--   Queste misurazioni vennero fatte dai gruppi di Reinhard Genzel (Max Planck Institut, Germania) e di Andrea Ghez (Università di Los Angeles, USA).
-
--   Genzel e Ghez hanno vinto il premio Nobel nel 2020 (25% ciascuno del premio), insieme a Roger Penrose (Università di Oxford, 50% del premio), che ha sviluppato i modelli matematici che descrivono i buchi neri
+-   Genzel and Ghez won the Nobel Prize in 2020 (25% each of the prize), together with Roger Penrose (University of Oxford, 50% of the prize), who developed the mathematical models that describe black holes
 
 ---
 
@@ -129,90 +127,86 @@ Your browser does not support the video tag.
 
 ::: notes
 
-Le righe continue indicano che sono presenti anche dati spettroscopici
-(dal 2001), e quindi velocità lungo la linea di vista.
+The solid lines indicate that spectroscopic data are also present
+(since 2001), and therefore velocities along the line of sight.
 
 :::
 
 ---
 
-# Osservazione del CBH
+# Observation of the BH
 
--   Le osservazioni di Genzel e di Ghez hanno portato a stimare una massa $M_\text{CBH} \approx 4\times 10^6\,M_\odot$.
+-   The observations of Genzel and Ghez led to an estimated mass $M_\text{BH} \approx 4\times 10^6\,M_\odot$.
 
--   Questa corrisponde a un raggio di Schwartzschild pari a
+-   This corresponds to a Schwarzschild radius equal to
 
     \[
     \begin{align*}
-    r_s &= \frac{2 G M_\text{CBH}}{c^2} \approx \frac{2 \cdot 6.67\times 10^{-11}\,\frac{\text{m}^3}{\text{kg}\cdot\text{s}^2} \cdot 1.6\times 10^{37}\,\text{kg}}{9.0\times 10^{16}\,\text{m/s}} =\\
+    r_s &= \frac{2 G M_\text{BH}}{c^2} \approx \frac{2 \cdot 6.67\times 10^{-11}\,\frac{\text{m}^3}{\text{kg}\cdot\text{s}^2} \cdot 1.6\times 10^{37}\,\text{kg}}{9.0\times 10^{16}\,\text{m/s}} =\\
     &\approx 2.4\times 10^{10}\,\text{m} = 0.16\,\text{AU}.
     \end{align*}
     \]
 
--   Il CBH ovviamente non è visibile, ma ci si aspetta che sia visibile l'inviluppo di gas caldo per $r \gtrsim 3 r_s$
+-   The BH is obviously not visible, but it is expected that the hot gas envelope will be visible for $r \gtrsim 3 r_s$
 
 # Event Horizon Telescope
 
--   Usiamo di nuovo la relazione $\lambda / D \sim 3r_s / R_0$ per stimare le dimensioni del telescopio necessarie a vedere il disco di gas caldo:
+-   We again use the relation $\lambda / D \sim 3r_s / R_0$ to estimate the size of the telescope needed to see the hot gas disk:
 
     \[
     D = \frac{R_0\,\lambda}{3 r_s} \approx \frac{8\,\text{kpc}\cdot 2\,\text{µm}}{5\,\text{AU}} \approx 660\,\text{m}.
     \]
 
-    Questo è assolutamente impossibile!
+    This is absolutely impossible!
 
--   L'Event Horizon Telescope è una collaborazione che ha sfruttato l'interferometria per ottenere un'immagine del CBH. Come hanno fatto?
+-   The Event Horizon Telescope is a collaboration that has used interferometry to obtain an image of the BH. How did they do it?
+# Interferometry
 
+-   Interferometry is a technique that consists of collecting the signal from different telescopes and combining it in phase.
 
-# Interferometria
+-   The achievable resolution is always θ ~ λ/D, but in this case *D* is the distance between telescopes!
 
--   L'interferometria è una tecnica che consiste nel raccogliere il segnale di diversi telescopi e combinarlo in fase.
+-   Unfortunately, phase coherence requires that any defects in the optical guides be much smaller than the wavelength, which makes it suitable only for observations in the microwave and radio bands.
 
--   La risoluzione ottenibile è sempre θ ~ λ/D, ma in questo caso *D* è la distanza tra telescopi!
-
--   Purtroppo la coerenza di fase richiede che eventuali difetti delle guide ottiche siano molto inferiori alla lunghezza d'onda, il che lo rende indicato solo per osservazioni nelle microonde e nel radio.
-
--   Questo è però un problema!
+-   However, this is a problem!
 
 
-# Interferometria per il CBH
+# Interferometry for the BH
 
--   Se aumentiamo λ, aumentano anche le dimensioni *D* necessarie a ottenere la risoluzione desiderata! EHT ha fatto le misure con λ = 1.3 mm, quindi
+-   If we increase λ, the size *D* needed to obtain the desired resolution also increases! EHT made the measurements with λ = 1.3 mm, so
 
-    \[
+    ```
     D = \frac{R_0\,\lambda}{3 r_s} \approx \frac{8\,\text{kpc}\cdot 1\,\text{m}}{5\,\text{AU}} \approx 4\times 10^5\,\text{m} = 430\,\text{km}.
-    \]
+    ```
 
--   Per EHT è stato quindi necessario operare telescopi che coprissero una buona parte delle terre emerse!
+-   For EHT it was therefore necessary to operate telescopes that covered a good portion of the Earth's surface!
 
 ---
 
-# CBH di M87 (10 aprile 2019)
+# BH of M87 (April 10, 2019)
 
 <center>
 ![](images/m87_eht.jpg){width="440px"}
 </center>
 
-Perché il buco nero di M87 è stato misurato prima?
+Why was M87's black hole measured first?
 
-# CBH a confronto
+# Comparing BHs
 
--   Il CBH di M87 è 1000 volte più lontano di Sagittarius A* (16 Mpc contro 8 kpc).
+-   M87's BH is 1000 times farther away than Sagittarius A* (16 Mpc vs. 8 kpc).
 
--   Però non si trova sul piano galattico, quindi l'oscuramento delle polveri è inferiore (anche perché è una galassia ellittica).
+-   However, it is not located on the galactic plane, so the dust obscuration is lower (also because it is an elliptical galaxy).
 
--   Inoltre il buco nero è 1000 più massivo, il che vuol dire che $r_s$ è 1000 volte maggiore:
+-   Furthermore, the black hole is 1000 times more massive, which means that $r_s$ is 1000 times larger:
 
-    #.   Il diametro apparente è lo stesso;
-    #.   Il periodo orbitale del gas è $P \propto r_s^{3/2} / M^{1/2}$, quindi $P' = 10^3 P$: il gas impiega diversi giorni anziché decine di minuti a orbitare, e l'immagine risulta meno sfuocata.
-
-
-# Sagittarius A* (12 maggio 2022)
+    1.  The apparent diameter is the same;
+    2.  The orbital period of the gas is $P \propto r_s^{3/2} / M^{1/2}$, so $P' = 10^3 P$: the gas takes several days instead of tens of minutes to orbit, and the image is less blurred.
+# Sagittarius A* (May 12, 2022)
 
 <center>![](images/sgr_a_eht.jpg)</center>
 
 
-# *Easter lecture* di Genzel
+# Genzel's *Easter lecture*
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xPOjQyGoREE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -220,26 +214,24 @@ Perché il buco nero di M87 è stato misurato prima?
 
 
 
-# Osservare la Via Lattea
+# Observing the Milky Way
 
 
-# Aspetto esterno della Via Lattea
+# External Appearance of the Milky Way
 
 <center>![](images/spiral_galaxies.jpg){height=480px}</center>
 
-Abbiamo l'evidenza che esistano galassie con bracci avvolti in
-spirale. È così anche per la Via Lattea?
+We have evidence that galaxies with spiral arms exist. Is this also true for the Milky Way?
 
 
-# Aspetto esterno della Via Lattea
+# External Appearance of the Milky Way
 
-Studiando nubi molecolari giganti si intuisce che anche la Via
-Lattea possieda strutture simili.
+By studying giant molecular clouds, we get a sense that the Milky Way also has similar structures.
 
 <center>![](images/spiral_arms_inner.png){height=480px}</center>
 
 
-# Aspetto esterno della Via Lattea
+# External Appearance of the Milky Way
 
 <center>![](images/spitzer_milky_way_2003.png){height=500px}</center>
 
@@ -248,7 +240,7 @@ Lattea possieda strutture simili.
 
 <center>![](images/spitzer_milky_way_2008.png){height=500px}</center>
 
-Come siamo arrivati a scoprire che la via Lattea apparirebbe davvero così ad un osservatore esterno?
+How did we come to discover that the Milky Way would actually appear this way to an external observer?
 
 # [Thomas Wright](https://en.wikipedia.org/wiki/Thomas_Wright_(astronomer)) (1711–1786)
 
@@ -256,13 +248,13 @@ Come siamo arrivati a scoprire che la via Lattea apparirebbe davvero così ad un
 <tbody>
 <tr>
 <td>
--   Matematico, astronomo, architetto e progettista di giardini
+-   Mathematician, astronomer, architect, and garden designer
 
--   Nel libro *An original theory or new hypothesis of the Universe* (1750) espone un'originale teoria cosmo-teologica:
+-   In his book *An Original Theory or New Hypothesis of the Universe* (1750) he expounds an original cosmo-theological theory:
 
-    -   Molti sistemi solari;
-    -   Stelle invisibili;
-    -   Distribuzione a simm.\ sferica.
+    -   Many solar systems;
+    -   Invisible stars;
+    -   Spherically symmetric distribution.
 </td>
 <td>
 ![](images/thomas_wright.jpg)
@@ -283,15 +275,13 @@ Come siamo arrivati a scoprire che la via Lattea apparirebbe davvero così ad un
 ![](images/thomas_wright_milky_way_model.svg)
 </center>
 
-Il modello spiega la forma apparente della Via Lattea. Inoltre ipotizza che
-tutte le stelle abbiano la medesima luminosità: quelle più distanti
-sono dunque invisibili.
+Wright’s model explains the apparent shape of the Milky Way. Moreover, he hypothesizes that all the stars share the same luminosity, so that the farthest ones are invisible.
 
 ---
 
--   Nel lavoro *Allgemeine Naturgeschichte und Theorie des Himmels* (1755), Immanuel Kant cita esplicitamente Wright.
+-   In his work *Allgemeine Naturgeschichte und Theorie des Himmels* (1755), Immanuel Kant quotes Wright.
 
--   Si basa però su una recensione del lavoro di Wright che fraintende il senso dell'immagine seguente:
+-   Unfortunately, his interpretation was based on a review of Wright’s oeuvre that misunderstands the meaning of this image:
 
 <center>
 ![](images/thomas_wright_plate_XXI.jpg){width=440px}
@@ -303,11 +293,11 @@ sono dunque invisibili.
 <tbody>
 <tr>
 <td>
--   Musicista convertito all'astronomia.
+-   Musician with a strong passion for astronomy.
 
--   Lui e i fratelli Alexander e Caroline sono stati formidabili costruttore di telescopi, che costruivano per sé stessi e per la nobiltà.
+-   He and his siblings Alexander and Caroline have been formidable telescope-makers, which they built for their own use and for aristocrats.
 
--   A differenza di Wright, il suo modello è strettamente connesso alle osservazioni (che faceva lui stesso).
+-   Unlike Wright, Herschel’s model is strictly linked to observations (done by himself).
 </td>
 <td>
 ![](images/william_herschel.jpg){width=880px}
@@ -322,11 +312,11 @@ sono dunque invisibili.
 ![](images/herschel_milky_way.jpg)
 </center>
 
--   Propone una struttura piatta per la Via Lattea (*On the construction of the Heavens*, 1802)
+-   He suggested a flat structure for the Milky Way (*On the construction of the Heavens*, 1802)
 
--   Assume che le stelle siano distribuite con densità numerica $n$ costante, e dalla misura della densità colonnare $n_\text{col}$ calcola la profondità $l = n_\text{col}/ n$.
+-   He assumed that stars are distributed with constant numeric density $n$. By measuring their column density $n_\text{col}$, he could derive the depth $l = n_\text{col}/ n$.
 
--   La forma è basata su conteggi di stelle in 675 regioni di cielo (alcuni punti sono media di più osservazioni). Il Sole si trova approssimativamente al centro.
+-   The shape is derived from stellar counts in 675 regions of the celestial sphere (some points are the result of an average over multiple observations). The Sun is approximately in the middle.
 
 # [Jacobus Kapteyn](https://en.wikipedia.org/wiki/Jacobus_Kapteyn) (1851–1922)
 
@@ -334,9 +324,9 @@ sono dunque invisibili.
 <tbody>
 <tr>
 <td>
--   In *First attempt at a theory of the arrangement and motion of the sidereal system* (1922) usa le parallassi e criteri statistici per stimare la forma della Via Lattea.
+-   In *First attempt at a theory of the arrangement and motion of the sidereal system* (1922), he used parallaxes and statistics to estimate the shape of the Milky Way.
 
--   Sottostima molto l'arrossamento, e il suo modello è accurato solo ad alte latitudini Galattiche.
+-   He severely underestimated stellar reddening, so that his model is accurate only at high Galactic latitudes.
 </td>
 <td>
 ![](images/jacobus_kapteyn.jpg){width=880px}
@@ -358,11 +348,11 @@ sono dunque invisibili.
 <tbody>
 <tr>
 <td>
--   Stima la distanza degli ammassi globulari usando le RR Lyrae.
+-   He estimated the distance of GCs using RR Lyrae stars.
 
--   Non corregge per l'assorbimento interstellare
+-   He did not correct for interstellar absorption.
 
--   Intuisce la struttura della Via Lattea e la posizione del Sole.
+-   He understood the structure of the Milky Way and the position of the Sun.
 </td>
 <td>
 ![](images/harlow_shapley.jpg){width=880px}
@@ -372,21 +362,10 @@ sono dunque invisibili.
 </table>
 
 
-# Conclusione
-
-# Conclusione
-
--   Vi raccomando di pensare **subito** a dei commenti liberi relativi a queste lezioni da inserire nei questionari della didattica!
-
--   Domani ci sarà la lezione *jolly* su come si scrive un testo scientifico. Vi chiederei di iniziare un quarto d'ora prima, alle 8,45, in modo da essere sicuri di finire alle 10,30.
-
--   A partire da settimana prossima, la dott.ssa Mariachiara Rossetti (INAF di Milano) terrà una serie di lezioni sull'astrofisica galattica.
-
-
 ---
 title: "Astrofisica Generale II — 7"
 author: Maurizio Tomasi ([maurizio.tomasi@unimi.it](mailto:maurizio.tomasi@unimi.it))
-date: "18 Aprile 2025"
+date: "3 Aprile 2025"
 css:
 - ./css/custom.css
 ...

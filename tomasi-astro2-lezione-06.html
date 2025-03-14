@@ -59,36 +59,36 @@
   <h1 class="title">Astrofisica Generale II — 6</h1>
   <p class="author">Maurizio Tomasi (<a
 href="mailto:maurizio.tomasi@unimi.it">maurizio.tomasi@unimi.it</a>)</p>
-  <p class="date">12 Aprile 2025</p>
+  <p class="date">28 Marzo 2025</p>
 </section>
 
-<section id="collasso-di-jeans" class="slide level1">
-<h1>Collasso di Jeans</h1>
-<p>Queste sono le equazioni usate da Jeans: <span class="math display">
+<section id="jeans-collapse" class="slide level1">
+<h1>Jeans’ Collapse</h1>
+<p>These are the equations used by Jeans: <span class="math display">
 \begin{aligned}
   \dot\rho + \vec{\nabla}\bigl(\rho\,\vec{v}\bigr) &amp;=
-  0\quad&amp;\text{(c.\ della massa)} \\
+  0\quad&amp;\text{(mass conservation)} \\
   \dot{\vec{v}} + (\vec{v}\cdot\nabla)\vec{v} &amp;=
   -\frac1{\rho} \vec{\nabla}p - \vec{\nabla}\phi
-  &amp;\text{(legge «di Newton»)} \\
-  p &amp;= \rho c_s^2&amp;\text{(v.\ del suono)} \\
-  \nabla^2\phi &amp;= 4\pi G \rho&amp;\text{(gravitazione)}.
+  &amp;\text{(Newton&#39;s law)} \\
+  p &amp;= \rho c_s^2&amp;\text{(speed of sound)} \\
+  \nabla^2\phi &amp;= 4\pi G \rho&amp;\text{(gravitation)}.
 \end{aligned}
 </span></p>
-<p>Le incognite <span class="math inline">\rho</span>, <span
-class="math inline">\vec{v}</span>, <span class="math inline">p</span> e
-<span class="math inline">\phi</span> sono funzione del punto <span
-class="math inline">\vec{r}</span> e del tempo <span
-class="math inline">t</span>. Per un gas ideale monoatomico vale che
-<span class="math inline">c_s = \sqrt{\gamma\frac{k_B T}{m}}</span>, con
+<p>The unknowns <span class="math inline">\rho</span>, <span
+class="math inline">\vec{v}</span>, <span class="math inline">p</span>
+and <span class="math inline">\phi</span> are functions of the point
+<span class="math inline">\vec{r}</span> and time <span
+class="math inline">t</span>. For a monoatomic ideal gas, <span
+class="math inline">c_s = \sqrt{\gamma\frac{k_B T}{m}}</span>, with
 <span class="math inline">\gamma = \frac53</span>.</p>
 </section>
-<section id="derivazione-di-jeans" class="slide level1">
-<h1>Derivazione di Jeans</h1>
+<section id="jeans-derivation" class="slide level1">
+<h1>Jeans’ Derivation</h1>
 <ul>
-<li><p>Il sistema di equazioni è molto complesso da risolvere se non si
-adotta qualche semplificazione.</p></li>
-<li><p>Linearizziamo il sistema, sostituendo <span class="math display">
+<li><p>The system of equations is very complex to solve without some
+simplification.</p></li>
+<li><p>We linearize the system, substituting <span class="math display">
 \begin{aligned}
   \rho(\vec{r}, t) &amp;= \textcolor{#682673}{\rho_0} +
 \textcolor{#267342}{\rho_1}(\vec{r}, t), \\
@@ -100,35 +100,35 @@ adotta qualche semplificazione.</p></li>
   \phi(\vec{r}, t) &amp;= \textcolor{#682673}{\phi_0} +
 \textcolor{#267342}{\phi_1}(\vec{r}, t).
 \end{aligned}
-</span> I termini <span
+</span> The terms <span
 class="math inline">\textcolor{#682673}{\rho_0}</span>, <span
 class="math inline">\textcolor{#682673}{p_0}</span>, <span
-class="math inline">\textcolor{#682673}{\vec{v}_0}</span> e <span
-class="math inline">\textcolor{#682673}{\phi_0}</span> sono costanti, e
-vale che <span class="math inline">\textcolor{#682673}{\rho_0} \gg
+class="math inline">\textcolor{#682673}{\vec{v}_0}</span> and <span
+class="math inline">\textcolor{#682673}{\phi_0}</span> are constant, and
+<span class="math inline">\textcolor{#682673}{\rho_0} \gg
 \textcolor{#267342}{\rho_1}</span>, <span
 class="math inline">\textcolor{#682673}{p_0} \gg
 \textcolor{#267342}{p_1}</span>, etc.</p></li>
 </ul>
 </section>
-<section id="derivazione-di-jeans-1" class="slide level1">
-<h1>Derivazione di Jeans</h1>
+<section id="jeans-derivation-1" class="slide level1">
+<h1>Jeans’ Derivation</h1>
 <ul>
-<li><p>Supponiamo che una porzione di plasma abbia questa densità:</p>
+<li><p>Suppose that a portion of plasma has this density:</p>
 <center>
 <p><img data-src="images/plasma_fractal.jpg" height="280" /></p>
 </center></li>
-<li><p>Stiamo imponendo che le variazioni di densità <span
-class="math inline">\textcolor{#267342}{\rho_1}</span> siano piccole
-rispetto alla densità media <span
+<li><p>We are imposing that the density variations <span
+class="math inline">\textcolor{#267342}{\rho_1}</span> are small
+compared to the average density <span
 class="math inline">\textcolor{#682673}{\rho_0}</span>.</p></li>
 </ul>
 </section>
-<section id="derivazione-di-jeans-2" class="slide level1">
-<h1>Derivazione di Jeans</h1>
-<p>Ignorando i termini di ordine superiore al primo, abbiamo che ad
-es. il termine <span class="math inline">-\vec{\nabla} p/\rho</span>
-diventa <span class="math display">
+<section id="jeans-derivation-2" class="slide level1">
+<h1>Jeans’ Derivation</h1>
+<p>Ignoring higher-order terms, we have that, for example, the term
+<span class="math inline">-\vec{\nabla} p/\rho</span> becomes <span
+class="math display">
 \begin{aligned}
   -\frac1\rho\vec{\nabla} p &amp;=
 -\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0}
@@ -145,518 +145,515 @@ diventa <span class="math display">
 \textcolor{#267342}{p_1} \approx
 -\frac{\vec{\nabla}\textcolor{#267342}{p_1}}{\textcolor{#682673}{\rho_0}}.
 \end{aligned}
-</span> I restanti termini sono più semplici.</p>
+</span> The remaining terms are simpler.</p>
 </section>
-<section id="derivazione-di-jeans-3" class="slide level1">
-<h1>Derivazione di Jeans</h1>
+<section id="jeans-derivation-3" class="slide level1">
+<h1>Jeans’ derivation</h1>
 <ul>
-<li><p>Applicando una divergenza alla c.d. «legge di Newton» e
-sostituendo, otteniamo <span class="math display">
+<li><p>Applying a divergence to the so-called «Newton’s law» and
+substituting, we obtain <span class="math display">
 \ddot{\textcolor{#267342}{\rho_1}} - c_s^2
 \nabla^2\textcolor{#267342}{\rho_1} + 4\pi G \textcolor{#267342}{\rho_1}
 \textcolor{#682673}{\rho_0} = 0.
 </span></p></li>
-<li><p>L’equazione è complessa da risolvere, ma è lineare: se <span
-class="math inline">\rho_A</span> e <span
-class="math inline">\rho_B</span> sono due soluzioni, anche <span
-class="math inline">\alpha \rho_A + \beta \rho_B</span> è
-soluzione.</p></li>
+<li><p>The equation is complex to solve, but it is linear: if <span
+class="math inline">\rho_A</span> and <span
+class="math inline">\rho_B</span> are two solutions, then <span
+class="math inline">\alpha \rho_A + \beta \rho_B</span> is also a
+solution.</p></li>
 </ul>
 </section>
-<section id="derivazione-di-jeans-4" class="slide level1">
-<h1>Derivazione di Jeans</h1>
-<p>Sfruttiamo la linearità dell’equazione per risolverla usando
-l’analisi di Fourier. Scomponiamo quindi l’incognita in onde piane:
-<span class="math display">
+<section id="jeans-derivation-4" class="slide level1">
+<h1>Jeans’ derivation</h1>
+<p>We exploit the linearity of the equation to solve it using Fourier
+analysis. We therefore decompose the unknown into plane waves: <span
+class="math display">
 \textcolor{#267342}{\rho_1}(\vec{r}, t) =
 \iiint_{\mathbb{R}^3}\text{d}\vec{k}\int_\mathbb{R}\text{d}\omega\,\tilde{\textcolor{#267342}{\rho_1}}
 (\vec{k}, \omega)\,e^{i(\vec{k}\cdot\vec{r} - \omega t)}.
 </span></p>
-<p>La funzione <span
+<p>The function <span
 class="math inline">\tilde{\textcolor{#267342}{\rho_1}}(\vec{k},
-\omega)</span> è la trasformata di Fourier di <span
+\omega)</span> is the Fourier transform of <span
 class="math inline">\textcolor{#267342}{\rho_1}(\vec{r}, t)</span>;
-quindi operazioni differenziali su <span
-class="math inline">\textcolor{#267342}{\rho_1}</span> diventano
-algebriche su <span
-class="math inline">\tilde{\textcolor{#267342}{\rho_1}}</span>: <span
-class="math display">
+therefore differential operations on <span
+class="math inline">\textcolor{#267342}{\rho_1}</span> become algebraic
+on <span class="math inline">\tilde{\textcolor{#267342}{\rho_1}}</span>:
+<span class="math display">
 \nabla^2 \textcolor{#267342}{\rho_1} \rightarrow k^2 \cdot
 \tilde{\textcolor{#267342}{\rho_1}}, \qquad
 \partial_t \textcolor{#267342}{\rho_1} \rightarrow \omega \cdot
 \tilde{\textcolor{#267342}{\rho_1}}.
 </span></p>
 </section>
-<section id="derivazione-di-jeans-5" class="slide level1">
-<h1>Derivazione di Jeans</h1>
-<p>Ricordando che <span class="math display">
+<section id="jeans-derivation-5" class="slide level1">
+<h1>Jeans’ derivation</h1>
+<p>Recalling that <span class="math display">
 \left\|\vec{k}\right\| = \frac{2\pi}\lambda, \quad \omega = 2\pi\nu,
-</span> il valore di <span class="math inline">\lambda</span> che
-compare nell’espressione di <span
-class="math inline">\textcolor{#267342}{\rho_1}</span> corrisponde di
-volta in volta a una diversa scala delle perturbazioni
-nell’immagine:</p>
+</span> the value of <span class="math inline">\lambda</span> that
+appears in the expression of <span
+class="math inline">\textcolor{#267342}{\rho_1}</span> corresponds each
+time to a different scale of the perturbations in the image:</p>
 <center>
 <img data-src="images/plasma_fractal.jpg" height="240" />
 </center>
 </section>
-<section id="derivazione-di-jeans-6" class="slide level1">
-<h1>Derivazione di Jeans</h1>
-<p>Applicando quindi la trasformata di Fourier all’equazione di <span
-class="math inline">\textcolor{#267342}{\rho_1}</span>, otteniamo che
-<span class="math display">
+<section id="jeans-derivation-6" class="slide level1">
+<h1>Jeans’ derivation</h1>
+<p>Therefore, applying the Fourier transform to the equation of <span
+class="math inline">\textcolor{#267342}{\rho_1}</span>, we obtain <span
+class="math display">
 \omega^2 \cdot \tilde{\textcolor{#267342}{\rho_1}} = \bigl(k^2 c_s^2 -
 4\pi G \textcolor{#682673}{\rho_0}\bigr)\cdot
 \tilde{\textcolor{#267342}{\rho_1}},
-</span> ossia <span class="math display">
+</span> that is <span class="math display">
 \omega^2 = k^2 c_s^2 - 4\pi G \textcolor{#682673}{\rho_0},
-</span> che è detta <strong>relazione di dispersione</strong> e lega tra
-loro <span class="math inline">\omega</span> e <span
-class="math inline">k</span> (ossia, <span
-class="math inline">\lambda</span> e <span
+</span> which is called the <strong>dispersion relation</strong> and
+links <span class="math inline">\omega</span> and <span
+class="math inline">k</span> (i.e., <span
+class="math inline">\lambda</span> and <span
 class="math inline">\nu</span>).</p>
 </section>
-<section id="derivazione-di-jeans-7" class="slide level1">
-<h1>Derivazione di Jeans</h1>
-<p>Risolvendo, abbiamo che <span class="math display">
+<section id="jeans-derivation-7" class="slide level1">
+<h1>Jeans’ derivation</h1>
+<p>Solving, we have that <span class="math display">
 \omega = \pm c_s \sqrt{k^2 - k_J^2},
-</span> con <span class="math display">
+</span> with <span class="math display">
 k_J^2 \equiv \frac{4\pi G \textcolor{#682673}{\rho_0}}{c_s^2}.
-</span> (in assenza di gravità, <span class="math inline">k_J = 0</span>
-e <span class="math inline">\omega = \pm c_S \,k</span>: la velocità del
-suono è sempre <span class="math inline">c_s</span>).</p>
-<p>Dallo studio di questa equazione si deduce come il sistema si evolve
-nel tempo.</p>
+</span> (in the absence of gravity, <span class="math inline">k_J =
+0</span> and <span class="math inline">\omega = \pm c_S \,k</span>: the
+speed of sound is always <span class="math inline">c_s</span>).</p>
+<p>From the study of this equation, we deduce how the system evolves
+over time.</p>
 </section>
-<section id="derivazione-di-jeans-8" class="slide level1">
-<h1>Derivazione di Jeans</h1>
-<p>Se <span class="math inline">k_J^2 &lt; k^2</span> allora l’onda di
-pressione si propaga nel mezzo (onda acustica) con una velocità di fase
-data da <span class="math display">
+<section id="jeans-derivation-8" class="slide level1">
+<h1>Jeans’ derivation</h1>
+<p>If <span class="math inline">k_J^2 &lt; k^2</span> then the pressure
+wave propagates in the medium (acoustic wave) with a phase velocity
+given by <span class="math display">
 v_f = \lambda\nu = \frac\omega{k} = c_s \sqrt{1 -
 \left(\frac{k_J}k\right)^2},
-</span> inferiore alla velocità del suono <span
-class="math inline">c_s</span> perché <span class="math inline">k_J
-\not= 0</span> (è il termine dovuto alla gravità). La gravità quindi
-«rallenta» la propagazione dell’onda nel mezzo.</p>
+</span> lower than the speed of sound <span
+class="math inline">c_s</span> because <span class="math inline">k_J
+\not= 0</span> (it is the term due to gravity). Gravity therefore «slows
+down» the propagation of the wave in the medium.</p>
 </section>
-<section id="derivazione-di-jeans-9" class="slide level1">
-<h1>Derivazione di Jeans</h1>
-<p>Se <span class="math inline">k_J^2 &gt; k^2</span> allora <span
-class="math inline">\omega</span> è immaginario, e <span
+<section id="jeans-derivation-9" class="slide level1">
+<h1>Jeans’ derivation</h1>
+<p>If <span class="math inline">k_J^2 &gt; k^2</span> then <span
+class="math inline">\omega</span> is imaginary, and <span
 class="math inline">\textcolor{#267342}{\rho_1}(\vec{r}, t) = A_g
-e^{i(\vec{k}\cdot\vec{r} - \omega t)}</span> diverge come <span
-class="math inline">e^{t/\tau_J}</span> (collasso), con <span
+e^{i(\vec{k}\cdot\vec{r} - \omega t)}</span> diverges as <span
+class="math inline">e^{t/\tau_J}</span> (collapse), with <span
 class="math display">
 \tau_J = \frac1{k_J c_s} = \frac1{\sqrt{4\pi G
 \textcolor{#682673}{\rho_0}}} =
   \frac{2.3\times 10^4\,\text{yr}}{\sqrt{n_H/10^6\,\text{cm}^{-3}}},
-</span> se <span class="math inline">k\ll k_J</span>; risultato simile
-al tempo di <em>free-fall</em>: <span class="math display">
+</span> if <span class="math inline">k\ll k_J</span>; a result similar
+to the <em>free-fall</em> time: <span class="math display">
 \tau_\text{ff} = \sqrt{\frac{3\pi}{32 G\textcolor{#682673}{\rho_0}}} =
   \frac{4.4\times 10^4\,\text{yr}}{\sqrt{n_H/10^6\,\text{cm}^{-3}}}.
 </span></p>
 </section>
-<section id="derivazione-di-jeans-10" class="slide level1">
-<h1>Derivazione di Jeans</h1>
-<p>Siccome il collasso avviene se <span class="math inline">k_J^2 &gt;
-k^2</span>, ossia <span class="math display">
+<section id="jeans-derivation-10" class="slide level1">
+<h1>Jeans’ derivation</h1>
+<p>Since the collapse occurs if <span class="math inline">k_J^2 &gt;
+k^2</span>, that is <span class="math display">
 \frac{4\pi G \textcolor{#682673}{\rho_0}}{c_s^2} &gt;
 \left(\frac{2\pi}{\lambda}\right)^2,
-</span> otteniamo allora l’espressione di <span
+</span> we then obtain the expression for <span
 class="math inline">R_J</span>: <span class="math display">
 \lambda &gt; c_s \sqrt{\frac\pi{G \textcolor{#682673}{\rho_0}}} \equiv
 R_J.
 </span></p>
-<p>Per un gas monoatomico si ha <span class="math inline">R_J =
+<p>For a monatomic gas we have <span class="math inline">R_J =
 \sqrt{\frac{5\pi k_B T}{3 G m \textcolor{#682673}{\rho_0}}}</span>.</p>
 </section>
-<section id="massa-di-jeans" class="slide level1">
-<h1>Massa di Jeans</h1>
-<p>Dalla densità <span
-class="math inline">\textcolor{#682673}{\rho_0}</span> e dal raggio di
-Jeans <span class="math inline">R_J</span> possiamo stimare la massa
-minima per provocare un collasso gravitazionale con <span
-class="math display">
+<section id="jeans-mass" class="slide level1">
+<h1>Jeans’ mass</h1>
+<p>From the density <span
+class="math inline">\textcolor{#682673}{\rho_0}</span> and the Jeans
+radius <span class="math inline">R_J</span> we can estimate the minimum
+mass to cause a gravitational collapse with <span class="math display">
 M_J = \frac43 \pi R_J^3 \textcolor{#682673}{\rho_0} =
 \frac{4\pi}{3\sqrt{\textcolor{#682673}{\rho_0}}}
 \left(\frac{5\pi k_B T}{3 G m}\right)^{\frac32} \propto
 \sqrt{\frac{T^3}{\textcolor{#682673}{\rho_0}}}
-</span> («massa di Jeans»).</p>
+</span> («Jeans mass»).</p>
 </section>
-<section id="massa-di-jeans-1" class="slide level1">
-<h1>Massa di Jeans</h1>
-<p>Numericamente vale che <span class="math display">
+<section id="jeans-mass-1" class="slide level1">
+<h1>Jeans’ mass</h1>
+<p>Numerically, it holds that <span class="math display">
 M_J \approx
 0.32\,M_\odot\left(\frac{T}{10\,\text{K}}\right)^{\frac32}
 \left(\frac{m_H}{\mu}\right)^{\frac32}\left(\frac{n_0}{10^6\,\text{cm}^3}\right)^{-\frac12}
-</span> con <span class="math inline">\mu</span> peso molecolare
-medio.</p>
-<p>I valori di <span class="math inline">n</span> e di <span
-class="math inline">T</span> nell’equazione sono abbastanza in linea con
-quelli delle nubi nel ISM: ciò è rassicurante!</p>
+</span> with <span class="math inline">\mu</span> average molecular
+weight.</p>
+<p>The values of <span class="math inline">n</span> and <span
+class="math inline">T</span> in the equation are quite in line with
+those of the clouds in the ISM: this is reassuring!</p>
 </section>
 <section id="jeans-swindle" class="slide level1">
 <h1>Jeans’ swindle</h1>
 <ul>
-<li><p>Abbiamo accennato a un problema fisico nei calcoli di Jeans. Il
-punto è che è irrealistico supporre che <span class="math display">
+<li><p>We mentioned a physical problem in Jeans’ calculations. The point
+is that it is unrealistic to assume that <span class="math display">
 \nabla\textcolor{#682673}{\phi_0} = 0
-</span> perché allora <span class="math display">
+</span> because then <span class="math display">
 \nabla^2\textcolor{#682673}{\phi_0} = 0 \quad\Rightarrow\quad 4\pi G
 \textcolor{#682673}{\rho_0} = 0.
 </span></p></li>
-<li><p>Senza l’assunzione <span class="math inline">\nabla\phi =
-0</span>, i calcoli si complicano, ma il risultato non cambia
-qualitativamente.</p></li>
-<li><p>La soluzione corretta dipende però dal dettaglio della geometria
-della nube.</p></li>
+<li><p>Without the assumption <span class="math inline">\nabla\phi =
+0</span>, the calculations become more complicated, but the result does
+not change qualitatively.</p></li>
+<li><p>The correct solution, however, depends on the details of the
+geometry of the cloud.</p></li>
 </ul>
 </section>
-<section id="meccanismi-di-collasso-delle-nubi" class="slide level1">
-<h1>Meccanismi di collasso delle nubi</h1>
+<section id="cloud-collapse-mechanisms" class="slide level1">
+<h1>Cloud Collapse Mechanisms</h1>
 </section>
-<section id="massa-di-jeans-2" class="slide level1">
-<h1>Massa di Jeans</h1>
+<section id="jeans-mass-2" class="slide level1">
+<h1>Jeans’ Mass</h1>
 <ul>
-<li><p>Quando nubi molto massive iniziano a collassare, i parametri
-fisici cambiano e anche <span class="math inline">M_J</span>.</p></li>
-<li><p>In certi casi può avvenire che alcune regioni della nube perdano
-stabilità ed inizino a loro volta a collassare. Si ha una
-<strong>frammentazione</strong> della nube, con formazione di più
-stelle.</p></li>
-<li><p>Questo è il probabile meccanismo di formazione degli ammassi
-aperti.</p></li>
+<li><p>When very massive clouds begin to collapse, the physical
+parameters change, and so does <span
+class="math inline">M_J</span>.</p></li>
+<li><p>In some cases, it may happen that some regions of the cloud lose
+stability and begin to collapse in turn. A
+<strong>fragmentation</strong> of the cloud occurs, with the formation
+of multiple stars.</p></li>
+<li><p>This is the likely mechanism for the formation of open
+clusters.</p></li>
 </ul>
 </section>
-<section id="rotazione-della-nube" class="slide level1">
-<h1>Rotazione della nube</h1>
+<section id="cloud-rotation" class="slide level1">
+<h1>Cloud Rotation</h1>
 <ul>
-<li><p>In generale, la nube in collasso sarà dotata anche di momento
-angolare, che noi abbiamo trascurato.</p></li>
-<li><p>Se il momento angolare si conserva durante la contrazione,
-allora: <span class="math display">
-\frac25 M R^2 \omega = \frac25 M R_0^2 \omega_0,
-</span> (il momento d’inerzia è <span class="math inline">I=\frac25 M
-R^2</span> per una sfera piena) da cui <span class="math display">
-\omega = \omega_0 \left(\frac{R_0}R\right)^2.
-</span></p></li>
+<li><p>In general, a collapsing cloud will also have angular momentum,
+which we have neglected.</p></li>
+<li><p>If angular momentum is conserved during contraction, then: <span
+class="math display">
+  \frac25 M R^2 \omega = \frac25 M R_0^2 \omega_0,
+  </span> (the moment of inertia is <span class="math inline">I=\frac25
+M R^2</span> for a solid sphere) from which <span class="math display">
+  \omega = \omega_0 \left(\frac{R_0}R\right)^2.
+  </span></p></li>
 </ul>
 </section>
-<section id="rotazione-della-nube-1" class="slide level1">
-<h1>Rotazione della nube</h1>
+<section id="cloud-rotation-1" class="slide level1">
+<h1>Cloud Rotation</h1>
 <ul>
-<li><p>All’equatore l’accelerazione è <span class="math display">
-a(R) = G\frac{M(R)}{R^2} - \omega^2 R = G\frac{M(R)}{R^2} -
-\omega_0^2 \left(\frac{R_0}R\right)^4 R.
-</span></p></li>
-<li><p>La rotazione fermerà il collasso quando <span
-class="math inline">a(R) = 0</span>, ossia <span class="math display">
-G M(R) = (\omega_0 R_0)^2 \frac{R_0^2}R,
-</span> il che avviene quando <span class="math inline">\frac{R}{R_0} =
+<li><p>At the equator, the acceleration is <span class="math display">
+  a(R) = G\frac{M(R)}{R^2} - \omega^2 R = G\frac{M(R)}{R^2} -
+  \omega_0^2 \left(\frac{R_0}R\right)^4 R.
+  </span></p></li>
+<li><p>The rotation will stop the collapse when <span
+class="math inline">a(R) = 0</span>, i.e., <span class="math display">
+  G M(R) = (\omega_0 R_0)^2 \frac{R_0^2}R,
+  </span> which occurs when <span class="math inline">\frac{R}{R_0} =
 \frac{(\omega_0 R_0)^2 R_0}{G M(R)}</span>.</p></li>
 </ul>
 </section>
-<section id="rotazione-della-nube-2" class="slide level1">
-<h1>Rotazione della nube</h1>
+<section id="cloud-rotation-2" class="slide level1">
+<h1>Cloud Rotation</h1>
 <ul>
-<li><p>Per valori tipici di <span class="math inline">\omega_0 R_0 =
-1\,\text{km/s} = 10^5\,\text{cm/s}</span> e di <span
-class="math inline">M_J</span> e <span class="math inline">R_J</span>
-vale che <span class="math display">
-\frac{R}{R_0} \approx 0.6.
-</span></p></li>
-<li><p>Quindi quando il raggio si è ridotto della metà, la rotazione
-frena il collasso nella direzione <span class="math inline">\perp</span>
-all’asse di rotazione.</p></li>
-<li><p>Nella direzione parallela all’asse, il collasso può proseguire
-indisturbato. La nube si appiattisce e forma un disco, dove molta della
-massa non raggiunge il centro e non forma la stella.</p></li>
+<li><p>For typical values of <span class="math inline">\omega_0 R_0 =
+1\,\text{km/s} = 10^5\,\text{cm/s}</span> and of <span
+class="math inline">M_J</span> and <span class="math inline">R_J</span>,
+it holds that <span class="math display">
+  \frac{R}{R_0} \approx 0.6.
+  </span></p></li>
+<li><p>Therefore, when the radius has reduced by half, the rotation
+slows the collapse in the direction <span
+class="math inline">\perp</span> to the axis of rotation.</p></li>
+<li><p>In the direction parallel to the axis, the collapse can continue
+undisturbed. The cloud flattens and forms a disk, where much of the mass
+does not reach the center and does not form the star.</p></li>
 </ul>
 </section>
-<section id="dove-nascono-le-stelle" class="slide level1">
-<h1>Dove nascono le stelle?</h1>
+<section id="where-do-stars-form" class="slide level1">
+<h1>Where Do Stars Form?</h1>
 <ul>
-<li><p>Stimiamo il raggio di Jeans (<span class="math inline">R_J
-\propto \sqrt{T/\rho}</span>) in due casi distinti:</p>
-<ol>
-<li>Nube molecolare H<span class="math inline">_2</span>: <span
+<li><p>Let’s estimate the Jeans radius (<span class="math inline">R_J
+\propto \sqrt{T/\rho}</span>) in two distinct cases:</p>
+<ol type="1">
+<li>H<span class="math inline">_2</span> molecular cloud: <span
 class="math inline">T \sim 10\,\text{K}</span>, <span
 class="math inline">n \sim 10^3\,\text{cm}^{-3}</span>.</li>
-<li>Nube di HI: <span class="math inline">T \sim 100\,\text{K}</span>,
+<li>HI cloud: <span class="math inline">T \sim 100\,\text{K}</span>,
 <span class="math inline">n \sim 1\,\text{cm}^{-3}</span>.</li>
 </ol></li>
-<li><p>Si ha che <span class="math display">
-\frac{R_\text{J, HI}}{R_\text{J, H$_2$}} \sim
-2\sqrt{\frac{100\,\text{K}}{10\,\text{K}}\,\frac{10^3\,\text{cm}^{-3}}{1\,\text{cm}^{-3}}}
-= 200.
-</span></p></li>
-<li><p>È quindi più facile formare stelle in <strong>nubi
-molecolari</strong>.</p></li>
+<li><p>We have that <span class="math display">
+  \frac{R_\text{J, HI}}{R_\text{J, H$_2$}} \sim
+  2\sqrt{\frac{100\,\text{K}}{10\,\text{K}}\,\frac{10^3\,\text{cm}^{-3}}{1\,\text{cm}^{-3}}}
+  = 200.
+  </span></p></li>
+<li><p>It is therefore easier to form stars in <strong>molecular
+clouds</strong>.</p></li>
 </ul>
 </section>
-<section id="formazione-stellare" class="slide level1">
-<h1>Formazione stellare</h1>
+<section id="star-formation" class="slide level1">
+<h1>Star Formation</h1>
 <ul>
-<li><p>Il collasso rilascia energia gravitazionale che può:</p>
-<ol>
-<li>aumentare l’energia interna, modificando la pressione;</li>
-<li>essere irradiata all’esterno se il tempo di raffreddamento è minore
-di <span class="math inline">\tau_\text{ff}</span>.</li>
+<li><p>The collapse releases gravitational energy which can:</p>
+<ol type="1">
+<li>increase the internal energy, modifying the pressure;</li>
+<li>be radiated outwards if the cooling time is less than <span
+class="math inline">\tau_\text{ff}</span>.</li>
 </ol></li>
-<li><p>Nel secondo caso la contrazione è isotermica. (Questa era
-l’ipotesi di Jeans, da cui nel caso di piccole oscillazioni deriva la
-relazione <span class="math inline">p = \rho c_s^2</span> che abbiamo
-usato la scorsa lezione).</p></li>
+<li><p>In the second case, the contraction is isothermal. (This was
+Jeans’ hypothesis, from which, in the case of small oscillations, the
+relation <span class="math inline">p = \rho c_s^2</span> that we used
+last time is derived).</p></li>
 </ul>
 </section>
-<section id="formazione-stellare-1" class="slide level1">
-<h1>Formazione stellare</h1>
+<section id="star-formation-1" class="slide level1">
+<h1>Star Formation</h1>
 <ul>
-<li><p>Ma all’aumento di <span class="math inline">\rho</span>
-corrisponde un aumento dello spessore ottico della nube, e a un certo
-momento il collasso cessa di essere isotermico, diventando adiabatico:
+<li><p>But the increase in <span class="math inline">\rho</span>
+corresponds to an increase in the optical depth of the cloud, and at
+some point the collapse ceases to be isothermal, becoming adiabatic:
 <span class="math display">
-T V^{\gamma - 1} = \text{costante} \quad\Rightarrow\quad T \propto
-\frac1{V^{\gamma - 1}} \propto \rho^{\gamma - 1}.
-</span></p></li>
-<li><p>Di conseguenza, <span class="math display">
-M_J \propto \sqrt{\frac{T^3}\rho} \propto \sqrt{\rho^{3\gamma - 4}}.
-</span></p></li>
+  T V^{\gamma - 1} = \text{constant} \quad\Rightarrow\quad T \propto
+  \frac1{V^{\gamma - 1}} \propto \rho^{\gamma - 1}.
+  </span></p></li>
+<li><p>Consequently, <span class="math display">
+  M_J \propto \sqrt{\frac{T^3}\rho} \propto \sqrt{\rho^{3\gamma - 4}}.
+  </span></p></li>
 </ul>
 </section>
-<section id="formazione-stellare-2" class="slide level1">
-<h1>Formazione stellare</h1>
+<section id="star-formation-2" class="slide level1">
+<h1>Star Formation</h1>
 <p><span class="math display">
 M_J \propto \sqrt{\rho^{3\gamma - 4}}.
 </span></p>
 <ul>
-<li><p>Se γ &gt; 4/3 (es. gas ideale), <span
-class="math inline">M_J</span> aumenta all’aumentare della densità, e
-quindi il collasso potrebbe interrompersi prima che si siano innescate
-le reazioni nucleari all’interno della stella.</p></li>
-<li><p>Quando ciò avviene, la massa di Jeans per una nube di 10² K è
-circa 0.2 <span class="math inline">M_\odot</span>: quindi il processo
-permette di formare <strong>una serie di masse dell’ordine di quella
-solare</strong>, ma non molto inferiori.</p></li>
+<li><p>If γ &gt; 4/3 (e.g., ideal gas), <span
+class="math inline">M_J</span> increases as density increases, and
+therefore the collapse could stop before nuclear reactions are triggered
+inside the star.</p></li>
+<li><p>When this happens, the Jeans mass for a 10² K cloud is about 0.2
+<span class="math inline">M_\odot</span>: therefore the process allows
+the formation of <strong>a series of masses of the order of the solar
+mass</strong>, but not much lower.</p></li>
 </ul>
 </section>
-<section id="fotoionizzazione" class="slide level1">
-<h1>Fotoionizzazione</h1>
+<section id="photoionization" class="slide level1">
+<h1>Photoionization</h1>
 <ul>
-<li><p>Se nel regime adiabatico l’energia non viene rilasciata
-all’esterno della nube, dove va a finire?</p></li>
-<li><p>In parte è usata per aumentare la temperatura <span
-class="math inline">T</span>, in parte per fotoionizzare le specie
-neutre (H, He, H₂).</p></li>
-<li><p>Questo determina il percorso della protostella sul diagramma
-HR.</p></li>
+<li><p>If in the adiabatic regime the energy is not released outside the
+cloud, where does it go?</p></li>
+<li><p>Partly it is used to increase the temperature <span
+class="math inline">T</span>, partly to photoionize the neutral species
+(H, He, H₂).</p></li>
+<li><p>This determines the path of the protostar on the HR
+diagram.</p></li>
 </ul>
 </section>
-<section id="contrazione-della-nube" class="slide level1">
-<h1>Contrazione della nube</h1>
+<section id="cloud-contraction" class="slide level1">
+<h1>Cloud Contraction</h1>
 <center>
 <img data-src="images/protostellar_nebula_contraction.png"
 height="500" />
 </center>
-<p>Modello numerico del collasso da una nube a una protostella <span
+<p>Numerical model of the collapse from a cloud to a protostar <span
 class="math inline">M \sim 1\,M_\odot</span>.</p>
 </section>
-<section id="luoghi-di-formazione-stellare" class="slide level1">
-<h1>Luoghi di formazione stellare</h1>
-<p>Come già anticipato in precedenza, per individuare regioni H₂ si può
-usare CO come tracciante:</p>
-<ol>
-<li>Si stima la densità colonnare di CO dall’emissione delle righe
-rotazionali;</li>
-<li>Si deriva la densità colonnare di H<span
-class="math inline">_2</span> tramite un «X-factor»; vedi Bolatto,
-Wolfire &amp; Leroy, Annu. Rev. Astron. Astrophys. 2013. 51:207–68 per
-una review.</li>
+<section id="sites-of-star-formation" class="slide level1">
+<h1>Sites of Star Formation</h1>
+<p>As already mentioned, to identify H₂ regions we can use CO as a
+tracer:</p>
+<ol type="1">
+<li>The CO column density is estimated from the emission of rotational
+lines;</li>
+<li>The H<span class="math inline">_2</span> column density is derived
+through an «X-factor»; see Bolatto, Wolfire &amp; Leroy, Annu.
+Rev. Astron. Astrophys. 2013. 51:207–68 for a review.</li>
 </ol>
 </section>
-<section id="mappa-di-co-planck-2013" class="slide level1">
-<h1>Mappa di CO (Planck 2013)</h1>
+<section id="co-map-planck-2013" class="slide level1">
+<h1>CO Map (Planck 2013)</h1>
 <center>
 <img data-src="images/planck2013-CO-title.png" height="620" />
 </center>
 </section>
-<section id="mappa-di-co-planck-2013-1" class="slide level1">
-<h1>Mappa di CO (Planck 2013)</h1>
+<section id="co-map-planck-2013-1" class="slide level1">
+<h1>CO Map (Planck 2013)</h1>
 <center>
 <img data-src="images/planck2013-CO-spectral-response.png"
 height="620" />
 </center>
 </section>
-<section id="mappa-di-co-planck-2013-2" class="slide level1">
-<h1>Mappa di CO (Planck 2013)</h1>
+<section id="co-map-planck-2013-2" class="slide level1">
+<h1>CO Map (Planck 2013)</h1>
 <center>
 <img data-src="images/planck2013-CO-map.png" height="620" />
 </center>
 <aside class="notes">
-<p>L’unità di misura è K,Km/s, che è detta <em>velocity integrated
-emission</em> (VIE). È il prodotto della temperatura di Rayleigh-Jeans
-per l’ampiezza spettrale espressa in unità di Km/s (nell’ipotesi che lo
-spessore della linea spettrale sia dovuto all’effetto Doppler causato
-dall’agitazione termica).</p>
+<p>The unit of measure is K km/s, which is called <em>velocity
+integrated emission</em> (VIE). It is the product of the Rayleigh-Jeans
+temperature and the spectral width expressed in km/s units (assuming
+that the spectral line width is due to the Doppler effect caused by
+thermal agitation).</p>
 </aside>
 </section>
-<section id="mappa-di-co-planck-2013-3" class="slide level1">
-<h1>Mappa di CO (Planck 2013)</h1>
+<section id="co-map-planck-2013-3" class="slide level1">
+<h1>CO Map (Planck 2013)</h1>
 <center>
 <img data-src="images/planck2013-CO-map-2.png" height="620" />
 </center>
 </section>
 <section id="cold-cores" class="slide level1">
-<h1>Cold cores</h1>
+<h1>Cold Cores</h1>
 <ul>
-<li><p>Abbiamo visto che la temperatura della polvere è dell’ordine di
-100 K se abbastanza vicina a una stella giovane.</p></li>
-<li><p>Nelle nubi di <strong>gas</strong> la schermatura delle regioni
-esterne può permettere l’esistenza di regioni interne più fredde. Si
-raggiungono temperature di ~10 K, con densità <span
-class="math inline">n \sim 10^{4\div5}\,\text{cm}^{-3}</span>.</p></li>
-<li><p>Anche queste regioni sono probabilmente <strong>luoghi di
-formazione stellare</strong> (ricordare che <span
-class="math inline">M_J \propto T^{3/2}</span>).</p></li>
+<li><p>We have seen that the dust temperature is of the order of 100 K
+if it is close enough to a young star.</p></li>
+<li><p>In <strong>gas</strong> clouds, the shielding of the outer
+regions can allow the existence of colder inner regions. Temperatures of
+~10 K are reached, with densities <span class="math inline">n \sim
+10^{4\div5}\,\text{cm}^{-3}</span>.</p></li>
+<li><p>These regions are also likely <strong>sites of star
+formation</strong> (remember that <span class="math inline">M_J \propto
+T^{3/2}</span>).</p></li>
 </ul>
 </section>
 <section id="cold-cores-1" class="slide level1">
-<h1>Cold cores</h1>
+<h1>Cold Cores</h1>
 <center>
 <img data-src="images/barnard68.jpg" height="520" />
 </center>
-<p>Al centro di Barnard 68 («Black cloud») c’è un cold core.</p>
+<p>At the center of Barnard 68 («Black cloud») there is a cold core.</p>
 </section>
-<section id="regioni-hii" class="slide level1">
-<h1>Regioni HII</h1>
+<section id="hii-regions" class="slide level1">
+<h1>HII Regions</h1>
 </section>
-<section id="regioni-hii-1" class="slide level1">
-<h1>Regioni HII</h1>
+<section id="hii-regions-1" class="slide level1">
+<h1>HII Regions</h1>
 <ul>
-<li><p>Una stella massiccia emette nel visibile e nel UV.</p></li>
-<li><p>Siccome per ionizzare HI occorre <span class="math inline">E =
-h\nu &gt; 13.6\,\text{eV}</span> (<span class="math inline">\lambda &lt;
-91.2\,\text{nm}</span>), le stelle OB hanno la possibilità di ionizzare
+<li><p>A massive star emits in the visible and in the UV.</p></li>
+<li><p>Since to ionize HI it takes <span class="math inline">E = h\nu
+&gt; 13.6\,\text{eV}</span> (<span class="math inline">\lambda &lt;
+91.2\,\text{nm}</span>), OB stars have the ability to ionize
 HI.</p></li>
-<li><p>Quando la maggior parte dell’idrogeno è ionizzato, si parla di
-<strong>regioni HII</strong>.</p></li>
+<li><p>When most of the hydrogen is ionized, we speak of <strong>HII
+regions</strong>.</p></li>
 </ul>
 </section>
-<section id="raggio-di-strömgren" class="slide level1">
-<h1>Raggio di Strömgren</h1>
+<section id="strömgren-radius" class="slide level1">
+<h1>Strömgren Radius</h1>
 <ul>
-<li><p>Le stelle OB riescono ad ionizzare HI solo in una regione di
-volume limitato. Stimiamo le dimensioni di questo volume.</p></li>
-<li><p>Il tasso di ionizzazione è <span class="math display">
+<li><p>OB stars are able to ionize HI only in a region of limited
+volume. Let’s estimate the size of this volume.</p></li>
+<li><p>The ionization rate is <span class="math display">
 R_i = N_\text{UV},
-</span> con <span class="math inline">[R_i] =
-\text{ionizzazioni/s}</span> e <span class="math display">
+</span> with <span class="math inline">[R_i] =
+\text{ionizations/s}</span> and <span class="math display">
 N_\text{UV} = \int_{13.6\,\text{eV}}^\infty N(\nu)\,\text{d}\nu
-</span> (<span class="math inline">N_\text{UV} = \text{fotoni/s}</span>,
-se efficienza è 100 %).</p></li>
+</span> (<span class="math inline">N_\text{UV} =
+\text{photons/s}</span>, if efficiency is 100%).</p></li>
 </ul>
 </section>
-<section id="raggio-di-strömgren-1" class="slide level1">
-<h1>Raggio di Strömgren</h1>
+<section id="strömgren-radius-1" class="slide level1">
+<h1>Strömgren Radius</h1>
 <ul>
-<li><p>L’efficienza è verosimilmente del 100 %, perché per la
-ionizzazione la sezione d’urto è <span class="math display">
+<li><p>The efficiency is likely 100%, because for ionization the cross
+section is <span class="math display">
 \sigma \sim 10^{-17}\,\text{cm}^2.
 </span></p></li>
-<li><p>Per densità <span class="math inline">n_H \sim
-10^3\,\text{cm}^{-3}</span> si ha che il cammino libero medio di un
-fotone è <span class="math display">
+<li><p>For densities <span class="math inline">n_H \sim
+10^3\,\text{cm}^{-3}</span> the mean free path of a photon is <span
+class="math display">
 \lambda \sim \frac1{n_H\,\sigma} \sim 10^{14}\,\text{cm} = 6\,\text{AU},
-</span> da confrontarsi con le dimensioni delle regioni HII (da 0.1 a
-100 pc).</p></li>
+</span> to be compared with the size of HII regions (from 0.1 to 100
+pc).</p></li>
 </ul>
 </section>
-<section id="raggio-di-strömgren-2" class="slide level1">
-<h1>Raggio di Strömgren</h1>
+<section id="strömgren-radius-2" class="slide level1">
+<h1>Strömgren Radius</h1>
 <ul>
-<li><p>Il tasso di ricombinazione è <span class="math display">
+<li><p>The recombination rate is <span class="math display">
 R_\text{rec} = \alpha(T)\,n_e\,n_p\,V = \alpha(T)\,n_p^2\,\frac{4\pi}3
 r_S^3,
-</span> con <span class="math inline">r_S</span> detto <strong>raggio di
-Strömgren</strong> e <span class="math inline">\alpha(T)</span>
-coefficiente.</p></li>
-<li><p>All’equilibrio <span class="math inline">R_i =
-R_\text{rec}</span>, da cui <span class="math display">
+</span> with <span class="math inline">r_S</span> called the
+<strong>Strömgren radius</strong> and <span
+class="math inline">\alpha(T)</span> the coefficient.</p></li>
+<li><p>At equilibrium <span class="math inline">R_i =
+R_\text{rec}</span>, from which <span class="math display">
 r_S = \left(\frac3{4\pi\alpha}\right)^{\frac13}
 N_\text{UV}^{\frac13} n_p^{-\frac23}.
-</span> Le regioni HII più dense sono più piccole (tipicamente, <span
+</span> Denser HII regions are smaller (typically, <span
 class="math inline">\sim 20\,\text{pc}</span>).</p></li>
 </ul>
 </section>
-<section id="raggio-di-strömgren-3" class="slide level1">
-<h1>Raggio di Strömgren</h1>
-<p>Date le dimensioni <span class="math inline">R</span> della nube,
-possono valere due casi:</p>
-<ol>
-<li>Se <span class="math inline">R &gt; r_S</span>, la nube è
-<em>density bounded</em>: la nube HII transisce progressivamente nel
-mezzo HI che la circonda;</li>
-<li>Se <span class="math inline">R &lt; r_S</span>, la nube è
-<em>ionization bounded</em>: tutta la nube è ionizzata.</li>
+<section id="strömgren-radius-3" class="slide level1">
+<h1>Strömgren Radius</h1>
+<p>Given the size <span class="math inline">R</span> of the cloud, two
+cases can apply:</p>
+<ol type="1">
+<li>If <span class="math inline">R &gt; r_S</span>, the cloud is
+<em>density bounded</em>: the HII cloud gradually transitions into the
+surrounding HI medium;</li>
+<li>If <span class="math inline">R &lt; r_S</span>, the cloud is
+<em>ionization bounded</em>: the entire cloud is ionized.</li>
 </ol>
 </section>
-<section id="raggio-di-strömgren-4" class="slide level1">
-<h1>Raggio di Strömgren</h1>
+<section id="strömgren-radius-4" class="slide level1">
+<h1>Strömgren Radius</h1>
 <ul>
-<li><p>La temperatura tipica delle regioni HII è <span
-class="math inline">\sim 10^4\,\text{K}</span>, contro i <span
-class="math inline">\sim 100\,\text{K}</span> dell’ambiente circostante.
-La densità invece non mostra discontinuità (<span class="math inline">n
-\sim 10^3\,\text{cm}^{-3}</span>).</p></li>
-<li><p>Nelle nubi sono presenti anche altri elementi, ciascuno con la
-propria energia di ionizzazione. Ad esempio:</p>
-<ol>
-<li>He: <span class="math inline">E_i = 24.6\,\text{eV}</span>, quindi
-le regioni HeII sono meno estese di HII;</li>
-<li>C: <span class="math inline">E_i = 11.3\,\text{eV}</span>, quindi
-qui vale il contrario.</li>
+<li><p>The typical temperature of HII regions is <span
+class="math inline">\sim 10^4\,\text{K}</span>, compared to the <span
+class="math inline">\sim 100\,\text{K}</span> of the surrounding
+environment. The density, however, shows no discontinuity (<span
+class="math inline">n \sim 10^3\,\text{cm}^{-3}</span>).</p></li>
+<li><p>Other elements are also present in the clouds, each with its own
+ionization energy. For example:</p>
+<ol type="1">
+<li>He: <span class="math inline">E_i = 24.6\,\text{eV}</span>, so HeII
+regions are less extensive than HII;</li>
+<li>C: <span class="math inline">E_i = 11.3\,\text{eV}</span>, so the
+opposite is true here.</li>
 </ol></li>
 </ul>
 </section>
-<section id="rilevare-le-regioni-hii" class="slide level1">
-<h1>Rilevare le regioni HII</h1>
+<section id="detecting-hii-regions" class="slide level1">
+<h1>Detecting HII Regions</h1>
 <ul>
-<li><p>L’emissione di regioni HII è dovuta al brehmsstrahlung
-(diffusione free-free), con uno spettro <span class="math display">
-T_e \propto \nu^{-\alpha},\quad\text{con $\alpha \approx 2.1$.}
+<li><p>The emission of HII regions is due to bremsstrahlung (free-free
+scattering), with a spectrum <span class="math display">
+T_e \propto \nu^{-\alpha},\quad\text{with $\alpha \approx 2.1$.}
 </span></p></li>
-<li><p>Si osserva che l’emissione è concentrata sul piano
-Galattico.</p></li>
+<li><p>Observations reveal that the emission is concentrated on the
+Galactic plane.</p></li>
 </ul>
 </section>
-<section id="rilevare-le-regioni-hii-1" class="slide level1">
-<h1>Rilevare le regioni HII</h1>
+<section id="detecting-hii-regions-1" class="slide level1">
+<h1>Detecting HII Regions</h1>
 <ul>
-<li><p>Un modo per distinguere lo spettro free-free da altre emissioni
-(es. spinning dust) è quello di correlarlo con emissione Hα (<span
-class="math inline">n=3-2</span>, serie di Balmer).</p></li>
-<li><p>Hα viene emessa nelle regioni di ionizzazione: quando un HII
-(protone) cattura un <span class="math inline">e^-</span>, durante la
-diseccitazione c’è una certa probabilità (<span class="math inline">\sim
-50\,\%</span>) che avvenga la transizione <span
-class="math inline">n=3-2</span> (Hα). Quindi Hα segnala la presenza di
-ionizzazione.</p></li>
+<li><p>One way to distinguish the free-free spectrum from other
+emissions (e.g., spinning dust) is to correlate it with Hα emission
+(<span class="math inline">n=3-2</span>, Balmer series).</p></li>
+<li><p>Hα is emitted in ionization regions: when an HII (proton)
+captures an <span class="math inline">e^-</span>, during de-excitation
+there is a certain probability (<span class="math inline">\sim
+50\%</span>) that the <span class="math inline">n=3-2</span> transition
+(Hα) will occur. Therefore Hα signals the presence of
+ionization.</p></li>
 </ul>
 <aside class="notes">
-<p>Quando p⁺ cattura e⁻, quest’ultimo è di solito a un livello
-energetico molto alto. Spesso l’elettrone ha tempo di raggiungere il
-ground state prima che l’atomo sia re-ionizzato dalla radiazione UV.</p>
+<p>When p⁺ captures e⁻, the latter is usually at a very high energy
+level. Often the electron has time to reach the ground state before the
+atom is re-ionized by UV radiation.</p>
 </aside>
 </section>
-<section id="rilevare-le-regioni-hii-2" class="slide level1">
-<h1>Rilevare le regioni HII</h1>
+<section id="detecting-hii-regions-2" class="slide level1">
+<h1>Detecting HII Regions</h1>
 <center>
 <img data-src="images/dickinson-title.png" height="620" />
 </center>
 </section>
-<section id="rilevare-le-regioni-hii-3" class="slide level1">
-<h1>Rilevare le regioni HII</h1>
+<section id="detecting-hii-regions-3" class="slide level1">
+<h1>Detecting HII Regions</h1>
 <center>
 <img data-src="images/dickinson-free-free-template.png" height="620" />
 </center>
