@@ -500,16 +500,14 @@ The exercise is solved by setting $\vec v = 0$ in the first equation, setting $\
 :::
 
 
+# Exercises
 
-# Esercizi
-
--   Fate lo stesso nel caso dell'atmosfera. In questo caso non si può più considerare $\rho$ costante: usate la relazione $p = c_S^2 \rho$. Dovreste ottenere il risultato
+-   Do the same for the Earth’s atmosphere. In this case you cannot assume that $\rho$ is constant: use the relationship $p = c_S^2 \rho$. The expected result is
     \[
     p(h) = p_0 \exp(-h/h_0),
-    \] se $h$ cresce con l'altezza.
+    \] if $h$ increases with height.
 
-
--   Che valore stimate per $h_0$ nel caso dell'atmosfera terrestre?
+-   Which value do you estimate for $h_0$ for the Earth’s atmosphere?
 
 
 ---
