@@ -47,6 +47,7 @@ The size of the region in the image (do the math!) is about $70\times 35\,\text{
     with $a$ being the semi-major axis of the orbit and $M$ the mass of Sgr A*.
 
 -   It is therefore sufficient to observe a nearby star until it completes an orbit around Sgr A*: from the measurement of $P$ and $a$, $M$ is obtained.
+
 # Measuring the mass of the CBH
 
 -   Solving the equation from the previous slide for $a$, we obtain
