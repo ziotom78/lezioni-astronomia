@@ -15,7 +15,7 @@ Evidence of the interstellar medium (ISM) is given by the presence of opaque reg
 
 # Globules and nebulae
 
-Il mezzo interstellare mostra addensamenti di materia la cui scala è circa $\sim 1$ pc («globuli» e «nubi»).
+The ISM shows globules whose size is of the order of $\sim 1$ pc, called "globules" and "nebulae".
 
 <center>![](images/barnard68.jpg){height=420px}</center>
 
@@ -39,13 +39,13 @@ There are two reasons why the ISM is interesting:
 
 # Baryons in the Mikly Way
 
-<center>![](images/ism-and-stars.png){height=520px}</center>
+<center>![](images/ism-and-stars.svg){height=520px}</center>
 
 <small>Adapted from B.\ Draine, *Physics of the interstellar and galactic medium*, Princeton University Press (2011).</small>
 
 # Components of the ISM
 
-ISM includes everything in the Galaxy that lies between the stars. It is composed of:
+ISM includes everything in the Galaxy that lies between stars. It is made of:
 
 1.  **Gas**;
 2.  **Dust**;
@@ -67,17 +67,17 @@ Observation methods:
     2.  Direct emission (UV, IR, mm\ldots).
 -   Gas: emission/absorption of lines.
 
-# Flux Reduction
+# Flux Extinction
 
 -   The flux of bright objects is reduced by the ISM through **scattering** and **absorption**:
 
-    #.  Scattering changes the direction of propagation of the radiation
+    #.  Scattering changes the direction of propagation of the radiation;
 
-    #.  Absorption increases the temperature of the interstellar medium
+    #.  Absorption increases the temperature of the interstellar medium.
 
     The two phenomena are collectively referred to as **extinction**.
 
--   The interstellar medium has highly variable densities: from 10⁻⁴ to 10⁺⁶ cm⁻³, but these are still very low values! (Air has a density of 10¹⁹ cm⁻³)
+-   The density of the ISM can vary from 10⁻⁴ to 10⁺⁶ cm⁻³, but these are still very low values! (Air has a density of 10¹⁹ cm⁻³)
 
 ---
 
@@ -89,9 +89,9 @@ Observation methods:
 
 -   If there are $N = n(l) \times A \times \mathrm{d}l$ particles in the thickness, then
 
-    ```
-    p = Nσλ / A = (n(l) A dl σλ) / A = n(l) σλ dl.
-    ```
+    $$
+    p = \frac{N\sigma_\lambda}A = \frac{n(l) A\,\mathrm{d}l\,σ_λ}A = n(l) \sigma_λ \mathrm{d}l.
+    $$
 
     (assuming that $\mathrm{d}l$ is so small that the particles do not eclipse each other).
 
@@ -99,15 +99,15 @@ Observation methods:
 
 -   Given the probability $p$ of extinction, at a certain $\lambda$ the spectral radiance $I_\lambda$ ($[I_\lambda] = \text{W/m$^2$/Hz/sr}$) will be reduced due to extinction:
 
-    ```
-    dIλ = -p × Iλ = -n(l) σλ Iλ dl.
-    ```
+    $$
+    \mathrm{d}I_λ = -p × I_λ = -n(l)\,σ_λ\,I_λ\,\mathrm{d}l.
+    $$
 
 -   Solving the differential equation, we get
 
-    ```
-      Iλ(l) = I0 exp(-∫ n(l') dl' σλ) = I0 exp(-σλ ∫ n(l') dl') = I0 exp(-τλ(l)),
-    ```
+    $$
+      I_\lambda(l) = I_0 \exp\left(-\sigma_\lambda \int n(l')\,\mathrm{d}l'\right) = I_0 \exp\bigl(-\tau\,\lambda(l)\bigr),
+    $$
 
     and therefore the spectral radiance depends on the distance if there is extinction!
 
@@ -148,11 +148,10 @@ from which $[N_\text{col}] = \text{cm}^{-2}$. If $n(l)$ is constant, $N_\text{co
 
     ($A$ is sometimes called *total absorption*).
 
--   Therefore, the approximation
+-   Therefore, we can use the approximation
     \[
     A_\lambda \approx \tau_\lambda(l).
     \]
-    can be used.
 
 # ISM and Distance Measurement
 
@@ -182,7 +181,7 @@ The notation $A_\lambda$ suggests that extinction depends on wavelength.
 
 -   This implies that the number of observed stars increases in the IR.
 
--   Furthermore, stars appear redder (*stellar reddening*). Let's see how the impact of reddening on the observation of a star's flux is quantified.
+-   Furthermore, stars appear redder (*stellar reddening*). Let's see how to quantify the impact of reddening on the observation of the flux.
 
 
 # Color Excess
@@ -240,37 +239,25 @@ m_B - m_V = (M_B - M_V) + (A_B - A_V).
     f(\lambda) \equiv \frac{A_\lambda}{A_V} = \frac{\tau_\lambda}{\tau_V} = \frac{N_{\text{col}}\,\sigma_\lambda}{N_{\text{col}}\,\sigma_V} = \frac{\sigma_\lambda}{\sigma_V},
     \]
 
-    and in this way the dependence on the column density disappears! ([The same was true for $R$](tomasi-astro2-lezione-03.html#/eccesso-di-colore-e-a_lambda)).
+    and in this way the dependence on the column density disappears!
 
 
 # Physics of Extinction
 
--   From the study of $f(\lambda)$ it is observed that:
+-   The study of $f(\lambda)$ reveals a few interesting features:
 
-    1.  In the visible/IR, $f(\lambda) \propto 1/\lambda \propto \nu$ (blue light is absorbed more);
+    1.  In the visible/IR, $f(\lambda) \propto 1/\lambda \propto \nu$ (blue light is easier to absorb);
 
     2.  There is a peak in the UV;
 
     3.  Structures are seen in the IR spectrum.
 
--   The shape of $f(\lambda)$ however also depends on the direction of observation (there's dust and dust!), especially in the UV.
+-   The shape of $f(\lambda)$ however also depends on the direction of observation (there are many types of dust!), especially in the UV.
 
 ---
 
 <center>![](images/cardelli-extinction-curve.png){height=660px}</center>
 Note that the $x$ axis shows $1/\lambda$ instead of $\lambda$.
-
-# Homework Exercise
-
-A B-type star is observed with $m_B = 11.0\,\text{mag}$,
-$m_V = 10.0\,\text{mag}$.
-
-
-If for a B star, $M_V \approx -0.9$ and $M_B - M_V \approx -0.17$,
-what is the value of $A_V$ and its distance? (Assume that $R = 3.1$).
-
-
-[Solution: $A_V \approx 3.6$, $d \approx 280\,\text{pc}$].
 
 
 # Dust in the Interstellar Medium
@@ -327,7 +314,7 @@ Experimental evidence indicates that there are two types of dust grains:
 
 The most likely shape of the grains is an ellipsoid: in this way the electrons are free to respond to the external field $\vec E$ more in some directions than in others.
 
-<center>![](images/dust-grain-shape.png){height=320px}</center>
+<center>![](images/dust-grain-shape.svg){height=320px}</center>
 
 Polarization is observed mainly in the visible, while it is absent in the UV (geometric optics!)
 

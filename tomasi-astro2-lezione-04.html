@@ -117,24 +117,25 @@ dust shields the photons).</li>
 <section id="electric-charge-of-grains-1" class="slide level1">
 <h1>Electric Charge of Grains</h1>
 <center>
-<img data-src="images/dust_charge.png" height="360" />
+<img data-src="images/dust_charge.svg" height="360" />
 </center>
-<p>To attach to the grain, the kinetic energy of the electron must be
-greater than the Coulomb potential of the grain (with <span
-class="math inline">r_g</span> about 1µm). In this case, <span
+<p>Electrons can stick on the grain’s surface if the kinetic energy of
+the electron is greater than the Coulomb potential of the grain (with
+<span class="math inline">r_g</span> about 1µm). In this case, <span
 class="math inline">T</span> is the temperature of the grain cloud.</p>
 </section>
 <section id="electric-charge-of-grains-2" class="slide level1">
 <h1>Electric Charge of Grains</h1>
 <ul>
 <li><p>The calculation is not very different from the one for the <a
-href="tomasi-astro2-lezione-02.html#/tempo-di-rilassamento-3">collision
+href="tomasi-astro2-lezione-02.html#/relaxation-time-and-collisional-radius">collision
 radius for globular clusters</a>: we study when the potential energy is
 equal to the kinetic energy:</p>
-<pre><code>\begin{aligned}
-  \frac{N e^2}{4\pi\epsilon_0 r_g} &amp;= \frac32 k_B T,\quad\text{from which} \\
+<span class="math display">\begin{aligned}
+  \frac{N e^2}{4\pi\epsilon_0 r_g} &amp;= \frac32 k_B T,\quad\text{from
+which} \\
   N &amp;= 6\pi\epsilon_0 k_B T \frac{r_g}{e^2} \approx 1.
-\end{aligned}</code></pre></li>
+\end{aligned}</span></li>
 <li><p>The high-velocity tail in the Boltzmann distribution for free
 electrons leads to <span class="math inline">N \sim 10</span>.</p></li>
 </ul>
@@ -147,21 +148,26 @@ dust grain. We can assume that they are heated by nearby stars.</p></li>
 <li><p>Suppose a grain is at a distance <span
 class="math inline">d</span> from a star with radius <span
 class="math inline">R</span> and temperature <span
-class="math inline">T</span>, and that the star’s luminosity is
-<code>L = 4\pi R^2 \sigma T^4</code> (spherically symmetric black
-body).</p></li>
+class="math inline">T</span>, and that the star’s luminosity is <span
+class="math display">
+L = 4\pi R^2 \sigma T^4
+</span> (spherically symmetric black body).</p></li>
 </ul>
 </section>
 <section id="grain-temperature-1" class="slide level1">
 <h1>Grain Temperature</h1>
 <ul>
-<li><p>The fraction of power hitting the grain is
-<code>f = \frac{\pi r^2_g}{4\pi d^2} = \frac14\,\left(\frac{r_g}{d}\right)^2.</code></p></li>
+<li><p>The fraction of power hitting the grain is <span
+class="math display">
+f = \frac{\pi r^2_g}{4\pi d^2} = \frac14\,\left(\frac{r_g}{d}\right)^2.
+</span></p></li>
 <li><p>If the grain has albedo <span class="math inline">a</span>, it
-absorbs a power
-<code>P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi R^2}{d^2}\right),</code>
-where <span class="math inline">\pi R^2/d^2 \equiv \Omega_*</span> is
-the solid angle of the star as seen from the grain.</p></li>
+absorbs a power <span class="math display">
+P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi
+R^2}{d^2}\right),
+</span> where <span class="math inline">\pi R^2/d^2 \equiv
+\Omega_*</span> is the solid angle of the star as seen from the
+grain.</p></li>
 </ul>
 </section>
 <section id="grain-temperature-2" class="slide level1">
@@ -169,31 +175,34 @@ the solid angle of the star as seen from the grain.</p></li>
 <ul>
 <li><p>To calculate the grain’s temperature at thermal equilibrium, we
 must also consider the power released by the grain.</p></li>
-<li><p>Let’s assume it is spherical (horrible!), so that
-<code>P_\text{rad} = 4\pi r_g^2 \sigma T_g^4,</code> where we use the
-so-called <strong>effective temperature</strong> <span
-class="math inline">T_g</span>, i.e., the temperature of a black body
-that would emit the same amount of energy as the grain.</p></li>
+<li><p>Let’s assume it is spherical (horrible!), so that <span
+class="math display">
+  P_\text{rad} = 4\pi r_g^2 \sigma T_g^4,
+</span> where we use the so-called <strong>effective
+temperature</strong> <span class="math inline">T_g</span>, i.e., the
+temperature of a black body that would emit the same amount of energy as
+the grain.</p></li>
 </ul>
 </section>
 <section id="grain-temperature-3" class="slide level1">
 <h1>Grain Temperature</h1>
-<p>If the dust has reached the equilibrium temperature <span
+If the dust has reached the equilibrium temperature <span
 class="math inline">T_g</span>, the emitted power must equal the
-absorbed power:</p>
-<pre><code>\begin{aligned}
+absorbed power:
+<span class="math display">\begin{aligned}
   P_\text{rad} &amp;= P_\text{abs} \\
   4\pi r_g^2 \sigma T_g^4 &amp;= (1 - a) r_g^2 \sigma T^4
   \left(\frac{\pi R^2}{d^2}\right) \\
   T_g &amp;= T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}.
-\end{aligned}</code></pre>
+\end{aligned}</span>
 </section>
 <section id="grain-temperature-4" class="slide level1">
 <h1>Grain Temperature</h1>
 <ul>
-<li><p>The formula
-<code>T_g = T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}</code> shows that the
-dust temperature does not depend on the size of the grains.</p></li>
+<li><p>The formula <span class="math display">
+T_g = T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}
+</span> shows that the dust temperature does not depend on the size of
+the grains.</p></li>
 <li><p>This is the temperature of a <em>single</em> dust grain, but we
 can assume that at equilibrium it coincides with the temperature of the
 radiation emitted by the entire cloud of grains.</p></li>
@@ -208,7 +217,9 @@ on the order of a few AU (<span class="math inline">\sim
 10^3\div 10^4</span> and therefore <span class="math inline">T_g \sim
 10^{-2} T_*</span>.</p></li>
 <li><p>If <span class="math inline">T_* = 10\,000\,\text{K}</span>, then
-<code>T_g \sim 100\,\text{K}.</code></p></li>
+<span class="math display">
+T_g \sim 100\,\text{K}.
+</span></p></li>
 <li><p>From Wien’s law (<span class="math inline">\lambda_\text{max} T =
 0.29\,\text{cm\,K}</span>) we deduce that the peak of the emission
 is:</p>

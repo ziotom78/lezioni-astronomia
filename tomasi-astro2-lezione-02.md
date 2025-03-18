@@ -21,7 +21,7 @@
 -   (This is analogous to how one studies an ideal gas reaching thermodynamic equilibrium).
 
 
-# Relaxation Time
+# Relaxation Time {#relaxation-time-and-collisional-radius}
 
 -   We can define an interaction between two stars as the condition
     in which the kinetic energy becomes equal to the potential energy between

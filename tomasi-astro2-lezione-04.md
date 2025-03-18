@@ -41,21 +41,19 @@ Dust grains (a) can collide with each other and aggregate into more complex stru
 
 # Electric Charge of Grains
 
-<center>![](images/dust_charge.png){height=360px}</center>
+<center>![](images/dust_charge.svg){height=360px}</center>
 
-To attach to the grain, the kinetic energy of the electron must be greater than the Coulomb potential of the grain (with $r_g$ about 1µm). In this case, $T$ is the temperature of the grain cloud.
+Electrons can stick on the grain’s surface if the kinetic energy of the electron is greater than the Coulomb potential of the grain (with $r_g$ about 1µm). In this case, $T$ is the temperature of the grain cloud.
 
 
 # Electric Charge of Grains
 
--   The calculation is not very different from the one for the [collision radius for globular clusters](tomasi-astro2-lezione-02.html#/tempo-di-rilassamento-3): we study when the potential energy is equal to the kinetic energy:
+-   The calculation is not very different from the one for the [collision radius for globular clusters](tomasi-astro2-lezione-02.html#/relaxation-time-and-collisional-radius): we study when the potential energy is equal to the kinetic energy:
 
-    ```
     \begin{aligned}
       \frac{N e^2}{4\pi\epsilon_0 r_g} &= \frac32 k_B T,\quad\text{from which} \\
       N &= 6\pi\epsilon_0 k_B T \frac{r_g}{e^2} \approx 1.
     \end{aligned}
-    ```
 
 -   The high-velocity tail in the Boltzmann distribution for free electrons leads to $N \sim 10$.
 
@@ -65,22 +63,22 @@ To attach to the grain, the kinetic energy of the electron must be greater than 
 -   Let's now estimate the average temperature of a *single* dust grain. We can assume that they are heated by nearby stars.
 
 -   Suppose a grain is at a distance $d$ from a star with radius $R$ and temperature $T$, and that the star's luminosity is
-    ```
+    $$
     L = 4\pi R^2 \sigma T^4
-    ```
+    $$
     (spherically symmetric black body).
 
 # Grain Temperature
 
 -   The fraction of power hitting the grain is
-    ```
+    $$
     f = \frac{\pi r^2_g}{4\pi d^2} = \frac14\,\left(\frac{r_g}{d}\right)^2.
-    ```
+    $$
 
 -   If the grain has albedo $a$, it absorbs a power
-    ```
+    $$
     P_\text{abs} = f\,L\,(1 - a) = (1 - a) r_g^2 \sigma T^4 \left(\frac{\pi R^2}{d^2}\right),
-    ```
+    $$
     where $\pi R^2/d^2 \equiv \Omega_*$ is the solid angle of the star as seen from the grain.
 
 
@@ -89,31 +87,29 @@ To attach to the grain, the kinetic energy of the electron must be greater than 
 -   To calculate the grain's temperature at thermal equilibrium, we must also consider the power released by the grain.
 
 -   Let's assume it is spherical (horrible!), so that
-    ```
+    $$
       P_\text{rad} = 4\pi r_g^2 \sigma T_g^4,
-    ```
+    $$
     where we use the so-called **effective temperature** $T_g$, i.e., the temperature of a black body that would emit the same amount of energy as the grain.
 
 
 # Grain Temperature
 
 If the dust has reached the equilibrium temperature $T_g$, the emitted power must equal the absorbed power:
-```
 \begin{aligned}
   P_\text{rad} &= P_\text{abs} \\
   4\pi r_g^2 \sigma T_g^4 &= (1 - a) r_g^2 \sigma T^4
   \left(\frac{\pi R^2}{d^2}\right) \\
   T_g &= T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}.
 \end{aligned}
-```
 
 
 # Grain Temperature
 
 -   The formula
-    ```
+    $$
     T_g = T (1 - a)^{1/4} \sqrt{\frac{R}{2d}}
-    ```
+    $$
     shows that the dust temperature does not depend on the size of the grains.
 
 -   This is the temperature of a *single* dust grain, but we can assume that at equilibrium it coincides with the temperature of the radiation emitted by the entire cloud of grains.
@@ -124,9 +120,9 @@ If the dust has reached the equilibrium temperature $T_g$, the emitted power mus
 -   In star-forming regions, the distances between cloud and star are on the order of a few AU ($\sim 10^{11}\,\text{m}$), so $d/R \sim 10^3\div 10^4$ and therefore $T_g \sim 10^{-2} T_*$.
 
 -   If $T_* = 10\,000\,\text{K}$, then
-    ```
+    $$
     T_g \sim 100\,\text{K}.
-    ```
+    $$
 
 -   From Wien's law ($\lambda_\text{max} T = 0.29\,\text{cm\,K}$) we deduce that the peak of the emission is:
 
@@ -214,6 +210,7 @@ b. Collision with particles.
 c. Collision with photons.
 d. Angular momentum transfer from photons.
 :::
+
 # Grain Rotation
 
 -   If the grain is paramagnetic, the Galactic field $\vec B_\text{Gal}$ induces a magnetic moment $\vec \mu_B \propto \vec B_\text{Gal}$ parallel to it, which causes a mechanical torque $\vec\tau = \vec\mu_B \times \vec B_\mathrm{Gal}$. Then:

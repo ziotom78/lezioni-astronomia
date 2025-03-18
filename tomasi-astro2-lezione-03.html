@@ -84,9 +84,9 @@ galactic medium</em>, Princeton University Press (2011).</small></p>
 </section>
 <section id="globules-and-nebulae" class="slide level1">
 <h1>Globules and nebulae</h1>
-<p>Il mezzo interstellare mostra addensamenti di materia la cui scala è
-circa <span class="math inline">\sim 1</span> pc («globuli» e
-«nubi»).</p>
+<p>The ISM shows globules whose size is of the order of <span
+class="math inline">\sim 1</span> pc, called “globules” and
+“nebulae”.</p>
 <center>
 <img data-src="images/barnard68.jpg" height="420" />
 </center>
@@ -111,15 +111,15 @@ today implies that star formation is still ongoing.</li>
 <section id="baryons-in-the-mikly-way" class="slide level1">
 <h1>Baryons in the Mikly Way</h1>
 <center>
-<img data-src="images/ism-and-stars.png" height="520" />
+<img data-src="images/ism-and-stars.svg" height="520" />
 </center>
 <p><small>Adapted from B. Draine, <em>Physics of the interstellar and
 galactic medium</em>, Princeton University Press (2011).</small></p>
 </section>
 <section id="components-of-the-ism" class="slide level1">
 <h1>Components of the ISM</h1>
-<p>ISM includes everything in the Galaxy that lies between the stars. It
-is composed of:</p>
+<p>ISM includes everything in the Galaxy that lies between stars. It is
+made of:</p>
 <ol type="1">
 <li><strong>Gas</strong>;</li>
 <li><strong>Dust</strong>;</li>
@@ -144,22 +144,21 @@ is composed of:</p>
 <li>Gas: emission/absorption of lines.</li>
 </ul>
 </section>
-<section id="flux-reduction" class="slide level1">
-<h1>Flux Reduction</h1>
+<section id="flux-extinction" class="slide level1">
+<h1>Flux Extinction</h1>
 <ul>
 <li><p>The flux of bright objects is reduced by the ISM through
 <strong>scattering</strong> and <strong>absorption</strong>:</p>
 <ol>
 <li><p>Scattering changes the direction of propagation of the
-radiation</p></li>
+radiation;</p></li>
 <li><p>Absorption increases the temperature of the interstellar
-medium</p></li>
+medium.</p></li>
 </ol>
 <p>The two phenomena are collectively referred to as
 <strong>extinction</strong>.</p></li>
-<li><p>The interstellar medium has highly variable densities: from 10⁻⁴
-to 10⁺⁶ cm⁻³, but these are still very low values! (Air has a density of
-10¹⁹ cm⁻³)</p></li>
+<li><p>The density of the ISM can vary from 10⁻⁴ to 10⁺⁶ cm⁻³, but these
+are still very low values! (Air has a density of 10¹⁹ cm⁻³)</p></li>
 </ul>
 </section>
 <section class="slide level1">
@@ -174,7 +173,10 @@ class="math inline">\mathrm{d}l</span> of ISM has a certain probability
 being extinguished (scattered/absorbed).</p></li>
 <li><p>If there are <span class="math inline">N = n(l) \times A \times
 \mathrm{d}l</span> particles in the thickness, then</p>
-<pre><code>p = Nσλ / A = (n(l) A dl σλ) / A = n(l) σλ dl.</code></pre>
+<p><span class="math display">
+p = \frac{N\sigma_\lambda}A = \frac{n(l) A\,\mathrm{d}l\,σ_λ}A = n(l)
+\sigma_λ \mathrm{d}l.
+</span></p>
 <p>(assuming that <span class="math inline">\mathrm{d}l</span> is so
 small that the particles do not eclipse each other).</p></li>
 </ul>
@@ -187,9 +189,15 @@ extinction, at a certain <span class="math inline">\lambda</span> the
 spectral radiance <span class="math inline">I_\lambda</span> (<span
 class="math inline">[I_\lambda] = \text{W/m$^2$/Hz/sr}</span>) will be
 reduced due to extinction:</p>
-<pre><code>dIλ = -p × Iλ = -n(l) σλ Iλ dl.</code></pre></li>
+<p><span class="math display">
+\mathrm{d}I_λ = -p × I_λ = -n(l)\,σ_λ\,I_λ\,\mathrm{d}l.
+</span></p></li>
 <li><p>Solving the differential equation, we get</p>
-<pre><code>  Iλ(l) = I0 exp(-∫ n(l&#39;) dl&#39; σλ) = I0 exp(-σλ ∫ n(l&#39;) dl&#39;) = I0 exp(-τλ(l)),</code></pre>
+<p><span class="math display">
+  I_\lambda(l) = I_0 \exp\left(-\sigma_\lambda \int
+n(l&#39;)\,\mathrm{d}l&#39;\right) = I_0
+\exp\bigl(-\tau\,\lambda(l)\bigr),
+</span></p>
 <p>and therefore the spectral radiance depends on the distance if there
 is extinction!</p></li>
 </ul>
@@ -239,9 +247,10 @@ A_\lambda \equiv m&#39;_\lambda - m_\lambda = 2.5\log_{10}
 </span></p>
 <p>(<span class="math inline">A</span> is sometimes called <em>total
 absorption</em>).</p></li>
-<li><p>Therefore, the approximation <span class="math display">
+<li><p>Therefore, we can use the approximation <span
+class="math display">
 A_\lambda \approx \tau_\lambda(l).
-</span> can be used.</p></li>
+</span></p></li>
 </ul>
 </section>
 <section id="ism-and-distance-measurement" class="slide level1">
@@ -278,8 +287,8 @@ class="math inline">\lambda</span> is small (blue light).</p></li>
 <li><p>This implies that the number of observed stars increases in the
 IR.</p></li>
 <li><p>Furthermore, stars appear redder (<em>stellar reddening</em>).
-Let’s see how the impact of reddening on the observation of a star’s
-flux is quantified.</p></li>
+Let’s see how to quantify the impact of reddening on the observation of
+the flux.</p></li>
 </ul>
 </section>
 <section id="color-excess" class="slide level1">
@@ -353,25 +362,24 @@ f(\lambda) \equiv \frac{A_\lambda}{A_V} = \frac{\tau_\lambda}{\tau_V} =
 \frac{N_{\text{col}}\,\sigma_\lambda}{N_{\text{col}}\,\sigma_V} =
 \frac{\sigma_\lambda}{\sigma_V},
 </span></p>
-<p>and in this way the dependence on the column density disappears! (<a
-href="tomasi-astro2-lezione-03.html#/eccesso-di-colore-e-a_lambda">The
-same was true for <span class="math inline">R</span></a>).</p></li>
+<p>and in this way the dependence on the column density
+disappears!</p></li>
 </ul>
 </section>
 <section id="physics-of-extinction-3" class="slide level1">
 <h1>Physics of Extinction</h1>
 <ul>
-<li><p>From the study of <span class="math inline">f(\lambda)</span> it
-is observed that:</p>
+<li><p>The study of <span class="math inline">f(\lambda)</span> reveals
+a few interesting features:</p>
 <ol type="1">
 <li><p>In the visible/IR, <span class="math inline">f(\lambda) \propto
-1/\lambda \propto \nu</span> (blue light is absorbed more);</p></li>
+1/\lambda \propto \nu</span> (blue light is easier to absorb);</p></li>
 <li><p>There is a peak in the UV;</p></li>
 <li><p>Structures are seen in the IR spectrum.</p></li>
 </ol></li>
 <li><p>The shape of <span class="math inline">f(\lambda)</span> however
-also depends on the direction of observation (there’s dust and dust!),
-especially in the UV.</p></li>
+also depends on the direction of observation (there are many types of
+dust!), especially in the UV.</p></li>
 </ul>
 </section>
 <section class="slide level1">
@@ -382,18 +390,6 @@ especially in the UV.</p></li>
 <p>Note that the <span class="math inline">x</span> axis shows <span
 class="math inline">1/\lambda</span> instead of <span
 class="math inline">\lambda</span>.</p>
-</section>
-<section id="homework-exercise" class="slide level1">
-<h1>Homework Exercise</h1>
-<p>A B-type star is observed with <span class="math inline">m_B =
-11.0\,\text{mag}</span>, <span class="math inline">m_V =
-10.0\,\text{mag}</span>.</p>
-<p>If for a B star, <span class="math inline">M_V \approx -0.9</span>
-and <span class="math inline">M_B - M_V \approx -0.17</span>, what is
-the value of <span class="math inline">A_V</span> and its distance?
-(Assume that <span class="math inline">R = 3.1</span>).</p>
-<p>[Solution: <span class="math inline">A_V \approx 3.6</span>, <span
-class="math inline">d \approx 280\,\text{pc}</span>].</p>
 </section>
 <section id="dust-in-the-interstellar-medium" class="slide level1">
 <h1>Dust in the Interstellar Medium</h1>
@@ -476,7 +472,7 @@ electrons are free to respond to the external field <span
 class="math inline">\vec E</span> more in some directions than in
 others.</p>
 <center>
-<img data-src="images/dust-grain-shape.png" height="320" />
+<img data-src="images/dust-grain-shape.svg" height="320" />
 </center>
 <p>Polarization is observed mainly in the visible, while it is absent in
 the UV (geometric optics!)</p>

@@ -99,12 +99,12 @@
          id="tspan3440"
          style="font-size:6.35px;text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="44.034283"
-         y="136.48924">Assorbimento</tspan><tspan
+         y="136.48924">Efficient</tspan><tspan
          sodipodi:role="line"
          style="font-size:6.35px;text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="44.034283"
          y="144.42674"
-         id="tspan3444">efficiente</tspan></text>
+         id="tspan3444">absorption</tspan></text>
     <ellipse
        style="fill:#ffdd55;fill-opacity:0.994575;stroke:#000000;stroke-width:0.765"
        id="path846"
@@ -134,12 +134,12 @@
          id="tspan7945"
          style="font-size:6.35px;text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="109.52504"
-         y="136.48924">Assorbimento</tspan><tspan
+         y="136.48924">Inefficient</tspan><tspan
          sodipodi:role="line"
          style="font-size:6.35px;text-align:center;text-anchor:middle;stroke-width:0.264583"
          x="109.52504"
          y="144.42674"
-         id="tspan7947">inefficiente</tspan></text>
+         id="tspan7947">absorption</tspan></text>
     <ellipse
        style="fill:#ffdd55;fill-opacity:0.994575;stroke:#000000;stroke-width:0.765"
        id="ellipse7951"
