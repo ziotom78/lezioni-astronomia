@@ -37,15 +37,6 @@ $c_s = \sqrt{\gamma\frac{k_B T}{m}}$, with $\gamma = \frac53$.
 
 # Jeans’ Derivation
 
--   Suppose that a portion of plasma has this density:
-
-    <center>![](images/plasma_fractal.jpg){height=280px}</center>
-
--   We are imposing that the density variations $\textcolor{#267342}{\rho_1}$ are small compared to the average density $\textcolor{#682673}{\rho_0}$.
-
-
-# Jeans’ Derivation
-
 Ignoring higher-order terms, we have that, for example, the term $-\vec{\nabla} p/\rho$ becomes
 \[
 \begin{aligned}
@@ -109,17 +100,13 @@ which is called the **dispersion relation** and links $\omega$ and $k$ (i.e., $\
 
 # Jeans’ derivation
 
-Solving, we have that
-\[
-\omega = \pm c_s \sqrt{k^2 - k_J^2},
-\]
-with
-\[
-k_J^2 \equiv \frac{4\pi G \textcolor{#682673}{\rho_0}}{c_s^2}.
-\]
-(in the absence of gravity, $k_J = 0$ and $\omega = \pm c_S \,k$: the speed of sound is always $c_s$).
+-   The solution is
+    \[
+    \omega = \pm c_s \sqrt{k^2 - k_J^2},\quad k_J^2 \equiv \frac{4\pi G \textcolor{#682673}{\rho_0}}{c_s^2}.
+    \]
+    (in the absence of gravity, $k_J = 0$ and $\omega = \pm c_S \,k$: the speed of sound is always $c_s$).
 
-From the study of this equation, we deduce how the system evolves over time.
+-   From the study of this equation, we deduce how the system evolves over time.
 
 
 # Jeans’ derivation
@@ -313,7 +300,7 @@ M_J \propto \sqrt{\rho^{3\gamma - 4}}.
 
 # Cloud Contraction
 
-<center>![](images/protostellar_nebula_contraction.png){height=500px}</center>
+<center>![](images/protostellar_nebula_contraction.svg){height=500px}</center>
 
 Numerical model of the collapse from a cloud to a protostar $M \sim 1\,M_\odot$.
 

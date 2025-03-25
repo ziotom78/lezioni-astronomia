@@ -114,6 +114,22 @@ class="math display">
 e^{A t}</span>.</p></li>
 </ul>
 </section>
+<section id="tripletsinglet-states" class="slide level1">
+<h1>Triplet/singlet states</h1>
+<p>The spin-parallel state (<span class="math inline">s = 1</span>) is
+such that <span class="math display">
+S = \sqrt2 \hbar,\quad S_z =
+\begin{cases}
+  +\hbar/2, \\
+  0, \\
+  -\hbar/2
+\end{cases}
+\qquad \text{(triplet),}
+</span> while for the anti-parallel state (<span class="math inline">s =
+0</span>) <span class="math display">
+S = 0,\quad S_z = 0 \qquad\text{(singlet)}.
+</span></p>
+</section>
 <section id="hi-in-isg-1" class="slide level1">
 <h1>HI in ISG</h1>
 <center>
@@ -131,22 +147,6 @@ spins!</p>
 class="math inline">2.7\,\mathrm{K}\gg0.07\,\mathrm{K}</span>, does this
 mean that all the HI atoms are in the triplet state?</p>
 </aside>
-</section>
-<section id="facts-about-the-21-cm-line" class="slide level1">
-<h1>Facts about the 21 cm Line</h1>
-<p>The spin-parallel state (<span class="math inline">s = 1</span>) is
-such that <span class="math display">
-S = \sqrt2 \hbar,\quad S_z =
-\begin{cases}
-  +\hbar/2, \\
-  0, \\
-  -\hbar/2
-\end{cases}
-\qquad \text{(tripletto),}
-</span> while for the anti-parallel state (<span class="math inline">s =
-0</span>) <span class="math display">
-S = 0,\quad S_z = 0 \qquad\text{(singoletto)}.
-</span></p>
 </section>
 <section class="slide level1">
 
@@ -262,8 +262,8 @@ from the Sun, in units of 1/10 the Mercury-Sun distance.</p>
 <h1>HI in ISM</h1>
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 74%" />
+<col style="width: 47%" />
+<col style="width: 52%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -274,7 +274,7 @@ from the Sun, in units of 1/10 the Mercury-Sun distance.</p>
 <tbody>
 <tr class="odd">
 <td>Temperature</td>
-<td>100 K</td>
+<td>10÷100 K</td>
 </tr>
 <tr class="even">
 <td>Cloud size</td>
@@ -298,19 +298,21 @@ from the Sun, in units of 1/10 the Mercury-Sun distance.</p>
 </section>
 <section id="gas-and-dust" class="slide level1">
 <h1>Gas and Dust</h1>
-<p>A correlation is observed between the HI column density (21 cm line)
-and dust (extinction measurements), therefore these components are mixed
-in the ISM.</p>
-<center>
-<img data-src="images/dust_and_gas.png" height="240" />
-</center>
-<p>The correlation ceases for high values of <span
+<ul>
+<li><p>A correlation is observed between the HI column density (21 cm
+line) and dust (extinction measurements) → These components are mixed in
+the ISM.</p></li>
+<li><p>The correlation ceases for high values of <span
 class="math inline">A_V</span>. Why?</p>
+<center>
+<p><img data-src="images/dust_and_gas.png" height="240" /></p>
+</center>
 <ol type="1">
 <li>Does dust attenuate at 21 cm? No, insufficient <span
 class="math inline">n</span>.</li>
 <li>Do H₂ molecules form?</li>
-</ol>
+</ol></li>
+</ul>
 </section>
 <section id="gas-and-dust-1" class="slide level1">
 <h1>Gas and Dust</h1>
@@ -323,20 +325,21 @@ rotational energy is quantized, <span class="math display">
 E_r = \frac{(I\omega)^2}{2I} = \frac{L^2}{2I} = \frac{\hbar^2
 J(J+1)}{2I}.
 </span></p></li>
+<li><p>If there is a permanent dipole, the selection rule ΔJ = −1
+applies. A transition between rotational energy levels of CO therefore
+generates lines (ν &gt; 115 GHz).</p></li>
 </ul>
 </section>
 <section id="gas-and-dust-2" class="slide level1">
 <h1>Gas and Dust</h1>
 <ul>
-<li><p>If there is a permanent dipole, the selection rule ΔJ = −1
-applies. A transition between rotational energy levels of CO therefore
-generates lines (ν &gt; 115 GHz).</p></li>
-<li><p><strong>But this does not apply to H₂</strong>, which has only a
-weak quadrupole with selection rule ΔJ = −2.</p></li>
-<li><p>This generates weak emission around 10 µm, however covered by
-dust.</p></li>
-<li><p>It is easier to study the emission of other molecules, less
-abundant but with stronger lines (CO, CH, OH, CS, C₃H₂…).</p></li>
+<li><p>However, H₂ has <strong>no permanent dipole</strong>, so it does
+not emit lines</p></li>
+<li><p>H₂ has a weak quadrupole with selection rule ΔJ = −2 that
+generates weak emission around 10 µm (covered by dust emission
+🙁)</p></li>
+<li><p>It’s easier to study the emission of less abundant molecules with
+stronger lines (CO, CH, OH, CS, C₃H₂…).</p></li>
 </ul>
 <aside class="notes">
 <p>The shape of a quadrupole can be briefly shown, and explain why the
@@ -472,8 +475,9 @@ class="math inline">R_J</span> obtained by Jeans).</p>
 <ul>
 <li><p>The previous calculation is quite different from the one tackled
 by James Jeans (1877–1946), who did not use the virial theorem.</p></li>
-<li><p>We will now redo his calculations, and also highlight a logical
-problem in his treatment.</p></li>
+<li><p>We will now redo his calculations, repeating every
+passage…</p></li>
+<li><p>…and we will re-make a mistake he made!</p></li>
 <li><p>Let’s start by introducing the equations of fluid
 dynamics.</p></li>
 </ul>
@@ -481,14 +485,14 @@ dynamics.</p></li>
 <section id="fluid-physics" class="slide level1">
 <h1>Fluid Physics</h1>
 <center>
-<img data-src="images/fluid_equations_reference_frame.png"
+<img data-src="images/fluid_equations_reference_frame.svg"
 height="360" />
 </center>
 <ul>
 <li>In the <strong>Lagrangian</strong> point of view, we describe the
 trajectory of the particle (analogously to Newton’s laws).</li>
 <li>In the <strong>Eulerian</strong> point of view (the most
-convenient), we focus on the points of space.</li>
+convenient), we focus on points in space and their neighborhood.</li>
 </ul>
 </section>
 <section id="newtons-equation" class="slide level1">
@@ -499,7 +503,7 @@ class="math display">
 \vec{F}_p = m\,\vec{a}_p = m\,\dot{\vec{v}}_p,
 </span> and express <span class="math inline">\vec{v}_p</span> in terms
 of Eulerian quantities: <span class="math display">
-\vec{v}_p(t) = \vec{v}\bigl(\vec{u}_p(t), t\bigr).
+\vec{v}_p(t) \approx \vec{v}\bigl(\vec{u}_p(t), t\bigr).
 </span></p>
 </section>
 <section class="slide level1">
@@ -514,7 +518,7 @@ u_{pz}(t), t\bigr) =\\
   &amp;= \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v},
 \end{aligned}
 </span> where we exploit the fact that <span
-class="math inline">\partial_t \vec{u}_p(t) = \vec{v}_p(t) =
+class="math inline">\partial_t \vec{u}_p(t) = \vec{v}_p(t) \approx
 \vec{v}\bigl(\vec{u}_p(t), t\bigr)</span> and that <span
 class="math display">
 (\vec{v} \cdot \vec\nabla) \vec{v} =
@@ -532,30 +536,29 @@ class="math display">
 class="math display">
 \dot{\vec{v}}_p = \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v}
 </span></p></li>
-<li><p>It states that the change in velocity of a fluid particle can be
-caused by:</p>
+<li><p>It states that the change in velocity of a fluid particle is
+caused by two terms:</p>
 <ol>
-<li><p>a temporal variation of the field <span
-class="math inline">\vec{v}</span> within the small volume element (term
-<span class="math inline">\partial_t\vec{v}</span>);</p></li>
+<li><p>a variation in time of <span class="math inline">\vec{v}</span>
+within the small volume element;</p></li>
 <li><p>a velocity difference between the volume element where the
 particle is located at time <span class="math inline">t</span> and the
 one it has “jumped” to at time <span class="math inline">t +
-\text{d}t</span> (term <span class="math inline">(\vec{v} \cdot
-\vec\nabla) \vec{v}</span>).</p></li>
+\text{d}t</span>.</p></li>
 </ol></li>
 </ul>
 </section>
 <section class="slide level1">
 
 <ul>
-<li><p>Let’s now transform Newton’s equation so that the Eulerian
-quantities <span class="math inline">\rho</span> and <span
-class="math inline">\vec{v}</span> appear, but by moving from the
-equation describing <em>one</em> particle to the one describing <span
+<li><p>Let’s now turn the unknowns in Newton’s equation into the
+Eulerian quantities <span class="math inline">\rho</span> and <span
+class="math inline">\vec{v}</span> appear. We are no longer interested
+in one particle, but in a collection of <span
 class="math inline">N</span> particles.</p></li>
-<li><p>Therefore, we sum the Newton’s equations for each of the N
-particles in a small volume element: <span class="math display">
+<li><p>Therefore, we sum the <span class="math inline">N</span>
+equations for those <span class="math inline">N</span> particles that
+are in the same small volume element: <span class="math display">
 \begin{aligned}
     \sum_{i=1}^N \vec{F}_p^{(i)} &amp;= \sum_{i=1}^N m^{(i)} \dot{\vec
 v}_p(t) = \sum_{i=1}^N m^{(i)} \bigl(\partial_t\vec{v} +
@@ -568,8 +571,9 @@ v}_p(t) = \sum_{i=1}^N m^{(i)} \bigl(\partial_t\vec{v} +
 </section>
 <section class="slide level1">
 
-<p>If we assume that the masses <span class="math inline">m^{(i)}</span>
-of the particles are all identical, then <span class="math display">
+<p>We now substitute the masses <span class="math inline">m^{(i)}</span>
+with the density <span class="math inline">\rho</span>: <span
+class="math display">
 \begin{aligned}
   \sum_{i=1}^N \vec{F}_p^{(i)} &amp;= \left(\sum_{i=1}^N m^{(i)}\right)
 \bigl(\partial_t\vec{v} +

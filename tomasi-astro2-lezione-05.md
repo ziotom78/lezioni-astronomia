@@ -37,6 +37,24 @@ To excite a Balmer line, ~1 eV is required, but the energies involved for $T \si
     \]
     and the transition probability is $A = (11\,\text{Myr})^{-1}$ so that $N = N_0 e^{A t}$.
 
+# Triplet/singlet states
+
+The spin-parallel state ($s = 1$) is such that
+\[
+S = \sqrt2 \hbar,\quad S_z =
+\begin{cases}
+  +\hbar/2, \\
+  0, \\
+  -\hbar/2
+\end{cases}
+\qquad \text{(triplet),}
+\]
+while for the anti-parallel state ($s = 0$)
+\[
+S = 0,\quad S_z = 0 \qquad\text{(singlet)}.
+\]
+
+
 # HI in ISG
 
 <center>![](images/21cm_line.png){height=240px}</center>
@@ -54,22 +72,6 @@ Question for the students: if CMB is $2.7\,\mathrm{K}\gg0.07\,\mathrm{K}$, does 
 
 :::
 
-# Facts about the 21 cm Line
-
-The spin-parallel state ($s = 1$) is such that
-\[
-S = \sqrt2 \hbar,\quad S_z =
-\begin{cases}
-  +\hbar/2, \\
-  0, \\
-  -\hbar/2
-\end{cases}
-\qquad \text{(tripletto),}
-\]
-while for the anti-parallel state ($s = 0$)
-\[
-S = 0,\quad S_z = 0 \qquad\text{(singoletto)}.
-\]
 
 ---
 
@@ -162,25 +164,25 @@ At the top left is the hyperfine transition of hydrogen. The small vertical line
 
 # HI in ISM
 
-| Quantity            | Estimate                                                   |
-|---------------------|------------------------------------------------------------|
-| Temperature         | 100 K                                                      |
-| Cloud size          | 10÷100 pc                                                  |
-| HI density (cloud)  | 1÷10 cm⁻³                                                  |
-| HI density (Galaxy) | 0.1 cm⁻³                                                   |
-| Speed               | $v_\text{rms} \sim \sqrt{k_B T/m_p} \sim 10^3\,\text{m/s}$ |
+| Quantity                                              | Estimate                                                   |
+|-------------------------------------------------------|------------------------------------------------------------|
+| Temperature                                           | 10÷100 K                                                      |
+| Cloud size                                            | 10÷100 pc                                                  |
+| HI density (cloud)                                    | 1÷10 cm⁻³                                                  |
+| HI density (Galaxy)                                   | 0.1 cm⁻³                                                   |
+| Speed                                                 | $v_\text{rms} \sim \sqrt{k_B T/m_p} \sim 10^3\,\text{m/s}$ |
 
 
 # Gas and Dust
 
-A correlation is observed between the HI column density (21 cm line) and dust (extinction measurements), therefore these components are mixed in the ISM.
+-   A correlation is observed between the HI column density (21 cm line) and dust (extinction measurements) → These components are mixed in the ISM.
 
-<center>![](images/dust_and_gas.png){height=240px}</center>
+-   The correlation ceases for high values of $A_V$. Why?
 
-The correlation ceases for high values of $A_V$. Why?
+    <center>![](images/dust_and_gas.png){height=240px}</center>
 
-1. Does dust attenuate at 21 cm? No, insufficient $n$.
-2. Do H₂ molecules form?
+    1. Does dust attenuate at 21 cm? No, insufficient $n$.
+    2. Do H₂ molecules form?
 
 
 # Gas and Dust
@@ -192,16 +194,16 @@ The correlation ceases for high values of $A_V$. Why?
     E_r = \frac{(I\omega)^2}{2I} = \frac{L^2}{2I} = \frac{\hbar^2 J(J+1)}{2I}.
     \]
 
+-   If there is a permanent dipole, the selection rule ΔJ = −1 applies. A transition between rotational energy levels of CO therefore generates lines (ν > 115 GHz).
+
 
 # Gas and Dust
 
--   If there is a permanent dipole, the selection rule ΔJ = −1 applies. A transition between rotational energy levels of CO therefore generates lines (ν > 115 GHz).
+-   However, H₂ has **no permanent dipole**, so it does not emit lines
 
--   **But this does not apply to H₂**, which has only a weak quadrupole with selection rule ΔJ = −2.
+-   H₂ has a weak quadrupole with selection rule ΔJ = −2 that generates weak emission around 10 µm (covered by dust emission 🙁)
 
--   This generates weak emission around 10 µm, however covered by dust.
-
--   It is easier to study the emission of other molecules, less abundant but with stronger lines (CO, CH, OH, CS, C₃H₂…).
+-   It’s easier to study the emission of less abundant molecules with stronger lines (CO, CH, OH, CS, C₃H₂…).
 
 ::: notes
 
@@ -311,17 +313,19 @@ R > \sqrt{\frac{15 k_B T}{4\pi G m \rho}} \equiv R_J'.
 
 -   The previous calculation is quite different from the one tackled by James Jeans (1877–1946), who did not use the virial theorem.
 
--   We will now redo his calculations, and also highlight a logical problem in his treatment.
+-   We will now redo his calculations, repeating every passage…
+
+-   …and we will re-make a mistake he made!
 
 -   Let's start by introducing the equations of fluid dynamics.
 
 
 # Fluid Physics
 
-<center>![](images/fluid_equations_reference_frame.png){height=360px}</center>
+<center>![](images/fluid_equations_reference_frame.svg){height=360px}</center>
 
 -   In the **Lagrangian** point of view, we describe the trajectory of the particle (analogously to Newton's laws).
--   In the **Eulerian** point of view (the most convenient), we focus on the points of space.
+-   In the **Eulerian** point of view (the most convenient), we focus on points in space and their neighborhood.
 
 
 # Newton's Equation
@@ -333,7 +337,7 @@ Newtonian physics, we start from the Lagrangian point of view:
 \]
 and express $\vec{v}_p$ in terms of Eulerian quantities:
 \[
-\vec{v}_p(t) = \vec{v}\bigl(\vec{u}_p(t), t\bigr).
+\vec{v}_p(t) \approx \vec{v}\bigl(\vec{u}_p(t), t\bigr).
 \]
 
 
@@ -348,7 +352,7 @@ If we calculate the derivative of the product, we get
   &= \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v},
 \end{aligned}
 \]
-where we exploit the fact that $\partial_t \vec{u}_p(t) = \vec{v}_p(t) =
+where we exploit the fact that $\partial_t \vec{u}_p(t) = \vec{v}_p(t) \approx
 \vec{v}\bigl(\vec{u}_p(t), t\bigr)$ and that
 \[
 (\vec{v} \cdot \vec\nabla) \vec{v} =
@@ -366,17 +370,17 @@ where we exploit the fact that $\partial_t \vec{u}_p(t) = \vec{v}_p(t) =
     \dot{\vec{v}}_p = \partial_t\vec{v} + (\vec{v} \cdot \vec\nabla) \vec{v}
     \]
 
--   It states that the change in velocity of a fluid particle can be caused by:
+-   It states that the change in velocity of a fluid particle is caused by two terms:
 
-    #.  a temporal variation of the field $\vec{v}$ within the small volume element (term $\partial_t\vec{v}$);
+    #.  a variation in time of $\vec{v}$ within the small volume element;
 
-    #.  a velocity difference between the volume element where the particle is located at time $t$ and the one it has "jumped" to at time $t + \text{d}t$ (term $(\vec{v} \cdot \vec\nabla) \vec{v}$).
+    #.  a velocity difference between the volume element where the particle is located at time $t$ and the one it has "jumped" to at time $t + \text{d}t$.
 
 ---
 
--   Let's now transform Newton's equation so that the Eulerian quantities $\rho$ and $\vec{v}$ appear, but by moving from the equation describing *one* particle to the one describing $N$ particles.
+-   Let's now turn the unknowns in Newton's equation into the Eulerian quantities $\rho$ and $\vec{v}$ appear. We are no longer interested in one particle, but in a collection of $N$ particles.
 
--   Therefore, we sum the Newton's equations for each of the N particles in a small volume element:
+-   Therefore, we sum the $N$ equations for those $N$ particles that are in the same small volume element:
     \[
     \begin{aligned}
         \sum_{i=1}^N \vec{F}_p^{(i)} &= \sum_{i=1}^N m^{(i)} \dot{\vec v}_p(t) = \sum_{i=1}^N m^{(i)} \bigl(\partial_t\vec{v} +
@@ -387,7 +391,7 @@ where we exploit the fact that $\partial_t \vec{u}_p(t) = \vec{v}_p(t) =
 
 ---
 
-If we assume that the masses $m^{(i)}$ of the particles are all identical, then
+We now substitute the masses $m^{(i)}$ with the density $\rho$:
 \[
 \begin{aligned}
   \sum_{i=1}^N \vec{F}_p^{(i)} &= \left(\sum_{i=1}^N m^{(i)}\right) \bigl(\partial_t\vec{v} +

@@ -113,19 +113,6 @@ class="math inline">\textcolor{#682673}{p_0} \gg
 </section>
 <section id="jeans-derivation-1" class="slide level1">
 <h1>Jeans’ Derivation</h1>
-<ul>
-<li><p>Suppose that a portion of plasma has this density:</p>
-<center>
-<p><img data-src="images/plasma_fractal.jpg" height="280" /></p>
-</center></li>
-<li><p>We are imposing that the density variations <span
-class="math inline">\textcolor{#267342}{\rho_1}</span> are small
-compared to the average density <span
-class="math inline">\textcolor{#682673}{\rho_0}</span>.</p></li>
-</ul>
-</section>
-<section id="jeans-derivation-2" class="slide level1">
-<h1>Jeans’ Derivation</h1>
 <p>Ignoring higher-order terms, we have that, for example, the term
 <span class="math inline">-\vec{\nabla} p/\rho</span> becomes <span
 class="math display">
@@ -147,7 +134,7 @@ class="math display">
 \end{aligned}
 </span> The remaining terms are simpler.</p>
 </section>
-<section id="jeans-derivation-3" class="slide level1">
+<section id="jeans-derivation-2" class="slide level1">
 <h1>Jeans’ derivation</h1>
 <ul>
 <li><p>Applying a divergence to the so-called «Newton’s law» and
@@ -163,7 +150,7 @@ class="math inline">\alpha \rho_A + \beta \rho_B</span> is also a
 solution.</p></li>
 </ul>
 </section>
-<section id="jeans-derivation-4" class="slide level1">
+<section id="jeans-derivation-3" class="slide level1">
 <h1>Jeans’ derivation</h1>
 <p>We exploit the linearity of the equation to solve it using Fourier
 analysis. We therefore decompose the unknown into plane waves: <span
@@ -186,7 +173,7 @@ on <span class="math inline">\tilde{\textcolor{#267342}{\rho_1}}</span>:
 \tilde{\textcolor{#267342}{\rho_1}}.
 </span></p>
 </section>
-<section id="jeans-derivation-5" class="slide level1">
+<section id="jeans-derivation-4" class="slide level1">
 <h1>Jeans’ derivation</h1>
 <p>Recalling that <span class="math display">
 \left\|\vec{k}\right\| = \frac{2\pi}\lambda, \quad \omega = 2\pi\nu,
@@ -198,7 +185,7 @@ time to a different scale of the perturbations in the image:</p>
 <img data-src="images/plasma_fractal.jpg" height="240" />
 </center>
 </section>
-<section id="jeans-derivation-6" class="slide level1">
+<section id="jeans-derivation-5" class="slide level1">
 <h1>Jeans’ derivation</h1>
 <p>Therefore, applying the Fourier transform to the equation of <span
 class="math inline">\textcolor{#267342}{\rho_1}</span>, we obtain <span
@@ -214,19 +201,20 @@ class="math inline">k</span> (i.e., <span
 class="math inline">\lambda</span> and <span
 class="math inline">\nu</span>).</p>
 </section>
-<section id="jeans-derivation-7" class="slide level1">
+<section id="jeans-derivation-6" class="slide level1">
 <h1>Jeans’ derivation</h1>
-<p>Solving, we have that <span class="math display">
-\omega = \pm c_s \sqrt{k^2 - k_J^2},
-</span> with <span class="math display">
-k_J^2 \equiv \frac{4\pi G \textcolor{#682673}{\rho_0}}{c_s^2}.
+<ul>
+<li><p>The solution is <span class="math display">
+\omega = \pm c_s \sqrt{k^2 - k_J^2},\quad k_J^2 \equiv \frac{4\pi G
+\textcolor{#682673}{\rho_0}}{c_s^2}.
 </span> (in the absence of gravity, <span class="math inline">k_J =
 0</span> and <span class="math inline">\omega = \pm c_S \,k</span>: the
-speed of sound is always <span class="math inline">c_s</span>).</p>
-<p>From the study of this equation, we deduce how the system evolves
-over time.</p>
+speed of sound is always <span class="math inline">c_s</span>).</p></li>
+<li><p>From the study of this equation, we deduce how the system evolves
+over time.</p></li>
+</ul>
 </section>
-<section id="jeans-derivation-8" class="slide level1">
+<section id="jeans-derivation-7" class="slide level1">
 <h1>Jeans’ derivation</h1>
 <p>If <span class="math inline">k_J^2 &lt; k^2</span> then the pressure
 wave propagates in the medium (acoustic wave) with a phase velocity
@@ -238,7 +226,7 @@ class="math inline">c_s</span> because <span class="math inline">k_J
 \not= 0</span> (it is the term due to gravity). Gravity therefore «slows
 down» the propagation of the wave in the medium.</p>
 </section>
-<section id="jeans-derivation-9" class="slide level1">
+<section id="jeans-derivation-8" class="slide level1">
 <h1>Jeans’ derivation</h1>
 <p>If <span class="math inline">k_J^2 &gt; k^2</span> then <span
 class="math inline">\omega</span> is imaginary, and <span
@@ -255,7 +243,7 @@ to the <em>free-fall</em> time: <span class="math display">
   \frac{4.4\times 10^4\,\text{yr}}{\sqrt{n_H/10^6\,\text{cm}^{-3}}}.
 </span></p>
 </section>
-<section id="jeans-derivation-10" class="slide level1">
+<section id="jeans-derivation-9" class="slide level1">
 <h1>Jeans’ derivation</h1>
 <p>Since the collapse occurs if <span class="math inline">k_J^2 &gt;
 k^2</span>, that is <span class="math display">
@@ -454,7 +442,7 @@ diagram.</p></li>
 <section id="cloud-contraction" class="slide level1">
 <h1>Cloud Contraction</h1>
 <center>
-<img data-src="images/protostellar_nebula_contraction.png"
+<img data-src="images/protostellar_nebula_contraction.svg"
 height="500" />
 </center>
 <p>Numerical model of the collapse from a cloud to a protostar <span
