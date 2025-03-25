@@ -37,6 +37,7 @@ index.html: index.md ${JS_FILES}
 		--css ./css/asciinema-player.css \
 		-A asciinema-include.html \
 		--katex \
+		--template template-revealjs.html \
 		-V theme=white \
 		-V progress=true \
 		-V slideNumber=true \
@@ -44,6 +45,7 @@ index.html: index.md ${JS_FILES}
 		-V background-image=./images/background.png \
 		-V width=1440 \
 		-V height=810 \
+		-V "revealjs-url=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.0" \
 		-f markdown+tex_math_single_backslash+subscript+superscript \
 		-t revealjs \
 		-o $@ $<
