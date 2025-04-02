@@ -1,13 +1,21 @@
 # The Galactic Center
 
+# What is the Galactic Center?
+
+-   It’s the center of the halo.
+
+-   We can define the center by averaging the position in 3D space of Globular Clusters (GC)
+
+-   It is located ~8 kpc away from us.
+
 # Study of the Galactic Center
 
--   It is impossible to observe the GC ($R < 500\,\text{pc}$) in the visible, due to dust extinction. The most used bands are two:
+-   It is impossible to observe the GC ($R < 500\,\text{pc}$) in the visible, due to dust extinction. The most used bands are:
 
-    1.  In the *radio* band, the continuous emission of gas (HII) and the line emission from molecular clouds and interstellar molecules are visible;
-    2.  In the *infrared*, dust (continuum) and neutral and ionized gas (lines) are visible.
+    1.  The *radio* band: we see the continuous emission of gas (HII) and the line emission from molecular clouds and interstellar molecules;
+    2.  The *infrared* band: we see dust (continuum) and neutral and ionized gas (lines).
 
--   Due to the distance (8 kpc), observations are generally of limited resolution: e.g., Spitzer only resolves structures larger than 0.1 pc.
+-   Due to the distance (8 kpc), observations are generally of limited resolution: e.g., Spitzer only resolves structures larger than 0.1 pc.
 
 # Multiband Image of the GC
 
@@ -38,7 +46,7 @@ The size of the region in the image (do the math!) is about $70\times 35\,\text{
 
 # Measuring the Mass of the CBH
 
--   According to Kepler's third law, the closer a star is to Sgr A*, the shorter its orbital period $P$:
+-   According to Kepler's third law, the closer a star with mass $m$ is to Sgr A* (mass $M$), the shorter its orbital period $P$, assuming that $m \ll M$:
 
     \[
     \frac{P^2}{a^3} = \frac{4\pi}{M G},
@@ -161,6 +169,7 @@ The solid lines indicate that spectroscopic data are also present
     This is absolutely impossible!
 
 -   The Event Horizon Telescope is a collaboration that has used interferometry to obtain an image of the BH. How did they do it?
+
 # Interferometry
 
 -   Interferometry is a technique that consists of collecting the signal from different telescopes and combining it in phase.
@@ -176,9 +185,9 @@ The solid lines indicate that spectroscopic data are also present
 
 -   If we increase λ, the size *D* needed to obtain the desired resolution also increases! EHT made the measurements with λ = 1.3 mm, so
 
-    ```
-    D = \frac{R_0\,\lambda}{3 r_s} \approx \frac{8\,\text{kpc}\cdot 1\,\text{m}}{5\,\text{AU}} \approx 4\times 10^5\,\text{m} = 430\,\text{km}.
-    ```
+    \[
+    D = \frac{R_0\,\lambda}{3 r_s} \approx \frac{8\,\text{kpc}\cdot 1.3\,\text{mm}}{5\,\text{AU}} \approx 4\times 10^5\,\text{m} = 430\,\text{km}.
+    \]
 
 -   For EHT it was therefore necessary to operate telescopes that covered a good portion of the Earth's surface!
 
@@ -202,6 +211,7 @@ Why was M87's black hole measured first?
 
     1.  The apparent diameter is the same;
     2.  The orbital period of the gas is $P \propto r_s^{3/2} / M^{1/2}$, so $P' = 10^3 P$: the gas takes several days instead of tens of minutes to orbit, and the image is less blurred.
+
 # Sagittarius A* (May 12, 2022)
 
 <center>![](images/sgr_a_eht.jpg)</center>
@@ -218,23 +228,18 @@ Why was M87's black hole measured first?
 # Observing the Milky Way
 
 
-# External Appearance of the Milky Way
+# Shape of the Milky Way
 
 <center>![](images/spiral_galaxies.jpg){height=480px}</center>
 
-We have evidence that galaxies with spiral arms exist. Is this also true for the Milky Way?
+We have evidence that galaxies with spiral arms exist. Is this also true for the Milky Way?
 
 
-# External Appearance of the Milky Way
+# Shape of the Milky Way
 
 By studying giant molecular clouds, we get a sense that the Milky Way also has similar structures.
 
 <center>![](images/spiral_arms_inner.png){height=480px}</center>
-
-
-# External Appearance of the Milky Way
-
-<center>![](images/spitzer_milky_way_2003.png){height=500px}</center>
 
 
 # Spitzer 2008
@@ -317,7 +322,7 @@ Wright’s model explains the apparent shape of the Milky Way. Moreover, he hypo
 
 -   He assumed that stars are distributed with constant numeric density $n$. By measuring their column density $n_\text{col}$, he could derive the depth $l = n_\text{col}/ n$.
 
--   The shape is derived from stellar counts in 675 regions of the celestial sphere (some points are the result of an average over multiple observations). The Sun is approximately in the middle.
+-   Shape derived from stellar counts in 675 regions of the celestial sphere (some points are an average over multiple observations). The Sun is in the middle.
 
 # [Jacobus Kapteyn](https://en.wikipedia.org/wiki/Jacobus_Kapteyn) (1851–1922)
 
