@@ -163,7 +163,7 @@ The solid lines indicate that spectroscopic data are also present
 -   We again use the relation $\lambda / D \sim 3r_s / R_0$ to estimate the size of the telescope needed to see the hot gas disk:
 
     \[
-    D = \frac{R_0\,\lambda}{3 r_s} \approx \frac{8\,\text{kpc}\cdot 2\,\text{µm}}{5\,\text{AU}} \approx 660\,\text{m}.
+    D = \frac{R_0\,\lambda}{3 r_s} \approx \frac{8\,\text{kpc}\cdot 2\,\text{µm}}{0.5\,\text{AU}} \approx 6600\,\text{m}.
     \]
 
     This is absolutely impossible!
